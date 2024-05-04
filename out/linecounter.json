@@ -13480,6 +13480,1274 @@
                     "filename": "考研数学.toc"
                 }
             ]
+        },
+        {
+            "version": "0.2.7",
+            "counttime": "2024-05-04 23:17:33",
+            "filesum": 195,
+            "codesum": 1807155,
+            "commentsum": 38054,
+            "blanksum": 2108,
+            "statistics": {
+                ".ind": {
+                    "code": 26,
+                    "comment": 0,
+                    "blank": 17
+                },
+                ".idx": {
+                    "code": 20,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".ilg": {
+                    "code": 6,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".log": {
+                    "code": 1054,
+                    "comment": 1,
+                    "blank": 9
+                },
+                ".fls": {
+                    "code": 3584,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".tex": {
+                    "code": 18309,
+                    "comment": 0,
+                    "blank": 1734
+                },
+                ".fdb_latexmk": {
+                    "code": 802,
+                    "comment": 0,
+                    "blank": 8
+                },
+                ".aux": {
+                    "code": 5315,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".pdf": {
+                    "code": 36089,
+                    "comment": 38053,
+                    "blank": 340
+                },
+                ".out": {
+                    "code": 405,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".toc": {
+                    "code": 41,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".drawio": {
+                    "code": 10,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".synctex": {
+                    "code": 1741494,
+                    "comment": 0,
+                    "blank": 0
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 2,
+                    "code": 83,
+                    "comment": 0,
+                    "filename": "appendix\\appendix1.tex"
+                },
+                {
+                    "blank": 2,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "appendix\\appendix2.tex"
+                },
+                {
+                    "blank": 16,
+                    "code": 56,
+                    "comment": 0,
+                    "filename": "Calculus.tex"
+                },
+                {
+                    "filename": "cover.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "curved surface\\Biparted hyperboloid.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "curved surface\\Ellipsoid.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "curved surface\\Elliptic paraboloid.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "curved surface\\Elliptical cone.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "curved surface\\Hyperbolic paraboloid.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "curved surface\\Univalent hyperboloid.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 10,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "Discrete Mathematics.tex"
+                },
+                {
+                    "blank": 16,
+                    "code": 197,
+                    "comment": 0,
+                    "filename": "environment.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "ex.drawio"
+                },
+                {
+                    "blank": 21,
+                    "code": 98,
+                    "comment": 3,
+                    "filename": "figures\\ArchimedesSpiral.pdf"
+                },
+                {
+                    "filename": "figures\\autograph.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 22,
+                    "code": 108,
+                    "comment": 9,
+                    "filename": "figures\\CardioidLine.pdf"
+                },
+                {
+                    "filename": "figures\\cjf1.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "figures\\cjf2.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 22,
+                    "code": 89,
+                    "comment": 9,
+                    "filename": "figures\\Cycloid.pdf"
+                },
+                {
+                    "filename": "figures\\danyesqm.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 1,
+                    "code": 119,
+                    "comment": 9,
+                    "filename": "figures\\DoubleTwistedWire.pdf"
+                },
+                {
+                    "filename": "figures\\ell1.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "figures\\geogebra-export.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 1,
+                    "code": 9,
+                    "comment": 171,
+                    "filename": "figures\\kjiezzshi.pdf"
+                },
+                {
+                    "blank": 21,
+                    "code": 177,
+                    "comment": 1,
+                    "filename": "figures\\LeafLinear.pdf"
+                },
+                {
+                    "blank": 22,
+                    "code": 482,
+                    "comment": 570,
+                    "filename": "figures\\liushu1.pdf"
+                },
+                {
+                    "blank": 25,
+                    "code": 493,
+                    "comment": 69,
+                    "filename": "figures\\liushu2.pdf"
+                },
+                {
+                    "blank": 23,
+                    "code": 486,
+                    "comment": 28,
+                    "filename": "figures\\liushu3.pdf"
+                },
+                {
+                    "blank": 2,
+                    "code": 402,
+                    "comment": 333,
+                    "filename": "figures\\liushu4.pdf"
+                },
+                {
+                    "filename": "figures\\matrix-multiplication.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 22,
+                    "code": 112,
+                    "comment": 3,
+                    "filename": "figures\\MiTongueLine.pdf"
+                },
+                {
+                    "blank": 22,
+                    "code": 101,
+                    "comment": 1,
+                    "filename": "figures\\RoseLine.pdf"
+                },
+                {
+                    "blank": 22,
+                    "code": 119,
+                    "comment": 2,
+                    "filename": "figures\\sdcjz.pdf"
+                },
+                {
+                    "filename": "figures\\shuangqpwm.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "figures\\shuangyesqm.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 22,
+                    "code": 76,
+                    "comment": 1,
+                    "filename": "figures\\sin3 3pi.pdf"
+                },
+                {
+                    "blank": 21,
+                    "code": 110,
+                    "comment": 1,
+                    "filename": "figures\\StarLine.pdf"
+                },
+                {
+                    "filename": "figures\\tuoqiu.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "figures\\tuoyuanpwm.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "figures\\tuoyuanzm.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 22,
+                    "code": 73,
+                    "comment": 1,
+                    "filename": "figures\\ven1.pdf"
+                },
+                {
+                    "blank": 2,
+                    "code": 55,
+                    "comment": 0,
+                    "filename": "figures\\ven2.pdf"
+                },
+                {
+                    "blank": 1,
+                    "code": 80,
+                    "comment": 2,
+                    "filename": "figures\\ven3.pdf"
+                },
+                {
+                    "blank": 3,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "Frontmatter.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 14,
+                    "comment": 1,
+                    "filename": "indent.log"
+                },
+                {
+                    "blank": 12,
+                    "code": 39,
+                    "comment": 0,
+                    "filename": "Linear Algebra.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 5315,
+                    "comment": 0,
+                    "filename": "Mathematical Notes.aux"
+                },
+                {
+                    "blank": 8,
+                    "code": 802,
+                    "comment": 0,
+                    "filename": "Mathematical Notes.fdb_latexmk"
+                },
+                {
+                    "blank": 0,
+                    "code": 3584,
+                    "comment": 0,
+                    "filename": "Mathematical Notes.fls"
+                },
+                {
+                    "blank": 0,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "Mathematical Notes.idx"
+                },
+                {
+                    "blank": 0,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "Mathematical Notes.ilg"
+                },
+                {
+                    "blank": 17,
+                    "code": 26,
+                    "comment": 0,
+                    "filename": "Mathematical Notes.ind"
+                },
+                {
+                    "blank": 9,
+                    "code": 1040,
+                    "comment": 0,
+                    "filename": "Mathematical Notes.log"
+                },
+                {
+                    "blank": 0,
+                    "code": 405,
+                    "comment": 0,
+                    "filename": "Mathematical Notes.out"
+                },
+                {
+                    "filename": "Mathematical Notes.pdf",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "Mathematical Notes.synctex.gz",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 1741494,
+                    "comment": 0,
+                    "filename": "Mathematical Notes.synctex.gz.sum.synctex"
+                },
+                {
+                    "blank": 18,
+                    "code": 49,
+                    "comment": 0,
+                    "filename": "Mathematical Notes.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 41,
+                    "comment": 0,
+                    "filename": "Mathematical Notes.toc"
+                },
+                {
+                    "blank": 17,
+                    "code": 54,
+                    "comment": 0,
+                    "filename": "Probability Theory And Mathematical Statistics.tex"
+                },
+                {
+                    "blank": 35,
+                    "code": 413,
+                    "comment": 0,
+                    "filename": "section\\section10\\section101.tex"
+                },
+                {
+                    "blank": 13,
+                    "code": 357,
+                    "comment": 0,
+                    "filename": "section\\section10\\section102.tex"
+                },
+                {
+                    "blank": 16,
+                    "code": 205,
+                    "comment": 0,
+                    "filename": "section\\section10\\section103.tex"
+                },
+                {
+                    "blank": 21,
+                    "code": 162,
+                    "comment": 0,
+                    "filename": "section\\section10\\section104.tex"
+                },
+                {
+                    "blank": 13,
+                    "code": 355,
+                    "comment": 0,
+                    "filename": "section\\section10\\section105.tex"
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "section\\section10\\section10Intr.tex"
+                },
+                {
+                    "blank": 9,
+                    "code": 99,
+                    "comment": 0,
+                    "filename": "section\\section11\\section111.tex"
+                },
+                {
+                    "blank": 8,
+                    "code": 102,
+                    "comment": 0,
+                    "filename": "section\\section11\\section112.tex"
+                },
+                {
+                    "blank": 8,
+                    "code": 157,
+                    "comment": 0,
+                    "filename": "section\\section11\\section113.tex"
+                },
+                {
+                    "blank": 8,
+                    "code": 85,
+                    "comment": 0,
+                    "filename": "section\\section11\\section114.tex"
+                },
+                {
+                    "blank": 8,
+                    "code": 128,
+                    "comment": 0,
+                    "filename": "section\\section11\\section115.tex"
+                },
+                {
+                    "blank": 2,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "section\\section11\\section11Intr.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section12\\section121.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section12\\section122.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section12\\section123.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section12\\section124.tex"
+                },
+                {
+                    "blank": 7,
+                    "code": 217,
+                    "comment": 0,
+                    "filename": "section\\section13\\section131.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section13\\section132.tex"
+                },
+                {
+                    "blank": 26,
+                    "code": 287,
+                    "comment": 0,
+                    "filename": "section\\section13\\section133.tex"
+                },
+                {
+                    "blank": 19,
+                    "code": 197,
+                    "comment": 0,
+                    "filename": "section\\section13\\section134.tex"
+                },
+                {
+                    "blank": 15,
+                    "code": 150,
+                    "comment": 0,
+                    "filename": "section\\section13\\section135.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section13\\section136.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "section\\section13\\section13Intr.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section14\\section141.tex"
+                },
+                {
+                    "blank": 16,
+                    "code": 258,
+                    "comment": 0,
+                    "filename": "section\\section14\\section142.tex"
+                },
+                {
+                    "blank": 76,
+                    "code": 855,
+                    "comment": 0,
+                    "filename": "section\\section14\\section143.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section14\\section144.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "section\\section14\\section14Intr.tex"
+                },
+                {
+                    "blank": 28,
+                    "code": 175,
+                    "comment": 0,
+                    "filename": "section\\section15\\section151.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section15\\section152.tex"
+                },
+                {
+                    "blank": 4,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "section\\section15\\section153.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section15\\section154.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section15\\section155.tex"
+                },
+                {
+                    "blank": 4,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "section\\section15\\section15Intr.tex"
+                },
+                {
+                    "blank": 6,
+                    "code": 45,
+                    "comment": 0,
+                    "filename": "section\\section16\\section161.tex"
+                },
+                {
+                    "blank": 18,
+                    "code": 196,
+                    "comment": 0,
+                    "filename": "section\\section16\\section162.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 41,
+                    "comment": 0,
+                    "filename": "section\\section16\\section163.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "section\\section16\\section164.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section16\\section165.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section16\\section166.tex"
+                },
+                {
+                    "blank": 3,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "section\\section16\\section16Intr.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section17\\section171.tex"
+                },
+                {
+                    "blank": 23,
+                    "code": 351,
+                    "comment": 0,
+                    "filename": "section\\section17\\section172.tex"
+                },
+                {
+                    "blank": 5,
+                    "code": 71,
+                    "comment": 0,
+                    "filename": "section\\section17\\section173.tex"
+                },
+                {
+                    "blank": 2,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section17\\section174.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section17\\section175.tex"
+                },
+                {
+                    "blank": 9,
+                    "code": 81,
+                    "comment": 0,
+                    "filename": "section\\section18\\section181.tex"
+                },
+                {
+                    "blank": 17,
+                    "code": 236,
+                    "comment": 0,
+                    "filename": "section\\section18\\section182.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section18\\section183.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "section\\section19\\section191.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section19\\section192.tex"
+                },
+                {
+                    "blank": 6,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "section\\section19\\section193.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section19\\section194.tex"
+                },
+                {
+                    "blank": 40,
+                    "code": 366,
+                    "comment": 0,
+                    "filename": "section\\section1\\section11.tex"
+                },
+                {
+                    "blank": 34,
+                    "code": 190,
+                    "comment": 0,
+                    "filename": "section\\section1\\section12.tex"
+                },
+                {
+                    "blank": 71,
+                    "code": 1047,
+                    "comment": 0,
+                    "filename": "section\\section1\\section13.tex"
+                },
+                {
+                    "blank": 15,
+                    "code": 107,
+                    "comment": 0,
+                    "filename": "section\\section1\\section14.tex"
+                },
+                {
+                    "blank": 26,
+                    "code": 301,
+                    "comment": 0,
+                    "filename": "section\\section1\\section15.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "section\\section1\\section1Intr.tex"
+                },
+                {
+                    "blank": 6,
+                    "code": 44,
+                    "comment": 0,
+                    "filename": "section\\section20\\section201.tex"
+                },
+                {
+                    "blank": 26,
+                    "code": 205,
+                    "comment": 0,
+                    "filename": "section\\section20\\section202.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section20\\section203.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "section\\section20\\section204.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "section\\section20\\section20Intr.tex"
+                },
+                {
+                    "blank": 16,
+                    "code": 88,
+                    "comment": 0,
+                    "filename": "section\\section21\\section211.tex"
+                },
+                {
+                    "blank": 16,
+                    "code": 74,
+                    "comment": 0,
+                    "filename": "section\\section21\\section212.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "section\\section21\\section213.tex"
+                },
+                {
+                    "blank": 13,
+                    "code": 53,
+                    "comment": 0,
+                    "filename": "section\\section21\\section214.tex"
+                },
+                {
+                    "blank": 2,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": "section\\section21\\section215.tex"
+                },
+                {
+                    "blank": 3,
+                    "code": 40,
+                    "comment": 0,
+                    "filename": "section\\section21\\section216.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "section\\section21\\section21Intr.tex"
+                },
+                {
+                    "blank": 5,
+                    "code": 97,
+                    "comment": 0,
+                    "filename": "section\\section22\\section221.tex"
+                },
+                {
+                    "blank": 11,
+                    "code": 95,
+                    "comment": 0,
+                    "filename": "section\\section22\\section222.tex"
+                },
+                {
+                    "blank": 14,
+                    "code": 68,
+                    "comment": 0,
+                    "filename": "section\\section22\\section223.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "section\\section22\\section22Intr.tex"
+                },
+                {
+                    "blank": 37,
+                    "code": 247,
+                    "comment": 0,
+                    "filename": "section\\section23\\section231.tex"
+                },
+                {
+                    "blank": 8,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "section\\section23\\section232.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "section\\section23\\section23Intr.tex"
+                },
+                {
+                    "blank": 12,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "section\\section24\\section241.tex"
+                },
+                {
+                    "blank": 6,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "section\\section24\\section242.tex"
+                },
+                {
+                    "blank": 9,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "section\\section25\\section251.tex"
+                },
+                {
+                    "blank": 5,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "section\\section25\\section252.tex"
+                },
+                {
+                    "blank": 8,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "section\\section26\\section261.tex"
+                },
+                {
+                    "blank": 6,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "section\\section27\\section271.tex"
+                },
+                {
+                    "blank": 4,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "section\\section27\\section272.tex"
+                },
+                {
+                    "blank": 37,
+                    "code": 367,
+                    "comment": 0,
+                    "filename": "section\\section2\\section21.tex"
+                },
+                {
+                    "blank": 9,
+                    "code": 65,
+                    "comment": 0,
+                    "filename": "section\\section2\\section22.tex"
+                },
+                {
+                    "blank": 32,
+                    "code": 372,
+                    "comment": 0,
+                    "filename": "section\\section2\\section23.tex"
+                },
+                {
+                    "blank": 13,
+                    "code": 237,
+                    "comment": 0,
+                    "filename": "section\\section2\\section24.tex"
+                },
+                {
+                    "blank": 13,
+                    "code": 140,
+                    "comment": 0,
+                    "filename": "section\\section2\\section25.tex"
+                },
+                {
+                    "blank": 29,
+                    "code": 210,
+                    "comment": 0,
+                    "filename": "section\\section2\\section26.tex"
+                },
+                {
+                    "blank": 7,
+                    "code": 58,
+                    "comment": 0,
+                    "filename": "section\\section2\\section27.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "section\\section2\\section2Intr.tex"
+                },
+                {
+                    "blank": 35,
+                    "code": 600,
+                    "comment": 0,
+                    "filename": "section\\section3\\section31.tex"
+                },
+                {
+                    "blank": 83,
+                    "code": 1097,
+                    "comment": 0,
+                    "filename": "section\\section3\\section32.tex"
+                },
+                {
+                    "blank": 12,
+                    "code": 196,
+                    "comment": 0,
+                    "filename": "section\\section3\\section33.tex"
+                },
+                {
+                    "blank": 20,
+                    "code": 81,
+                    "comment": 0,
+                    "filename": "section\\section3\\section34.tex"
+                },
+                {
+                    "blank": 42,
+                    "code": 256,
+                    "comment": 0,
+                    "filename": "section\\section3\\section35.tex"
+                },
+                {
+                    "blank": 3,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "section\\section3\\section36.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "section\\section3\\section3Intr.tex"
+                },
+                {
+                    "blank": 21,
+                    "code": 235,
+                    "comment": 0,
+                    "filename": "section\\section4\\section41.tex"
+                },
+                {
+                    "blank": 16,
+                    "code": 140,
+                    "comment": 0,
+                    "filename": "section\\section4\\section42.tex"
+                },
+                {
+                    "blank": 3,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "section\\section4\\section4Intr.tex"
+                },
+                {
+                    "blank": 18,
+                    "code": 162,
+                    "comment": 0,
+                    "filename": "section\\section5\\section51.tex"
+                },
+                {
+                    "blank": 18,
+                    "code": 201,
+                    "comment": 0,
+                    "filename": "section\\section5\\section52.tex"
+                },
+                {
+                    "blank": 22,
+                    "code": 244,
+                    "comment": 0,
+                    "filename": "section\\section5\\section53.tex"
+                },
+                {
+                    "blank": 9,
+                    "code": 75,
+                    "comment": 0,
+                    "filename": "section\\section5\\section54.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "section\\section5\\section5Intr.tex"
+                },
+                {
+                    "blank": 73,
+                    "code": 862,
+                    "comment": 0,
+                    "filename": "section\\section6\\section61.tex"
+                },
+                {
+                    "blank": 39,
+                    "code": 410,
+                    "comment": 0,
+                    "filename": "section\\section6\\section62.tex"
+                },
+                {
+                    "blank": 47,
+                    "code": 578,
+                    "comment": 0,
+                    "filename": "section\\section6\\section63.tex"
+                },
+                {
+                    "blank": 5,
+                    "code": 64,
+                    "comment": 0,
+                    "filename": "section\\section6\\section64.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "section\\section6\\section65.tex"
+                },
+                {
+                    "blank": 4,
+                    "code": 31,
+                    "comment": 0,
+                    "filename": "section\\section6\\section66.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "section\\section6\\section67.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "section\\section6\\section6Intr.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 98,
+                    "comment": 0,
+                    "filename": "section\\section7\\section71.tex"
+                },
+                {
+                    "blank": 3,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "section\\section7\\section72.tex"
+                },
+                {
+                    "blank": 67,
+                    "code": 498,
+                    "comment": 0,
+                    "filename": "section\\section7\\section73.tex"
+                },
+                {
+                    "blank": 16,
+                    "code": 149,
+                    "comment": 0,
+                    "filename": "section\\section7\\section74.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "section\\section7\\section75.tex"
+                },
+                {
+                    "blank": 4,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "section\\section7\\section7Intr.tex"
+                },
+                {
+                    "blank": 20,
+                    "code": 155,
+                    "comment": 0,
+                    "filename": "section\\section8\\section81.tex"
+                },
+                {
+                    "blank": 21,
+                    "code": 173,
+                    "comment": 0,
+                    "filename": "section\\section8\\section82.tex"
+                },
+                {
+                    "blank": 14,
+                    "code": 234,
+                    "comment": 0,
+                    "filename": "section\\section8\\section83.tex"
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "section\\section8\\section8Intr.tex"
+                },
+                {
+                    "blank": 32,
+                    "code": 854,
+                    "comment": 0,
+                    "filename": "section\\section9\\section91.tex"
+                },
+                {
+                    "blank": 11,
+                    "code": 325,
+                    "comment": 0,
+                    "filename": "section\\section9\\section92.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "section\\section9\\section93.tex"
+                },
+                {
+                    "blank": 1,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "section\\section9\\section9Intr.tex"
+                },
+                {
+                    "blank": 0,
+                    "code": 180,
+                    "comment": 538,
+                    "filename": "参考文献\\XUSJ201506006.pdf"
+                },
+                {
+                    "blank": 4,
+                    "code": 1955,
+                    "comment": 1390,
+                    "filename": "参考文献\\二阶变系数线性微分方程.pdf"
+                },
+                {
+                    "blank": 2,
+                    "code": 1011,
+                    "comment": 2210,
+                    "filename": "参考文献\\基于插值法的中值定理证明.pdf"
+                },
+                {
+                    "blank": 5,
+                    "code": 1812,
+                    "comment": 1570,
+                    "filename": "参考文献\\定积分证明.pdf"
+                },
+                {
+                    "blank": 35,
+                    "code": 27942,
+                    "comment": 31132,
+                    "filename": "离散数学答案.pdf"
+                }
+            ]
         }
     ]
 }

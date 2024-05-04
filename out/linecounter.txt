@@ -2328,3 +2328,227 @@ section9\section9Intr.tex, code is 7, comment is 0, blank is 1.
 考研数学.tex, code is 44, comment is 0, blank is 12.
 考研数学.toc, code is 23, comment is 0, blank is 0.
 ===============================================================================
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2024-05-04 23:17:33
+count workspace : d:\LaTeXProject\Mathematical Notes
+total files : 195
+total code lines : 1807155
+total comment lines : 38054
+total blank lines : 2108
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |           .ind|             26|              0|             17| 0.0014|
+   |           .idx|             20|              0|              0| 0.0011|
+   |           .ilg|              6|              0|              0|0.00033|
+   |           .log|           1054|              1|              9|  0.058|
+   |           .fls|           3584|              0|              0|   0.20|
+   |           .tex|          18309|              0|           1734|    1.0|
+   |   .fdb_latexmk|            802|              0|              8|  0.044|
+   |           .aux|           5315|              0|              0|   0.29|
+   |           .pdf|          36089|          38053|            340|    2.0|
+   |           .out|            405|              0|              0|  0.022|
+   |           .toc|             41|              0|              0| 0.0023|
+   |        .drawio|             10|              0|              0|0.00055|
+   |       .synctex|        1741494|              0|              0|     96|
+   -------------------------------------------------------------------------
+appendix\appendix1.tex, code is 83, comment is 0, blank is 2.
+appendix\appendix2.tex, code is 3, comment is 0, blank is 2.
+Calculus.tex, code is 56, comment is 0, blank is 16.
+cover.pdf, it is a binary file.
+curved surface\Biparted hyperboloid.pdf, it is a binary file.
+curved surface\Ellipsoid.pdf, it is a binary file.
+curved surface\Elliptic paraboloid.pdf, it is a binary file.
+curved surface\Elliptical cone.pdf, it is a binary file.
+curved surface\Hyperbolic paraboloid.pdf, it is a binary file.
+curved surface\Univalent hyperboloid.pdf, it is a binary file.
+Discrete Mathematics.tex, code is 16, comment is 0, blank is 10.
+environment.tex, code is 197, comment is 0, blank is 16.
+ex.drawio, code is 10, comment is 0, blank is 0.
+figures\ArchimedesSpiral.pdf, code is 98, comment is 3, blank is 21.
+figures\autograph.png, it is a binary file.
+figures\CardioidLine.pdf, code is 108, comment is 9, blank is 22.
+figures\cjf1.pdf, it is a binary file.
+figures\cjf2.pdf, it is a binary file.
+figures\Cycloid.pdf, code is 89, comment is 9, blank is 22.
+figures\danyesqm.pdf, it is a binary file.
+figures\DoubleTwistedWire.pdf, code is 119, comment is 9, blank is 1.
+figures\ell1.png, it is a binary file.
+figures\geogebra-export.png, it is a binary file.
+figures\kjiezzshi.pdf, code is 9, comment is 171, blank is 1.
+figures\LeafLinear.pdf, code is 177, comment is 1, blank is 21.
+figures\liushu1.pdf, code is 482, comment is 570, blank is 22.
+figures\liushu2.pdf, code is 493, comment is 69, blank is 25.
+figures\liushu3.pdf, code is 486, comment is 28, blank is 23.
+figures\liushu4.pdf, code is 402, comment is 333, blank is 2.
+figures\matrix-multiplication.pdf, it is a binary file.
+figures\MiTongueLine.pdf, code is 112, comment is 3, blank is 22.
+figures\RoseLine.pdf, code is 101, comment is 1, blank is 22.
+figures\sdcjz.pdf, code is 119, comment is 2, blank is 22.
+figures\shuangqpwm.pdf, it is a binary file.
+figures\shuangyesqm.pdf, it is a binary file.
+figures\sin3 3pi.pdf, code is 76, comment is 1, blank is 22.
+figures\StarLine.pdf, code is 110, comment is 1, blank is 21.
+figures\tuoqiu.pdf, it is a binary file.
+figures\tuoyuanpwm.pdf, it is a binary file.
+figures\tuoyuanzm.pdf, it is a binary file.
+figures\ven1.pdf, code is 73, comment is 1, blank is 22.
+figures\ven2.pdf, code is 55, comment is 0, blank is 2.
+figures\ven3.pdf, code is 80, comment is 2, blank is 1.
+Frontmatter.tex, code is 7, comment is 0, blank is 3.
+indent.log, code is 14, comment is 1, blank is 0.
+Linear Algebra.tex, code is 39, comment is 0, blank is 12.
+Mathematical Notes.aux, code is 5315, comment is 0, blank is 0.
+Mathematical Notes.fdb_latexmk, code is 802, comment is 0, blank is 8.
+Mathematical Notes.fls, code is 3584, comment is 0, blank is 0.
+Mathematical Notes.idx, code is 20, comment is 0, blank is 0.
+Mathematical Notes.ilg, code is 6, comment is 0, blank is 0.
+Mathematical Notes.ind, code is 26, comment is 0, blank is 17.
+Mathematical Notes.log, code is 1040, comment is 0, blank is 9.
+Mathematical Notes.out, code is 405, comment is 0, blank is 0.
+Mathematical Notes.pdf, it is a binary file.
+Mathematical Notes.synctex.gz, it is a binary file.
+Mathematical Notes.synctex.gz.sum.synctex, code is 1741494, comment is 0, blank is 0.
+Mathematical Notes.tex, code is 49, comment is 0, blank is 18.
+Mathematical Notes.toc, code is 41, comment is 0, blank is 0.
+Probability Theory And Mathematical Statistics.tex, code is 54, comment is 0, blank is 17.
+section\section10\section101.tex, code is 413, comment is 0, blank is 35.
+section\section10\section102.tex, code is 357, comment is 0, blank is 13.
+section\section10\section103.tex, code is 205, comment is 0, blank is 16.
+section\section10\section104.tex, code is 162, comment is 0, blank is 21.
+section\section10\section105.tex, code is 355, comment is 0, blank is 13.
+section\section10\section10Intr.tex, code is 9, comment is 0, blank is 2.
+section\section11\section111.tex, code is 99, comment is 0, blank is 9.
+section\section11\section112.tex, code is 102, comment is 0, blank is 8.
+section\section11\section113.tex, code is 157, comment is 0, blank is 8.
+section\section11\section114.tex, code is 85, comment is 0, blank is 8.
+section\section11\section115.tex, code is 128, comment is 0, blank is 8.
+section\section11\section11Intr.tex, code is 10, comment is 0, blank is 2.
+section\section12\section121.tex, code is 1, comment is 0, blank is 0.
+section\section12\section122.tex, code is 1, comment is 0, blank is 0.
+section\section12\section123.tex, code is 1, comment is 0, blank is 0.
+section\section12\section124.tex, code is 1, comment is 0, blank is 0.
+section\section13\section131.tex, code is 217, comment is 0, blank is 7.
+section\section13\section132.tex, code is 1, comment is 0, blank is 0.
+section\section13\section133.tex, code is 287, comment is 0, blank is 26.
+section\section13\section134.tex, code is 197, comment is 0, blank is 19.
+section\section13\section135.tex, code is 150, comment is 0, blank is 15.
+section\section13\section136.tex, code is 1, comment is 0, blank is 0.
+section\section13\section13Intr.tex, code is 7, comment is 0, blank is 1.
+section\section14\section141.tex, code is 1, comment is 0, blank is 0.
+section\section14\section142.tex, code is 258, comment is 0, blank is 16.
+section\section14\section143.tex, code is 855, comment is 0, blank is 76.
+section\section14\section144.tex, code is 1, comment is 0, blank is 1.
+section\section14\section14Intr.tex, code is 7, comment is 0, blank is 1.
+section\section15\section151.tex, code is 175, comment is 0, blank is 28.
+section\section15\section152.tex, code is 1, comment is 0, blank is 0.
+section\section15\section153.tex, code is 18, comment is 0, blank is 4.
+section\section15\section154.tex, code is 1, comment is 0, blank is 0.
+section\section15\section155.tex, code is 1, comment is 0, blank is 0.
+section\section15\section15Intr.tex, code is 10, comment is 0, blank is 4.
+section\section16\section161.tex, code is 45, comment is 0, blank is 6.
+section\section16\section162.tex, code is 196, comment is 0, blank is 18.
+section\section16\section163.tex, code is 41, comment is 0, blank is 1.
+section\section16\section164.tex, code is 12, comment is 0, blank is 1.
+section\section16\section165.tex, code is 1, comment is 0, blank is 0.
+section\section16\section166.tex, code is 1, comment is 0, blank is 0.
+section\section16\section16Intr.tex, code is 21, comment is 0, blank is 3.
+section\section17\section171.tex, code is 1, comment is 0, blank is 0.
+section\section17\section172.tex, code is 351, comment is 0, blank is 23.
+section\section17\section173.tex, code is 71, comment is 0, blank is 5.
+section\section17\section174.tex, code is 1, comment is 0, blank is 2.
+section\section17\section175.tex, code is 1, comment is 0, blank is 0.
+section\section18\section181.tex, code is 81, comment is 0, blank is 9.
+section\section18\section182.tex, code is 236, comment is 0, blank is 17.
+section\section18\section183.tex, code is 1, comment is 0, blank is 0.
+section\section19\section191.tex, code is 5, comment is 0, blank is 1.
+section\section19\section192.tex, code is 1, comment is 0, blank is 0.
+section\section19\section193.tex, code is 51, comment is 0, blank is 6.
+section\section19\section194.tex, code is 1, comment is 0, blank is 0.
+section\section1\section11.tex, code is 366, comment is 0, blank is 40.
+section\section1\section12.tex, code is 190, comment is 0, blank is 34.
+section\section1\section13.tex, code is 1047, comment is 0, blank is 71.
+section\section1\section14.tex, code is 107, comment is 0, blank is 15.
+section\section1\section15.tex, code is 301, comment is 0, blank is 26.
+section\section1\section1Intr.tex, code is 10, comment is 0, blank is 1.
+section\section20\section201.tex, code is 44, comment is 0, blank is 6.
+section\section20\section202.tex, code is 205, comment is 0, blank is 26.
+section\section20\section203.tex, code is 1, comment is 0, blank is 0.
+section\section20\section204.tex, code is 0, comment is 0, blank is 0.
+section\section20\section20Intr.tex, code is 0, comment is 0, blank is 0.
+section\section21\section211.tex, code is 88, comment is 0, blank is 16.
+section\section21\section212.tex, code is 74, comment is 0, blank is 16.
+section\section21\section213.tex, code is 21, comment is 0, blank is 1.
+section\section21\section214.tex, code is 53, comment is 0, blank is 13.
+section\section21\section215.tex, code is 2, comment is 0, blank is 2.
+section\section21\section216.tex, code is 40, comment is 0, blank is 3.
+section\section21\section21Intr.tex, code is 7, comment is 0, blank is 1.
+section\section22\section221.tex, code is 97, comment is 0, blank is 5.
+section\section22\section222.tex, code is 95, comment is 0, blank is 11.
+section\section22\section223.tex, code is 68, comment is 0, blank is 14.
+section\section22\section22Intr.tex, code is 9, comment is 0, blank is 1.
+section\section23\section231.tex, code is 247, comment is 0, blank is 37.
+section\section23\section232.tex, code is 8, comment is 0, blank is 8.
+section\section23\section23Intr.tex, code is 7, comment is 0, blank is 1.
+section\section24\section241.tex, code is 13, comment is 0, blank is 12.
+section\section24\section242.tex, code is 7, comment is 0, blank is 6.
+section\section25\section251.tex, code is 10, comment is 0, blank is 9.
+section\section25\section252.tex, code is 6, comment is 0, blank is 5.
+section\section26\section261.tex, code is 9, comment is 0, blank is 8.
+section\section27\section271.tex, code is 7, comment is 0, blank is 6.
+section\section27\section272.tex, code is 5, comment is 0, blank is 4.
+section\section2\section21.tex, code is 367, comment is 0, blank is 37.
+section\section2\section22.tex, code is 65, comment is 0, blank is 9.
+section\section2\section23.tex, code is 372, comment is 0, blank is 32.
+section\section2\section24.tex, code is 237, comment is 0, blank is 13.
+section\section2\section25.tex, code is 140, comment is 0, blank is 13.
+section\section2\section26.tex, code is 210, comment is 0, blank is 29.
+section\section2\section27.tex, code is 58, comment is 0, blank is 7.
+section\section2\section2Intr.tex, code is 10, comment is 0, blank is 1.
+section\section3\section31.tex, code is 600, comment is 0, blank is 35.
+section\section3\section32.tex, code is 1097, comment is 0, blank is 83.
+section\section3\section33.tex, code is 196, comment is 0, blank is 12.
+section\section3\section34.tex, code is 81, comment is 0, blank is 20.
+section\section3\section35.tex, code is 256, comment is 0, blank is 42.
+section\section3\section36.tex, code is 18, comment is 0, blank is 3.
+section\section3\section3Intr.tex, code is 9, comment is 0, blank is 1.
+section\section4\section41.tex, code is 235, comment is 0, blank is 21.
+section\section4\section42.tex, code is 140, comment is 0, blank is 16.
+section\section4\section4Intr.tex, code is 10, comment is 0, blank is 3.
+section\section5\section51.tex, code is 162, comment is 0, blank is 18.
+section\section5\section52.tex, code is 201, comment is 0, blank is 18.
+section\section5\section53.tex, code is 244, comment is 0, blank is 22.
+section\section5\section54.tex, code is 75, comment is 0, blank is 9.
+section\section5\section5Intr.tex, code is 9, comment is 0, blank is 1.
+section\section6\section61.tex, code is 862, comment is 0, blank is 73.
+section\section6\section62.tex, code is 410, comment is 0, blank is 39.
+section\section6\section63.tex, code is 578, comment is 0, blank is 47.
+section\section6\section64.tex, code is 64, comment is 0, blank is 5.
+section\section6\section65.tex, code is 0, comment is 0, blank is 0.
+section\section6\section66.tex, code is 31, comment is 0, blank is 4.
+section\section6\section67.tex, code is 0, comment is 0, blank is 0.
+section\section6\section6Intr.tex, code is 10, comment is 0, blank is 1.
+section\section7\section71.tex, code is 98, comment is 0, blank is 1.
+section\section7\section72.tex, code is 4, comment is 0, blank is 3.
+section\section7\section73.tex, code is 498, comment is 0, blank is 67.
+section\section7\section74.tex, code is 149, comment is 0, blank is 16.
+section\section7\section75.tex, code is 1, comment is 0, blank is 1.
+section\section7\section7Intr.tex, code is 15, comment is 0, blank is 4.
+section\section8\section81.tex, code is 155, comment is 0, blank is 20.
+section\section8\section82.tex, code is 173, comment is 0, blank is 21.
+section\section8\section83.tex, code is 234, comment is 0, blank is 14.
+section\section8\section8Intr.tex, code is 9, comment is 0, blank is 2.
+section\section9\section91.tex, code is 854, comment is 0, blank is 32.
+section\section9\section92.tex, code is 325, comment is 0, blank is 11.
+section\section9\section93.tex, code is 0, comment is 0, blank is 0.
+section\section9\section9Intr.tex, code is 7, comment is 0, blank is 1.
+参考文献\XUSJ201506006.pdf, code is 180, comment is 538, blank is 0.
+参考文献\二阶变系数线性微分方程.pdf, code is 1955, comment is 1390, blank is 4.
+参考文献\基于插值法的中值定理证明.pdf, code is 1011, comment is 2210, blank is 2.
+参考文献\定积分证明.pdf, code is 1812, comment is 1570, blank is 5.
+离散数学答案.pdf, code is 27942, comment is 31132, blank is 35.
+===============================================================================
