@@ -1,0 +1,82 @@
+\section{估计量优良性的判定标准}
+
+虽然总体分布中的参数是确定的，但是对于同一个参数，可以有许多不同的点估计. 
+在这些估计中，我们自然地希望挑选一个最“优”的点估计，因此，有必要建立评价估计量优劣的标准. 下面介绍几个常用的标准：无偏性、有效性和一致性.
+
+\subsection{无偏性}
+
+\begin{definition}[无偏性]
+    若 $ \hat{\theta}=\hat{\theta}\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 是参数 $ \theta $ 的估计量，
+    其数学期望 $ E\qty(\hat{\theta}) $ 存在，且 $ E\qty(\hat{\theta})=\theta $，则称 $ \hat{\theta} $ \textit{是} $ \theta $ \textit{的无偏估计量}.
+\end{definition}
+
+\begin{example}
+    已知 $E(X)=\mu, D(X)=\sigma^{2} $ 存在，$ X_{1}, X_{2}, \cdots, X_{n} $ 为来自总体 $ X $ 的样本，试判定:\label{wpgjllti}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\bar{X} $ 是否为 $ \mu $ 的无偏估计量;
+        \item $\displaystyle\frac{1}{n} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2} $ 是否为 $ \sigma^{2} $ 的无偏估计量.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    由定义可知，
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 因为总体 $ E(X)=\mu, D(X)=\sigma^{2}, X_{1}, X_{2}, \cdots, X_{n} $ 为来自总体 $ X $ 的样本，则
+              $$E\left(X_{i}\right)=\mu, D\left(X_{i}\right)=\sigma^{2}, \quad i=1,2, \cdots, n $$
+              所以 $\displaystyle E\qty(\bar{X})=E\qty(\dfrac{1}{n}\sum_{i=1}^{n}X_i)=\dfrac{1}{n}\sum_{i=1}^{n}E(X_i)=\mu$，
+              所以 $\bar{X} $ 为 $ \mu $ 的无偏估计量.
+        \item 因为 $\displaystyle D\qty(\bar{X})=D\qty(\dfrac{1}{n}\sum_{i=1}^{n}X_i)=\dfrac{1}{n^2}\sum_{i=1}^{n}D(X_i)=\dfrac{\sigma^2}{n}$，所以
+              $$E\qty(\bar{X}^2)=D\qty(\bar{X})+E^2\qty(\bar{X})=\dfrac{\sigma^2}{n}+\mu^2,~E\qty(X_i^2)=D(X_i)+E^2(X_i)=\sigma^2+\mu^2$$
+              \begin{flalign*}
+                  E\qty[\dfrac{1}{n}\sum_{i=1}^{n}\qty(X_i-\bar{X})^2] & =E\qty(\dfrac{1}{n}\sum_{i=1}^{n}X_i^2-\bar{X}^2)=\dfrac{1}{n}\sum_{i=1}^{n}E\qty(X_i^2)-E\qty(\bar{X}^2) \\
+                                                                       & =\dfrac{1}{n}\sum_{i=1}^{n}\qty(\mu^2+\sigma^2)-\qty(\dfrac{\sigma^2}{n}+\mu^2)=\dfrac{n-1}{n}\sigma^2
+              \end{flalign*}
+              所以 $\displaystyle\dfrac{1}{n}\sum_{i=1}^{n}\qty(X_i-\bar{X})^2$ 不是 $\sigma^2$ 的无偏估计量.
+    \end{enumerate}
+\end{solution}
+
+由例题 \ref{wpgjllti} 可以看出，如果在 $ \displaystyle\frac{1}{n} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2} $ 前面乘以系数
+$ \displaystyle\frac{n}{n-1} $，就修正成为 $ \sigma^{2} $ 的无偏估计量.
+由此也解释了在定义样本方差时，我们之所以选择 $\displaystyle S^{2}=\frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2}$，
+而不是 $\displaystyle \frac{1}{n} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2} $ 形式，是因为 $ S^{2} $ 是 $ \sigma^{2} $ 的无偏估计量.
+
+\subsection{有效性}
+
+同一个参数可以有多个无偏估计量，那么选择哪一个为好呢? 设参数 $ \theta $ 有两个无偏估计量 $ \hat{\theta}_{1} $ 和 $ \hat{\theta}_{2}$，
+在样本容量 $ n $ 相同的情况下，若 $ \hat{\theta}_{1} $ 的观测值都集中在 $ \theta $ 的真值附近，
+而 $\hat{\theta}_{2}$ 的观测值较远离 $\theta$ 的真值，很显然 $\hat{\theta}_{1}$ 作为 $\theta$ 的估计更合适.
+即 $\hat{\theta}_{1}$ 的方差较 $\hat{\theta}_{2}$ 的方差小，我们认为 $\hat{\theta}_{1}$ 较 $\hat{\theta}_{2}$ 要好，由此有如下的定义.
+
+\begin{definition}[有效性]
+    设 $ \hat{\theta}_{1}=\hat{\theta}_{1}\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 与 $ \hat{\theta}_{2}=\hat{\theta}_{2}\left(X_{1}, X_{2}, \cdots, X_{n}\right)$
+    都是参数 $ \theta $ 的无偏估计量，若 $ D\left(\hat{\theta}_{1}\right) \leqslant D\left(\hat{\theta}_{2}\right) $，则称 $ \hat{\theta}_{1} $ \textit{较} $ \hat{\theta}_{2} $ \textit{更有效}.
+\end{definition}
+
+% \begin{example}
+%     设 $X_{1}, X_{2}, X_{3}, X_{4}$ 是来自均值为 $\theta$ 的指数分布总体的样本，其中 $\theta$ 未知，设有估计量
+%     \begin{flalign*}
+%         T_{1} & =\dfrac{1}{6}\left(X_{1}+X_{2}\right)+\dfrac{1}{3}\left(X_{3}+X_{4}\right), \\
+%         T_{2} & =\dfrac{X_{1}+2 X_{2}+3 X_{3}+4 X_{4}}{5},                                  \\
+%         T_{3} & =\dfrac{X_{1}+X_{2}+X_{3}+X_{4}}{4} .
+%     \end{flalign*}
+%     \begin{enumerate}[label=(\arabic{*})]
+%         \item 指出 $T_{1}, T_{2}, T_{3}$ 中哪几个是 $\theta$ 的无偏估计量;
+%         \item 在上述 $\theta$ 的无偏估计中指出哪一个较为有效.
+%     \end{enumerate}
+% \end{example}
+% \begin{solution}
+    
+% \end{solution}
+
+\subsection{一致性}
+
+无偏性和有效性都是在假设样本容量 $n$ 固定的条件下讨论的.
+由于估计量是样本的函数,它依赖样本容量 $n$，自然地，我们希望一个好的估计量，当 $n$ 越来越大时，它与参数的真值几乎一致，
+这就是估计量的一致性或称之为相合性.
+
+\begin{definition}[一致性]
+    设 $ \hat{\theta}\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 为参数 $ \theta $ 的估计量，当 $ n \rightarrow \infty $ 时，$\hat{\theta}\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 概率收敛于
+    $ \theta $，即对于任意 $ \varepsilon>0 $，有
+    $$\lim _{n \rightarrow \infty} P\qty{\qty|\hat{\theta}-\theta|<\varepsilon}=1$$
+    则称 $ \hat{\theta} $ \textit{为} $ \theta $ \textit{的相合估计量}.
+\end{definition}
+

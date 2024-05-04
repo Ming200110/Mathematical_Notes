@@ -1,0 +1,210 @@
+\section{多元积分学的应用与场论概述}
+
+场论是物理学中的一个重要分支，主要研究空间中的场的性质和相互作用. 
+场可以是标量场 (只有大小没有方向) 或者矢量场 (有大小和方向)，描述了空间中各个点的物理量. 
+在场论中，多元积分学的概念和方法经常被用来描述和计算场的性质和相互作用. 
+
+\subsection{多元积分学的应用}
+
+下表是各积分的应用公式及物理意义.
+\setcounter{magicrownumbers}{0}
+\begin{table}[H]
+    \centering
+    \resizebox{.99\textwidth}{!}{
+        \begin{tabular}{c | c c c c}
+            \multirow{2}{*}{应用} & \multicolumn{4}{c}{积分形式}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          \\
+                                  & 二重积分                                                                                                                                                                        & 三重积分                                                                                                                                                                                                                                                                                      & 曲线积分                                                                                                                                                                                                                 & 曲面积分                                                                                                                                                                                                                                                                 \\
+            \midrule
+            几何量                & $\begin{array}{l}\text{平面面积}\\S=\displaystyle\iint\limits_D\dd x\dd y\end{array}$                                                                                           & $\begin{array}{l}\text{立体体积}\\\displaystyle V=\iiint\limits_\Omega \dd x\dd y\dd z\end{array}$                                                                                                                                                                                            & $\begin{array}{l}\text{弧长}\\\displaystyle L=\int_L \dd s\end{array}$                                                                                                                                                   & $\begin{array}{l}\text{曲面面积}\\\displaystyle S=\iint\limits_\varSigma \dd S\end{array}$                                                                                                                                                                              \\
+            \midrule
+            质量                  & $\displaystyle m=\iint\limits_D \rho(x,y)\dd x\dd y$                                                                                                                            & $m=\displaystyle\iiint\limits_\Omega \rho(x,y,z)\dd x\dd y\dd z$                                                                                                                                                                                                                              & $m=\displaystyle\int_L \rho(x,y,z)\dd s$                                                                                                                                                                                 & $m=\displaystyle\iint\limits_{\varSigma}\rho(x,y,z)\dd S$                                                                                                                                                                                                                \\
+            \midrule
+            质心                  & $\begin{array}{l}\overline{x}=\dfrac{\displaystyle\iint\limits_D x\rho(x,y)\dd x\dd y}{m}\\\overline{y}=\dfrac{\displaystyle\iint\limits_D y\rho(x,y)\dd x\dd y}{m}\end{array}$ & $\begin{array}{l}\overline{x}=\dfrac{\displaystyle\iint\limits_\Omega x\rho(x,y,z)\dd x\dd y\dd z}{m}\\\overline{y}=\dfrac{\displaystyle\iint\limits_\Omega y\rho(x,y,z)\dd x\dd y\dd z}{m}\\\overline{z}=\dfrac{\displaystyle\iint\limits_\Omega z\rho(x,y,z)\dd x\dd y\dd z}{m}\end{array}$ & $\begin{array}{l}\overline{x}=\dfrac{\displaystyle\int_L x\rho(x,y,z)\dd s}{m}\\\overline{y}=\dfrac{\displaystyle\int_L y\rho(x,y,z)\dd s}{m}\\\overline{z}=\dfrac{\displaystyle\int_L z\rho(x,y,z)\dd s}{m}\end{array}$ & $\begin{array}{l}\overline{x}=\dfrac{\displaystyle\iint\limits_\varSigma x\rho(x,y,z)\dd S}{m}\\\overline{y}=\dfrac{\displaystyle\iint\limits_\varSigma y\rho(x,y,z)\dd S}{m}\\\overline{z}=\dfrac{\displaystyle\iint\limits_\varSigma z\rho(x,y,z)\dd S}{m}\end{array}$ \\
+            \midrule
+            转动惯量              & $\begin{array}{l}I_x=\displaystyle\iint\limits_D y^2\cdot\rho\dd x\dd y\\I_y=\displaystyle\iint\limits_D x^2\cdot\rho\dd x\dd y\\I_0=I_x+I_y\end{array}$                        & $\begin{array}{l}I_x=\displaystyle\iiint\limits_\Omega \qty(y^2+z^2)\cdot\rho\dd x\dd y\dd z\\I_y=\displaystyle\iiint\limits_\Omega \qty(x^2+z^2)\cdot\rho\dd x\dd y\dd z\\I_z=\displaystyle\iiint\limits_\Omega \qty(x^2+y^2)\cdot\rho\dd x\dd y\dd z\\I_0=I_x+I_y+I_z\end{array}$           & $\begin{array}{l}I_x=\displaystyle\int_L \qty(y^2+z^2)\cdot\rho\dd s\\I_y=\displaystyle\int_L \qty(x^2+z^2)\cdot\rho\dd s\\I_z=\displaystyle\int_L \qty(x^2+y^2)\cdot\rho\dd s\\I_0=I_x+I_y+I_z\end{array}$              & $\begin{array}{l}I_x=\displaystyle\iint\limits_\varSigma \qty(y^2+z^2)\cdot\rho\dd S\\I_y=\displaystyle\iint\limits_\varSigma \qty(x^2+z^2)\cdot\rho\dd S\\I_z=\displaystyle\iint\limits_\varSigma \qty(x^2+y^2)\cdot\rho\dd S\\I_0=I_x+I_y+I_z\end{array}$              \\
+            \midrule
+            通量                  &                                                                                                                                                                                 &                                                                                                                                                                                                                                                                                               &                                                                                                                                                                                                                          & $\begin{array}{l}\varPhi =\displaystyle\iint\limits_\varSigma P\dd y\dd z+Q\dd z\dd x+R\dd x\dd y\\\text{向量场: }\vb*{F}=P\vb*{i}+Q\vb*{j}+R\vb*{k}\end{array}$                                                                                                               \\
+            \midrule
+            变力做功              &                                                                                                                                                                                 &                                                                                                                                                                                                                                                                                               & $\begin{array}{l}W=\displaystyle\int_L P\dd x+Q\dd y+R\dd z\\\text{力: }\vb*{F}=P\vb*{i}+Q\vb*{j}+R\vb*{k}\end{array}$                                                                                                                                                                                                                                                                                                                                                                                    \\
+        \end{tabular}}
+\end{table}
+
+\begin{example}
+    设 $C$ 是曲线 $x^2+y^2=2(x+y)$，求 $\displaystyle\oint_C\qty(2x^2+3y^2)\dd s.$
+\end{example}
+\begin{solution}
+    由轮换对称性，以及形心公式得:
+    $\displaystyle\oint_C\qty(2x^2+3y^2)\dd s=5\oint_Cx^2\dd s=5\oint_C y^2\dd s=\dfrac{5}{2}\oint_C\qty(x^2+y^2)\dd s=5\oint_C(x+y)\dd s=5\qty(\bar{x}+\bar{y})\oint_C\dd s=5\qty(\bar{x}+\bar{y})\cdot2\pi r=20\sqrt{2}\pi$.
+\end{solution}
+
+\begin{example}
+    设 $ V $ 是曲面 $ z=\sqrt{1-x^{2}-y^{2}} $ 与曲面 $ z=\sqrt{x^{2}+y^{2}}-1 $ 所围成的立体，
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 计算 $\displaystyle  I=\iiint\limits_{V}\qty(\sqrt{2} x+z)^{2} \dd  V $;
+        \item 若流速场 $ \boldsymbol{v}=(P, Q, R) $，其中 $ P=\dfrac{x}{r_{0}^{\frac{3}{2}}},~ Q=\dfrac{y}{r_{0}^{\frac{3}{2}}},~ R=\dfrac{z}{r_{0}^{\frac{3}{2}}},~ r_{0}=x^{2}+y^{2}+z^{2} $，
+              求 $ \vb*{v} $ 由 $ V $ 内部流向外部的流量.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 将 $\qty(\sqrt{2} x+z)^{2}$ 展开，并且注意到 $2\sqrt{2}xz$ 关于 $x$ 为奇函数，且被积空间关于 $xOy$ 面对称，又有 $x$ 与 $y$ 轮换对此，则
+              \begin{flalign*}
+                  I=\iiint\limits_V\qty(2x^2+z^2+2\sqrt{2}xz)\dd V=\iiint\limits_V\qty(x^2+y^2+z^2)\dd V=\iiint\limits_{V_1}\qty(x^2+y^2+z^2)\dd V+\iiint\limits_{V_2}\qty(x^2+y^2+z^2)\dd V
+              \end{flalign*}
+              其中 $V_1$ 为曲面 $ z=\sqrt{1-x^{2}-y^{2}} $ 与 $xOy$ 面所围成的空间，$V_2$ 为曲面 $ z=\sqrt{x^{2}+y^{2}}-1 $ 与 $xOy$ 面所围成的空间，则
+              \begin{flalign*}
+                  I_1 & =\iiint\limits_{V_1}\qty(x^2+y^2+z^2)\dd V=\int_{0}^{2\pi}\dd \theta\int_{0}^{\frac{\pi}{2}}\sin\varphi\dd \varphi\int_{0}^{1}r^2\cdot r^2\dd r=\dfrac{2\pi}{5}                                  \\
+                  I_2 & =\iiint\limits_{V_2}\qty(x^2+y^2+z^2)\dd V=\int_{-1}^{0}\dd z\iint\limits_{D_{xy}}\qty(x^2+y^2+z^2)\dd x\dd y=\int_{-1}^{0}\qty[\int_{0}^{2\pi}\dd \theta\int_{0}^{z+1}\qty(r^2+z^2)r\dd r]\dd z \\
+                      & =2\pi\int_{-1}^{0}\qty[\dfrac{1}{4}(z+1)^4+\dfrac{1}{2}z^2(z+1)^2]\dd z=\dfrac{2\pi}{15}
+              \end{flalign*}
+              故 $I=I_1+I_2=\dfrac{8\pi}{15}.$
+        \item 流量 $\displaystyle \varPhi=\oiint\limits_S P\dd y\dd z+Q\dd z\dd x+R\dd x\dd y$，$S$ 取外侧，所以 $\displaystyle \varPhi=\oiint\limits_S\dfrac{x\dd y\dd z+y\dd x\dd z+z\dd x\dd y}{\qty(x^2+y^2+z^2)^{\frac{3}{2}}}$，
+              记 $S_1:x^2+y^2+z^2=\varepsilon^2$ 其中方向向内，则 $$\varPhi =\oiint\limits_{S}=\oiint\limits_{S+S_1-S_1}=\oiint\limits_{S+S_1}+\oiint\limits_{S_1^-}$$
+              并且 $$\pdv{P}{x}=\dfrac{y^2+z^2-2x^2}{\qty(x^2+y^2+z^2)^{\frac{5}{2}}},~\pdv{Q}{y}=\dfrac{x^2+z^2-2y^2}{\qty(x^2+y^2+z^2)^{\frac{5}{2}}},~\pdv{R}{z}=\dfrac{x^2+y^2-2z^2}{\qty(x^2+y^2+z^2)^{\frac{5}{2}}}$$
+              因此 $\displaystyle\pdv{P}{x}+\pdv{Q}{y}+\pdv{R}{z}=0$，则有 Gauss 公式 $\displaystyle\oiint\limits_{S+S_1}\dfrac{x\dd y\dd z+y\dd x\dd z+z\dd x\dd y}{\qty(x^2+y^2+z^2)^{\frac{3}{2}}}=0$，且
+              \begin{flalign*}
+                  \varPhi'=\oiint\limits_{S_1^-}\dfrac{x\dd y\dd z+y\dd x\dd z+z\dd x\dd y}{\qty(x^2+y^2+z^2)^{\frac{3}{2}}}=\dfrac{1}{\varepsilon^3}\iint\limits_{S_1^-}x\dd y\dd z+y\dd z\dd x+z\dd x\dd y=\dfrac{3}{\varepsilon^3}\iiint\limits_{\Omega_\varepsilon}\dd V=4\pi
+              \end{flalign*}
+              因此 $\varPhi=4\pi.$
+    \end{enumerate}
+\end{solution}
+
+\begin{definition}[环流量]
+    设有向量场
+    $$\boldsymbol{A}(x, y, z)=P(x, y, z) \boldsymbol{i}+Q(x, y, z) \boldsymbol{j}+R(x, y, z) \boldsymbol{k}$$
+    其中函数 $ P$、$ Q $ 与 $ R $ 均连续，$\Gamma $ 是 $ \boldsymbol{A} $ 的定义域内的一条分段光滑的有向闭曲线，$\boldsymbol{\tau} $ 是 $ \Gamma $ 在点 $ (x, y, z) $ 处的单位切向量，则积分
+    $$\oint_{\Gamma} \boldsymbol{A} \cdot \boldsymbol{\tau} \mathrm{d} s$$
+    称为\textit{向量场} $ \boldsymbol{A} $ \textit{沿有向曲线} $ \Gamma $ \textit{的环流量}.
+\end{definition}
+
+\begin{example}
+    设向量场 $\vb*{A}(x,y,z)=\qty(z^2,x^2,y^2)$，以点 $M_0(1,1,0)$ 为圆心，$\varepsilon$ 为半径，在 $xOy$ 面上作一圆盘 $\varSigma_\varepsilon$，面积为 $\sigma_\varepsilon$，$\Gamma$ 为该圆盘的正向边界，
+    $\vb*{\tau}$ 为 $\Gamma$ 上点 $(x,y,z)$ 处的单位切向量，求 $\displaystyle\lim_{\varepsilon\to0^+}\dfrac{1}{\sigma_\varepsilon}\oint_{\Gamma}\vb*{A}\cdot\vb*{\tau}\dd s.$
+\end{example}
+\begin{solution}
+    由题意知 $\sigma_\varepsilon=\pi\varepsilon^2$，并且由 Stokes 公式得
+    \begin{flalign*}
+        \oint_{\Gamma}\vb*{A}\cdot\vb*{\tau}\dd s & =\oint_{\Gamma}z^2\dd x+x^2\dd y+y^2\dd z=\iint\limits_{\varSigma_\varepsilon}\mqty|\dd y\dd z & \dd z\dd x & \dd x\dd y \\\displaystyle \pdv{x}&\displaystyle \pdv{y}&\displaystyle \pdv{z}\\[6pt]z^2&x^2&y^2|=\iint\limits_{\varSigma_\varepsilon}2y\dd y\dd z+2x\dd x\dd y+2z\dd z\dd x\\
+                                                  & =\iint\limits_{(x-1)^2+(y-1)^2\leqslant \varepsilon^2}2x\dd x\dd y=2\int_{0}^{2\pi}\dd \theta\int_{0}^{\varepsilon}(r\cos\theta+1)r\dd r=2\pi\varepsilon^2
+    \end{flalign*}
+    于是 $\displaystyle\lim_{\varepsilon\to0^+}\dfrac{1}{\sigma_\varepsilon}\oint_{\Gamma}\vb*{A}\cdot\vb*{\tau}\dd s=\lim_{\varepsilon\to0^+}\dfrac{2\pi\varepsilon^2}{\pi\varepsilon^2}=2.$
+\end{solution}
+
+\subsection{梯度、散度和旋度}
+
+\begin{definition}[Hamilton 算符]
+    $\displaystyle\grad :=\qty(\pdv{x},\pdv{y},\pdv{z}):=\vb*{i}\pdv{x}+\vb*{j}\pdv{y}+\vb*{k}\pdv{z}$ 为一向量算符.
+\end{definition}
+
+利用 Hamilton 算符，可以写出梯度、散度和旋度的定义.
+\begin{definition}
+    设 $u=u(x,y,z)$ 为光滑的数量场 (“光滑”指 $u(x,y,z)$ 有连续偏导数)，
+    $$\vb*{A}=P(x,y,z)\vb*{i}+Q(x,y,z)\vb*{j}+R(x,y,z)\vb*{k}$$
+    为光滑的向量场 (“光滑”指 $P,Q,R$ 有连续偏导数)，则由 $u$ 和 $\vb*{A}$ 产生的梯度、散度和旋度为:
+    \begin{flalign*}
+         & \vb{grad~}u:=\grad{u}:=\qty(\pdv{u}{x},\pdv{u}{y},\pdv{u}{z}):=\pdv{u}{x}\vb*{i}+\pdv{u}{y}\vb*{j}+\pdv{u}{z}\vb*{k}                     \\
+         & \text{div}~\vb*{A}:=\div\vb*{A}:=\pdv{P}{x}+\pdv{Q}{y}+\pdv{R}{z}                                                                        \\
+         & \text{rot}~\vb*{A}:=\curl{\vb*{A}}:=\mqty|\vb*{i}                                                                    & \vb*{j} & \vb*{k} \\ \displaystyle\pdv{x}&\displaystyle\pdv{y}&\displaystyle\pdv{z}\\P&R&Q|.
+    \end{flalign*}
+\end{definition}
+
+\begin{example}
+    设 $u=z\qty(x^2+3)$，求向量场 $\vb*{A}=\grad u$ 通过球面 $x^2+y^2+z^2=1$ 上半部分的流量 $Q$，指向球外.
+\end{example}
+\begin{solution}
+    因为 $\vb*{A}=\grad u=\displaystyle \pdv{u}{x}\vb*{i}+\pdv{u}{y}\vb*{j}+\pdv{u}{z}\vb*{k}=2xz\vb*{i}+\qty(x^2+3)\vb*{k}$，所以 $$Q=\iint\limits_\varSigma \vb*{A}\cdot\vb*{n}^\circ \dd S=\iint\limits_{\varSigma}2xz\dd y\dd z+\qty(x^2+3)\dd x\dd y$$
+    取 $\varSigma_1:x^2+y^2\leqslant 1$ 方向竖直向下，$D:\qty{(x,y)\mid x^2+y^2\leqslant 1}$，则 $$Q=\oiint\limits_{\varSigma+\varSigma_1-\varSigma_1}=\oiint\limits_{\varSigma+\varSigma_1}+\oiint\limits_{\varSigma_1^-}$$
+    其中，由 Gauss 公式 $\displaystyle \oiint\limits_{\varSigma+\varSigma_1}2xz\dd y\dd z+\qty(x^2+3)\dd x\dd y=\iiint\limits_{\Omega}2z\dd V=2\int_{0}^{2\pi}\dd \theta\int_{0}^{\frac{\pi}{2}}\sin\varphi\cos\varphi\dd \varphi\int_{0}^{1}r^3\dd r=\dfrac{\pi}{2}$，且
+    \begin{flalign*}
+        \oiint\limits_{\varSigma _1^-}2xz\dd y\dd z+\qty(x^2+3)\dd x\dd y & =\iint\limits_D \qty(x^2+3)\dd x\dd y=\int_{0}^{2\pi}\dd \theta\int_{0}^{1}\qty(r^2\cos^2\theta+3)r\dd r     \\
+                                                                          & =\dfrac{1}{4}\int_{0}^{2\pi}\cos^2\theta\dd \theta+\dfrac{3}{2}\int_{0}^{2\pi}\dd \theta=\dfrac{\pi}{4}+3\pi
+    \end{flalign*}
+    因此 $Q=\dfrac{\pi}{2}+\dfrac{\pi}{4}+3\pi=\dfrac{15\pi}{4}.$
+\end{solution}
+
+\begin{theorem}[方向导数与 Hamilton 算符]
+    设 $u=u(x,y,z)$，则函数 $u(x,y,z)$ 的方向导数计算公式为
+    $$\pdv{u}{\vb*{n}}=\grad u\cdot\vb*{n}=\pdv{u}{x}\cos\alpha+\pdv{u}{y}\cos\beta+\pdv{u}{z}\cos\gamma$$
+    其中 $\vb*{n}=\qty{\cos\alpha,\cos\beta,\cos\gamma}$.
+    \index{方向导数与 Hamilton 算符}
+\end{theorem}
+
+\begin{example}[2005 数一]
+    设函数 $u(x,y,z)=1+\dfrac{x^2}{6}+\dfrac{y^2}{12}+\dfrac{z^2}{18}$，单位向量 $\vb*{n}=\dfrac{1}{\sqrt{3}}\qty{1,1,1}$，求
+    $\displaystyle \eval{\pdv{u}{\vb*{n}}}_{(1,2,3)}.$
+\end{example}
+\begin{solution}
+    $\displaystyle\eval{\pdv{u}{\vb*{n}}}_{(1,2,3)}=\eval{\pdv{u}{x}\cos\alpha+\pdv{u}{y}\cos\beta+\pdv{u}{z}\cos\gamma}_{(1,2,3)}=3\times\dfrac{1}{3}\times\dfrac{1}{\sqrt{3}}=\dfrac{\sqrt{3}}{3}.$
+\end{solution}
+
+\subsection{梯度、散度、旋度的基本公式及其应用}
+
+以下 $u,v,f$ 都是 $(x,y,z)$ 的函数，有连续偏导数，$\vb*{A},~\vb*{B}$ 是向量函数，$c$ 为常数，
+$$\vb*{r}=(x-x_0,y-y_0,z-z_0),~r=\sqrt{(x-x_0)^2+(y-y_0)^2+(z-z_0)^2}.$$
+\setcounter{magicrownumbers}{0}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l l}
+        关于梯度的公式                                                                                                                                                     \\
+        (\rownumber)$\grad(cu)=c\grad{u}$                                           & (\rownumber)$\grad(u\pm v)=\grad{u}\pm\grad{v}$                                      \\
+        (\rownumber)$\grad(uv)=v\grad{u}+u\grad{v}$                                 & (\rownumber)$\grad(\dfrac{u}{v})=\dfrac{v\grad{u}-u\grad{v}}{v^2}$                   \\
+        (\rownumber)$\grad(f(u))=f'(u)\grad{u}$                                     & (\rownumber)$\grad(f(u,v))=f'_u\grad{u}+f'_v\grad{v}$                                \\
+        (\rownumber)$\grad(\vb*{r})=\dfrac{\vb*{r}}{r}$                             & (\rownumber)$\grad(f(r))=f'(r)\dfrac{\vb*{r}}{r}$                                    \\
+        \midrule
+        关于散度的公式                                                                                                                                                     \\
+        (\rownumber)$\div(c\vb*{A})=c\div\vb*{A}$                                   & (\rownumber)$\div(\vb*{A}\pm\vb*{B})=\div\vb*{A}\pm\div\vb*{B}$                      \\
+        (\rownumber)$\div(u\vb*{A})=u\div\vb*{A}+\grad{u}\cdot\vb*{A}$              & (\rownumber)$\div\vb*{r}=3$                                                          \\
+        \midrule
+        关于旋度的公式                                                                                                                                                     \\
+        (\rownumber)$\curl{(c\vb*{A})}=c\curl{A}$                                   & (\rownumber)$\curl(\vb*{A}\pm\vb*{B})=\curl{\vb*{A}}\pm\curl{\vb*{B}}$               \\
+        (\rownumber)$\curl{(u\vb*{A})}=u\curl{A}+\grad{u}\times \vb*{A}$            & (\rownumber)$\curl{\vb*{r}}=\vb*{0}$                                                 \\
+        \midrule
+        混合运算                                                                                                                                                           \\
+        \multicolumn{2}{l}{(\rownumber)$\grad(\vb*{A}\cdot\vb*{B})=\vb*{B}\times(\curl{A})+\vb*{A}\times(\curl{B})+(\vb*{B}\cdot\grad)\vb*{A}+(\vb*{A}\cdot\grad)\vb*{B}$} \\
+        \multicolumn{2}{l}{(\rownumber)$\div(\vb*{A}\times\vb*{B})=\vb*{B}\cdot(\curl{A})-\vb*{A}\cdot(\curl{B})$}                                                         \\
+        \multicolumn{2}{l}{(\rownumber)$\curl(\vb*{A}\times\vb*{B})=\vb*{A}\div\vb*{B}-\vb*{B}\div\vb*{A}+(\vb*{B}\cdot\grad)\vb*{A}-(\vb*{A}\cdot\grad)\vb*{B}$}          \\
+        \multicolumn{2}{l}{(\rownumber)$\displaystyle\div(\grad u)=\vb*{\Delta} u=\laplacian{u}=\pdv[2]{u}{x}+\pdv[2]{u}{y}+\pdv[2]{u}{z}$}                                \\
+        (\rownumber)$\curl(\grad u)=\vb*{0}$                                        & (\rownumber)$\div(\curl{\vb*{A}})=0$                                                 \\
+        (\rownumber)$\grad(\div\vb*{A})=\curl(\curl{\vb*{A}})+\vb*{\Delta} \vb*{A}$ & (\rownumber)$\curl(\curl{\vb*{A}})=\grad(\div\vb*{A})-\vb*{\Delta}\vb*{A}$           \\
+        \midrule
+        注意                                                                                                                                                               \\
+        \multicolumn{2}{l}{$\displaystyle(\vb*{B}\cdot\grad)\vb*{A}=\qty(B_x\pdv{x}+B_y\pdv{y}+B_z\pdv{z})\vb*{A},~(\vb*{A}\cdot\grad)\vb*{B}=\qty(A_x\pdv{x}+A_y\pdv{y}+A_z\pdv{z})\vb*{B}$}
+    \end{tabular}
+\end{table}
+
+\begin{definition}[Laplace 算符]
+    $\displaystyle\vb*{\Delta}:=\pdv[2]{}{x}+\pdv[2]{}{y}+\pdv[2]{}{z}$，并且有
+    $$\laplacian:=\div\grad:=\vb*{\Delta}$$
+    $f$ 为函数，则 $\laplacian f$ 为标量; 若 $\vb*{A}=(A_x,A_y,A_z)$ 是向量，则 $\laplacian{\vb*{A}}=\qty(\laplacian{A_x},\laplacian{A_y},\laplacian{A_z})$ 为向量.
+\end{definition}
+
+\begin{example}[2001 数一]
+    设 $r=\sqrt{x^2+y^2+z^2}$，求 $\eval*{\text{div}(\vb{grad}~r)}_{(1,-2,2)}.$
+\end{example}
+\begin{solution}
+    $\displaystyle\text{原式}=\eval{\div\grad r}_{(1,-2,2)}=\eval{\laplacian{r}}_{(1,-2,2)}=\eval{\pdv[2]{r}{x}+\pdv[2]{r}{y}+\pdv[2]{r}{z}}_{(1,-2,2)}=\eval{\dfrac{2}{\sqrt{x^2+y^2+z^2}}}_{(1,-2,2)}=\dfrac{2}{3}.$
+\end{solution}
+
+\begin{example}[2012 数一]
+    计算 $\eval{\vb{grad}\qty(xy+\dfrac{z}{y})}_{(2,1,1)}.$
+\end{example}
+\begin{solution}
+    $\eval{\grad(xy+\dfrac{z}{y})}_{(2,1,1)}=\eval{y\grad{x}+x\grad{y}+\dfrac{y\grad{z}-z\grad{y}}{y^2}}_{(2,1,1)}=\eval{(y,x,0)+\dfrac{(0,-z,y)}{y^2}}_{(2,1,1)}=(1,1,1).$
+\end{solution}
+
+\begin{example}
+    求向量场 $\vb*{A}=2x^3yz\vb*{i}-x^2y^2z\vb*{j}-x^2yz^2\vb*{k}$ 的散度 $\div\vb*{A}$ 在点 $M(1,1,2)$ 处沿方向 $\vb*{l}=(2,2,-1)$ 的方向导数 $\displaystyle\pdv{\vb*{l}}(\div\vb*{A})\biggl |_{M}.$
+\end{example}
+\begin{solution}
+    设 $P=2x^3yz,~Q=-x^2y^2z,~R=-x^2yz^2$，那么
+    $$\div\vb*{A}=\pdv{P}{x}+\pdv{Q}{y}+\pdv{R}{z}=6x^2yz-2x^2yz-2x^2yz=2x^2yz$$
+    并且 $$\pdv{\vb*{l}}(\div\vb*{A})\biggl |_{M}=\grad(\div\vb*{A})\biggl |_{M}\cdot\vb*{l}^\circ=\grad(2x^2yz)\biggl |_{M}\cdot\vb*{l}^\circ=\eval{\qty(4xyz,2x^2z,2x^2y)}_{M}\cdot\dfrac{1}{3}(2,2,-1)=\dfrac{22}{3}.$$
+\end{solution}
+
+\begin{example}
+    设 $\div[\grad f(r)]=0$，求 $f(r).$
+\end{example}
+\begin{solution}
+    $\text{原式}=\div[f'(r)\dfrac{\vb*{r}}{r}]=\dfrac{f'(r)}{r}\div\vb*{r}+\grad\dfrac{f'(r)}{r}\cdot\vb*{r}=3\dfrac{f'(r)}{r}+\dfrac{r\grad f'(r)-f'(r)\grad r}{r^2}\vb*{r}=3\dfrac{f'(r)}{r}+\dfrac{f''(r)\cdot\vb*{r}-f'(r)\cdot\dfrac{\vb*{r}}{r}}{r^2}\vb*{r}=f''(r)+2\dfrac{f'(r)}{r}=0$，
+    解微分方程，可得 $f(r)=\dfrac{C_1}{r}+C_0.$
+\end{solution}

@@ -1,0 +1,210 @@
+\section{Lagrange 插值与 Hermite 插值}
+
+Lagrange 插值和 Hermite 插值都是插值法的一种，用于通过已知数据点构建一个多项式函数，从而估计在其他点上的函数. 它们的主要区别在于插值多项式的构造方式和插值点的选择.
+
+\subsection{Lagrange 插值}
+
+\begin{definition}[Lagrange 插值多项式]
+    经过数据点 $(x_0,y_0),(x_1,y_1),\cdots,(x_n,y_n)$ 而次数不高于 $n$ 的 \textit{Lagrange 插值多项式}为 $$p_n(x)=\sum_{k=0}^{n}\qty(\prod_{\substack{j=0\\j\neq k}}^{n}\dfrac{x-x_j}{x_k-x_j})y_k.$$
+\end{definition}
+
+% \begin{definition}[Hermite 插值多项式]
+%     经过两两不同节点 $x_0,x_1,\cdots,x_n$，且满足 $$\begin{cases}
+%         H_{2n+1}(x_i)=y_i\\H_{2n+1}(x_i)=m_i
+%     \end{cases}(i=0,1,2,\cdots,n)$$ 的次数不超过 $2n+1$ 的 Hermite 插值多项式为 
+%     $$H_{2n+1}(x)=\sum_{i=0}^{n}\qty[1-2(x-x_i)\sum_{\substack{k=0\\k\neq i}}^{n}\dfrac{1}{x_i-x_k}]l_i^2(x)y_i+\sum_{i=0}^{n}(x-x_i)l_i^2(x)m_i.$$
+% \end{definition}
+
+\begin{theorem}
+    若函数 $f(x)\text{ 在 }[a,b]$ 上二阶可导，且 $f(a)=f(b)=c$，则 $\exists\xi\in(a,b)$，\label{fxC2abc}使得 $$\begin{cases}
+            f''(\xi)\geqslant \dfrac{8(c-d)}{(a-b)^2}, & \min\limits_{a\leqslant x\leqslant b}\qty{f(x)}=d  \\
+            f''(\xi)\leqslant \dfrac{8(c-d)}{(a-b)^2}, & \max\limits_{a\leqslant x\leqslant b}\qty{f(x)}=d.
+        \end{cases}$$
+\end{theorem}
+\begin{proof}[{\songti \textbf{证}}]
+    由于函数 $f(x)\text{ 在 }[a,b]$ 上二阶可导，且 $\min\limits_{a\leqslant x\leqslant b}\qty{f(x)}=d$ (对于 $\max\limits_{a\leqslant x\leqslant b}\qty{f(x)}=d$ 类似可证)，所以 $\exists x_0\in(a,b)$，使得 $f(x_0)=d$，作 Lagrange 插值多项式:
+    $$p_2(x)=\dfrac{c(x-x_0)(x-b)}{(a-x_0)(a-b)}+\dfrac{d(x-a)(x-b)}{(x_0-a)(x_0-b)}+\dfrac{c(x-a)(x-x_0)}{(b-a)(b-x_0)}$$
+    则 $p(x)$ 与 $f(x)$ 在 $a,x_0,b$ 三点有相同的函数值，设 $F(x)=f(x)-p(x)$，那么 $F(a)=F(x_0)=F(b)=0$，由 Rolle 定理，$\exists\xi_1\in(a,x_0),\xi_2\in(x_0,b)$，使得 $$F'(\xi_1)=F'(\xi_2)=0$$
+    在 $[\xi_1,\xi_2]$ 上应用 Rolle 定理，$\exists\xi\in(\xi_1,\xi_2)\subset(a,b)$，使得 $F''(\xi)=0$，即 $$f''(\xi)=F''(\xi)+p''(\xi)=p''(\xi)=\dfrac{2(c-d)}{\qty(\dfrac{a-b}{2})^2-\qty(x_0-\dfrac{a+b}{2})^2}$$
+    即得证 $$\begin{cases}
+            f''(\xi)\geqslant \dfrac{8(c-d)}{(a-b)^2}, & \min\limits_{a\leqslant x\leqslant b}\qty{f(x)}=d  \\
+            f''(\xi)\leqslant \dfrac{8(c-d)}{(a-b)^2}, & \max\limits_{a\leqslant x\leqslant b}\qty{f(x)}=d.
+        \end{cases}$$
+\end{proof}
+\begin{inference}
+    若函数 $f(x)\text{ 在 }[a,b]$ 上二阶可导，且 $f(a)=f(b)=0$，则 $\exists\xi\in(a,b)$，使得 $$\begin{cases}
+            f''(\xi)\geqslant -\dfrac{8d}{(a-b)^2}, & \min\limits_{a\leqslant x\leqslant b}\qty{f(x)}=d  \\
+            f''(\xi)\leqslant -\dfrac{8d}{(a-b)^2}, & \max\limits_{a\leqslant x\leqslant b}\qty{f(x)}=d.
+        \end{cases}$$
+\end{inference}
+\begin{proof}[{\songti \textbf{证}}]
+    在定理 \ref{fxC2abc} 中令 $c=0$，即得证.
+\end{proof}
+
+\subsection{Hermite 插值}
+
+插值多项式要求在插值节点上函数值相等，有的实际问题还要求在节点上导数值相等，甚至高阶导数值也相等，满足这种要求的插值多项式称为 \textit{Hermite 插值多项式}.
+
+\begin{example}
+    给定 $f(x)=x^{3/2},x_0=\dfrac{1}{4},x_1=1,x_2=\dfrac{9}{4}$，\label{fxx32x014}试求 $f(x)$ 在 $\qty[\dfrac{1}{4},\dfrac{9}{4}]$ 上的三次 Hermite 插值多项式 $p(x)$，使之满足
+    $p(x_i)=f(x_i),p'(x_1)=f'(x_1)~ (i=0,1,2)$，并写出余项表达式.
+\end{example}
+\begin{solution}
+    由所给节点可求出 $$f_0=f\qty(\dfrac{1}{4})=\dfrac{1}{8},f_1=f(1)=1,f_2=f\qty(\dfrac{9}{4})=\dfrac{27}{8},f'(x)=\dfrac{3}{2}x^{1/2},f'(1)=\dfrac{3}{2}$$
+    那么差商表为
+    \begin{table}[H]
+        \centering
+        \caption{}
+        \setlength{\tabcolsep}{2mm}{
+            \begin{tabular}{c c c c}
+                \toprule
+                $x_{k}$                                & $f(x_k)$                                & 一阶差商                                                                & 二阶差商                                                                                    \\
+                \midrule
+                $x_{0}=\textcolor{cyan}{\dfrac{1}{4}}$ & $f_0=\textcolor{magenta}{\dfrac{1}{8}}$ &                                                                         &                                                                                             \\[6pt]
+                $x_{1}=\textcolor{cyan}{1}$            & $f_1=1$                                 & $f[x_0,x_1]=\dfrac{f_1-f_0}{x_1-x_0}=\textcolor{magenta}{\dfrac{7}{6}}$ &                                                                                             \\[6pt]
+                $x_{2}=\textcolor{cyan}{\dfrac{9}{4}}$ & $f_2=\dfrac{27}{8}$                     & $f[x_1,x_2]=\dfrac{f_2-f_1}{x_2-x_1}=\dfrac{19}{10}$                    & $f[x_0,x_1,x_2]=\dfrac{f[x_1,x_2]-f[x_0,x_1]}{x_2-x_0}=\textcolor{magenta}{\dfrac{11}{30}}$ \\
+                \bottomrule
+            \end{tabular}}
+    \end{table}
+    故可令\newline
+    \begin{minipage}{0.69\linewidth}
+        $$H_3(x)=\textcolor{magenta}{\dfrac{1}{8}}+\textcolor{magenta}{\dfrac{7}{6}}\qty(x-\textcolor{cyan}{\dfrac{1}{4}})+\textcolor{magenta}{\dfrac{11}{30}}\qty(x-\textcolor{cyan}{\dfrac{1}{4}})(x-\textcolor{cyan}{1})+A\qty(x-\textcolor{cyan}{\dfrac{1}{4}})(x-\textcolor{cyan}{1})\qty(x-\textcolor{cyan}{\dfrac{9}{4}})$$
+        再由 $p'(1)=f'(1)=\dfrac{3}{2}$，解得 $A=-\dfrac{14}{225}$，于是所求的三次 Hermite 插值多项式为
+        $$H_3(x)=-\dfrac{14}{225}x^3+\dfrac{263}{450}x^2+\dfrac{233}{450}x-\dfrac{1}{25}$$
+        余项为
+        \begin{flalign*}
+            R(x) & =f(x)-H_3(x)=\dfrac{f^{(4)}(\xi)}{4!}\qty(x-\dfrac{1}{4})(x-1)^2\qty(x-\dfrac{9}{4}) \\
+                 & =\dfrac{1}{4!}\dfrac{9}{16}\xi^{-5/2}\qty(x-\dfrac{1}{4})(x-1)^2\qty(x-\dfrac{9}{4})
+        \end{flalign*}
+        其中 $\xi\in\qty(\dfrac{1}{4},\dfrac{9}{4}).$
+    \end{minipage}\hfill
+    \begin{minipage}{0.30\linewidth}
+        \begin{figure}[H]
+            \begin{tikzpicture}[->,samples=100,>=stealth,scale=0.2,font=\footnotesize]
+                \draw[->,cyan](-0.5,0)--(0,0)node[below left]{$O$}--(12,0)node[below]{$x$};
+                \draw[->,cyan](0,-1)--(0,20)node[left]{$y$};
+                \draw[domain=0:7,color=magenta,-]plot(\x,{(\x)^(1.5)})node[right]{$y=x^{3/2}$};
+                \draw[domain=-0.5:7,color=orange,-]plot(\x,{-0.062222*(\x)^3+0.58444*(\x)^2+0.51778*(\x)-0.04})node[right]{$y=H_3(x)$};
+            \end{tikzpicture}
+            \caption{}
+        \end{figure}
+    \end{minipage}
+\end{solution}
+
+\begin{example}
+    设 $f(x)$ 在 $[-1,1]$ 三阶导数连续，$f(-1)=0,f(1)=1,f'(0)=0$，证明: $\exists\xi\in(-1,1)$，使得 $f'''(\xi)=3.$
+\end{example}
+\begin{proof}[{\songti \textbf{证法一: }}]
+    令 \footnote{由 $f_0=f(-1)=0,f_1=f(0),f_2=f(1)=1$ 作差商，下同例题 \ref{fxx32x014}}
+    $$H_3(x)= f(0)(x+1)+\dfrac{1-2f(0)}{2}(x+1)x+\dfrac{1}{2}(x+1)x(x-1)$$
+    构造 $F(x)=f(x)-H_3(x)$，那么有 $F(-1)=F(0)=F(1)=0$，由 Rolle 定理 $\exists\xi_1\in(-1,0),\xi_2\in(0,1)$，使得 
+    $$F'(\xi_1)=F'(\xi_2)=0$$
+    而 $F'(0)=f'(0)-H_3'(0)=0$，则有 $F'(\xi_1)=F'(0)=F'(\xi_2)=0$ 故又由 Rolle 定理 $\exists\xi_3\in(\xi_1,0),\xi_4\in(0,\xi_2)$，使得 $$F''(\xi_3)=F''(\xi_4)=0$$
+    最后由 Rolle 定理知 $\exists\xi\in(\xi_3,\xi_4)\subset(-1,1)$，使得 $F'''(\xi)=0$
+    而 $$F'''(\xi)=f'''(\xi)-H_3'''(\xi)=f'''(\xi)-3=0$$
+    即得证.\\
+    \textbf{证法二}
+    将 $f(1)$ 和 $f(-1)$ 在 $x=0$ 处 Taylor 展开，并作差，下略.
+\end{proof}
+
+\begin{theorem}
+    若函数 $f(x)\text{ 在 }[a,b]$ 上三阶可导，且 $ab<0,a\neq b,f(a)=c,f(0)=d,f(b)=e,f'(0)=f$，则 $\exists\xi\in(a,b)$，使得 $$f'''(\xi)=\dfrac{6}{ab}\qty[f+\dfrac{d-c}{a}+\dfrac{a(e-d)+b(d-c)}{b(b-a)}].$$
+\end{theorem}
+\begin{proof}[{\songti \textbf{证}}]
+    由所给节点可求出 $$f_0=f(a)=c,f_1=f(0)=d,f_2=f(b)=e$$
+    那么差商表为
+    \begin{table}[H]
+        \centering
+        \caption{}
+        \setlength{\tabcolsep}{12mm}{
+            \begin{tabular}{c c c c}
+                \toprule
+                $x_{k}$ & $f(x_k)$ & 一阶差商          & 二阶差商                         \\
+                \midrule
+                $a$     & $c$      &                   &                                  \\
+                $0$     & $d$      & $-\dfrac{d-c}{a}$ &                                  \\[6pt]
+                $b$     & $e$      & $\dfrac{e-d}{b}$  & $\dfrac{a(e-d)+b(d-c)}{ab(b-a)}$ \\
+                \bottomrule
+            \end{tabular}}
+    \end{table}
+    故可令 $$H_3(x)=c-\dfrac{d-c}{a}(x-a)+\dfrac{a(e-d)+b(d-c)}{ab(b-a)}(x-a)x+A(x-a)x(x-b)$$
+    由 $p'_3(0)=f'(0)=f$，解得 $A=\dfrac{f+\dfrac{d-c}{a}+\dfrac{a(e-d)+b(d-c)}{b(b-a)}}{ab}$
+    于是 $$H_3(x)=c-\dfrac{d-c}{a}(x-a)+\dfrac{a(e-d)+b(d-c)}{ab(b-a)}(x-a)x+\dfrac{f+\dfrac{d-c}{a}+\dfrac{a(e-d)+b(d-c)}{b(b-a)}}{ab}(x-a)x(x-b)$$
+    则 $H_3(x)$ 与 $f(x)$ 在 $a,0,b$ 三点有相同的函数值，在 $0$ 点有相同的导数值，
+    设 $F(x)=f(x)-H_3(x)$，则 $F(a)=F(0)=F(b)=0$，由 Rolle 定理知，$\exists\xi_1\in(a,0),\xi_2\in(0,b)$，使得 $$F'(\xi_1)=F'(\xi_2)=0$$
+    由于 $F'(x)=f'(x)-p'_3(x)$，所以 $F'(0)=f'(0)-p'(0)=0$，在 $[\xi_1,0]$ 和 $[0,\xi_2]$ 上应用 Rolle 定理，则 $\exists\xi_3\in(\xi_1,0),\xi_4\in(0,\xi_2)$，使得 $$F''(\xi_3)=F''(\xi_4)=0$$
+    最后在 $[\xi_3,\xi_4]$ 上应用 Rolle 定理，$\exists\xi\in(\xi_3,\xi_4)$，使得 $F'''(\xi)=0$，而 $F'''(x)=f'''(x)-p_3'''(x)$，则 $f'''(\xi)=p'''(\xi)$，即
+    $$f'''(\xi)=\dfrac{6}{ab}\qty[f+\dfrac{d-c}{a}+\dfrac{a(e-d)+b(d-c)}{b(b-a)}].$$
+\end{proof}
+% \begin{inference}
+%     若函数 $f(x)\in C^3[a,b]$，且 $ab<0,a\neq b,f(a)=c,f(b)=e,f'(0)=f$，则 $\exists\xi\in(a,b)$，使得 $$f'''(\xi)=\dfrac{1}{ab}\qty[f+\dfrac{f(0)-c}{a}+\dfrac{a(e-f(0))+b(f(0)-c)}{b(b-a)}].$$
+% \end{inference}
+% \begin{inference}
+%     若函数 $f(x)\in C^3[-a,a]$，且 $f(-a)=f(0)=0,f(a)=c\neq 0,f'(0)=0$，则 $\exists\xi(-a,a)$，使得 $$f''(\xi)=\dfrac{4c}{a^3}.$$
+% \end{inference}
+% \begin{proof}[{\songti \textbf{证}}]
+%     作三次 Hermite 插值多项式 $H_3(x)=\dfrac{c}{2a^3}x^2(x+a)$ 即可得推论.
+% \end{proof}
+% \begin{inference}
+%     若函数 $f(x)\in C^3[-a,a]$，且 $f(-a)=0,f(a)=c\neq 0,f'(0)=0$，则 $\exists\xi\in(-a,a)$，使得 $$f''(\xi)=\dfrac{4c}{a^3}.$$
+% \end{inference}
+% \begin{proof}[{\songti \textbf{证}}]
+%     作三次 Hermite 插值多项式 $H_3(x)=\dfrac{f(0)}{a}(x+a)+\dfrac{2f(0)-c}{2a^2}(x+a)x+\dfrac{c}{2a^3}(x+a)x(x-a)$ 即可得推论.
+% \end{proof}
+
+与例题 \ref{fxx32x014} 不同但同样典型的例子是 “两点三次 Hermite 插值”，插值节点取 $x_k$ 及 $x_{k+1}$，插值多项式为 $H_3(x)$，满足条件
+$$\begin{cases}
+        H_3(x_k)=y_k,  & H_3(x_{k+1})=y_{k+1}  \\
+        H_3'(x_k)=m_k, & H_3'(x_{k+1})=m_{k+1}
+    \end{cases}$$
+
+\begin{theorem}[两点三次 Hermite 插值]
+    \label{twoPointTripleHermiteInterpolation}
+    采用基函数方法，令 $$H_3(x)=\alpha_k(x)y_k+\alpha_{k+1}(x)y_{k+1}+\beta_k(x)m_k+\beta_{k+1}(x)m_{k+1}$$
+    其中 $\alpha_k(x),\alpha_{k+1}(x),\beta_k(x),\beta_{k+1}(x)$ 是关于节点 $x_k$ 及 $x_{k+1}$ 的三次 Hermite 插值基函数，它们应分别满足以下条件:
+    $$\begin{array}{lll}
+            \alpha _k(x_k)=1                        & \alpha _k(x_{k+1})=0     & \alpha _k'(x_k)=\alpha '_k(x_{k+1})=0         \\
+            \alpha _{k+1}(x_k)=0                    & \alpha _{k+1}(x_{k+1})=1 & \alpha' _{k+1}(x_k)=\alpha '_{k+1}(x_{k+1})=0 \\
+            \beta_k(x_k)=\beta_k(x_{k+1})=0         & \beta'_k(x_k)=1          & \beta'_k(x_{k+1})=0                           \\
+            \beta_{k+1}(x_k)=\beta_{k+1}(x_{k+1})=0 & \beta'_{k+1}(x_k)=0      & \beta'_{k+1}(x_{k+1})=1
+        \end{array}$$
+    解得基函数，那么有
+    \begin{flalign*}
+        H_3(x) & =\qty(1+2\dfrac{x-x_k}{x_{k+1}-x_k})\qty(\dfrac{x-x_{k+1}}{x_k-x_{k+1}})^2y_k+\qty(1+2\dfrac{x-x_{k+1}}{x_k-x_{k+1}})\qty(\dfrac{x-x_k}{x_{k+1}-x_k})^2y_{k+1} \\
+               & ~ +(x-x_k)\qty(\dfrac{x-x_{k+1}}{x_k-x_{k+1}})^2m_k+(x-x_{k+1})\qty(\dfrac{x-x_k}{x_{k+1}-x_k})^2m_{k+1}.
+    \end{flalign*}
+    \index{两点三次 Hermite 插值}
+\end{theorem}
+
+\begin{theorem}
+    若函数 $f(x)\text{ 在 }[a,b]$ 上三阶可导，且 $f(a)=c,f(b)=d,f'(a)=e,f'(b)=f$，则 $\exists\xi\in(a,b)$，使得 $$f'''(\xi)=6\dfrac{f(b-a)-2(d-c)+e(b-a)}{(b-a)^3}.$$
+\end{theorem}
+\begin{proof}[{\songti \textbf{证}}]
+    作三次 Hermite 插值多项式: $$H_3(x)=c+e(x-a)+\dfrac{(d-c)-e(b-a)}{(b-a)^2}(x-a)^2+\dfrac{f(b-a)-2(d-c)+e(b-a)}{(b-a)^3}(x-a)^2(x-b)$$
+    则 $H_3(x)$ 与 $f(x)$ 在 $a,b$ 两点有相同的函数值与导数值，设 $F(x)=f(x)-H_3(x)$，则 $F(a)=F(b)=0$，由 Rolle 定理，$\exists\xi_1\in(a,b)$，使得 $F'(\xi_1)=0$，
+    由于 $$F'(x)=f'(x)-H_3'(x)=f'(x)+e+2\dfrac{(d-c)-e(b-a)}{(b-a)^2}(x-a)+\dfrac{f(b-a)-2(d-c)+e(b-a)}{(b-a)^3}\qty[2(x-a)(x-b)+(x-a)^2]$$
+    则 $F'(a)=F'(b)=0$，在 $[a,\xi_1]$ 和 $[\xi_1,b]$ 上应用 Rolle 定理，则 $\exists\xi_2\in(a,\xi_1),\xi_3\in(\xi_1,b)$，使得 $$F''(\xi_2)=F''(\xi_3)=0$$
+    最后在 $[\xi_2,\xi_3]$ 上应用 Rolle 定理，即 $\exists\xi\in(\xi_2,\xi_3)$，使得 $F'''(\xi)=0$，即得证.
+\end{proof}
+\begin{inference}
+    若函数 $f(x)\text{ 在 }[a,b]$ 上三阶可导，且 $f(a)=a,f(b)=b,f'(a)=f'(b)=0$，则 $\exists\xi\in(a,b)$，使得 $$f'''(\xi)=-\dfrac{12}{(a-b)^2}.$$
+\end{inference}
+\begin{proof}[{\songti \textbf{证}}]
+    令 $c=a,d=b,e=f=0$，即得证。
+\end{proof}
+
+\begin{example}
+    设函数 $f\in C[0,1]\cap D^3(0,1),~f(0)=2,~f(1)=1,~f'(0)=0,~f'(1)=4$ 证明: 存在一点 $\xi\in(0,1)$ 使得 $f'''(\xi)=24+24\xi.$
+\end{example}
+\begin{solution}
+    令 $g(x)=f(x)-x^4$，则 $g\in C[0,1]\cap D^3(0,1)$ 那么 $\begin{cases}
+            x_k=0  , & x_{k+1}=1 \\
+            y_k=2  , & y_{k+1}=0 \\
+            m_k=0  , & m_{k+1}=0
+        \end{cases}$，因此
+        $$H_3(x)=2(1+x)(x-1)^2=4x^3-6x^2+2$$
+        构造 $F(x)=g(x)-H_3(x)$ 有 $F(0)=F(1)=0$，由 Rolle 定理 $\exists\xi_1\in(0,1)$ 使得 $F'(\xi_1)=0$，
+        又 $F'(0)=F'(\xi_1)=F'(1)=0$，由 Rolle 定理得 $\exists \xi_2\in(0,\xi_1),\xi_3\in(\xi_1,1)$ 使得 $F''(\xi_i)=0,i=2,3$，
+        再根据 Rolle 定理得 $\exists\xi\in(\xi_2,\xi_3)\subset(0,1)$ 使得 $F'''(\xi)=0$ 即
+        $$f'''(\xi)-4!\xi-24=0\Rightarrow f'''(\xi)=24\xi+24.$$
+\end{solution}

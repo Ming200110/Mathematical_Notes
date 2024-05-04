@@ -1,0 +1,78 @@
+\subsection{含参变量积分}
+
+含参变量积分是指在积分运算中，被积函数中包含一个或多个参数的情况. 这种情况下，参数被视为常数，而不是变量，因此在积分时需要将参数视为常数处理.
+
+
+\begin{theorem}[含参变量积分求导公式]
+    设 $f(t,x),f_x(t,x)$ 在 $R=[a,b]\times[p,q]$ 上连续，$\alpha(x),\beta(x)$ 为定义在 $[a,b]$ 上其值含于 $[p,q]$ 内的可微函数，则函数
+    $$F(t,x)=\int_{\alpha(x)}^{\beta(x)}f(t,x)\dd t$$
+    在 $[a,b]$ 上可微，且
+    $$F'(t,x)=\dv{x}\int_{\alpha(x)}^{\beta(x)}f(t,x)\dd t=\int_{\alpha(x)}^{\beta(x)}f_x(t,x)\dd t+f[\beta(x),x]\beta'(x)-f[\alpha(x),x]\alpha'(x).$$
+\end{theorem}
+
+\begin{example}
+    已知 $\displaystyle F(x)=\int_{\sin x}^{\cos x}\mathrm{e}^{\qty(xt+x^2)}\dd t$，求 $\displaystyle\dv{F(x)}{x}\biggl |_{x=0}.$
+\end{example}
+\begin{solution}
+    \textbf{法一: }由含参变量积分求导公式，有
+    \begin{flalign*}
+        I & =\dv{x}\int_{\sin x}^{\cos x}\mathrm{e}^{\qty(xt+x^2)}\dd t=\qty[\int_{\sin x}^{\cos x}(t+2x)\mathrm{e}^{\qty(xt+x^2)}\dd t-\sin x\mathrm{e}^{\qty(x\cos x+x^2)}-\cos x\mathrm{e}^{\qty(x\sin x+x^2)}]_{x=0} \\
+          & =\int_{0}^{1}t\dd t-1=-\dfrac{1}{2}
+    \end{flalign*}
+    \textbf{法二: }由题意，
+    \begin{flalign*}
+        F(x)=\int_{\sin x}^{\cos x}\mathrm{e}^{\qty(xt+x^2)}\dd t=\mathrm{e}^{x^2}\int_{\sin x}^{\cos x}\mathrm{e}^{xt}\dd t\xlongequal[]{xt=u}\dfrac{\mathrm{e}^{x^2}}{x}\int_{x\sin x}^{x\cos x}\mathrm{e}^u\dd u=\dfrac{\mathrm{e}^{x^2}}{x}\qty(\mathrm{e}^{x\cos x}-\mathrm{e}^{x\sin x})
+    \end{flalign*}
+    其中 $x\neq0$，且 $F(0)=1$，所以考虑导数定义式，有
+    \begin{flalign*}
+        \dv{F(x)}{x}\biggl |_{x=0}=\lim_{x\to0}\dfrac{F(x)-F(0)}{x-0}=\lim_{x\to0}\dfrac{\dfrac{\mathrm{e}^{x^2}}{x}\qty(\mathrm{e}^{x\cos x}-\mathrm{e}^{x\sin x})-1}{x}=\lim_{x\to0}\dfrac{\mathrm{e}^{x^2}\qty(\mathrm{e}^{x\cos x}-\mathrm{e}^{x\sin x})-x}{x^2}
+    \end{flalign*}
+    由 $\mathrm{e}^x=1+x+\dfrac{x^2}{2}+o\qty(x^2),~\cos x=1-\dfrac{x^2}{2}+o\qty(x^2),~\sin x=x+o(x)$ 得
+    \begin{flalign*}
+        \mathrm{e}^{x\cos x} & =1+x\cos x+\dfrac{1}{2}(x\cos x)^2+o\qty((x\cos x)^2)                                              \\
+                             & =1+x\qty(1-\dfrac{x^2}{2}+o\qty(x^2))+\dfrac{x^2}{2}\qty(1-\dfrac{x^2}{2}+o\qty(x^2))^2+o\qty(x^2) \\
+                             & =1+x+\dfrac{x^2}{2}+o\qty(x^2)                                                                     \\
+        \mathrm{e}^{x\sin x} & =1+x\sin x+(x\sin x)^2+o\qty((x\sin x)^2)=1+x^2+o\qty(x^2)                                         \\
+        \mathrm{e}^{x^2}     & =1+x^2+o\qty(x^2)
+    \end{flalign*}
+    将上述展开式代入原极限式，化简最终求得原极限等于 $-\dfrac{1}{2}.$
+\end{solution}
+
+\begin{example}
+    设 $f(x)$ 为连续函数，$t>0$，区域 $\Omega$ 是由抛物面 $z=x^2+y^2$ 和球面 $x^2+y^2+z^2=t^2~ (t>0)$ 所围成的部分，定义三重积分 $\displaystyle F(t)=\iiint\limits_{\Omega}f\qty(x^2+y^2+z^2)\dd v$，求 $F'(t).$
+\end{example}
+\begin{solution}
+    利用柱坐标系，令 $\begin{cases}
+            x=r\cos\theta \\ y=r\sin\theta\\ z=z
+        \end{cases}$，则由 $\begin{cases}
+            z=x^2+y^2 \\ x^2+y^2+z^2=t^2
+        \end{cases}$ 联立得 $z^2=z+t^2$，解得 $z=\dfrac{\sqrt{1+4t^2}-1}{2}:=b^2(t)$，
+    于是区域 $\Omega$ 在 $xOy$ 平面上的投影区域为 $D_{xy}:x^2+y^2\leqslant b^2(t)$，从而
+    $$F(t)=\int_{0}^{2\pi}\dd \theta\int_{0}^{b(t)}r\dd r\int_{r^2}^{\sqrt{t^2-r^2}}f\qty(r^2+z^2)\dd z=2\pi\int_{0}^{b(t)}r\qty[\int_{r^2}^{\sqrt{t^2-r^2}}f\qty(r^2+z^2)\dd z]\dd r$$
+    记 $\displaystyle g(t,r)=r\qty[\int_{r^2}^{\sqrt{t^2-r^2}}f\qty(r^2+z^2)\dd z]$，则由 $f(x)$ 的连续知， $g(t,r)$ 及 $\displaystyle\pdv{g(t,r)}{r}$ 连续，
+    于是由含参变量积分的求导公式，得
+    \begin{flalign*}
+        F'(t) & =2\pi\qty[\int_{0}^{b(t)}\pdv{g}{t}\dd r+g(t,b(t))\cdot b'(t)]                                                                             \\
+              & =2\pi\qty[\int_{0}^{b(t)}rf\qty(t^2)\dfrac{t}{\sqrt{t^2-r^2}}\dd r+b(t)\int_{b^2(t)}^{\sqrt{t^2-b^2(t)}}f\qty(b^2(t)+z^2)\dd z\cdot b'(t)] \\
+              & =2\pi tf\qty(t^2)\int_{0}^{b(t)}\dfrac{r}{\sqrt{t^2-r^2}}\dd r=-\pi tf\qty(t^2)\int_{0}^{b(t)}\dfrac{\dd \qty(t^2-r^2)}{\sqrt{t^2-r^2}}    \\
+              & =2\pi tf\qty(t^2)\qty(t-\sqrt{t^2-b^2(t)})=2\pi tf\qty(t^2)\qty(t-b^2(t))=\pi t\qty f(t^2)\qty(2t+1-\sqrt{1+4t^2}).
+    \end{flalign*}
+\end{solution}
+
+\begin{example}\scriptsize\linespread{0.8}
+    求 $\displaystyle \dv[n]{}{x}\qty[\int_0^x\mathrm{e}^{nt}\sum_{k=0}^{n-1}\dfrac{(x-t)^k}{k!}\dd t].$
+\end{example}
+\begin{solution}\scriptsize\linespread{0.8}
+    记 $\displaystyle f_k(x)=\int_{0}^{x}\mathrm{e}^{nt}\dfrac{(x-t)^k}{k!}\dd t$，那么 $\displaystyle\dv{x}f_k(x)=\int_{0}^{x}\mathrm{e}^{nt}\dfrac{(x-t)^{k-1}}{(k-1)!}\dd t=f_{k-1}(x)$，于是
+    $$f''_k(x)=f'_{k-1}(x)=f_{k-2}(x),~\cdots,~f_k^{(k)}(x)=f_0(x)$$
+    由于 $\displaystyle f_0'(x)=\qty(\int_{0}^{x}\mathrm{e}^{nt}\dd t)'=\mathrm{e}^{nx},~f_0''(x)=n\mathrm{e}^{nx},~\cdots,~f_0^{(n)}(x)=n^{n-1}\mathrm{e}^{nx}$，所以
+    \begin{flalign*}
+        \dv[n]{}{x}\qty[\int_0^x\mathrm{e}^{nt}\sum_{k=0}^{n-1}\dfrac{(x-t)^k}{k!}\dd t]=\sum_{k=0}^{n-1}f_k^{(n)}(x)=f_0^{(n)}(x)+\sum_{k=1}^{n-1}\qty[f_k^{(k)}(x)]^{(n-k)}=\sum_{k=1}^{n}f_0^{(k)}(x)=\dfrac{1-n^n}{1-n}\mathrm{e}^{nx}.
+    \end{flalign*}
+\end{solution}
+
+% \subsection{判断含参变量反常积分的一致收敛性}
+% 
+% \subsection{含参变量反常积分的极限与连续性}
+% 
+% \subsection{含参变量反常积分积分号下求导与积分号下求积分}

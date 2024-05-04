@@ -1,0 +1,85 @@
+\appendix
+\renewcommand{\appendixname}{附录}
+\footnotesize\linespread{0.6}
+\chapter{积分表推导}
+
+\begin{enumerate}[label=\arabic{*}.]
+    \item \textbf{含有 $ax+b$ 的积分}
+          \begin{enumerate}[label=\roman{*}.]
+              \item $\displaystyle\int\dfrac{\dd x}{ax+b}=\dfrac{1}{a}\ln|ax+b|+C.$
+              \item $\displaystyle\int(ax+b)^n\dd x=\dfrac{(ax+b)^{n+1}}{a(n+1)}+C.$
+              \item $\displaystyle\int\dfrac{x}{ax+b}\dd x=\dfrac{1}{a}\int\dfrac{ax+b}{ax+b}\dd x-\dfrac{b}{a}\int\dfrac{\dd x}{ax+b}=\dfrac{x}{a}-\dfrac{b}{a^2}\ln|ax+b|+C.$
+              \item \begin{minipage}{0.68\linewidth}
+                        $\displaystyle\int\dfrac{x^2}{ax+b}\dd x=\int\qty(\dfrac{1}{a}x-\dfrac{b}{a^2})\dd x+\dfrac{b^2}{a^2}\int\dfrac{\dd x}{ax+b}\\
+                            =\dfrac{1}{a}\int x\dd x-\dfrac{b}{a^2}\int\dd x+\dfrac{b^2}{a^2}\int\dfrac{\dd x}{ax+b}
+                            =\dfrac{1}{2a}x^2-\dfrac{b}{a^2}x+\dfrac{b^2}{a^3}\ln|ax+b|+C.$
+                    \end{minipage}\hfill
+                    \begin{minipage}{0.28\linewidth}
+                        $\begin{array}{ll}
+                                     & \frac{1}{a}x-\frac{b}{a^2}                       \\
+                                ax+b & \overline{|x^2\quad\quad\quad~~}                   \\
+                                     & \underline{~x^2+\dfrac{b}{a}x}                     \\
+                                     & ~~~~~~~-\frac{b}{a} x                             \\
+                                     & ~~~~~~~\underline{-\frac{b}{a}x-\frac{b^2}{a^2}} \\
+                                     & ~~~~~~~~~~~~~~~~~~~~~\frac{b^2}{a^2}
+                            \end{array}$
+                    \end{minipage}
+              \item 设 $\dfrac{1}{x(ax+b)}=\dfrac{A}{x}+\dfrac{B}{ax+b}\Rightarrow \begin{cases}
+                            A=\dfrac{1}{b} \\[6pt]B=-\dfrac{a}{b}
+                        \end{cases}$，于是 $\displaystyle\int\dfrac{\dd x}{x(ax+b)}=\dfrac{1}{b}\int\dfrac{\dd x}{x}-\dfrac{a}{b}\int\dfrac{\dd x}{ax+b}$，故
+                    $$\int\dfrac{\dd x}{x(ax+b)}=\dfrac{1}{b}\ln|x|-\dfrac{a}{b}\cdot\dfrac{1}{a}\ln|ax+b|+C=\dfrac{1}{b}\ln\qty|\dfrac{x}{ax+b}|+C.$$
+              \item 设 $\displaystyle\int\dfrac{\dd x}{x^2(ax+b)}=\dfrac{A}{x}+\int\qty(\dfrac{B}{x}+\dfrac{C}{ax+b})\dd x$，等式两边同时求导，并对比等式两边分子的系数，得
+                    $$\begin{cases}
+                            Ba+C=0 \\-Aa+Bb=0\\-Ab=1
+                        \end{cases}\Rightarrow\begin{cases}
+                            A=-\dfrac{1}{b} \\[6pt]B=-\dfrac{a}{b^2}\\[6pt]C=\dfrac{a^2}{b^2}
+                        \end{cases}$$
+                    于是 $$\int\dfrac{\dd x}{x^2(ax+b)}=-\dfrac{1}{bx}-\dfrac{a}{b^2}\ln|x|+\dfrac{a}{b^2}\ln|ax+b|+C.$$
+              \item 设 $\displaystyle\int\dfrac{\dd x}{x(ax+b)^2}=\dfrac{A}{ax+b}+\int\qty(\dfrac{B}{ax+b}+\dfrac{C}{x})\dd x$，等式两边同时求导，并对比等式两边分子的系数，得
+                    $$\begin{cases}
+                            Ba+Ca^2=0 \\-Aa+Bb+2Cab=0\\Cb^2=1
+                        \end{cases}\Rightarrow\begin{cases}
+                            A=\dfrac{1}{b} \\[6pt]B=-\dfrac{a}{b^2}\\[6pt]C=\dfrac{1}{b^2}
+                        \end{cases}$$
+                    于是 $$\int\dfrac{\dd x}{x(ax+b)^2}=\dfrac{1}{b(ax+b)}-\dfrac{1}{b^2}\ln|ax+b|+\dfrac{1}{b^2}\ln|x|+C=\dfrac{1}{b(ax+b)}+\dfrac{1}{b^2}\ln\qty|\dfrac{x}{ax+b}|+C.$$
+          \end{enumerate}
+    \item \textbf{含有 $\sqrt{ax+b}$ 的积分}
+          \begin{enumerate}[label=\roman{*}.]
+              \item $\displaystyle\int\sqrt{ax+b}\dd x=\dfrac{1}{a}\int\sqrt{ax+b}\dd (ax+b)=\dfrac{2}{3a}(ax+b)^{\frac{2}{3}}+C.$
+              \item $\displaystyle \int x\sqrt{ax+b}\dd x \xlongequal{ax+b=z^2}\dfrac{2}{a^2}\int z^2\qty(z^2-b)\dd z=\dfrac{2}{a^2}\int\qty(z^4-bz^2)\dd z=\dfrac{2z^5}{5a^2}-\dfrac{2b}{3a^2}z^3+C=\dfrac{2}{5a^2}(ax+b)^{\frac{5}{2}}-\dfrac{2b}{3a^2}(ax+b)^{\frac{3}{2}}+C.$
+              \item $\displaystyle \int x^2\sqrt{ax+b}\dd x \xlongequal{ax+b=z^2}\dfrac{2}{a^3}\int z^2\qty(z^2-b)^2\dd z=\dfrac{2}{a^3}\qty(\dfrac{1}{7}z^7-\dfrac{2b}{5}z^5+\dfrac{b^3}{3}z^3)+C=\dfrac{2}{7a^3}(ax+b)^{\frac{7}{2}}-\dfrac{2b}{5}(ax+b)^2+\dfrac{b^2}{3}(ax+b)^{\frac{3}{2}}+C.$
+              \item $\displaystyle \int\dfrac{x}{\sqrt{ax+b}}\dd x \xlongequal{ax+b=z^2}\dfrac{2}{a^2}\int\qty(z^2-b)\dd z=\dfrac{2}{3a^2}z^3-\dfrac{2b}{a^2}z+C=\dfrac{2}{3a^2}(ax+b)^{\frac{3}{2}}-\dfrac{2b}{a^2}(ax+b)^{\frac{3}{2}}+C.$
+              \item $\displaystyle \int\dfrac{x^2}{\sqrt{ax+b}}\dd x \xlongequal{ax+b=z^2}\dfrac{2}{a^3}\int\qty(z^2-b)^2\dd z=\dfrac{2}{5a^3}(ax+b)^{\frac{5}{2}}-\dfrac{4b}{3a^3}(ax+b)^{\frac{3}{2}}+\dfrac{2b^2}{a^3}(ax+b)^{\frac{1}{2}}+C.$
+              \item $\displaystyle \int\dfrac{\dd x}{x\sqrt{ax+b}} \xlongequal{ax+b=z^2}2\int\dfrac{\dd z}{z^2-b}=\begin{cases}
+                            \dfrac{1}{\sqrt{b}}\ln\qty|\dfrac{\sqrt{ax+b}-\sqrt{b}}{\sqrt{ax+b}+\sqrt{b}}|+C & ,b>0 \\[6pt]
+                            \dfrac{2}{\sqrt{-b}}\arctan\sqrt{\dfrac{ax+b}{-b}}+C                             & ,b<0
+                        \end{cases}.$
+              \item $\displaystyle \int\dfrac{\dd x}{x^2\sqrt{ax+b}} \xlongequal{ax+b=z^2}2a\int\dfrac{\dd z}{\qty(z^2-b)^2}=-\dfrac{a}{b}\qty(\dfrac{z}{z^2-b}+\int\dfrac{\dd z}{z^2-b})=-\dfrac{\sqrt{ax+b}}{bx}-\dfrac{a}{2b}\int\dfrac{\dd x}{x\sqrt{ax+b}}.$
+              \item $\displaystyle \int\dfrac{\sqrt{ax+b}}{x}\dd x \xlongequal{ax+b=z^2}2\int\dfrac{z^2}{z^2-b}\dd z=2\int\dd z+2b\int\dfrac{\dd z}{z^2-b}=2\sqrt{ax+b}+b\int\dfrac{\dd x}{x\sqrt{ax+b}}.$
+              \item $\displaystyle \int\dfrac{\sqrt{ax+b}}{x^2}\dd x =\int\sqrt{ax+b}\dd \dfrac{1}{x}=\dfrac{\sqrt{ax+b}}{x}-\dfrac{a}{2}\int\dfrac{\dd x}{x\sqrt{ax+b}}.$
+          \end{enumerate}
+    \item \textbf{含有 $x^2\pm a^2$ 的积分}
+          \begin{enumerate}[label=\roman{*}.]
+              \item $\displaystyle\int\dfrac{\dd x}{x^2+a^2}\xlongequal[-\frac{\pi}{2}<t<\frac{\pi}{2}]{x=a\tan t}\dfrac{1}{a}\int\dd t=\dfrac{t}{a}+C=\dfrac{1}{a}\arctan\dfrac{x}{a}+C.$
+              \item $\displaystyle\int\dfrac{\dd x}{x^2-a^2}=\dfrac{1}{2a}\int\qty(\dfrac{1}{x-a}-\dfrac{1}{x+a}\dd x)=\dfrac{1}{2a}\ln\qty|\dfrac{x-a}{x+a}|+C.$
+          \end{enumerate}
+    \item \textbf{含有 $ax^2+b~~(a>0)$ 的积分}
+          \begin{enumerate}[label=\roman{*}.]
+              \item $\displaystyle \int\dfrac{\dd x}{ax^2+b}=\begin{cases}
+                            \displaystyle \dfrac{1}{a}\int\dfrac{\dd x}{x^2+\qty(\sqrt{\dfrac{b}{a}})^2}=\dfrac{1}{\sqrt{ab}}\arctan\sqrt{\dfrac{a}{b}}x+C~~(b>0). \\
+                            \displaystyle \dfrac{1}{a}\int\dfrac{\dd x}{x^2-\qty(\sqrt{\dfrac{-b}{a}})^2}=\dfrac{1}{2\sqrt{-ab}}\ln\qty|\dfrac{\sqrt{a}x-\sqrt{-b}}{\sqrt{a}x+\sqrt{-b}}|+C~~(b<0).
+                        \end{cases}$
+            \item $\displaystyle \int\dfrac{x}{ax^2+b}\dd x=\dfrac{1}{2a}\int\dfrac{\dd \qty(ax^2+b)}{ax^2+b}=\dfrac{1}{2a}\ln\qty|ax^2+b|+C.$
+            \item $\displaystyle \int\dfrac{x^2}{ax^2+b}\dd x=\dfrac{1}{a}\int\dfrac{ax^2+b}{ax^2+b}\dd x-\dfrac{b}{a}\int\dfrac{\dd x}{ax^2+b}=\dfrac{x}{a}-\dfrac{b}{a}\int\dfrac{\dd x}{ax^2+b}.$
+            \item $\displaystyle \int\dfrac{\dd x}{x\qty(ax^2+b)}=\dfrac{1}{b}\int\dfrac{\dd x}{x}-\dfrac{a}{b}\int\dfrac{x}{ax^2+b}\dd x=\dfrac{1}{b}\ln|x|-\dfrac{1}{2b}\ln\qty|ax^2+b|+C.$
+            \item $\displaystyle \int\dfrac{\dd x}{x^2\qty(ax^2+b)}=\dfrac{1}{b}\int\dfrac{\dd x}{x^2}-\dfrac{a}{b}\int\dfrac{\dd x}{ax^2+b}-\dfrac{1}{bx}-\dfrac{a}{b}\int\dfrac{\dd x}{ax^2+b}.$
+            \item $\displaystyle \int\dfrac{\dd x}{x^3\qty(ax^2+b)}$
+            \item $\displaystyle \int\dfrac{\dd x}{\qty(ax^2+b)^2}$
+          \end{enumerate}
+    \item \textbf{含有 $ax^2+b+c~~(a>0)$ 的积分}
+    \item \textbf{含有 $\sqrt{x^2+a^2}~~(a>0)$ 的积分}
+    \item \textbf{含有 $\sqrt{x^2-a^2}~~(a>0)$ 的积分}
+    \item \textbf{含有 $\sqrt{a^2-x^2}~~(a>0)$ 的积分}
+\end{enumerate}
+
+% \chapter{常见曲线及其相关性质}

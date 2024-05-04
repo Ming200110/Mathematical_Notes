@@ -1,0 +1,102 @@
+\section{矩估计法}
+
+设总体 $ X $ 的分布形式已知，$\theta $ 为总体的待估参数，$X_{1}, X_{2}, \cdots, X_{n} $ 为从总体 $ X $ 中抽取的样本，
+如果总体 $ X $ 的数学期望 $ E(X) $ 存在，那么 $ E(X) $ 是 $ \theta $ 的函数. 例如，在泊松分布总体 $ \pi(\lambda) $ 中，
+样本一阶矩 $ E(X)=\lambda$; 在指数分布总体 $ X \sim e(\lambda) $ 中，$E(X)=\dfrac{1}{\lambda}$.
+由于 $ X_{1}, X_{2}, \cdots, X_{n} $ 相互独立且与总体 $ X $ 同分布，由大数定理知，当 $ n $ 越来越大时，$\displaystyle\bar{X}=\dfrac{1}{n} \sum_{i=1}^{n} X_{i} $
+依概率收玫到 $ E(X)=h(\theta) .$
+要估计 $ \theta $，令
+$$E(X)=\frac{1}{n} \sum_{i=1}^{n} X_{i}=\bar{X}$$
+解方程 $h(\theta)=\bar{X}$，可求出 $ \theta$，此种方法所得的估计 $ \hat{\theta} $ 称为未知参数 $ \theta $ 的矩估计.
+
+\begin{example}
+    设总体 $ X \sim U(a, b)$，$ a, b $ 未知，$X_{1}, X_{2}, \cdots, X_{n} $ 为来自总体 $ X $ 的样本，$  x_{1} ,  x_{2}, \cdots, x_{n} $ 是样本值，试求 $ a, b $ 的矩估计量和矩估计值.
+\end{example}
+\begin{solution}
+    令 $\begin{cases}
+            \displaystyle E(X)=\dfrac{1}{n}\sum_{i=1}^{n}X_i=\bar{X} \\
+            \displaystyle E\qty(X^2)=\dfrac{1}{n}\sum_{i=1}^{n}X_i^2
+        \end{cases}$，且 $X\sim U(a,b)$，那么
+    $$E(X)=\dfrac{a+b}{2},~E\qty(X^2)=D(X)+E^2(X)=\dfrac{(b-a)^2}{12}+\dfrac{(a+b)^2}{4}$$
+    即 $\begin{cases}
+            a+b =2\bar{X} \\
+            \displaystyle b-a=2\sqrt{3}\sqrt{\dfrac{1}{n}\sum_{i=1}^{n}X_i^2-\bar{X}^2}
+        \end{cases}$ 并且 $\displaystyle\dfrac{1}{n}\sum_{i=1}^{n}X_i^2-\bar{X}^2=\dfrac{1}{n}\sum_{i=1}^{n}\qty(X_i-\bar{X})^2$，
+    解得矩估计量和矩估计值分别为
+    $$\begin{cases}
+            \displaystyle \hat{a}=\bar{X}-\sqrt{\dfrac{3}{n}\sum_{i=1}^{n}\qty(X_i-\bar{X})^2} \\
+            \displaystyle \hat{b}=\bar{X}+\sqrt{\dfrac{3}{n}\sum_{i=1}^{n}\qty(X_i-\bar{X})^2},
+        \end{cases}
+        \begin{cases}
+            \displaystyle \hat{a}=\bar{x}-\sqrt{\dfrac{3}{n}\sum_{i=1}^{n}\qty(x_i-\bar{x})^2} \\
+            \displaystyle \hat{b}=\bar{x}+\sqrt{\dfrac{3}{n}\sum_{i=1}^{n}\qty(x_i-\bar{x})^2}.
+        \end{cases}$$
+\end{solution}
+
+\begin{example}
+    设总体 $X$ 的分布函数为 $F(x)=\begin{cases}
+            1-\e ^{-(x-\theta)^2}, & x\geqslant \theta \\
+            0,                     & x<\theta
+        \end{cases}(\theta>0\text{ 为未知数})$，$X_1,X_2,\cdots,X_n$ 为来自总体 $X$ 的简单随机样本，$\displaystyle\bar{X}=\dfrac{1}{n}\sum_{i=1}^{n}X_i$，求 $\theta$ 的矩估计量 $\bar\theta$.
+\end{example}
+\begin{solution}
+    总体 $ X $ 的密度函数为 $f(x)=
+        \begin{cases}
+            2(x-\theta) \mathrm{e}^{-(x-\theta)^{2}}, & x \geqslant \theta \\ 0, & x<\theta
+        \end{cases}$，那么
+    \begin{flalign*}
+        E(X) & =\int_{0}^{+\infty} x \cdot 2(x-\theta) \mathrm{e}^{-(x-\theta)^{2}} \dd  x=2 \int_{\theta}^{+\infty}[(x-\theta)+\theta] \cdot(x-\theta) \mathrm{e}^{-(x-\theta)^{2}} \dd (x-\theta)                                                      \\
+             & =2 \int_{0}^{+\infty} x(x+\theta) \mathrm{e}^{-x^{2}} \dd  x=2 \int_{0}^{+\infty} x^{2} \mathrm{e}^{-x^{2}} \dd  x+\theta \int_{0}^{+\infty} \mathrm{e}^{-x^{2}} \dd \left(x^{2}\right)                                                   \\
+             & \xlongequal{x^{2}=t} 2 \int_{0}^{+\infty} t \mathrm{e}^{-t} \cdot \frac{1}{2 \sqrt{t}} \dd  t+\theta=\int_{0}^{+\infty} t^{\frac{1}{2}} \mathrm{e}^{-t} \dd  t+\theta=\Gamma\left(\frac{1}{2}+1\right)+\theta=\frac{\sqrt{\pi}}{2}+\theta
+    \end{flalign*}
+    令 $ E(X)=\bar{X} $ 得参数 $ \theta $ 的矩估计量为 $ \displaystyle\hat{\theta}=\bar{X}-\frac{\sqrt{\pi}}{2} .$
+\end{solution}
+
+\begin{example}
+    设总体 $ X $ 的概率密度为
+    $f(x)=\begin{cases}
+            2(x-\theta) \mathrm{e}^{-(x-\theta)^{2}}, & x>\theta \\ 0, & x \leqslant \theta
+        \end{cases}$
+    $\left(X_{1}, X_{2}, \cdots, X_{n}\right)$ 为来自总体 $ X $ 的简单随机样本.
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求参数 $ \theta $ 的矩估计量;
+        \item 设 $ U=\min \left\{X_{1}, X_{2}, \cdots, X_{n}\right\} $，求 $ E(U) .$
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 与上题类似，有
+              \begin{flalign*}
+                  E(X) & =\int_{\theta}^{+\infty} x \cdot 2(x-\theta) \mathrm{e}^{-(x-\theta)^{2}} \dd  x \xlongequal{x-\theta=t} \int_{0}^{+\infty}(t+\theta) \cdot 2 t \mathrm{e}^{-t^{2}} \dd  t                                                                                                         \\
+                       & =\int_{0}^{+\infty} 2 t^{2} \mathrm{e}^{-t^{2}} \dd  t+\theta \int_{0}^{+\infty} 2 t \mathrm{e}^{-t^{2}} \dd  t=\int_{0}^{+\infty}\left(t^{2}\right)^{\frac{1}{2}} \mathrm{e}^{-t^{2}} \dd \left(t^{2}\right)+\theta \int_{0}^{+\infty} \mathrm{e}^{-t^{2}} \dd \left(t^{2}\right) \\
+                       & =\Gamma\left(\frac{1}{2}+1\right)+\theta=\frac{1}{2} \Gamma\left(\frac{1}{2}\right)+\theta=\theta+\frac{\sqrt{\pi}}{2}
+              \end{flalign*}
+              由 $ E(X)=\bar{X} $ 得参数 $ \theta $ 的矩估计量为 $\displaystyle\hat{\theta}=\bar{X}-\frac{\sqrt{\pi}}{2}$.
+        \item 总体 $ X $ 的分布函数为 $F(x)=P\{X \leqslant x\}$，
+
+              当 $ x<\theta $ 时，$F(x)=0$; \\
+              当 $ x \geqslant \theta $ 时，$\displaystyle F(x)=\int_{\theta}^{x} 2(x-\theta) \mathrm{e}^{-(x-\theta)^{2}} \dd  x=1-\mathrm{e}^{-(x-\theta)^{2}} $，即
+              $$F(x)=\begin{cases}
+                      0,                              & x<\theta           \\
+                      1-\mathrm{e}^{-(x-\theta)^{2}}, & x \geqslant \theta
+                  \end{cases}$$
+              $U $ 的分布函数为
+              \begin{flalign*}
+                  F_{U}(x) & =P\{U \leqslant x\}=1-P\{U>x\}=1-P\left\{X_{1}>x\right\} P\left\{X_{2}>x\right\} \cdots P\left\{X_{n}>x\right\} \\
+                           & =1-[P\{X>x\}]^{n}=1-[1-F(x)]^{n}=\begin{cases}
+                                                                  0,                               & x<\theta           \\
+                                                                  1-\mathrm{e}^{-n(x-\theta)^{2}}, & x \geqslant \theta
+                                                              \end{cases}
+              \end{flalign*}
+              $U$ 的密度函数为
+              $$f_{U}(x)=\begin{cases}
+                      0,                                           & x \leqslant \theta \\
+                      2 n(x-\theta) \mathrm{e}^{-n(x-\theta)^{2}}, & x>\theta
+                  \end{cases}$$
+              则
+              \begin{flalign*}
+                  E(U) & =\int_{\theta}^{+\infty} 2 n x(x-\theta) \mathrm{e}^{-n(x-\theta)^{2}} \dd  x=\int_{\theta}^{+\infty}\left[\frac{1}{\sqrt{n}}\left[n(x-\theta)^{2}\right]^{\frac{1}{2}}+\theta\right] \mathrm{e}^{-n(x-\theta)^{2}} \dd\left[n(x-\theta)^{2}\right] \\
+                       & =\int_{0}^{+\infty}\left(\frac{1}{\sqrt{n}} t^{\frac{1}{2}}+\theta\right) \mathrm{e}^{-t} \dd  t=\frac{1}{\sqrt{n}} \cdot \Gamma\left(\frac{1}{2}+1\right)+\theta=\frac{\sqrt{\pi n}}{2 n}+\theta
+              \end{flalign*}
+    \end{enumerate}
+\end{solution}

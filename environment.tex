@@ -1,0 +1,213 @@
+\usepackage{amsmath}                                % 数学公式
+\usepackage{amsthm}                                 % 数学公式
+\usepackage{amssymb}                                % 数学公式
+\usepackage{mathrsfs}
+\usepackage{appendix}                               % 添加附录
+\usepackage{pdfpages}                               % 添加pdf
+\usepackage{pgfplots}                               % 画图包
+\usepackage{geometry}                               % 页边距包
+\usepackage{fancyhdr}                               % 页眉包
+\usepackage{float}                                  % 提供 float 浮动环境
+\usepackage{booktabs}                               % 三线表
+\usepackage{subfigure}                              % 子图
+\usepackage{hyperref}                               % 引用跳转
+\usepackage{extarrows}                              % 长等号
+\usepackage{esint}                                  % 特殊的数学符号
+\usepackage[inline]{enumitem}                       % 高级编号
+\usepackage{multirow}                               % 表格单元占据多行/列
+\usepackage{multicol}                               % 表格单元占据多行/列
+\usepackage{arydshln}                               % 矩阵虚线
+\usepackage{fancyvrb}
+\usepackage{afterpage}
+\usepackage{caption}
+\usepackage{makecell}
+\usepackage{physics}
+\usepackage{rotating}
+\usepackage{amscd}
+\usepackage{tasks}
+\usepackage{color}
+\usepackage{framed}
+\usepackage{cutwin}
+\usepackage{tikz-3dplot}
+\usepackage{nicematrix}
+\usepackage{ocgx}
+\usepackage{tablefootnote}
+\usepackage{etoc}
+\usepackage{titlesec}
+\usepackage{makeidx}
+\makeindex
+
+\titleformat
+{\chapter} % command
+[display] % shape
+{\color{cyan}\bfseries\Large} % format
+{第\ \thechapter\ 章} % label
+{0.25ex} % sep
+{
+    \rule{\textwidth}{1pt}
+    \vspace{1ex}
+    \centering
+} % before-code
+[
+\vspace{-2ex}%
+\rule{\textwidth}{0.3pt}
+] % after-code
+
+\newcommand*\cdotfill{%
+	\leavevmode
+	\leaders \hbox to .5em {\hss.\hss}\hfill
+}
+
+\etocsetstyle{part}
+{\parindent 0pt
+	\nobreak
+	\etocskipfirstprefix}
+{\pagebreak[3]\bigskip}
+{\bfseries\centering
+	\etocifnumbered{\etocnumber{} – }{}\etocname\par}
+{}
+
+\etocsetstyle{chapter}
+{%
+	\setlength\rightskip{4\ccwd}%
+	\addtolength\parfillskip{-\rightskip}%
+	\etocskipfirstprefix
+}
+{\medskip}
+{%
+	\bfseries
+	\noindent
+	\etocifnumbered
+	{%
+		\sbox0{\etocthenumber\unskip\quad}%
+		\setlength\leftskip{\wd0}%
+		\etoclink{\llap{\box0}\etocthename}%
+	}
+	{%
+		\setlength\leftskip{\rightskip}%
+		\hskip-\leftskip
+		\etocname
+	}%
+	\nobreak\cdotfill\etocpage\par
+}
+{}
+
+\etocsetstyle{section}
+{\nopagebreak\normalfont}
+{\smallskip}
+{%
+	\noindent
+	\etocifnumbered
+	{\etoclink{\llap{\etocthenumber\quad}\etocthename}}
+	{\etocname}%
+	\nobreak\cdotfill\etocpage\par
+}
+{}
+
+\etocsetstyle{subsection}
+{%
+	\nopagebreak
+	\begingroup
+	\addtolength\parfillskip{\rightskip}%
+	\addtolength\rightskip{\fill}%
+	\etocskipfirstprefix
+	\noindent
+}
+{\quad}
+{%
+	\hbox{%
+		\etoclink{%
+			\etocifnumbered{\etocthenumber\enskip}{}%
+			\etocthename\ (\etocthepage)%
+		}%
+	}%
+}
+{\par\endgroup}
+
+% \NiceMatrixOptions{rules/color=cyan}
+\definecolor{shadecolor}{rgb}{0.92,0.92,0.92}
+\numberwithin{figure}{section}
+\usetikzlibrary{calc,decorations.markings}
+\newcommand\myemptypage{
+	\null
+	\thispagestyle{empty}
+	\addtocounter{page}{-1}
+	\newpage
+}
+% \usepackage{pgffor}
+% \makeatletter
+% \newcommand{\twocolumntoc}{%
+% 	\chapter*{\contentsname
+% 	  \@mkboth{%
+% 		  \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+% 	\@starttoc{toc}%
+% }
+% \makeatother
+% \setcounter{tocdepth}{3}
+
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\vp}{\mathrm{v.p.}}
+\newcommand{\B}{\mathrm{B}}
+\newcommand{\C}{\mathrm{C}}
+\newcommand{\D}{\mathrm{D}}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\cov}{\mathrm{cov}}
+\newcommand{\adj}{\mathrm{adj}}
+\newcommand{\diag}{\mathrm{diag}}
+\renewcommand{\i}{\mathrm{i}}
+
+\newcommand\sj[1]{\mathsf{#1}}
+\settasks{
+	label={\Alph*.},
+	% label-align = left,
+	% label-offset = {1em},
+	% label-width = 0.5em,
+	% item-indent = {1.5em}, % indent = label-width + label-offset
+	% column-sep = {1em},
+	% before-skip = {-1em},
+	% after-skip = {-1em},
+	% after-item-skip = 0em
+}
+% \renewcommand{\proofname}{\indent\bf 证明}
+% \renewcommand{\qedsymbol}{$\blacksquare$}
+
+\newcounter{magicrownumbers}
+% stepcounter 对应计数器自增，arabic 表示输出阿拉伯数字
+\newcommand\rownumber{\stepcounter{magicrownumbers}\arabic{magicrownumbers}}
+\theoremstyle{definition}
+\newtheorem*{solution}{{\songti \textbf{解}}}
+\newtheorem{theorem}{\color{magenta}{{\songti 定理}}}[section]
+\newtheorem{lemma}{\color{purple}{{\songti 引理}}}[section]
+\newtheorem{inference}{\color{pink}{{\songti 推论}}}[section]
+\newtheorem{definition}{\color{orange}{{\songti 定义}}}[section]
+\newtheorem{example}{\color{cyan}{{\songti 例}}}[section]
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{intersections}
+\geometry{paperheight=26cm, paperwidth=18.5cm, scale=0.85, inner=20mm}
+\title{{\kaishu \Huge{\textbf{${\text{考}_\text{研}^{\text{数}_\text{学}}}_{\underline{\text{典型问题}}}^{_{\overset{\overline{\text{方}}\text{法}|}{|\text{技}\underline{\text{巧}}}}}$}}}}
+\author{{\kaishu 黄国铭}}
+\date{}
+
+\linespread{1.5}
+
+\renewenvironment{solution}[1][]
+{\noindent\footnotesize\linespread{1}
+	\itshape #1}
+{}
+
+\newenvironment{errorSolution}[1][]
+{\noindent\footnotesize\linespread{1}\color{red}
+	\itshape \textbf{错解.} #1}
+{}
+
+\renewenvironment{proof}[1][]
+{\noindent\footnotesize\linespread{1}
+	\itshape #1}
+{\par}
+
+% \renewenvironment{example}[2][]
+% {#1\noindent\footnotesize\linespread{1}
+% \itshape \color{cyan} #2}
+% {}
+
+\allowdisplaybreaks

@@ -1,0 +1,435 @@
+\section{Taylor 展开与差商}
+
+\begin{theorem}[带 Lagrange 余项的 Taylor 展开]
+    利用 Taylor 公式可得:
+    $$f\left( x+j\right) =f(x) +\dfrac{f(x) }{1!}j+\dfrac{f''(x) }{2!}j^{2}+\cdots +\dfrac{f^{\left( n-1\right) }(x) }{\left( n-1\right) !}j^{n-1}+\dfrac{f^{(n) }(\xi ) }{n!}j^{n}$$
+    其中 $j=1,2,\cdots,n-1,~x<\xi_j<x+j.$
+    \index{带 Lagrange 余项的 Taylor 展开}
+\end{theorem}
+
+\subsection{证明中值定理}
+
+\begin{example}
+    设函数 $f(x)$ 在区间 $[a,b]$ 上具有连续的二阶导数，证明: $\exists\xi\in(a,b)$，使得
+    $$\dfrac{4}{(b-a)^2}\qty[f(a)-2f\qty(\dfrac{a+b}{2})+f(b)]=f''(\xi).$$
+\end{example}
+\begin{proof}[{\songti \textbf{证法一}}]
+    函数 $f(x)$ 在 $x=\dfrac{a+b}{2}$ 处的一阶带 Lagrange 余项的 Taylor 公式为
+    $$f(x)=f\qty(\dfrac{a+b}{2})+f'\qty(\dfrac{a+b}{2})\qty(x-\dfrac{a+b}{2})+\dfrac{f''(\xi_1)}{2}\qty(x-\dfrac{a+b}{2})^2$$
+    其中 $\xi_1$ 位于 $x,~\dfrac{a+b}{2}$ 之间，令 $x=a,b$ 代入上式，得
+    \begin{flalign*}
+        f(a)=f\qty(\dfrac{a+b}{2})+f'\qty(\dfrac{a+b}{2})\qty(a-\dfrac{a+b}{2})+\dfrac{f''(x_1)}{2}\qty(a-\dfrac{a+b}{2})^2 \\
+        f(b)=f\qty(\dfrac{a+b}{2})+f'\qty(\dfrac{a+b}{2})\qty(b-\dfrac{a+b}{2})+\dfrac{f''(x_2)}{2}\qty(b-\dfrac{a+b}{2})^2
+    \end{flalign*}
+    其中 $a<x_1<\dfrac{a+b}{2}$，$\dfrac{a+b}{2}<x_2<b$，$x_1<x_2$，两式相加，得
+    $$f(a)+f(b)=2f\qty(\dfrac{a+b}{2})+\dfrac{f''(x_1)+f''(x_2)}{2}\qty(\dfrac{b-a}{2})^2$$
+    改写得 $$\dfrac{4}{(b-a)^2}\qty[f(a)+f(b)-2f\qty(\dfrac{a+b}{2})]=\dfrac{f''(x_1)+f''(x_2)}{2}$$
+    由于函数 $f(x)$ 在闭区间 $[a,b]$ 上具有连续的二阶导数，所以由最值定理，可知
+    $$\min_{x\in[x_1,x_2]}f''(x)\leqslant \dfrac{f''(x_1)+f''(x_2)}{2}\leqslant \max_{x\in[x_1,x_2]}f''(x)$$
+    于是由介值定理可知存在 $\xi\in(a,b)$，使得 $\displaystyle \dfrac{f''(x_1)+f''(x_2)}{2}=f''(\xi)$，
+    代入即得 $$\dfrac{4}{(b-a)^2}\qty[f(a)-2f\qty(\dfrac{a+b}{2})+f(b)]=f''(\xi).$$
+\end{proof}
+\begin{proof}[{\songti \textbf{证法二}}]
+    设 $f(x)-2f\qty(\dfrac{x+a}{2})+f(a)=\dfrac{1}{4}K(x-a)^2$，其中 $K$ 为待定实常数，记
+    $$F(x)=f(x)-2f\qty(\dfrac{x+a}{2})+f(a)-\dfrac{1}{4}K(x-a)^2$$
+    则 $F(a)=F(b)=0$，由 Rolle 中值定理，$\exists c\in(a,b)$，使得 $F'(c)=0$，即
+    $$f'(c)-f'\qty(\dfrac{c+a}{2})-\dfrac{1}{2}K(c-a)=0$$
+    再由 Lagrange 中值定理，$\exists \xi\in\qty(\dfrac{a+c}{2},c)$，使得
+    $$f'(c)-f'\qty(\dfrac{c+a}{2})=f''(\xi)\qty(c-\dfrac{c+a}{2})$$
+    比较得 $f''(c)\qty(c-\dfrac{c+a}{2})-\dfrac{1}{2}K(c-a)=0$，由此得 $f''(\xi)=K.$
+\end{proof}
+
+\begin{example}
+    设函数 $f(x)$ 在 $[a,b]$ 上连续，在 $(a,b)$ 内二阶可导，证明存在 $\xi\in(a,b)$，使得 $$f(b)-2f\left(\dfrac{a+b}{2}\right)+f(a)=\dfrac{(b-a)^2}{4}f''(\xi).$$
+\end{example}
+\begin{proof}[{\songti \textbf{证法一}}]
+    注意到
+    $$f(b)-2f\left(\dfrac{a+b}{2}\right)+f(a)=\left[f\left(\dfrac{a+b}{2}+\dfrac{b-a}{2}\right)-f\left(\dfrac{a+b}{2}\right)\right]-\left[f\left(a+\dfrac{b-a}{2}\right)-f(a)\right]$$
+    令 $F(x)=f\left(x+\dfrac{b-a}{2}\right)-f(x),~x\in\left[a,\dfrac{a+b}{2}\right]$，则 $F(x)$ 在 $\left[a,\dfrac{a+b}{2}\right]$ 上连续，
+    在 $\left(a,\dfrac{a+b}{2}\right)$ 内二阶可导，故由 Lagrange 中值定理，
+    $$\exists\xi_{1}\in\left(a,\dfrac{a+b}{2}\right)\text{，使 }F\left(\dfrac{a+b}{2}\right)-F(a)=F'(\xi_{1})\cdot\dfrac{b-a}{2}$$
+    又由 $f'(x)$ 在 $\left[\xi_{1},\xi_{1}+\dfrac{b-a}{2}\right]$ 上用 Lagrange 中值定理，
+    $$\exists\xi\in\left(\xi_{1},\xi_{1}+\dfrac{b-a}{2}\right)\subset(a,b)\text{，使 }f'\left(\xi_{1}+\dfrac{b-a}{2}\right)-f'(\xi_{1})=f''(\xi)\cdot\dfrac{b-a}{2}$$
+    代入上式，即得 $f(b)-2f\left(\dfrac{a+b}{2}\right)+f(a)=\dfrac{(b-a)^2}{4}f''(\xi).$
+\end{proof}
+\begin{proof}[{\songti \textbf{证法二}}]
+    将 $f(a),f(b)$ 分别在 $x=\dfrac{a+b}{2}$ 处进行 Taylor 展开，得
+    \begin{flalign*}
+        f(a) & =f\left(\dfrac{a+b}{2}\right)+\dfrac{a-b}{2}f'\left(\dfrac{a+b}{2}\right)+\left(\dfrac{a-b}{2}\right)^2\dfrac{f''(\xi_{1})}{2!} \\
+        f(b) & =f\left(\dfrac{a+b}{2}\right)+\dfrac{b-a}{2}f'\left(\dfrac{a+b}{2}\right)+\left(\dfrac{b-a}{2}\right)^2\dfrac{f''(\xi_{2})}{2!}
+    \end{flalign*}
+    其中 $a<\xi_{1}<\dfrac{a+b}{2}<\xi_{2}<b$，两式相加，得
+    $$f(b)-2f\left(\dfrac{a+b}{2}\right)+f(a)=\dfrac{(b-a)^{2}}{4}\cdot\left[\dfrac{f''(\xi_{1})+f''(\xi_{2})}{2}\right]$$
+    而 $\min(f''(\xi),f''(\xi_{2}))\leqslant\dfrac{f''(\xi_1)+f''(\xi_{2})}{2}\leqslant\max(f''(\xi_{1}),f''(\xi_{2}))$，由 Darboux 定理知，
+    存在 $\xi\in(\xi_1,\xi_{2})\subset(a,b)$，使得 $f''(\xi)=\dfrac{f''(\xi_{1})+f''(\xi_{2})}{2}$，从而得
+    $f(b)-2f\left(\dfrac{a+b}{2}\right)+f(a)=\dfrac{(b-a)^2}{4}f''(\xi).$
+\end{proof}
+\begin{proof}[{\songti \textbf{证法三}}]
+    要证 $f(b)-2f\left(\dfrac{a+b}{2}\right)+f(a)=\dfrac{(b-a)^{2}}{4}f''(\xi)$，即证
+    $$\dfrac{f(b)-2f\left(\dfrac{a+b}{2}\right)+f(a)}{(b-a)^{2}}=\dfrac{1}{4}f''(\xi)$$
+    为此，构造辅助函数 $F(x)=f(x)-2f\left(\dfrac{a+x}{2}\right)+f(a),~G(x)=(x-a)^{2}$，则 $F(x),G(x)$ 满足 Cauchy 中值定理的条件，故由 Cauchy 中值定理得
+    $$\dfrac{F(b)}{G(b)}=\dfrac{F(b)-F(a)}{G(b)-G(a)}=\dfrac{F'(\xi_{1})}{G'(\xi_{1})}=\dfrac{f'(\xi_{1})-f'\left(\dfrac{a+\xi_{1}}{2}\right)}{{2(\xi_{1}-a)}}=\dfrac{f''(\xi)\cdot\dfrac{\xi_{1}-a}{2}}{{2(\xi_{1}-a)}}=\dfrac{1}{4}f''(\xi)$$
+    其中 $\xi_{1}\in(a,b),\xi\in\left(\dfrac{a+\xi_{1}}{2},\xi_{1}\right)\subset(a,b).$
+\end{proof}
+\begin{proof}[{\songti \textbf{证法四}}]
+    设 $k$ 为使 $f(b)-2f\left(\dfrac{a+b}{2}\right)+f(a)=\dfrac{(b-a)^{2}}{4}k$ 成立的实常数，
+    构造辅助函数 $$g(x)=f(x)-2f\left(\dfrac{a+x}{2}\right)+f(a)-\dfrac{(x-a)^{2}}{4}k$$
+    则 $g(a)=g(b)=0$，于是由 Rolle 定理得，存在 $\xi_{1}\in(a,b)$，使 $g'(\xi_{1})=0$，即 $$f'(\xi_{1})-f'\left(\dfrac{a+\xi_{1}}{2}\right)-\dfrac{k}{2}(\xi_{1}-a)=0$$
+    又 $f'\left(\dfrac{a+\xi_{1}}{2}\right)=f'(\xi_{1})+f''(\xi)\cdot\dfrac{a-\xi_{1}}{2}$，其中 $\xi\in\left(\dfrac{a+\xi_{1}}{2},\xi_{1}\right)\subset(a,b)$，
+    代入前一式，即得 $k=f''(\xi)$.
+\end{proof}
+
+\subsection{中值点的极限}
+
+\begin{example}
+    设 $f''(x)$ 在某区间 $I$ 上连续，且 $f''(x_0)\neq0~ (x_0\in I)$，对于 $x_0+h\in I$，由微分中值定理
+    $$f(x_0+h)  =f(x_0)  +hf'(x_{0}+\theta h)  ~ ( 0 <\theta  < 1) $$
+    证明: $\displaystyle\lim_{h\to0}\theta=\dfrac{1}{2}.$
+\end{example}
+\begin{proof}[{\songti \textbf{证}}]
+    对 $f^{\prime}(x)$  应用 Lagrange 日中值定理，有
+    $$f^{\prime}\left(x_{0}+\theta h\right)-f^{\prime}(x_0) =\theta h f^{\prime \prime}(x_0+\xi \theta)  ~ (0<\xi<1)$$
+    于是
+    \begin{equation}
+        f\left(x_{0}+h\right)=f(x_0) +h f^{\prime}\left(x_{0}+\theta h\right)=f(x_0) +h\left[f^{\prime}(x_0) +\theta h f^{\prime \prime}(x_0+\xi \theta) \right]\tag{1}
+    \end{equation}
+    再根据 Taylor 公式有
+    \begin{equation}
+        f\left(x_{0}+h\right)=f(x_0) +h f^{\prime}(x_0) +\dfrac{1}{2} h^{2} f^{\prime \prime}\left(x_{0}+\eta h\right) ~ (0<\eta<1)\tag{2}
+    \end{equation}
+    比较式 (1)、(2) 得
+    $$\theta f^{\prime \prime}(x_0+\xi \theta) =\dfrac{1}{2} f^{\prime \prime}\left(x_{0}+\eta h\right)$$
+    因 $f^{\prime \prime}(x)$ 在 $x_{0}$ 点连续，所以
+    $$\lim _{h \rightarrow 0} \theta f^{\prime \prime}(x_0+\xi \theta) =\lim _{h \rightarrow 0} \dfrac{1}{2} f^{\prime \prime}\left(x_{0}+\eta h\right)$$
+    因此有 $f''(x_0)\lim\limits_{h\to0}\theta=\dfrac{1}{2}f''(x_0)$，又因为 $f''(x_0)\neq0$，所以 $\lim\limits_{h\to0}\theta=\dfrac{1}{2}.$
+\end{proof}
+
+\begin{example}
+    设 $f(x+h)=f(x)+hf'(x)+\cdots+\dfrac{h^n}{n!}f^{(n)}(x+\theta h)~ (0<\theta<1)$，且 $f^{(n+1)}(x)\neq 0$，
+    证明: $$\lim\limits_{h\to0}\theta =\dfrac{1}{n+1}.$$
+\end{example}
+\begin{proof}[{\songti \textbf{证}}]
+    由题设知 $f(x)$ 在 $x=a$ 处具有 $n+1$ 阶导数，故 $f(x)$ 在 $a$ 点处的 $n$ 阶 Taylor 展开为
+    $$f\left( a+h\right) =f(a) +hf'(a) +\dfrac{h^{2}}{2!}f''(a) +\cdots +\dfrac{h^{n}}{n!}f^{(n) }(a) +\dfrac{h^{n+1}}{(n+1)  !}f^{(n+1)  }(a+\theta_1 h)~ (0<\theta_1<1)$$
+    与 $f\left( a+h\right) =f(a) +hf'(a) +\dfrac{h^{2}}{2!}f''(a) +\cdots +\dfrac{h^{n}}{n!}f^{(n) }\left( a+\theta h\right) $ 相比较，得
+    $$\dfrac{h^{n}}{n!}f^{(n) }\left( a+\theta h\right) =\dfrac{h^{n}}{n!}f^{(n) }(a) +\dfrac{h^{n+1}}{(n+1)  !}f^{(n+1)  }\left( a+\theta _{1}h\right) $$
+    于是 $$f^{(n) }\left( a+\theta h\right) -f^{(n) }(a) =\dfrac{f^{(n+1)  }\left( a+\theta _{1}h\right) }{n+1}h$$
+    由 Lagrange 中值定理知，
+    $$f^{(n+1)  }\left( a+\theta _{2}\left( \theta h\right) \right) \cdot \theta h=f^{(n+1)  }\left( a+\theta _{1}h\right) \cdot \dfrac{h}{n+1}~ ( 0 <\theta _{2} < 1) $$
+    令 $h\to0$，则 $\theta h,\theta_1 h,\theta_2(\theta h)\to0$，并注意到 $f^{(n+1)}(x)$ 连续及 $f^{(n+1)}(a)\neq 0$，即得 $\lim\limits_{h\to0}\theta =\dfrac{1}{n+1}.$
+\end{proof}
+
+\begin{example}
+    设函数 $f(x)$ 在 $(x_0-\delta,x_0+\delta)$ 内有 $n$ 阶连续导数，且
+    $$f^{(k)}(x_0)=0,k=2,3,\cdots,n-1\text{，且 }f^{(n)}(x_0)\neq 0$$
+    当 $0<|h|<\delta$ 时，
+    $$f(x_0+h)  -f(x_0)  =hf'(x_{0}+\theta h)  ~ ( 0 <\theta  < 1) $$
+    证明: $\displaystyle \lim _{n\rightarrow 0}\theta =\dfrac{1}{\sqrt[n-1] {n}}.$
+\end{example}
+\begin{proof}[{\songti \textbf{证}}]
+    由 Taylor 公式可得
+    $$f(x_0+h)  =f(x_0)  +f'(x_0)  h+\dfrac{f''(x_0)  }{2!}h^{2}+\ldots +\dfrac{f^{\left( n-1\right) }(x_0)  }{\left( n-1\right) !}h^{n-1}+\dfrac{f^{(n) }(\xi ) }{n!}h^{n},~\xi\in(x_0,x_0+h)$$
+    由题设的条件，可得
+    \begin{equation}
+        f(x_0+h)  =f(x_0)  +f'(x_0)  h+\dfrac{1}{n!}f^{(n) }(\xi ) h^{n}\tag{1}
+    \end{equation}
+    又有
+    \begin{equation}
+        f\left( x_{0}+n\right) -f(x_0)  =hf'(x_{0}+\theta h)  ,~0 <\theta  <1 \tag{2}
+    \end{equation}
+    由 (1)、(2) 式可得
+    \begin{equation}
+        hf'(x_{0}+\theta h)  =hf'(x_0)  +\dfrac{1}{n!}f^{(n) }(\xi ) h^{n}\tag{3}
+    \end{equation}
+    仿式 (1) 可得
+    \begin{equation}
+        f'(x_{0}+\theta h)  =f'(x_0)  +f^{1}(x_0)  \left( \theta h\right) +\ldots +\dfrac{f^{(n) }\left( \eta \right) }{\left( n-1\right) !}\left( \theta h\right) ^{n-1},\eta \in \left( x_{0},~x_{0}+\theta h\right) \tag{4}
+    \end{equation}
+    将式 (4) 代入式 (3)，注意到 $f^{(k)}(x_0)=0$，可得
+    $$\dfrac{1}{n}f^{(n)}(\xi)=f^{(n)}(\eta)\theta^{n-1}\Rightarrow \lim_{h\to0}\dfrac{1}{n}f^{(n)}(\xi)=\lim_{h\to0}f^{(n)}(\eta) \theta^{n-1}$$
+    可得 $$\dfrac{f^{(n)}(x_0)}{n}=f^{(n)}(x_0)\left[\lim_{h\to0}\theta\right]^{n-1}\Rightarrow \lim_{h\to0}\theta=\dfrac{1}{\sqrt[n-1]{n}}.$$
+\end{proof}
+
+\subsection{无穷远处的极限}
+
+\begin{example}
+    设 $f(x)$ 在 $(-\infty,+\infty)$ 内具有 $n$ 阶导数且满足 $\lim\limits_{x\to\infty}f(x)=c$ ($c$ 为常数)，
+    $\lim\limits_{x\to\infty}f^{(n)}(x)=0$，证明: $\lim\limits_{x\to\infty}f^{(k)}(x)=0~ (k=1,2,\cdots,n-1).$
+\end{example}
+\begin{proof}[{\songti \textbf{证}}]
+    由 Taylor 公式可得:
+    $$f\left( x+j\right) =f(x) +\dfrac{f(x) }{1!}j+\dfrac{f''(x) }{2!}j^{2}+\cdots +\dfrac{f^{\left( n-1\right) }(x) }{\left( n-1\right) !}j^{n-1}+\dfrac{f^{(n) }(\xi ) }{n!}j^{n}$$
+    其中 $j=1,2,\cdots,n-1,~x<\xi_j<x+j.$ 从而有
+    \begin{equation}
+        f\left( x+j\right) -f(x) =f'(x) j+\dfrac{f''(x) }{2!}j^{2}+\cdots +\dfrac{f^{\left( n-1\right) }(x) }{\left( n-1\right) !}j^{n-1}+\dfrac{f^{(n) }\left( \xi _{j}\right) }{n!}j^{n} \tag{*}
+    \end{equation}
+    由于 $\lim\limits_{x\to\infty}f(x)=c,~\lim\limits_{x\to\infty}f^{(n)}(x)=0,~x<\xi_j<x+j$，可知
+    $$\lim _{x\rightarrow \infty }f\left( x+j\right) =c,~\lim _{x\rightarrow \infty }f^{(n) }\left( \xi _{j}\right) =0$$
+    由式 (*) 可得
+    $$0=\lim _{x\rightarrow \infty }\left[ f\left( x+j\right) -f(x) \right] =\lim _{x\rightarrow \infty }\left[ f'(x) j+\dfrac{1}{2}f''(x) j^{2}+\cdots +\dfrac{f^{\left( n-1\right) }(x) }{\left( n-1\right) !}j^{n-1}+\dfrac{f^{(n) }\left( \xi _{i}\right) }{n!}j^{n}\right] $$
+    令 $j=1$ 得
+    \begin{flalign*}
+        0 & =\lim _{x\rightarrow \infty }\left[ f'(x) +\dfrac{1}{2!}f''(x) +\cdots +\dfrac{f^{\left( n-1\right) }(x) }{\left( n-1\right) !}+\dfrac{f^{(n) }(\xi_1 ) }{n!}\right]             \\
+          & =\lim _{x\rightarrow \infty }f'(x) +\dfrac{1}{2!}\lim _{x\rightarrow \infty }f''(x) +\cdots +\dfrac{1}{\left( n-1\right) !}\lim _{x\rightarrow \infty }f^{\left( n-1\right) }(x)
+    \end{flalign*}
+    相仿可得
+    \begin{flalign*}
+        0 & =2\lim _{x\rightarrow \infty }f'(x) +\dfrac{2^{2}}{2!}\lim _{x\rightarrow \infty }f''(x) +\cdots +\dfrac{2^{n-1}}{\left( n-1\right) !}\lim _{x\rightarrow \infty }f^{\left( n-1\right) }(x)             \\
+          & =3\lim _{x\rightarrow \infty }f'(x) +\dfrac{3^{2}}{2!}\lim _{x\rightarrow \infty }f''(x) +\cdots +\dfrac{3^{n-1}}{\left( n-1\right) !}\lim _{x\rightarrow \infty }f^{\left( n-1\right) }(x)             \\
+          & \cdots\cdots                                                                                                                                                                                            \\
+          & =(n-1)\lim _{x\rightarrow \infty }f'(x) +\dfrac{(n-1)^{2}}{2!}\lim _{x\rightarrow \infty }f''(x) +\cdots +\dfrac{(n-1)^{n-1}}{\left( n-1\right) !}\lim _{x\rightarrow \infty }f^{\left( n-1\right) }(x)
+    \end{flalign*}
+    不妨记 $\lim\limits_{x\to\infty}f^{(k)}(x)=a_k$ 为待定数值，可得含有 $n-1$ 个未知量，$n-1$ 个方程构成的方程组，
+    $$\begin{cases}
+            a_{1}+\dfrac{1}{2!}a_{2}+\cdots +\dfrac{1}{\left( n-1\right) !}a_{n-1}=0          \\[6pt]
+            2a_{1}+\dfrac{2^2}{2!}a_{2}+\cdots +\dfrac{2^{n-1}}{\left( n-1\right) !}a_{n-1}=0 \\[6pt]
+            \cdots \cdots                                                                     \\
+            (n-1)a_{1}+\dfrac{(n-1)^2}{2!}a_{2}+\cdots +\dfrac{(n-1)^{n-1}}{\left( n-1\right) !}a_{n-1}=0
+        \end{cases}$$
+    系数行列式 $D$ 为，并将第 $i$ 行提出公因子 $i$，第 $j$ 列提出公因子 $\dfrac{1}{j!}$，转化为 Vandermonde 行列式，
+    \begin{flalign*}
+        D=\begin{vmatrix}
+              1      & \dfrac{1}{2!}       & \cdots & \dfrac{1}{(n-1)!}           \\[6pt]
+              2      & \dfrac{2^2}{2!}     & \cdots & \dfrac{2^{n-1}}{(n-1)!}     \\[6pt]
+              \vdots & \vdots              &        & \vdots                      \\[6pt]
+              n-1    & \dfrac{(n-1)^2}{2!} & \cdots & \dfrac{(n-1)^{n-1}}{(n-1)!}
+          \end{vmatrix}
+        =\dfrac{1\cdot2\cdots(n-1)}{1\cdot 2!\cdots(n-1)!}
+        \begin{vmatrix}
+            1      & 1      & \cdots & 1           \\
+            1      & 2      & \cdots & 2^{n-2}     \\
+            1      & 3      & \cdots & 3^{n-2}     \\
+            \vdots & \vdots &        & \vdots      \\
+            1      & n-1    & \cdots & (n-1)^{n-2}
+        \end{vmatrix}\neq0
+    \end{flalign*}
+    可知上述齐次线性方程组仅有零解，即 $\lim\limits_{x\to\infty}f^{(k)}(x)=a_k=0~ (k=1,2,\cdots,n-1).$
+\end{proof}
+
+\subsection{关于界的估计}
+
+\begin{example}
+    设 $f(x)$ 在 $(-\infty,+\infty)$ 内具有三阶导数，且 $f(x),f'''(x)$ 有界，证明: $f'(x)$ 和 $f''(x)$ 有界.
+\end{example}
+\begin{proof}[{\songti \textbf{证}}]
+    由 Taylor 公式可知
+    \begin{equation}
+        f(x+1 ) =f(x)+f'(x) +\dfrac{1}{2}f''(x) +\dfrac{1}{6}f'''(\xi_1 ) \tag{1}
+    \end{equation}
+    \begin{equation}
+        f(x-1 ) =f(x) -f'(x) +\dfrac{1}{2}f''(x) -\dfrac{1}{6}f'''(\xi_2 ) \tag{2}
+    \end{equation}
+    其中 $x <\xi _{1} <x+1,~x-1 <\xi _{2} <x$，式 (1) $+$ 式 (2) 得
+    $$f(x+1 ) +f(x-1 ) =2f(x) +f''(x) +\dfrac{1}{6}\left[ f'''(\xi_1 ) -f'''(\xi_2 ) \right] $$
+    由 $f(x)$ 与 $f'''(x)$ 有界，可知 $f''(x)$ 有界，式 (1) $-$ 式 (2) 得
+    $$f(x+1 ) -f(x-1 ) =2f'(x) +\dfrac{1}{6}\left[ f'''(\xi_1 ) +f'''(\xi_2 ) \right] $$
+    同理可知 $f'(x)$ 有界.
+\end{proof}
+
+\begin{example}
+    已知 $f(x)\in C[0,2]\cap D^2(0,2),~\max\limits_{0\leqslant x\leqslant 2}\qty{|f(x)|,|f''(x)|}\leqslant 1$ 证明: $\forall x\in[0,2]$，有 $|f'(x)|\leqslant 2.$
+\end{example}
+\begin{proof}[{\songti \textbf{证}}]
+    由 $\max\limits_{0\leqslant x\leqslant 2}\qty{|f(x)|,|f''(x)|}\leqslant 1$ 知，$|f(x)|\leqslant 1,~|f''(x)|\leqslant 1$，对 $f(0)$ 和 $f(2)$ Taylor 展开，有
+    $$\begin{cases}
+        f(0)=f(x)+f'(x)(-x)+\dfrac{1}{2!}f''(\xi_1)x^2\\[6pt]
+        f(2)=f(x)+f'(x)(2-x)+\dfrac{1}{2!}f''(\xi_2)(2-x)^2
+    \end{cases}$$
+    作差得 $f(0)-f(2)=-2f'(x)+\dfrac{1}{2}f''(\xi_1)x^2-\dfrac{1}{2}f''(\xi_2)(x-2)^2$，即 
+    \begin{flalign*}
+        \qty|2f'(x)|=\qty|f(2)-f(0)+\dfrac{1}{2}f''(\xi_1)x^2-\dfrac{1}{2}f''(\xi_2)(x-2)^2|\leqslant |f(2)|+|f(0)|+\qty|\dfrac{1}{2}f''(\xi_1)x^2|+\qty|\dfrac{1}{2}f''(\xi_2)(x-2)^2|
+    \end{flalign*}
+    因为 $|f(x)|\leqslant 1,~|f''(x)|\leqslant 1$，所以 $$|f(2)|+|f(0)|\leqslant 2,~\qty|\dfrac{1}{2}f''(\xi_1)x^2|+\qty|\dfrac{1}{2}f''(\xi_2)(x-2)^2|\leqslant \dfrac{x^2}{2}+\dfrac{(x-2)^2}{2}$$
+    因此 $2\qty|f'(x)|\leqslant 2+\dfrac{x^2}{2}+\dfrac{(x-2)^2}{2}\leqslant 4\Rightarrow |f'(x)|\leqslant 2.$
+\end{proof}
+
+\begin{example}
+    设函数 $f(x)$ 在 $(a,+\infty)$ 内具有二阶导数，且 $|f(x)|\leqslant M_0,~|f'(x)|\leqslant M_1,~|f''(x)|\leqslant M_2$，证明: $M_1^2< 4M_0M_2.$
+\end{example}
+\begin{solution}
+    $\forall x\in(a,+\infty)$ 和 $\forall h>0$，由在 $x$ 处有一阶 Taylor 公式 $$f(x+h)=f(x)+f'(x)\cdot h+\dfrac{f''(\xi)}{2}\cdot h^2,x<\xi<x+h$$
+    于是 $f'(x)=\dfrac{1}{h}\qty[f(x+h)-f(x)]-\dfrac{f''(\xi)}{2}h$，从而有 $$|f'(x)|\leqslant \dfrac{1}{h}|f(x+h)-f(x)|+\dfrac{|f''(\xi)|}{2}h=\dfrac{2M_0}{h}+\dfrac{M_2h}{2}$$
+    取 $h=2\sqrt{\dfrac{M_0}{M_2}}$，则 $|f'(x)|\leqslant 2\sqrt{M_0M_2}\Rightarrow |f'(x)|^2\leqslant 4M_0M_2$，有 $x$ 的任意性，得 $M_1^2\leqslant 4M_0M_2.$
+\end{solution}
+
+\begin{example}
+    设函数 $f(x)$ 在 $[a,b]$ 上二阶可导，$f'(a)=f'(b)=0$，证明存在 $\xi\in(a,b)$，使得
+    $$|f''(\xi)|\geqslant \dfrac{4}{(b-a)^2}|f(b)-f(a)|.$$
+\end{example}
+\begin{proof}[{\songti \textbf{证法一}}]
+    将 $f\left(\dfrac{a+b}{2}\right)$ 分别在 $x=a$ 和 $x=b$ 处进行 Taylor 展开
+    \begin{flalign*}
+        f\left( \dfrac{a+b}{2}\right) & =f(a) +f'(a) \dfrac{b-a}{2}+\dfrac{f''(\xi_1 ) }{2!}\left( \dfrac{b-a}{2}\right) ^{2} \\
+        f\left( \dfrac{a+b}{2}\right) & =f(b) +f'(b) \dfrac{a-b}{2}+\dfrac{f''(\xi_2 ) }{2!}\left( \dfrac{a-b}{2}\right) ^{2}
+    \end{flalign*}
+    其中 $a<\xi_1<\dfrac{a+b}{2}<\xi_2<b$，由已知 $f'(a)=f'(b)=0$ 代入上式，得
+    $$f\left( \dfrac{a+b}{2}\right) -f(a) =\dfrac{f''(\xi_1 ) }{2}\left( \dfrac{b-a}{2}\right) ^{2},~f(b) -f\left( \dfrac{a+b}{2}\right) =-\dfrac{f''(\xi_2 ) }{2}\left( \dfrac{b-a}{2}\right) ^{2}$$
+    记 $\xi =\begin{cases}\xi _{1},\left| f''(\xi_2 ) \right| \leqslant \left| f''(\xi_1 ) \right| \\
+            \xi _{2},\left| f''(\xi_2 ) \right|  >\left| f''(\xi_2 ) \right|\end{cases}$，
+    则 $\xi\in(a,b)$，$\left| f''(\xi ) \right| =\max \left( \left| f''(\xi_1 ) \right| ,\left| f''(\xi_2 ) \right| \right) $，故
+    \begin{flalign*}
+        \left| f(b) -f(a) \right| & \leqslant \left| f(b) -f\left( \dfrac{a+b}{2}\right) \right| +\left| f\left( \dfrac{a+b}{2}\right) -f(a) \right|
+        \leqslant\dfrac{\left| f''(\xi_1 ) \right| +\left| f''(\xi_2 ) \right| }{2}\left( \dfrac{b-a}{2}\right) ^{2}\leqslant \dfrac{(b-a)  ^{2}}{4}\left| f''(\xi ) \right|
+    \end{flalign*}
+    即 $\displaystyle |f''(\xi)|\geqslant \dfrac{4}{(b-a)^2}|f(b)-f(a)|.$
+\end{proof}
+\begin{proof}[{\songti \textbf{证法二}}]
+    由连续函数 $f(x)$ 在 $[a, b]$ 上用介值定理知，存在 $x_{0} \in[a, b]$，使 $f(x_0) =\dfrac{1}{2}[f(a)+f(b)]$，
+    不妨设 $\displaystyle a \leqslant x_{0} \leqslant \dfrac{a+b}{2}$，则将 $f(x_0) $ 在点 $x=a$ 处进行 Taylor 展开，得存在 $\xi \in\left(a, x_{0}\right) \subset(a, b)$，使
+    $$f(x_0) =f(a)+f^{\prime}(a)\left(x_{0}-a\right)+\dfrac{f^{\prime \prime}(\xi)}{2 !}\left(x_{0}-a\right)^{2}=f(a)+\dfrac{f^{\prime \prime}(\xi)}{2}\left(x_{0}-a\right)^{2}$$
+    于是 $\displaystyle\left|f^{\prime \prime}(\xi)\right|=\dfrac{2\left|f(x_0) -f(a)\right|}{\left(x_{0}-a\right)^{2}} \geqslant \dfrac{|f(b)-f(a)|}{\left(\dfrac{b-a}{2}\right)^{2}}=\dfrac{4}{(b-a)^{2}}|f(b)-f(a)| .$
+\end{proof}
+\begin{proof}[{\songti \textbf{证法三}}]
+    令 $g_{1}(x)=(x-a)^{2},~ g_{2}(x)=(x-b)^{2}$，则将 $f(x)$ 与 $g_{1}(x)$ 和 $f(x)$ 与 $g_{2}(x)$ 分别在 $\left[a, \dfrac{a+b}{2}\right]$
+    和 $\left[\dfrac{a+b}{2}, b\right]$ 上用两次 Cauchy 中值定理，知 $\exists \eta_{1} \in   \left(a, \dfrac{a+b}{2}\right),~ \xi_{1} \in\left(a, \eta_{1}\right)$，使
+    $$\dfrac{f\left(\dfrac{a+b}{2}\right)-f(a)}{\left(\dfrac{b-a}{2}\right)^{2}}=\dfrac{f\left(\dfrac{a+b}{2}\right)-f(a)}{g_{1}\left(\dfrac{a+b}{2}\right)-g_{1}(a)}=\dfrac{f^{\prime}(\eta_1 )}{g_{1}^{\prime}(\eta_1 )}=\dfrac{f^{\prime}(\eta_1 )-f^{\prime}(a)}{g_{1}^{\prime}(\eta_1 )-g_{1}^{\prime}(a)}=\dfrac{f^{\prime \prime}(\xi_1 )}{g_{1}^{\prime \prime}(\xi_1 )}=\dfrac{1}{2} f^{\prime \prime}(\xi_1 )$$
+    $\exists \eta_{2} \in\left(\dfrac{a+b}{2}, b\right), \xi_{2} \in\left(\eta_{2}, b\right)$，使
+    $$\dfrac{f\left(\dfrac{a+b}{2}\right)-f(b)}{\left(\dfrac{b-a}{2}\right)^{2}}=\dfrac{f\left(\dfrac{a+b}{2}\right)-f(b)}{g_{2}\left(\dfrac{a+b}{2}\right)-g_{2}(b)}=\dfrac{f^{\prime}(\eta_2 )}{g_{2}^{\prime}(\eta_2 )}=\dfrac{f^{\prime}(\eta_2 )-f^{\prime}(b)}{g_{2}^{\prime}(\eta_2 )-g_{2}^{\prime}(b)}=\dfrac{f^{\prime \prime}(\xi_2 )}{g_{2}^{\prime}(\xi_2 )}=\dfrac{1}{2} f^{\prime \prime}(\xi_2 )$$
+    取 $\xi=\begin{cases}\xi_{1}, & \left|f^{\prime \prime}(\xi_1 )\right| \geqslant\left|f^{\prime \prime}(\xi_2 )\right|, \\ \xi_{2}, & \left|f^{\prime \prime}(\xi_1 )\right|<\left|f^{\prime \prime}(\xi_2 )\right|,\end{cases}$ 则
+    \begin{flalign*}
+        \left|f^{\prime \prime}(\xi)\right| & =\max \left(\left|f^{\prime \prime}(\xi_1 )\right|,\left|f^{\prime \prime}(\xi_2 )\right|\right) \geqslant \dfrac{1}{2}\left(\left|f^{\prime \prime}(\xi_1 )\right|+\left|f^{\prime \prime}(\xi_2 )\right|\right) \geqslant \dfrac{1}{2}\left|f^{\prime \prime}(\xi_1 )-f^{\prime \prime}(\xi_2 )\right| \\
+                                            & =\left|\dfrac{f\left(\dfrac{a+b}{2}\right)-f(a)}{\left(\dfrac{b-a}{2}\right)^{2}}-\dfrac{f\left(\dfrac{a+b}{2}\right)-f(b)}{\left(\dfrac{b-a}{2}\right)^{2}}\right|=\dfrac{4}{(b-a)^{2}}|f(b)-f(a)| .
+    \end{flalign*}
+\end{proof}
+\begin{inference}
+    一般地，设函数 $f(x)$ 在 $[a, b]$ 上具有直至 $n$ 阶的导数 $(n \geqslant 2)$，
+    且 $f^{(k)}(a)=f^{(k)}(b)=0 ~ (k=1,2, \cdots, n-1)$，则至少存在一点 $\xi \in(a, b)$，使
+    $$\left|f^{(n)}(\xi)\right| \geqslant \dfrac{2^{n-1} \cdot n !}{(b-a)^{n}}|f(b)-f(a)|.$$
+\end{inference}
+
+\subsection{差商与导数}
+
+\begin{definition}[一阶差商]
+    设 $x_0,x_1,\cdots,x_n$ 为 $[a,b]$ 上的节点，若 $x_i\neq x_j$，
+    则函数 $f(x)$ 关于节点 $x_i,x_j$ 的\textit{一阶差商}定义为
+    $$f[x_i,x_j]=\dfrac{f(x_j)-f(x_i)}{x_j-x_i}.$$
+\end{definition}
+
+\begin{definition}[重节点差商]
+    若 $x_i=x_j$，则定义\textit{重节点差商}
+    $$f[x_i,x]=\lim_{x\to x_i}f[x_i,x]=\lim_{x\to x_i}\dfrac{f(x)-f(x_i)}{x-x_i}=f'(x_i).$$
+\end{definition}
+
+\begin{definition}[二阶差商]
+    若 $x_i,x_j,x_k$ 互异，则定义\textit{二阶差商} $$f[x_i,x_j,x_k]=\dfrac{f[x_j,x_k]-f[x_i,x_j]}{x_k-x_i}.$$
+    若 $x_i=x_j\neq x_k$ 或 $x_i=x_j=x_k$，则分别定义
+    $$f[x_i,x_i,x_k]=\dfrac{f[x_i,x_k]-f[x_i,x_i]}{x_k-x_i},~f[x_i,x_i,x_i]=\lim_{\substack{x_i\to x_i\\x_k\to x_i}}f[x_i,x_j,x_k]=\dfrac{1}{2}f''(x_i).$$
+\end{definition}
+
+\begin{definition}[$n$ 阶差商]
+    一般地，定义 $n$ 阶差商及 $n$ \textit{阶重节点差商}分别为
+    \begin{flalign*}
+        f[x_{i0},x_{i1},\cdots,x_{in}] & =\dfrac{f[x_{i1},\cdots,x_{in}]-f[x_{i0},x_{i1},\cdots,x_{i(n-1)}]}{x_{in}-x_{i0}}   \\
+        f[x_{i0},x_{i0},\cdots,x_{i0}] & =\lim_{x_{ij}\to x_{i0}}f[x_{i0},x_{i1},\cdots,x_{in}]=\dfrac{1}{n!}f^{(n)}(x_{i0}).
+    \end{flalign*}
+\end{definition}
+
+\begin{theorem}[差商与导数的关系]
+    设函数 $f(x)$ 在 $[a,b]$ 上存在 $n$ 阶导数，且节点 $x_{i0},x_{i1},\cdots,x_{in}\in[a,b]$ (其中可有重节点)，则有
+    $$f[x_{i0},x_{i1},\cdots,x_{in}]=\dfrac{f^{(n)}(\xi)}{n!}$$
+    其中 $\xi\in\left(\min\limits_{0\leqslant k\leqslant n}\{x_{ik}\},\max\limits_{0\leqslant k\leqslant n}\{x_{ik}\}\right).$
+    \index{差商与导数的关系}
+\end{theorem}
+
+\begin{example}
+    设函数 $f(x)$ 在 $[a,b]$ 上三阶可导，证明存在 $\xi\in(a,b)$，使得
+    $$f(b)=f(a)+f'\left(\dfrac{a+b}{2}\right)(b-a)+\dfrac{1}{24}f'''(\xi)(b-a)^3.$$
+\end{example}
+\begin{proof}[{\songti \textbf{证法一}}]
+    将 $f(a),f(b)$ 在 $x=\dfrac{a+b}{2}$ 处进行 Taylor 展开，得
+    \begin{flalign*}
+        f(a) & =f\left( \dfrac{a+b}{2}\right) +f'\left( \dfrac{a+b}{2}\right) \cdot \dfrac{a-b}{2}+\dfrac{1}{2}f''\left( \dfrac{a+b}{2}\right) \cdot \dfrac{(a-b)  ^{2}}{4}+\dfrac{1}{6}f'''(\xi_1 ) \dfrac{(a-b)  ^{3}}{8} \\
+        f(b) & =f\left( \dfrac{a+b}{2}\right) +f'\left( \dfrac{a+b}{2}\right) \cdot \dfrac{b-a}{2}+\dfrac{1}{2}f''\left( \dfrac{a+b}{2}\right) \cdot \dfrac{(b-a)  ^{2}}{4}+\dfrac{1}{6}f'''(\xi_2 ) \dfrac{(b-a)  ^{3}}{8}
+    \end{flalign*}
+    其中 $a <\xi _{1} <\dfrac{a+b}{2} <\xi _{2} <b$，两式相减得
+    $$f(b) -f(a) -f'\left( \dfrac{a+b}{2}\right) (b-a)  =\dfrac{1}{24}\dfrac{f'''(\xi_1 ) +f'''(\xi_2 ) }{2}(b-a)  ^{3}$$
+    而由$$\min \left( f'''(\xi_1 ) ,f'''(\xi_2 ) \right) \leqslant \dfrac{f'''(\xi_1 ) +f'''(\xi_2 ) }{2}\leqslant \max \left( f'''(\xi_1 ) ,f'''(\xi_2 ) \right) $$
+    及 Darboux 定理知
+    $$\exists\xi\in(\xi_1,\xi_2)\subset (a,b)\text{，使得 }f'''(\xi)=\dfrac{f'''(\xi_1)+f'''(\xi_2)}{2}$$
+    故得证.
+\end{proof}
+\begin{proof}[{\songti \textbf{证法二}}]
+    设 $k$ 为使 $f(b)=f(a)+f^{\prime}\left(\dfrac{a+b}{2}\right)(b-a)+\dfrac{1}{24} k(b-a)^{3}$ 成立的实常数，为此只需证 $k=f^{\prime \prime}(\xi)$ 即可，
+    令 $g(x)=f(x)-f(a)-f^{\prime}\left(\dfrac{a+x}{2}\right)(x-a)-\dfrac{k}{24}(x-a)^{3}$ 则 $g(a)=g(b)=0$，
+    于是由 Rolle 定理知，$\exists \eta \in(a, b)$，使 $g^{\prime}(\eta)=0$ 即
+    $$f^{\prime}(\eta)-\dfrac{1}{2} f^{\prime \prime}\left(\dfrac{a+\eta}{2}\right)(\eta-a)-f^{\prime}\left(\dfrac{a+\eta}{2}\right)-\dfrac{k}{8}(\eta-a)^{2}=0$$
+    又将 $f^{\prime}(\eta) $ 在 $ x=\dfrac{a+\eta}{2} $ 处进行 Taylor 展开，得
+    $$f^{\prime}(\eta)=f^{\prime}\left(\dfrac{a+\eta}{2}\right)+f^{\prime \prime}\left(\dfrac{a+\eta}{2}\right) \cdot \dfrac{\eta-a}{2}+\dfrac{f^{\prime \prime}(\xi)}{2 !} \cdot\left(\dfrac{\eta-a}{2}\right)^{2}$$
+    代人上式，得 $\dfrac{f'''(\xi)}{2 !} \cdot\left(\dfrac{\eta-a}{2}\right)^{2}-\dfrac{k}{8}(\eta-a)^{2}=0$，
+    从而得  $k=f'''(\xi)$，其中 $ \xi \in   \left(\dfrac{a+\eta}{2}, \eta\right) \subset(a, b)$，故得证.
+\end{proof}
+\begin{proof}[{\songti \textbf{证法三}}]
+    由于要证等式中含有 $ f^{\prime}\left(\dfrac{a+b}{2}\right)$，因而选取重节点: $ x_{0}=a, x_{1}=   c=\dfrac{a+b}{2}, x_{2}=c, x_{3}=b $，列差商表如下:
+    \begin{table}[H]
+        \centering
+        \caption{}
+        \setlength{\tabcolsep}{8mm}{
+            \begin{tabular}{c c c c c}
+                \toprule
+                $x_{k}$   & $f(x_k)$ & 一阶差商        & 二阶差商      & 三阶差商        \\
+                \midrule
+                $x_{0}=a$ & $f(a)$   &                 &               &                 \\
+                $x_{1}=c$ & $f(c)$   & $f[a, c]$       &               &                 \\
+                $x_{2}=c$ & $f(c)$   & $f^{\prime}(c)$ & $f[a, c, c]$  &                 \\
+                $x_{3}=b$ & $f(b)$   & $f[c, b]$       & $f[c, c, b] $ & $f[a, c, c, b]$ \\
+                \bottomrule
+            \end{tabular}}
+    \end{table}
+    而由差商与导数的关系, 得 $ f[a, c, c, b]=\dfrac{f^{\prime \prime}(\xi)}{3 !}$，其中 $ \xi \in(a, b) $，由重节点差商定义，有
+    \begin{flalign*}
+        f[a, c, c, b]=\dfrac{f[c, c, b]-f[a, c, c]}{b-a}, ~  f[c, c, b]=\dfrac{f[c, b]-f^{\prime}(c)}{b-c}
+    \end{flalign*}
+    \begin{flalign*}
+        f[a, c, c]=\dfrac{f^{\prime}(c)-f[a, c]}{c-a}, ~  f[c, b]=\dfrac{f(b)-f(c)}{b-c}, ~  f[a, c]=\dfrac{f(c)-f(a)}{c-a}
+    \end{flalign*}
+    代人整理，即得 $f(b)=f(a)+f^{\prime}\left(\dfrac{a+b}{2}\right)(b-a)+\dfrac{1}{24} f^{\prime \prime}(\xi)(b-a)^{3}.$
+\end{proof}
+
+\begin{example}
+    设函数 $f(x)$ 在 $[a,b]$ 上三阶可导，证明存在 $\xi\in(a,b)$，使得 $$f(b)=f(a)+\dfrac{1}{2}(f'(a)+f'(b))(b-a)-\dfrac{1}{12}f'''(\xi)(b-a)^3.$$
+\end{example}
+\begin{proof}[{\songti \textbf{证法一}}]
+    将要证的等式化为 $ \dfrac {f(b)-f(a)-\dfrac {1}{2}(f'(a)+f'(b))(b-a)}{-\dfrac {1}{12}(b-a)^ {3}} =f''' ( \xi)$
+    为此，令
+    $$F(x)=f(x)-f(a)-\dfrac {1}{2} (f'(a)+f'(x))(x-a),~G(x)=- \dfrac {1}{12} (x-a)^ {3} $$
+    则 $F(x)$ 在 $[a,b]$ 上二阶可导，$G(x)$ 在 $[a,b]$ 上任意阶可导，于是两次用 Cauchy 中值定理, 得
+    $$\dfrac {F(b)}{G(b)}=\dfrac {F(b)-F(a)}{G(b)-G(a)}=\dfrac {F'(\xi _ {1})}{G'(\xi _ {1})}=\dfrac {F'(\xi _ {1})-F'(a)}{G'(\xi _ {1})-G'(a)}=\dfrac {F'(\xi )}{G'(\xi )}=f'''(\xi) $$
+    其中 $F(a)=0=F'(a),~G(a)=0=G'(a),~\xi _{1}\in(a,b),~\xi\in(a,\xi_{1})\subset(a,b)$，
+    整理即得 $f(b)=f(a)+\dfrac{1}{2}(f'(a)+f'(b))(b-a)-\dfrac{1}{12}f'''(\xi)(b-a)^3.$
+\end{proof}
+\begin{proof}[{\songti \textbf{证法二}}]
+    设 $k$ 为使 $f(b)=f(a)+\dfrac{b-a}{2}(f'(a)+f'(b))-\dfrac{1}{12}k(b-a)^{3}$ 成立的实常数，为此证明 $k=f'''(\xi)$ 即可，
+    令 $$g(x)=f(x)-f(a)-\dfrac{x-a}{2}(f'(a)+f'(x))+\dfrac{1}{12}k(x-a)^{3}$$
+    则 $g(a)=g(b)=0$，于是由 Rolle 定理知，存在 $\eta\in(a,b)$，使得 $g'(\eta)=0$，即
+    $$\dfrac{1}{2}f'(\eta)-\dfrac{1}{2}f'(a)-\dfrac{\eta-a}{2}f'(\eta)+\dfrac{k}{4}(\eta-a)^{2}=0$$
+    又将 $f'(a)$ 在 $x=\eta$ 处进行 Taylor 展开，得
+    $$f'(a)=f'(\eta)+f'(\eta)(a-\eta)+\dfrac{1}{2}f'''(\xi)(a-\eta)^{2}$$
+    代入上式，即得 $k=f'''(\xi)$，其中 $\xi\in(a,\eta)\subset(a,b)$，故得证.
+\end{proof}
+\begin{proof}[{\songti \textbf{证法三}}]
+    由于要证明的等式中含有 $f'(a)$ 及 $f'(b)$，因而考虑选取重节点: $x_{0}=a,x_{1}=a,x_{2}=b,x_{3}=b$，列差商表如下
+    \begin{table}[H]
+        \centering
+        \caption{}
+        \setlength{\tabcolsep}{8mm}{
+            \begin{tabular}{c c c c c}
+                \toprule
+                $x_{k}$   & $f(x_k)$ & 一阶差商 & 二阶差商      & 三阶差商        \\
+                \midrule
+                $x_{0}=a$ & $f(a)$   &          &               &                 \\
+                $x_{1}=a$ & $f(a)$   & $f'(a)$  &               &                 \\
+                $x_{2}=b$ & $f(b)$   & $f[a,b]$ & $f[a, a, b]$  &                 \\
+                $x_{3}=b$ & $f(b)$   & $f'(b)$  & $f[a, b, b] $ & $f[a, a, b, b]$ \\
+                \bottomrule
+            \end{tabular}}
+    \end{table}
+    而由差商与导数的关系，得 $f[a,a,b,b]=\dfrac{f'''(\xi)}{3!}$，其中 $\xi\in(a,b)$，又由重节点差商定义，有
+    \begin{equation*}
+        f[a,a,b,b]=\dfrac{f[a,b,b]-f[a,a,b]}{b-a},~f[a,a,b]=\dfrac{f[a,b]-f'(a)}{b-a}
+    \end{equation*}
+    \begin{equation*}
+        f[a,b,b]=\dfrac{f'(b)-f[a,b]}{b-a},~f[a,b]=\dfrac{f(b)-f(a)}{b-a}
+    \end{equation*}
+    代入整理，即得 $f(b)=f(a)+\dfrac{1}{2}(f'(a)+f'(b)(b-a)-\dfrac{1}{12}f'''(\xi))(b-a)^{3}.$
+\end{proof}
+

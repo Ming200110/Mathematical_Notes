@@ -1,0 +1,224 @@
+\section{线性变换及其矩阵}
+
+\subsection{线性变换}
+
+\begin{example}
+    在线性空间 $\vb*{P}^{2\times2}$ 中定义线性变换 $\vb*{A}_1$，$\vb*{A}_2$，$\vb*{A}_3$ 为
+    $$\vb*{A}_1(\vb*{X})=\begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix}\vb*{X}\text{，}\vb*{A}_2(\vb*{X})=\vb*{X}\begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix}\text{，}\vb*{A}_3(\vb*{X})=\begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix}\vb*{X}\begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix}\qty(\vb*{X}\in \vb*{P}^{2\times2})$$
+    求 $\vb*{A}_1$，$\vb*{A}_2$，$\vb*{A}_3$ 在基 $\vb*{E}_{11}\text{，}\vb*{E}_{12}\text{，}\vb*{E}_{21}\text{，}\vb*{E}_{22}$ 下的矩阵.
+\end{example}
+\begin{solution}
+    因为 \begin{flalign*}
+        \vb*{A}_1(\vb*{E}_{11}) & =\begin{pmatrix}
+                                       a & b \\
+                                       c & d
+                                   \end{pmatrix}\begin{pmatrix}
+                                                    1 & 0 \\
+                                                    0 & 0
+                                                \end{pmatrix}=\begin{pmatrix}
+                                                                  a & 0 \\
+                                                                  c & 0
+                                                              \end{pmatrix}=a\vb*{E}_{11}+c\vb*{E}_{21} \\
+        \vb*{A}_1(\vb*{E}_{12}) & =\begin{pmatrix}
+                                       a & b \\
+                                       c & d
+                                   \end{pmatrix}\begin{pmatrix}
+                                                    0 & 1 \\
+                                                    0 & 0
+                                                \end{pmatrix}=\begin{pmatrix}
+                                                                  0 & a \\
+                                                                  0 & c
+                                                              \end{pmatrix}=a\vb*{E}_{12}+c\vb*{E}_{22} \\
+        \vb*{A}_1(\vb*{E}_{21}) & =\begin{pmatrix}
+                                       a & b \\
+                                       c & d
+                                   \end{pmatrix}\begin{pmatrix}
+                                                    0 & 0 \\
+                                                    1 & 0
+                                                \end{pmatrix}=\begin{pmatrix}
+                                                                  b & 0 \\
+                                                                  d & 0
+                                                              \end{pmatrix}=b\vb*{E}_{11}+d\vb*{E}_{21} \\
+        \vb*{A}_1(\vb*{E}_{22}) & =\begin{pmatrix}
+                                       a & b \\
+                                       c & d
+                                   \end{pmatrix}\begin{pmatrix}
+                                                    0 & 0 \\
+                                                    0 & 1
+                                                \end{pmatrix}=\begin{pmatrix}
+                                                                  0 & b \\
+                                                                  0 & d
+                                                              \end{pmatrix}=b\vb*{E}_{12}+d\vb*{E}_{22}
+    \end{flalign*}
+    所以 $\vb*{A}_1$ 在基 $\vb*{E}_{11}\text{，}\vb*{E}_{12}\text{，}\vb*{E}_{21}\text{，}\vb*{E}_{22}$ 下的矩阵为
+    $\begin{pmatrix}
+            a & 0 & b & 0 \\
+            0 & a & 0 & b \\
+            c & 0 & d & 0 \\
+            0 & c & 0 & d
+        \end{pmatrix}$，同理可得 $\vb*{A}_2$，$\vb*{A}_3$ 在基下的矩阵为
+    $\begin{pmatrix}
+            a & c & 0 & 0 \\
+            b & d & 0 & 0 \\
+            0 & 0 & a & c \\
+            0 & 0 & b & d
+        \end{pmatrix}$ 以及 $\begin{pmatrix}
+            a^2 & ac  & ab  & bc  \\
+            ab  & ad  & b^2 & bd  \\
+            ac  & c^2 & ad  & cd  \\
+            bc  & cd  & bd  & d^2
+        \end{pmatrix}.$
+\end{solution}
+
+\subsection{过渡矩阵及其性质}
+
+\begin{example}[2009 数一]
+    设 $\vb*{\alpha}_1,~\vb*{\alpha}_2,~\vb*{\alpha}_3$ 是三维空间 $\mathbb{R}^3$ 的一组基，则由基 $\vb*{\alpha}_1,~\dfrac{1}{2}\vb*{\alpha}_2,~\dfrac{1}{3}\vb*{\alpha}_3$
+    到基 $\vb*{\alpha}_1+\vb*{\alpha}_2,~\vb*{\alpha}_2+\vb*{\alpha}_3,~\vb*{\alpha}_3+\vb*{\alpha}_1$ 的过渡矩阵为
+    \begin{tasks}(4)
+        \task $\mqty(1&0&1\\2&2&0\\0&3&3)$
+        \task $\mqty(1&2&0\\0&2&3\\1&0&3)$
+        \task $\mqty(\dfrac{1}{2}&\dfrac{1}{4}&-\dfrac{1}{6}\\[6pt]-\dfrac{1}{2}&\dfrac{1}{4}&\dfrac{1}{6}\\[6pt]-\dfrac{1}{2}&-\dfrac{1}{4}&\dfrac{1}{6})$
+        \task $\mqty(\dfrac{1}{2}&-\dfrac{1}{2}&\dfrac{1}{2}\\[6pt]\dfrac{1}{4}&\dfrac{1}{4}&-\dfrac{1}{4}\\[6pt]-\dfrac{1}{6}&\dfrac{1}{6}&\dfrac{1}{6})$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    由 $\qty(\vb*{\alpha}_1,\dfrac{1}{2}\vb*{\alpha}_2,\dfrac{1}{3}\vb*{\alpha}_3)=(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3)\mqty(\dmat{1,\dfrac{1}{2},\dfrac{1}{3}})\Rightarrow (\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3)=\qty(\vb*{\alpha}_1,\dfrac{1}{2}\vb*{\alpha}_2,\dfrac{1}{3}\vb*{\alpha}_3)\mqty(\dmat{1,2,3})$，
+    因此 \begin{flalign*}
+        (\vb*{\alpha}_1+\vb*{\alpha}_2,\vb*{\alpha}_2+\vb*{\alpha}_3,\vb*{\alpha}_3+\vb*{\alpha}_1) & =(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3)\mqty(1                             & 0 & 1 \\1&1&0\\0&1&1)=\qty(\vb*{\alpha}_1,\dfrac{1}{2}\vb*{\alpha}_2,\dfrac{1}{3}\vb*{\alpha}_3)\mqty(\dmat{1,2,3})\mqty(1&0&1\\1&1&0\\0&1&1)\\
+                                                                                                    & =\qty(\vb*{\alpha}_1,\dfrac{1}{2}\vb*{\alpha}_2,\dfrac{1}{3}\vb*{\alpha}_3)\mqty(1 & 0 & 1 \\2&2&0\\0&3&3)
+    \end{flalign*}
+    因此选 A.
+\end{solution}
+
+\begin{example}
+    设线性空间 $\vb*{P}^3$ 的线性变换 $\vb*{A}$ 定义如下:
+    $$\vb*{A}(a_1,a_2,a_3)=(2a_1-a_2,a_2-a_3,a_2+a_3)$$
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求 $\vb*{A}$ 在基 $\vb*{\varepsilon}_1=(1,0,0)\text{，}\vb*{\varepsilon}_2=(0,1,0)\text{，}\vb*{\varepsilon}_3=(0,0,1)$ 下的矩阵 $\vb*{A}$;
+        \item 求 $\vb*{A}$ 在基 $\vb*{\eta}_1=(1,1,0)\text{，}\vb*{\eta}_2=(0,1,1)\text{，}\vb*{\eta}_3=(0,0,1)$ 下的矩阵 $\vb*{B}$;
+        \item 求由基 $\vb*{\varepsilon}_{1,2,3}$ 到 $\vb*{\eta}_{1,2,3}$ 的过渡矩阵 $\vb*{X}$，并验证 $\vb*{B}=\vb*{X}^{-1}\vb*{AX}.$
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 因为 $$\vb*{A\varepsilon}_1=(2,0,0)=2\vb*{\varepsilon}_1\text{，}\vb*{A\varepsilon}_2=(-1,1,1)=-\vb*{\varepsilon}_1+\vb*{\varepsilon}_2+\vb*{\varepsilon}_3\text{，}\vb*{A\varepsilon}_3=(0,-1,1)=-\vb*{\varepsilon}_2+\vb*{\varepsilon}_3$$
+              所以 $\vb*{A}$ 在基 $\vb*{\varepsilon}_1\text{，}\vb*{\varepsilon}_2\text{，}\vb*{\varepsilon}_3$ 下的矩阵为 $\vb*{A}=\begin{pmatrix}
+                      2 & -1 & 1  \\
+                      0 & 1  & -1 \\
+                      0 & 1  & 1
+                  \end{pmatrix}.$
+        \item 因为 $$\vb*{A\eta}_1=(1,1,1)=\vb*{\eta}_1+\vb*{\eta}_3\text{，}\vb*{A}\vb*{\eta}_2=(-1,0,2)=-\vb*{\eta}_1+\vb*{\eta}_2+\vb*{\eta}_3\text{，}\vb*{A}\vb*{\eta}_3=(0,-1,1)=-\vb*{\eta}_2+2\vb*{\eta}_3$$
+              所以 $\vb*{A}$ 在基 $\vb*{\eta}_1\text{，}\vb*{\eta}_2\text{，}\vb*{\eta}_3$ 下的矩阵为 $\vb*{B}=\begin{pmatrix}
+                      1 & -1 & 0  \\
+                      0 & 1  & -1 \\
+                      1 & 1  & 2
+                  \end{pmatrix}.$
+        \item 因为 $\displaystyle\vb*{\eta}_j=\sum_{i=1}^{3}k_{ij}\vb*{\varepsilon}_i~  j=1,2,3$，于是
+              \begin{flalign*}
+                  \vb*{\eta}_1 & =k_{11}\vb*{\varepsilon}_1+k_{21}\vb*{\varepsilon}_2+k_{31}\vb*{\varepsilon}_3\Rightarrow (k_{11},k_{21},k_{31})=(1,1,0) \\
+                  \vb*{\eta}_2 & =k_{12}\vb*{\varepsilon}_1+k_{22}\vb*{\varepsilon}_2+k_{32}\vb*{\varepsilon}_3\Rightarrow (k_{12},k_{22},k_{32})=(0,1,1) \\
+                  \vb*{\eta}_3 & =k_{13}\vb*{\varepsilon}_1+k_{23}\vb*{\varepsilon}_2+k_{33}\vb*{\varepsilon}_3\Rightarrow (k_{13},k_{23},k_{33})=(0,0,1)
+              \end{flalign*}
+              则 $\vb*{X}=\begin{pmatrix}
+                      1 & 0 & 0 \\
+                      1 & 1 & 0 \\
+                      0 & 1 & 1
+                  \end{pmatrix}$，且 $\begin{pmatrix}
+                      1 & -1 & 0  \\
+                      0 & 1  & -1 \\
+                      1 & 1  & 2
+                  \end{pmatrix}=\begin{pmatrix}
+                      1  & 0  & 0 \\
+                      -1 & 1  & 0 \\
+                      1  & -1 & 1
+                  \end{pmatrix}\begin{pmatrix}
+                      2 & -1 & 1  \\
+                      0 & 1  & -1 \\
+                      0 & 1  & 1
+                  \end{pmatrix}\begin{pmatrix}
+                      1 & 0 & 0 \\
+                      1 & 1 & 0 \\
+                      0 & 1 & 1
+                  \end{pmatrix}.$
+    \end{enumerate}
+\end{solution}
+
+\begin{example}
+    在 $\vb*{P}^4$ 中，求由 $\vb*{\varepsilon}_{1,2,3,4}$ 到 $\vb*{\eta}_{1,2,3,4}$ 的过渡矩阵，并求向量 $\vb*{\xi}=(2,1,2,1)$ 对于基 $\vb*{\eta}_{1,2,3,4}$ 的坐标，其中
+    $$\vb*{\varepsilon}_1=(1,0,0,0)\text{，}\vb*{\varepsilon_2}=(0,1,0,0)\text{，}\vb*{\varepsilon}_3=(0,0,1,0)\text{，}\vb*{\varepsilon}_4=(0,0,0,1)$$
+    $$\vb*{\eta}_1=(2,1,0,1)\text{，}\vb*{\eta}_2=(0,1,2,2)\text{，}\vb*{\eta}_3=(-2,1,2,1)\text{，}\vb*{\eta}_4=(1,3,1,2).$$
+\end{example}
+\begin{solution}
+    因为 $\displaystyle \vb*{\eta}_j=\sum_{i=1}^{4}k_{ij}\vb*{\varepsilon}_{i}$，故由 $\vb*{\varepsilon}_{1,2,3,4}$ 到 $\vb*{\eta}_{1,2,3,4}$ 的过渡矩阵为 $\vb*{A}=\begin{pmatrix}
+            2 & 0 & -2 & 1 \\
+            1 & 1 & 1  & 3 \\
+            0 & 2 & 2  & 1 \\
+            1 & 2 & 1  & 2
+        \end{pmatrix}$，因为 $\vb*{\xi}$ 对于基 $\vb*{\varepsilon}_1\text{，}\vb*{\varepsilon}_2\text{，}\vb*{\varepsilon}_3\text{，}\vb*{\varepsilon}_4$ 的坐标为 $(2,1,2,1)$，所以 $\xi$ 对于基 $\eta_1\text{，}\eta_2\text{，}\eta_3\text{，}\eta_4$ 的坐标为
+    $$\vb*{A}^{-1}\begin{pmatrix}
+            2 \\
+            1 \\
+            2 \\
+            1
+        \end{pmatrix}=\begin{pmatrix}
+            \dfrac{5}{2} & 1  & \dfrac{9}{2} & -5 \\[6pt]
+            -1           & -1 & -2           & 3  \\[6pt]
+            \dfrac{3}{2} & 1  & \dfrac{7}{2} & -4 \\[6pt]
+            -1           & 0  & -2           & 2
+        \end{pmatrix}\begin{pmatrix}
+            2 \\
+            1 \\
+            2 \\
+            1
+        \end{pmatrix}=\begin{pmatrix}
+            10 \\
+            -4 \\
+            7  \\
+            -4
+        \end{pmatrix}$$
+    即 $\vb*{\xi}$ 对于基 $\vb*{\eta}_1\text{，}\vb*{\eta}_2\text{，}\vb*{\eta}_3\text{，}\vb*{\eta}_4$ 的坐标为 $(10,-4,7,-4).$
+\end{solution}
+
+\begin{example}[2003 南京航空航天大学]
+    已知 $\mathbb{R}^3$ 的线性变换 $\sigma$ 对于基 $$\vb*{\varepsilon}_1=(-1,0,2)^\top,~\vb*{\varepsilon}_2=(0,1,1)^\top,~\vb*{\varepsilon}_3=(3,-1,-6)^\top$$
+    的像为 $\sigma(\vb*{\varepsilon}_1)=(-1,0,1)^\top,~\sigma(\vb*{\varepsilon}_2)=(0,-1,2)^\top,~\sigma(\vb*{\varepsilon}_2)=(-1,-1,3)^\top$，
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求 $\sigma$ 在基 $\vb*{\varepsilon}_1,~\vb*{\varepsilon}_2,~\vb*{\varepsilon}_3$ 下的矩阵;
+        \item 设 $\vb*{x}=(1,1,1)^\top$，求 $\sigma(\vb*{x})$;
+        \item 已知 $\sigma(\vb*{x})$ 在基 $\vb*{\varepsilon}_1,~\vb*{\varepsilon}_2,~\vb*{\varepsilon}_3$ 下的坐标向量为 $(2,-4,-2)^\top$，求 $\vb*{x}$;
+        \item 证明: $\vb*{\varepsilon}_1,~\vb*{\varepsilon}_1+\vb*{\varepsilon}_2,~\vb*{\varepsilon}_1+\vb*{\varepsilon}_2+\vb*{\varepsilon}_3$ 是 $\mathbb{R}^3$ 的基，并求 $\sigma$ 在该基下的矩阵.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 考虑 $\mathbb{R}^3$ 的自由基 $\vb*{e}_1=(1,0,0)^\top,~\vb*{e}_2=(0,1,0)^\top,~\vb*{e}_3=(0,0,1)^\top$，由基 $\vb*{e}_1,~\vb*{e}_2,~\vb*{e}_3$ 到 $\vb*{\varepsilon}_1,\vb*{\varepsilon}_2,\vb*{\varepsilon}_3$ 的过渡矩阵为
+              $$P=\mqty(-1&0&3\\0&1&-1\\2&1&-6)$$
+              即 $(\vb*{\varepsilon}_1,\vb*{\varepsilon}_2,\vb*{\varepsilon}_3)=(\vb*{e}_1,~\vb*{e}_2,~\vb*{e}_3)\vb*{P}$，且向量组 $\sigma(\vb*{\varepsilon}_1,\vb*{\varepsilon}_2,\vb*{\varepsilon}_3)$ 在基 $\vb*{e}_1,~\vb*{e}_2,~\vb*{e}_3$ 下的矩阵表示为
+              $$A=\mqty(-1&0&-1\\0&-1&-1\\1&2&3)$$
+              即 $\sigma(\vb*{\varepsilon}_1,\vb*{\varepsilon}_2,\vb*{\varepsilon}_3)=(\vb*{e}_1,~\vb*{e}_2,~\vb*{e}_3)\vb*{A}$，于是，有
+              $$\sigma(\vb*{\varepsilon}_1,\vb*{\varepsilon}_2,\vb*{\varepsilon}_3)=(\vb*{e}_1,~\vb*{e}_2,~\vb*{e}_3)\vb*{A}=(\vb*{\varepsilon}_1,\vb*{\varepsilon}_2,\vb*{\varepsilon}_3)\vb*{P}^{-1}\vb*{A}$$
+              因此，$\sigma$ 在基 $\vb*{\varepsilon}_1,\vb*{\varepsilon}_2,\vb*{\varepsilon}_3$ 下的矩阵为
+              $$\vb*{B}=\vb*{P}^{-1}\vb*{A}=\mqty(-1&0&3\\0&1&-1\\2&1&-6)^{-1}\mqty(-1&0&-1\\0&-1&-1\\1&2&3)=\mqty(5&-3&3\\2&0&1\\2&-1&1)\mqty(-1&0&-1\\0&-1&-1\\1&2&3)=\mqty(-2&9&7\\-1&2&1\\-1&3&2).$$
+        \item $\sigma(\vb*{x})=\sigma(\vb*{e}_1,~\vb*{e}_2,~\vb*{e}_3)\vb*{x}=\sigma(\vb*{\varepsilon}_1,\vb*{\varepsilon}_2,\vb*{\varepsilon}_3)\vb*{P}^{-1}\vb*{x}=(\vb*{e}_1,~\vb*{e}_2,~\vb*{e}_3)\vb*{AP}^{-1}\vb*{x}=(-7,-5,17)^\top.$
+        \item 记 $\vb*{y}=(2,-4,-2)^\top$，则 $\sigma(\vb*{x})=(\vb*{\varepsilon}_1,\vb*{\varepsilon}_2,\vb*{\varepsilon}_3)\vb*{y}$，因为
+              $$\sigma(\vb*{x})=\sigma(\vb*{\varepsilon}_1,\vb*{\varepsilon}_2,\vb*{\varepsilon}_3)\vb*{P}^{-1}\vb*{x}=(\vb*{\varepsilon}_1,\vb*{\varepsilon}_2,\vb*{\varepsilon}_3)\vb*{BP}^{-1}\vb*{x}$$
+              所以 $\vb*{BP}^{-1}\vb*{x}=\vb*{y}$，其中 $\vb*{BP}^{-1}=\mqty(22&-1&10\\1&2&0\\5&1&2)$，解非齐次线性方程组 $\vb*{BP}^{-1}\vb*{x}=\vb*{y}$，得 $x=\mqty(-8\\2\\18)+k\mqty(4\\-2\\-9)$ 其中 $k$ 为任意常数.
+        \item 记 $\vb*{\alpha}_1=\vb*{\varepsilon}_1,~\vb*{\alpha}_2=\vb*{\varepsilon}_1+\vb*{\varepsilon}_2,~\vb*{\alpha}_3=\vb*{\varepsilon}_1+\vb*{\varepsilon}_2+\vb*{\varepsilon}_3$，易证，$\vb*{\alpha}_1,~\vb*{\alpha}_2,~\vb*{\alpha_3}$ 线性无关，所以是 $\mathbb{R}^3$ 的基，
+              显然，由基 $\vb*{\varepsilon}_1,\vb*{\varepsilon}_2,\vb*{\varepsilon}_3$ 到基 $\vb*{\alpha}_1,~\vb*{\alpha}_2,~\vb*{\alpha}_3$ 的过渡矩阵为 $$Q=\mqty(1&1&1\\0&1&1\\0&0&1)$$
+              因此，$\sigma$ 在基 $\vb*{\alpha}_1,~\vb*{\alpha}_2,~\vb*{\alpha}_3$ 下的矩阵为
+              $$\vb*{Q}^{-1}\vb*{BQ}=\mqty(1&1&1\\0&1&1\\0&0&1)^{-1}\mqty(-2&9&7\\-1&2&1\\-1&3&2)\mqty(1&1&1\\0&1&1\\0&0&1)=\mqty(-1&6&12\\0&-1&-2\\-1&2&4).$$
+    \end{enumerate}
+\end{solution}

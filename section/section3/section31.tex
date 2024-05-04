@@ -1,0 +1,1368 @@
+\section{不定积分}
+
+% 不定积分表示对一个函数进行积分，得到的结果是一个原函数 (或者称为积分函数)，即在原函数的导数等于被积函数.
+% 
+% 不定积分的计算通常通过积分表、积分公式或者积分技巧来进行. 常见的不定积分规则包括幂函数积分、三角函数积分、指数函数积分、对数函数积分等. 此外，还可以通过换元积分法、分部积分法等技巧来简化复杂的积分计算.
+% 
+% 不定积分在数学分析、物理学、工程学等领域都有广泛的应用. 它可以用来求解函数的原函数、计算曲线下的面积、求解微分方程等问题. 不定积分是微积分的基础，对于深入理解函数的性质、求解实际问题等都具有重要意义.
+% 
+% 不定积分基本性质 ($F(x)$ 是 $f(x)$ 的一个原函数): 
+% \setcounter{magicrownumbers}{0}
+% \begin{table}[H]
+%     \centering
+%     \begin{tabular}{l l}
+%         (\rownumber{}) $\displaystyle \int\dv{x}F(x)\dd x=\int f(x)\dd x=F(x)+C$ & (\rownumber{}) $\displaystyle\int \dd F(x)=\int f(x)\dd x=F(x)+C$\\
+%         \midrule
+%         \multicolumn{2}{l}{(\rownumber{}) $\displaystyle\int(\alpha f(x)\pm\beta f(x))\dd x=\alpha\int f(x)\dd x\pm\beta\int f(x)\dd x$}
+%     \end{tabular}
+% \end{table}
+
+\subsection{基础类型}
+
+\subsubsection{多项式型}
+
+常用多项式不定积分公式:
+\setcounter{magicrownumbers}{0}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l l}
+        $ax+b$                                                                                                                                                                                                                                                                      \\
+        (\rownumber{}) $\displaystyle\int(ax+b)^n\dd x=\dfrac{(ax+b)^{n+1}}{a(n+1)}+C$                                     & (\rownumber{}) $\displaystyle\int\dfrac{\dd x}{ax+b}=\dfrac{1}{a}\ln|ax+b|+C$                                                                          \\
+        (\rownumber{}) $\displaystyle\int\frac{1}{x(a x+b)} \dd  x=-\frac{1}{b} \ln \left|\frac{a x+b}{x}\right|+C$        & (\rownumber{}) $\displaystyle\int \frac{1}{x^{2}(a x+b)} \dd  x=\frac{a}{b^{2}} \ln \left|\frac{a x+b}{x}\right|-\frac{1}{b x}+C$                      \\
+        \multicolumn{2}{l}{(\rownumber{}) $\displaystyle\int \frac{x}{a x+b} \dd  x=\frac{1}{a^{2}}(a x+b-b \ln |a x+b|)+C$}                                                                                                                                                        \\
+        \multicolumn{2}{l}{(\rownumber{}) $\displaystyle\int \frac{x^{2}}{a x+b} \dd  x=\frac{1}{2 a^{3}}\left[(a x+b)^{2}-4 b(a x+b)+2 b^{2} \ln |a x+b|\right]+C$}                                                                                                                \\
+        \midrule
+        $x^2\pm\alpha^2$                                                                                                                                                                                                                                                            \\
+        (\rownumber{}) $\displaystyle\int \dfrac{1}{x^{2}+\alpha^{2}} \dd  x=\dfrac{1}{\alpha}\arctan \dfrac{x}{\alpha}+C$ & (\rownumber{}) $\displaystyle\int \dfrac{1}{\pm x^{2} \mp \alpha^{2}} \dd  x=\dfrac{1}{2 \alpha}\ln \left(\dfrac{x \mp \alpha}{\pm x+\alpha}\right)+C$ \\
+        \midrule
+        $ax^2+b$                                                                                                                                                                                                                                                                    \\
+        (\rownumber{}) $\displaystyle\int \frac{1}{a x^{2}+b} \dd  x=\frac{1}{\sqrt{a b}} \arctan \frac{\sqrt{a} x}{\sqrt{b}}+C$                                                                                                                                                    \\
+    \end{tabular}
+\end{table}
+
+\begin{example}
+    求下列不定积分.
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l | l | l | l}
+            (\rownumber{}) $\displaystyle\int\frac{\dd x}{x^8\left(1+x^2\right)}.$   & (\rownumber{}) $\displaystyle\int\frac{\dd x}{x\left(1+x^{10}\right)}.$     & (\rownumber{}) $\displaystyle\int\frac{x^{11}}{\left(1+x^8\right)^2}.$ & (\rownumber{}) $\displaystyle\int\frac{x^{11}}{x^8+3x^4+2}\dd x.$ \\
+            (\rownumber{}) $\displaystyle\int\frac{x^3\dd x}{\left(1+x^8\right)^2}.$ & (\rownumber{}) $\displaystyle\int\frac{x^{14}}{\left(x^5+1\right)^4}\dd x.$ & (\rownumber{}) $\displaystyle\int\dfrac{x^5\dd x}{x^6-x^3-2}.$         & (\rownumber{}) $\displaystyle\int\dfrac{x\dd x}{x^4-2x^2-1}.$     \\
+            (\rownumber{}) $\displaystyle\int\dfrac{x^3\dd x}{x^4-x^2+2}.$           & (\rownumber{}) $\displaystyle\int\dfrac{x^2}{(1-x)^{100}}\dd x.$            & (\rownumber{}) $\displaystyle\int\frac{\dd x}{x^4+1}.$                 & (\rownumber{}) $\displaystyle\int\frac{\dd x}{x^6+1}.$
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 运用倒代换
+              \begin{flalign*}
+                  \text{原式} & \xlongequal[]{\frac{1}{x}=t}-\int\frac{t^8\dd t}{t^2+1}=-\int\left(t^6-t^4+t^2-1\right)\dd t-\int\frac{\dd t}{t^2+1}                      \\
+                              & =-\frac{t^7}{7}+\frac{t^5}{5}-\frac{t^3}{3}+t-\arctan t+C=-\frac{1}{7x^7}+\frac{1}{5x^5}-\frac{1}{3x^3}+\frac{1}{x}-\arctan\frac{1}{x}+C.
+              \end{flalign*}
+        \item $\displaystyle\text{原式}\xlongequal[]{\frac{1}{x}=t}-\int\frac{t^9\dd t}{1+t^{10}}=-\dfrac{1}{10}\int\frac{\dd \left(t^{10}+1\right)}{t^{10}+1}=-\dfrac{1}{10}\ln\left(t^{10}+1\right)+C=-\dfrac{1}{10}\ln\left(x^{-10}+1\right)+C.$
+        \item $\displaystyle\text{原式}\xlongequal[]{x^4=t}\frac{1}{4}\int\frac{t^2\dd t}{\left(1+t^2\right)^2}=\frac{1}{4}\left[\frac{1}{2}\int\frac{\dd t}{1+t^2}-\frac{t}{2\left(t^2+1\right)}\right]=\frac{1}{8}\left(\arctan x^4-\frac{x^4}{x^8+1}\right)+C.$
+        \item 与上题类似，
+              \begin{flalign*}
+                  I & \xlongequal[]{x^4=t}\dfrac{1}{4}\int\dfrac{t^2\dd t}{t^2+3t+2}=\dfrac{1}{4}\int\dd t-\dfrac{1}{4}\int\dfrac{3t+2}{t^2+3t+2}\dd t
+                  =\dfrac{t}{4}-\dfrac{1}{4}\left[\dfrac{3}{2}\int\dfrac{\dd \left(t^2+3t+2\right)}{t^2+3t+2}-\dfrac{5}{2}\int\dfrac{\dd t}{\left(t+\dfrac{3}{2}\right)^2-\dfrac{5}{4}}\right] \\
+                    & =\dfrac{t}{4}-\dfrac{3}{8}\ln\left(t^2+3t+2\right)+\dfrac{\sqrt{5}}{8}\ln\left(\dfrac{t-\dfrac{\sqrt{5}}{2}}{t+\dfrac{\sqrt{5}}{2}}\right)+C
+                  =\dfrac{x^4}{4}-\dfrac{3}{8}\ln\left(x^8+3x^4+2\right)+\dfrac{\sqrt{5}}{8}\ln\left(\dfrac{2x^4-\sqrt{5}}{2x^4+\sqrt{5}}\right)+C.
+              \end{flalign*}
+        \item 与上题类似，并注意 $(\arctan t)'=\dfrac{1}{1+t^2}$，
+              \begin{flalign*}
+                  \text{原式} & \xlongequal[]{x^4=t}\frac{1}{4}\int\frac{\dd t}{\left(1+t^2\right)^2}\xlongequal[]{u=\arctan t}\frac{1}{4}\int\cos^2u\dd u=\frac{1}{8}\int(\cos2u+1)\dd u=\frac{\sin2u}{16}+\frac{u}{8}+C \\
+                              & =\frac{x^4}{8\left(1+x^8\right)}+\frac{\arctan x^4}{8}+C.
+              \end{flalign*}
+        \item 因为 $\displaystyle\frac{x^{14} \dd  x}{\left(x^{5}+1\right)^{4}}=\frac{x^{14} \dd  x}{x^{20}\left(1+x^{-5}\right)^{4}}=-\frac{1}{5}\left(1+x^{-5}\right)^{-4} \dd \left(1+x^{5}\right)$，所以
+              \begin{flalign*}
+                  \text{原式}=-\frac{1}{5} \int\left(1+x^{-5}\right)^{-4} \dd \left(1+x^{-5}\right)=\frac{1}{15}\left(1+x^{-5}\right)^{-3}+C=-\frac{3 x^{10}+3 x^{5}+1}{15\left(x^{5}+1\right)^{3}}+C.
+              \end{flalign*}
+        \item $\displaystyle\text{原式}=\dfrac{1}{3}\int \dfrac{x^{3}\dd x^{3}}{\left( x^{3}-2\right) \left( x^{3}+1\right) }=\dfrac{1}{9}\int \left( \dfrac{2}{x^{3}-2}+\dfrac{1}{x^{3}+1}\right) \dd x^{3}=\dfrac{1}{9}\ln \left[ \left( x^{3}-2\right) ^{2}\left| x^{3}+1\right| \right] +C.$
+        \item $\displaystyle\text{原式}=\dfrac{1}{2}\int \dfrac{\left( x^{2}-1\right) \dd x}{\left( x^{2}-1\right) ^{2}-\left( \sqrt{2}\right) ^{2}}=\dfrac{1}{4\sqrt{2}}\ln \left| \dfrac{x-1-\sqrt{2}}{x-1+\sqrt{2}}\right| +C.$
+        \item 用“凑微分”的方法，有
+              \begin{flalign*}
+                  \displaystyle\text{原式} & =\dfrac{1}{2}\int \dfrac{x^{2}\dd x^{2}}{\left( x^{2}-\dfrac{1}{2}\right) ^{2}+\dfrac{7}{4}}=\dfrac{1}{2}\int \dfrac{\left( x^{2}-\dfrac{1}{2}\right) +\dfrac{1}{2}}{\left( x^{2}-\dfrac{1}{2}\right) ^{2}+\dfrac{7}{4}}\dd \left( x^{2}-\dfrac{1}{2}\right)         \\
+                                           & =\dfrac{1}{4}\int \dfrac{\dd \left( x^{2}-\dfrac{1}{2}\right) ^{2}}{\left( x^{2}-\dfrac{1}{2}\right) ^{2}+\dfrac{7}{4}}+\dfrac{1}{4}\int \dfrac{\dd \left( x^{2}-\dfrac{1}{2}\right) }{\left( x^{2}-\dfrac{1}{2}\right) ^{2}+\left( \dfrac{\sqrt{7}}{2}\right) ^{2}} \\
+                                           & =\dfrac{1}{4}\ln \left( x^{4}-x^{2}+2\right) +\dfrac{1}{2\sqrt{7}}\arctan \left( \dfrac{2x^{2}-1}{\sqrt{7}}\right) +C.
+              \end{flalign*}
+        \item 注意到 $x^{2}=\left[ \left( x-1\right) +1\right] ^{2}$，所以
+              \begin{flalign*}
+                  \int \dfrac{x^{2}}{\left( 1-x\right) ^{100}}\dd x & =\int \dfrac{\left[ \left( x-1\right) +1\right] ^{2}}{\left( 1-x\right) ^{100}}\dd x=\int \left[ \left( 1-x\right) ^{-98}-2\left( 1-x\right) ^{-99}+\left( 1-x\right) ^{-100}\right] \dd x \\
+                                                                    & =\dfrac{1}{97\left( 1-x\right) ^{97}}-\dfrac{1}{49\left( 1-x\right) ^{98}}+\dfrac{1}{99\left( 1-x\right) ^{99}}+C.
+              \end{flalign*}
+        \item 注意到 $\displaystyle 1=\frac{x^2+1}{2}-\frac{x^2-1}{2}$.
+              \begin{flalign*}
+                  \text{原式} & =\dfrac{1}{2}\int\dfrac{x^2+1}{x^4+1}\dd x-\dfrac{1}{2}\int\dfrac{x^2-1}{x^4+1}\dd x=\dfrac{1}{2}\int\dfrac{1+\dfrac{1}{x^2}}{x^2+\dfrac{1}{x^2}}\dd x-\dfrac{1}{2}\int\dfrac{1-\dfrac{1}{x^2}}{x^2+\dfrac{1}{x^2}}\dd x \\
+                              & =\dfrac{1}{2}\int\dfrac{1+\dfrac{1}{x^2}}{\left(x-\dfrac{1}{x}\right)^2+2}\dd x-\dfrac{1}{2}\int\dfrac{1-\dfrac{1}{x^2}}{\left(x+\dfrac{1}{x}\right)^2-2}\dd x
+                  \xlongequal[v=x+\frac{1}{x}]{u=x-\frac{1}{x}}\frac{1}{2}\int\frac{\dd u}{u^2+2}-\frac{1}{2}\int\frac{\dd v}{v^2-2}                                                                                                                     \\
+                              & =\frac{1}{2\sqrt{2}}\arctan\frac{u}{\sqrt{2}}-\frac{1}{4\sqrt{2}}\ln\left |\frac{v-\sqrt{2}}{v+\sqrt{2}}\right |+C
+                  =\frac{1}{2\sqrt{2}}\arctan\frac{x^2-1}{\sqrt{2}x}-\frac{1}{4\sqrt{2}}\ln\left |\frac{x^2-\sqrt{2}x+1}{x^2+\sqrt{2}x+1}\right |+C.
+              \end{flalign*}
+        \item 对分母进行因式分解.
+              \begin{flalign*}
+                  \text{原式} & =\int\frac{\dd x}{\left(x^2+1\right)\left(x^4-x^2+1\right)}=\int\frac{\dd x}{\left(x^2+1\right)\left(x^2-\sqrt{3}x+1\right)\left(x^2+\sqrt{3}x+1\right)}                                                                                                                                    \\
+                              & =\int\left(\frac{Ax+B}{x^2+1}+\frac{Dx+E}{x^2-\sqrt{3}x+1}+\frac{Fx+G}{x^2+\sqrt{3}x+1}\right)\dd x                                                                                                                                                                                         \\
+                              & \xlongequal[\left(0,\frac{1}{3},-\frac{1}{2\sqrt{3}},\frac{1}{3},\frac{1}{2\sqrt{3}},\frac{1}{3}\right)]{(A,B,D,E,F,G)}\frac{1}{3}\int\frac{\dd x}{x^2+1}+\frac{1}{6\sqrt{3}}\int\frac{3x+2\sqrt{3}}{x^2+\sqrt{3}x+1}\dd x-\frac{1}{6\sqrt{3}}\int\frac{3x-2\sqrt{3}}{x^2-\sqrt{3}x+1}\dd x
+              \end{flalign*}
+              其中 $\displaystyle\frac{1}{3}\int\frac{\dd x}{x^2+1}=\frac{1}{3}\arctan x+C,$
+              \begin{flalign*}
+                  \int\frac{3x+2\sqrt{3}}{x^2+\sqrt{3}x+1} & =\frac{3}{2}\int\frac{2x+\sqrt{3}}{x^2+\sqrt{3}x+1}\dd x+\frac{\sqrt{3}}{2}\int\frac{\dd x}{x^2+\sqrt{3}x+1}                                                   \\
+                                                           & =\frac{3}{2}\int\frac{\dd \left(x^2+\sqrt{3}x+1\right)}{x^2+\sqrt{3}x+1}+\frac{\sqrt{3}}{2}\int\frac{\dd x}{\left(x+\dfrac{\sqrt{3}}{2}\right)^2+\dfrac{1}{4}} \\
+                                                           & =\frac{3}{2}\ln\left(x^2+\sqrt{3}x+1\right)+\sqrt{3}\arctan(2x+\sqrt{3})+C,
+              \end{flalign*}
+              同理
+              \begin{flalign*}
+                  \int\frac{3x-2\sqrt{3}}{x^2-\sqrt{3}x+1}\dd x=\frac{3}{2}\ln\left(x^2-\sqrt{3}x+1\right)-\sqrt{3}\arctan(2x-\sqrt{3})+C,
+              \end{flalign*}
+              综上原式$\displaystyle=\frac{1}{4\sqrt{3}}\ln\frac{x^2+\sqrt{3}x+1}{x^2-\sqrt{3}x+1}+\frac{\arctan(2x+\sqrt{3})}{6}+\frac{\arctan(2x-\sqrt{3})}{6}+\frac{\arctan x}{3}+C.$
+    \end{enumerate}
+\end{solution}
+
+\begin{example}\scriptsize\linespread{0.8}
+    求下列不定积分.
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering\scriptsize
+        \begin{tabular}{l | l | l | l}
+            (\rownumber{}) $\displaystyle\int \dfrac{x^{2n-1}}{x^{n}+1}\dd x.$ & (\rownumber{}) $\displaystyle\int\dfrac{x^{3n-1}}{\left(x^{2n}+1\right)^2}\dd x.$ & (\rownumber{}) $\displaystyle\int\dfrac{x^n}{\displaystyle\sum_{k=0}^{n}\dfrac{x^k}{k!}}\dd x.$ & (\rownumber{}) $\displaystyle\int\dfrac{\dd x}{1+x^{2n}}.$
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}\scriptsize\linespread{0.8}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 当 $n\neq0$ 时，
+              \begin{flalign*}
+                  \text{原式}=\int \dfrac{x^{n}\cdot x^{n-1}}{x^{n}+1}\dd x=\dfrac{1}{n}\int \dfrac{x^{n}\dd x^{n}}{x^{n}+1}=\dfrac{1}{n}\int \dd x^{n}-\dfrac{1}{n}\int \dfrac{\dd x^{n}}{x^{n}+1}=\dfrac{x^{n}}{n}-\dfrac{\ln \left| x^{n}+1\right| }{n}+C,
+              \end{flalign*}
+              当 $n=0$ 时，$\displaystyle\text{原式}=\int\dfrac{\dd x}{2x}=\dfrac{1}{2}\ln|x|+C.$
+        \item 当 $n\neq0$ 时，
+              \begin{flalign*}
+                  \text{原式} & =\int \dfrac{x^{2n}x^{n-1}}{\left( x^{2n}+1\right) ^{2}}\dd x=\dfrac{1}{n}\int \dfrac{x^{2n}\dd x^{n}}{\left( x^{2n}+1\right) ^{2}}=\dfrac{1}{n}\int \dfrac{\left( x^{2n}+1\right) -1}{\left( x^{2n}+1\right) ^{2}}\dd x^{n}=\dfrac{1}{n}\int\dfrac{\dd x^n}{x^{2n}+1}-\dfrac{1}{n}\int\dfrac{\dd x^n}{\left(x^{2n}+1\right)^2} \\
+                              & =\dfrac{1}{n}\arctan x^n-\dfrac{1}{n}\left[\dfrac{x^{n}}{2\left(x^{2n}+1\right)}+\dfrac{1}{2}\arctan x^n\right]+C
+                  =\dfrac{1}{2n}\left(\arctan x^n-\dfrac{x^{n}}{x^{2n}+1}\right)+C,
+              \end{flalign*}
+              当 $n=0$ 时，$\displaystyle\text{原式}=\dfrac{1}{4}\int\dfrac{\dd x}{x}=\dfrac{1}{4}\ln|x|+C.$
+        \item 令 $P(x)=\displaystyle\sum_{k=0}^{n}\dfrac{x^k}{k!}=1+x+\dfrac{x^2}{2}+\cdots+\dfrac{x^n}{n!}$，于是
+              $$P'(x)=1+x+\cdots+\dfrac{x^{n-1}}{(n-1)!}=\sum_{k=0}^{n-1}\dfrac{x^k}{k!}$$
+              于是 $x^n=n!(P(x)-P'(x))$，故
+              \begin{flalign*}
+                  \text{原式}=n!\int\qty(1-\dfrac{P'(x)}{P(x)})\dd x=n!(x-\ln P(x))+C=n!\qty(x-\ln\sum_{k=0}^{n}\dfrac{x^k}{k!})+C.
+              \end{flalign*}
+        \item 先将被积函数分解成部分分式之和，可以证明:
+              $$\dfrac{1}{1+x^{2 n}}=\dfrac{1}{n} \sum_{k=1}^{n} \dfrac{1-x \cos \dfrac{2 k-1}{2 n} \pi}{x^{2}-2 x \cos \dfrac{2 k-1}{2 n} \pi+1}$$
+              记多项式 $ x^{2 n}+1 $ 的 $ 2 n $ 个根为 $ a_{k}(k=1,2, \cdots, 2 n)$，
+              显然 $ a_{k}=\cos \dfrac{2 k-1}{2 n} \pi+\mathrm{i} \sin \dfrac{2 k-1}{2 n} \pi$，其中 $ \mathrm{i}^{2}=-1$，于是
+              $$\left|a_{k}\right|=1, ~  a_{k}^{2 n}=-1, ~  \bar{a}_{k}=a_{2 n-k+1}, a_{k} \bar{a}_{k}=1, ~  a_{k}+\bar{a}_{k}=2 \cos \dfrac{2 k-1}{2 n} \pi$$
+              设 $ \displaystyle\dfrac{1}{1+x^{2 n}}=\sum_{k=1}^{2 n} \dfrac{A_{k}}{x-a_{k}} \Rightarrow 1=\sum_{k=1}^{2 n} \dfrac{A_{k}\left(1+x^{2 n}\right)}{x-a_{k}}$，
+              令 $ x \rightarrow a_{i}$，由 L'Hospital 法则，得
+              $$1=\lim _{x \rightarrow a_{i}} \sum_{k=1}^{2 n} \dfrac{A_{k}\left(1+x^{2 n}\right)}{x-a_{k}}=\lim _{x \rightarrow a_{i}} \dfrac{A_{i}\left(1+x^{2 n}\right)}{x-a_{i}}=\lim _{x \rightarrow a_{i}}\left(2 n A_{i} x^{2 n-1}\right)=2 n A_{i} \dfrac{a_{i}^{2 n}}{a_{i}}=-\dfrac{2 n A_{i}}{a_{i}}$$
+              即 $ A_{k}=-\dfrac{a_{k}}{2 n} ~ (k=1,2, \cdots, 2 n)$，于是，
+              \begin{flalign*}
+                  \dfrac{1}{1+x^{2 n}} & =-\dfrac{1}{2 n} \sum_{k=1}^{2 n} \dfrac{a_{k}}{x-a_{k}}=-\dfrac{1}{2 n} \sum_{k=1}^{n}\left(\dfrac{a_{k}}{x-a_{k}}+\dfrac{\bar{a}_{k}}{x-\bar{a}_{k}}\right)=-\dfrac{1}{2 n} \sum_{k=1}^{n} \dfrac{\left(a_{k}+\bar{a}_{k}\right) x-2 a_{k} \bar{a}_{k}}{x^{2}-\left(a_{k}+\bar{a}_{k}\right) x+a_{k} \bar{a}_{k}} \\
+                                       & =\dfrac{1}{n} \sum_{k=1}^{n} \dfrac{1-x \cos \dfrac{2 k-1}{2 n} \pi}{x^{2}-2 x \cos \dfrac{2 k-1}{2 n} \pi+1}
+              \end{flalign*}
+              最后得到
+              \begin{flalign*}
+                  \int \dfrac{\dd  x}{1+x^{2 n}} & =  \dfrac{1}{n} \sum_{k=1}^{n} \int \dfrac{1-x \cos \dfrac{2 k-1}{2 n} \pi}{x^{2}-2 x \cos \dfrac{2 k-1}{2 n} \pi+1} \dd  x=-\dfrac{1}{2 n} \sum_{k=1}^{n}\left(\cos \dfrac{2 k-1}{2 n} \pi \int \dfrac{2 x-2 \cos \dfrac{2 k-1}{2 n} \pi}{x^{2}-2 x \cos \dfrac{2 k-1}{2 n} \pi+1} \dd  x\right) \\
+                                                 & ~~~~+\dfrac{1}{n} \sum_{k=1}^{n}\left[\sin ^{2} \dfrac{2 k-1}{2 n} \pi \int \dfrac{\dd  x}{\left(x-\cos \dfrac{2 k-1}{2 n} \pi\right)^{2}+\sin ^{2} \dfrac{2 k-1}{2 n} \pi}\right]                                                                                                                \\
+                                                 & =  \dfrac{-1}{2 n} \sum_{k=1}^{n}\left[\cos \dfrac{2 k-1}{2 n} \pi \ln \left(x^{2}-2 x \cos \dfrac{2 k-1}{2 n} \pi+1\right)\right]+\dfrac{1}{n} \sum_{k=1}^{n}\left(\sin \dfrac{2 k-1}{2 n} \pi \arctan \dfrac{x-\cos \dfrac{2 k-1}{2 n} \pi}{\sin \dfrac{2 k-1}{2 n} \pi}\right)+C .
+              \end{flalign*}
+    \end{enumerate}
+\end{solution}
+
+\paragraph{有理分式快速分解}
+
+\begin{example}
+    分解 $F(x)=\dfrac{x+1}{(x+2)(x+3)}.$
+\end{example}
+\begin{solution}
+    设 $F(x)=\dfrac{x+1}{(x+2)(x+3)}=\dfrac{k_1}{x+2}+\dfrac{k_2}{x+3}$，欲求 $k_1$，只需等式两边乘分母 $x+2$，并令 $x=-2$ 为分母的零点，即
+    $$k_1=\eval{(x+1)F(x)}_{x=-2}=\eval{\dfrac{x+1}{x+3}}_{x=-2}=-1$$
+    同理 $k_2=\eval{(x+2)F(x)}_{x=-3}=\eval{\dfrac{x+1}{x+2}}_{x=-3}=2$，则 $F(x)=\dfrac{2}{x+3}-\dfrac{1}{x+2}.$
+\end{solution}
+
+\begin{example}
+    分解 $F(x)=\dfrac{x+3}{(x+1)^2(x+2)}.$
+\end{example}
+\begin{solution}
+    设 $F(x)=\dfrac{x+3}{(x+1)^2(x+2)}=\dfrac{k_{11}}{(x+1)^2}+\dfrac{k_{12}}{x+1}+\dfrac{k_2}{x+2}$，与上题类似，
+    \begin{flalign*}
+        k_{11} & =\eval{(x+1)^2F(x)}_{x=-1}=\eval{\dfrac{x+3}{x+2}}_{x=-1}=2          \\
+        k_{12} & =\eval{\dv{(x+1)^2F(x)}{x}}_{x=-1}=\eval{\dfrac{x+3}{x+2}}_{x=-1}=-1 \\
+        k_2    & =\eval{(x+2)F(x)}_{x=-2}=\eval{\dfrac{x+3}{(x+1)^2}}_{x=-2}=1
+    \end{flalign*}
+    于是 $F(x)=\dfrac{2}{(x+1)^2}-\dfrac{1}{x+1}+\dfrac{1}{x+2}.$
+\end{solution}
+
+\begin{example}
+    (2019 数二) 求不定积分 $\displaystyle\int\dfrac{3x+6}{(x-1)^2\qty(x^2+x+1)}\dd x.$
+    \label{3x6x1x2x1}
+\end{example}
+\begin{solution}
+    设 $F(x)=\dfrac{3x+6}{(x-1)^2\qty(x^2+x+1)}=\dfrac{k_{11}}{(x-1)^2}+\dfrac{k_{12}}{x-1}+\dfrac{k_{21}x+k_{22}}{x^2+x+1}$，则有
+    \begin{flalign*}
+        k_{11} & =\eval{(x-1)^2F(x)}_{x=1}=\eval{\dfrac{3x+6}{x^2+x+1}}_{x=1}=3                         \\
+        k_{12} & =\eval{\dv{(x-1)^2F(x)}{x}}_{x=1}=\eval{\dfrac{-3x^2-12x-3}{\qty(x^2+x+1)^2}}_{x=1}=-2
+    \end{flalign*}
+    并分别令 $x=0,2$，得方程组 $$\begin{cases}
+            k_{11}-k_{12}+k_{22}=6 \\[6pt]k_{11}+k_{12}+\dfrac{2k_{21}+k_{22}}{7}=\dfrac{12}{7}
+        \end{cases}$$
+    因为 $k_{11}=3,k_{12}=-2$，故解得 $k_{21}=1,k_{22}=2$，于是 $$F(x)=\dfrac{3x+6}{(x-1)^2\qty(x^2+x+1)}=\dfrac{3}{(x-1)^2}+\dfrac{-2}{x-1}+\dfrac{x+2}{x^2+x+1}$$
+    那么不定积分有
+    \begin{flalign*}
+        I=\int F(x)\dd x=3\int\dfrac{\dd x}{(x-1)^2}-2\int\dfrac{\dd x}{x-1}+\int\dfrac{2x+1}{x^2+x+1}\dd x=-\dfrac{3}{x-1}-2\ln|x-1|+\ln\qty(x^2+x+1)+C.
+    \end{flalign*}
+\end{solution}
+
+\paragraph{Ostrogradsky 法}
+
+所谓 Ostrogradsky 法，是指关于有理真分式 $\dfrac{P(x)}{Q(x)}$ 的积分，可以借助代数方法来分离成一个真分式与另外一个真分式积分的和，
+使得在新的被积真分式函数中其分母次数达到最低状态，也即在公式 $$\int\frac{P(x)}{Q(x)}\dd x=\frac{P_1(x)}{Q_1(x)}+\int\frac{P_2(x)}{Q_2(x)}\dd x$$
+中，如果 $P(x),Q(x)$ 已知，且设分母 $Q(x)$ 可以分解成一次与二次类型的实因式: $$Q(x)=(x-a)^k\cdots(x^2+px+q)^m\cdots$$
+其中 $k,\cdots,m,\cdots$ 是正整数.
+
+\begin{example}
+    试用 Ostrogradsky 法求解例题 \ref{3x6x1x2x1}.
+\end{example}
+\begin{solution}
+    原不定积分可化为 $$\int\dfrac{3x+6}{(x-1)^2\qty(x^2+x+1)}\dd x=\dfrac{a}{x-1}+\int\qty(\dfrac{b}{x-1}+\dfrac{cx+d}{x^2+x+1})\dd x$$
+    对等式两边求导，并对比等式两边分子的系数，有
+    $$\left\{\begin{matrix}
+            -a & -b &     & +d  & = & 6 \\
+            -a &    & +c  & -2d & = & 3 \\
+            -a &    & -2c & +d  & = & 0 \\
+               & b  & +c  &     & = & 0
+        \end{matrix}\right.\Rightarrow\begin{cases}
+            a=-3 \\b=-2\\c=2\\d=1
+        \end{cases}$$
+    于是
+    \begin{flalign*}
+        \text{原式}=-\dfrac{3}{x-1}+\int\dfrac{-2}{x-1}\dd x+\int\dfrac{2x+1}{x^2+x+1}\dd x=-\dfrac{3}{x-1}-2\ln|x-1|+\ln\qty(x^2+x+1)+C.
+    \end{flalign*}
+\end{solution}
+
+\begin{example}
+    求 $\displaystyle\int\frac{x^3}{\left(x^2-2x+2\right)^2}\dd x.$
+\end{example}
+\begin{solution}设 $\displaystyle\int\frac{x^3}{\left(x^2-2x+2\right)^2}\dd x=\frac{Ax+B}{x^2-2x+2}+\int\frac{Dx+E}{x^2-2x+2}\dd x$，
+    \begin{flalign*}
+        \left(\frac{Ax+B}{x^2-2x+2}+\int\frac{Dx+E}{x^2-2x+2}\dd x\right)'
+         & =\frac{A\left(x^2-2x+2\right)-(2x-2)(Ax+B)}{\left(x^2-2x+2\right)^2}
+        +\frac{(Dx+E)\left(x^2-2x+2\right)}{\left(x^2-2x+2\right)^2}
+    \end{flalign*}
+    解得 $(A,B,D,E)=(-1,0,1,1)$，$\displaystyle \int\frac{x^3}{\left(x^2-2x+2\right)^2}\dd x=-\frac{x}{x^2-2x+2}+\int\frac{x+1}{x^2-2x+2}\dd x$
+    \begin{flalign*}
+        \int\frac{x+1}{x^2-2x+2}\dd x & =
+        \frac{1}{2}\int\frac{\dd \left(x^2-2x+2\right)}{x^2-2x+2}+2\int\frac{\dd x}{x^2-2x+2}
+        =\frac{1}{2}\ln\left(x^2-2x+2\right)+2\int\frac{\dd x}{(x-1)^2+1}                    \\
+                                      & =\frac{1}{2}\ln\left(x^2-2x+2\right)+2\arctan(x-1)+C
+    \end{flalign*}
+    综上，原式 $=\displaystyle\frac{1}{2}\ln\left(x^2-2x+2\right)+2\arctan(x-1)-\frac{x}{x^2-2x+2}+C$.
+\end{solution}
+
+\begin{example}
+    求 $\displaystyle\int\dfrac{x^2\dd x}{\left(x^2+2x+2\right)^2}.$
+\end{example}
+\begin{solution}
+    \textbf{法一: }设 $\dfrac{x^{2}}{\left( x^{2}+2x+2\right) ^{2}}=\left( \dfrac{Ax+B}{x^{2}+2x+2}\right) ^{'}+\dfrac{Dx+E}{x^{2}+2x+2}$，从而
+    $$x^{2}\equiv A\left( x^{2}+2x+2\right) -2\left( x+1\right) \left( Ax+B\right) +\left( Dx+E\right) \left( x^{2}+2x+2\right) $$
+    解得 $A=0,B=1,D=0,E=1$，于是，$$\text{原式}=\dfrac{1}{x^{2}+2x+2}+\int \dfrac{\dd x}{x^{2}+2x+2}=\dfrac{1}{x^{2}+2x+2}+\int \dfrac{\dd \left( x+1\right) }{\left( x+1\right) ^{2}+1}=\dfrac{1}{x^{2}+2x+2}+\arctan \left( x+1\right) +C.$$
+    \textbf{法二: }
+    \begin{flalign*}
+        \text{原式} & =\int \dfrac{\left( x^{2}+2x+2\right) -\left( 2x+2\right) }{\left( x^{2}+2x+2\right) ^{2}}\dd x=\int \dfrac{\dd x}{x^{2}+2x+2}-\int \dfrac{\left( 2x+2\right) }{x^{2}+2x+2}\dd x             \\
+                    & =\int \dfrac{\dd \left( x+1\right) }{\left( x+1\right) ^{2}+1}-\int \dfrac{\dd \left( x^{2}+2x+2\right) }{\left( x^{2}+2x+2\right) ^{2}}=\arctan \left( x+1\right) +\dfrac{1}{x^{2}+2x+2}+C.
+    \end{flalign*}
+\end{solution}
+
+% \begin{example}
+%     求 $\displaystyle\int\dfrac{ x^2+3x-2}{(x-1)\left(x^2+x+1\right)^2}\dd x.$
+% \end{example}
+% \begin{solution}
+%     设 $\dfrac{x^{2}+3x-2}{\left( x-1\right) \left( x^{2}+x+1\right) ^{2}}=\left( \dfrac{Ax+B}{x^{2}+x+1}\right) ^{'}+\dfrac{Dx^{2}+Ex+F}{\left( x-1\right) \left( x^{2}+x+1\right) }$，那么
+%     $$x^{2}+3x-2\equiv A\left( x-1\right) \left( x^{2}+x+1\right) -\left( 2x+1\right) \left( Ax+B\right) \left( x-1\right) +\left( Dx^{2}+Ex+F\right) \left( x^{2}+x+1\right) $$
+%     解得 $A=\dfrac{5}{3},B=\dfrac{C}{3},D=0,E=\dfrac{5}{3},F=-1$，再将 $\dfrac{\dfrac{5}{3}x-1}{\left( x-1\right) \left( x^{2}+x+1\right) }$ 分解，
+%     $$\dfrac{\dfrac{5}{3}x-1}{\left( x-1\right) \left( x^{2}+x+1\right) }=\dfrac{2}{9\left( x-1\right) }-\dfrac{2x-11}{9\left( x^{2}+x+1\right) }$$
+%     \begin{flalign*}
+%         \text{原式} & =\dfrac{5 x+2}{3\left(x^{2}+x+1\right)}+\dfrac{2}{9} \int \dfrac{\dd  x}{x-1}-\dfrac{1}{9} \int \dfrac{2 x-11}{x^{2}+x+1} \dd  x                                                                                         \\
+%                     & =\dfrac{5 x+2}{3\left(x^{2}+x+1\right)}+\dfrac{2}{9} \ln |x-1|-\dfrac{1}{9} \int \dfrac{2 x+1}{x^{2}+x+1} \dd  x+\dfrac{4}{3} \int \dfrac{\dd \left(x+\dfrac{1}{2}\right)}{\left(x+\dfrac{1}{2}\right)^{2}+\dfrac{3}{4}} \\
+%                     & =\dfrac{5 x+2}{3\left(x^{2}+x+1\right)}+\dfrac{1}{9} \ln \dfrac{(x-1)^{2}}{x^{2}+x+1}+\dfrac{8}{3 \sqrt{3}} \arctan \left(\dfrac{2 x+1}{\sqrt{3}}\right)+C .
+%     \end{flalign*}
+% \end{solution}
+
+\subsubsection{根式型}
+
+常用根式不定积分公式:
+\setcounter{magicrownumbers}{0}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l}
+        $\sqrt{a^2+x^2}~  (a>0)$                                                                                                                                 \\
+        (\rownumber{}) $\displaystyle\int \sqrt{a^{2}+x^{2}} \dd  x=\frac{1}{2} x \sqrt{a^{2}+x^{2}}+\frac{1}{2} a^{2} \ln \left(x+\sqrt{a^{2}+x^{2}}\right)+C.$ \\
+        (\rownumber{}) $\displaystyle\int \frac{\sqrt{a^{2}+x^{2}}}{x} \dd  x=\sqrt{a^{2}+x^{2}}-a \ln \left(\frac{a+\sqrt{a^{2}+x^{2}}}{x}\right)+C.$           \\
+        (\rownumber{}) $\displaystyle\int \frac{1}{\sqrt{a^{2}+x^{2}}} \dd  x=\ln \left(x+\sqrt{a^{2}+x^{2}}\right)+C .$                                         \\
+        (\rownumber{}) $\displaystyle\int \frac{1}{x \sqrt{a^{2}+x^{2}}} \dd  x=\frac{1}{a} \ln \left(\frac{x}{a+\sqrt{a^{2}+x^{2}}}\right)+C .$                 \\
+        \midrule
+        $\sqrt{x^{2}-a^{2}} ~ \left(x^{2}>a^{2}\right)$                                                                                                          \\
+        (\rownumber{}) $\displaystyle\int \frac{1}{\sqrt{x^{2}-a^{2}}} \dd  x=\ln \left(x+\sqrt{x^{2}-a^{2}}\right)+C.$                                          \\
+        \midrule
+        $\sqrt{a^{2}-x^{2}} ~ \left(a^{2}>x^{2}\right)$                                                                                                          \\
+        (\rownumber{}) $\displaystyle\int \sqrt{a^{2}-x^{2}} \dd  x=\frac{1}{2} x \sqrt{a^{2}-x^{2}}+\frac{a^{2}}{2} \arcsin \frac{x}{a}+C.$                     \\
+        (\rownumber{}) $\displaystyle\int \frac{\sqrt{a^{2}-x^{2}}}{x} \dd  x=\sqrt{a^{2}-x^{2}}-a \ln \left(\frac{a+\sqrt{a^{2}-x^{2}}}{x}\right)+C.$           \\
+        (\rownumber{}) $\displaystyle\int \frac{1}{\sqrt{a^{2}-x^{2}}} \dd  x=\arcsin \frac{x}{a}+C=-\arccos \frac{x}{a}+C.$                                     \\
+        (\rownumber{}) $\displaystyle\int \frac{1}{x \sqrt{a^{2}-x^{2}}} \dd  x=-\frac{1}{a} \ln \left(\frac{a+\sqrt{a^{2}-x^{2}}}{x}\right)+C.$                 \\
+    \end{tabular}
+\end{table}
+
+\begin{example}
+    求下列不定积分
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l | l | l | l}
+            (\rownumber{}) $\displaystyle\int\frac{\dd x}{\sqrt{x(1-x)}}.$ & (\rownumber{}) $\displaystyle\int\frac{\dd x}{\sqrt{x}(1+x)}.$ & (\rownumber{}) $\displaystyle\int\frac{\arccot\sqrt{x}}{\sqrt{x}(1+x)}\dd x.$ & (\rownumber{}) $\displaystyle\int\sqrt{\frac{x}{1-x\sqrt{x}}}\dd x.$
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item \textbf{法一: }倒代换
+              \begin{flalign*}
+                  \text{原式}  \xlongequal[]{x=\frac{1}{t}}\int\frac{t}{\sqrt{t-1}}\left(-\frac{1}{t^2}\right)\dd t=-\int\frac{\dd t}{t\sqrt{t-1}}=-2\int\frac{\dd \sqrt{t-1}}{1+\left(\sqrt{t-1}\right)^2}=-2\arctan\sqrt{\frac{1-x}{x}}+C.
+              \end{flalign*}
+              \textbf{法二: }$\displaystyle\text{原式}=\int\frac{\dd x}{\sqrt{x}\sqrt{1-x}}=2\int\frac{\dd \sqrt{x}}{\sqrt{1-\left(\sqrt{x}\right)^2}}=2\arcsin\sqrt{x}+C.$\\
+              \textbf{法三: }$\displaystyle\text{原式}=\int\frac{\dd (2x-1)}{\sqrt{1-(2x-1)^2}}=\arcsin(2x-1)+C.$
+        \item \textbf{法一: }$\displaystyle\text{原式}\xlongequal[]{\sqrt{x}=t}2\int\frac{\dd t}{1+t^2}=2\arctan t+C=2\arctan\sqrt{x}+C.$\\
+              \textbf{法二: }$\displaystyle\text{原式}\xlongequal[0<t<\frac{\pi}{2}]{\sqrt{x}=\tan t}2\int\dd t=2t+C=2\arctan\sqrt{x}+C.$\\
+              \textbf{法三: }$\displaystyle\text{原式}=\int\frac{\dd x}{\sqrt{x}}+\int\frac{\dd x}{1+x}=2\sqrt{x}+\ln|1+x|+C.$
+        \item $\displaystyle\text{原式}\xlongequal[]{\arccot\sqrt{x}=t}-2\int t\dd t=-t^2+C=-\arccot^2\sqrt{x}+C.$
+        \item $\displaystyle\text{原式}\xlongequal[]{\sqrt{x}=t}\int\frac{2t^2}{\sqrt{1-t^3}}\dd t=-\frac{4}{3}\int\dd \sqrt{1-t^3}=-\frac{4}{3}\sqrt{1-t^3}+C=-\frac{4}{3}\sqrt{1-x^{\frac{3}{2}}}+C.$
+    \end{enumerate}
+\end{solution}
+
+\paragraph{常见的处理手法}利用公式 $\displaystyle\int\dfrac{P_n(x)}{R}\dd x=Q_{n-1}(x)R+\lambda\int\dfrac{\dd x}{R}$，其中 $R=\sqrt{ax^2+bx+c}$，$P_n(x)$ 为 $n$ 次多项式，
+$Q_{n-1}(x)$ 为 $n-1$ 次多项式，$\lambda$ 为常数.
+
+\paragraph{Euler 代换}
+对于含有二次无理式的一般积分 $ \displaystyle\int R\left(x, \sqrt{a x^{2}+b x+c}\right) \dd  x$，其中 $ R(u, v) $ 是二元有理函数，则可作 Euler 代换，它有三种形式:
+\begin{enumerate}[label=(\arabic{*})]
+    \item 若 $ a>0 $，则可令 $ \sqrt{a x^{2}+b x+c}=\pm \sqrt{a} x+t$;
+    \item 若 $ c>0 $，则可令 $ \sqrt{a x^{2}+b x+c}=x t \pm \sqrt{c}$;
+    \item 对于根号内为可约的二次三项式，则可令 $ \sqrt{a\left(x-x_{1}\right)\left(x-x_{2}\right)}=t\left(x-x_{1}\right).$
+\end{enumerate}
+
+\paragraph{根式代换}
+$\displaystyle \int R\left(x, \sqrt[n]{\frac{a x+b}{c x+d}}\right) \dd  x $ 型不定积分，
+其中 $ R(u, v) $ 为二元有理函数. 令 $\displaystyle t=\sqrt[n]{\frac{a x+b}{c x+d}} .$
+\begin{example}
+    求下列不定积分
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l | l | l}
+            (\rownumber{}) $\displaystyle\int\frac{\dd x}{x\sqrt{x^2-1}}.$                    & (\rownumber{}) $\displaystyle\int\frac{\dd x}{x^2\sqrt{x^2-4}}.$                          & (\rownumber{}) $\displaystyle\int\frac{\dd x}{1+\sqrt{1-x^2}}.$      \\
+            (\rownumber{}) $\displaystyle\int\frac{\dd x}{\left(1+x^2\right)^{\frac{3}{2}}}.$ & (\rownumber{}) $\displaystyle\int\frac{x\dd x}{\sqrt{x^2+2x+2}}.$                         & (\rownumber{}) $\displaystyle\int\frac{\dd x}{x+\sqrt{x^2+x+1}}.$    \\
+            (\rownumber{}) $\displaystyle\int\frac{\dd x}{x\sqrt{4-x^2}}.$                    & (\rownumber{}) $\displaystyle\int x^3\sqrt{4-x^2}\dd x.$                                  & (\rownumber{}) $\displaystyle\int\frac{\sqrt{16-x^2}}{x}\dd x.$      \\
+            (\rownumber{}) $\displaystyle\int\dfrac{1-x+x^2}{x\sqrt{1+x-x^2}}\dd x.$          & (\rownumber{}) $\displaystyle\int\frac{2x^3+x^2-1}{\left(x^2-1\right)\sqrt{1-x^2}}\dd x.$ & (\rownumber{}) $\displaystyle\int\dfrac{x^2+1}{x\sqrt{x^4+1}}\dd x.$
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item \textbf{法一: }$\displaystyle\text{原式}\xlongequal[\sqrt{x^2-1}=x+t]{\text{第一 Euler 代换}}2\int\frac{\dd t}{t^2+1}=2\arctan t+C =2\arctan\left(\sqrt{x^2-1}-x\right)+C.$\\
+              \textbf{法二: }$\displaystyle\text{原式}\xlongequal[\sqrt{x^2-1}=t(x-1)]{\text{第三 Euler 代换}}2\int\frac{\dd t}{t^2+1}=2\arctan t+C=-2\arctan\frac{\sqrt{x^2-1}}{x-1}+C.$\\
+              \textbf{法三: }$\displaystyle\text{原式}=\int\frac{x\dd x}{x^2\sqrt{x^2-1}}=\int\frac{\dd \sqrt{x^2-1}}{\left(\sqrt{x^2}-1\right)^2+1}=\arctan\sqrt{x^2+1}+C.$
+        \item $\displaystyle\text{原式}\xlongequal[]{x=\frac{1}{t}}-\int\frac{t\dd t}{\sqrt{1-4t^2}}=\frac{1}{4}\int\dd \sqrt{1-4t^2}=\frac{\sqrt{1-4t^2}}{4}+C=\frac{1}{4}\sqrt{1-\frac{4}{x^2}}+C.$
+        \item \textbf{法一: }三角代换.
+              \begin{flalign*}
+                  \text{原式} & \xlongequal[]{x=\sin t}\int\frac{\cos t\dd t}{1+\cos t}=\int\left(1-\frac{1}{1+\cos t}\right)\dd t=t-\tan\frac{t}{2}+C \\
+                              & =\arcsin x-\tan\frac{\arcsin x}{2}+C=\arcsin x-\frac{1-\sqrt{1-x^2}}{x}+C.
+              \end{flalign*}
+              \textbf{法二: }$\displaystyle\text{原式}=\int\frac{1-\sqrt{1-x^2}}{x^2}\dd x=\int\frac{\dd x}{x^2}-\int\frac{\sqrt{1-x^2}}{x^2}\dd x=\arcsin x+\frac{\sqrt{1-x^2}}{x}-\frac{1}{x}+C.$\\
+              其中 $$\int\frac{\sqrt{1-x^2}}{x^2}\dd x=\int\sqrt{1-x^2}\dd \left(-\frac{1}{x}\right)=-\frac{\sqrt{1-x^2}}{x}-\int\frac{\dd x}{\sqrt{1-x^2}}=-\frac{\sqrt{1-x^2}}{x}-\arcsin x+C.$$
+        \item $\displaystyle\text{原式}\xlongequal[]{x=\tan t}\int\cos t\dd t=\sin t+C=\sin\arctan x+C=\frac{x}{\sqrt{x^2+1}}+C.$
+        \item 三角代换.
+              \begin{flalign*}
+                  \text{原式} & =\int\frac{\dd t}{\sqrt{(x+1)^2+1}}\xlongequal[]{x+1=\tan t}\int\frac{\tan t-1}{\cos t}\dd t=-\int\frac{\dd \cos t}{\cos^2t}-\int\sec t\dd t \\
+                              & =\sec t-\ln|\sec t+\tan t|+C=\sqrt{(x+1)^2+1}-\ln\left|\sqrt{(x+1)^2+1}+x+1\right|+C.
+              \end{flalign*}
+        \item Euler 代换转化为多项式函数.
+              \begin{flalign*}
+                  \text{原式} & \xlongequal[\sqrt{x^2+x+1}=t-x]{\text{第一 Euler 代换}}\int\frac{2(t^2+t+1)}{t(2t+1)^2}\dd t=\frac{1}{2}\int\frac{t^2+2+1}{t\left(t+\frac{1}{2}\right)^2}\dd t  \\
+                              & =\frac{1}{2}\int\left[-\frac{3}{t+\frac{1}{2}}-\frac{3}{t\left(t+\frac{1}{2}\right)^2}+\frac{4}{t}\right]\dd t=2\ln|t|-\frac{3}{2}\ln|2t+1|+\frac{3}{2(2t+1)}+C \\
+                              & =2\ln\left|\sqrt{x^2+x+1}+x\right|-\frac{3}{2}\ln\left|2\sqrt{x^2+x+1}+2x+1\right|+\frac{3}{2\left(2\sqrt{x^2+x+1}+2x+1\right)}+C.
+              \end{flalign*}
+        \item \textbf{法一: }$\displaystyle\sqrt{4-x^{2}}=t\Rightarrow x=\pm \sqrt{4-t^{2}},~\dd x=\mp \dfrac{\dd t}{\sqrt{4-t^{2}}}$，所以
+              \begin{flalign*}
+                  \text{原式} & =\int \dfrac{1}{\pm t\sqrt{4-t^{2}}}\cdot \dfrac{\mp t}{\sqrt{4-t^{2}}}\dd t=-\int \dfrac{\dd t}{4-t^{2}}=\dfrac{1}{4}\int \left( \dfrac{1}{t-2}-\dfrac{1}{t+2}\right) \dd t \\
+                              & =\dfrac{1}{4}\ln \left| \dfrac{t-2}{t+2}\right| +C=\dfrac{1}{2}\ln \left| \dfrac{x}{2+\sqrt{4-x^{2}}}\right| +C.
+              \end{flalign*}
+              \textbf{法二: }利用第二种 Euler 代换，
+              $$\displaystyle\sqrt{4-x^{2}}=xt-2\Rightarrow x=\dfrac{4t}{1+t^{2}},~\dd x=\dfrac{4\left( 1-t^{2}\right) }{\left( 1+t^{2}\right) ^{2}}\dd t,~\sqrt{4-x^{2}}=\dfrac{2\left( -1+t^{2}\right) }{1+t^{2}}$$
+              \begin{flalign*}
+                  \text{原式}=-\dfrac{1}{2}\int \dd t=-\dfrac{1}{2}\ln \left| t\right| +C=\dfrac{1}{2}\ln \left| \dfrac{x}{2+\sqrt{4-x^{2}}}\right| +C.
+              \end{flalign*}
+        \item 变量代换，
+              \begin{flalign*}
+                  \text{原式} & \xlongequal[]{4-x^2=t}\dfrac{1}{2}\int(t-4)\sqrt{t}\dd t=\dfrac{1}{2}\int t^{\frac{3}{2}}\dd t-2\int t^{\frac{1}{2}}\dd t=\dfrac{1}{5}t^{\frac{5}{2}}-\dfrac{4}{3}t^{\frac{3}{2}}+C \\
+                              & =\frac{x^{4} \sqrt{4-x^{2}}}{5}-\frac{4 x^{2} \sqrt{4-x^{2}}}{15}-\frac{32 \sqrt{4-x^{2}}}{15}+C.
+              \end{flalign*}
+        \item \textbf{法一: }$\displaystyle\sqrt{16-x^{2}}=t\Rightarrow x=\pm \sqrt{16-t^{2}},~\dd x=\mp\dfrac{t\dd t}{\sqrt{16-t^{2}}}$，故
+              \begin{flalign*}
+                  \text{原式} & =\int\dfrac{-t^2}{16-t^2}\dd t=\int \dfrac{16-t^{2}-16}{16-t^{2}}\dd t=\int \dd t-16\int \dfrac{\dd t}{4^{2}-t^{2}}         \\
+                              & =t-2\ln \left| \dfrac{t+4}{-t+4}\right| +C=\sqrt{16-x^{2}}-2\ln \left| \dfrac{-x^{2}+8\sqrt{16-x^{2}}+32}{x^{2}}\right| +C.
+              \end{flalign*}
+              \textbf{法二: }$x=4\sin t,~0 <\left| t\right|  <\dfrac{\pi }{2},~\dd x=4\cos t\dd t$，所以
+              \begin{flalign*}
+                  \text{原式} & =4\int \dfrac{\cos ^{2}t}{\sin t}\dd t=4\int \dfrac{1-\sin ^{2}t}{\sin t}\dd t=4\int \csc t\dd t-4\int \sin t\dd t \\
+                              & =4\cos t-4\ln \left| \csc t+\cot t\right| +C=\sqrt{16-x^{2}}-4\ln \left| \dfrac{4+\sqrt{16-x^{2}}}{x}\right| +C.
+              \end{flalign*}
+        \item $\displaystyle\text{原式}=\int\dfrac{\dd x}{x\sqrt{1+x-x^2}}-\int\dfrac{\dd x}{\sqrt{1+x-x^2}}+\int\dfrac{x\dd x}{\sqrt{1+x-x^2}}$，则
+              \begin{flalign*}
+                  \int \dfrac{\dd x}{x\sqrt{1+x-x^{2}}} & \xlongequal[\sqrt{1+x-x^2}=tx-1]{\text{第二 Euler 换元}}\int\dfrac{-2\dd t}{1+2t}=-\ln|1+2t|+C
+                  =-\ln \left| \dfrac{2\sqrt{1+x-x^{2}}+2+x}{x}\right| +C                                                                                                                                                                                                                \\
+                  \int \dfrac{\dd x}{\sqrt{1+x-x^{2}}}  & =\int \dfrac{\dd \left( x-\dfrac{1}{2}\right) }{\sqrt{\dfrac{5}{4}-\left( x-\dfrac{1}{2}\right) ^{2}}}=\arcsin \left( \dfrac{2x-1}{\sqrt{5}}\right) +C                                                                         \\
+                  \int \dfrac{x\dd x}{\sqrt{1+x-x^{2}}} & =\int \dfrac{\left( x-\dfrac{1}{2}\right) +\dfrac{1}{2}}{\sqrt{\dfrac{5}{4}-\left( x-\dfrac{1}{2}\right) ^{2}}}\dd \left( x-\dfrac{1}{2}\right) =-\sqrt{1+x-x^{2}}+\dfrac{1}{2}\arcsin \left( \dfrac{2x-1}{\sqrt{5}}\right) +C
+              \end{flalign*}
+              故，原式=$\displaystyle-\ln \left| \dfrac{2+x+2\sqrt{1+x-x^{2}}}{x}\right| +\dfrac{1}{2}\arcsin \left( \dfrac{1-2x}{\sqrt{5}}\right) -\sqrt{1+x-x^{2}}+C.$
+        \item 注意到 $\displaystyle\int\dfrac{\dd x}{\sqrt{1-x^2}}=\arcsin x+C$，那么
+              \begin{flalign*}
+                  \text{原式} & =\int \dfrac{2x^{3}}{\left( x^{2}-1\right) \sqrt{1-x^{2}}}\dd x+\int \dfrac{\dd x}{\sqrt{1-x^{2}}}=\int \dfrac{\left( x^{2}-1\right) +1}{\left( x^{2}-1\right) \sqrt{1-x^{2}}}\dd \left( x^{2}-1\right) +\arcsin x \\
+                              & =\int\dfrac{\dd \left(x^2-1\right)}{\sqrt{1-x^2}}+\int\dfrac{\dd \left(x^2-1\right)}{\left(x^2-1\right)\sqrt{1-x^2}}+\arcsin x=\dfrac{2x^2-4}{\sqrt{1-x^2}}+\arcsin x+C.
+              \end{flalign*}
+        \item 注意到 $ ~  \dfrac{x^{2}+1}{x \sqrt{x^{4}+1}} \dd  x=\dfrac{\operatorname{sgn} x \cdot\left(1+\dfrac{1}{x^{2}}\right)}{\sqrt{x^{2}+\dfrac{1}{x^{2}}}} \dd  x=\dfrac{\operatorname{sgn} x \dd \left(x-\dfrac{1}{x}\right)}{\sqrt{\left(x-\dfrac{1}{x}\right)^{2}+2}}$，所以
+              \begin{flalign*}
+                  \text{原式} & =\int \dfrac{\operatorname{sgn} x\left(1+\dfrac{1}{x^{2}}\right)}{\sqrt{x^{2}+\dfrac{1}{x^{2}}}} \dd  x=\int \dfrac{\operatorname{sgn} x \dd \left(x-\dfrac{1}{x}\right)}{\sqrt{\left(x-\dfrac{1}{x}\right)^{2}+2}}=\operatorname{sgn} x \ln \left(x-\dfrac{1}{x}+\sqrt{\left(x-\dfrac{1}{x}\right)^{2}+2}\right)+C \\
+                              & =\ln \left|\dfrac{x^{2}-1+\sqrt{x^{4}+1}}{x}\right|+C.
+              \end{flalign*}
+    \end{enumerate}
+\end{solution}
+
+\begin{example}
+    求下列不定积分
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l | l | l}
+            (\rownumber{}) $\displaystyle\int\dfrac{1-\sqrt{x+1}}{1+\sqrt[3]{x+1}}\dd x.$ & (\rownumber{}) $\displaystyle\int\dfrac{\dd x}{\sqrt[3]{(x+1)^2(x-1)^4}}.$      & (\rownumber{}) $\displaystyle\int \dfrac{\sqrt{x+1}-\sqrt{x-1}}{\sqrt{x+1}+\sqrt{x-1}}\dd x.$ \\
+            (\rownumber{}) $\displaystyle\int\dfrac{x^2}{\sqrt{x^2+x+1}}\dd x.$           & (\rownumber{}) $\displaystyle\int\dfrac{\dd x}{(1-x)^2\sqrt{1-x^2}}.$           & (\rownumber{}) $\displaystyle\int\dfrac{\sqrt{x^2+2x+2}}{x}\dd x.$                            \\
+            (\rownumber{}) $\displaystyle\int\dfrac{x^3}{\sqrt{1+2x-x^3}}\dd x.$          & (\rownumber{}) $\displaystyle\int\dfrac{x^3-6x^2+11x-6}{\sqrt{x^2+4x+3}}\dd x.$ & (\rownumber{}) $\displaystyle\int\dfrac{\dd x}{(x-1)^3\sqrt{x^2+3x+1}}.$                      \\
+        \end{tabular}
+    \end{table}
+\end{example}
+
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 令 $\sqrt[6]{x+1}=t$，那么 $x+1=t^6,~\dd x=6t^5\dd t$，故
+              \begin{flalign*}
+                  \text{原式} & =6\int \dfrac{t^{5}\left( 1-t^{3}\right) }{1+t^{2}}\dd t=6\int \left( -t^{6}+t^{4}+t^{3}-t^{2}-t+1+\dfrac{t-1}{t^{2}+1}\right) \dd t \\
+                              & =-\dfrac{6}{7}t^{7}+\dfrac{6}{5}t^{5}+\dfrac{3}{2}t^{4}-2t^{3}-3t^{2}+6t+3\ln \left( t^{2}+1\right) -6\arctan t+C
+              \end{flalign*}
+              其中 $t=\sqrt[6]{x+1}.$
+        \item 令 $\sqrt[3]{\dfrac{x+1}{x-1}}=t$，那么 $x=\dfrac{t^3+1}{t^3-1},~\dd x=-\dfrac{6t^2\dd t}{\left(t^3-1\right)^2}$，于是
+              \begin{flalign*}
+                  \text{原式}=\int \dfrac{\dfrac{-6t^{2}\dd t}{\left( t^{3}-1\right) ^{2}}}{\left( \dfrac{2t^{3}}{t^{2}-1}\right) ^{\frac{2}{3}}\left( \dfrac{2}{t^{3}-1}\right) ^{\frac{4}{3}}}=-\dfrac{3}{2}\int \dd t=-\dfrac{3}{2}t+C=-\dfrac{3}{2}\sqrt[3] {\dfrac{x+1}{x-1}}+C.
+              \end{flalign*}
+        \item \textbf{法一: }设 $\sqrt{\dfrac{x+1}{x-1}}=t$，那么 $x=\dfrac{t^2+1}{t^2-1},~\dd x=-\dfrac{4t\dd t}{\left(t^2-1\right)^2}\dd t$，故
+              \begin{flalign*}
+                  \text{原式} & =-4\int \dfrac{t}{\left( t-1\right) \left( t+1\right) ^{3}}\dd t=\int \left[ -\dfrac{2}{\left( t+1\right) ^{3}}+\dfrac{1}{\left( t+1\right) ^{2}}+\dfrac{1}{2\left( t+1\right) }-\dfrac{1}{2\left( t-1\right) }\right] \dd t \\
+                              & =\dfrac{1}{\left( t+1\right) ^{2}}-\dfrac{1}{t+1}+\dfrac{1}{2}\ln \left| \dfrac{t+1}{t-1}\right| +C=\dfrac{1}{2}x^{2}-\dfrac{1}{2}x\sqrt{x^{2}-1}+\dfrac{1}{2}\ln \left| x+\sqrt{x^{2}-1}\right| +C.
+              \end{flalign*}
+              \textbf{法二: }$\displaystyle\text{原式}=\int \left( x-\sqrt{x^{2}-1}\right) \dd x=\dfrac{1}{2}x^{2}+\dfrac{1}{2}x\sqrt{x^{2}-1}+\dfrac{1}{2}\ln \left| x+\sqrt{x^{2}-1}\right| +C.$
+        \item 因为原式 $\displaystyle=\int \dfrac{x^{2}+x+1}{\sqrt{x^{2}+x+1}}\dd x-\dfrac{1}{2}\int \dfrac{2x+1}{\sqrt{x^{2}+x+1}}\dd x-\dfrac{1}{2}\int \dfrac{\dd x}{\sqrt{x^{2}+x+1}}$，所以
+              \begin{flalign*}
+                  \text{原式} & =\int \sqrt{\left( x+\dfrac{1}{2}\right) ^{2}+\dfrac{3}{4}}\dd \left( x+\dfrac{1}{2}\right) -\dfrac{1}{2}\int \dfrac{\dd \left( x^{2}+x+1\right) }{\sqrt{x^{2}+x+1}}-\dfrac{1}{2}\int \dfrac{\dd \left( x+\dfrac{1}{2}\right) }{\sqrt{\left( x+\dfrac{1}{2}\right) ^{2}+\dfrac{3}{4}}} \\
+                              & =\dfrac{2x-3}{4}\sqrt{x^{2}+x+1}-\dfrac{1}{8}\ln \left( x+\dfrac{1}{2}+\sqrt{x^{2}+x+1}\right) +C.
+              \end{flalign*}
+        \item 令 $\sqrt{\dfrac{1-x}{1+x}}=t$，则 $x=\dfrac{1-t^2}{1+t^2},~\dd x=-\dfrac{4t}{(1+t^2)^2}\dd t,~1-x=\dfrac{2t^2}{1+t^2},~\sqrt{1-x^2}=\dfrac{2t}{1+t^2}$，则
+              \begin{flalign*}
+                  \text{原式}=-\dfrac{1}{2}\int\dfrac{1+t^2}{t^4}\dd t=\dfrac{1}{6t^3}+\dfrac{1}{2t}+C=\dfrac{2-x}{3(1-x)^2}\sqrt{1-x^2}+C.
+              \end{flalign*}
+        \item 令 $\sqrt{x^{2}+2x+2}=t-x$，$x=\dfrac{t^{2}-2}{2\left( t+1\right) },~\dd x=\dfrac{t^{2}+2t+2}{2\left( t+1\right) ^{2}}\dd t,~\sqrt{x^{2}+2x+2}=\dfrac{t^{2}+2t+2}{2\left( t+1\right) }$，则
+              \begin{flalign*}
+                  \text{原式} & =\dfrac{1}{2}\int \dfrac{\left( t^{2}+2t+2\right) ^{2}}{\left( t^{2}-2\right) \left( t+1\right) ^{2}}\dd t=\dfrac{1}{2}\int \left[ 1+\dfrac{2}{t+1}-\dfrac{1}{\left( t+1\right) ^{2}}-\dfrac{2\sqrt{2}}{t+\sqrt{2}}+\dfrac{2\sqrt{2}}{t-\sqrt{2}}\right] \dd t \\
+                              & =\dfrac{t}{2}+\ln \left| t+1\right| +\dfrac{1}{2\left( t+1\right) }-\sqrt{2}\ln \left| \dfrac{t+\sqrt{2}}{t-\sqrt{2}}\right| +C                                                                                                                                \\
+                              & =\sqrt{x^{2}+2x+2}+\ln \left( x+1+\sqrt{x^{2}+2x+2}\right) -\sqrt{2}\ln \left| \dfrac{x+2+\sqrt{2\left( x^{2}+2x+2\right) }}{x}\right| +C
+              \end{flalign*}
+        \item 设 $\displaystyle\int \dfrac{x^{3}\dd x}{\sqrt{1+2x-x^{2}}}=\left( ax^{2}+bx+c\right) \sqrt{1+2x-x^{3}}+\lambda \int \dfrac{\dd x}{\sqrt{1+2x-x^{3}}}$，两边对 $x$ 求导，得
+              $$\dfrac{x^{3}}{\sqrt{1+2x-x^{2}}}=\left( 2ax+b\right) \sqrt{1+2x-x^{2}}+\dfrac{\left( ax^{2}+bx+c\right) \left( 1-x\right) }{\sqrt{1+2x-x^{2}}}+\dfrac{\lambda }{\sqrt{1+2x-x^{2}}}$$
+              从而有
+              $$x^{3}\equiv \left( 2ax+b\right) \left( 1+2x-x^{2}\right) +\left( ax^{2}+bx+c\right) \left( 1-x\right) +\lambda $$
+              比较等式两端 $x$ 的系数，$\left\{\begin{matrix}
+                      -3a &     &    &          & =1 \\
+                      5a  & -2b &    &          & =0 \\
+                      2a  & +3b & -c &          & =0 \\
+                          & b   & +c & +\lambda & =0
+                  \end{matrix}\right.$，解得 $a=-\dfrac{1}{5},b=-\dfrac{5}{6},c=-\dfrac{19}{6},\lambda =4$
+              \begin{flalign*}
+                  \text{原式} & =-\dfrac{19+5x+2x^{2}}{6}\sqrt{1+2x-x^{2}}+4\int \dfrac{\dd x}{\sqrt{1+2x-x^{2}}}           \\
+                              & =-\dfrac{19+5x+2x^{2}}{6}\sqrt{1+2x-x^{2}}+4\arcsin \left( \dfrac{x-1}{\sqrt{2}}\right) +C.
+              \end{flalign*}
+        \item 设 $\displaystyle\int \dfrac{x^{3}-6x^{2}+11x-6}{\sqrt{x^{2}+4x+3}}\dd x=\left( ax^{2}+bx+c\right) \sqrt{x^{2}+4x+3}+\lambda \int \dfrac{\dd x}{\sqrt{x^{2}+4x+3}}$，从而有
+              $$x^{3}-6x^{2}+11x-6\equiv \left( 2ax+b\right) \left( x^{2}+4x+3\right) +\left( x+2\right) \left( ax^{2}+bx+c\right) +\lambda $$
+              比较等式两端 $x$ 的系数，$\left\{\begin{matrix}
+                      3a  &     &     &          & =1  \\
+                      10a & +2b &     &          & =-6 \\
+                      6a  & +6b & +c  &          & =11 \\
+                          & 3b  & +2c & +\lambda & =-6
+                  \end{matrix}\right.\Rightarrow a=\dfrac{1}{3},b=-\dfrac{14}{3},c=37,\lambda =-66$，
+              \begin{flalign*}
+                  \text{原式}=\left( \dfrac{1}{3}x^{2}-\dfrac{14}{3}x+37\right) \sqrt{x^{2}+4x+3}-66\ln \left| x+2+\sqrt{x^{2}+4x+3}\right| +C.
+              \end{flalign*}
+        \item 设 $ x-1=\dfrac{1}{t}$，则 $ \dd  x=-\dfrac{1}{t^{2}} \dd  t$，不妨设 $ t>0$，则有 $\sqrt{x^{2}+3 x+1}=\dfrac{\sqrt{5 t^{2}+5 t+1}}{t}$，故
+              \begin{flalign*}
+                  \text{原式}=-\int \dfrac{t^{2}}{\sqrt{5 t^{2}+5 t+1}} \dd  t=(a t+b) \sqrt{5 t^{2}+5 t+1}+\lambda \int \dfrac{\dd  t}{\sqrt{5 t^{2}+5 t+1}}
+              \end{flalign*}
+              从而有 $$-t^2\equiv a(1+5t+5t^2)+\left(55+\dfrac{5}{2}\right)(at+b)+\lambda$$
+              比较等式两端 $t$ 的同次幂系数，求得 $\displaystyle a=-\dfrac{1}{10},b=\dfrac{3}{20},\lambda=-\dfrac{11}{40}$，于是
+              \begin{flalign*}
+                  \text{原式} & =\left(-\dfrac{t}{10}+\dfrac{3}{20}\right) \sqrt{5 t^{2}+5 t+1}-\dfrac{11}{40} \int \dfrac{\dd  t}{\sqrt{5 t^{2}+5 t+1}}                                        \\
+                              & =\dfrac{3-2t}{20}\sqrt{5t^{2}+5t+1}-\dfrac{11}{40\sqrt{5}}\ln \left| t+\dfrac{1}{2}+\sqrt{t^{2}+t+\dfrac{1}{5}}\right| +C                                       \\
+                              & =\dfrac{3x-5}{20\left( x-1\right) ^{2}}\sqrt{x^{2}+3x+1}-\dfrac{11}{40\sqrt{5}}\ln \left| \dfrac{\sqrt{5}\left( x+1\right) +2\sqrt{x^{3}+3x+1}}{x-1}\right| +C.
+              \end{flalign*}
+    \end{enumerate}
+\end{solution}
+
+\paragraph{二项微分式的积分}
+
+$\displaystyle\int x^{m}\left(ax^{n}+b \right)^{p} \dd  x$，式中 $ m, n $ 和 $ p $ 为有理数，
+仅在下列三种情形可化为有理函数的积分:
+\begin{enumerate}[label=(\arabic{*})]
+    \item $p $ 为整数，此时令 $ x=z^{N}$，其中 $ N $ 为分数 $ m $ 和 $ n $ 的公分母;
+    \item $\dfrac{m+1}{n} $ 为整数，此时令 $ ax^{n}+b =z^{N}$，其中 $ N $ 为分数 $ p $ 的分母;
+    \item $\dfrac{m+1}{n}+p $ 为整数，此时利用代换: $ a +bx^{-n}=z^{N}$，其中 $ N $ 为分数 $ p $ 的分母.
+\end{enumerate}
+若 $ n=1$，则这些情形等价于: (1) $ p $ 为整数. (2) $ m $ 为整数. (3) $ m+p $ 为整数.
+
+\begin{example}
+    求下列不定积分
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l | l | l | l}
+            (\rownumber{}) $\displaystyle\int\sqrt{x^3+x^4}\dd x.$ & (\rownumber{}) $\displaystyle\int\dfrac{\sqrt{x}}{\qty(1+\sqrt[3]{x})^2}\dd x.$ & (\rownumber{}) $\displaystyle\int\dfrac{x\dd x}{\sqrt{1+\sqrt[3]{x^2}}}.$ & (\rownumber{}) $\displaystyle\int\dfrac{x^5\dd x}{\sqrt{1-x^2}}.$
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\sqrt{x^3+x^4}=x^{\frac{3}{2}}(1+x)^{\frac{1}{2}}$，则 $m=\dfrac{3}{2},~n=1,~p=\dfrac{1}{2}$，那么 $\dfrac{m+1}{n}+p=3$，故令 $x^{-1}+1=z^2$，
+              于是 $$x=\dfrac{1}{z^2-1},~\dd x=-\dfrac{2z}{\qty(z^2-1)^2}\dd z,~\sqrt{x^3+x^4}=\dfrac{z}{\qty(z^2-1)^2}$$
+              \begin{flalign*}
+                  \text{原式} & =-2\int\dfrac{z^2}{\qty(z^2-1)^4}\dd z=-2\int\dfrac{\dd z}{\qty(z^2-1)^4}-2\int\dfrac{\dd z}{\qty(z^2-1)^3}      \\
+                              & =\dfrac{z}{3\qty(z^2-1)^3}+\dfrac{z}{12\qty(z^2-1)^2}-\dfrac{z}{8\qty(z^2-1)}+\dfrac{1}{16}\ln\dfrac{z+1}{z-1}+C \\
+                              & =\dfrac{1}{3}\sqrt{\qty(x+x^2)^3}-\dfrac{1+2x}{8}\sqrt{x+x^2}+\dfrac{1}{8}\ln\qty(\sqrt{x}+\sqrt{x+1})+C~ (x>0).
+              \end{flalign*}
+        \item $\dfrac{\sqrt{x}}{\qty(1+\sqrt[3]{x})^2}=x^{\frac{1}{2}}\qty(1+x^{\frac{1}{3}})^{-2}$，则 $m=\dfrac{1}{2},~n=\dfrac{1}{3},~p=-2$，由于 $p$ 为整数，故令 $x=z^6$，
+              \begin{flalign*}
+                  \text{原式} & =6\int\dfrac{z^8}{\qty(z^2+1)^2}\dd z=6\int\qty[z^4-2z^2+3-\dfrac{4}{z^2+1}+\dfrac{1}{\qty(z^2+1)^2}]\dd z                               \\
+                              & =\dfrac{6}{5}z^5-4z^3+18z-24\arctan z+6\qty[\dfrac{z}{2\qty(z^2+1)}+\dfrac{1}{2}\arctan z]+C                                             \\
+                              & =\dfrac{6}{5}x^{\frac{5}{6}}-4x^{\frac{1}{2}}+18x^{\frac{1}{6}}+\dfrac{3x^{\frac{1}{6}}}{1+x^{\frac{1}{3}}}-21\arctan x^{\frac{1}{6}}+C.
+              \end{flalign*}
+        \item $\dfrac{x}{\sqrt{1+\sqrt[3]{x^2}}}=x\qty(1+x^{\frac{2}{3}})^{-\frac{1}{2}}$，则 $m=1,~n=\dfrac{2}{3},~p=-\dfrac{1}{2}$，那么 $\dfrac{m+1}{n}=3$，故令 $1+x^{\frac{2}{3}}=z^2$，
+              \begin{flalign*}
+                  \text{原式}=3\int\qty(z^2-1)^2\dd z=\dfrac{3}{5}z^5-2z^3+3z+C
+              \end{flalign*}
+              其中 $z=\sqrt{1+\sqrt[3]{x^2}}$.
+        \item $\dfrac{x^5}{\sqrt{1-x^2}}=x^5\qty(1-x^2)^{-\frac{1}{2}}$，则 $m=5,~n=2,~p=-\dfrac{1}{2}$，那么 $\dfrac{m+1}{n}=3$，故令 $1-x^2=z^2$，
+              \begin{flalign*}
+                  \text{原式}=-\int\qty(1-z^2)^2\dd z=-z+\dfrac{2}{3}z^3-\dfrac{1}{5}z^5+C
+              \end{flalign*}
+              其中 $z=\sqrt{1-x^2}$.
+    \end{enumerate}
+\end{solution}
+
+
+% \begin{example}
+%     $\displaystyle\int x^2\sqrt{x^2-2}\dd x.$
+% \end{example}
+% \begin{solution}
+%     运用三角代换化为多项式型，再用奥斯特罗格拉德斯基法将其分解，
+%     \begin{flalign*}
+%         \int x^2\sqrt{x^2-2}\dd x & \xlongequal[]{x=\frac{\sqrt{2}}{\cos t}}
+%         4\int\frac{\sin^2 t}{\cos^5 t}\dd t
+%         =4\int\frac{\sin^2 t\cos t}{\left(1-\sin^2 t\right)^3}\dd t
+%         \xlongequal[]{\sin t=u}4\int\frac{u^2\dd u}{\left(1-u^2\right)^3}                                  \\
+%                                   & =\frac{u}{\left(1-u^2\right)^2}-\int\frac{\dd u}{\left(1-u^2\right)^2}
+%         =\frac{u}{\left(1-u^2\right)^2}-\left(\frac{Au+B}{1-u^2}+\int\frac{Du+E}{1-u^2}\dd u\right)
+%     \end{flalign*}
+%     \begin{flalign*}
+%         \left(\frac{Au+B}{1-u^2}+\int\frac{Du+E}{1-u^2}\dd u\right)'
+%          & =\frac{A\left(1-u^2\right)+2u(Au+B)}{\left(1-u^2\right)^2}+\frac{(Du+E)\left(1-u^2\right)}{\left(1-u^2\right)^2} \\
+%          & =\frac{-Du^3+(A-E)u^2+(2B+D)u+A+E}{\left(1-u^2\right)^2}=\frac{1}{\left(1-u^2\right)^2}
+%     \end{flalign*}
+%     对应系数相等，$\displaystyle(A,B,D,E)=\left(\frac{1}{2},0,0,\frac{1}{2}\right)$，
+%     且 $\displaystyle\frac{1}{2}\int\frac{\dd u}{1-u^2}=-\frac{1}{4}\ln\left |\frac{u-1}{u+1}\right |+C$，\\
+%     综上，原积分=$\displaystyle\frac{u}{\left(1-u^2\right)^2}-\frac{u}{2-2u^2}+\frac{1}{4}\ln\left |\frac{u-1}{u+1}\right |+C$，
+%     其中 $\displaystyle u=\sqrt{1-\frac{x^2}{2}}$.
+% \end{solution}
+
+\subsubsection{三角函数型}
+
+常用三角函数不定积分公式:
+\setcounter{magicrownumbers}{0}
+\begin{table}[H]
+    \centering
+    \resizebox{.99\textwidth}{!}{
+    \begin{tabular}{l l}
+        三角函数                                                                                                                                                                                                                          \\
+        (\rownumber{}) $\displaystyle\int \sin x \dd  x=-\cos x+C$                                                     & (\rownumber{}) $\displaystyle\int \cos x \dd  x=\sin x+C$                                                        \\
+        (\rownumber{}) $\displaystyle\int \tan x \dd  x=-\ln |\cos x|+C$                                               & (\rownumber{}) $\displaystyle\int \cot x \dd  x=\ln |\sin x|+C$                                                  \\
+        (\rownumber{}) $\displaystyle\int \sec x \dd  x=\ln |\sec x+\tan x|+C$                                         & (\rownumber{}) $\displaystyle\int \csc x \dd  x=-\ln |\csc x+\cot x|+C$                                          \\
+        \midrule
+        (\rownumber{}) $\displaystyle\int \sin ^{2} x \dd  x=\frac{x}{2}-\frac{\sin 2 x}{4}+C$                         & (\rownumber{}) $\displaystyle\int \cos ^{2} x \dd  x=\frac{x}{2}+\frac{\sin 2 x}{4}+C$                           \\
+        (\rownumber{}) $\displaystyle\int \tan ^{2} x \dd  x=\tan x-x+C$                                               & (\rownumber{}) $\displaystyle\int \cot ^{2} x \dd  x=-\cot x-x+C$                                                \\
+        (\rownumber{}) $\displaystyle\int \sec ^{2} x \dd  x=\tan x+C$                                                 & (\rownumber{}) $\displaystyle\int \csc ^{2} x \dd  x=-\cot x+C$                                                  \\
+        \midrule
+        (\rownumber{}) $\displaystyle\int \sin ^{n} x \dd  x=-\frac{\sin ^{n-1} x \cos x}{n} +\frac{n-1}{n} I_{n-2}$   & (\rownumber{}) $\displaystyle\int \cos ^{n} x \dd  x=\frac{\sin x \cos ^{n-1} x}{n} +\frac{n-1}{n}I_{n-2}$       \\
+        (\rownumber{}) $\displaystyle\int \tan ^{n} x \dd  x=\frac{\tan ^{n-1} x}{n-1} -I_{n-2}$                       & (\rownumber{}) $\displaystyle\int \cot ^{n} x \dd  x=-\frac{\cot ^{n-1} x}{n-1}-I_{n-2}$                         \\
+        (\rownumber{}) $\displaystyle\int \sec ^{n} x \dd  x=\frac{ \sec ^{n-2} x \tan x}{n-1}+\frac{n-2}{n-1}I_{n-2}$ & (\rownumber{}) $\displaystyle\int \csc ^{n} x \dd  x=-\frac{\csc ^{n-2} x \cot x}{n-1} +\frac{n-2}{n-1}I_{n-2}$  \\
+        \midrule
+        (\rownumber{}) $\displaystyle\int \sec x \tan x \dd  x=\sec x+C$                                               & (\rownumber{}) $\displaystyle\int \csc x \cot x \dd  x=-\csc x+C$                                                \\
+        \midrule
+        % \multicolumn{2}{l}{(\rownumber{}) $\displaystyle\int \cos^mx\sin^nx\dd x=-\dfrac{\cos^{m+1}x\sin^{n-1}x}{m+n}+\dfrac{n-1}{m+n}\int\cos^mx\sin^{n-2}x\dd x+C$}\\
+        % \midrule
+        反三角函数                                                                                                                                                                                                                        \\
+        (\rownumber{}) $\displaystyle\int \arcsin x \dd  x=x \arcsin x+\sqrt{1-x^{2}}+C$                               & (\rownumber{}) $\displaystyle\int \arccos x \dd  x=x \arccos x-\sqrt{1-x^{2}}+C$                                 \\
+        (\rownumber{}) $\displaystyle\int \arctan x \dd  x=x \arctan x-\ln \sqrt{1+x^{2}}+C$                           & (\rownumber{}) $\displaystyle\int \operatorname{arccot} x \dd  x=x \operatorname{arccot} x+\ln \sqrt{1+x^{2}}+C$ \\
+        \multicolumn{2}{l}{(\rownumber{}) $\displaystyle\int \operatorname{arcsec} x \dd  x=x \operatorname{arcsec} x-\operatorname{sgn}(x) \ln \left|x+\sqrt{x^{2}-1}\right|+C$}                                                         \\
+        \multicolumn{2}{l}{(\rownumber{}) $\displaystyle\int \operatorname{arccsc} x \dd  x=x \operatorname{arccsc} x+\operatorname{sgn}(x) \ln \left|x+\sqrt{x^{2}-1}\right|+C$}                                                         \\
+    \end{tabular}}
+\end{table}
+
+\paragraph{各三角函数之间的关系图} 下图可以很好的概括各三角函数之间的转化关系.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[samples=100,>=stealth,]
+        \fill[magenta!30] (0,0)--(1,{sqrt(3)})--(-1,{sqrt(3)})--cycle;
+        \fill[magenta!30,rotate=120] (0,0)--(1,{sqrt(3)})--(-1,{sqrt(3)})--cycle;
+        \fill[magenta!30,rotate=240] (0,0)--(1,{sqrt(3)})--(-1,{sqrt(3)})--cycle;
+        \draw[-,cyan] (2,0)--(1,{sqrt(3)})--(-1,{sqrt(3)})--(-2,0)--(-1,{-sqrt(3)})--(1,{-sqrt(3)})--(2,0);
+        \draw[densely dotted,<->] (-1,{sqrt(3)+0.2})--(1,{sqrt(3)+0.2});
+        \draw[densely dotted,<->,rotate=60] (-1,{sqrt(3)+0.2})--(1,{sqrt(3)+0.2});
+        \draw[densely dotted,<->,rotate=120] (-1,{sqrt(3)+0.2})--(1,{sqrt(3)+0.2});
+        \draw[densely dotted,<->,rotate=180] (-1,{sqrt(3)+0.2})--(1,{sqrt(3)+0.2});
+        \draw[densely dotted,<->,rotate=240] (-1,{sqrt(3)+0.2})--(1,{sqrt(3)+0.2});
+        \draw[densely dotted,<->,rotate=300] (-1,{sqrt(3)+0.2})--(1,{sqrt(3)+0.2});
+        \draw[densely dashed,<->] (2,0)--(-2,0);
+        \draw[densely dashed,<->,rotate=60] (2,0)--(-2,0);
+        \draw[densely dashed,<->,rotate=120] (2,0)--(-2,0);
+        \node[above left] at (-1,{sqrt(3)}) {$\sin x$};
+        \node[left] at (-2,0) {$\tan x$};
+        \node[below left] at (-1,{-sqrt(3)}) {$\sec x$};
+        \node[above right] at (1,{sqrt(3)}) {$\cos x$};
+        \node[right] at (2,0) {$\cot x$};
+        \node[below right] at (1,{-sqrt(3)}) {$\csc x$};
+        \draw[-] (3.25,2.25)--(3.25,-2.25);
+        \fill[magenta!30] (3.4,1.9)--(3.5,1.9)--(3.5,2.1)--(3.4,2.1)--cycle;
+        \node[right] at (3.5,2) {$\text{邻: }$};
+        \node[right] at (4,2) {$\sin^2x+\cos^2x=1$};
+        \node[right] at (4,1.5) {$\sec^2x-\tan^2x=1$};
+        \node[right] at (4,1) {$\csc^2x-\cot^2x=1$};
+        \draw[-] (3.25,0.75)--(7,0.75);
+        \draw[densely dotted,<->] (3.4,0.6)--(3.5,0.3);
+        \node[right] at (3.5,0.5) {$\text{间: }$};
+        \node[right] at (4,0.5) {$\cos x=\sin\cdot\cot x$};
+        \node[right] at (4,0) {$\cot x=\cos\cdot\csc x$};
+        \node[right] at (4,-0.5) {$\text{其他情况类似}$};
+        \draw[-] (3.25,-0.75)--(7,-0.75);
+        \draw[densely dashed,<->] (3.4,-0.9)--(3.5,-1.2);
+        \node[right] at (3.5,-1) {$\text{对: }$};
+        \node[right] at (4,-1) {$\cos x\cdot \sec x=1$};
+        \node[right] at (4,-1.5) {$\cot x\cdot \tan x=1$};
+        \node[right] at (4,-2) {$\csc x\cdot \sin x=1$};
+        \draw[-] (-3.25,2.25)--(-3.25,-2.25);
+        \node[left] at (-3.5,2) {$\arcsin x+\arccos x=\dfrac{\pi}{2}$};
+        \node[left] at (-3.5,0) {$\arctan x+\mathrm{arccot~} x=\dfrac{\pi}{2}$};
+        \node[left] at (-3.5,-2) {$\mathrm{arcsec~} x+\mathrm{arccsc~} x=\dfrac{\pi}{2}$};
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{example}
+    求下列不定积分
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l | l | l}
+            (\rownumber{}) $\displaystyle\int\cos^5x\dd x.$           & (\rownumber{}) $\displaystyle\int\sin^6x\dd x.$ & (\rownumber{}) $\displaystyle\int\dfrac{\dd x}{\sin^3x}.$ \\
+            (\rownumber{}) $\displaystyle\int\dfrac{\dd x}{\cos^3x}.$ & (\rownumber{}) $\displaystyle\int\tan^5x\dd x.$ & (\rownumber{}) $\displaystyle\int\cot^6x\dd x.$
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item \textbf{法一: }因为 $\displaystyle\int \cos ^{n} x \dd  x=\frac{1}{n} \cos ^{n-1} x \sin x+\frac{n-1}{n} \int \cos ^{n-2} x \dd  x+C ~  (\forall n \geqslant 2)$，所以
+              \begin{flalign*}
+                  \text{原式}=\dfrac{1}{5}\cos^4x\sin x+\dfrac{4}{5}\int \cos^3x\dd x=\dfrac{1}{5}\cos ^{4}x\sin x+\dfrac{4}{15}\cos ^{2}x\sin x+\dfrac{8}{15}\sin x+C.
+              \end{flalign*}
+              \textbf{法二: }$\displaystyle\text{原式}=\int \left( 1-\sin ^{2}x\right) ^{2}\dd \sin x=\sin x-\dfrac{2}{3}\sin ^{3}x+\dfrac{1}{5}\sin ^{5}x+C.$
+        \item \textbf{法一: }因为 $\displaystyle\int \sin ^{n} x \dd  x=-\frac{1}{n} \sin ^{n-1} x \cos x+\frac{n-1}{n} \int \sin ^{n-2} x \dd  x+C ~  (\forall n \geqslant 2)$，所以
+              \begin{flalign*}
+                  \text{原式} & =-\dfrac{1}{6}\sin ^{5}x\cos x+\dfrac{5}{6}\int \sin ^{4}x\dd x=-\frac{1}{6} \sin ^{5} x \cos x+\frac{5}{6}\left(-\frac{1}{4} \sin ^{3} x \cos x+\frac{3}{4} \int \sin ^{2} x \dd  x\right) \\
+                              & =-\frac{1}{6} \sin ^{5} x \cos x-\frac{5}{24} \sin ^{3} x \cos x-\frac{15}{48} \sin x \cos x+\frac{15}{48} x+C.
+              \end{flalign*}
+              \textbf{法二: }用降幂公式再展开，逐项积分，
+              \begin{flalign*}
+                  \text{原式} & =\int\left(\frac{1-\cos 2 x}{2}\right)^{3} \dd  x=\frac{1}{8} \int\left(1-3 \cos 2 x+3 \cos ^{2} 2 x-\cos ^{3} 2 x\right) \dd  x              \\
+                              & = \frac{x}{8}-\frac{3}{16} \sin 2 x+\frac{3}{8} \int \frac{1+\cos 4 x}{2} \dd  x-\frac{1}{8} \int\left(1-\sin ^{2} 2 x\right) \cos 2 x \dd  x \\
+                              & = \frac{x}{8}-\frac{3}{16} \sin 2 x+\frac{3 x}{16}+\frac{3}{64} \sin 4 x-\frac{1}{16} \int\left(1-\sin ^{2} 2 x\right) \dd (\sin 2 x)         \\
+                              & = \frac{5 x}{16}-\frac{3}{16} \sin 2 x+\frac{3}{64} \sin 4 x-\frac{1}{16} \sin 2 x+\frac{1}{48} \sin ^{3} 2 x+C                               \\
+                              & = \frac{5 x}{16}-\frac{1}{4} \sin 2 x+\frac{3}{64} \sin 4 x+\frac{1}{48} \sin ^{3} 2 x+C .
+              \end{flalign*}
+        \item $\displaystyle\text{原式}=\int \dfrac{\dd  x}{\sin ^{3} x}=-\int \dfrac{1}{\sin x} \dd (\cot x)=-\dfrac{\cot x}{\sin x}-\int \cot x \dfrac{\cos x}{\sin ^{2} x} \dd  x=-\dfrac{\cos x}{\sin ^{2} x}-\int \dfrac{1-\sin ^{2} x}{\sin ^{3} x} \dd  x\\
+                  =-\dfrac{\cos x}{\sin ^{2} x}-\int \dfrac{\dd  x}{\sin ^{3} x}+\ln \left|\tan \dfrac{x}{2}\right|$，
+              于是 $\displaystyle\int \dfrac{\dd  x}{\sin ^{3} x}=-\dfrac{\cos x}{2 \sin ^{2} x}+\dfrac{1}{2} \ln \left|\tan \dfrac{x}{2}\right|+C.$
+        \item $\displaystyle\text{原式}=\int \dfrac{\dd \left(x+\dfrac{\pi}{2}\right)}{\sin ^{3}\left(x+\dfrac{\pi}{2}\right)}=-\dfrac{\cos \left(x+\dfrac{\pi}{2}\right)}{2 \sin ^{2}\left(x+\dfrac{\pi}{2}\right)}+\dfrac{1}{2} \ln \left|\tan \dfrac{x+\dfrac{\pi}{2}}{2}\right|+C
+                  =\dfrac{\sin x}{2 \cos ^{2} x}+\dfrac{1}{2} \ln \left|\tan \left(\dfrac{x}{2}+\dfrac{\pi}{4}\right)\right|+C .$
+        \item \textbf{法一: }因为 $\displaystyle\int \tan ^{n} x \dd  x=\frac{1}{n-1} \tan ^{n-1} x-\int \tan ^{n-2} x \dd  x+C ~  (\forall n \geqslant 2)$，所以
+              \begin{flalign*}
+                  \text{原式} & =\dfrac{1}{4}\tan ^{4}x-\int \tan ^{3}x\dd x=\dfrac{1}{4}\tan ^{4}x-\left( \dfrac{1}{2}\tan ^{2}x-\int \tan x\dd x\right) \\
+                              & =\dfrac{1}{4}\tan ^{4}x-\dfrac{1}{2}\tan ^{2}x-\ln \left| \cos x\right| +C.
+              \end{flalign*}
+              \textbf{法二: }注意到 $1+\tan^2x=\sec^2x$，所以
+              \begin{flalign*}
+                  \text{原式} & =\int \tan x\left( \sec ^{2}x-1\right) ^{2}\dd x=\left( \sec ^{4}x\tan x\dd x-2\right) \sec ^{2}x\tan x\dd x+\int \tan x\dd x                                                                 \\
+                              & =\int \sec ^{3}x\dd \left( \sec x\right) -2\int \sec x\dd \left( \sec x\right) -\int \dfrac{\dd \left( \cos x\right) }{\cos x}=\dfrac{1}{4}\sec ^{4}x-\sec ^{2}x-\ln \left| \cos x\right| +C.
+              \end{flalign*}
+        \item \textbf{法一: }因为 $\displaystyle\int \cot ^{n} x \dd  x=-\frac{1}{n-1} \cot ^{n-1} x-\int \cot ^{n-2} x \dd  x+C ~  (\forall n \geqslant 2)$，所以
+              \begin{flalign*}
+                  \text{原式} & =-\dfrac{1}{5}\cot ^{5}x-\int \cot ^{4}x\dd x=-\dfrac{1}{5}\cot ^{5}x-\left( -\dfrac{1}{3}\cot ^{3}x-\int \cot ^{2}x\dd x\right) \\
+                              & =-\dfrac{1}{5}\cot ^{5}x+\dfrac{1}{3}\cot ^{3}x-\cot x-x+C.
+              \end{flalign*}
+              \textbf{法二: }注意到 $1+\cot^2x=\csc^2x$，所以
+              \begin{flalign*}
+                  \text{原式} & =\int \cot ^{2} x\left(\csc ^{2} x-1\right)^{2} \dd  x=\int \cot ^{2} x \csc ^{4} x \dd  x-2 \int \cot ^{2} x \csc ^{2} x \dd  x+\int \cot ^{2} x \dd  x \\
+                              & = -\int \cot ^{2} x\left(1+\cot ^{2} x\right) \dd (\cot x)+2 \int \cot ^{2} x \dd (\cot x)+\int\left(\csc ^{2} x-1\right) \dd  x                         \\
+                              & = -\frac{1}{3} \cot ^{3} x-\frac{1}{5} \cot ^{5} x+\frac{2}{3} \cot ^{3} x-\cot x-x+C=-\frac{1}{5} \cot ^{5} x+\frac{1}{3} \cot ^{3} x-\cot x-x+C .
+              \end{flalign*}
+    \end{enumerate}
+\end{solution}
+
+\paragraph{三角函数换元及万能公式}
+
+形如 $ \displaystyle\int R(\sin x, \cos x) \dd  x $ ( $ R $ 为有理函数) 的积分在一般情形下可利用代换 $ \tan \dfrac{x}{2}=t $ 化为有理函数的积分，即
+$$\int R(\sin x, \cos x) \dd  x=\int R\left(\frac{2 t}{1+t^{2}}, \frac{1-t^{2}}{1+t^{2}}\right) \frac{2 \dd  t}{1+t^{2}}.$$
+\begin{enumerate}[label=(\arabic{*})]
+    \item 若等式 $$R(-\sin x, \cos x) \equiv-R(\sin x, \cos x) \text { 或 } R(\sin x,-\cos x) \equiv-R(\sin x, \cos x)$$
+          成立，则最好利用相应的代换 $ \cos x=t $ 或 $ \sin x=t .$
+    \item 若等式 $$R(-\sin x,-\cos x) \equiv R(\sin x, \cos x)$$ 成立，则最好利用代换 $ \tan x=t .$
+\end{enumerate}
+
+\begin{theorem}
+    \(\displaystyle\int \sin^px\cos^qx\dd x=\begin{cases}
+        \displaystyle\sum_{k=0}^{\frac{q-1}{2}}(-1)^k\C_n^k\dfrac{\sin^{p+2k+1}x}{p+2k+1}+C,               & p , q \text{ 为正奇数} \\[6pt]
+        \displaystyle\sum_{k=0}^{-\frac{p+q}{2}-1}\C_{-\frac{p+q}{2}-1}^k\dfrac{\tan^{p+2k+1}x}{p+2k+1}+C, & p+q \text{ 为负偶数.}
+    \end{cases}\)
+\end{theorem}
+
+\begin{theorem}[高阶幂展开式]
+    正弦函数与余项函数的高阶幂展开式如下:
+    \begin{flalign*}
+        \cos^nx & =\begin{cases}
+                       \displaystyle \dfrac{1}{2^{n-1}}\sum_{k=0}^{\frac{n-1}{2}}\C_n^k\sin((n-2k)x),                                      & n \text{ 是奇数}  \\[6pt]
+                       \displaystyle \dfrac{1}{2^{n-1}}\qty[\sum_{k=0}^{\frac{n}{2}-1}\C_n^k\sin((n-2k)x)+\dfrac{1}{2}\C_n^{\frac{n}{2}}], & n \text{ 是偶数.}
+                   \end{cases}                                                                   \\
+        \sin^nx & =\begin{cases}
+                       \displaystyle \dfrac{1}{(2\i)^{n-1}}\sum_{k=0}^{\frac{n-1}{2}}(-1)^{k}\C_n^k\cos((n-2k)x),                                                      & n\text{ 是奇数}   \\
+                       \displaystyle \dfrac{2}{(2\i)^{n}}\qty[\sum_{k=0}^{\frac{n}{2}-1}(-1)^{k}\C_n^k\cos ((n-2k)x)+\dfrac{(-1)^{\frac{n}{2}}}{2}\C_n^{\frac{n}{2}}], & n \text{ 是偶数.}
+                   \end{cases}
+    \end{flalign*}
+    \index{高阶幂展开式}
+\end{theorem}
+
+\begin{example}
+    求下列不定积分
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l | l | l}
+            (\rownumber{}) $\displaystyle\int\frac{\dd x}{3\sin x-4\cos x}.$             & (\rownumber{}) $\displaystyle\int\frac{\sin x+\cos x}{\sqrt[3]{\sin x-\cos x}}\dd x.$ & (\rownumber{}) $\displaystyle\int\frac{\dd x}{2\sin x-\cos x+5}.$       \\
+            (\rownumber{}) $\displaystyle\int\frac{\cos x\dd x}{\sin x(\sin x+\cos x)}.$ & (\rownumber{}) $\displaystyle\int\frac{\sin x\cos x}{\sin x+\cos x}\dd x.$            & (\rownumber{}) $\displaystyle\int\dfrac{\sin^2x}{\sin x+2\cos x}\dd x.$
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 运用万能代换公式转为多项式函数.
+              \begin{flalign*}
+                  I & \xlongequal[]{t=\tan\frac{x}{2}}\int\dfrac{\dfrac{2\dd t}{1+t^2}}{\dfrac{6t}{1+t^2}-\dfrac{4(1-t^2)}{1+t^2}}=\int\dfrac{\dd t}{2t^2+3t-2}=\int\dfrac{\dd t}{(t+2)(2t-1)}         \\
+                    & =-\frac{1}{5}\int\frac{\dd t}{t+2}+\frac{2}{5}\int\frac{\dd t}{2t-1}=-\frac{1}{5}\ln|t+2|+\frac{1}{5}\ln|2t-1|+C=\frac{1}{5}\ln\left |\frac{2\tan x/2-1}{\tan x/2 +2}\right |+C.
+              \end{flalign*}
+        \item $\displaystyle\int\frac{\sin x+\cos x}{\sqrt[3]{\sin x-\cos x}}\dd x=\int\frac{\dd (\sin x-\cos x)}{\sqrt[3]{\sin x-\cos x}}=\frac{3}{2}(\sin x-\cos x)^{\frac{2}{3}}+C.$
+        \item 运用万能代换公式转为多项式函数.
+              \begin{flalign*}
+                  I & \xlongequal[]{t=\tan\frac{x}{2}}\int\dfrac{\dfrac{2\dd t}{1+t^2}}{\dfrac{4t}{1+t^2}-\dfrac{1-t^2}{1+t^2}+5}=\int\dfrac{\dd t}{3t^2+2t+2}=\dfrac{1}{3}\int\dfrac{\dd t}{\left(t+\dfrac{1}{3}\right)^2+\dfrac{5}{9}} \\
+                    & =\frac{1}{\sqrt{5}}\arctan\frac{3t+1}{\sqrt{5}}+C=\frac{1}{\sqrt{5}}\arctan\frac{3\tan x/2+1}{\sqrt{5}}+C.
+              \end{flalign*}
+        \item 运用万能代换公式转为多项式函数.
+              \begin{flalign*}
+                  I & \xlongequal[]{t=\tan\frac{x}{2}}\int\dfrac{\dfrac{1-t^2}{1+t^2}\cdot\dfrac{2\dd t}{1+t^2}}{\dfrac{2t}{1+t^2}\left(\dfrac{2t}{1+t^2}+\dfrac{1-t^2}{1+t^2}\right)}=\int\dfrac{t^2-1}{t^3-2t^2-t}\dd t=\int\dfrac{t^2-1}{t\left(t+\sqrt{2}-1\right)\left(t-\sqrt{2}-1\right)}\dd t \\
+                    & =\int\left(\frac{-\sqrt{2}/2}{t+\sqrt{2}-1}+\frac{\sqrt{2}/2}{t-\sqrt{2}-1}+\frac{1}{t}\right)\dd t=\frac{1}{\sqrt{2}}\ln\left |\frac{t-\sqrt{2}-1}{t+\sqrt{2}-1}\right |+\ln|t|+C                                                                                              \\
+                    & =\frac{1}{\sqrt{2}}\ln\left |\frac{\tan x/2-\sqrt{2}-1}{\tan x/2+\sqrt{2}-1}\right |+\ln\left |\tan\frac{x}{2}\right |+C.
+              \end{flalign*}
+        \item \textbf{法一: }运用万能代换公式转为多项式函数，再用奥斯特罗格拉德斯基法将其分解.
+              \begin{flalign*}
+                  I \xlongequal[]{t=\tan\frac{x}{2}}\int\frac{4(t^3-t)}{(1+t^2)^2(t^2-2t-1)}\dd t\xlongequal[]{Ost'}\frac{At+B}{1+t^2}+\int\left(\frac{Dt+E}{t^2-2t-1}+\frac{Ft+G}{1+t^2}\right)\dd t
+              \end{flalign*}
+              \begin{flalign*}
+                   & \left[\frac{At+B}{1+t^2}+\int\left(\frac{Dt+E}{t^2-2t-1}+\frac{Ft+G}{1+t^2}\right)\dd t\right]'=\frac{-At^2-2Bt+A}{(t^2+1)^2}+\frac{Dt+E}{t^2-2t-1}+\frac{Ft+G}{t^2+1} \\
+                   & =\frac{4(t^3-1)}{(1+t^2)^2(t^2-2t-1)}\Rightarrow (A,B,D,E,F,G)=\left(1,-1,0,0,0,1\right)
+              \end{flalign*}
+              所以
+              \begin{flalign*}
+                  I & =\frac{t-1}{t^2+1}+\int\frac{\dd t}{t^2-2t-1}=\frac{t-1}{t^2+1}+\int\frac{\dd t}{(t-1)^2-2}                                                                                                                      \\
+                    & =\frac{t-1}{t^2+1}+\frac{1}{2\sqrt{2}}\ln\left |\frac{t-1-\sqrt{2}}{t-1+\sqrt{2}}\right |+C=\frac{\tan x/2}{\tan^2x/2+1}+\frac{1}{2\sqrt{2}}\ln\left |\frac{\tan x/2-1-\sqrt{2}}{\tan x/2-1+\sqrt{2}}\right |+C.
+              \end{flalign*}
+              \textbf{法二: }
+              \begin{flalign*}
+                  \text{原式} & =\int \dfrac{\sin ^{2}\left( x+\dfrac{\pi }{4}\right) -\dfrac{1}{2}}{\sqrt{2}\sin \left( x+\dfrac{\pi }{4}\right) }\dd x=\dfrac{1}{\sqrt{2}}\int \sin \left( x+\dfrac{\pi }{4}\right) \dd x-\dfrac{1}{2\sqrt{2}}\int \dfrac{\dd x}{\sin \left( x+\dfrac{\pi }{4}\right) } \\
+                              & =-\dfrac{1}{\sqrt{2}}\cos \left( x+\dfrac{\pi }{4}\right) -\dfrac{1}{2\sqrt{2}}\ln \left| \tan \left( \dfrac{x}{2}+\dfrac{\pi }{8}\right) \right| +C.
+              \end{flalign*}
+        \item 令 $\tan\dfrac{x}{2}=t$，得
+              \begin{flalign*}
+                  \text{原式} & =4\int \dfrac{t^{2}\dd t}{\left( 1+t^{2}\right) ^{2}\left( 1+t-t^{2}\right) }=\dfrac{4}{5}\int \left[ \dfrac{1}{1+t^{2}}+\dfrac{t-2}{\left( 1+t^{2}\right) ^{2}}+\dfrac{1}{1+t-t^{2}}\right] \dd t                                                                                                    \\
+                              & =\dfrac{4}{5}\int \dfrac{\dd t}{1+t^{2}}-\dfrac{8}{5}\int \dfrac{\dd t}{\left( 1+t^{2}\right) ^{2}}+\dfrac{2}{5}\int \dfrac{2t\dd t}{\left( 1+t^{1}\right) ^{2}}+\dfrac{4}{5}\int \dfrac{\dd \left( t-\dfrac{1}{2}\right) }{\dfrac{5}{4}-\left( t-\dfrac{1}{2}\right) ^{2}}                           \\
+                              & =\dfrac{4}{5}\arctan t-\dfrac{8}{5}\left[ \dfrac{t}{2\left( 1+t^{2}\right) }+\dfrac{1}{2}\arctan t\right] -\dfrac{2}{5}\cdot \dfrac{1}{1+t^{2}}+\dfrac{4}{5\sqrt{5}}\ln \left| \dfrac{\dfrac{\sqrt{5}}{2}+\left( t-\dfrac{1}{2}\right) }{\dfrac{\sqrt{5}}{2}-\left( t-\dfrac{1}{2}\right) }\right| +C \\
+                              & =-\dfrac{2}{5}\cdot \dfrac{1+2t}{1+t^{2}}+\dfrac{4}{5\sqrt{5}}\ln \left| \dfrac{\dfrac{\sqrt{5}-1}{2}+t}{\dfrac{\sqrt{5}+1}{2}-t}\right| +C
+                  =-\dfrac{1}{5}\left( \cos x+2\sin x\right) +\dfrac{4}{5\sqrt{5}}\ln \left| \tan \left( \dfrac{x}{2}+\dfrac{\arctan 2}{2}\right) \right| +C.
+              \end{flalign*}
+    \end{enumerate}
+\end{solution}
+
+\begin{example}
+    求下列不定积分
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l | l | l}
+            (\rownumber{}) $\displaystyle\int\frac{\dd x}{\sin^4x+\cos^4x}.$       & (\rownumber{}) $\displaystyle\int\frac{\sin x\cos x}{1+\sin^4x}\dd x.$                 & (\rownumber{}) $\displaystyle\int\frac{\sin^2x-\cos^2x}{\sin^4x+\cos^4x}\dd x.$ \\
+            (\rownumber{}) $\displaystyle\int\frac{\sin x\dd x}{\sin^3x+\cos^3x}.$ & (\rownumber{}) $\displaystyle\int\dfrac{\tan^{\frac{1}{3}}x\dd x}{(\sin x+\cos x)^2}.$ & (\rownumber{}) $\displaystyle\int\dfrac{\cos^2x\dd x}{\csc^2x+\cot^4x}.$
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\displaystyle\text{原式}=\int \dfrac{2\dd x}{2-\sin ^{2}2x}=\int \dfrac{\dd \left( \tan 2x\right) }{2\sec ^{2}2x-\tan ^{2}2x}=\int \dfrac{\dd \left( \tan 2x\right) }{2+\tan ^{2}2x}=\dfrac{1}{\sqrt{2}}\arctan \dfrac{\tan 2x}{\sqrt{2}}+C.$
+        \item $\displaystyle\text{原式}=\int \dfrac{\tan x\sec ^{2}x}{\sec ^{4}x+\tan ^{4}x}\dd x=\dfrac{1}{2}\int \dfrac{\dd \left( \tan ^{2}x\right) }{2\tan ^{4}x+2\tan ^{2}x+1}=\dfrac{1}{2}\arctan \left( 1+2\tan ^{2}x\right) +C.$
+        \item $\displaystyle\text{原式}=\int \dfrac{-\cos 2x}{1-\dfrac{1}{2}\sin ^{2}2x}\dd x=\dfrac{-1}{2\sqrt{2}}\int \left( \dfrac{2\cos 2x}{\sqrt{2}-\sin 2x}+\dfrac{2\cos 2x}{\sqrt{2}+\sin 2x}\right) \dd x=\dfrac{\sqrt{2}}{4}\ln \dfrac{\sqrt{2}-\sin 2x}{\sqrt{2}+\sin 2x}+C.$
+        \item \textbf{法一: }因为 $\sin x=\tan x\cdot\cos x$，所以
+              \begin{flalign*}
+                  \text{原式} & =\int\frac{\tan x}{\cos^2x\left(\tan^3x+1\right)}\dd x\xlongequal[]{t=\tan x}\int\frac{t\dd t}{t^3+1}=\int\frac{t\dd t}{(t+1)(t^2-t+1)}                                                                                                                       \\
+                              & =\frac{1}{3}\int\frac{t+1}{t^2-t+1}\dd t-\frac{1}{3}\int\frac{\dd t}{t+1}=\dfrac{1}{6}\int \dfrac{\dd \left( t^{2}-t+1\right) }{t^{2}-t+1}+\dfrac{1}{2}\int \dfrac{\dd t}{\left( t-\dfrac{1}{2}\right) ^{2}+\dfrac{3}{4}}-\dfrac{1}{3}\int \dfrac{\dd t}{1+t} \\
+                              & =\dfrac{1}{6}\ln \left( t^{2}-t+1\right) +\dfrac{1}{\sqrt{3}}\arctan \dfrac{2t-1}{\sqrt{3}}-\dfrac{1}{3}\ln \left| t+1\right| +C                                                                                                                              \\
+                              & =\dfrac{1}{6}\ln \left( \tan ^{2}x-\tan x+1\right) +\dfrac{1}{\sqrt{3}}\arctan \dfrac{2\tan x-1}{\sqrt{3}}-\dfrac{1}{3}\ln \left| \tan x+1\right| +C.
+              \end{flalign*}
+              \textbf{法二: }因为 $a^3+b^3=(a+b)\left(a^2+b^2-ab\right)$，所以
+              \begin{flalign*}
+                  \text{原式} & =\int \dfrac{\sin x\dd x}{\left( \sin x+\cos x\right) \left( 1-\sin x\cos x\right) }
+                  =\dfrac{1}{2}\int \dfrac{\left( \sin x-\cos x\right) \dd x}{\left( \sin x+\cos x\right) \left( 1-\sin x\cos x\right) }+\dfrac{1}{2}\int \dfrac{\dd x}{1-\sin x\cos x}                                                                                                       \\
+                              & =\dfrac{1}{3}\int \dfrac{-\left( \cos x-\sin x\right) \dd x}{\sin x+\cos x}+\dfrac{1}{6}\int \dfrac{\sin ^{2}x-\cos ^{2}x}{1-\sin x\cos x}\dd x+\dfrac{1}{2}\int \dfrac{\dd x}{1-\sin x\cos x}                                                                \\
+                              & =-\dfrac{1}{3}\int \dfrac{\dd \left( \sin x+\cos x\right) }{\sin x+\cos x}+\dfrac{1}{6}\int \dfrac{\dd \left( 1-\sin x\cos x\right) }{1-\sin x\cos x}-\dfrac{1}{2}\int \dfrac{\dd \left( \cot x\right) }{\left( \cot x-\dfrac{1}{2}\right) ^{2}+\dfrac{3}{4}} \\
+                              & =-\dfrac{1}{6}\ln \dfrac{\left( \sin x+\cos x\right) ^{2}}{1-\sin x\cos x}-\dfrac{1}{\sqrt{3}}\arctan \left( \dfrac{2\cos x-\sin x}{\sqrt{3}\sin x}\right) +C.
+              \end{flalign*}
+        \item 注意到 $(\tan x)'=\sec^2x$，则有
+              \begin{flalign*}
+                  \text{原式} & =\int\dfrac{\tan^{\frac{1}{3}}x\cdot\sec ^2x}{(\tan x+1)^2}\dd x\xlongequal[]{\tan x=t}\int\dfrac{t^{\frac{1}{3}}}{(t+1)^2}\dd t\xlongequal[]{t=z^3}3\int\dfrac{z^3}{\qty(z^3+1)^2}\dd z \\
+                              & =\dfrac{1}{3}\int\dfrac{3-z}{z^2-z+1}\dd z+\int\dfrac{z-1}{\qty(z^2-z+1)^2}\dd z+\dfrac{1}{3}\int\dfrac{\dd z}{z+1}-\dfrac{1}{3}\int\dfrac{\dd z}{(z+1)^2}
+              \end{flalign*}
+              其中
+              \begin{flalign*}
+                  \int\dfrac{\dd z}{z+1}=\ln|z+1|+C,~\int\dfrac{\dd z}{(z+1)^2}=-\dfrac{1}{z+1}+C
+              \end{flalign*}
+              \begin{flalign*}
+                  \int\dfrac{3-z}{z^2-z+1}\dd z & =-\dfrac{1}{2}\int\dfrac{\dd \qty(z^2-z+1)}{z^2-z+1}+\dfrac{5}{2}\int\dfrac{\dd \qty(z-\dfrac{1}{2})}{\qty(z-\dfrac{1}{2})^2+\qty(\dfrac{\sqrt{3}}{2})^2} \\
+                                                & =-\dfrac{1}{2}\ln\qty(z^2-z+1)+\dfrac{5}{\sqrt{3}}\arctan \dfrac{2z-1}{\sqrt{3}}+C
+              \end{flalign*}
+              \begin{flalign*}
+                  \int\dfrac{z-1}{\qty(z^2-z+1)^2}\dd z & =\int\dfrac{z-1}{\qty[\qty(z-\dfrac{1}{2})^2+\dfrac{3}{4}]}\dd z\xlongequal[]{z-\frac{1}{2}=u}\int\dfrac{u-\dfrac{1}{2}}{\qty(u^2+\dfrac{3}{4})^2}\dd u
+                  =\underbrace{\dfrac{1}{2}\int\dfrac{2u}{\qty(u^2+\dfrac{3}{4})}\dd u} _{u^2+\frac{3}{4}=v}-\underbrace{\dfrac{1}{2}\int\dfrac{\dd u}{\qty(u^2+\dfrac{3}{4})}} _{u=\frac{\sqrt{3}}{2}\tan \theta} \\
+                                                        & =\dfrac{1}{2}\int\dfrac{\dd v}{v^2}-\dfrac{1}{2}\cdot\dfrac{8\sqrt{3}}{9}\int\cos^2\theta\dd \theta
+                  =-\dfrac{z+1}{3\qty(z^2-z+1)}-\dfrac{2}{3\sqrt{3}}\arctan\dfrac{2z-1}{\sqrt{3}}+C
+              \end{flalign*}
+              综上，
+              \begin{flalign*}
+                  \text{原式}=\dfrac{1}{\sqrt{3}}\arctan\qty(\dfrac{2\tan^{\frac{1}{3}}x-1}{\sqrt{3}})-\dfrac{1}{6}\ln\qty(\tan^{\frac{2}{3}}x-\tan ^{\frac{1}{3}}x+1)+\dfrac{1}{3}\ln\qty(\tan^{\frac{1}{3}}x+1)-\dfrac{\cos x\tan ^{\frac{1}{3}}x}{\sin x+\cos x}+C.
+              \end{flalign*}
+        \item 分子分母同时乘以 $\sec^4x\tan^4x$，有
+              \begin{flalign*}
+                  \text{原式} & =\int\dfrac{\sec^2x\tan^4x\dd x}{\sec^6x\tan^2x+\sec^4x}=\int\dfrac{\sec^2x\tan^4x\dd x}{\qty(1+\tan^2x)^2\qty(1+\tan^2x+\tan^4x)}                                                                    \\
+                              & \xlongequal{\tan x=t}\int\dfrac{t^4\dd t}{\qty(1+t^2)^2\qty(t^2+t+1)\qty(t^2-t+1)}\xlongequal{Ost'}\dfrac{at+b}{1+t^2}+\int\qty(\dfrac{ct+d}{1+t^2}+\dfrac{et+f}{t^2+t+1}+\dfrac{gt+h}{t^2-t+1})\dd t
+              \end{flalign*}
+              则 $$\qty[\int\dfrac{t^4\dd t}{\qty(1+t^2)^2\qty(t^2-t+1)\qty(t^2+t+1)}]'=\qty[\dfrac{at+b}{1+t^2}+\int\qty(\dfrac{ct+d}{1+t^2}+\dfrac{et+f}{t^2+t+1}+\dfrac{gt+h}{t^2-t+1})\dd t]'$$
+              通分，并对比等式两边分子的系数，有
+              $$\left\{\begin{matrix}
+                         &     & c   &    & +e  &     & +g  &     & = & 0 \\
+                      -a &     &     & +d & +e  & +f  & -g  & +h  & = & 0 \\
+                         & -2b & +2c &    & +3e & +f  & +3g & -h  & = & 0 \\
+                         &     &     & 2d & +2e & +3f & -2g & +3h & = & 1 \\
+                         & -2b & +2c &    & +3e & +2f & +3g & -2h & = & 0 \\
+                         &     &     & 2d & +e  & +3f & -g  & +3h & = & 0 \\
+                         & -2b & +c  &    & +e  & +3f & -g  & +3h & = & 0 \\
+                      a  &     &     & +d &     & +f  &     & +h  & = & 0
+                  \end{matrix}\right.\Rightarrow\begin{cases}
+                      a=\dfrac{1}{2} \\b=0\\c=0\\d=-\dfrac{1}{2}\\e=\dfrac{1}{2}\\f=0\\g=-\dfrac{1}{2}\\h=0
+                  \end{cases}$$
+              因此，
+              \begin{flalign*}
+                  \text{原式} & =\dfrac{t}{2\qty(t^2+1)}+\dfrac{1}{2}\int\dfrac{t\dd t}{t^2-t+1}-\dfrac{1}{2}\int\dfrac{t\dd t}{t^2+t+1}-\dfrac{1}{2}\int\dfrac{\dd t}{t^2+1}                                                       \\
+                              & =\dfrac{1}{2}\dfrac{t}{t^2+1}+\dfrac{1}{4}\ln\dfrac{t^2-t+1}{t^2+t+1}+\dfrac{1}{2\sqrt{3}}\qty[\arctan\dfrac{2t+1}{\sqrt{3}}+\arctan\dfrac{2t-1}{\sqrt{3}}]-\dfrac{1}{2}\arctan t+C                 \\
+                              & =\dfrac{\tan x}{2\sec^2x}+\dfrac{1}{4}\ln\dfrac{\tan^2x-\tan x+1}{\tan^2x+\tan x+1}+\dfrac{1}{2\sqrt{3}}\qty[\arctan\dfrac{2\tan x+1}{\sqrt{3}}+\arctan\dfrac{2\tan x-1}{\sqrt{3}}]-\dfrac{x}{2}+C.
+              \end{flalign*}
+    \end{enumerate}
+\end{solution}
+
+\subsubsection{指数型}
+
+常用指数函数不定积分公式:
+\setcounter{magicrownumbers}{0}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l l}
+        (\rownumber{}) $\displaystyle\int \e ^{x} \dd  x=\e ^{x}+C.$                              & (\rownumber{}) $\displaystyle\int \alpha^{x} \dd  x=\frac{\alpha^{x}}{\ln \alpha}+C.$                                            \\
+        \midrule
+        (\rownumber{}) $\displaystyle\int x \e ^{a x} \dd  x=\frac{1}{a^{2}}(a x-1) \e ^{a x}+C.$ & (\rownumber{}) $\displaystyle\int x^{n} \e ^{a x} \dd  x=\frac{1}{a} x^{n} \e ^{a x}-\frac{n}{a} \int x^{n-1} \e ^{a x} \dd  x.$ \\
+    \end{tabular}
+\end{table}
+
+\begin{example}
+    求下列不定积分
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l | l | l | l}
+            (\rownumber{}) $\displaystyle\int\frac{\dd x}{\e ^x+\e ^{-x}}.$            & (\rownumber{}) $\displaystyle\int\frac{\dd x}{\sqrt{1+\e ^{2x}}}.$       & (\rownumber{}) $\displaystyle\int\frac{x\e ^x}{\sqrt{\e ^x-1}}\dd x.$   & (\rownumber{}) $\displaystyle\int\frac{\e ^x\left(1+\e ^x\right)}{\sqrt{1-\e ^{2x}}}\dd x.$             \\
+            (\rownumber{}) $\displaystyle\int\frac{1+x}{x\left(1+x\e ^x\right)}\dd x.$ & (\rownumber{}) $\displaystyle\int\frac{\ln\left(\e ^x+1\right)}{\e ^x}.$ & (\rownumber{}) $\displaystyle\int\frac{\dd x}{\left(1+\e ^x\right)^2}.$ & (\rownumber{}) $\displaystyle\int\dfrac{1+\e ^{\frac{x}{2}}}{\left(1+\e ^{\frac{x}{4}}\right)^2}\dd x.$
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item \textbf{法一: }令 $\e ^x=t$，那么原式=$\displaystyle\int\frac{\dd t}{1+t^2}
+                  =\arctan \e ^x+C.$\\
+              \textbf{法二: }原式=$\displaystyle\int\frac{\dd \e ^x}{1+\e ^{2x}}
+                  =\arctan\e ^x+C.$
+        \item \textbf{法一: }令 $\e ^x=\tan t$，那么原式=$\displaystyle\int\frac{\sec t}{\tan t}\dd t
+                  =\int\frac{\dd t}{\sin t}=\int\csc t\dd t=-\ln|\csc x+\cot x|+C.$\\
+              \textbf{法二: }原式$\displaystyle\xlongequal[]{\e ^x=t}\int\frac{\dd t}{t\sqrt{1+t^2}}
+                  \xlongequal[]{1+t^2=v^2}\int\frac{\dd v}{v^2-1}=\frac{1}{2}\ln\left | \frac{v-1}{v+1} \right |+C
+                  =\frac{1}{2}\ln\frac{\sqrt{\e ^{2x}+1}-1}{\sqrt{\e ^{2x}+1}+1}+C.$
+        \item 原式$\displaystyle\xlongequal[]{\e ^x=t}\int\frac{\ln t\dd t}{\sqrt{t-1}}
+                  =2\int\ln t\dd \sqrt{t-1}=2\sqrt{t-1}\ln t-2\int\frac{\sqrt{t-1}}{t}\dd t$，\\
+              其中 $\displaystyle\int\frac{\sqrt{t-1}}{t}\dd t
+                  \xlongequal[]{\sqrt{t-1}=u}\int\frac{2u^2}{u^2+1}\dd u=2u-2\arctan u+C
+                  =2\sqrt{t-1}-2\arctan\sqrt{t-1}+C$，
+              综上，原式=$\displaystyle 2x\sqrt{\e ^x-1}-4\sqrt{\e ^x-1}+4\arctan\sqrt{\e ^x-1}+C.$
+        \item \textbf{法一: }指数代换，结合三角代换.
+              \begin{flalign*}
+                  \text{原式} & \xlongequal[]{\e ^x=t}\int\frac{1+t}{\sqrt{1-t^2}}\dd t\xlongequal[]{\frac{\sqrt{1-t^2}}{1+t}=u}-4\int\frac{\dd u}{\left(u^2+1\right)^2}\xlongequal[]{u=\tan v}-4\int\cos^2v\dd v \\
+                              & =-2\int(1+\cos2v)\dd v=-2v-\sin 2v+C=-2\arctan\frac{\sqrt{1-\e ^{2x}}}{\e ^x+1}-\sqrt{1-\e ^{2x}}+C.
+              \end{flalign*}
+              \textbf{法二: }指数代换，结合 Euler 代换和 Ostrogradsky 法.
+              \begin{flalign*}
+                  \text{原式} & \xlongequal[]{\e ^x=t}\int\dfrac{1+t}{\sqrt{1-t^2}}\dd t\xlongequal[\sqrt{1-t^2}=ut+1]{\text{第二 Euler 代换}}\int\dfrac{1-\dfrac{2u}{u^2+1}}{1-\dfrac{2u^2}{u^2+1}}\cdot\dfrac{2u^2-2}{\left(u^2+1\right)^2}\dd u=-2\int\dfrac{(u-1)^2}{\left(u^2+1\right)^2}\dd u \\
+                              & \xlongequal[]{Ost'}-2\left(\frac{Au+B}{u^2+1}+\int\frac{Du+E}{u^2+1}\dd u\right)\xlongequal[]{(A,B,D,E)=(0,1,0,1)}-2\left(\frac{1}{u^2+1}+\int\frac{\dd u}{u^2+1}\right)                                                                                            \\
+                              & =\frac{-2}{u^2+1}-2\arctan u+C=\frac{\e ^{2x}}{\e ^x-1}-2\arctan\frac{\sqrt{1-\e ^{2x}}-1}{\e ^x}+C.
+              \end{flalign*}
+        \item 原式$\displaystyle\xlongequal[]{x\e ^x=t}\int\frac{\dd t}{t(1+t)}=\int\frac{\dd t}{t}-\int\frac{\dd t}{1+t}
+                  =\ln\left |\frac{t}{1+t}\right |+C=\ln\left |\frac{x\e ^x}{1+x\e ^x}\right |+C$.
+        \item 指数代换.
+              \begin{flalign*}
+                  \text{原式} & \xlongequal[]{\e ^x=t}\int\frac{\ln(t+1)}{t^2}\dd t=-\int\ln(t+1)\dd t^{-1}=-\frac{\ln(t+1)}{t}+\int\frac{\dd t}{t(t+1)}  \\
+                              & =\ln\left |\frac{t}{t+1} \right |-\frac{\ln (t+1)}{t}+C=\ln\frac{\e ^x}{\e ^x+1}-\frac{\ln\left(\e ^x+1\right)}{\e ^x}+C.
+              \end{flalign*}
+        \item 指数代换，注意需要整体代换.
+              \begin{flalign*}
+                  \text{原式} & \xlongequal[]{1+\e ^x=t}\int\frac{\dd t}{t^2(t-1)}=-\int\frac{t+1}{t^2}\dd t+\int\frac{\dd t}{t-1}=-\int\frac{\dd t}{t}-\int\frac{\dd t}{t^2}+\int\frac{\dd t}{t-1} \\
+                              & =\frac{1}{t}+\ln\left(1-\frac{1}{t}\right)+C=\frac{1}{1+\e ^x}+\ln\frac{\e ^x}{1+\e ^x}+C.
+              \end{flalign*}
+        \item $\displaystyle\text{原式}\xlongequal[]{\e ^{\frac{x}{4}}=t}4\int\frac{1+t^2}{t(1+t)^2}\dd t=4\int\left[\dfrac{1}{t}-\dfrac{2}{(1+t)^2}\right]\dd t=4\ln t+\frac{8}{1+t}+C=x+\dfrac{8}{1+\e ^{\frac{x}{4}}}+C.$
+    \end{enumerate}
+\end{solution}
+
+\subsubsection{对数型}
+
+常用对数函数不定积分公式:
+\setcounter{magicrownumbers}{0}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l l}
+        (\rownumber{}) $\displaystyle\int \ln x \dd  x=x \ln x-x+C.$                                      & (\rownumber{}) $\displaystyle\int \log _{\alpha} x \dd  x=\frac{1}{\ln \alpha}(x \ln x-x)+C.$ \\
+        \midrule
+        (\rownumber{}) $\displaystyle\int x^{n} \ln x \dd  x=\frac{x^{n+1}}{(n+1)^{2}}[(n+1) \ln x-1]+C.$ & (\rownumber{}) $\displaystyle\int \frac{1}{x \ln x} \dd  x=\ln (\ln x)+C.$                    \\
+    \end{tabular}
+\end{table}
+
+\begin{example}
+    求下列不定积分
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l | l | l}
+            (\rownumber{}) $\displaystyle\int\dfrac{\ln x}{\left(1+x^2\right)^{\frac{3}{2}}}\dd x.$ & (\rownumber{}) $\displaystyle\int x\ln\dfrac{1+x}{1-x}\dd x.$           & (\rownumber{}) $\displaystyle\int x\ln\left(4+x^4\right)\dd x.$          \\
+            (\rownumber{}) $\displaystyle\int x^3\ln^3x\dd x.$                                      & (\rownumber{}) $\displaystyle\int\left(\dfrac{\ln x}{x}\right)^3\dd x.$ & (\rownumber{}) $\displaystyle\int\ln^2\left(x+\sqrt{1+x^2}\right)\dd x.$
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\displaystyle\text{原式}=\int\ln x\dd \left(\dfrac{x}{\sqrt{1+x^2}}\right)=\dfrac{x\ln x}{\sqrt{1+x^2}}-\int\dfrac{\dd x}{\sqrt{1+x^2}}=\dfrac{x\ln x}{\sqrt{1+x^2}}-\ln\left(x+\sqrt{1+x^2}\right)+C.$
+        \item $\displaystyle\text{原式}=\frac{1}{2}\int\ln\frac{1+x}{1-x}\dd x^2=\frac{x^2}{2}\ln\frac{1+x}{1-x}-\int\frac{x^2\dd x}{1-x^2}=\frac{x^2-1}{2}\ln\frac{1+x}{1-x}+x+C.$
+        \item 由分部积分法得，
+              \begin{flalign*}
+                  \text{原式} & =\dfrac{1}{2}\int\ln\left(4+x^4\right)\dd x^2=\frac{x^2}{2}\ln\left(4+x^4\right)-2\int\frac{x^5\dd x}{4+x^4}                                               \\
+                              & =\frac{x^2}{2}\ln\left(4+x^4\right)-2\int\left(x-\frac{4x}{4+x^2}\right)\dd x=\frac{x^2}{2}\ln\left(4+x^4\right)+2\arctan\left(\frac{x^2}{2}\right)-x^2+C.
+              \end{flalign*}
+        \item 多次利用分部积分法，
+              \begin{flalign*}
+                  \text{原式} & =\frac{1}{4} \int \ln ^{3} x \dd \left(x^{4}\right) =\frac{1}{4} x^{4} \ln ^{3} x-\frac{3}{4} \int x^{3} \ln ^{2} x \dd  x=\frac{1}{4} x^{4} \ln ^{3} x-\frac{3}{16} \int \ln ^{2} x \dd \left(x^{4}\right) \\
+                              & =\frac{1}{4} x^{4} \ln ^{3} x-\frac{3}{16} x^{4} \ln ^{2} x+\frac{3}{8} \int x^{3} \ln x \dd  x=\frac{1}{4} x^{4} \ln ^{3} x-\frac{3}{16} x^{4} \ln ^{2} x+\frac{3}{32} \int \ln x \dd \left(x^{4}\right)   \\
+                              & =\frac{1}{4} x^{4} \ln ^{3} x-\frac{3}{16} x^{4} \ln ^{2} x+\frac{3}{32} x^{4} \ln x-\frac{3}{32} \int x^{3} \dd  x                                                                                         \\
+                              & =\frac{1}{4} x^{4}\left(\ln ^{3} x-\frac{3}{4} \ln ^{2} x+\frac{3}{8} \ln x-\frac{3}{32}\right)+C \text {. }
+              \end{flalign*}
+        \item 同样的，多次利用分部积分法，
+              \begin{flalign*}
+                  \text{原式} & =-\frac{1}{2} \int \ln ^{3} x \dd \left(\frac{1}{x^{2}}\right)=-\frac{1}{2 x^{2}} \ln ^{3} x+\frac{3}{2} \int \frac{\ln ^{2} x}{x^{3}} \dd  x=-\frac{1}{2 x^{2}} \ln ^{3} x-\frac{3}{4} \int \ln 2 x \dd \left(\frac{1}{x^{2}}\right) \\
+                              & =-\frac{1}{2 x^{2}} \ln ^{3} x-\frac{3}{4 x^{2}} \ln ^{2} x+\frac{3}{2} \int \frac{\ln x}{x^{3}} \dd  x=-\frac{1}{2 x^{2}} \ln ^{3} x-\frac{3}{4 x^{2}} \ln ^{2} x-\frac{3}{4} \int \ln x \dd \left(\frac{1}{x^{2}}\right)            \\
+                              & =-\frac{1}{2 x^{2}} \ln ^{3} x-\frac{3}{4 x^{2}} \ln ^{2} x-\frac{3}{4 x^{2}} \ln x+\frac{3}{4} \int \frac{\dd  x}{x^{3}}=-\frac{1}{2 x^{2}}\left(\ln ^{3} x+\frac{3}{2} \ln ^{2} x+\frac{3}{2} \ln x+\frac{3}{4}\right)+C.
+              \end{flalign*}
+        \item 利用分部积分法，得
+              \begin{flalign*}
+                  \text{原式} & =x \ln ^{2}\left(x+\sqrt{1+x^{2}}\right)-2 \int \frac{x}{\sqrt{1+x^{2}}} \ln \left(x+\sqrt{1+x^{2}}\right) \dd  x  \\
+                              & = x \ln ^{2}\left(x+\sqrt{1+x^{2}}\right)-2 \int \ln \left(x+\sqrt{1+x^{2}}\right) \dd \left(\sqrt{1+x^{2}}\right) \\
+                              & = x \ln ^{2}\left(x+\sqrt{1+x^{2}}\right)-2 \sqrt{1+x^{2}} \ln \left(x+\sqrt{1+x^{2}}\right)+2 x+C .
+              \end{flalign*}
+    \end{enumerate}
+\end{solution}
+
+\subsection{隐函数类型}
+
+\begin{example}
+    设 $y=y(x)$ 是方程 $y^2(x-y)=x^2$ 所确定的隐函数，求 $\displaystyle\int\dfrac{\dd x}{y^2}.$
+\end{example}
+\begin{solution}
+    设齐次变换 \(y=tx\) 由 \(y^2(x-y)=x^2\) 可得 \(x=\dfrac{1}{t^2(1-t)},~y=\dfrac{1}{t(1-t)},~\dd x=\dfrac{3t-2}{t^2(1-t)^2}\dd t\)
+    于是 \begin{displaymath}
+        I=\int\dfrac{\dd x}{y^2}=\int t^2(1-t)^2\cdot\dfrac{(3t-2)}{t^3(1-t)^2}\dd t=\int \dfrac{3t-2}{t}\dd t=3t-2\ln|t|+C=\dfrac{3y}{x}-2\ln\qty|\dfrac{y}{x}|+C.
+    \end{displaymath}
+\end{solution}
+
+\subsection{复合类型}
+
+\subsubsection{表格积分法}
+
+求解不定积分时，需要多次使用分部积分时的简化运算方法. 亦可认为是分部积分法的推广公式.
+设 $g_{(k+1)}$ 表示 $g_{(k)}~  (k=0,1,2,\cdots,g_{(0)}=g)$ 积分后得到的某一个函数表达式，则
+$$\int fg\dd x=\sum_{k=0}^{n-1}(-1)^kf^{(k)}g_{(k+1)}+(-1)^n\int f^{(n)}g_{(n)}\dd x$$
+
+表格积分法常用来处理 $\displaystyle \int P(x)g(x)\dd x$ 类型的积分 (其中 $P(x)$ 表示多项式函数)，也可以得出递推表达式，具体求解过程看以下例题.
+\begin{example}
+    求不定积分 $\displaystyle\int (x^3+2x+3)\e ^x\dd x.$
+\end{example}
+\begin{solution}
+    由表格积分法得以下表格:
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l| c c c c c }
+            $f'$   & $x^3+2x+3$  & $3x^2+2$    & $6x$        & $6$          & $0$      \\
+            \midrule
+                   & $+\searrow$ & $-\searrow$ & $+\searrow$ & $-\searrow $            \\
+            \midrule
+            $\int$ & $\e ^x$     & $\e ^x$     & $\e ^x$     & $\e ^x$      & $\e ^x $
+        \end{tabular}
+    \end{table}
+    故原式=$(x^3+2x+3)\e ^x-(3x^2+2)\e ^x+6x\e ^x-6\e ^x+C=(x^3-3x^2+8x-5)\e ^x+C.$
+\end{solution}
+\begin{example}
+    证明: 若 $P(x)$ 为 $n$ 次多项式，则 $\displaystyle\int P(x)\e ^{ax}\dd x=\e ^{ax}\sum_{k=0}^{n}(-1)^k\frac{P^{(k)}(x)}{a^{k+1}}+C.$
+\end{example}
+\begin{proof}[{\songti \textbf{证}}]
+    由表格积分法:
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l| c c c c c c}
+            $f'$   & $P(x)$      & $P'(x)$                & $P''(x)$                 & $\cdots$ & $P^{(n)}(x)$             & $P^{(n+1)}(x)=0$             \\
+            \midrule
+                   & $+\searrow$ & $-\searrow$            & $+\searrow$              & $\cdots$ & $(-1)^n\searrow$         &                              \\
+            \midrule
+            $\int$ & $\e ^{ax}$  & $\dfrac{1}{a}\e ^{ax}$ & $\dfrac{1}{a^2}\e ^{ax}$ & $\cdots$ & $\dfrac{1}{a^n}\e ^{ax}$ & $\dfrac{1}{a^{n+1}}\e ^{ax}$
+        \end{tabular}
+    \end{table}
+    故，$\displaystyle\text{原式}=\e ^{ax}\sum_{k=0}^{n}(-1)^k\frac{P^{(k)}(x)}{a^{k+1}}+C.$
+\end{proof}
+
+\begin{example}
+    求不定积分 $\displaystyle\int\e ^x\sin x\dd x.$
+\end{example}
+\begin{solution}
+    由表格积分法:\newline
+    \begin{minipage}{0.33\linewidth}
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{l| c c c}
+                $f'$   & $\e ^x$     & $\e ^x$     & $\e ^x$   \\
+                \midrule
+                       & $+\searrow$ & $-\searrow$ & $|$       \\
+                \midrule
+                $\int$ & $\sin x$    & $-\cos x$   & $-\sin x$
+            \end{tabular}
+        \end{table}
+    \end{minipage}\hfill
+    \begin{minipage}{0.66\linewidth}
+        故 $\displaystyle\int\e ^x\sin x\dd x=-\e ^x\cos x+\e ^x\sin x-\int\e ^x\sin x\dd x\\\Rightarrow\text{原式}=\dfrac{\e ^x}{2}(\sin x-\cos x).$
+    \end{minipage}
+\end{solution}
+
+\begin{inference}
+    重要结论:
+    $$\int \e^{ax}\sin bx\dd x=\dfrac{\mqty|\qty(\e^{ax})'&(\sin bx)'\\\e^{ax}&\sin bx|}{a^2+b^2}+C,~\int \e^{ax}\cos bx\dd x=\dfrac{\mqty|\qty(\e^{ax})'&(\cos bx)'\\\e^{ax}&\cos bx|}{a^2+b^2}+C.$$
+\end{inference}
+
+\begin{example}
+    求不定积分 $\displaystyle\int\dfrac{\sin(\ln x)}{x^2}\dd x.$
+\end{example}
+\begin{solution}
+    令 $\ln x=t$，则原式化为 $\displaystyle\int \e^{-t}\sin t\dd t=-\dfrac{1}{2}\qty(\e^{-t}\sin t+\e^t\cos t)+C=-\dfrac{\sin\ln x+\cos\ln x}{2x}+C.$
+\end{solution}
+
+\subsubsection{多初等函数复合型}
+
+\paragraph{组合积分法}
+
+\begin{example}
+    求不定积分 $\displaystyle I=\int\dfrac{\cos x}{3\sin x+2\cos x}\dd x.$
+\end{example}
+\begin{solution}
+    记 $\displaystyle J=\int\dfrac{\sin x}{3\sin x+2\cos x}\dd x$，于是
+    \begin{flalign*}
+         & \begin{cases}
+               \displaystyle  2I+3J=\int \dd x=x+C \\
+               \displaystyle  3I-2J=\int\dfrac{3\cos x-2\sin x}{3\sin x+2\cos x}\dd x =\ln|3\sin x+2\cos x|+C
+           \end{cases} \\
+         & \Rightarrow I=\frac{3 \ln (3 \sin (x)+2 \cos (x))}{13}+\frac{2 x}{13}+C.
+    \end{flalign*}
+\end{solution}
+
+\begin{example}
+    求不定积分 $\displaystyle\int x\e ^x\sin x\dd x.$
+\end{example}
+\begin{solution}
+    \textbf{法一: }由表格积分法:
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l| c c c}
+            $f'$   & $x$           & $1$                               & $0$                       \\
+            \midrule
+                   & $+\searrow$   & $-\searrow$                                                   \\
+            \midrule
+            $\int$ & $\e ^x\sin x$ & $\dfrac{\e ^x}{2}(\sin x-\cos x)$ & $-\dfrac{\e ^x}{2}\cos x$
+        \end{tabular}
+    \end{table}
+    故原式 $\displaystyle=\frac{x\e ^x}{2}(\sin x-\cos x)+\frac{\e ^x}{2}\cos x+C.$\\
+    \textbf{法二: }由分部积分法得，
+    \begin{flalign*}
+        I & =\int x\e ^x\sin x\dd x=\int x\sin x\mathrm{de}^x=x\e ^x\sin x-\int\e ^x\dd (x\sin x)                                                         \\
+          & =x\e ^x\sin x-\int(\sin x+x\cos x)\mathrm{de}^x=x\e ^x\sin x-\int x\cos x\mathrm{de}^x-\int\e ^x\sin x\dd x                                   \\
+          & =x\e ^x(\sin x-\cos x)+\int\e ^x(\cos x-\sin x)\dd x-I                                                                                        \\
+          & \Rightarrow \frac{x\e ^x}{2}(\sin x-\cos x)+\frac{1}{2}\int\e ^x(\cos x-\sin x)\dd x=\frac{x\e ^x}{2}(\sin x-\cos x)+\frac{\e ^x}{2}\cos x+C.
+    \end{flalign*}
+    \textbf{法三: }
+    由 $\displaystyle\int\e ^x\sin x\dd x=\frac{\e ^x}{2}(\sin x-\cos x)+C$，所以
+    \begin{flalign*}
+        \text{原式}  =\int x\dd \left(\frac{\e ^x}{2}(\sin x-\cos x)\right)=\frac{x\e ^x}{2}(\sin x-\cos x)-\int\frac{\e ^x}{2}(\sin x-\cos x)\dd x
+        =\frac{x\e ^x}{2}(\sin x-\cos x)+\frac{\e ^x}{2}\cos x+C.
+    \end{flalign*}
+    \textbf{法四: }
+    令 $\displaystyle I=\int x\e ^x\sin x\dd x$，$\displaystyle J=\int x\e ^x\cos x\dd x$，则有
+    $$\left(x\e ^x\sin x\right)'=\e ^x\sin x+x\e ^x\sin x+x\e ^x\cos x$$ $$\left(x\e ^x\cos x\right)'=\e ^x\cos x+x\e ^x\cos x-x\e ^x\sin x$$
+    两边积分，得 $$I+J=x\e ^x\sin x-\int\e ^x\sin x\dd x$$ $$-I+J=x\e ^x\cos x-\int\e ^x\cos x\dd x$$
+    两式相减，得
+    \begin{flalign*}
+        I & =\frac{1}{2}x\e ^x(\sin x-\cos x)-\frac{1}{2}\int\e ^x\sin x\dd x+\frac{1}{2}\int\e ^x\cos x\dd x
+        =\frac{1}{2}x\e ^x(\sin x-\cos x)-\frac{1}{2}\int\e ^x(\sin x-\cos x)\dd x                            \\
+          & =\frac{x\e ^x}{2}(\sin x-\cos x)+\frac{\e ^x}{2}\cos x+C.
+    \end{flalign*}
+    \textbf{法五: }
+    由 $\e ^x\sin x=\mathrm{Im}\left(\e ^{(1+\mathrm{i})}x\right)$，
+    \begin{flalign*}
+        \text{原式} & =\int x\mathrm{Im}\left(\e ^{(1+\mathrm{i})x}\right)\dd x=\mathrm{Im}\left(\int x\e ^{(1+\mathrm{i})x}\dd x\right)=\mathrm{Im}\left(\int x\dd \left(\frac{\e ^{(1+\mathrm{i})x}}{1+\mathrm{i}}\right)\right)                                  \\
+                    & =\mathrm{Im}\left(\frac{x\e ^{(1+\mathrm{i})x}}{1+\mathrm{i}}-\int\frac{\e ^{(1+\mathrm{i})x}}{1+\mathrm{i}}\dd x\right)=\mathrm{Im}\left(\frac{x\e ^{(1+\mathrm{i})x}}{1+\mathrm{i}}-\frac{\e ^{(1+\mathrm{i})x}}{(1+\mathrm{i})^2}\right)+C \\
+                    & =\mathrm{Im}\left(\left(\frac{x}{2}-\mathrm{i}\left(\frac{x}{2}-\frac{1}{2}\right)\right)\e ^x(\cos x+\mathrm{i}\sin x)\right)+C                                                                                                              \\
+                    & =\frac{x\e ^x}{2}(\sin x-\cos x)+\frac{\e ^x}{2}\cos x+C.
+    \end{flalign*}
+\end{solution}
+
+\begin{example}
+    计算不定积分 $\displaystyle\int\dfrac{x\arctan x}{\sqrt{1-x^2}}\dd x.$
+\end{example}
+\begin{solution}
+    令 $x=\sin t$，则
+    \begin{flalign*}
+        I & =\int\dfrac{\sqrt{1-x^2}}{1+x^2}\dd x=\int\dfrac{\cos^2t}{1+\sin^2t}\dd t=\int\dfrac{\sec^2t}{\sec^4t+\tan^2t\sec^2t}\dd t                            \\
+          & =\int\dfrac{\sec^2t}{2\tan^4t+3\tan^2t+1}\dd t\xlongequal[]{\tan t=u}\int\dfrac{\dd u}{2u^4+3u^2+1}=\int\qty(\dfrac{2}{2u^2+1}-\dfrac{1}{u^2+1})\dd u \\
+          & =\sqrt{2}\arctan\qty(\sqrt{2}u)-\arctan u+C=\sqrt{2}\arctan\qty(\dfrac{\sqrt{2}x}{\sqrt{1-x^2}})-\arcsin x+C.
+    \end{flalign*}
+\end{solution}
+
+\begin{example}[2023 合肥工业大学]
+    计算不定积分 $I=\displaystyle\int\dfrac{x\ln\qty(x+\sqrt{1+x^2})}{\qty(1-x^2)^2}\dd x.$
+\end{example}
+\begin{solution}
+    注意到 $\displaystyle\dv{x}\dfrac{1}{1-x^2}=\dfrac{2x}{\qty(1-x^2)^2}$，所以原积分有
+    \begin{flalign*}
+        I=\dfrac{1}{2}\int\ln\qty(x+\sqrt{1+x^2})\dd \dfrac{1}{1-x^2}=\dfrac{1}{2}\qty[\dfrac{\ln\qty(x+\sqrt{1+x^2})}{1-x^2}-\int\dfrac{\dd x}{\sqrt{1+x^2}\qty(1-x^2)}]
+    \end{flalign*}
+    现计算 $J=\displaystyle\int\dfrac{\dd x}{\sqrt{1+x^2}\qty(1-x^2)}$，运用三角代换 $1+\tan^2x=\sec^2x$ ，有
+    \begin{flalign*}
+        J & =\int\dfrac{\sec t\dd t}{1-\tan^2t}=\int\dfrac{\csc t\cot t}{\cot^2t-1}\dd t=\int\dfrac{\csc t\cot t}{\csc^2t-2}\dd t
+        \xlongequal[]{\csc t=s}\int\dfrac{\dd s}{2-s^2}                                                                           \\
+          & =\dfrac{1}{2}\int\dfrac{\dd s}{1-\qty(\dfrac{s}{\sqrt{2}})^2}=\dfrac{1}{\sqrt{2}}\arctan\dfrac{s}{\sqrt{2}}+C
+        =\dfrac{1}{\sqrt{2}}\arctan\dfrac{\csc t}{\sqrt{2}}+C=\dfrac{1}{\sqrt{2}}\arctan\dfrac{\sqrt{1+x^2}}{\sqrt{2}x}+C
+    \end{flalign*}
+    故原式等于 $\dfrac{\ln\qty(x+\sqrt{1+x^2})}{2\qty(1-x^2)}-\dfrac{1}{2\sqrt{2}}\arctan\dfrac{\sqrt{1+x^2}}{\sqrt{2}x}+C.$
+\end{solution}
+
+\begin{example}[第四届数学竞赛决赛]
+    求 $\displaystyle\int x\arctan x\ln\left(1+x^2\right)\dd x.$
+\end{example}
+\begin{solution}
+    令 $x\ln\left(1+x^2\right)\dd x=\dd t$，则
+    \begin{flalign*}
+        t & =\int x\ln\left(1+x^2\right)\dd x=\frac{1}{2}\int\ln\left(1+x^2\right)\dd \left(1+x^2\right)=\frac{1}{2}\left[\left(1+x^2\right)\ln\left(1+x^2\right)-\int 2x\dd x\right] \\
+          & =\frac{1}{2}\left[\left(1+x^2\right)\ln\left(1+x^2\right)-x^2\right]+C
+    \end{flalign*}
+    \begin{flalign*}
+        \text{原式} & =\frac{1}{2}\int\arctan x\dd \left[\left(1+x^2\right)\ln\left(1+x^2\right)-x^2\right]                                                        \\
+                    & =\frac{1}{2}\arctan x\left[\left(1+x^2\right)\ln\left(1+x^2\right)-x^2\right]-\frac{1}{2}\left[x\ln\left(1+x^2\right)-3x+3\arctan x\right]+C \\
+                    & =\frac{1}{2}\left[\left(1+x^2\right)\ln\left(1+x^2\right)-x^2-3\right]\arctan x-\frac{1}{2}\left[x\ln\left(1+x^2\right)-3x\right]+C
+    \end{flalign*}
+\end{solution}
+
+\paragraph{形式待定法}
+\begin{enumerate}[label=(\arabic{*})]
+    \item 对于 $\displaystyle\int\frac{f(x)}{g^2(x)}\dd x$ 型，存在 $h(x)$，使得 $$\displaystyle\int\frac{f(x)}{g^2(x)}\dd x=\frac{h(x)}{g(x)}+C$$
+          其中 $f(x)=h'(x)g(x)-h(x)g'(x)$，$h(x)$ 要通过具体的等式结构另求出.
+    \item 对于 $\displaystyle\int f(x)\e ^{g(x)}\dd x$ 型，存在 $h(x)$，使得 $$\displaystyle\int f(x)\e ^{g(x)}\dd x=h(x)\e ^{g(x)}+C$$
+          其中 $f(x)=h'(x)+h(x)g'(x)$，同样 $h(x)$ 要通过具体的等式结构另求出.
+\end{enumerate}
+
+\begin{example}
+    求下列不定积分.
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l | l | l}
+            (\rownumber{}) $\displaystyle\int\frac{\e ^{-\sin x}\cdot\sin 2x}{(1-\sin x)^2}\dd x.$ & (\rownumber{}) $\displaystyle\int\e ^{-\frac{x}{2}}\frac{\cos x-\sin x}{\sqrt{\sin x}}\dd x.$ & (\rownumber{}) $\displaystyle\int\frac{x^2\dd x}{(x\sin x+\cos x)^2}.$            \\
+            (\rownumber{}) $\displaystyle\int\e ^{\sin x}\frac{x\cos^3x-\sin x}{\cos^2x}\dd x.$    & (\rownumber{}) $\displaystyle\int\left(1+x-\dfrac{1}{x}\right)\e ^{x+\frac{1}{x}}\dd x.$      & (\rownumber{}) $\displaystyle\int\frac{x+\sin x\cos x}{(\cos x-x\sin x)^2}\dd x.$
+        \end{tabular}
+    \end{table}
+\end{example}
+
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 令 $\displaystyle f(x)=\e ^{-\sin x}\cdot\sin 2x,~g(x)=1-\sin x$，由
+              $$f(x)=h'(x)g(x)-h(x)g'(x)=h'(x)-h'(x)\sin x+h(x)\cos x$$
+              设 $h(x)=A\e ^{-\sin x}$，那么 $h'(x)=-A\cos x\e ^{-\sin x}$，所以
+              $$h'(x)-h'(x)\sin x+h(x)\cos x=A\sin x\cos x\e ^{-\sin x}=\frac{A}{2}\sin 2x\e ^{-\sin x}=\e ^{-\sin x}\sin 2x$$
+              解得 $A=2$，所以 $h(x)=2\e ^{-\sin x}.$
+              \begin{flalign*}
+                  \text{原式} & =\int\frac{2\sin x\cos x\e ^{-\sin x}}{(1-\sin x)^2}\dd x=\int\frac{2\e ^{-\sin x}(-\cos x)(1-\sin x)+2\cos x\e ^{-\sin x}}{(1-\sin x)^2}\dd x \\
+                              & =\int\frac{h'(x)(1-\sin x)-(1-\sin x)'h(x)}{(1-\sin x)^2}\dd x=\int\dd \left(\frac{h(x)}{1-\sin x}\right)=\frac{2\e ^{-\sin x}}{1-\sin x}+C.
+              \end{flalign*}
+        \item 令 $\displaystyle f(x)=\frac{\cos x-\sin x}{\sqrt{\sin x}},~g(x)=-\frac{x}{2}$，由
+              $$f(x)=h'(x)+h(x)\cdot g'(x)=h'(x)-\frac{1}{2}h(x)=\frac{\cos x}{\sqrt{\sin x}}-\sqrt{\sin x}$$
+              设 $\displaystyle h(x)=2\sqrt{\sin x}+A$，那么 $\displaystyle h'(x)=\frac{\cos x}{\sqrt{\sin x}}$，所以
+              $$h'(x)-\frac{1}{2}h(x)=\frac{\cos x}{\sqrt{\sin x}}-\sqrt{\sin x}-\frac{A}{2}=\frac{\cos x}{\sqrt{\sin x}}-\sqrt{\sin x}$$
+              解得 $A=0$，所以 $h(x)=2\sqrt{\sin x}$.
+              \begin{flalign*}
+                  \text{原式} & =\int\left(\e ^{-\frac{x}{2}}\frac{\cos x}{\sqrt{\sin x}}-\e ^{-\frac{x}{2}}\sqrt{\sin x}\right)\dd x=\int\left[\e ^{-\frac{x}{2}}h'(x)-\frac{1}{2}\e ^{-\frac{x}{2}}h(x)\right]\dd x \\
+                              & =\int\dd \left(h(x)\e ^{-\frac{x}{2}}\right)=2\sqrt{\sin x}\e ^{-\frac{x}{2}}+C.
+              \end{flalign*}
+        \item \textbf{法一: }注意到 $1=\sin^2x+\cos^2x$，所以
+              \begin{flalign*}
+                  \text{原式} & =\int\frac{x^2\left(\sin^2x+\cos^2x\right)\dd x}{(x\sin x+\cos x)^2}
+                  =\int \dfrac{x^{2}\cos ^{2}x-x\sin x\cos x}{\left( x\sin x+\cos x\right) ^{2}}\dd x+\int \dfrac{x^{2}\sin ^{2}x+x\sin x\cos x}{\left( x\sin x+\cos x\right) ^{2}}\dd x              \\
+                              & =\int \dfrac{x\cos x\left( x\cos x-\sin x\right) }{\left( x\sin x+\cos x\right) ^{2}}\dd x+\int \dfrac{x\sin x\dd x}{x\sin x+\cos x}                                  \\
+                              & =\int \left( \sin x-x\cos x\right) \dd \left( \dfrac{1}{x\sin x+\cos x}\right) +\int \dfrac{x\sin xdx}{x\sin x+\cos x}                                                \\
+                              & =\dfrac{\sin x-x\cos x}{x\sin x+\cos x}-\int \dfrac{x\sin x\dd x}{x\sin x+\cos x}+\int \dfrac{x\sin x\dd x}{x\sin x+\cos x}=\dfrac{\sin x-x\cos x}{x\sin x+\cos x}+C.
+              \end{flalign*}
+              \textbf{法二: }令 $f(x)=x^2,~g(x)=x\sin x+\cos x$，由
+              $$f(x)=h'(x)g(x)-h(x)g'(x)=h'(x)(x\sin x+\cos x)-h(x)x\cos x=x^2=x^2\left(\sin^2x+\cos^2x\right)$$
+              设 $h(x)=Ax^a\sin x+Bx^b\cos x$，那么 $h'(x)=A_{a}x^{a-1}\sin x+Ax^{a}\cos x+Bbx^{b-1}\cos x-Bx^{b}\sin x$，
+              代入上式，对比系数得 $A=1,a=0,B=-1,b=1$，于是 $h(x)=\sin x-x\cos x$，
+              \begin{flalign*}
+                  \text{原式} & =\int\frac{x^2\sin^2x+x^2\cos^2x}{(x\sin x+\cos x)^2}\dd x=\int\frac{x\sin x(x\sin x+\cos x)-x\cos x(\sin x-x\cos x)}{(x\sin x+\cos x)^2}\dd x   \\
+                              & =\int\frac{h'(x)(x\sin x+\cos x)-h(x)\cdot\left(x\sin x+\cos x\right)'}{(x\sin x+\cos x)^2}\dd =\int\dd \left(\frac{h(x)}{x\sin x+\cos x}\right)
+                  =\frac{\sin x-x\cos x}{x\sin x+\cos x}+C.
+              \end{flalign*}
+        \item 令 $\displaystyle f(x)=\frac{x\cos^3x-\sin x}{\cos^2x},~g(x)=\sin x$，由
+              $$f(x) =h'(x)+h(x)\cdot g'(x)=h'(x)+h(x)\cdot\cos x =x\cos x-\frac{\sin x}{\cos^2x}$$
+              设 $\displaystyle h(x)=\frac{A}{\cos x}+P(x)$，那么 $\displaystyle h'(x)=\frac{A\sin x}{\cos^2x}+P'(x)$，
+              所以 $$h'(x)+h(x)\cdot\cos x=\frac{A\sin x}{\cos^2x}+P'(x)+A+P(x)\cos x=x\cos x-\frac{\sin x}{\cos^2x}$$
+              各项一一对应，得 $A=-1,P(x)=x$，所以 $h(x)=x-\sec x$.
+              \begin{flalign*}
+                  \text{原式} & =\int\e ^{\sin x}\left(1-\frac{\sin x}{\cos^2x}+x\cos x-1\right)\dd x=\int\left[h'(x)\e ^{\sin x}+\e ^{\sin x}\cdot\cos xh(x)\right]\dd x \\
+                              & =\int\dd \left[h(x)\e ^{\sin x}\right]=(x-\sec x)\e ^{\sin x}+C.
+              \end{flalign*}
+        \item 令 $f(x)=1+x-\dfrac{1}{x},~g(x)=1+\dfrac{1}{x}$，由
+              $$f(x)=h'(x)+h(x)g'(x)=h'(x)+h(x)\left(1-\frac{1}{x^2}\right)=1+x-\frac{1}{x}$$
+              于是 $h(x)=x$，故原式 $\displaystyle=\int\e ^{x+\frac{1}{x}}\left[1+x\left(1-\frac{1}{x^2}\right)\right]\dd x=\int\dd \left(h(x)\e ^{x+\frac{1}{x}}\right)=x\e ^{x+\frac{1}{x}}+C.$
+        \item 令 $f(x)=x+\sin x\cos x,~g(x)=\cos x-x\sin x$，由
+              $$f(x)=h'(x)g(x)-h(x)g'(x)=h'(x)(\cos x-x\sin x)+h(x)(2\sin x+x\cos x)=x+\sin x\cos x$$
+              于是 $h(x)=x\sin x$，故原式 $\displaystyle=\frac{x\sin x}{\cos x-x\sin x}+C.$
+    \end{enumerate}
+\end{solution}
+
+\begin{example}
+    求 $\displaystyle\int\dfrac{x^2+6}{(x\cos x-3\sin x)^2}\dd x.$
+\end{example}
+\begin{solution}
+    \textbf{法一: }令 $f(x)=x^2+6,~g(x)=x\cos x-3\sin x$，由
+    \begin{flalign*}
+        f(x)=h'(x)g(x)-h(x)g'(x)     & =h'(x)(x\cos x-3\sin x)+h(x)(x\sin x+2\cos x) \\
+        (x^2+6)\qty(\sin^2x+\cos^2x) & =h'(x)(x\cos x-3\sin x)+h(x)(x\sin x+2\cos x)
+    \end{flalign*}
+    可知，$h(x)$ 中存在 $x\sin x$ 项和 $3\cos x$; $h'(x)$ 中存在 $x\cos x$ 项和 $-2\sin x$，于是不妨取
+    $h(x)=x\sin x+3\cos x$，
+    故原积分等于 $\dfrac{x\sin x+3\cos x}{x\cos x-3\sin x}+C$，经检验该函数是原积分的原函数.\\
+    \textbf{法二: }运用 $\sin^2x+\cos^2x=1$，则有
+    \begin{flalign*}
+        I & =\int\dfrac{\qty(x^2+6)\qty(\sin^2x+\cos^2x)}{(x\cos x-3\sin x)^2}\dd x=\int\mqty|x                                         & 3               \\-2&x|\mqty|\cos x&\sin x\\-\sin x&\cos x|\dfrac{\dd x}{(x\cos x-3\sin x)^2}\\
+          & =\int\mqty|x\cos x-3\sin x                                                                                                  & x\sin x+3\cos x \\-2\cos x-x\sin x&-2\sin x+x\cos x|\dfrac{\dd x}{(x\cos x-3\sin x)^2}\\
+          & =\int\dfrac{-2\sin x+x\cos x}{x\cos x-3\sin x}\dd x+\int\dfrac{(x\sin x+3\cos x)(2\cos x+\sin x)}{(x\cos x-3\sin x)^2}\dd x
+    \end{flalign*}
+    注意到 $\displaystyle\dv{x}(x\cos x-3\sin x)=-(2\cos x+x\sin x)$，故可对上式第二个积分利用分部积分公式，得
+    \begin{flalign*}
+        I_1 & =\int\dfrac{(x\sin x+3\cos x)(2\cos x+\sin x)}{(x\cos x-3\sin x)^2}\dd x=\int(x\sin x+3\cos x)\dd \qty(\dfrac{1}{x\cos x-3\sin x})                                                          \\
+            & =\dfrac{x\sin x+3\cos x}{x\cos x-3\sin x}-\int\dfrac{\dd \qty(x\sin x+3\cos x)}{x\cos x-3\sin x}=\dfrac{x\sin x+3\cos x}{x\cos x-3\sin x}-\int\dfrac{x\cos x-2\sin x}{x\cos x-3\sin x}\dd x
+    \end{flalign*}
+    所以 $\displaystyle I=\int\dfrac{x\cos x-2\sin x}{x\cos x-3\sin x}+I_1=\dfrac{x\sin x+3\cos x}{x\cos x-3\sin x}+C.$
+\end{solution}
+
+利用行列式来表述较为复杂的计算式子，具有过程简洁，结构紧凑，规律性强等明显优点.
+
+\paragraph{双变量代换法}
+
+\begin{example}
+    求下列不定积分.
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l | l}
+            (\rownumber{}) $\displaystyle \int\dfrac{\qty(x^2+1)\cos x+\sin^2 x+1}{\qty(x^2-1)\cos^2x+4x\sin x}\dd x.$ & (\rownumber{}) $\displaystyle \int\dfrac{\e^{2x}-x^2+\e^x(1-x)\cos2x}{\qty(\e^x\cos x+x\sin x)\sqrt{\qty(\e^{2x}-x^2)\cos 2x}}\dd x.$
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 令 $p=x+\sin x,~q=1-x\sin x$，那么 $p^2-q^2=(x+\sin x)^2-(1-x\sin x)^2=\qty(x^2-1)\cos^2x+4x\sin x$，并且
+              $$\dd\qty(\dfrac{p}{q})=\dfrac{q\dd p-p\dd q}{q^2}=\dfrac{\qty(x^2+1)\cos x+\sin ^2x+1}{q^2}\dd x\Rightarrow \qty[\qty(x^2+1)\cos x+\sin ^2x+1]\dd x=q^2\dd \qty(\dfrac{p}{q})$$
+              因此 $I=\displaystyle\int\dfrac{q^2}{p^2-q^2}\dd \qty(\dfrac{p}{q})=\int\dfrac{1}{\qty(\dfrac{p}{q})^2-1}\dd \qty(\dfrac{p}{q})\xlongequal{u=\frac{p}{q}}\dfrac{1}{2}\int\qty(\dfrac{1}{u-1}-\dfrac{1}{u+1})\dd u=\dfrac{1}{2}\ln\qty|\dfrac{u-1}{u+1}|+C$，
+              即 $$I=\dfrac{1}{2}\qty[\ln\qty(-x-(x+1)\sin x+1)-\ln\qty(x-x\sin x+\sin x+1)]+C.$$
+        \item 令 $p=\e^x\cos x+x\sin x,~q=\e\sin x+x\cos x$，那么 $$p^2-q^2=\qty(\e^x\cos x+x\sin x)^2-\qty(q=\e\sin x+x\cos x)^2=\qty(\e^{2x}-x^2)\cos 2x$$
+              并且
+              $$\dd \qty(\dfrac{q}{p})=\dfrac{p\dd q-q\dd p}{p^2}=\dfrac{1}{p^2}\qty[\e^{2x}-x^2+\e^x(1-x)\cos2x]\dd x\Rightarrow \qty[\e^{2x}-x^2+\e^x(1-x)\cos2x]\dd x=p^2\dd \qty(\dfrac{q}{p})$$
+              因此 $\displaystyle I=\int\dfrac{p}{\sqrt{p^2-q^2}}\dd \qty(\dfrac{q}{p})\xlongequal{u=\frac{q}{p}}\int\dfrac{1}{\sqrt{1-u^2}}\dd u=\arcsin u+C$，即
+              $\displaystyle I=\arcsin\qty(\dfrac{\e^x\sin x+x\cos x}{\e^x\cos x+x\sin x})+C.$
+    \end{enumerate}
+\end{solution}

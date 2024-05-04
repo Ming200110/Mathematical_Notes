@@ -1,0 +1,43 @@
+\section{双正态总体的假设检验}
+
+\subsection{双正态总体均值的检验 (\texorpdfstring{$t$}. 检验)}
+
+\subsection{双正态总体方差的假设检验}
+
+正态总体方差的假设检验各情况表.
+\setcounter{magicrownumbers}{0}
+\begin{table}[H]
+    \centering
+    \resizebox{.99\textwidth}{!}{
+        \begin{tabular}{cccll}
+            \textbf{条件}                                 & \textbf{原假设}                      & \textbf{统计量}                                                                                                   & \textbf{对应样本函数分布}                                                        & \textbf{拒绝域}                          \\
+            \toprule
+            \multicolumn{5}{c}{单正态总体均值和方差的假}                                                                                                                                                                                                                                                                                           \\
+            \midrule
+            \multirow{3}{*}{已知 $\sigma^2$}              & $H_0:\mu=\mu_0$                      & \multirow{3}{*}{$Z=\dfrac{\bar{X}-\mu_0}{\sigma/\sqrt{n}}$}                                                       & \multirow{3}{*}{$N(0,1)$}                                                        & $|z|\geqslant z_{\alpha/2}$              \\
+                                                          & $H_0:\mu\leqslant \mu_0$             &                                                                                                                   &                                                                                  & $z\geqslant z_\alpha$                    \\
+                                                          & $H_0:\mu\geqslant \mu_0$             &                                                                                                                   &                                                                                  & $z\leqslant -z_\alpha $                  \\
+            \midrule
+            \multirow{3}{*}{未知 $\sigma^2$}              & $H_0:\mu=\mu_0$                      & \multirow{3}{*}{$t=\dfrac{\bar{X}-\mu_0}{S/\sqrt{n}}$}                                                            & \multirow{3}{*}{$t(n-1)$}                                                        & $|t|\geqslant t_{\alpha/2}(n_1+n_2-2)$   \\
+                                                          & $H_0:\mu\leqslant \mu_0$             &                                                                                                                   &                                                                                  & $t\geqslant t_{\alpha}(n_1+n_2-2)$       \\
+                                                          & $H_0:\mu\geqslant \mu_0$             &                                                                                                                   &                                                                                  & $t\leqslant -t_{\alpha}(n_1+n_2-2)$      \\
+            \midrule
+            \multirow{3}{*}{未知 $\mu$}                   & $H_0:\sigma^2=\sigma_0^2$            & \multirow{3}{*}{$\chi^2=\dfrac{(n-1)S^2}{\sigma_0^2}$}                                                            & \multirow{3}{*}{$\chi^2(n-1)$}                                                   & $\chi^2\geqslant \chi^2_{\alpha/2}(n-1)$ \\
+                                                          & $H_0:\sigma^2\leqslant \sigma_0^2$   &                                                                                                                   &                                                                                  & $\chi^2\geqslant \chi^2_\alpha(n-1)$     \\
+                                                          & $H_0:\sigma^2\geqslant \sigma_0^2$   &                                                                                                                   &                                                                                  & $\chi^2\leqslant \chi^2_{1-\alpha}(n-1)$ \\
+            \midrule
+            \multicolumn{5}{c}{双正态总体均值和方差的假}                                                                                                                                                                                                                                                                                           \\
+            \midrule
+            \multirow{3}{*}{已知 $\sigma_1^2,\sigma_2^2$} & $H_0:\mu_1-\mu_2=\delta$             & \multirow{3}{*}{$Z=\dfrac{\qty(\bar{X}-\bar{Y})-\sigma}{\sqrt{\dfrac{\sigma_1^2}{n_1}+\dfrac{\sigma_2^2}{n_2}}}$} & \multirow{3}{*}{$N(0,1)$}                                                        & $|z|\geqslant z_{\alpha/2}$              \\
+                                                          & $H_0:\mu_1-\mu_2\leqslant \delta$    &                                                                                                                   &                                                                                  & $z\geqslant z_\alpha$                    \\
+                                                          & $H_0:\mu_1-\mu_2\geqslant \delta$    &                                                                                                                   &                                                                                  & $z\leqslant -z_\alpha $                  \\
+            \midrule
+            \multirow{3}{*}{未知 $\sigma_1^2=\sigma_2^2$} & $H_0:\mu_1-\mu_2=\delta$             & \multirow{3}{*}{$t=\dfrac{\qty(\bar{X}-\bar{Y})-\delta}{S_w\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}}}$}                & \multirow{3}{*}{$t(n_1+n_2-2)$}                                                  & $|t|\geqslant t_{\alpha/2}(n_1+n_2-2)$   \\
+                                                          & $H_0:\mu_1-\mu_2\leqslant \delta$    &                                                                                                                   &                                                                                  & $t\geqslant t_{\alpha}(n_1+n_2-2)$       \\
+                                                          & $H_0:\mu_1-\mu_2\geqslant \delta$    &                                                                                                                   &                                                                                  & $t\leqslant -t_{\alpha}(n_1+n_2-2)$      \\
+            \midrule
+            \multirow{3}{*}{未知 $\mu_1,\mu_2$}           & $H_0:\sigma_1^2=\sigma_2^2$          & \multirow{3}{*}{$F=\dfrac{S_1^2}{S_2^2}$}                                                                         & \multirow{3}{*}{$\dfrac{S_1^2/S_2^2}{\sigma_1^2/\sigma_2^2}\sim F(n_1-1,n_2-1)$} & $F\geqslant F_{\alpha/2}(n_1-1,n_2-1)$   \\
+                                                          & $H_0:\sigma_1^2\leqslant \sigma_2^2$ &                                                                                                                   &                                                                                  & $F\geqslant F_\alpha(n_1-1,n_2-1)$       \\
+                                                          & $H_0:\sigma_1^2\geqslant \sigma_2^2$ &                                                                                                                   &                                                                                  & $F\leqslant F_{1-\alpha}(n_1-1,n_2-1)$
+        \end{tabular}}
+\end{table}

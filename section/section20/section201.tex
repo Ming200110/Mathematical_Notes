@@ -1,0 +1,50 @@
+\section{统计量的数字特征}
+
+\subsection{常用统计量}
+
+\begin{definition}[常用统计量]
+    设 $ X_{1}, X_{2}, \cdots, X_{n} $ 是来自总体 $ X $ 的简单随机样本，以下为常用统计量:
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 样本均值 $ \bar{X}=\dfrac{1}{n} \displaystyle\sum_{i=1}^{n} X_{i} $;
+        \item 样本方差 $S^{2}=\dfrac{1}{n-1} \displaystyle\sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2}=\dfrac{1}{n-1}\left(\displaystyle\sum_{i=1}^{n} X_{i}^{2}-n \bar{X}^{2}\right) $;
+        \item 样本标准差 $ S=\sqrt{S^{2}} $;
+        \item 样本 $ k $ 阶原点矩 $A_{k}=\dfrac{1}{n} \displaystyle\sum_{i=1}^{n} X_{i}^{k}(k=1,2, \cdots) $;
+        \item 样本 $ k $ 阶中心矩 $B_{k}=\dfrac{1}{n} \displaystyle\sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{k}(k=2,3, \cdots) $;
+        其中 $ B_{1}=0, B_{2}=\dfrac{n-1}{n} S^{2} $;
+        \item 最小顺序统计量 $X_{(1)}=\min \left\{X_{1}, X_{2}, \cdots, X_{n}\right\}$
+        $$F_{(1)}(x)=P\left\{\min \left\{X_{1}, X_{2}, \cdots, X_{n}\right\} \leqslant x\right\}=1-[1-F(x)]^{n}$$
+        对连续型随机变量，概率密度函数为 $f_{(1)}(x)=n[1-F(x)]^{n-1} f(x) $;
+        \item 最大顺序统计量 $X_{(n)}=\max \left\{X_{1}, X_{2}, \cdots, X_{n}\right\}$
+        $$F_{(n)}(x)=P\left\{\max \left\{X_{1}, X_{2}, \cdots, X_{n}\right\} \leqslant x\right\}=[F(x)]^{n}$$
+        对连续型随机变量，概率密度函数为 $f_{(n)}(x)=n[F(x)]^{n-1} f(x) .$
+    \end{enumerate}
+\end{definition}
+
+\subsection{样本数字特征的性质}
+
+\begin{theorem}[样本数字特征的性质]
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 若总体 $ X $ 的数学期望 $ E(X)=\mu$，则 $E(\bar{X})=E(X)=\mu ;$
+        \item 若总体 $ X $ 的方差为 $ D(X)=\sigma^{2} $，则 $D(\bar{X})=\dfrac{1}{n} D(X)=\dfrac{\sigma^{2}}{n},~E\left(S^{2}\right)=D(X)=\sigma^{2} .$
+    \end{enumerate}
+\end{theorem}
+
+\begin{example}
+    设 $X_1,X_2,\cdots,X_n$ 是来自指数分布总体 $E(\lambda)$ 的简单随机样本 $\bar{X}$ 和 $S^2$ 分别是样本均值和样本方差，记统计量 $T=\bar{X}-S^2$，求 $E(T).$
+\end{example}
+\begin{solution}
+    $E(T)=E\qty(\bar{X}-S^2)=E\qty(\bar{X})-E\qty(S^2)=E\qty(\bar{X})-D(X)$，因为 $X\sim E(\lambda)$，所以 $E(X)=\dfrac{1}{\lambda},~D(X)=\dfrac{1}{\lambda^2}$，因此 $E(T)=\dfrac{1}{\lambda}-\dfrac{1}{\lambda^2}=\dfrac{\lambda-1}{\lambda^2}.$
+\end{solution}
+
+\begin{example}
+    设 $X_1,X_2,\cdots,X_n$ 是来自 $X\sim P(\lambda)$ 的简单随机样本，$\bar{X}$ 和 $S^2$ 分布为样本均值和方差，求统计量 $T=\bar{X}^2-\dfrac{S^2}{n}$ 的数学期望 $E(T).$
+\end{example}
+\begin{solution}
+    $E(T)=E\qty(\bar{X}^2-\dfrac{S^2}{n})=E\qty(\bar{X}^2)-E\qty(\dfrac{S^2}{n})=E\qty(\bar{X}^2)-\dfrac{1}{n}E\qty(S^2)=D\qty(\bar{X})+E^2\qty(\bar{X})-\dfrac{1}{n}D(X)$，
+    因为 $X\sim P(\lambda)$，所以 $E(X)=D(X)=\lambda$，且 
+    \begin{flalign*}
+        E\qty(\bar{X})&=E\qty(\dfrac{1}{n}\sum_{i=1}^{n}X_i)=\dfrac{1}{n}\sum_{i=1}^{n}E(X_i)=\dfrac{1}{n}\cdot n\lambda=\lambda\\
+        D\qty(\bar{X})&=D\qty(\dfrac{1}{n}\sum_{i=1}^{n}X_i)=\dfrac{1}{n^2}\sum_{i=1}^{n}D(X_i)=\dfrac{1}{n^2}\cdot n\lambda=\dfrac{\lambda}{n}
+    \end{flalign*}
+    因此 $E(T)=\dfrac{\lambda}{n}+\lambda^2-\dfrac{\lambda}{n}=\lambda^2.$
+\end{solution}

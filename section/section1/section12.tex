@@ -1,0 +1,224 @@
+\section{极限的概念、性质及存在准则}
+
+\subsection{数列、函数极限的定义}
+
+\subsubsection{数列的极限定义}
+
+\begin{definition}[数列极限 A]
+    设 $\qty{a_n}$ 是一数列，如果存在常数 $a$，当 $n$ 无限增大时，$a_n$ 无限接近 (或趋近) 于 $a$，则称数列 $\qty{a_n}$ \textit{收敛}，$a$ 称为\textit{数列} $\qty{a_n}$ \textit{的极限}，
+    或称数列 $\qty{a_n}$ 收敛于 $a$，记作 $\displaystyle\lim_{n\to\infty}a_n=a$，或 $a_n\to\infty,~n\to\infty$.
+    当 $n\to\infty$ 时，若不存在这样的常数 $a$，则称数列 $\qty{a_n}$ \textit{发散或不收敛}，也可以说极限 $\displaystyle\lim_{n\to\infty}a_n$ 不存在.
+\end{definition}
+
+\begin{definition}[数列极限 B]
+    设 $\qty{a_n}$ 为一数列，$a$ 为一个常数，若对任意给定的 $\varepsilon>0$，都存在一个正整数 $N$，使得当 $n>N$ 时，有 $|a_n-a|<\varepsilon$，则称 $a$ 为\textit{数列} $\qty{a_n}$ \textit{的极限}，记作 $\displaystyle\lim_{n\to\infty}a_n=a.$
+\end{definition}
+
+\begin{example}[2003 数一]
+    设 $\qty{a_n},\qty{b_n},\qty{c_n}$ 均为非负整数，且 $\displaystyle\lim_{n\to\infty}a_n=0,~\lim_{n\to\infty}b_n=1,~\lim_{n\to\infty}c_n=+\infty$，则必有
+    \begin{tasks}(2)
+        \task $a_n<b_n$ 对任意 $n$ 成立
+        \task $b_n<c_n$ 对任意 $n$ 成立
+        \task 极限 $\displaystyle\lim_{n\to\infty}a_nc_n$ 不存在
+        \task 极限 $\displaystyle\lim_{n\to\infty}b_nc_n$ 不存在
+    \end{tasks}
+\end{example}
+\begin{solution}
+    取 $a_n=\dfrac{2}{n},~b_n=1,~c_n=\dfrac{n}{2}$，则可排除选项 A、B、C，因此选 D.
+\end{solution}
+
+\begin{example}[2014 数三]
+    设 $\displaystyle\lim_{n\to\infty}a_n=0\neq 0$，则当 $n$ 充分大时有
+    \begin{tasks}(4)
+        \task $|a_n|>\dfrac{|a|}{2}$
+        \task $|a_n|<\dfrac{|a|}{2}$
+        \task $a_n>a-\dfrac{1}{n}$
+        \task $a_n>a+\dfrac{1}{n}$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    因为 $\displaystyle\lim_{n\to\infty}a_n=a\neq 0$，所以 $\forall\varepsilon>0$，都存在一个正整数 $N$，使得当 $n>N$ 时，有 $|a_n-a|<\varepsilon$，
+    即 $a-\varepsilon<a_n<a+\varepsilon$，则 $|a|-\varepsilon<|a_n|\leqslant |a|+\varepsilon$，取 $\varepsilon=\dfrac{|a|}{2}$，得 $|a_n|>\dfrac{|a|}{2}$，选 A.
+\end{solution}
+
+\subsubsection{函数的极限定义}
+
+\begin{definition}[函数的极限]
+    设函数 $f(x)$ 在点 $x_0$ 的邻域内 (点 $x_0$ 可除外) 有定义，$A$ 为一个常数，若对任意给定的 $\varepsilon>0$，都存在一个正数 $\delta$，
+    当 $0<|x-x_0|<\delta$ 时，有 $|f(x)-A|<\varepsilon$，则称 $A$ 为\textit{函数} $f(x)$ 当 $x\to x_0$ \textit{时的极限}，记作 $\displaystyle\lim_{x\to x_0}f(x)=A.$
+\end{definition}
+
+\begin{definition}[左右极限]
+    若对于满足 $0<x_0-x<\delta~~(0<x-x_0<\delta)$ 的一切 $x$ 所对应的 $f(x)$ 都不满足 $|f(x)-A|<\varepsilon$，则称 $A$ 为函数 $f(x)$ 当 $x$ 自 $x_0$ 左 (右) 侧趋于 $x_0$ 时的极限，即\textit{左 (右) 极限}，
+    分别记作 $$\lim_{x\to x_0^-}f(x)=f(x_0-0)=A~~(\lim_{x\to x_0^+}f(x)=f(x_0+0)=A)$$
+    类似地，可以给出当 $x\to\infty,~x\to+\infty,~x\to-\infty$ 时，$f(x)$ 的极限为 $A$ 的定义.
+\end{definition}
+
+\begin{example}
+    设 $f(x)$ 在 $[a,+\infty)$ 连续，则 "$\exists x_n\in[a,+\infty)$ 有 $\displaystyle\lim_{n\to\infty}x_n=+\infty$ 且 $\displaystyle\lim_{n\to\infty}f(x_n)=\infty$" 是 $f(x)$ 在 $[a,+\infty)$ 无界的
+    \begin{tasks}(2)
+        \task 充分非必要条件
+        \task 必要非充分条件
+        \task 充分必要条件
+        \task 既非充分也非必要条件
+    \end{tasks}
+\end{example}
+\begin{solution}
+    题目中的两个条件分别为
+    \begin{enumerate}[label=(\roman{*})]
+        \item $\exists x_n\in [a,+\infty)$ 有 $\displaystyle\lim_{n\to\infty}x_n=+\infty$ 且 $\displaystyle\lim_{n\to\infty}f(x_n)=\infty$ ;
+        \item $f(x)$ 在 $[a,+\infty)$ 无界，
+    \end{enumerate}
+    \textbf{讨论充分性，即 (i)$\to$(ii)}\\
+    因为 $\displaystyle\lim_{n\to\infty}f(x_n)=\infty$ 可知对于 $\forall M>0,\exists N\in [a,+\infty)$ 使得 $|f(x_N)|>M$，故 $f(x)$ 在 $[a,+\infty)$ 无界;\\
+    \textbf{讨论必要性，即 (ii)$\to$(i)}\\
+    因为 $f(x)$ 在 $[a,+\infty)$ 无界，则对 $\forall M_1>0,\exists X_1\in [a,+\infty)$，使得 $|f(X_1)|>M_1$，且 $\exists X_2\in [X_1,+\infty)$，使得 $|f(X_2)|>|f(X_1)|$，同理可取 $x_1$，
+    $\exists x_2\in [x_1,+\infty)$，使得 $|f(x_2)|>|f(x_1)|$; $\exists x_3\in [x_2,+\infty)$，使得 $|f(x_3)|>|f(x_2)|$，由此递推，
+    得存在严格 $\nearrow$ 的数列 $\qty{x_n}$，有 $\displaystyle\lim_{n\to\infty}x_n=\infty$，且存在单调的 $|f(x_n)|$，有 $\displaystyle\lim_{n\to\infty}|f(x_n)|=+\infty$，即 $\displaystyle\lim_{n\to\infty}f(x_n)=\infty.$
+\end{solution}
+
+\subsection{数列与其子列极限之间的关系}
+
+\begin{theorem}
+    \label{theRelationshipBetweenASequenceAndItsSubColumnLimits}
+    $\displaystyle\lim_{n\to\infty}x_n=a\Leftrightarrow \lim_{n\to\infty}x_{2n}=\lim_{n\to\infty}x_{2n-1}\Leftrightarrow\lim_{n\to\infty}x_{3n}=\lim_{n\to\infty}x_{3n+1}=\lim_{n\to\infty}x_{3n+2}=a.$
+\end{theorem}
+
+\begin{example}[2015 数三]
+    设 $\qty{x_n}$ 是数列，下列命题中不正确的是 
+    \begin{tasks}(1)
+        \task 若 $\displaystyle\lim_{n\to\infty}x_n=a$，则 $\displaystyle\lim_{n\to\infty}x_{2n}=\lim_{n\to\infty}x_{2n+1}=a$
+        \task 若 $\displaystyle\lim_{n\to\infty}x_{2n}=\lim_{n\to\infty}x_{2n+1}=a$，则 $\displaystyle\lim_{n\to\infty}x_n=a$
+        \task 若 $\displaystyle\lim_{n\to\infty}x_n=a$，则 $\displaystyle\lim_{n\to\infty}x_{3n}=\lim_{n\to\infty}x_{3n+1}=a$
+        \task 若 $\displaystyle\lim_{n\to\infty}x_{3n}=\lim_{n\to\infty}x_{3n+1}=a$，则 $\displaystyle\lim_{n\to\infty}x_n=a$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    如 $x_{3n}=1+\dfrac{1}{3n},~x_{3n+1}=1+\dfrac{1}{3n+1},~x_{3n+2}=2+\dfrac{1}{3n+2}$，则 $\displaystyle\lim_{n\to\infty}x_{3n}=1,~\lim_{n\to\infty}x_{3n+1}=1$，但 $\displaystyle\lim_{n\to\infty}x_{3n+2}=2$，故 $\displaystyle\lim_{n\to\infty}\neq 1$，故选 D.
+\end{solution}
+
+\begin{example}
+    设 $x_n=(-1)^{n}\cdot\dfrac{n+1}{n}$，证明: 数列 $\qty{x_n}$ 发散.
+\end{example}
+\begin{proof}[{\songti \textbf{证}}]
+    考察子列
+    $$x_{2n}=\dfrac{2n+1}{2n}=1+\dfrac{1}{2n}\to 1~~(n\to\infty),~x_{2n+1}=-\dfrac{2n+2}{2n+1}=-1-\dfrac{1}{2n+1}\to-1~~(n\to\infty)$$
+    由定理 \ref{theRelationshipBetweenASequenceAndItsSubColumnLimits} 可知 $\displaystyle\lim_{n\to\infty}x_n$ 不存在，即得证数列 $\qty{x_n}$ 发散.
+\end{proof}
+
+\subsection{数列、函数极限的性质}
+
+\subsubsection{数列极限的性质}
+
+\begin{theorem}[数列极限的唯一性]
+    收敛数列的极限是唯一的，即若数列 $\qty{a_n}$ 收敛，且 $\displaystyle\lim_{n\to\infty}a_n=a$ 和 $\displaystyle\lim_{n\to\infty}a_n=b$，则 $a=b$.
+    \index{数列极限的唯一性}
+\end{theorem}
+
+\begin{theorem}[数列极限的有界性]
+    设数列 $\qty{a_n}$ 收敛，则数列 $\qty{a_n}$ 有界，即存在常数 $M>0$，使得 $|a_n|<M~(\forall n\in N)$.
+    \index{数列极限的有界性}
+\end{theorem}
+
+\begin{theorem}[数列极限的保号性]
+    设数列 $\qty{a_n}$ 收敛，其极限为 $a$
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 若有正整数 $N$，使得当 $n>N$，有 $a_n>0$ (或 $<0$)，则 $a\geqslant 0$ (或 $\leqslant 0$).
+        \item 若 $a>0$ (或 $<0$)，则有正整数 $N$，使得当 $n>N$，时，有 $a_n>0$ (或 $<0$).
+    \end{enumerate}
+    \index{数列极限的保号性}
+\end{theorem}
+
+\begin{example}[2017 数二]
+    设数列 $\qty{x_n}$ 收敛，则 
+    \begin{tasks}(2)
+        \task 当 $\displaystyle\lim_{n\to\infty}\sin x_n=0$ 时，$\displaystyle\lim_{n\to\infty}x_n=0$
+        \task 当 $\displaystyle\lim_{n\to\infty}\qty(x_n+\sqrt{|x_n|})=0$ 时，$\displaystyle\lim_{n\to\infty}x_n=0$
+        \task 当 $\displaystyle\lim_{n\to\infty}\qty(x_n+x_n^2)=0$ 时，$\displaystyle\lim_{n\to\infty}x_n=0$
+        \task 当 $\displaystyle\lim_{n\to\infty}(x_n+\sin x_n)=0$ 时，$\displaystyle\lim_{n\to\infty}x_n=0$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    因为数列 $\qty{x_n}$ 收敛，故令 $\displaystyle\lim_{n\to\infty}x_n=a$，则有 A 知 $\sin a=0\not\Rightarrow a=0$，同理 B、C 不正确，而由 D 可知 $\sin a=-a\Rightarrow a=0$，故选 D.
+\end{solution}
+
+\subsubsection{函数极限的性质}
+
+\begin{theorem}[函数极限的唯一性]
+    若 $\displaystyle\lim_{x\to x_0}f(x)=A$，则 $A$ 必唯一.
+    \index{函数极限的唯一性}
+\end{theorem}
+
+\begin{theorem}[函数极限的有界性]
+    若 $\displaystyle\lim_{x\to x_0}f(x)=A$，则 $f(x)$ 在点 $x_0$ 的某一去心邻域内有界.
+    \index{函数极限的有界性}
+\end{theorem}
+
+\begin{theorem}[函数极限的保号性]
+    设 $f(x)$ 在 $x_0$ 的某去心邻域内均有 $f(x)\geqslant 0$ (或 $f(x)\leqslant 0$)，且 $\displaystyle\lim_{x\to x_0}f(x)=A$，则 $a\geqslant 0$ (或 $A\leqslant 0$).
+    \index{函数极限的保号性}
+\end{theorem}
+
+\begin{theorem}[函数极限的充要条件]
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\displaystyle\lim _{x \rightarrow x_{0}} f(x)=A \Leftrightarrow \lim _{x \rightarrow x_{0}^{-}} f(x)=\lim _{x \rightarrow x_{0}} f(x)=A $.
+        \item $\displaystyle\lim _{x \rightarrow \infty} f(x)=A \Leftrightarrow \lim _{x \rightarrow-\infty} f(x)=\lim _{x \rightarrow+\infty} f(x)=A .$
+    \end{enumerate}
+    \index{函数极限的充要条件}
+\end{theorem}
+
+\subsubsection{证明函数 $ f(x) $ 的极限不存在的方法}
+
+\begin{enumerate}[label=(\arabic{*})]
+    \item 若 $ f\left(x_{0}-0\right) \neq f\left(x_{0}+0\right)$，则 $\displaystyle \lim _{x \rightarrow x_{0}} $ 不存在. 当 $ x \rightarrow \infty $ 时，对含有 $ a^{x}(a>0, a \neq 1) $ 或 $ \arctan x $ 或 $ \arccot x $ 的函数极限，一定要对 $ x \rightarrow+\infty $ 与 $ x \rightarrow-\infty $ 分别求极限，若两者的极限值相等,则 $ x \rightarrow \infty $ 时极限存在，否则不存在.
+    \item 若存在数列 $ \left\{x_{n}\right\}: x_{n} \rightarrow x_{0}, x_{n} \neq x_{0} $，使得 $\displaystyle \lim _{n \rightarrow \infty} f\left(x_{n}\right) $ 不存在; 或有两个数列 $ \left\{x_{n}\right\} $ 与 $ \left\{y_{n}\right\} $，满足 $ x_{n} \rightarrow x_{0}\left(x_{n} \neq x_{0}\right), y_{n} \rightarrow y_{0}\left(y_{n} \neq y_{0}\right) $ 使得 $ \displaystyle\lim _{n \rightarrow \infty} f\left(x_{n}\right) \neq \lim _{n \rightarrow \infty} f\left(y_{n}\right) $，则 $ \displaystyle\lim _{x \rightarrow x_{0}} f(x) $ 不存在.
+    \item 利用结论: 设 $\displaystyle \lim _{x \rightarrow x_{0}} f(x)=A, \lim _{x \rightarrow x_{0}} g(x) $ 不存在，则 $\displaystyle \lim _{x \rightarrow x_{0}}[f(x)+g(x)] $ 不存在; 若又有 $ A \neq 0 $，则 $ \displaystyle\lim _{x \rightarrow x_{0}} f(x) g(x) $ 不存在.
+\end{enumerate}
+
+\subsection{数列、函数极限的存在准则}
+
+\subsubsection{数列极限的存在准则}
+
+\begin{theorem}[夹逼准则]
+    \label{pinchGuidelines}
+    若 $\exists N$，使得当 $n>N$ 时有 $y_n\leqslant x_n\leqslant z_n$，且 $\displaystyle\lim_{n\to\infty}y_n=\lim_{n\to\infty}z_n=a$，则 $\displaystyle\lim_{n\to\infty}x_n=a.$
+    \index{夹逼准则}
+\end{theorem}
+
+\begin{theorem}[数列的单调有界准则]
+    若数列 $\qty{x_n}$ 单调上升有上界 (或单调下降有下界)，即 $x_{n+1}\leqslant x_n~(\text{或 }x_{n+1}\geqslant x_n)~(n=1,2,\cdots)$，并存在一个数 $M~ (m)$ 使得对一切 $n$ 有 $x_n\leqslant M~(\text{或 }x_n\geqslant m)$，则 $\qty{x_n}$ 收敛，即存在一个数 $a$，使得 $\displaystyle\lim_{n\to\infty}x_n=a$，且有 $x_n\leqslant a~(\text{或 }x_n\geqslant a)~(n=1,2,\cdots)$.
+    \index{数列的单调有界准则}
+\end{theorem}
+
+\begin{example}[2008 数一]
+    设函数 $f(x)$ 在 $(-\infty,+\infty)$ 内单调有界，$\qty{x_n}$ 为数列，下列命题正确的是 
+    \begin{tasks}(2)
+        \task 若 $\qty{x_n}$ 收敛，则 $\qty{f(x_n)}$ 收敛
+        \task 若 $\qty{x_n}$ 单调，则 $\qty{f(x_n)}$ 收敛
+        \task 若 $\qty{f(x_n)}$ 收敛，则 $\qty{x_n}$ 收敛
+        \task 若 $\qty{f(x_n)}$ 单调，则 $\qty{x_n}$ 收敛
+    \end{tasks}
+\end{example}
+\begin{solution}
+    若 $\qty{x_n}$ 单调，$f(x)$ 单调有界，则数列 $\qty{f(x_n)}$ 单调有界，因此数列 $\qty{f(x_n)}$ 收敛，故选 B.
+\end{solution}
+
+\subsubsection{函数极限的存在准则}
+
+\begin{example}[2000 数三]
+    设对任意 $x$，总有 $\varphi(x)\leqslant f(x)\leqslant g(x)$，且 $\displaystyle\lim_{x\to\infty}[g(x)-\varphi(x)]=0$，则 $\displaystyle\lim_{x\to\infty}f(x)$
+    \begin{tasks}(4)
+        \task 存在且等于零
+        \task 存在但不一定为零
+        \task 一定不存在
+        \task 不一定存在
+    \end{tasks}
+\end{example}
+\begin{solution}
+    本题中所给条件比夹逼准则的条件弱，事实上，若 $\displaystyle\lim_{x\to\infty}g(x)=\lim_{x\to\infty}\varphi(x)=A$ (有限)，则必有 $\displaystyle\lim_{x\to\infty}[g(x)-\varphi(x)]=0$，反之则不然，因为当 $\displaystyle\lim_{x\to\infty}[g(x)-\varphi(x)]=0$ 时，
+    极限 $\displaystyle\lim_{x\to\infty}g(x)$ 和 $\displaystyle\lim_{x\to\infty}\varphi(x)$ 可以都不存在，如 $g(x)=\varphi(x)=x$.
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 若取 $\varphi(x)=x-\dfrac{1}{x^2},~f(x)=x,~g(x)=x+\dfrac{1}{x^2}$，显然有 $\varphi(x)\leqslant f(x)\leqslant g(x)$，且 $\displaystyle\lim_{x\to\infty}[g(x)-\varphi(x)]=0$，但 $\displaystyle\lim_{x\to\infty}f(x)$ 不存在，则排除选项 A、B.
+        \item 若取 $\varphi(x)=f(x)=g(x)=1$，满足题设条件，但 $\displaystyle\lim_{x\to\infty}f(x)=1$ 存在，则排除选项 C，故选 D.
+    \end{enumerate}
+\end{solution}

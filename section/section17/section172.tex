@@ -1,0 +1,376 @@
+\section{多维连续型随机变量}
+
+% \subsection{边缘概率密度}
+% 
+% \begin{definition}[边缘概率密度]
+%     $\displaystyle F_X(x)=F(x,+\infty)=\int_{-\infty}^{x}\qty[\int_{-\infty}^{+\infty}f(x,y)\dd y]\dd x$，由此可得 $f_X(x)=\displaystyle\int_{-\infty}^{+\infty}f(x,y)\dd y$;
+%     $\displaystyle F_Y(y)=F(+\infty,y)=\int_{-\infty}^{y}\qty[\int_{-\infty}^{+\infty}f(x,y)\dd x]\dd y$，由此可得 $f_Y(y)=\displaystyle\int_{-\infty}^{+\infty}f(x,y)\dd x$
+%     称 $f_X(x)$ 和 $f_Y(y)$ 为 $(X,Y)$ 关于 $X$ 和 $Y$ 的边缘概率密度.
+% \end{definition}
+% 
+% \begin{example}[2011 数三]
+%     \label{erwsjblxy0xy2}设二维随机变量 $(X,Y)$ 在 $G$ 上服从均匀分布，$G$ 由 $x-y=0,x+y=2$ 和 $y=0$ 围成，求边缘概率密度 $f_X(x).$
+% \end{example}
+% \begin{solution}
+%     $(X,Y)$ 的概率密度为 $f(x,y)=\begin{cases}
+%             1, & (x,y)\in G \\0,&\text{其他}
+%         \end{cases}$，故 $$f_X(x)=\int_{-\infty}^{+\infty}f(x,y)\dd y=\begin{cases}
+%             \displaystyle\int_{0}^{x}\dd y,   & 0\leqslant x\leqslant 1 \\[6pt]
+%             \displaystyle\int_{0}^{2-x}\dd y, & 1< x\leqslant 2         \\[6pt]
+%             0,                                & \text{其他}
+%         \end{cases}=\begin{cases}
+%             x,   & 0\leqslant x\leqslant1 \\
+%             2-x, & 1<x\leqslant 2         \\
+%             0,   & \text{其他}.
+%         \end{cases}$$
+% \end{solution}
+% 
+% \begin{definition}[相互独立]
+%     若 $f(x,y)=f_X(x)\cdot f_Y(y)$，则称 $X$ 和 $Y$ 相互独立.
+% \end{definition}
+% 
+% \subsection{条件概率密度}
+% 
+% \begin{definition}[条件概率密度]
+%     设 $ (X, Y) $ 为连续型随机变量，其概率密度为 $ f(x, y) $，边缘密度函数分别为 $ f_{X}(x) $ 和 $ f_{Y}(y) $，若 $ f_{Y}(y)>0 $，则称
+%     $$f_{X \mid Y}(x \mid y)=\frac{f(x, y)}{f_{Y}(y)}$$
+%     为在 $ Y=y $ 的条件下 $ X $ 的条件概率密度; 同样，若 $ f_{X}(x)>0 $，则称
+%     $$f_{Y \mid X}(y \mid x)=\frac{f(x, y)}{f_{X}(x)}$$
+%     为在 $ X=x $ 条件下 $ Y $ 的条件概率密度.
+%     特别地，若 $ f_{Y}(y)=0 $，则 $ f_{X \mid Y}(x \mid y)=0 .$
+% \end{definition}
+% 
+% \begin{example}
+%     求例题 \ref{erwsjblxy0xy2} 中 $f_{X\mid Y}(x\mid y).$
+% \end{example}
+% \begin{solution}
+%     $\displaystyle f_Y(y)=\int_{-\infty}^{+\infty}f(x,y)\dd x=\begin{cases}
+%             \displaystyle\int_{y}^{2-y}\dd x, & 0\leqslant y\leqslant 1 \\[6pt]
+%             0,                                & \text{其他}
+%         \end{cases}=\begin{cases}
+%             2(1-y), & 0\leqslant y\leqslant 1 \\
+%             0,      & \text{其他}.
+%         \end{cases}$ 则 $$f_{X\mid Y}(x\mid y)=\dfrac{f(x,y)}{f_Y(y)}=\begin{cases}
+%             \dfrac{1}{2(1-y)}, & y<x<2-y      \\[6pt]
+%             0,                 & \text{其他}.
+%         \end{cases}$$
+% \end{solution}
+% 
+% \subsection{条件分布函数}
+% 
+% \begin{definition}[条件分布函数 A]
+%     如果任给 $ \varepsilon>0, P\{y-\varepsilon<Y \leqslant y+\varepsilon\}>0 ,$
+%     $$\lim _{\varepsilon \rightarrow 0^{+}} P\{X \leqslant x \mid y-\varepsilon<Y \leqslant y+\varepsilon\}
+%         =\lim _{\varepsilon \rightarrow 0^{+}} \frac{P\{X \leqslant x, y-\varepsilon<Y \leqslant y+\varepsilon\}}{P\{y-\varepsilon<Y \leqslant y+\varepsilon\}}
+%     $$
+%     存在，则称此极限为在条件 $ Y=y $ 下随机变量 $ X $ 的条件分布函数，记为 $ P\{X \leqslant x \mid Y=y\} $ 或 $ F_{X \mid Y}(x \mid y) $
+%     $$F_{X \mid Y}(x \mid y)= \lim _{\varepsilon \rightarrow 0^{+}} \frac{F(x, y+\varepsilon)-F(x, y-\varepsilon)}{F_{Y}(y+\varepsilon)-F_{Y}(y-\varepsilon)}
+%         =\frac{\displaystyle\int_{-\infty}^{x} \int_{y-\varepsilon}^{y+\varepsilon} f(x, y) \dd  x \mathrm{~d} y}{\displaystyle\int_{y-\varepsilon}^{y+\varepsilon} f_{Y}(y) \dd  x} .
+%     $$
+% \end{definition}
+% \begin{definition}[条件分布函数 B]
+%     设 $ f(x, y) $ 在点 $ (x, y) $ 处伡续, $f_{Y}(y) $ 连续且 $ f_{Y}(y)>0 $，则称
+%     $$F_{X \mid Y}(x \mid y)=\int_{-\infty}^{x} \frac{f(x, y)}{f_{Y}(y)} \dd  x$$
+%     为在 $ Y=y $ 的条件下 $ X $ 的条件分布函数;
+%     若 $ f(x, y) $ 在点 $ (x, y) $ 处连续, $f_{X}(x) $ 连续且 $ f_{X}(x)>0 $，则称
+%     $$F_{Y \mid X}(y \mid x)=\int_{-\infty}^{y} \frac{f(x, y)}{f_{X}(x)} \dd  y$$
+%     为在 $ X=x $ 条件下 $ Y $ 的条件分布函数.
+% \end{definition}
+% 
+% \begin{example}
+%     设二维随机变量 $(X,Y)$ 的概率密度为 $f(x,y)=\begin{cases}
+%             \dfrac{1}{4}(y-x)\e^{-y}, & |x|<y<+\infty \\[6pt]
+%             0,                        & \text{其他}
+%         \end{cases}$ 求
+%     \begin{enumerate}[label=(\arabic{*})]
+%         \item $(X,Y)$ 分别关于 $X,Y$ 的边缘概率密度;
+%         \item 在条件 $X=x$ 下随机变量 $Y$ 的条件概率密度.
+%     \end{enumerate}
+% \end{example}
+% \begin{solution}
+%     \begin{enumerate}[label=(\arabic{*})]
+%         \item 当 $x<0$ 时， $$f_X(x)=\int_{-\infty}^{+\infty}f(x,y)\dd y=\int_{-x}^{+\infty}\dfrac{1}{4}(y-x)\e^{-y}\dd y=-\dfrac{\e^x}{4}(2x-1)$$
+%               同理，当 $x\geqslant 0$ 时，$$f_X(x)=\int_{-\infty}^{+\infty}f(x,y)\dd y=\int_{x}^{+\infty}\dfrac{1}{4}(y-x)\e^{-y}\dd y=\dfrac{1}{4}\e^{-x}$$
+%               当 $y<0$ 时，显然 $f_Y(x,y)=0$; 当 $y\geqslant 0$ 时
+%               $$f_Y(y)=\int_{-\infty}^{+\infty}f(x,y)\dd x=\int_{-y}^{y}(y-x)\e^{-y}\dd x=\dfrac{1}{2}y^2\e^{-y}$$
+%               综上，$(X,Y)$ 关于 $X$ 的边缘分布函数为 $f_X(x)=\begin{cases}
+%                       -\dfrac{\e^x}{4}(2x-1), & x<0          \\[6pt]
+%                       \dfrac{1}{4}\e^{-x},    & x\geqslant 0
+%                   \end{cases}$ $(X,Y)$ 关于 $Y$ 的边缘分布函数为 $$f_Y(y)=\begin{cases}
+%                       \dfrac{1}{2}y^2\e^{-y}, & y\geqslant 0 \\[6pt]
+%                       0,y<0
+%                   \end{cases}$$
+%         \item 当 $x<0$ 时，在条件 $X=x$ 下随机变量 $Y$ 的条件概率密度为
+%               $$f_{Y\mid X}(y\mid x)=\dfrac{f(x,y)}{f_X(x)}=\begin{cases}
+%                       \dfrac{(x-y)\e^{-x-y}}{2x-1}, & -x<y<+\infty \\[6pt]
+%                       0,                            & \text{其他}
+%                   \end{cases}$$
+%               同理，当 $x\geqslant 0$ 时，在条件 $X=x$ 下随机变量 $Y$ 的条件概率密度为
+%               $$f_{Y\mid X}(y\mid x)=\dfrac{f(x,y)}{f_X(x)}=\begin{cases}
+%                       (y-x)\e^{x-y}, & x<y<+\infty \\
+%                       0,             & \text{其他}
+%                   \end{cases}$$
+%     \end{enumerate}
+% \end{solution}
+% 
+% \subsection{常见的二维连续型随机变量函数的分布}
+% 
+% \subsubsection{二维正态分布}
+% 
+% \begin{definition}[二维正态分布]
+%     若二维连续型随机变量 $ (X, Y) $ 的概率密度为
+%     $$f(x, y)
+%     =\frac{1}{2 \pi \sigma_{1} \sigma_{2} \sqrt{1-\rho^{2}}} \cdot \exp{-\frac{1}{2\left(1-\rho^{2}\right)}\left[\frac{\left(x-\mu_{1}\right)^{2}}{\sigma_{1}^{2}}-2 \rho \frac{\left(x-\mu_{1}\right)\left(y-\mu_{2}\right)}{\sigma_{1} \sigma_{2}}+\frac{\left(y-\mu_{2}\right)^{2}}{\sigma_{2}^{2}}\right]}
+%     $$
+%     则称 $ (X, Y) $ 服从参数为 $ \mu_{1}, \mu_{2}, \sigma_{1}^{2}, \sigma_{2}^{2}, \rho $ 的二维正态分布，
+%     记 $ (X, Y) \sim N\qty(\mu_{1}, \mu_{2}, \sigma_{1}^{2}, \sigma_{2}^{2}, \rho)$，其中 $ \mu_{1}, \mu_{2}, \sigma_{1}^{2}, \sigma_{2}^{2}, \rho $ 均为常数，
+%     且 $\sigma_{1}>0, \sigma_{2}>0,|\rho|<1 .$
+% \end{definition}
+% 
+% \begin{theorem}
+%     若 $ \mqty|a & b \\ c & d| \neq 0$，则 $ (a X+b Y, c X+d Y) $ 服从二维正态分布，且 $ a X+b Y $ 服从以下一维正态分布
+%     $$a X+b Y \sim N\left(a \mu_{1}+b \mu_{2}, a^{2} \sigma_{1}^{2}+b^{2} \sigma_{2}^{2}+2 a b \rho \sigma_{1} \sigma_{2}\right) .$$
+% \end{theorem}
+
+\subsection{边缘概率密度与边缘分布函数}
+
+\begin{definition}[边缘分布函数]
+    设二维随机变量 $ (X, Y) $ 的联合分布函数为 $ F(x, y)$，随机变量 $ X $ 和 $ Y $ 的分布函数 $ F_{X}(x) $ 与 $ F_{Y}(y) $ 分别称为关于 $ X $ 和 $ Y $ 的边缘分布函数
+    $$F_{X}(x)=P\{X \leqslant x\}=P\{X \leqslant x, Y<+\infty\}=F(x,+\infty)=\lim _{y \rightarrow+\infty} F(x, y) $$
+    同理 $\displaystyle F_{Y}(y)=F(+\infty, y)=\lim _{x \rightarrow+\infty} F(x, y) .$
+\end{definition}
+
+\begin{definition}[二维连续型随机变量的边缘概率密度]
+    设二维连续型随机变量 $ (X, Y) $ 的概率密度为 $ f(x, y) $，则称
+    \begin{flalign*}
+        F_{X}(x) & =F(x,+\infty)=\int_{-\infty}^{x}\left[\int_{-\infty}^{+\infty} f(x, y) \dd  y\right] \dd  x  \\
+        F_{Y}(y) & =F(+\infty, y)=\int_{-\infty}^{y}\left[\int_{-\infty}^{+\infty} f(x, y) \dd  x\right] \dd  y
+    \end{flalign*}
+    分别为 $ (X, Y) $ 关于 $ X $ 和关于 $ Y $ 的边缘分布函数.
+    而称
+    \begin{flalign*}
+        f_{X}(x) & =\int_{-\infty}^{+\infty} f(x, y) \dd  y \\
+        f_{Y}(y) & =\int_{-\infty}^{+\infty} f(x, y) \dd  x
+    \end{flalign*}
+    分别为 $ (X, Y) $ 关于 $ X $ 和关于 $ Y $ 的边缘概率密度.
+\end{definition}
+
+\begin{example}
+    设二维随机变量 $(X,Y)$ 的概率密度为 $$f(x,y)=\begin{cases}
+            \dfrac{k}{2}x\e^{-(x+y)},~x,y>0 \\[6pt]
+            0, & \text{其他}
+        \end{cases}$$
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求常数 $k$;
+        \item 求 $(X,Y)$ 关于 $X$ 和关于 $Y$ 的边缘概率密度函数;
+        \item 判断随机变量 $X$ 和 $Y$ 是否相互独立.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\displaystyle\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)\dd x\dd y=1\Rightarrow 1=\int_{0}^{+\infty}\dd y\int_{0}^{+\infty}\dfrac{k}{2}x\e^{-(x+y)}\dd x=\dfrac{k}{2}\int_{0}^{+\infty}\e^{-y}\dd y\Rightarrow k=2.$
+        \item $\displaystyle f_X(x)=\int_{0}^{+\infty}x\e^{-(x+y)}\dd y=x\e^{-x}~(x>0)\Rightarrow f_X(x)=\begin{cases}
+                      x\e^{-x}, & x>0         \\
+                      0,        & \text{其他}
+                  \end{cases}$ 同理 $f_Y(y)=\begin{cases}
+                      \e^{-y}, & y>0         \\
+                      0,       & \text{其他}
+                  \end{cases}$
+        \item 因为 $f(x,y)=f_X(x)\cdot f_Y(y)$，所以 $X,Y$ 相互独立.
+    \end{enumerate}
+\end{solution}
+
+\subsection{二维连续型随机变量函数的分布}
+
+\begin{theorem}[常见的二维连续型随机变量函数的分布]
+    设二维连续型随机变量 $ (X, Y) $ 的概率密度为 $ f(x, y) $，$X $ 和 $ Y $ 概率密度分别为 $ f_{X}(x) $ 和 $ f_{Y}(y) $，连续型随机变量 $ Z=g(X, Y) $ 是 $ X $ 和 $ Y $ 的函数，则当
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $Z=X+Y $ 的概率密度
+              $$\begin{matrix}
+                      \displaystyle f_{Z}(z)  =\int_{-\infty}^{+\infty} f(x, z-x) \dd  x \\
+                      \displaystyle f_{Z}(z)  =\int_{-\infty}^{+\infty} f(z-y, y) \dd  y
+                  \end{matrix}\xrightarrow{\text{当 $ X $ 和 $ Y $ 相互独立时}}\begin{matrix}
+                      \displaystyle f_{Z}(z)=\int_{-\infty}^{+\infty} f_{X}(x) f_{Y}(z-x) \dd  x \\
+                      \displaystyle f_{Z}(z)=\int_{-\infty}^{+\infty} f_{X}(z-y) f_{Y}(y) \dd  y
+                  \end{matrix}$$
+        \item $Z=\pm X\mp Y $ 的概率密度
+              $$\begin{matrix}
+                      \displaystyle \int_{-\infty}^{+\infty} f(x, x\mp z) \dd  x \\
+                      \displaystyle \int_{-\infty}^{+\infty} f(y\pm z, y) \dd  y
+                  \end{matrix}\xrightarrow{\text{当 $ X $ 和 $ Y $ 相互独立时}}\begin{matrix}
+                      \displaystyle \int_{-\infty}^{+\infty} f_{X}(x) f_{Y}(x\mp z) \dd  x \\
+                      \displaystyle \int_{-\infty}^{+\infty} f_{Y}(y) f_{X}(y\pm z) \dd  y
+                  \end{matrix}
+              $$
+        \item $Z=\dfrac{Y}{X}$ 的概率密度
+              $$f_{Z}(z)=\int_{-\infty}^{+\infty}|x| f(x, x z) \dd  x \xrightarrow{\text{当 $ X $ 和 $ Y $ 相互独立时}} \int_{-\infty}^{+\infty}|x| f_{X}(x) f_{Y}(x z) \dd  x$$
+        \item $Z=X Y $ 的概率密度
+              $$f_{Z}(z)=\int_{-\infty}^{+\infty} \frac{1}{|x|} f\left(x, \frac{z}{x}\right) \dd  x \xrightarrow{\text{当 $ X $ 和 $ Y $ 相互独立时}}\int_{-\infty}^{+\infty} \frac{1}{|x|} f_{X}(x) f_{Y}\left(\frac{z}{x}\right) \dd  x$$
+        \item $Z=\max \{X, Y\} $ 的分布
+              $$F_{Z}(z)=P\qty{X\leqslant z,Y\leqslant z}=F(z,z) \xrightarrow{\text{当 $ X $ 和 $ Y $ 相互独立时}} F_X(z)F_Y(y)\xrightarrow{\text{当 $ X $ 和 $ Y $ 独立同分布时}}F_X^2(x)$$
+              当 $X$ 和 $Y$ 独立同分布时，$Z$ 的概率密度为 $$f_Z(z)=2F_X(z)f_X(z)$$
+        \item $Z=\min \{X, Y\} $ 的分布
+              \begin{flalign*}
+                  F_Z(z) =1-P\qty{X>z,Y>z} & \xrightarrow{\text{当 $ X $ 和 $ Y $ 相互独立时}} 1-\qty[1-F_X(z)]\qty[1-F_Y(z)] \\
+                                           & \xrightarrow{\text{当 $ X $ 和 $ Y $ 独立同分布时}} 1-\qty[1-F_X(z)]^2
+              \end{flalign*}
+              当 $X$ 和 $Y$ 独立同分布时，$Z$ 的概率密度为 $$f_Z(z)=2\qty[1-F_X(z)]f_X(z).$$
+    \end{enumerate}
+\end{theorem}
+
+\subsection{二维随机变量条件概率密度与条件分布函数}
+
+\begin{definition}[二维随机变量条件概率密度]
+    设 $ (X, Y) $ 为连续型随机变量，其概率密度为 $ f(x, y) $，边缘密度函数分别为 $ f_{X}(x) $ 和 $ f_{Y}(y) $，
+    若 $ f_{Y}(y)>0 $，则称
+    $$f_{X \mid Y}(x \mid y)=\frac{f(x, y)}{f_{Y}(y)}$$
+    为在 $ Y=y $ 的条件下 $ X $ 的条件概率密度.
+    同样，若 $ f_{X}(x)>0 $，则称
+    $$f_{Y \mid X}(y \mid x)=\frac{f(x, y)}{f_{X}(x)}$$
+    为在 $ X=x $ 条件下 $ Y $ 的条件概率密度.
+\end{definition}
+
+\begin{example}
+    设二维正态随机变量 $(X,Y)$ 的概率密度为 $f(x,y)$，已知条件概率密度 $$f_{X\mid Y}(x\mid y)=A\e^{-\frac{2}{3}\qty(x-\frac{y}{2})^2},~f_{Y\mid X}(y\mid x)=B\e^{-\frac{2}{3}\qty(y-\frac{x}{2})^2}$$
+    试求: \begin{enumerate*}[label=(\arabic{*})]
+        \item 常数 $A,~B$;
+        \item $f_X(x),~f_Y(y)$;
+        \item $f(x,y)$.
+    \end{enumerate*}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 令 $\displaystyle A\e^{-\frac{2}{3}\qty(x-\frac{y}{2})^2}=\dfrac{1}{\sqrt{2\pi}\sigma}\e^{-\frac{(x-\mu)^2}{2\sigma^2}}\Rightarrow \begin{cases}
+            A=\dfrac{1}{\sqrt{2\pi}\sigma}\\[6pt]
+            \dfrac{2}{3}\qty(x-\dfrac{y}{3})^2=\dfrac{(x-\mu)^2}{2\sigma^2}
+        \end{cases}\Rightarrow\begin{cases}
+            A=\dfrac{2}{\sqrt{6\pi}}\\[6pt]
+            \mu=\dfrac{y}{3}
+        \end{cases}$ 由对称性知 $B=A=\dfrac{2}{\sqrt{6\pi}}.$
+        \item 易得 $\dfrac{f_X(x)}{f_Y(y)}=\dfrac{f_{X\mid Y}(x\mid y)}{f_{Y\mid X}(y\mid x)}=\e^{-\frac{2}{3}\qty[\qty(x-\frac{y}{2})^2-\qty(y-\frac{x}{2})^2]}=\e^{-\frac{1}{2}\qty(x^2+y^2)}=\dfrac{\e^{-\frac{x^2}{2}}}{\e^{-\frac{y^2}{2}}}$，故 $$f_X(x)=C\e^{-\frac{x^2}{2}},~f_Y(y)=C\e^{-\frac{y^2}{2}}$$
+        由于标准差为 1，则根据正态分布的概率密度知 $C=\dfrac{1}{\sqrt{2\pi}}$，因此 $f_X(x)=\dfrac{1}{\sqrt{2\pi}}\e^{-\frac{x^2}{2}},~f_Y(y)=\dfrac{1}{\sqrt{2\pi}}\e^{-\frac{y^2}{2}}.$
+        \item $f(x,y)=f_{X\mid Y}(x\mid y)f_Y(y)=\dfrac{2}{\sqrt{6\pi}}\e^{-\frac{2}{3}\qty(x-\frac{y}{2})^2}\cdot \dfrac{1}{\sqrt{2\pi}}\e^{-\frac{y^2}{2}}=\dfrac{1}{\sqrt{3}\pi}\e^{-\frac{2}{3}\qty(x^2-xy+y^2)}.$
+    \end{enumerate}
+\end{solution}
+
+\begin{definition}[二维随机变量条件分布函数 A]
+    如果任给 $ \varepsilon>0, P\{y-\varepsilon<Y \leqslant y+\varepsilon\}>0 ,$
+    $$\lim _{\varepsilon \rightarrow 0^{+}} P\{X \leqslant x \mid y-\varepsilon<Y \leqslant y+\varepsilon\}=\lim _{\varepsilon \rightarrow 0^{+}} \frac{P\{X \leqslant x, y-\varepsilon<Y \leqslant y+\varepsilon\}}{P\{y-\varepsilon<Y \leqslant y+\varepsilon\}}$$
+    存在，则称此极限为在条件 $ Y=y $ 下随机变量 $ X $ 的条件分布函数，记为 $ P\{X \leqslant x \mid Y=y\} $ 或 $ F_{X \mid Y}(x \mid y) $.
+    $$F_{X \mid Y}(x \mid y)=\lim _{\varepsilon \rightarrow 0^{+}} \frac{F(x, y+\varepsilon)-F(x, y-\varepsilon)}{F_{Y}(y+\varepsilon)-F_{Y}(y-\varepsilon)}
+    =\frac{\displaystyle\int_{-\infty}^{x} \int_{y-\varepsilon}^{y+\varepsilon} f(x, y) \dd  x \dd  y}{\displaystyle \int_{y-\varepsilon}^{y+\varepsilon} f_{Y}(y) \dd  x}$$
+\end{definition}
+
+\begin{definition}[二维随机变量条件分布函数 B]
+    设 $ f(x, y) $ 在点 $ (x, y) $ 处连续，$f_{Y}(y) $ 连续且 $ f_{Y}(y)>0 $，则称
+    $$F_{X \mid Y}(x \mid y)=\int_{-\infty}^{x} \frac{f(x, y)}{f_{Y}(y)} \dd  x$$
+    为在 $ Y=y $ 的条件下 $ X $ 的条件分布函数.
+    若 $ f(x, y) $ 在点 $ (x, y) $ 处连续，$f_{X}(x) $ 连续且 $ f_{X}(x)>0 $，则称
+    $$F_{Y \mid X}(y \mid x)=\int_{-\infty}^{y} \frac{f(x, y)}{f_{X}(x)} \dd  y$$
+    为在 $ X=x $ 的条件下 $ Y $ 的条件分布函数.
+\end{definition}
+
+\subsection{二维正态分布}
+
+\begin{definition}[二维正态分布]
+    若二维连续型随机变量 $ (X, Y) $ 的概率密度为
+    $$f(x,y)=\frac{1}{2 \pi \sigma_{1} \sigma_{2} \sqrt{1-\rho^{2}}} \cdot \mathrm{e}^{-\frac{1}{2\left(1-\rho^{2}\right)}\left[\frac{\left(x-\mu_{1}\right)^{2}}{\sigma_{1}^{2}}-2 \rho \frac{\left(x-\mu_{1}\right)\left(y-\mu_{2}\right)}{\sigma_{1} \sigma_{2}}+\frac{\left(y-\mu_{2}\right)^{2}}{\sigma_{2}^{2}}\right]}$$
+    则称 $ (X, Y) $ 服从参数为 $ \mu_{1}, \mu_{2}, \sigma_{1}^{2}, \sigma_{2}^{2}, \rho $ 的二维正态分布，
+    记 $$ (X, Y) \sim N\left(\mu_{1}, \mu_{2}; \sigma_{1}^{2}, \sigma_{2}^{2}; \rho\right) $$
+    其中 $ \mu_{1}, \mu_{2}, \sigma_{1}^{2}, \sigma_{2}^{2}, \rho $ 均为常数，且 $ \sigma_{1}>0, \sigma_{2}>0,|\rho|<1 .$
+\end{definition}
+\begin{theorem}[二维正态分布推出一维正态分布]
+    若 $ (X, Y) \sim N\left(\mu_{1}, \mu_{2}, \sigma_{1}^{2}, \sigma_{2}^{2}, \rho\right) $，则
+    $$X \sim N\left(\mu_{1}, \sigma_{1}^{2}\right), Y \sim N\left(\mu_{2}, \sigma_{2}^{2}\right)$$
+    反之不对，即 $ X $ 与 $ Y $ 均服从一维正态，不能保证 $ (X, Y) $ 一定服从二维正态分布.
+\end{theorem}
+
+\begin{theorem}[独立一维正态分布推出二维正态分布]
+    若 $ X \sim N\left(\mu_{1}, \sigma_{1}^{2}\right), Y \sim N\left(\mu_{2}, \sigma_{2}^{2}\right)$，且相互独立，则 $ (X, Y) $ 一定服从二维正态分布
+    $$ (X, Y) \sim N\left(\mu_{1}, \mu_{2}; \sigma_{1}^{2}, \sigma_{2}^{2}; \rho\right) .$$
+\end{theorem}
+
+\begin{theorem}
+    若 $\mqty|a&b\\c&d|\neq0$，则 $ (a X+b Y, c X+d Y) $ 服从二维正态分布，明显 $ a X+b Y $ 服从一维正态分布
+    $$a X+b Y \sim N\left(a \mu_{1}+b \mu_{2}, a^{2} \sigma_{1}^{2}+b^{2} \sigma_{2}^{2}+2 a b \rho \sigma_{1} \sigma_{2}\right) .$$
+\end{theorem}
+
+\begin{theorem}
+    $X $ 和 $ Y $ 相互独立的充要条件是 $ \rho=0 .$
+\end{theorem}
+
+\begin{theorem}[二维正态分布的条件分布]
+    设二维随机变量 $(X,Y)$ 服从 $N\qty(\mu_1,\mu_2;\sigma^2_1,\sigma^2_2;\rho)$，则 $X$ 在 $Y=y$ 条件下的条件分布为正态分布，即
+    $$X\sim N\qty(\mu_1+\dfrac{\rho\sigma_1(y-\mu_2)}{\sigma_2},\sigma_1^2\qty(1-\rho^2))$$
+    同理，$Y$ 在 $X=x$ 条件下的条件分布为正态分布，即
+    $$Y\sim N\qty(\mu_2+\dfrac{\rho\sigma_2(x-\mu_2)}{\sigma_1},\sigma_2^2\qty(1-\rho^2)).$$
+\end{theorem}
+
+\begin{example}
+    设二维随机变量 $(X,Y)$ 的概率密度为 $f(x,y)=A\e^{-2x^2-y^2},~-\infty<x,y<+\infty$，
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求常数 $A$;
+        \item 求条件概率密度 $f_{Y\mid X}(y\mid x).$
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item \textbf{法一: }因为二维正态分布的概率密度为 
+        $$f(x,y)=\frac{1}{2 \pi \sigma_{1} \sigma_{2} \sqrt{1-\rho^{2}}} \cdot \mathrm{e}^{-\frac{1}{2\left(1-\rho^{2}\right)}\left[\frac{\left(x-\mu_{1}\right)^{2}}{\sigma_{1}^{2}}-2 \rho \frac{\left(x-\mu_{1}\right)\left(y-\mu_{2}\right)}{\sigma_{1} \sigma_{2}}+\frac{\left(y-\mu_{2}\right)^{2}}{\sigma_{2}^{2}}\right]}$$
+        对比本题所给密度得 $(X,Y)\sim N\qty(0,0;\dfrac{1}{4},\dfrac{1}{2};0)$，因此 $A=\dfrac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}=\dfrac{1}{2\pi\cdot\sqrt{\dfrac{1}{4}}\cdot\sqrt{\dfrac{1}{2}}}=\dfrac{\sqrt{2}}{\pi}.$\\
+        \textbf{法二: }因为 $\displaystyle\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)\dd x\dd y=1,~\int_{-\infty}^{+\infty}\e^{-t^2}\dd t=\sqrt{\pi}$，所以 
+        \begin{flalign*}
+            1&=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)\dd x\dd y=A\int_{-\infty}^{+\infty}\e^{-2x^2}\qty(\int_{-\infty}^{+\infty}\e^{-y^2}\dd y)\dd x=A\sqrt{\pi}\int_{-\infty}^{+\infty\e^{-2x^2}}\dd x\\
+            &\xlongequal{t=\sqrt{2}x}A\sqrt{\pi}\cdot\dfrac{1}{\sqrt{2}}\int_{-\infty}^{+\infty}\e^{-t^2}\dd t=A\sqrt{\pi}\cdot\dfrac{1}{\sqrt{2}}\cdot\sqrt{\pi}\Rightarrow A=\dfrac{\sqrt{2}}{\pi}.
+        \end{flalign*}
+        \item 因为 $\rho=0$，所以 $X$ 与 $Y$ 相互独立，所以 $X\sim N\qty(0,\dfrac{1}{4}),~Y\sim N\qty(0,\dfrac{1}{2}),~f(x,y)=f_X(x)f_Y(y)$，并且
+        $$f_X(x)=\dfrac{1}{\sqrt{2\pi}\cdot\dfrac{1}{2}}\e^{-\frac{x^2}{\frac{1}{2}}}=\dfrac{2}{\sqrt{2\pi}}\e^{-2x^2},~f_Y(y)=\dfrac{1}{\sqrt{2\pi}\cdot\dfrac{1}{\sqrt{2}}}\e^{-y^2}=\dfrac{1}{\sqrt{\pi}}\e^{-y^2}$$
+        所以 $f_{Y\mid X}(y\mid x)=\dfrac{f(x,y)}{f_X(x)}=f_Y(y)=\dfrac{1}{\sqrt{\pi}}\e^{-y^2},~-\infty<y<+\infty.$
+    \end{enumerate}
+\end{solution}
+
+\subsection{卷积公式}
+
+当 $Z=h(X,Y)$，其中一个随机变量服从均匀分布时，使用卷积公式将大大简化计算过程.
+
+\begin{example}
+    设随机变量 $ X $ 和 $ Y $ 相互独立，$X \sim N(0,1), Y \sim U[0,1], Z=X+Y $，求 $ Z $ 的概率密度函数 $ f_{Z}(z) .$
+\end{example}
+\begin{solution}
+    \textbf{法一: }由 $X\sim N(0,1)$ 知，$f_X(x)=\varphi(x)$，由 $Y\sim U[0,1]$ 知，$f_Y(y)=\begin{cases}
+            1, & 0\leqslant y\leqslant 1 \\
+            0, & \text{其他}
+        \end{cases}$，又因为 $X$ 与 $Y$ 相互独立，则 $$f(x,y)=f_X(x)f_Y(y)=\begin{cases}
+            \varphi(x), & -\infty <x<+\infty,0\leqslant y\leqslant 1 \\
+            0,          & \text{其他}
+        \end{cases}$$
+    下求 $f_Z(z)$，
+    \begin{flalign*}
+        F_Z(z) & =P\qty{Z\leqslant z}=P\qty{X+Y\leqslant z}=\iint\limits_{x+y\leqslant z}f(x,y)\dd x\dd y=\int_{-\infty}^{z-1}\varphi(x)\dd x\int_{0}^{1}\dd y+\int_{z-1}^{z}\varphi(x)\dd x\int_{0}^{z-x}\dd y \\
+               & =\int_{-\infty}^{z-1}\varphi(x)\dd x+\int_{z-1}^{z}(z-x)\varphi(x)\dd x=\varPhi(z-1)+\int_{z-1}^{z}(z-x)\varphi(x)\dd x
+    \end{flalign*}
+    则 $f_Z(z)=\displaystyle\dv{F_Z(z)}{z}=\varphi(z-1)+\dv{z}\qty[z\int_{z-1}^{z}\varphi(x)\dd x-\int_{z-1}^{z}x\varphi(x)\dd x]=\int_{z-1}^{z}\varphi(z)\dd z=\varPhi(z)-\varPhi(z-1).$\\
+    \textbf{法二: }由卷积公式 $$f_Z(z)=\int_{-\infty}^{+\infty}f(x,z-x)\dd x=\int_{-\infty}^{+\infty}f_X(x)f_Y(z-x)\dd x=\int_{z-1}^{z}\varphi(x)\dd x=\varPhi(z)-\varPhi(z-1).$$
+\end{solution}
+
+\begin{example}
+    设随机变量 $X\sim N\qty(\mu,\sigma^2),~Y\sim U[-\pi ,\pi]$，$X,Y$ 相互独立，令 $Z=X+Y$，求 $f_Z(z).$
+\end{example}
+\begin{solution}
+    \textbf{法一: }因为 $X\sim N\qty(\mu,\sigma^2),~Y\sim U[-\pi ,\pi]$，所以 $$f_X(x)=\dfrac{1}{\sqrt{2\pi}\sigma}\e^{-\frac{(x-\mu)^2}{2\sigma^2}},~f_Y(y)=\begin{cases}
+            \dfrac{1}{2\pi}, & -\pi\leqslant y\leqslant y \\[6pt]
+            0,               & \text{其他}
+        \end{cases}$$
+    并且 $X,Y$ 相互独立，那么 $$f(x,y)=f_X(x)f_Y(y)=\begin{cases}
+            \dfrac{1}{2\pi\sqrt{2\pi}\sigma}\e^{-\frac{(x-\mu)^2}{2\sigma^2}}, & -\infty<x<+\infty,-\pi\leqslant y\leqslant \pi \\[6pt]
+            0,                                                                 & \text{其他}
+        \end{cases}$$
+    而 $F_Z(z)=P\qty{Z\leqslant z}=P\qty{X+Y\leqslant z}=\displaystyle\iint\limits_{x+y\leqslant z}f(x,y)\dd x\dd y$，因此
+    \begin{flalign*}
+        F_Z(z) & =\dfrac{1}{2\pi\sqrt{2\pi}\sigma}\int_{-\pi}^{\pi}\dd y\int_{-\infty}^{z-y}\e^{-\frac{(x-\mu)^2}{2\sigma^2}}\dd x=\dfrac{1}{2\pi}\int_{-\pi}^{\pi}\dd y\int_{-\infty}^{z-y}\dfrac{1}{\sqrt{2\pi}}\e^{-\frac{1}{2}\qty(\frac{x-\mu}{\sigma})^2}\dd \qty(\dfrac{x-\mu}{\sigma})                                                 \\
+               & \xlongequal{t=\frac{x=\mu}{\sigma}}\dfrac{1}{2\pi}\int_{-\pi}^{\pi}\dd y\int_{-\infty}^{\frac{z-y-\mu}{\sigma}}\e^{-\frac{1}{2}t^2}\dd t=\dfrac{1}{2\pi}\int_{-\pi}^{\pi}\varPhi\qty(\dfrac{z-y-\mu}{\sigma})\dd y=-\dfrac{\sigma}{2\pi}\int_{-\pi}^{\pi}\varPhi\qty(\dfrac{z-y-\mu}{\sigma})\dd\qty(\dfrac{z-y-\mu}{\sigma}) \\
+               & \xlongequal{u=\frac{z-y-\mu}{\sigma}}\dfrac{\sigma}{2\pi}\int_{\frac{z-\pi-\mu}{\sigma}}^{\frac{z+\pi-\mu}{\sigma}}\varPhi(u)\dd u
+    \end{flalign*}
+    因此 $f_Z(z)=F_Z'(z)=\displaystyle \dv{z}\qty[\dfrac{\sigma}{2\pi}\int_{\frac{z-\pi-\mu}{\sigma}}^{\frac{z+\pi-\mu}{\sigma}}\varPhi(u)\dd u]=\dfrac{1}{2\pi}\qty[\varPhi\qty(\dfrac{z+\pi-\mu}{\sigma})-\varPhi\qty(\dfrac{z-\pi-\mu}{\sigma})].$\\
+    \textbf{法二: }$\displaystyle f_Z(z)=\int_{-\infty}^{+\infty}f_X(x)\cdot f_Y(z-x)\dd x=\int_{z-\pi}^{z+\pi}\dfrac{1}{\sqrt{2\pi}\sigma}\e^{-\frac{(x-\mu)^2}{2\sigma^2}}\dd x=\dfrac{1}{2\pi}\qty[\varPhi\qty(\dfrac{z+\pi-\mu}{\sigma})-\varPhi\qty(\dfrac{z-\pi-\mu}{\sigma})].$
+\end{solution}

@@ -1,0 +1,243 @@
+\section{数学期望与方差}
+
+\subsection{数学期望}
+
+\begin{definition}[离散型随机变量的数学期望]
+    设离散型随机变量 $ X $ 的分布律为 $$ P\left\{X=x_{k}\right\}=p_{k}(k=1,2, \cdots) $$
+    若级数 $ \displaystyle\sum_{k=1}^{\infty} x_{k} p_{k} $ 绝对收敛，则称级数 $ \displaystyle\sum_{k=1}^{\infty} x_{k} p_{k} $
+    的和为随机变量 $ X $ 的数学期望，记为 $ E(X) $，即 $$ \displaystyle E(X)=\sum_{k=1}^{\infty} x_{k} p_{k}.$$
+\end{definition}
+
+不是所有的随机变量都有数学期望，数学期望是反映随机变量 $X$ 取可能值的平均值.
+
+\begin{definition}[连续型随机变量的数学期望]
+    设连续型随机变量 $ X $ 的概率密度为 $ f(x) $，若积分 $$ \displaystyle\int_{-\infty}^{+\infty} x f(x) \dd x $$ 绝对收敛，
+    则称积分 $\displaystyle \int_{-\infty}^{+\infty} x f(x) \dd x $ 的值为随机变量 $ X $ 的数学期望，记为 $ E(X) $，即 $$ E(X)=\int_{-\infty}^{+\infty} x f(x) \dd x .$$
+\end{definition}
+
+\begin{example}
+    设随机变量 $X$ 的概率密度函数 $f(x)=\begin{cases}
+            x, & a<x<b       \\
+            0, & \text{其他}
+        \end{cases} (a>0)$，其中 $a,b$ 为待定常数，且 $E\qty(X^2)=2$，求 $P\qty{|X|<\sqrt{2}}$.
+\end{example}
+\begin{solution}
+    因为 $\displaystyle\int_{-\infty}^{+\infty}f(x)\dd x=1$，得 $\displaystyle \int_{a}^{b}x\dd x=1\Rightarrow b^2-a^2=2$，又因为 $\displaystyle E\qty(X^2)=\int_{-\infty}^{+\infty}x^2f(x)\dd x=\int_{a}^{b}x^3\dd x\Rightarrow b^4-a^4=8$，又因为 $0<a<b$ 解得 $a=1,b=\sqrt{3}$，
+    则 $$P\qty{|X|<\sqrt{2}}=P\qty{-\sqrt{2}<X<\sqrt{2}}=F\qty(\sqrt{2})-F\qty(-\sqrt{2})=\displaystyle\int_{-\sqrt{2}}^{\sqrt{2}}f(x)\dd x=\int_{1}^{\sqrt{2}}x\dd x=\eval{\dfrac{1}{2}x^2}_{1}^{\sqrt{2}}=\dfrac{1}{2}.$$
+\end{solution}
+
+\begin{theorem}[常数的数学期望]
+    设 $ C $ 是常数，则有 $ E(C)=C.$ 
+\end{theorem}
+\begin{theorem}
+    设 $ X $ 是一个随机变量，$ C $ 是常数，则有 $ E(C X)=C E(X) .$
+\end{theorem}
+\begin{theorem}
+    设 $ X, Y $ 是两个随机变量，则有 $ E(X+Y)=E(X)+E(Y).$
+\end{theorem}
+\begin{theorem}
+    设 $ X, Y $ 是相互独立的随机变量，则有 $ E(X Y)=E(X) E(Y) .$
+\end{theorem}
+
+\begin{definition}[一维随机变量函数的数学期望]
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 离散型随机变量\\
+              设 $ Y $ 是随机变量 $ X $ 的函数: $Y=g(X) $ ($g $ 连续)，若 $ X $ 是离散型随机变量，其分布律为
+              $$P\left\{X=x_{k}\right\}=p_{k}, k=1,2, \cdots$$
+              且级数 $ \displaystyle\sum_{k=1}^{\infty} g\left(x_{k}\right) p_{k} $ 绝对收敛，则
+              $$E(Y)=E[g(X)]=\sum_{k=1}^{\infty} g\left(x_{k}\right) p_{k}.$$
+        \item 连续型随机变量\\
+              设 $ Y $ 是随机变量 $ X $ 的函数: $Y=g(X) $ ($g $ 连续)，若 $ X $ 是连续型随机变量，其概率密度为 $f(x) $，
+              且反常积分 $ \displaystyle\int_{-\infty}^{+\infty} g(x) f(x) \dd  x $ 绝对收敛，则
+              $$E(Y)=E[g(X)]=\int_{-\infty}^{+\infty} g(x) f(x) \dd  x .$$
+    \end{enumerate}
+\end{definition}
+
+\begin{example}
+    设随机变量 $X$ 的分布函数为 $F(x)=0.3\varPhi(x)+0.7\varPhi\qty(\dfrac{x-1}{2})$，其中 $\varPhi(x)$ 为标准正态分布的分布函数，求 $E(X)$.
+\end{example}
+\begin{solution}
+    对 $F(x)$ 求导，得 $f(x)=0.3\varphi(x)+0.35\varphi\qty(\dfrac{x-1}{2})$，因此
+    \begin{flalign*}
+        E(X) & =\int_{-\infty}^{+\infty}xf(x)\dd x=\int_{-\infty}^{+\infty}x\qty[0.3\varphi(x)+0.35\varphi\qty(\dfrac{x-1}{2})]\dd x=0.3\int_{-\infty}^{+\infty}x\varphi(x)\dd x+0.35\int_{-\infty}^{+\infty}x\varphi\qty(\dfrac{x-1}{2})\dd x \\
+             & =0.3\cdot 0+0.7\int_{-\infty}^{+\infty}(2t+1)\varphi(t)\dd t=1.4\int_{-\infty}^{+\infty}t\varphi(t)\dd t+0.7\int_{-\infty}^{+\infty}\varphi(t)\dd t=0.7
+    \end{flalign*}
+\end{solution}
+
+\begin{example}[2019 数一]
+    在区间 $(0,2)$ 上随机取一点，将该区间分成两段，较短一段的长度为 $X$，较长一段的长度为 $Y$，令 $Z=\dfrac{Y}{X}$
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求 $X$ 的概率密度;
+        \item 求 $Z$ 的概率密度;
+        \item 求 $E\qty(\dfrac{X}{Y}).$
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 因为 $F_X(x)=P\qty{X\leqslant x}=\begin{cases}
+                      0, & x\leqslant 0 \\
+                      x, & 0<x<1        \\
+                      0, & x\geqslant 1
+                  \end{cases}$ 故 $f_X(x)=\begin{cases}
+                      1, & 0<x<1        \\
+                      0, & \text{其他}.
+                  \end{cases}$
+        \item $Z=\dfrac{Y}{X}=\dfrac{2-X}{X}=\dfrac{2}{X}-1$，则 $F_Z(z)=P\qty{Z\leqslant z}=P\qty{\dfrac{2}{X}-1\leqslant z}$，
+              当 $z<1$ 时 $F_Z(z)=0$; 当 $Z\geqslant 1$ 时，$$F_Z(z)=P\qty{\dfrac{2}{X}-1\leqslant z}\Rightarrow P\qty{X\geqslant \dfrac{2}{z+1}}=\int_{\frac{2}{z+1}}^{1}1\dd x=\dfrac{z-1}{z+1}$$
+              于是 $F_Z(z)=\begin{cases}
+                      0,                & z<1          \\
+                      \dfrac{z-1}{z+1}, & z\geqslant 1
+                  \end{cases}\Rightarrow f_Z(z)=F'_Z(z)=\begin{cases}
+                      0,                  & z\leqslant 1 \\
+                      \dfrac{2}{(z+1)^2}, & z> 1.
+                  \end{cases}$
+        \item $E\qty(\dfrac{X}{Y})=E\qty(\dfrac{X}{2-X})=\displaystyle\int_{-\infty}^{+\infty}\dfrac{x}{2-x}\cdot1\dd x=\int_{0}^{1}\dfrac{x}{2-x}\dd x=-\int_{0}^{1}\qty(1+\dfrac{2}{x-2})\dd x=2\ln 2-1.$
+    \end{enumerate}
+\end{solution}
+
+\begin{theorem}[最值表达式]
+    $\max\qty{a,b}=\dfrac{a+b+|a-b|}{2},~\min\qty{a,b}=\dfrac{a+b-|a-b|}{2}.$
+\end{theorem}
+
+\begin{example}
+    设 $X$ 与 $Y$ 独立，且 $E(X)$ 和 $E(Y)$ 存在，记 $U=\max\qty{X,Y},~V=\min\qty{X,Y}$，则 $E(UV)$
+    \begin{tasks}(4)
+        \task $E(U)\cdot E(V)$
+        \task $E(X)\cdot E(Y)$
+        \task $E(U)\cdot E(Y)$
+        \task $E(X)\cdot E(V)$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    当 $X\geqslant Y$ 时，$U=X,~V=Y,~E(UV)=E(X)\cdot E(Y)$; 当 $X<Y$ 时，$U=Y,~V=X,~E(UV)=E(X)\cdot E(Y)$，因此无论何种情况，恒有 $E(UV)=E(X)\cdot E(Y)$，故选 B.
+\end{solution}
+
+\begin{example}
+    设随机变量 $X$ 与 $Y$ 独立同分布，已知 $X\sim N(\mu,\sigma^2)$，求 $Z=\min\qty{X,Y}$ 的数学期望.
+\end{example}
+\begin{solution}
+    因为 $\min\qty{X,Y}=\dfrac{X+Y-|X-Y|}{2}$，所以 $E(Z)=E\qty(\dfrac{X+Y-|X-Y|}{2})$，$E(X)=E(Y)=\mu$，
+    \begin{flalign*}
+        E(|X-Y|)=\int_{-\infty}^{+\infty}\dfrac{|t|}{\sqrt{2\pi}\sqrt{2}\sigma }\e^{-\frac{t^2}{4\sigma^2}}\dd t=2\int_{0}^{+\infty}\dfrac{t}{2\sigma\sqrt{\pi}}\e^{-\frac{t^2}{4\sigma^2}}\dd t=\dfrac{2\sigma}{\sqrt{\pi}}\int_{0}^{+\infty}\e^{-\frac{t^2}{4\sigma^2}}\dd \qty(\dfrac{t^2}{4\sigma^2})=\eval{-\dfrac{2\sigma}{\sqrt{\pi}}\e^{-u}}_{0}^{+\infty}=\dfrac{2\sigma}{\sqrt{\pi}}
+    \end{flalign*}
+    因此 $E(Z)=\mu-\dfrac{\sigma}{\sqrt{\pi}}.$
+\end{solution}
+
+\subsection{方差}
+
+\begin{definition}[方差]
+    设 $ X $ 是一个随机变量，若 $ E\left\{[X-E(X)]^{2}\right\} $ 存在，则称其为随机变量 $ X $ 的方差，记为 $ D(X) $，即
+    $$D(X)=E\left\{[X-E(X)]^{2}\right\}$$
+    称 $ \sqrt{D(X)} $ 为 $ X $ 的均方差或标准差，记为 $ \sigma(X) $, 即
+    $\sigma(X)=\sqrt{D(X)} .$
+\end{definition}
+
+\begin{enumerate}[label=(\arabic{*})]
+    \item 离散型随机变量\\
+    设离散型随机变量 $ X $ ，其分布律为 $P\left\{X=x_{k}\right\}=p_{k}, k=1,2, \cdots,$
+    则方差计算公式为
+    $$D(X)=\sum_{k=1}^{\infty}\left[x_{k}-E(X)\right]^{2} p_{k}.$$
+    \item 连续型随机变量\\
+    设连续型随机变量 $ X $，其概率密度为 $ f(x) $，则方差计算公式为
+    $$D(X)=\int_{-\infty}^{+\infty}[x-E(X)]^{2} f(x) \dd  x .$$
+\end{enumerate}
+
+\begin{theorem}[方差与期望的联系]
+    $D(X)=E\left(X^{2}\right)-[E(X)]^{2} .$
+\end{theorem}
+
+\begin{theorem}[二维均匀分布的随机变量的概率密度]
+    若 $(X,Y)$ 在平面有界区域 $D$ 上服从均匀分布，则 $(X,Y)$ 的概率密度为:
+    $$f(x,y)=\begin{cases}
+            S_D^{-1}, & (x,y)\in D   \\
+            0,        & \text{其他}.
+        \end{cases}$$
+\end{theorem}
+
+\begin{example}
+    设 $(X,Y)$ 在区域 $D:0<x<1,|y|\leqslant x$ 内服从均匀分布，
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求随机变量 $X$ 的边缘密度函数;
+        \item 设 $Z=2X+1$，求 $D(Z)$.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 区域 $D$ 的面积为 $S_D=\dfrac{1}{2}\cdot1\cdot2=1$，则 $f(x,y)=\begin{cases}
+                      1, & (x,y)\in D  \\
+                      0, & \text{其他}
+                  \end{cases}\Rightarrow f_X(x)=\displaystyle\int_{-\infty}^{+\infty}f(x,y)\dd y=\begin{cases}
+                      2x, & 0<x<1        \\
+                      0,  & \text{其他}.
+                  \end{cases}$
+        \item 由方程与期望的关系，
+              \begin{flalign*}
+                  D(X) & =E\qty(X^2)-E^2(X)=\int_{-\infty}^{+\infty}x^2f_X(x)\dd x-\qty(\int_{-\infty}^{+\infty}xf_X(x)\dd x)^2 \\
+                       & =\int_{0}^{1}2x^3\dd x-\qty(\int_{0}^{1}2x^2\dd x)^2=\dfrac{1}{2}-\dfrac{4}{9}=\dfrac{1}{18}
+              \end{flalign*}
+              所以 $D(Z)=D(2X+1)=4D(X)=\dfrac{4}{18}=\dfrac{2}{9}.$
+    \end{enumerate}
+\end{solution}
+
+\begin{theorem}
+    若 $X_1,X_2,\cdots,X_n$ 互相独立，且 $X_i\sim N\qty(\mu_i,\sigma_i^2)$，则
+    $$\sum_{i=1}^{n}a_iX_i\sim N\qty(\sum_{i=1}^{n}a_i\mu_i,\sum_{i=1}^{n}a_i^2\sigma_i^2).$$
+\end{theorem}
+
+\begin{example}[1998 数一]
+    设两个随机变量相互独立，且都服从均值为 0，方差为 $\dfrac{1}{2}$ 的正态分布，求随机变量 $|X-Y|$ 的方差.
+\end{example}
+\begin{solution}
+    令 $Z=X-Y$，由于 $X\sim N\qty(0,\dfrac{1}{2}),~Y\sim N\qty(0,\dfrac{1}{2})$，于是
+    $Z\sim N\qty(0,\dfrac{1}{2}+(-1)^2\dfrac{1}{2})=N\qty(0,1)$，于是
+    \begin{flalign*}
+        D(|X-Y|)=D(|Z|)=E\qty(Z^2)-E^2(|Z|)=1-\qty(\int_{-\infty}^{+\infty}|z|\cdot\dfrac{1}{\sqrt{2\pi}}\e^{-\frac{z^2}{2}}\dd z)^2=1-\dfrac{2}{\pi}
+    \end{flalign*}
+    其中，由于 $Z$ 服从标准正态分布则方差为 1，数学期望为 0，则 $E\qty(Z^2)=D(Z)+E^2(Z)=1+0=1.$
+\end{solution}
+
+\begin{example}
+    设随机变量 $X\sim N(0,1)$，在 $X=x$ 条件下，随机变量 $Y\sim N(x,1)$，求 $Y$ 的方差 $D(Y)$.
+\end{example}
+\begin{solution}
+    $X \sim N(0,1), f_{X}(x)=\frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-\frac{x^{2}}{2}},-\infty<x<+\infty $，
+    当 $X=x $ 时，$f_{Y \mid X}(y \mid x) \sim N(x, 1)$，即当 $-\infty<x<+\infty$ 时，
+    $$f_{Y \mid X}(y \mid x)=\frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-\frac{(y-x)^{2}}{2}},~-\infty<y<+\infty $$
+    那么
+    $$(X, Y) \sim f(x, y)=f_{X}(x) f_{Y \mid X}(y \mid x)=\frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-\frac{x^{2}}{2}} \cdot \frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-\frac{(y-x)^{2}}{2}}
+        \Rightarrow f(x, y)=\frac{1}{2 \pi} \mathrm{e}^{-\frac{1}{2}\left(2 x^{2}-2 x y+y^{2}\right)},~-\infty<x,y<+\infty$$
+    已知二维正态 $ (X, Y) \sim N\left(\mu_{1}, \mu_{2} , \sigma_{1}^{2}, \sigma_{2}^{2} , \rho\right) $ 的密度为
+    $$f_{1}(x, y)=\frac{1}{2 \pi \sigma_{1} \sigma_{2} \sqrt{1-\rho^{2}}} \cdot
+        \exp \left\{-\frac{1}{2\left(1-\rho^{2}\right)}\left[\frac{\left(x-\mu_{1}\right)^{2}}{\sigma_{1}^{2}}-\frac{2 \rho\left(x-\mu_{1}\right)\left(y-\mu_{2}\right)}{\sigma_{1} \sigma_{2}}+\frac{\left(y-\mu_{2}\right)^{2}}{\sigma_{2}^{2}}\right]\right\}
+        -\infty<x,y  <+\infty.$$
+    对比 $f$ 与 $f_1$ 则有
+    $$\begin{cases}
+            \displaystyle\frac{1}{2 \pi}=\frac{1}{2 \pi \sigma_{1} \sigma_{2} \sqrt{1-\rho^{2}}} \\[6pt]
+            \displaystyle-\frac{1}{2} \cdot 2 x^{2}=-\frac{1}{2\left(1-\rho^{2}\right)} \cdot \frac{\left(x-\mu_{1}\right)^{2}}{\sigma_{1}^{2}}
+        \end{cases}\Rightarrow\begin{cases}
+            \displaystyle 1=\frac{1}{\sigma_{2} \sqrt{1-\rho^{2}}} \\[6pt]
+            \displaystyle 1=\frac{1}{2\left(1-\rho^{2}\right)} 
+        \end{cases}$$
+    解得 $\sigma_{2}=\sqrt{2},~ D (Y)=\sigma_{2}^{2}=2$
+\end{solution}
+
+\subsubsection{利用第二型 Euler 积分}
+
+有关第二型 Euler 积分的相关知识可参考 \ref{sec:eulerPoints} 节.
+
+\begin{example}
+    设 $X$ 与 $Y$ 相互独立，且 $X\sim N\qty(0,\sigma^2),~Y\sim N\qty(0,\sigma^2)$，令 $Z=\sqrt{X^2+Y^2}$，求 $E(Z),~D(Z).$
+\end{example}
+\begin{solution}
+    因为 $X\sim N\qty(0,\sigma^2),~Y\sim N\qty(0,\sigma^2)$，且 $X$ 与 $Y$ 相互独立，所以
+    $$f(x,y)=f_X(x)f_Y(y)=\dfrac{1}{2\pi\sigma^2}\e^{-\frac{1}{2\sigma^2}\qty(x^2+y^2)}$$
+    因此
+    \begin{flalign*}
+        E(Z) & =\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}\sqrt{x^2+y^2}f(x,y)\dd x\dd y=\dfrac{1}{2\pi\sigma^2}\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}\sqrt{x^2+y^2}\e^{-\frac{1}{2\sigma^2}\qty(x^2+y^2)}\dd x\dd y                        \\
+             & =\dfrac{1}{2\pi\sigma^2}\int_{0}^{2\pi}\dd \theta\int_{0}^{+\infty}r^2\e^{-\frac{r^2}{2\sigma^2}}\dd r=\int_{0}^{2\pi}\dd \theta\int_{0}^{+\infty}\dfrac{1}{\pi}\qty(\dfrac{r}{\sqrt{2}\sigma})^2\e^{-\qty(\frac{r}{\sqrt{2}\sigma})^2}\dd r \\
+             & =\dfrac{\sqrt{2}\sigma}{2\pi}\cdot 2\int_{0}^{2\pi}\dd \theta\int_{0}^{+\infty}\qty(\dfrac{r}{\sqrt{2}\sigma})^2\cdot \e^{-\qty(\frac{r}{\sqrt{2}\sigma})^2}\dd \qty(\dfrac{r}{\sqrt{2}\sigma})                                              \\
+             & =\dfrac{\sqrt{2}\sigma}{2\pi}\int_{0}^{2\pi}\Gamma\qty(\dfrac{3}{2})\dd \theta=\dfrac{\sqrt{2}\sigma}{2\pi}\cdot\dfrac{1}{2}\int_{0}^{2\pi}\Gamma\qty(\dfrac{1}{2})\dd \theta                                                                \\
+             & =\dfrac{\sqrt{2}\sigma}{2\pi}\cdot\dfrac{1}{2}\cdot2\pi\cdot\sqrt{\pi}=\sqrt{\dfrac{\pi}{2}}\sigma
+    \end{flalign*}
+    因此 $D(Z)=E\qty(Z^2)-E^2(Z)=E\qty(X^2+Y^2)-\dfrac{\pi}{2}\sigma^2=2\sigma^2-\dfrac{\pi}{2}\sigma^2=\qty(2-\dfrac{\pi}{2})\sigma^2.$
+\end{solution}

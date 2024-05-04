@@ -1,0 +1,492 @@
+\section{微分方程综合性问题}
+
+\subsection{微分方程与函数性质}
+
+\begin{example}[2022 数一]
+    设函数 $y(x)$ 是微分方程 $y'+\dfrac{1}{2\sqrt{x}}y=2+\sqrt{x}$ 的满足条件 $y(1)=3$ 的解，求曲线 $y=y(x)$ 的渐近线.
+\end{example}
+\begin{solution}
+    根据求解公式，
+    \begin{flalign*}
+        y=\e ^{-\int\frac{\dd x}{2\sqrt{x}}}\qty[\int\qty(2+\sqrt{x})\cdot\e ^{\int\frac{\dd x}{2\sqrt{x}}}\dd x+C]
+        =\e ^{-\sqrt{x}}\qty[2\int\e ^{\sqrt{x}}\dd x+\int\sqrt{x}\e ^{\sqrt{x}}\dd x+C]=2x+C\e ^{-\sqrt{x}}
+    \end{flalign*}
+    由 $y(1)=3$ 得 $C=\e $，故 $y=2x+\e ^{1-\sqrt{x}},~x\in[0,+\infty)$，
+    由于函数 $y(x)$ 在 $[0,+\infty)$ 上没用无定义的点，故曲线 $y=2x+\e ^{1-\sqrt{x}}$ 没用铅直渐近线，又因为 $\displaystyle\lim_{x\to+\infty}y(x)=\lim_{x\to+\infty}\qty(2x+\e ^{1-\sqrt{x}})=+\infty$，所以曲线 $y(x)$ 没用水平渐近线，
+    下计算斜渐近线
+    \begin{flalign*}
+        k & =\lim_{x\to+\infty}\dfrac{y}{x}=\lim_{x\to+\infty}\dfrac{2x+\e ^{1-\sqrt{x}}}{x}=2 \\
+        b & =\lim_{x\to+\infty}(y(x)-kx)=\lim_{x\to+\infty}\e ^{1-\sqrt{x}}=0
+    \end{flalign*}
+    因此 $y=2x$ 为曲线 $y=2x+\e ^{1-\sqrt{x}}$ 的斜渐近线，也是唯一的渐近线.
+\end{solution}
+
+\begin{example}
+    设函数 $f(x)$ 在 $\qty(\dfrac{1}{2},+\infty)$，且 $\displaystyle\lim_{h\to0}\dfrac{f\qty[(x+h)^2]-f\qty(x^2+h)}{h}=1,~f(1)=1$，求 $f(x)$ 的表达式.
+\end{example}
+\begin{solution}
+    因为 $\displaystyle\lim_{h\to0}\dfrac{f\qty[(x+h)^2]-f\qty(x^2+h)}{h}=\lim_{h\to0}\dfrac{f\qty[(x+h)^2]-f\qty(x^2)}{h}-\lim_{h\to0}\dfrac{f\qty(x^2)-f\qty(x^2+h)}{h}=\qty[f\qty(x^2)]'-f'\qty(x^2)=1$，则
+    $$2xf'\qty(x^2)-f'\qty(x^2)=1\Rightarrow f'(x)=\dfrac{1}{2\sqrt{x}-1}\Rightarrow f(x)=\int\dfrac{\dd x}{2\sqrt{x}-1}=\sqrt{x}+\dfrac{1}{2}\ln\qty(2\sqrt{x}-1)+C$$
+    又 $f(1)=1$，解得 $C=0$，因此 $f(x)=\sqrt{x}+\dfrac{1}{2}\ln\qty(2\sqrt{x}-1).$
+\end{solution}
+
+\begin{example}
+    设函数 $f(x)$ 在区间 $[1,+\infty)$ 上二阶连续可导，$f(1)=0,f'(1)=1,z=\qty(x^2+y^2)f\qty(x^2+y^2)$
+    满足 $\displaystyle \pdv[2]{z}{x}+\pdv[2]{z}{y}=0$，求 $f(x)$ 在 $[1,+\infty)$ 上的最大值.
+\end{example}
+\begin{solution}
+    令 $u=x^2+y^2$，则 $z=uf(u)$，那么
+    \begin{flalign*}
+        \pdv{z}{x}    & =\dv{z}{u}\cdot\pdv{u}{x}=2xf(u)+2uxf'(u) \\
+        \pdv[2]{z}{x} & =2f(u)+2\qty(5x^2+y^2)f'(u)+4x^2uf''(u)
+    \end{flalign*}
+    利用函数 $z$ 中 $x$ 与 $y$ 的对称性，易得
+    $$\pdv[2]{z}{y}=2f(u)+2\qty(x^2+5y^2)f'(u)+4y^2uf''(u)$$
+    又 $\displaystyle \pdv[2]{z}{x}+\pdv[2]{z}{y}=0$，所以
+    \begin{equation*}
+        u^2f''(u)+3uf'(u)+f(u)=0
+        \tag{1}
+    \end{equation*}
+    (1) 式为二阶的 Euler 微分方程，令 $u=\e ^t$，则
+    (1) 式化为 $\displaystyle \dv[2]{f}{t}+2\dv{f}{t}+f=0$，其特征方程为 $\lambda^2+2\lambda+1=0\Rightarrow \lambda_{1,2}=-1$，于是 (1) 式的通解为
+    $$f=\e ^{-t}(C_1+C_2t)\Rightarrow \dfrac{1}{u}(C_1+C_2\ln u)$$
+    又 $f(1)=0,~f'(1)=1$，解得 $C_1=0,C_2=1$，故 $f(x)=\dfrac{\ln x}{x}$，令 $f'(x)=\dfrac{1-\ln x}{x^2}=0$，解得 $x=\e $，且在 $[1,\e ]$ 上 $f'(x)<0\Rightarrow f(x)\searrow$；
+    在 $[\e ,+\infty)$ 上 $f'(x)>0\Rightarrow f(x)\nearrow$，故 $f_{max}=\dfrac{\ln x}{x}\biggl |_{x=\e }=\dfrac{1}{\e }$.
+\end{solution}
+
+\subsection{微分方程与积分}
+
+\subsubsection{微分方程与定积分}
+
+\begin{example}[2023 四川大学]
+    设函数 $f(x)$ 满足 $\displaystyle\int_{0}^{x}f^2(t)\dd t=\e ^xf(x)+1$，求 $f(x).$
+\end{example}
+\begin{solution}
+    令 $x=0$，得 $f(0)=-1$，对方程两边求导，得 Bernoulli 方程:
+    $$f'(x)+f(x)=\e ^{-x}f^2(x)$$
+    令 $z(x)=\dfrac{1}{f(x)}$，于是上式化为 $z'(x)-z(x)=-\e ^{-x}$，由一阶线性微分方程通解公式得
+    $$z(x)=\e ^{\int\dd x}\qty[\int-\e ^{-x}\cdot\e ^{-\int\dd x}\dd x+C]=\dfrac{1}{2}\e ^{-x}+C\e ^x$$
+    并且 $z(0)=-1$，得 $C=-\dfrac{3}{2}$，于是 $f(x)=\dfrac{2\e ^{x}}{1-3\e ^{2x}}.$
+\end{solution}
+
+\begin{example}
+    求出所有在 $[0,+\infty)$ 上的正值连续函数 $g(x)$，使得 $\displaystyle\dfrac{1}{2}\int_{0}^{x}g^2(t)\dd t=\dfrac{1}{x}\qty(\int_{0}^{x}g(t)\dd t)^2.$
+\end{example}
+\begin{solution}
+    对方程两边求导，得 $$\dfrac{1}{2}g^2(x)=\dfrac{2\displaystyle\int_{0}^{x}g(t)\dd t\cdot g(x)\cdot x-\qty(\displaystyle\int_{0}^{x}g(t)\dd t)^2}{x^2}$$
+    即 $$\qty(\int_{0}^{x}g(t)\dd t)^2-2xg(x)\int_{0}^{x}g(t)\dd t+\dfrac{x^2}{2}g^2(x)=0$$
+    注意到当 $x\in[0,+\infty)$ 时，有 $g(x)>0$，于是 $\displaystyle\int_{0}^{x}g(t)\dd t>0,~\forall x>0$，
+    故 $$\int_{0}^{x}g(t)\dd t=\dfrac{2xg(x)+\pm\sqrt{4x^2g^2(x)-2x^2g^2(x)}}{2}=xg(x)\pm\dfrac{1}{\sqrt{2}}xg(x)$$
+    两边再次求导，得 $$g(x)=\qty(1\pm\dfrac{1}{\sqrt{2}})(g(x)+xg'(x))\Rightarrow\left\{\begin{matrix}
+            g(x)  & + & \qty(1+\sqrt2)xg'(x) & =0 \\
+            -g(x) & + & \qty(\sqrt2-1)xg'(x) & =0
+        \end{matrix}\right.$$
+    当 $g'(x)+\dfrac{1}{\qty(1+\sqrt{2})x}g(x)=0$ 时，化为变量分离方程 $\dfrac{\dd g(x)}{g(x)}=-\dfrac{\dd x}{\qty(1+\sqrt{2})x}$，两边积分得
+    $$\ln|g(x)|=-\dfrac{1}{1+\sqrt{2}}\ln|x|+\ln C_1\Rightarrow g(x)=\e ^{-\frac{1}{1+\sqrt2}\ln x+C_1}=\e ^{C_1}x^{1-\sqrt2}$$
+    同理可得 $g(x)=\e ^{C_1}x^{1+\sqrt2}$，由于 $g(x)$ 在 $[0,+\infty)$ 上为连续正值函数，而 $x^{1-\sqrt2}$ 在 $x=0$ 处不连续，所以 $g(x)=\e ^{C_1}x^{1+\sqrt2},~x>0.$
+\end{solution}
+
+\begin{example}
+    设 $f(x)$ 具有连续导数，且 $\forall a\in\mathbb{R},~f(x+a)=\displaystyle\int_{x}^{x+a}\dfrac{t\qty(t^2+1)}{f(t)}\dd t+f(x),~f(1)=\sqrt{2}$，求 $f(x)$.
+\end{example}
+\begin{solution}
+    \textbf{法一: }视 $a$ 为未知数，令 $x=0$，有 $\displaystyle f(a)=\int_{0}^{a}\dfrac{t\qty(t^2+1)}{f(t)}\dd t+f(0)$，两边求导有
+    \begin{flalign*}
+        f'(a) & =\dfrac{a\qty(a^2+1)}{f(a)}\Rightarrow f'(a)\cdot f(a)=a\qty(a^2+1)\Rightarrow \dfrac{1}{2}\qty[f^2(a)]'=a^3+a                                                                    \\
+              & \Rightarrow \int f^2(a)\dd a=\int\qty(2a^3+2a)\dd a\Rightarrow f^2(a)=\dfrac{1}{2}a^4+a^2+C
+    \end{flalign*}
+    由 $f(1)=\sqrt{2}$ 解得 $C=\dfrac{1}{2}$，于是 $f^2(x)=\dfrac{1}{2}x^4+x^2+\dfrac{1}{2}=\dfrac{1}{2}\qty(x^2+1)^2\Rightarrow f(x)=\dfrac{x^2+1}{\sqrt{2}}$ (由 $f(1)>0$ 可舍负).\\
+    \textbf{法二: }利用导数的定义，
+    $$f'(x)=\lim_{a\to0}\dfrac{f(x+a)-f(x)}{a}=\lim_{a\to0}\dfrac{\displaystyle \int_{x}^{x+a}\dfrac{t\qty(t^2+1)}{f(t)}\dd t+f(x)-f(x)}{a}=\lim_{a\to0}\dfrac{\displaystyle \int_{x}^{x+a}\dfrac{t\qty(t^2+1)}{f(t)}\dd t}{a}=\dfrac{x\qty(x^2+1)}{f(x)}$$
+    得 $f'(x)\cdot f(x)=x\qty(x^2+1)$，下同法一.
+\end{solution}
+
+\begin{example}
+    设 $f(x)$ 在 $(0,+\infty)$ 内一阶可导，$g(x)$ 为 $f(x)$ 的反函数，且 $g(x)$ 连续，若
+    $$\int_{1}^{f(x)}g(t)\dd t=x^2\e ^x-4\e ^2-\int_{1}^{x-1}f(t+1)\dd t,~f(2)=1$$
+    求 $f(x)$ 的表达式.
+\end{example}
+\begin{solution}
+    方程两边对 $x$ 求导得 $$g[f(x)]f'(x)=2x\e ^x+x^2\e ^x-f(x)$$
+    即 $$xf'(x)=2x\e ^x+x^2\e ^x-f(x)\Rightarrow f'(x)+\dfrac{1}{x}f(x)=(2+x)\e ^x$$
+    由一阶线性微分方程通解公式得
+    \begin{flalign*}
+        f(x)=\e ^{-\int\frac{1}{x}\dd x}\qty[\int(2x+1)\e ^x\cdot\e ^{\int\frac{1}{x}\dd x}+C]=x\e ^x+\dfrac{C}{x}
+    \end{flalign*}
+    由 $f(2)=1$，故 $C=2-4\e ^2$，故 $f(x)=x\e ^x+\dfrac{2-4\e ^2}{x}~ (x>0).$
+\end{solution}
+
+\begin{example}
+    设 $f(x)$ 可微，且满足 $\displaystyle x=\int_{0}^{x}f(t)\dd t+\int_{0}^{x}tf(t-x)\dd t$，
+    求\begin{enumerate}[label=(\arabic{*})]
+        \item $f(x)$ 的表达式;
+        \item $\displaystyle I(n)=\int_{-\frac{\pi}{4}}^{\frac{3\pi}{4}}|f(t)|^n\dd t~ (n=2,3,\cdots).$
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 令 $t-x=u$，则
+              \begin{flalign*}
+                  x=\int_{0}^{x}f(t)\dd t+\int_{0}^{x}tf(t-x)\dd t=\int_{0}^{x}f(t)\dd t+\int_{-x}^{0}uf(u)\dd u+x\int_{-x}^{0}f(u)\dd u
+              \end{flalign*}
+              上式两边分别对 $x$ 求导，得
+              \begin{equation*}
+                  1=f(x)-xf(-x)+\int_{-x}^{0}f(u)\dd u+xf(-x)
+                  \tag{1}
+              \end{equation*}
+              对式 (1) 求导得
+              \begin{equation*}
+                  f'(x)+f(-x)=0
+                  \tag{2}
+              \end{equation*}
+              对式 (2) 再次求导得 $f''(x)-f'(-x)=0$，
+              并且用 $-x$ 替换式 (2) 中的 $x$，得 $f'(-x)+f(x)=0$
+              于是有二阶常系数齐次线性方程 $f''(x)+f(x)=0$，
+              且 $f(0)=1,~f'(0)=-f(0)=-1$，微分方程的特征方程为 $r^2+1=0$，故它的通解为
+              $$f(x)=C_1\cos x+C_2\sin x$$
+              代入初值条件，得 $C_1=1,~C_2=-1$，故 $f(x)=\cos x-\sin x=\sqrt{2}\cos\qty(x+\dfrac{\pi}{4})$.
+        \item 令 $x=t+\dfrac{\pi}{4}$，得
+              \begin{flalign*}
+                  I(n)=2^{\frac{n}{2}}\int_{0}^{\pi}|\cos x|^n\dd x=2^{\frac{n}{2}+1}\int_{0}^{\frac{\pi}{2}}\cos^nx\dd x=\begin{cases}
+                                                                                                                              2^{\frac{n}{2}+1}\dfrac{(n-1)!!}{n!!}                     & ,n=3,5,7,\cdots \\
+                                                                                                                              2^{\frac{n}{2}+1}\dfrac{(n-1)!!}{n!!}\cdot \dfrac{\pi}{2} & ,n=2,4,6,\cdots
+                                                                                                                          \end{cases}
+              \end{flalign*}
+    \end{enumerate}
+\end{solution}
+
+\subsubsection{微分方程与重积分}
+
+\begin{example}
+    设函数 $f(t)$ 在 $[0,+\infty)$ 上连续，求 $\displaystyle \lim_{t\to0}f^{-t^2}(t)$，其中 $f(t)$ 满足方程
+    $$\displaystyle f(t)=\e ^{4\pi t^2}+\iint\limits_{x^2+y^2\leqslant 4t^2}f\left(\frac{1}{2}\sqrt{x^2+y^2}\right)\mathrm{d}x\mathrm{d}y.$$
+\end{example}
+\begin{solution}
+    因为 $\displaystyle \iint\limits_{x^2+y^2\leqslant 4t^2}f\left(\frac{1}{2}\sqrt{x^2+y^2}\right)\mathrm{d}x\mathrm{d}y  =\int_0^{2\pi}\mathrm{d}\theta\int_0^{2t}\rho f\left(\frac{1}{2}\rho\right)\mathrm{d}\rho=8\pi\int_0^tuf(u)\mathrm{d}u$，
+    所以 $\displaystyle f(t)=\e ^{4\pi t^2}+8\pi\int_0^tuf(u)\mathrm{d}u$，且 $f(0)=1$，方程两边对 $t$ 求导，得 $f'(t)=8\pi t\e ^{4\pi t^2}+8\pi tf(t)$
+    \begin{flalign*}
+        f(t) & =\e ^{8\pi\int t\mathrm{d}t}\left[\int 8\pi t\e ^{4\pi t^2}\cdot\e ^{-8\pi\int t\mathrm{d}t}+C\right]
+        =\e ^{4\pi t^2}\left[8\pi \int t\mathrm{d}t+C\right]=4\pi t^2\e ^{4\pi t^2}+C\e ^{4\pi t^2}                  \\
+             & \xlongequal[]{f(0)=1}4\pi t^2\e ^{4\pi t^2}+\e ^{4\pi t^2}
+    \end{flalign*}
+    那么
+    \begin{flalign*}
+        \lim_{t\to0}f^{-t^2}(t) & =\lim_{t\to0}\left(4\pi t^2\e ^{4\pi t^2}+\e ^{4\pi t^2}\right)^{-t^2}=\exp\lim_{t\to0}\frac{1}{t^2}\ln\left(4\pi t^2\e ^{4\pi t^2}+\e ^{4\pi t^2}\right) \\
+                                & =\exp\lim_{t\to0}\frac{4\pi t^2\e ^{4\pi t^2}+\e ^{4\pi t^2}-1}{t^2}=\e ^{4\pi +4\pi}=\e ^{8\pi}.
+    \end{flalign*}
+\end{solution}
+
+\begin{example}
+    设函数 $\displaystyle u=f\left(\sqrt{x^2+y^2}\right)$，满足 $\displaystyle \lim_{x\to0^+}f'(x)=0$，且
+    $$\displaystyle\frac{\partial^2u}{\partial x^2}+\frac{\partial ^2u}{\partial y^2}=\iint\limits_{s^2+t^2\leqslant x^2+y^2}\frac{\mathrm{d}s\mathrm{d}t}{1+s^2+t^2}$$
+    \begin{enumerate*}[label=(\arabic*)]
+        \newline
+        \item 试求函数 $f'(x)$ 的表达式;
+        \item 若 $f(0)=0$，求 $\displaystyle\lim_{x\to0^+}\frac{f(x)}{x^4}.$
+    \end{enumerate*}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic*)]
+        \item 设 $r=\sqrt{x^2+y^2}$，则
+              $$\frac{\partial u}{\partial x}=f'(r)\frac{x}{r},~\frac{\partial ^2u}{\partial x^2}=f''(r)\frac{x^2}{r^2}+f'(r)\dfrac{r-\dfrac{x^2}{r}}{r^2}=f''(r)\frac{x^2}{r^2}+f'(r)\frac{r^2-x^2}{r^3}$$
+              $$\frac{\partial u}{\partial y}=f'(r)\frac{y}{r},~\frac{\partial ^2u}{\partial y^2}=f''(r)\frac{y^2}{r^2}+f'(r)\dfrac{r-\dfrac{y^2}{r}}{r^2}=f''(r)\frac{y^2}{r^2}+f'(r)\frac{r^2-y^2}{r^3}$$
+              \begin{flalign*}
+                  \iint\limits_{s^2+t^2\leqslant r^2}\frac{\mathrm{d}s\mathrm{d}t}{1+s^2+t^2}=\int_0^{2\pi}\mathrm{d}\theta\int_0^r\frac{\rho\mathrm{d}\rho}{1+\rho^2}=\pi\ln\left(1+r^2\right)
+              \end{flalign*}
+              因为 $\displaystyle\frac{\partial^2u}{\partial x^2}+\frac{\partial ^2u}{\partial y^2}=\iint\limits_{s^2+t^2+\leqslant x^2+y^2}\frac{\mathrm{d}s\mathrm{d}t}{1+s^2+t^2}$，
+              所以 $\displaystyle f''(r)+\frac{1}{r}f'(r)=\pi\ln\left(1+r^2\right)$，
+              $$f'(r)=\e ^{-\int\frac{\mathrm{d}r}{r}}\left[\int\pi\ln\left(1+r^2\right)\cdot\e ^{\int\frac{\mathrm{d}r}{r}}\mathrm{d}r+C\right]=\frac{\pi\left(1+r^2\right)}{2r}\left[\ln\left(1+r^2\right)-1\right]+\frac{C}{r}$$
+              即$$f'(x)=\frac{\pi\left(1+x^2\right)}{2x}\left[\ln\left(1+x^2\right)-1\right]+\frac{C}{x}$$
+              $$\displaystyle \lim_{x\to0^+}f'(x)=\lim_{x\to0^+}\left[\frac{\pi\left(1+x^2\right)}{2x}\ln\left(1+x^2\right)+\frac{2C-\pi-\pi x^2}{2x}\right]=\lim_{x\to0^+}\frac{2C-\pi-\pi x^2}{2x}=0$$
+              即 $\displaystyle C=\frac{\pi}{2}$，所以 $\displaystyle f'(x)=\frac{\pi\left(1+x^2\right)}{2x}\left[\ln\left(1+x^2\right)-1\right]+\frac{\pi}{2x}.$
+        \item 运用 L'Hospital 法则得到 $f'(x)$，再将 $f'(x)=\dfrac{\pi\qty(1+x^2)}{2x}\qty[\ln\qty(1+x^2)-1]+\dfrac{\pi}{2x}$ 代入得，
+              \begin{flalign*}
+                  \lim_{x\to0^+}\frac{f(x)}{x^4} & \overset{L'}{=}\lim_{x\to0^+}\frac{f'(x)}{4x^3}=\frac{\pi}{8}\lim_{x\to0^+}\frac{1}{x^3}\left[\frac{1+x^2}{x}\ln\left(1+x^2\right)-x\right] \\
+                                                 & =\frac{\pi}{8}\lim_{x\to0^+}\frac{1}{x^3}\left[\frac{1+x^2}{x}\left(x^2-\frac{x^4}{2}+o\left(x^4\right)\right)-x\right]                     \\
+                                                 & =\frac{\pi}{8}\lim_{x\to0^+}\frac{1}{x^3}\left(\frac{x^3}{2}+o\left(x^3\right)\right)=\frac{\pi}{16}.
+              \end{flalign*}
+    \end{enumerate}
+\end{solution}
+
+\begin{example}
+    设 $z=\qty(x^2+y^2)f\qty(x^2+y^2)$，其中 $f$ 具有连续二阶偏导数，$f(1)=0,~f'(1)=1$，且 $z$ 满足方程 $\displaystyle\pdv[2]{z}{x}+\pdv[2]{z}{y}=0$，求
+    $$\lim_{\varepsilon\to0^+}\iint\limits_D z\dd x\dd y,~D:0< \varepsilon\leqslant\sqrt{x^2+y^2}\leqslant 1.$$
+\end{example}
+\begin{solution}
+    令 $x^2+y^2=t$，则 $z=tf(t)$，于是
+    $$\pdv{z}{x}=\pdv{t}{x}f(t)+t\cdot f'(t)\pdv{t}{x}=2xf(t)+2txf'(t)=2x\qty[f(t)+2tf'(t)]$$
+    于是，
+    \begin{flalign*}
+        \pdv[2]{z}{x} & =2\qty[f(t)+tf'(t)]+2x\qty[f'(t)\cdot 2x+2xf'(t)+tf''(t)\cdot 2x] \\
+                      & =2\qty[f(t)+tf'(t)]+4x^2\qty[2f'(t)+tf''(t)]
+    \end{flalign*}
+    同理可得 $\displaystyle\pdv[2]{z}{y}=2\qty[f(t)+tf'(t)]+4y^2\qty[2f'(t)+tf''(t)]$，解此 Euler 方程，由 $f(0)=1,~f'(0)=1$，特解 $f(t)=\dfrac{1}{t}\ln t$，所以 $z=tf(t)=\ln t=\ln\qty(x^2+y^2)$，
+    从而可得
+    \begin{flalign*}
+        \iint\limits_D z\dd x\dd y=\iint\limits_D\ln\qty(x^2+y^2)\dd x\dd y=\int_{0}^{2\pi}\dd \theta\int_{\varepsilon}^{1}r\ln r^2\dd r=-\pi\qty(1+2\varepsilon^2\ln\varepsilon-\varepsilon^2)=-\pi.
+    \end{flalign*}
+\end{solution}
+
+\begin{example}
+    设函数 $f(x)$ 在 $(-\infty,+\infty)$ 上连续，且满足
+    $$f(t)=2\iint\limits_{x^2+y^2\leqslant t^2}\qty(x^2+y^2)f\qty(\sqrt{x^2+y^2})\dd x\dd y+t^4$$
+    求 $f(x).$
+\end{example}
+\begin{solution}
+    采用极坐标将二重积分化为定积分，得
+    $$\displaystyle\iint\limits_{x^2+y^2\leqslant t^2}\qty(x^2+y^2)f\qty(\sqrt{x^2+y^2})\dd x\dd y\int_{0}^{2\pi}\dd \theta\int_{0}^{t}\rho^3f(\rho)\dd \rho=2\pi\int_{0}^{t}\rho^3f(\rho)\dd\rho$$
+    代入原式得 $$f(t)=4\pi\int_{0}^{t}\rho^3f(\rho)\dd \rho+t^4$$
+    两边求导得 $$f'(t)=4\pi t^3f(t)+4t^3~  f(0)=0$$
+    此为一阶线性微分方程，其通解为
+    \begin{flalign*}
+        f(t)=\e ^{4\pi\int t^3\dd t}\qty[\int 4t^3\cdot\e ^{-4\pi\int t^3\dd t}\dd t+C]=\e ^{\pi t^4}\qty[\int 4t^3\cdot\e ^{-\pi t^4}\dd t+C]=C\e ^{\pi t^4}-\dfrac{1}{\pi}.
+    \end{flalign*}
+    又有 $f(0)=0$ 得 $C=\dfrac{1}{\pi}$，于是 $f(x)=\dfrac{1}{\pi}\qty(\e ^{\pi x^4}-1).$
+\end{solution}
+
+\subsubsection{微分方程与曲面积分}
+
+\begin{example}
+    设曲线积分 $$\int_L\qty[f'(x)+2f(x)+\e^x]y\dd x+\qty[f'(x)-x]\dd y$$
+    与路径无关，且 $f(0)=0,~f'(0)=\dfrac{1}{2}$，其中 $f(x)$ 一阶连续可导，求 $f(x)$ 的表达式.
+\end{example}
+\begin{solution}
+    令 $P=\qty[f'(x)+2f(x)+\e^x]y,~Q=\qty[f'(x)-x]$，因为积分与路径无关，所以 $$\pdv{Q}{x}=\pdv{P}{y}\Rightarrow f''(x)-f'(x)-2f(x)=\e^x+1$$
+    该方程为二阶常系数非齐次线性微分方程，令 $\displaystyle\D=\dv{x},~\mathrm{I} f(x)=f(x)$，则有 
+    $$\qty(\D^2-\D-2)f(x)=\e^x+1\Rightarrow (\D-2)\underbrace{(\D+1)f(x)}_z=\e^x+1$$
+    那么 $z'-2z=\e^x+1$，该方程为一阶线性微分方程，有通解公式
+    $$z=\e^{2\int\dd x}\qty[\int\qty(\e^x+1)\e^{-2\int\dd x}\dd x+C_1]=C_1\e^{2x}-\e^x-\dfrac{1}{2}$$
+    因此 $f'+f=C_1\e^{2x}-\e^x-\dfrac{1}{2}$，继续由通解公式
+    $$f=\e^{-\int\dd x}\qty[\int\qty(C_1\e^{2x}-\e^x-\dfrac{1}{2})\e^{\int\dd x}\dd x+C_2]=\dfrac{C_1}{3}\e^{2x}-\dfrac{1}{2}\e^x-\dfrac{1}{2}+C_2\e^{-x}$$
+    代入 $f(0)=0,f'(0)=\dfrac{1}{2}$，得方程组 $\begin{cases}
+        C_1+3C_2=3\\
+        2C_1-3C-2=3
+    \end{cases}\Rightarrow\begin{cases}
+        C_1=2\\C_2=\dfrac{1}{3}
+    \end{cases}$
+    因此 $f(x)=\dfrac{2}{3}\e^{2x}-\dfrac{1}{2}\e^{x}+\dfrac{1}{3}\e^{-x}-\dfrac{1}{2}.$
+\end{solution}
+
+\begin{example}
+    设对右半空间 $x>0$ 内任意的光滑有向封闭曲面 $\varSigma$ 都有 $$\displaystyle\oiint\limits_\varSigma xf(x)\dd y\dd z-xyf(x)\dd z\dd x-z\e^{2x}\dd x\dd y=0$$
+    其中函数 $f(x)$ 在 $(0,+\infty)$ 内具有连续一阶导数，且 $\displaystyle\lim_{x\to0^+}f(x)=1$，求 $f(x)$ 的表达式.
+\end{example}
+\begin{solution}
+    设 $P=xf(x),~Q=-xyf(x),~R=-z\e^{2x}$，那么 $$\pdv{P}{x}+\pdv{Q}{y}+\pdv{R}{z}=xf'(x)+f(x)-xf(x)-\e^{2x}$$
+    由 Gauss 定理知，$\displaystyle I=\pm\iiint\limits_\Omega\qty(xf'(x)+f(x)-xf(x)-\e^{2x})\dd x\dd y\dd z=0$，由 $\Omega$ 的任意性知，$$xf'(x)+f(x)-xf(x)-\e^{2x}=0\Rightarrow f'(x)+\qty(\dfrac{1}{x}-1)f(x)=\dfrac{1}{x}\e^{2x}$$
+    该方程为一阶线性微分方程，有通解为 $$f(x)=\e^{\int\qty(1-\frac{1}{x})\dd x}\qty[\int\dfrac{1}{x}\e^{2x}\cdot\e^{\int\qty(\frac{1}{x}-1)\dd x}\dd x+C]=\dfrac{\e^{x}}{x}\qty[\int\e^{x}\dd x+C]=\dfrac{\e^{x}}{x}\qty(\e^{x}+C)$$
+    又因为 $$\displaystyle\lim_{x\to0^+}f(x)=\lim_{x\to0^+}\dfrac{\e^x}{x}\qty(\e^x+C)=\lim_{x\to0^+}\dfrac{\e^x+C}{x}=\lim_{x\to0^+}\dfrac{1+x+o\qty(x^2)+C}{x}=1$$ 
+    即 $C=-1$，因此 $f(x)=\dfrac{\e^x}{x}\qty(\e^x-1).$
+\end{solution}
+
+\begin{example}
+    设 $S$ 是曲面 $az=x^2+y^2,~(0\leqslant z\leqslant a)$ 的第一卦限部分上侧，
+    $$A=\iint\limits_S x^2z\dd y\dd z+y^2z\dd z\dd x+xz^2\dd x\dd y$$
+    求满足 $f(0)=A,~f'(0)=-A$ 的二阶可导函数 $f(x)$，使得
+    $y\qty(f(x)+3\e ^{3x})\dd x+f'(x)\dd y$ 是某二元函数的全微分.
+\end{example}
+\begin{solution}
+    补充三个面，分别为 $$\varSigma_1:z=a,x^2+y^2\leqslant a^2 z,y\geqslant0,\text{ 方向取下侧}$$
+    $$\varSigma_2:x=0,\text{ 方向取前侧},~\varSigma_3:y=0,\text{ 方向取右侧}$$
+    于是，由 Gauss 定理
+    \begin{flalign*}
+        I & =\oiint\limits_{\varSigma_1+\varSigma_2+\varSigma_3+S}\qty(x^2z\dd y\dd z+y^2z\dd z\dd x+xz^2\dd x\dd y)=-\iiint\limits_\Omega\qty(\pdv{P}{x}+\pdv{Q}{y}+\pdv{R}{z})\dd x\dd y\dd z           \\
+          & =-2\iiint\limits_\Omega(2x+y)z\dd x\dd y\dd z=-2\iint\limits_{x^2+y^2\leqslant a^2}(2x+y)\dd x\dd y\int_{\frac{x^2+y^2}{a}}^{a}z\dd z                                                         \\
+          & =-2\iint\limits_D(2x+y)\qty[\dfrac{a^2}{2}-\dfrac{\qty(x^2+y^2)^2}{2a^2}]\dd x\dd y=-\int_{0}^{\frac{\pi}{2}}\dd \theta\int_{0}^{a}(2r\cos\theta+r\sin\theta)\qty(a^2-\dfrac{r^4}{a^2})r\dd r \\
+          & =-\int_{0}^{\frac{\pi}{2}}\qty(\dfrac{8a^5}{21}\cos\theta+\dfrac{4a^5}{21}\sin\theta)\dd \theta=-\dfrac{4}{7}a^5
+    \end{flalign*}
+    则
+    \begin{flalign*}
+        A=I-\iint\limits_{\varSigma_1}-\iint\limits_{\varSigma_2}-\iint\limits_{\varSigma_3}=I-\qty(-a^2\iint\limits_{x^2+y^2\leqslant a^2}x\dd x\dd y)=-\dfrac{4}{7}a^5+\int_{0}^{\frac{\pi}{2}}\dd \theta\int_{0}^{a}r^2\cos\theta\dd r=-\dfrac{5}{21}a^5
+    \end{flalign*}
+    由于 $y\qty(f(x)+3\e ^{3x})\dd x+f'(x)\dd y$ 是某二元函数的全微分，所以
+    $$\pdv{\qty[yf(x)+3\e ^{3x}]}{y}=\dv{f'(x)}{x}\Rightarrow f''(x)-f(x)=3\e ^{2x}$$
+    记 $\displaystyle \mathrm{D}=\dv{x}$，则上式可改写为 $(\mathrm{D}+1)(\mathrm{D}-1)f(x)=3\e ^{2x}$，令 $z(x)=(\mathrm{D}-1)f(x)$，于是
+    $$z(x)=\e ^{-\int\dd x}\qty[\int3\e ^{2x}\cdot\e ^{\int\dd x}\dd x+C_1]=\e ^{2x}+C_1\e ^{-x}$$
+    由题意可求得 $C_1=\dfrac{10}{21}a^5-1$，且 $f'(x)-f(x)=\e ^{2x}+C_1\e ^{-x}$ 的通解为
+    $$f(x)=\e ^{\int\dd x}\qty[\int\qty(\e ^{2x}+C_1\e ^{-x})\cdot\e ^{-\int\dd x}\dd x+C_2]=\e ^{2x}-\dfrac{C_1}{2}\e ^{-x}+C_2\e ^x$$
+    并且令 $x=0$，解得 $C_2=-\dfrac{3}{2}$，于是 $f(x)=\e ^{2x}-\dfrac{3}{2}\e ^x-\qty(\dfrac{5}{21}a^5-\dfrac{1}{2})\e ^{-x}.$
+\end{solution}
+
+\begin{example}
+    设曲面积分 $$A=\dfrac{1}{a^5}\iint\limits_{S}\qty(x^2z\dd y\dd z+y^2z\dd z\dd x+z^2x\dd x\dd y)$$
+    其中 $S$ 是曲面 $x^2+y^2=az(0\leqslant z\leqslant a),a>0$ 第一卦限部分的外侧，求三阶可导函数 $f(x)$，使得满足以下条件:
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $f^{(i)}(0)=(-1)^{i}A,~(i=0,1,2)$;
+        \item 使得 $y\qty[f'(x)+3\e^{2x}]\dd x+f''(x)\dd y$ 是某个函数的全微分.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \textbf{法一: }曲面 $z=\dfrac{x^2+y^2}{2}$ 的法向量的方向余弦为 $(\cos\alpha,\cos\beta,\cos\gamma)=\dfrac{(2x,2y,-a)}{\sqrt{a^2+4x^2+4y^2}}$，
+    故由两类曲面积分之间的关系，得 $\displaystyle A=\dfrac{1}{a^5}\iint\limits_S\dfrac{\qty(x^2z,y^2z,z^2x)\cdot\qty(2x,2y,-a)}{\sqrt{a^2+4x^2+4y^2}}\dd S$，
+    并且 $\dd S=\sqrt{1+\qty(z'_x)^2+\qty(z'_y)^2}\dd x\dd y=\dfrac{1}{a}\sqrt{a^2+4x^2+4y^2}\dd x\dd y$，则
+    \begin{flalign*}
+        A & =\dfrac{1}{a^6}\iint\limits_D\qty(x^2\qty(\dfrac{x^2+y^2}{a}),y^2\qty(\dfrac{x^2+y^2}{a}),\qty(\dfrac{x^2+y^2}{a})^2x)\cdot(2x,2y,-a)\dd x\dd y                                                                 \\
+          & =\dfrac{1}{a^7}\int_{0}^{\frac{\pi}{2}}\dd \theta\int_{0}^{a}r^5\qty(2\cos^3\theta+2\sin^3\theta-\cos\theta)\cdot r\dd r=\dfrac{1}{7}\int_{0}^{\frac{\pi}{2}}(2\cos^3\theta+2\sin^3\theta-\cos\theta)\dd \theta \\
+          & =\dfrac{1}{7}\qty(\dfrac{4}{3}+\dfrac{4}{3}-1)=\dfrac{5}{21}
+    \end{flalign*}
+    \textbf{法二: }添加辅助面 $S_x:x=0,(y,z)\in D_{yz}$，方向向内，$S_y:y=0,(z,x)\in D_{zx}$，方向向左，$S_z:z=a,(x,y)\in D_{xy}:x^2+y^2\leqslant a^2,x\geqslant 0,y\geqslant 0$，方向向上，
+    它们三个与 $S$ 围成的区域为 $\Omega$，易得 $\iint\limits_{S_x}=\iint\limits_{S_y}=0$，而
+    $$\iint\limits_{S_z}\qty(x^2z\dd y\dd z+y^2z\dd z\dd x+z^2x\dd x\dd y)=\iint\limits_{D_{xy}}a^2x\dd x\dd y=a^2\int_{0}^{\frac{\pi}{2}}\cos\theta\dd \theta\int_{0}^{a}r^2\dd r=\dfrac{a^5}{3}$$
+    由 Gauss 公式，可得
+    $$\oiint\limits_{S_x+S_y+S_z+S}=\iiint\limits_\Omega(4xz+2yz)\dd V$$
+    其中 $\Omega:x^2+y^2\leqslant az,x\geqslant 0,y\geqslant 0,0\leqslant z\leqslant a$，那么
+    \begin{flalign*}
+        \iiint\limits_\Omega(4xz+2yz)\dd V & =\iint\limits_{D_{xy}}\dd x\dd y\int_{\frac{x^2+y^2}{a}}^{a}(2x+y)\cdot 2z\dd z=\iint\limits_{D_{xy}}(2x+y)\qty[a^2-\qty(\dfrac{x^2+y^2}{a})^2]\dd x\dd y \\
+                                           & =\int_{0}^{\frac{\pi}{2}}\dd \theta\int_{0}^{a}(2r\cos\theta+r\sin\theta)\qty(a^2-\dfrac{r^4}{a^2})r\dd r=\dfrac{4a^5}{7}
+    \end{flalign*}
+    于是可得 $A=\dfrac{1}{a^5}\qty(\dfrac{4a^5}{7}-\dfrac{a^5}{3})=\dfrac{5}{21}$，\\
+    再求函数 $f(x)$，由于 $y\qty[f'(x)+3\e^{2x}]\dd x+f''(x)\dd y$ 是某个函数的全微分，于是有 $$\pdv{y}\qty(y\qty[f'(x)+3\e^{2x}])=\pdv{x}\qty(f''(x))$$
+    整理得 $f'''(x)-f'(x)=3\e^{2x}$，该方程的齐次通解为 $r^3-r=r\qty(r^2-1)=0\Rightarrow r_1=0,r_2=1,r_3=-1$，那么 $Y=C_1+C_2\e^{x}+C_2\e^{-x}$，其特解为
+    $f(x)=\dfrac{1}{\mathrm{D}(\mathrm{D}-1)(\mathrm{D}+1)}3\e^{2x}=\dfrac{1}{2}\e^{2x}$，那么该微分方程的通解为 $$f(x)=C_1+C_2\e^{x}+C_2\e^{-x}+\dfrac{1}{2}\e^{2x}$$
+    又 $f(0)=A,f'(0)=-A,f''(0)=A$，解得 $f(x)=\dfrac{1}{2}\e^{2x}-\dfrac{3}{2}\e^{x}-\dfrac{11}{42}\e^{-x}+\dfrac{3}{2}.$
+\end{solution}
+
+\begin{example}
+    设函数 $f(t)$ 在 $[0,+\infty)$ 上连续，
+    $$\Omega(t)=\qty{(x,y,z)~|~x^2+y^2+z^2\leqslant t^2,z\geqslant 0,t\geqslant 0}$$
+    $S(t)$ 是 $\Omega(t)$ 的表面，$D(t)$ 是 $\Omega(t)$ 在 $xOy$ 平面上的投影区域，$L(t)$ 是 $D(t)$ 的边界曲线，
+    已知 $\forall t\in(0,+\infty)$ 恒有，
+    $$\oint_{L(t)}f\qty(x^2+y^2)\sqrt{x^2+y^2}\dd s+\oiint\limits_{S(t)}\qty(x^2+y^2+z^2)\dd S=\iint\limits_{D(t)}f\qty(x^2+y^2)\dd \sigma+\iiint\limits_{\Omega(t)}\sqrt{x^2+y^2+z^2}\dd V$$
+    求 $f(t)$ 的表达式.
+\end{example}
+\begin{solution}
+    $S(t)$ 由两部分组成，分别记作: $$S_1(t):z=\sqrt{t^2-x^2-y^2},(x,y)\in D(t); S_2(t):z=0,(x,y)\in D(t)$$
+    对弧长曲线积分的直接参数方程计算法，$L(t)$ 的参数方程为 $$L(t):x=t\cos \theta,y=t\sin\theta,0\leqslant\theta\leqslant2\pi$$
+    则 $$\dd s=\sqrt{x'^2(\theta)+y'^2(\theta)}\dd \theta=t\dd \theta$$
+    代入对弧长的曲线积分式，得
+    $$\oint_{L(t)}f\qty(x^2+y^2)\sqrt{x^2+y^2}\dd s=\int_{0}^{2\pi}f\qty(t^2)t\cdot t\dd \theta=2\pi f\qty(t^2)t^2$$
+    由曲面积分被积函数定义在积分曲面上和二重积分的极坐标计算方法，得
+    \begin{flalign*}
+        \oiint\limits_{S(t)}\qty(x^2+y^2+z^2)\dd S & =t^2\oiint\limits_{S_1(t)}\dd S+\oiint\limits_{S_2(t)}\qty(x^2+y^2)\dd S=t^2\cdot\dfrac{4\pi t^2}{2}+\iint\limits_{D(t)}\qty(x^2+y^2)\dd \sigma \\
+                                                   & =2\pi t^4+\int_{0}^{2\pi}\dd \theta\int_{0}^{t}\rho^2\rho\dd \rho=2\pi t^4+\dfrac{\pi}{2}t^4=\dfrac{5}{2}\pi t^4
+    \end{flalign*}
+    由二重积分的极坐标计算方法，得 
+    $$\iint\limits_{D(t)}f\qty(x^2+y^2)\dd \sigma=\int_{0}^{2\pi}\dd \theta\int_{0}^{t}\rho f\qty(\rho^2)\dd \rho=2\pi\int_{0}^{t}\rho f\qty(\rho^2)\dd \rho$$
+    由三重积分的球坐标计算方法，得 
+    $$\iiint\limits_{\Omega(t)}\sqrt{x^2+y^2+z^2}\dd V=\int_{0}^{2\pi}\dd \theta\int_{0}^{\frac{\pi}{2}}\dd \varphi\int_{0}^{t}r\cdot r^2\sin\varphi\dd r=\dfrac{\pi}{2}t^4$$
+    将上述结果代入题设等式，得 
+    \begin{equation*}
+        2\pi t^2f\qty(t^2)+\dfrac{5}{2}\pi t^4=2\pi\int_{0}^{t}f\qty(\rho^2)\rho\dd \rho+\dfrac{\pi}{2}t^4
+        \tag{*}
+    \end{equation*}
+    整理得 $f\qty(t^2)=\dfrac{\displaystyle\int_{0}^{t}f\qty(\rho^2)\dd \rho}{t^2}-t^2$，由 $f(t)$ 在 $t=0$ 连续，故 
+    \begin{flalign*}
+        \lim_{t\to0^+}f\qty(t^2)=f(0)=\lim_{t\to0^+}\dfrac{\displaystyle\int_{0}^{t}f\qty(\rho^2)\rho\dd \rho}{t^2}-\lim_{t\to0^+}t^2=\lim_{t\to0^+}\dfrac{f\qty(t^2)t}{2t}=\dfrac{f(0)}{2}
+    \end{flalign*}
+    故 $f(0)=0$，由等式 $(*)$ 知 $f(t)$ 可导，对两端求导并整理得 $$f'\qty(t^2)+\dfrac{1}{2t^2}f\qty(t^2)+2=0$$
+    令 $u=t^2$，有 $f'(u)+\dfrac{1}{2u}f(u)=-2$，该方程为一阶非齐次线性微分方程，由通解公式，得 
+    $$f(u)=\e ^{-\frac{1}{2}\int\frac{\dd u}{u}}\qty[\int-2\cdot\e ^{\frac{1}{2}\int\frac{\dd u}{u}}\dd u+C]=\dfrac{1}{\sqrt{u}}\qty[-2\int\sqrt{u}\dd u+C]=-\dfrac{4}{3}u+\dfrac{C}{\sqrt{u}}$$
+    即 $f(t)=-\dfrac{4}{3}t+\dfrac{C}{\sqrt{t}}$，其中 $C$ 为任意常数，由 $f(0)=0$ 得 $C=0$，故 $f(t)=-\dfrac{4}{3}t.$
+\end{solution}
+
+\subsection{微分方程与幂级数}
+
+\begin{example}[2007 数一]
+    设幂级数 $\displaystyle\sum_{n=0}^{\infty}a_nx^n$ 在 $(-\infty,+\infty)$ 内收敛，其和函数 $y(x)$ 满足 
+    $$y''-2xy'-4y=0,~y(0)=0,~y'(0)=1$$
+    \begin{enumerate*}[label=(\arabic{*})]
+        \item 证明: $a_{n+2}=\dfrac{2}{n+1}a_n,~n=1,2,\dots;$
+        \item 求 $y(x)$ 的表达式.
+    \end{enumerate*}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 对 $\displaystyle\sum_{n=0}^{\infty}a_nx^n$ 求一、二阶导数，有 
+        $$y'(x)=\sum_{n=1}^{\infty}na_nx^{n-1},~y''(x)=\sum_{n=2}^{\infty}n(n-1)a_nx^{n-2}$$
+        并代入关系式 $y''-2xy'-4y=0$，整理可得
+        $$\sum_{n=0}^{\infty}(n+1)(n+2)a_{n+2}x^{n}=\sum_{n=0}^{\infty}4a_nx^n+\sum_{n=1}^{\infty}2na_nx^n=\sum_{n=0}^{\infty}2(n+2)a_nx^n$$
+        对比上式系数可得 $a_{n+2}=\dfrac{2}{n+1}a_n$.
+        \item 因为 $y(0)=a_0=0,y'(0)=a_1=1$，故 $a_{2n}=0,~n=0,1,2,\dots$，且 
+        $$a_{2n+1}=\dfrac{2}{2n}a_{2n-1}=\dots=\dfrac{2^n}{2n\cdot(2n-2)\cdots 4\cdot 2}a_1=\dfrac{1}{n!}~  n=1,2,\dots$$
+        从而 $$y=\sum_{n=0}^{\infty}a_nx^n=\sum_{n=0}^{\infty}a_{2n+1}x^{2n+1}=\sum_{n=0}^{\infty}\dfrac{x^{2n+1}}{n!}=x\sum_{n=0}^{\infty}\dfrac{\qty(x^2)^n}{n!}=x\e^{x^2}~  x\in(-\infty,+\infty).$$
+    \end{enumerate}
+\end{solution}
+
+\begin{example}
+    求级数 $1+\displaystyle\sum_{n=1}^{\infty}(-1)^n\dfrac{(2n-1)!!}{(2n)!!}$ 的值.
+\end{example}
+\begin{solution}
+    因为 $\dfrac{(2n-1)!!}{(2n)!!}\searrow$，且注意到 $$\dfrac{(2n-1)!!}{(2n)!!}=\dfrac{\sqrt{1\cdot3}\cdot\sqrt{3\cdot5}\cdots\sqrt{(2n-1)\cdot(2n+1)}}{2\cdot4\cdot6\cdots (2n)}\dfrac{1}{\sqrt{2n+1}}$$
+    由 $\sqrt{ab}<\dfrac{a+b}{2}~ (a\neq b)$，所以
+    $$0<\dfrac{(2n-1)!!}{(2n)!!}<\dfrac{1}{\sqrt{2n+1}}\to0~ (n\to\infty)$$
+    由 Leibniz 定理，原级数收敛;
+    收敛半径为 1，这是因为 $$R=\lim_{n\to\infty}\dfrac{a_{n+1}}{a_{n}}=\dfrac{2n+1}{2n+2}=1$$
+    由此可知幂级数在 $(-1,1)$ 内收敛，记 $\displaystyle f(x)=1+\sum_{n=1}^{\infty}\dfrac{(2n-1)!!}{(2n)!!}x^n$，那么
+    $$f'(x)=\sum_{n=1}^{\infty}\dfrac{(2n-1)!!n}{(2n)!!}x^{n-1},~2xf'(x)=\sum_{n=1}^{\infty}\dfrac{(2n-1)!!}{(2n-2)!!}x^n$$
+    于是有 $$2f'(x)-2xf'(x)=f(x)$$
+    及 $$\dfrac{f'(x)}{f(x)}=\dfrac{1}{2(1-x)}$$
+    两边积分得 $\ln f(x)=\ln\dfrac{1}{\sqrt{1-x}}$，因此 $f(x)=\dfrac{1}{\sqrt{1-x}}$，即 $\displaystyle 1+\sum_{n=1}^{\infty}\dfrac{(2n-1)!!}{(2n)!!}x^n=\dfrac{1}{\sqrt{1-x}}$，
+    令 $x\to -1^+$ 取极限得
+    $$1+\sum_{n=1}^{\infty}(-1)^n\dfrac{(2n-1)!!}{(2n)!!}=\lim_{x\to-1^+}\qty[1+\sum_{n=1}^{\infty}\dfrac{(2n-1)!!}{(2n)!!}x^n]=\lim_{x\to-1^+}\dfrac{1}{\sqrt{1-x}}=\dfrac{\sqrt{2}}{2}.$$
+\end{solution}
+
+\begin{example}
+    已知当 $x>0$ 时，有 $(1+x^2)f'(x)+(1+x)f(x)=1$，且 $$g'(x)=f(x),~f(0)=g(0)=0$$
+    证明: $\dfrac{1}{4}<\displaystyle\sum_{n=1}^{\infty}g\qty(\dfrac{1}{n})<1.$
+\end{example}
+\begin{proof}[{\songti \textbf{证}}]
+    因为 $f'(x)+\dfrac{1+x}{1+x^2}f(x)=\dfrac{1}{1+x^2}$，由一阶线性微分方程通解公式得
+    \begin{flalign*}
+        f(x)=\e ^{-\int\frac{1+x}{1+x^2}\dd x}\qty[\int\dfrac{1}{1+x^2}\cdot\e ^{\int\frac{1+x}{1+x^2}\dd x}\dd x+C]=\dfrac{\e ^{-\arctan x}}{\sqrt{1+x^2}}\int_{0}^{x}\dfrac{\e ^{\arctan t}}{\sqrt{1+t^2}}\dd t
+    \end{flalign*}
+    在 $x\in(0,1]$ 上，有
+    \begin{flalign*}
+        f(x)=\int_{0}^{x}\dfrac{\e ^{\arctan t-\arctan x}}{\sqrt{1+t^2}\cdot\sqrt{1+x^2}}\dd t\leqslant \int_{0}^{x}\dfrac{\dd t}{1+t^2}=\arctan x<x
+    \end{flalign*}
+    于是有
+    \begin{flalign*}
+        \sum_{n=1}^{\infty}g\qty(\dfrac{1}{n})=\sum_{n=1}^{\infty}\int_{0}^{\frac{1}{n}}f(x)\dd x<\sum_{n=1}^{\infty}\int_{0}^{\frac{1}{n}}x\dd x=\dfrac{1}{2}\sum_{n=1}^{\infty}\dfrac{1}{n^2}=\dfrac{\pi^2}{12}<1
+    \end{flalign*}
+    另一方面，由 $\e ^x>1+x,~x\neq0$，有
+    \begin{flalign*}
+        f(x) & \geqslant \dfrac{1}{1+x^2}\int_{0}^{x}\e ^{\arctan t-\arctan x}\dd t\geqslant \dfrac{1}{1+x^2}\int_{0}^{x}[1+(\arctan t-\arctan x)]\dd t           \\
+             & =\dfrac{1}{1+x^2}\int_{0}^{x}\qty[1+\dfrac{(t-x)}{1+\xi^2}]\dd t\geqslant \dfrac{1}{1+x^2}\int_{0}^{x}[1+t-x]\dd t=\dfrac{1}{1+x^2}\qty(x-\dfrac{x^2}{2})
+    \end{flalign*}
+    于是有
+    \begin{flalign*}
+        \sum_{n=1}^{\infty}g\qty(\dfrac{1}{n}) & =\sum_{n=1}^{\infty}\int_{0}^{\frac{1}{n}}f(x)\dd x\geqslant \sum_{n=1}^{\infty}\int_{0}^{\frac{1}{n}}\dfrac{1}{1+x^2}\qty(x-\dfrac{x^2}{2})\dd x\geqslant \sum_{n=1}^{\infty}\dfrac{1}{1+\dfrac{1}{n^2}}\int_{0}^{\frac{1}{n}}\qty(x-\dfrac{x^2}{2})\dd x \\
+                                               & =\dfrac{1}{2}\sum_{n=1}^{\infty}\dfrac{1}{n^2+1}\qty(1-\dfrac{1}{3n})\geqslant \dfrac{1}{3}\sum_{n=1}^{\infty}\dfrac{1}{n^2+1}\geqslant \dfrac{1}{3}\sum_{n=1}^{\infty}\dfrac{1}{n(n+1)}=\dfrac{1}{3}>\dfrac{1}{4}
+    \end{flalign*}
+    综上得证.
+\end{proof}
+
+
+\begin{example}[第十届数学竞赛决赛]\scriptsize\linespread{0.8}
+    求 $\displaystyle\sum_{n=1}^\infty\frac{1}{3}\cdot\frac{2}{5}\cdot\frac{3}{7}\cdots\frac{n}{2n+1}\cdot\frac{1}{n+1}$.
+\end{example}
+\begin{solution}\scriptsize\linespread{0.8}
+    级数的通项化为
+    $$a_n=\frac{2(2n)!!}{(2n+1)!!(n+1)}\cdot\frac{1}{2^{n+1}}=\frac{2(2n)!!}{(2n+1)!!(n+1)}\cdot\left(\frac{1}{\sqrt{2}}\right)^{2(n+1)}$$
+    令 $\displaystyle f(x)=\sum_{n=1}^\infty\frac{2(2n)!!}{(2n+1)!!(n+1)}x^{2(n+1)}$，记 $\displaystyle u_n(x)=\frac{2(2n)!!}{(2n+1)!!(n+1)}x^{2(n+1)}$，
+    \begin{flalign*}
+        \lim_{n\to\infty}\left |\frac{u_{n+1}(x)}{u_n(x)}\right | & =\lim_{n\to\infty}\frac{2(2n+2)!!}{(2n+3)!!(n+2)}x^{2(n+1)}\cdot\frac{(2n+1)!!(n+1)}{2(2n)!!x^{2(n+1)}} \\
+                                                                  & =\lim_{n\to\infty}\frac{(2n+3)(n+1)}{(2n+3)(n+2)}x^2=x^2
+    \end{flalign*}
+    所以 $x^2<1$ 时，$f(x)$ 的幂级数收敛，其收敛区间为 $(-1,1)$，
+    $$f'(x)=\sum_{n=1}^\infty\frac{4\cdot(2n)!!}{(2n+1)!!}x^{2n+1},~f''(x)=\sum_{n=1}^\infty\frac{4\cdot(2n)!!}{(2n-1)!!}x^{2n}$$
+    \begin{flalign*}
+        f''(x) & =\sum_{n=1}^\infty\frac{4\cdot(2n)!!}{(2n-1)!!}x^{2n}=x\sum_{n=1}^\infty\frac{4\cdot(2n)!!}{(2n-1)!!}x^{2n-1}=x\left(\sum_{n=1}^\infty\frac{4\cdot(2n)!!}{(2n-1)!!}\int_0^xx^{2n-1}\mathrm{d}x\right)' \\
+               & =x\left(\sum_{n=1}^\infty\frac{4\cdot(2n-2)!!}{(2n-1)!!}x^{2n}\right)'=x\left(x\sum_{n=1}^\infty\frac{4\cdot(2n-2)!!}{(2n-1)!!}x^{2n-1}\right)'                                                        \\
+               & =x\left(x\sum_{n=0}^\infty\frac{4\cdot(2n)!!}{(2n+1)!!}x^{2n+1}\right)'=x\left[x\left(4x+\sum_{n=1}^\infty\frac{4\cdot(2n)!!}{(2n+1)!!}x^{2n+1}\right)\right]'                                         \\
+               & =x\left[x(4x+f'(x))\right]'=x(8x+f'(x)+xf''(x))\Rightarrow f''(x)-\frac{x}{1-x^2}f'(x)=\frac{8x^2}{1-x^2}
+    \end{flalign*}
+    这是关于 $f'(x)$ 的一阶线性微分方程，其通解为
+    \begin{flalign*}
+        f'(x) & =\e ^{\int\frac{x}{1-x^2}\mathrm{d}x}\left[\int\frac{8x^2}{1-x^2}\cdot\e ^{-\int\frac{x}{1-x^2}\mathrm{d}x}\mathrm{d}x+C_1\right]
+        =\frac{1}{\sqrt{1-x^2}}\left[8\int\frac{x^2}{\sqrt{1-x^2}}\mathrm{d}x+C_1\right]                                                                        \\
+              & =\frac{1}{\sqrt{1-x^2}}\left(4\arcsin x-4x\sqrt{1-x^2}+C_1\right)
+    \end{flalign*}
+    因为 $f'(0)=0$，可得 $C_1=0$，所以 $\displaystyle f'(x)=4\left(\frac{\arcsin x}{\sqrt{1-x^2}}-x\right)$，积分得
+    $$f(x)=4\int\left(\frac{\arcsin x}{\sqrt{1-x^2}}-x\right)\mathrm{d}x=2\arcsin^2x-2x^2+C_2$$
+    又有 $f(0)=0$，可得 $C_2=0$，所以 $\displaystyle f(x)=2\arcsin^2x-2x^2$，于是有
+    $$\text{原式}=\sum_{n=1}^\infty a_n=f\left(\frac{1}{\sqrt{2}}\right)=2\arcsin^2\left(\frac{1}{\sqrt{2}}\right)-1=\frac{\pi^2}{8}-1$$
+\end{solution}
+
+
+% \begin{example}
+%     求 $\displaystyle \sum_{n=1}^{\infty}\dfrac{[(n-1)!]^2}{(2n)!}(2x)^{2n}.$
+% \end{example}
+% \begin{solution}
+%     记 $u_n(x)=\dfrac{[(n-1)!]^2}{(2n)!}(2x)^{2n}$，那么 $\displaystyle\lim_{n\to\infty}\dfrac{u_{n+1}(x)}{u_n(x)}=\lim_{n\to\infty}\dfrac{\dfrac{(n!)^2}{(2n+2)!}(2x)^{2n+2}}{\dfrac{[(n-1)!]^2}{(2n)!}(2x)^{2n}}$
+% \end{solution}

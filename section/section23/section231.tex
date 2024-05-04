@@ -1,0 +1,284 @@
+\section{命题逻辑}
+
+\subsection{命题及其表示法}
+
+在数理逻辑中，我们将使用大写字母 $A,B,\cdots,P,Q,\cdots$ 或用带下标的大写字母或用数字，如 $A_i,[12]$ 等表示命题.
+
+\begin{definition}[命题标识符]
+    表示命题的符号称为命题标识符.
+\end{definition}
+
+\begin{definition}[真值]
+    一个命题，总是具有一个“值”，称为真值，真值只有“真”和“假”两种，记作 True (真) 和 False (假)，分别用符号 $\vb*{T}$ 和 $\vb*{F}$ 表示.
+\end{definition}
+
+\subsection{联结词}
+
+\begin{definition}[原子命题和复合命题]
+    不包含任何联结词的命题叫做原子命题，至少包含一个联结词的命题称作复合命题.
+\end{definition}
+
+\begin{definition}[否定]
+    设 $P$ 为一命题，$P$ 的否定是一个新的命题，记作 $\neg P$. 若 $P$ 为 $\vb*{T}$，$\neg P$ 为 $\vb*{F}$; 若 $P$ 为 $\vb*{F}$，$\neg P$ 为 $\vb*{T}$.
+\end{definition}
+
+\begin{definition}[合取]
+    两个命题 $P$ 和 $Q$ 的合取是一个复合命题，记作 $P \wedge Q$. 当且仅当 $P,Q$ 同时为 $\vb*{T}$ 时，$P\wedge Q$ 为 $\vb*{T}$，在其他情况下，$P\wedge Q$ 的真值都是 $\vb*{F}$.
+\end{definition}
+
+\begin{definition}[析取]
+    两个命题 $P$ 和 $Q$ 的析取是一个复合命题，记作 $P\vee Q$. 当且仅当 $P,Q$ 同时为 $\vb*{F}$ 时，$P\vee Q$ 为 $\vb*{F}$，在其他情况下，$P\vee Q$ 的真值都是 $\vb*{T}$.
+\end{definition}
+
+\begin{definition}[条件]
+    给定两个命题 $P$ 和 $Q$，其条件命题是一个复合命题，记作 $P\to Q$，读作“如果 $P$，那么 $Q$”或“若 $P$ 则 $Q$”. 当且仅当 $P$ 的真值为 $\vb*{T}$，$Q$ 的真值为 $\vb*{F}$ 时，$P\to Q$ 的真值为 $\vb*{F}$，否则 $P\to Q$ 的真值为 $\vb*{T}$，我们称 $P$ 为前件，$Q$ 为后件.
+\end{definition}
+
+\begin{definition}[双条件]
+    给定两个命题 $P$ 和 $Q$，其复合命题 $P \rightleftarrows Q$ 称作双条件命题，读作“$P$ 当且仅当 $Q$”，当 $P$ 和 $Q$ 的真值相同时，$P \rightleftarrows Q$ 的真值为 $\vb*{T}$，否则 $P \rightleftarrows Q$ 的真值为 $\vb*{F}$.
+\end{definition}
+
+\begin{table}[H]
+    \centering
+    \caption{}
+    \begin{tabular}{c | c | c | c | c | c | c}
+        $P$       & $Q$       & $\neg P$  & $P \wedge Q$ & $P\vee Q$ & $P\to Q$  & $P \rightleftarrows Q$ \\
+        \midrule
+        $\vb*{T}$ & $\vb*{T}$ & $\vb*{F}$ & $\vb*{T}$    & $\vb*{T}$ & $\vb*{T}$ & $\vb*{T}$              \\
+        \midrule
+        $\vb*{T}$ & $\vb*{F}$ & $\vb*{F}$ & $\vb*{F}$    & $\vb*{T}$ & $\vb*{F}$ & $\vb*{F}$              \\
+        \midrule
+        $\vb*{F}$ & $\vb*{T}$ & $\vb*{T}$ & $\vb*{F}$    & $\vb*{T}$ & $\vb*{T}$ & $\vb*{F}$              \\
+        \midrule
+        $\vb*{F}$ & $\vb*{F}$ & $\vb*{T}$ & $\vb*{F}$    & $\vb*{F}$ & $\vb*{T}$ & $\vb*{T}$              \\
+    \end{tabular}
+\end{table}
+
+\begin{example}
+    以符号形式写出下列命题:
+    \begin{enumerate*}[label=(\arabic{*})]
+        \item 如果天不下雪和我有时间，那么我将去镇上.
+        \item 我将去镇上，仅当我有时间时.
+        \item 天不下雪.
+        \item 天下雪，那么我不去镇上.
+    \end{enumerate*}
+\end{example}
+\begin{solution}
+    令 $P:$ 天下雪，$Q:$ 我有时间，$R:$ 我将去镇上，那么
+    \begin{enumerate*}[label=(\arabic{*})]
+        \item $(\neg P\wedge Q)\to R$.
+        \item $R\to Q$.
+        \item $\neg P$.
+        \item $P\to \neg R$.
+    \end{enumerate*}
+\end{solution}
+
+\subsection{命题公式与翻译}
+
+\begin{definition}[合式公式 (wff)]
+    命题演算的合式公式 (wff)，规定为:
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 单个命题变元本身是一个合式公式.
+        \item 如果 $A$ 是合式公式，那么 $\neg A$ 是合式公式.
+        \item 如果 $A$ 和 $B$ 是合式公式，那么 $(A\wedge B),(A\vee B),(A\to B),(A \rightleftarrows B)$ 都是合式公式.
+        \item 当且仅当能够有限次地使用 (1)、(2) 和 (3) 所得到的包含命题变元，联结词和括号的符号串是合式公式.
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}[联结词运算优先级]
+    我们规定联结词运算的优先次序为 $\neg,\wedge,\vee,\to,\rightleftarrows$ (非、与、或、若则、仅当).
+\end{definition}
+
+\begin{example}
+    判断下列公式哪些是合式公式，哪些不是合式公式.
+    \begin{enumerate*}[label=(\arabic{*})]
+        \item $(Q\to (R\wedge S))$.
+        \item $(P\rightleftarrows (R\to S))$.
+        \item $((\neg P\to Q)\to (Q\to P))$.
+        \item $(RS\to P)$.
+        \item $((P\to(Q\to R))\to((P\to Q)\to(P\to R)))$.
+    \end{enumerate*}
+\end{example}
+\begin{solution}
+    \begin{enumerate*}[label=(\arabic{*})]
+        \item 不是合式公式，因为没有规定运算符次序.
+        \item 是合式公式.
+        \item 是合式公式.
+        \item 不是合式公式，因为 $R$ 和 $S$ 之间缺少联结词.
+        \item 是合式公式.
+    \end{enumerate*}
+\end{solution}
+
+\begin{example}
+    对下列各式用指定的公式进行代换.
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $((A\to B)\vee (B\to A))$，用 $B$ 代换 $A$.
+        \item $(((A\to B)\to B)\to A)$，用 $(A\to C)$ 代换 $A$，用 $((B\wedge C)\to A)$ 代换 $B$.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate*}[label=(\arabic{*})]
+        \item $((B\to B)\vee (B\to B))$.
+        \item $((((A\to C)\to ((B\wedge C)\to A))\to ((B\wedge C)\to A))\to (A\to C))$.
+    \end{enumerate*}
+\end{solution}
+
+\begin{example}
+    下列几个式子中有哪几个是别的式子经过代换得到的.
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $(P\to(Q\to P))$.
+        \item $((((P\to Q)\wedge (R\to S))\wedge (P\vee R))\to (Q\vee S))$.
+        \item $(Q\to ((P\to P)\to Q))$.
+        \item $(P\to ((P\to (Q\to P))\to P))$.
+        \item $((((R\to S)\wedge (Q\to P))\wedge (R\vee Q))\to (S\vee P))$.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    (1) 是由 (3) 式进行代换得到，在 (3) 中用 $Q$ 代换 $P$，$(P\to P)$ 代换 $Q$.
+    (4) 是由 (1) 式进行代换得到，在 (1) 中用 $P\to(Q\to P)$ 代换 $Q$.
+    (5) 是由 (2) 式进行代换得到，在 (2) 中用 $R$ 代换 $P$，用 $S$ 代换 $Q$，用 $Q$ 代换 $R$，用 $P$ 代换 $S$.
+\end{solution}
+
+\subsection{真值表与等价公式}
+
+\begin{definition}[真值表]
+    在命题公式中，对于分量指派真值的各种可能组合，就确定了这个命题公式的各种真值情况，把它汇列成表，就是命题公式的真值表.
+\end{definition}
+
+\begin{example}
+    给出 $(P\wedge Q)\vee (\neg P\wedge \neg Q)$ 的真值表.
+\end{example}
+\begin{table}[H]
+    \centering
+    \caption{}
+    \begin{tabular}{c | c | c | c | c | c | c}
+        $P$       & $Q$       & $\neg P$  & $\neg Q$  & $P\wedge Q$ & $\neg P\wedge \neg Q$ & $(P\wedge Q)\vee (\neg P\wedge \neg Q)$ \\
+        \midrule
+        $\vb*{T}$ & $\vb*{T}$ & $\vb*{F}$ & $\vb*{F}$ & $\vb*{T}$   & $\vb*{F}$             & $\vb*{T}$                               \\
+        \midrule
+        $\vb*{T}$ & $\vb*{F}$ & $\vb*{F}$ & $\vb*{T}$ & $\vb*{F}$   & $\vb*{F}$             & $\vb*{F}$                               \\
+        \midrule
+        $\vb*{F}$ & $\vb*{T}$ & $\vb*{T}$ & $\vb*{F}$ & $\vb*{F}$   & $\vb*{F}$             & $\vb*{F}$                               \\
+        \midrule
+        $\vb*{F}$ & $\vb*{F}$ & $\vb*{T}$ & $\vb*{T}$ & $\vb*{F}$   & $\vb*{T}$             & $\vb*{T}$                               \\
+    \end{tabular}
+\end{table}
+
+\begin{example}
+    给出 $\neg (P\wedge Q)\rightleftarrows (\neg P \vee \neg Q)$ 的真值表.
+\end{example}
+\begin{table}[H]
+    \centering
+    \caption{}
+    \label{eishinCeremony}
+    \begin{tabular}{c | c | c | c | c | c | c | c}
+        $P$       & $Q$       & $\neg P$  & $\neg Q$  & $P\wedge Q$ & $\neg (P\wedge Q)$ & $\neg P\vee \neg Q$ & $\neg (P\wedge Q)\rightleftarrows (\neg P \vee \neg Q)$ \\
+        \midrule
+        $\vb*{T}$ & $\vb*{T}$ & $\vb*{F}$ & $\vb*{F}$ & $\vb*{T}$   & $\vb*{F}$          & $\vb*{F}$           & $\vb*{T}$                                               \\
+        \midrule
+        $\vb*{T}$ & $\vb*{F}$ & $\vb*{F}$ & $\vb*{T}$ & $\vb*{F}$   & $\vb*{T}$          & $\vb*{T}$           & $\vb*{T}$                                               \\
+        \midrule
+        $\vb*{F}$ & $\vb*{T}$ & $\vb*{T}$ & $\vb*{F}$ & $\vb*{F}$   & $\vb*{T}$          & $\vb*{T}$           & $\vb*{T}$                                               \\
+        \midrule
+        $\vb*{F}$ & $\vb*{F}$ & $\vb*{T}$ & $\vb*{T}$ & $\vb*{F}$   & $\vb*{T}$          & $\vb*{T}$           & $\vb*{T}$                                               \\
+    \end{tabular}
+\end{table}
+
+由表 \ref{eishinCeremony} 可以看出，有一类公式无论命题变元作何种指派，其真值永为真 (假)，我们把这类公式记为 $\vb*{T}(\vb*{F})$.
+
+\begin{definition}[命题等价]
+    给定两个命题公式 $A$ 和 $B$，设 $P_1,P_2,\cdots,P_n$ 为所有出现于 $A$ 和 $B$ 中的原子变元，若给 $P_1,P_2,\cdots,P_n$ 任一组真值指派，$A$ 和 $B$ 的真值都相同，则称 $A$ 和 $B$ 是等价的或逻辑相等，记作 $A\Leftrightarrow B$.
+\end{definition}
+
+\begin{example}
+    试用真值表说明 $\neg P\vee Q\Leftrightarrow P\to Q$ 和 $P\leftrightarrows Q\Leftrightarrow (P\wedge Q)\vee (\neg P\wedge \neg Q)$ (可作为结论使用).
+    \label{negpveeq}
+\end{example}
+\begin{table}[H]
+    \centering
+    \caption{}
+    \begin{tabular}{c | c | c | c | c | c | c | c | c | c}
+        $P$       & $Q$       & $\neg P$  & $\neg Q$  & $\neg P\vee Q$ & $P\to Q$  & $P\leftrightarrows Q$ & $P\wedge Q$ & $\neg P\wedge \neg Q$ & $(P\wedge Q)\vee (\neg P\wedge \neg Q)$ \\
+        \midrule
+        $\vb*{T}$ & $\vb*{T}$ & $\vb*{F}$ & $\vb*{F}$ & $\vb*{T}$      & $\vb*{T}$ & $\vb*{T}$             & $\vb*{T}$   & $\vb*{F}$             & $\vb*{T}$                               \\
+        \midrule
+        $\vb*{T}$ & $\vb*{F}$ & $\vb*{F}$ & $\vb*{T}$ & $\vb*{F}$      & $\vb*{F}$ & $\vb*{F}$             & $\vb*{F}$   & $\vb*{F}$             & $\vb*{F}$                               \\
+        \midrule
+        $\vb*{F}$ & $\vb*{T}$ & $\vb*{T}$ & $\vb*{F}$ & $\vb*{T}$      & $\vb*{T}$ & $\vb*{F}$             & $\vb*{F}$   & $\vb*{F}$             & $\vb*{F}$                               \\
+        \midrule
+        $\vb*{F}$ & $\vb*{F}$ & $\vb*{T}$ & $\vb*{T}$ & $\vb*{T}$      & $\vb*{T}$ & $\vb*{T}$             & $\vb*{F}$   & $\vb*{T}$             & $\vb*{T}$                               \\
+    \end{tabular}
+\end{table}
+
+常用的命题等价定理.
+
+\setcounter{magicrownumbers}{0}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c l | c l}
+        对合律                     & (\rownumber{}) $\neg\neg P\Leftrightarrow P$                                               & 幂等律                  & (\rownumber{}) $P\vee P\Leftrightarrow P,P\wedge P\Leftrightarrow P$                         \\
+        \midrule
+        \multirow{2}{*}{结合律}    & (\rownumber{}) $(P\vee Q)\vee R\Leftrightarrow P\vee (Q\vee R)$                            & \multirow{2}{*}{交换律} & (\rownumber{}) $P\vee Q\Leftrightarrow Q\vee P$                                              \\
+                                   & (\rownumber{}) $(P\wedge Q)\wedge R\Leftrightarrow P\wedge (Q\wedge R)$                    &                         & (\rownumber{}) $P\wedge Q\Leftrightarrow Q\wedge P$                                          \\
+        \midrule
+        \multirow{2}{*}{分配律}    & (\rownumber{}) $P\vee (Q\wedge R)\Leftrightarrow (P\vee Q)\wedge(P\vee R)$                 & \multirow{2}{*}{吸收律} & (\rownumber{}) $P\vee(P\wedge Q)\leftrightarrow P$                                           \\
+                                   & (\rownumber{}) $P\wedge (Q\vee R)\Leftrightarrow (P\wedge Q)\vee(P\wedge R)$               &                         & (\rownumber{}) $P\wedge(P\vee Q)\leftrightarrow P$                                           \\
+        \midrule
+        \multirow{2}{*}{德·摩根律} & (\rownumber{}) $\neg(P\vee Q)\Leftrightarrow \neg P\wedge \neg Q$                          & 同一律                  & (\rownumber{}) $P\vee \vb*{F}\Leftrightarrow P,P\wedge \vb*{T}\Leftrightarrow P$             \\
+                                   & (\rownumber{}) $\neg(P\wedge Q)\Leftrightarrow \neg P\vee \neg Q$                          & 零律                    & (\rownumber{}) $P\vee \vb*{T}\Leftrightarrow \vb*{T},P\wedge \vb*{F}\Leftrightarrow \vb*{F}$ \\
+        \midrule
+        否定律                     & (\rownumber{}) $P\vee \neg P\Leftrightarrow \vb*{T},P\wedge \neg P\Leftrightarrow \vb*{F}$
+    \end{tabular}
+\end{table}
+
+\begin{example}
+    证明: $(P\wedge Q)\vee (P\wedge \neg Q)\Leftrightarrow P.$
+\end{example}
+\begin{proof}[{\songti \textbf{证}}]
+    $(P\wedge Q)\vee (P\wedge \neg Q)\Leftrightarrow P\wedge(Q\vee\neg Q)\Leftrightarrow P\wedge \vb*{T}\Leftrightarrow P.$
+\end{proof}
+
+\begin{example}
+    证明: $((P\vee Q)\wedge\neg(\neg P\wedge (\neg Q\vee \neg R)))\vee (\neg P\wedge \neg Q)\vee (\neg P\wedge \neg R)\Leftrightarrow \vb*{T}.$
+\end{example}
+\begin{proof}[{\songti \textbf{证}}]
+    原式左边 $\Leftrightarrow ((P\vee Q)\wedge\neg(\neg P \wedge \neg(Q\wedge R)))\vee \neg(P\vee Q)\vee\neg(P\vee R)
+        \Leftrightarrow ((P\vee Q)\wedge(P \vee(Q\wedge R)))\vee \neg(P\vee Q)\vee \neg(P\vee R)
+        \Leftrightarrow ((P\vee Q)\wedge ((P\vee Q)\wedge (P\vee R)))\vee \neg((P\vee Q)\wedge (P\vee R))
+        \Leftrightarrow ((P\vee Q)\wedge (P\vee R))\vee \neg ((P\vee Q)\wedge (P\vee R))\Leftrightarrow \vb*{T}.$
+\end{proof}
+
+\begin{example}
+    证明下列等价式:
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $A\to(B\to A)\Leftrightarrow \neg A\to(A\to\neg B)$.
+        \item $\neg (A\leftrightarrows B)\Leftrightarrow (A\vee B)\wedge\neg(A\wedge B)$.
+        \item $\neg(A\to B)\Leftrightarrow A\wedge \neg B$.
+        \item $A\to(B\vee C)\Leftrightarrow (A\wedge \neg B)\to C$.
+    \end{enumerate}
+\end{example}
+\begin{proof}[{\songti \textbf{证}}]
+    由例题 \ref{negpveeq} 的结论可得:
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $A\to(B\to A)\Leftrightarrow \neg A\vee (\neg B\vee A)\Leftrightarrow A\vee(\neg A\vee \neg B)\Leftrightarrow \neg A\to(A\to\neg B)$.
+        \item $\neg (A\leftrightarrows B)\Leftrightarrow \neg((A\wedge B)\vee(\neg A\wedge \neg B))\Leftrightarrow \neg((A\wedge B)\vee\neg(A\vee B))\Leftrightarrow (A\vee B)\wedge\neg(A\wedge B)$.
+        \item $\neg(A\to B)\Leftrightarrow \neg(\neg A\vee B)\Leftrightarrow A\wedge \neg B$.
+        \item $A\to(B\vee C)\Leftrightarrow \Leftrightarrow \neg A\vee(B\vee C)\Leftrightarrow \neg(A\wedge \neg B)\vee C\Leftrightarrow (A\wedge \neg B)\to C$.
+    \end{enumerate}
+\end{proof}
+
+\subsection{重言式与蕴含式}
+
+\begin{definition}[重言式]
+    给定一命题公式，若无论对分量作怎样的指派，其对应的真值永为 $\vb*{T}$，则称该命题公式为重言式或永真公式.
+\end{definition}
+
+\begin{definition}[矛盾式]
+    给定一命题公式，若无论对分量作怎样的指派，其对应的真值永为 $\vb*{F}$，则称该命题公式为矛盾式或永假公式.
+\end{definition}
+
+\subsection{其他联结词}
+
+\subsection{对偶与范式}
+
+\subsection{推理理论}

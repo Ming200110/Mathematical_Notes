@@ -1,0 +1,66 @@
+\section{假设检验}
+
+\subsection{假设检验的基本思想}
+
+\begin{example}
+    某厂生产一种袋装白糖，每袋白糖的净重是一个随机变量，服从正态分布 $ N\left(\mu, \sigma^{2}\right)$，
+    机器正常工作时，均值是 $0.5$ (单位: $ \mathrm{kg}$)，标准差是 $ 0.01 \mathrm{~kg}$，某天随机地抽取 $5$ 袋白糖，称得净重为
+    $$\begin{array}{lllll}
+            0.54 & 0.58 & 0.47 & 0.49 & 0.52
+        \end{array}$$
+    问当日机器是否正常工作?
+\end{example}
+\begin{solution}
+    由题意知，方差 $ \sigma^{2} $ 已知，$\mu $ 未知，要判断机器是否正常工作，就是要判断该日生产的白糖净重的均值是否为 $ 0.5 \mathrm{~kg} $，
+    即检验假设“$\mu=0.5$”是否正确. 因此，提出两个相互对立的假设：\\
+    原假设 $ H_{0}: \mu=\mu_{0}=0.5 $，备择假设 $ H_{1}: \mu \neq 0.5 .$\\
+    如果假设 $ H_{0}: \mu=\mu_{0}=0.5 $ 为真，那么机器正常工作; 如果假设 $ H_{1}: \mu \neq 0.5 $ 为真，则机器工作不正常.\\
+    在假设 $ H_{0}: \mu=\mu_{0}=0.5 $ 条件下，统计量 $\displaystyle Z=\frac{\bar{X}-\mu_{0}}{\sigma / \sqrt{n}} \sim N(0,1) $，
+    由标准正态分布的分位点的定义 (见图 \ref{alphafweidian})，知 $ P_{\mu_{0}}\left\{\left|\frac{\bar{X}-\mu_{0}}{\sigma / \sqrt{n}}\right| \geqslant z_{\alpha / 2}\right\}=\alpha $，
+    若给定 $ \alpha=0.05$，查表知 $ z_{0.025}=1.96$，代人样本数据: $ n=5, \bar{x}=0.52 $，
+    则 $$\displaystyle z=\frac{\bar{x}-\mu_{0}}{\sigma / \sqrt{n}}=\frac{0.52-0.5}{0.01 / \sqrt{5}}=4.47>1.96 .$$
+
+    这说明小概率事件发生了，所以应该拒绝假设 $ H_{0}: \mu=\mu_{0}=0.5 $，接受备择假设 $ H_{1}: \mu \neq 0.5 $，即机器工作不正常.
+\end{solution}
+
+\begin{definition}[接收域和拒绝域]
+    上述例题中，若 $ z $ 取值在区间 $ (-1.96,1.96) $ 范围内，则接受假设 $ H_{0} $，即 $ |z|<z_{\alpha / 2} $ 称为\textit{接受域}，
+    而 $ |z| \geqslant z_{\alpha / 2} $ 称为\textit{拒绝域}，$z_{\alpha / 2} $ 称为\textit{临界值}，$\displaystyle Z=\frac{\bar{X}-\mu_{0}}{\sigma / \sqrt{n}} $ 称为\textit{检验统计量}.
+\end{definition}
+
+在根据样本作推断时，由于样本的随机性，难免会做出错误的决定.
+
+\begin{definition}[第一类错误]
+    当原假设 $ H_{0} $ 为真时，而做出拒绝 $ H_{0} $ 的判断，称为犯\textit{第一类错误} (\textit{拒真错误})
+\end{definition}
+
+\begin{definition}[第二类错误]
+    当原假设 $ H_{0} $ 不真时，而作出接受 $ H_{0} $ 的判断，称为犯\textit{第二类错误} (\textit{取伪错误}).
+\end{definition}
+
+\begin{definition}[显著性水平]
+    在实际应用中，控制犯第一类错误的概率，使其不大于一个较小的正数 $ \alpha(0<\alpha<1)$，称 $ \alpha $ 为检验的\textit{显著性水平}.
+\end{definition}
+
+\begin{definition}[双边备择假设与双边假设检验]
+    形如 $ H_{1}: \mu \neq \mu_{0} $ 的假设，表示 $ \mu $ 可能大于 $ \mu_{0} $，也可能小于 $ \mu_{0}$，称为\textit{双边备择假设};
+    形如 $ H_{0}: \mu=\mu_{0} $ 的假设，称为\textit{双边假设检验}.
+\end{definition}
+
+在实际中，有时只关心均值是否减小. 例如某机器的生产效率问题，此时我们应该关注的是生产时间，时间越短越好.
+对于采用新工艺来提高生产效率，生产时间是否显著缩短的问题，需要考虑如下假设检验:
+原假设 $ H_{0}: \mu \geqslant \mu_{0}$，备择假设 $ H_{1}: \mu<\mu_{0} .$
+
+\begin{definition}[单边检验]
+    形如 $ H_{0}: \mu \geqslant \mu_{0} $ 的假设称为\textit{左边检验}，类似的形如 $ H_{0}: \mu \leqslant \mu_{0} $ 的假设称为\textit{右边检验}.
+    左边检验和右边检验统称为\textit{单边检验}.
+\end{definition}
+
+\subsection{假设检验的解题步骤}
+
+\begin{enumerate}[label=(\arabic{*})]
+    \item 确定原假设 $H_0$ 与备择假设 $H_1$;
+    \item 选择合适的检验统计量，在原假设成立的条件下求其发布;
+    \item 根据显著性水平 $\alpha$，再原假设成立的条件下确定临界值和拒绝域;
+    \item 判断是否落入拒绝域，落入拒绝域则拒绝 $H_0$，否则拒绝 $H_1$.
+\end{enumerate}

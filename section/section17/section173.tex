@@ -1,0 +1,102 @@
+\section{多维混合型随机变量}
+
+\subsection{二维混合型随机变量的分布}
+
+\begin{theorem}[二维混合型随机变量函数的分布]
+    设二维随机变量 $ (X, Y) $，其中离散型随机变量 $ X $ 的分布律为 $ P\left\{X=x_{i}\right\}=p_{i}(i=1,2, \cdots) $，
+    $ Y $ 为连续型随机变量，则 $ (X, Y) $ 的函数 $ Z=g(X, Y) $ 分布函数为
+    $$F_{Z}(z)=P\{Z \leqslant z\}=P\{g(X, Y) \leqslant z\} =\sum_{i=1}^{\infty} P\left\{X=x_{i}\right\} P\left\{g(X, Y) \leqslant z \mid X=x_{i}\right\}$$
+\end{theorem}
+
+\begin{example}
+    设随机变量 $X,Y$ 相互独立，且 $$P\qty{X=0}=P\qty{X=1}=\dfrac{1}{2},~P\qty{Y\leqslant x}=x,~0<x\leqslant 1$$
+    求 $Z=XY$ 的分布函数.
+\end{example}
+\begin{solution}
+    由题意可知 $Y\in(0,1]$，故 $Z=XY=[0,1]$，当 $z<0$ 时，$F_Z(z)=0$; 当 $z\geqslant 1$ 时，$F_Z(z)=1$;
+    当 $0\leqslant z<1$ 时，
+    \begin{flalign*}
+        F_Z(z) & =P\qty{Z\leqslant z}=P\qty{X=0}P\qty{Z\leqslant z\mid X=0}+P\qty{X=1}P\qty{Z\leqslant z\mid X=1}                                                   \\
+               & =\dfrac{1}{2}P\qty{XY\leqslant z\mid X=0}+\dfrac{1}{2}P\qty{XY\leqslant z\mid X=1}=\dfrac{1}{2}P\qty{0\leqslant z}+\dfrac{1}{2}P\qty{Y\leqslant z} \\
+               & =\dfrac{1}{2}+\dfrac{1}{2}z=\dfrac{1}{2}(1+z)
+    \end{flalign*}
+    因此 $F_Z(z)=\begin{cases}
+            0,                 & z<0            \\
+            \dfrac{1}{2}(1+z), & 0\leqslant z<1 \\[6pt]
+            1,                 & z\geqslant1.
+        \end{cases}$
+\end{solution}
+
+\begin{example}
+    设随机变量 $X$ 与 $Y$ 相互独立，且 $X$ 的分布为 $\begin{NiceArray}{c|cc}
+            X & -1          & 1           \\ \hline
+            P & \frac{1}{2} & \frac{1}{2}
+        \end{NiceArray}$，$Y$ 服从 $N(0,1)$ 分布，记 $Z=XY$，求 $Z$ 的分布函数 $F_Z(z).$
+\end{example}
+\begin{solution}
+    根据全概率公式，
+    \begin{flalign*}
+        F_Z(z) & =P\qty{Z\leqslant z}=P\qty{XY\leqslant z}=P\qty{X=-1}P\qty{XY\leqslant z\mid X=-1}+P\qty{X=1}P\qty{XY\leqslant z\mid X=1}                           \\
+               & =\dfrac{1}{2}P\qty{-Y\leqslant z\mid X=-1}+\dfrac{1}{2}P\qty{Y\leqslant z\mid X=1}=\dfrac{1}{2}P\qty{Y\geqslant -z}+\dfrac{1}{2}P\qty{Y\leqslant z} \\
+               & =\dfrac{1}{2}\qty[1-P\qty{Y<-z}]+\dfrac{1}{2}\varPhi(z)=\dfrac{1}{2}\qty[1-\varPhi(-z)]+\dfrac{1}{2}\varPhi(z)                                      \\
+               & =\dfrac{1}{2}\qty[1-1+\varPhi(z)]+\dfrac{1}{2}\varPhi(z)=\varPhi(z)
+    \end{flalign*}
+\end{solution}
+
+\begin{example}[2008 数一]
+    设随机变量 $X$ 和 $Y$ 相互独立，$X$ 概率分布为 $P\qty{X=i}=\dfrac{1}{3}~~(i=-1,0,1)$，$Y$ 的概率密度为 $f_Z(z)=\begin{cases}
+            1, & 0\leqslant y\leqslant 1 \\
+            0, & \text{其他}
+        \end{cases}$，记 $Z=X+Y.$
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求 $P\qty{Z\leqslant \dfrac{1}{2}\biggl | X=0}$;
+        \item 求 $Z$ 的概率密度 $f_Z(z).$
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\displaystyle P\qty{Z\leqslant \dfrac{1}{2}\biggl |X=0}=P\qty{X+Y\leqslant \dfrac{1}{2}\biggl |X=0}=P\qty{Y\leqslant \dfrac{1}{2}\biggl |X=0}=P\qty{Y\leqslant \dfrac{1}{2}}=\int_{0}^{\frac{1}{2}}f_Y(y)\dd y=\dfrac{1}{2}$.
+        \item 记 $Z$ 的分布函数为 $F_Z(z)$ 则
+              \begin{flalign*}
+                  F_Z(z) & =P\qty{Z\leqslant z}=P\qty{X+Y\leqslant z}=\sum_{i=-1}^{1}P\qty{X=i,X+Y\leqslant z}                  \\
+                         & =\sum_{i=-1}^{1}P\qty{X=i,Y\leqslant z-i}=\sum_{i=-1}^{1}P\qty{X=i}P\qty{Y\leqslant z-i}             \\
+                         & =\dfrac{1}{3}P\qty{Y\leqslant z+1}+\dfrac{1}{3}P\qty{Y\leqslant z}+\dfrac{1}{3}P\qty{Y\leqslant z-1}
+              \end{flalign*}
+              \begin{enumerate}[label=(\roman{*})]
+                  \item 当 $z<-1$ 时，$F_Z(z)=0$;
+                  \item 当 $-1\leqslant z<0$ 时，$F_Z(z)=\dfrac{1}{3}P\qty{Y\leqslant z+1}=\dfrac{z+1}{3}$;
+                  \item 当 $0\leqslant z<1$ 时，$F_Z(z)=\dfrac{1}{3}P\qty{Y\leqslant z+1}+\dfrac{1}{3}P\qty{Y\leqslant z}=\dfrac{1}{3}+\dfrac{1}{3}z=\dfrac{z+1}{3}$;
+                  \item 当 $1\leqslant z<2$ 时，$F_Z(z)=\dfrac{1}{3}P\qty{Y\leqslant z+1}+\dfrac{1}{3}P\qty{Y\leqslant z}+\dfrac{1}{3}P\qty{Y\leqslant z+1}=\dfrac{1}{3}+\dfrac{1}{3}+\dfrac{z-1}{3}=\dfrac{z+1}{3}$;
+                  \item 当 $z\geqslant 2$ 时，$F_Z(z)=1.$
+              \end{enumerate}
+              于是 $F_Z(z)=\begin{cases}
+                      0,              & z<-1            \\
+                      \dfrac{z+1}{3}, & -1\leqslant z<2 \\[6pt]
+                      1,              & z\geqslant 2
+                  \end{cases}$，那么 $f_Z(z)=F_Z'(z)=\begin{cases}
+                      \dfrac{1}{3}, & -1\leqslant z<2 \\
+                      0,            & \text{其他}
+                  \end{cases}$
+    \end{enumerate}
+\end{solution}
+
+\subsection{随机变量与函数性质}
+
+\begin{example}[2009 数一]
+    设随机变量 $ X $ 与 $ Y $ 相互独立，且 $ X $ 服从标准正态分布 $ N(0,1)$，$ Y $ 的概率分布为 $ P\{Y=0\}=   P\{Y=1\}=\dfrac{1}{2} $，
+    记 $ F_{Z}(z) $ 为随机变量 $ Z=X Y $ 的分布函数，则函数 $ F_{Z}(z) $ 的间断点个数为
+    \begin{tasks}(4)
+        \task 0
+        \task 1
+        \task 2
+        \task 3
+    \end{tasks}
+\end{example}
+\begin{solution}
+    由于 $x,~y$ 相互独立，因此
+    \begin{flalign*}
+        F_{Z}(z) & =P\{x y \leqslant z\} =  P\{x y \leqslant z \mid y=0\} P\{y=0\}+P\{x y \leqslant z \mid y=1\} P\{y=1\}                                           \\
+                 & =  \frac{1}{2}\qty[P\{x y \leqslant z \mid y=0\}+P\{x y \leqslant z \mid y=1\}]=\dfrac{1}{2}\qty[P\qty{x\cdot 0\leqslant z}+P\qty{x\leqslant z}]
+    \end{flalign*}
+    若 $z<0$，则 $F_Z(z)=\dfrac{1}{2}\varPhi(z)$; 若 $z\geqslant 0$，则 $F_Z(z)=\dfrac{1}{2}[1+\varPhi(z)]$，所以 $z=0$ 为间断点，故有一个间断点，因此选 B.
+\end{solution}

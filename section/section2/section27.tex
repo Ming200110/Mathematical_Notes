@@ -1,0 +1,99 @@
+\section{导数的综合应用}
+
+\subsection{极值问题}
+
+\subsubsection{极值、最值}
+
+求极值的方法步骤一般如下:
+\begin{enumerate}[label=(\arabic{*})]
+    \item 求可疑点，可疑点包括:
+          \begin{enumerate}[label=(\roman{*})]
+              \item 稳定点 (亦称驻点或逗留点，皆值一阶导数等于零的点);
+              \item 导数不存在的点;
+              \item 区间端点.
+          \end{enumerate}
+    \item 对可疑点进行判断，基本方法是:
+          \begin{enumerate}[label=(\roman{*})]
+              \item 直接利用定义判断;
+              \item 利用实际背景来判断;
+              \item 查看一阶导数的符号，当 $x$ 从左向右穿越可疑点 $x_0$ 时，\\
+                    若 $f'(x)$ 由“正”变“负”，则 $f(x_0)$ 为严格极大值点;\\
+                    若 $f'(x)$ 由“负”变“正”，则 $f(x_0)$ 为严格极小值点;\\
+                    若 $f'(x)$ 不变号，则 $f(x_0)$ 不是极值.
+              \item 若 $f'(x_0)=0$，$f''(x_0)\begin{cases}
+                            >0 ,&\text{则 } f(x_0) \text{ 为严格极小值,} \\
+                            <0 ,&\text{则 } f(x_0) \text{ 为严格极大值;}
+                        \end{cases}$
+              \item $f^{(k)}(x_0)=0~ (k=1,2,\cdots,n-1),~f^{(n)}(x_0)\neq 0$，\\
+                    若 $n$ 为偶数，则 $f(x_0)$ 为极值: $\begin{cases}
+                            f^{(n)}(x_0)>0 ,&\text{严格极小值,} \\
+                            f^{(n)}(x_0)<0 ,&\text{严格极大值;}
+                        \end{cases}$\\
+                    若 $n$ 为奇数，则 $f(x_0)$ 不是极值.
+          \end{enumerate}
+\end{enumerate}
+
+\begin{example}
+    求函数 $f(x)=\qty|x\qty(x^2-1)|$ 的极值以及在 $[-2,2]$ 上的最值.
+\end{example}
+\begin{solution}
+    $f(x)=\mathrm{sgn}\qty(x\qty(x^2-1))\cdot x\qty(x^2-1)$，那么 $f'(x)=\mathrm{sgn}\qty(x\qty(x^2-1))\cdot\qty(3x^2-1)~ (x\neq0,\pm1)$，令 $f'(x)=0$，得
+    $x=\pm\dfrac{\sqrt{3}}{3}$
+    $$f''\qty(\dfrac{\sqrt{3}}{3})=\mathrm{sgn}\qty(x\qty(x^2-1))\biggl |_{x=\frac{\sqrt{3}}{3}}\cdot 6x\biggl |_{x=\frac{\sqrt{3}}{3}}=-2\sqrt{3}<0$$
+    故 $f(x)$ 在 $x=\dfrac{\sqrt{3}}{3}$ 处取极大值，又 $f(x)$ 是偶函数，所以在 $x=-\dfrac{\sqrt{3}}{3}$ 处亦取极大值，
+    当 $x=0,\pm1$ 时，$f(0)=f(1)=f(-1)=0\leqslant f(x)(\forall x)$，故为最小值，也是极小值；
+    $f(2)=f(-2)=6\geqslant f(x)(\forall x\in[-2,2])$，故 $f(x)$ 在 $[-2,2]$ 上最大值为 6，最小值为 0.
+\end{solution}
+
+\begin{example}
+    设 $f(x)$ 在 $\qty(-\dfrac{\pi}{2},\dfrac{\pi}{2})$ 可导，$f(0)=1,~f(x)>0$，$$\displaystyle\lim_{h\to0}\qty[\dfrac{f\qty(x+h\cdot \cos^2x)}{f(x)}]^{\frac{1}{h}}=\e^{x\cos^2x+\tan x}$$
+    求 $f(x)$ 的表达式及极值.
+\end{example}
+\begin{solution}
+    $\displaystyle\lim_{h\to0}\qty[\dfrac{f\qty(x+h\cdot \cos^2x)}{f(x)}]^{\frac{1}{h}}=\lim_{h\to0}\dfrac{1}{h}\ln\dfrac{f\qty(x+h\cdot\cos^2x)}{f(x)}=x\cos^2x+\tan x$，
+    等式左边化为 $$\lim_{h\to0}\dfrac{1}{h}\dfrac{f\qty(x+h\cdot\cos^2x)-f(x)}{f(x)}=\lim_{h\to0}\dfrac{\cos^2x}{f(x)}\dfrac{f\qty(x+h\cdot\cos^2x)-f(x)}{h\cos^2x}=\dfrac{\cos^2x}{f(x)}\cdot f'(x)$$
+    即 $$\dfrac{f'(x)}{f(x)}=x+\tan x\cdot\sec^2x\Rightarrow \qty[\ln f(x)]'=x+\tan x\cdot\sec2x\Rightarrow \ln f(x)=\dfrac{1}{2}x^2+\dfrac{1}{2}\tan^2x+C$$
+    又 $f(0)=1$，解得 $C=0$，于是 
+    $f(x)=\e^{\frac{1}{2}x^2+\frac{1}{2}\tan^2x}$，则 
+    $$f'(x)=\e^{\frac{1}{2}x^2+\frac{1}{2}\tan^2x}\cdot\qty(x+\tan x\cdot\sec^2x)$$
+    因为 $\e^{x}$ 恒大于 0，因此只需讨论 $x+\tan x\cdot\sec^2x$ 的符号即可，令 $g(x)=x+\tan x\cdot\sec^2x$，对 $g(x)$ 求导得 $$g'(x)=1+\sec^4x+4\tan^2x\sec^2x>1$$
+    所以 $g(x)\nearrow$，而 $g(0)=0$，故当 $x\in\qty(-\dfrac{\pi}{2},0)$ 时，$g(x)<0\Rightarrow f'(x)<0\Rightarrow f(x)\searrow$; 当 $x\in\qty(0,\dfrac{\pi}{2})$ 时，$f(x)\nearrow$，
+    所以当 $x=0$ 时，$f(x)$ 取得极小值，无极大值，且 $f(0)=1.$
+\end{solution}
+
+\subsubsection{极值点偏移}
+
+\begin{example}
+    已知函数 $f(x)=x\e^{-x},x\in\mathbb{R}$，如果有 $f(x_1)=f(x_2)$ 且 $x_1\neq x_2$，求证 $x_1+x_2>2.$
+\end{example}
+\begin{proof}[{\songti \textbf{证法一}}]
+    由 $f(x_1)=f(x_2)$ 得 $\dfrac{x_2}{x_1}=\dfrac{\e^{x_2}}{\e^{x_1}}\Rightarrow \ln\dfrac{x_2}{x_1}=x_2-x_1$，不妨设 $0<x_1<1<x_2$，作换元 $t=\dfrac{x_2}{x_1}$，那么 $t>1$，且 
+    $$x_1=\dfrac{\ln t}{t-1},x_2=\dfrac{t\ln t}{t-1}$$
+    于是要证 $\forall t>1,\dfrac{t\ln t+\ln t}{t-1}>2$，构造函数 $F(t)=\ln t-\dfrac{2(t-1)}{t+1}$，那么 $F'(t)=\dfrac{1}{t}-\dfrac{4}{(t+1)^2}=\dfrac{(t-1)^2}{t(t+1)^2}>0$，所以 $F(t)$ 在 $(1,+\infty)$ 上单调递增，所以 $F(t)>F(1)=0$，即得待证式成立.
+\end{proof}
+\begin{proof}[{\songti \textbf{证法二}}]
+    由题可得 $\ln x_2-\ln x_1=x_2-x_1$，即 $\dfrac{x_2-x_1}{\ln x_2-\ln x_1}=1$，要证 $x_1+x_2>2$，即证 $x_1+x_2>2\dfrac{x_2-x_1}{\ln x_2-\ln x_1}$，
+    不妨设 $0<x_1<1<x_2$，作换元 $t=\dfrac{x_2}{x_1}$，那么原不等式可化为 $\ln t>\dfrac{2(t-1)}{t+1}$，由证法一可得该不等式成立，所以原命题成立.
+\end{proof}
+
+\begin{theorem}[对数平均不等式 (ALG)]
+    对任意 $0<a<b$，满足 $\sqrt{ab}<\dfrac{b-a}{\ln b-\ln a}<\dfrac{a+b}{2}.$
+\end{theorem}
+
+\subsection{导数不等式证明中的应用}
+
+\begin{example}
+    设 $\qty{a_n}$ 为常数列，且 $\displaystyle\qty|\sum_{k=1}^{n}a_k\sin(kx)|\leqslant |\sin x|,~\qty|\sum_{k=1}^{n}a_{n-k+1}\sin(kx)|\leqslant |\sin x|$，证明: $$\displaystyle \qty|\sum_{k=1}^{n}a_k|\leqslant \dfrac{2}{n+1}.$$
+\end{example}
+\begin{proof}[{\songti \textbf{证}}]
+    分别令 $\displaystyle f(x)=\sum_{k=1}^{n}a_k\sin(kx),~g(x)=\sum_{k=1}^{n}a_{n-k+1}\sin(kx)$，则 $f,g$ 在定义域内连续，且 $f(0)=g(0)=0$，于是
+    $$f'(x)=\sum_{k=1}^{n}ka_k\cos kx,~g'(x)=\sum_{k=1}^{n}ka_{n-k+1}\cos kx$$
+    由 Lagrange 中值定理知，$\exists\xi_1,\xi_2\in(0,x)$，使得
+    $$f(x)-f(0)=f'(\xi_1)x\Rightarrow f(x)=f'(\xi_1)x,~g(x)-g(0)=g'(\xi_2)x\Rightarrow g(x)=g'(\xi_2)x$$
+    因此 $f'(\xi_1)+g'(\xi_2)=\dfrac{f(x)}{x}+\dfrac{g(x)}{x}$，一方面
+    $$\qty|f'(\xi_1)+g'(\xi_2)|=\qty|\dfrac{f(x)}{x}+\dfrac{g(x)}{x}|\leqslant \qty|\dfrac{f(x)}{x}|+\qty|\dfrac{g(x)}{x}|\leqslant 2\qty|\dfrac{\sin x}{x}|\to 2~~(x\to0)$$
+    另一方面当 $x\to0$ 时，$\xi_1,\xi_2\to0$，则
+    $$\qty|f'(0)+g'(0)|\to\qty|\sum_{k=1}^{n}ka_k+\sum_{k=1}^{n}ka_{n-k+1}|=\qty|\sum_{k=1}^{n}ka_k+\sum_{k=1}^{n}(n-k+1)a_k|=\qty|\sum_{k=1}^{n}\qty[k+(n-k+1)]a_k|=(n+1)\qty|\sum_{k=1}^{n}a_k|$$
+    所以，当 $x\to0$ 时，有 $\displaystyle (n+1)\qty|\sum_{k=1}^{n}a_k|\leqslant 2\Rightarrow \qty|\sum_{k=1}^{n}a_k|\leqslant \dfrac{2}{n+1}.$
+\end{proof}
+

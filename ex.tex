@@ -1,0 +1,53 @@
+一、向量及其运算
+1. 向量的数量积 (点乘积或内积)
+
+向量 $ \vb*{a}=\left\{a_{1}, a_{2}, a_{3}\right\} $ 与 $ \vb*{b}=\left\{b_{1}, b_{2}, b_{3}\right\} $ 的数量积是一个数 $ |\vb*{a}| \cdot|\vb*{b}| \cos (\widehat{\vb*{a}, \vb*{b}}) $ (其中 $ 0 \leqslant(\widehat{a, b}) \leqslant \pi$)，
+记作 $ \vb*{a} \cdot \vb*{b} $. 若向量 $ \vb*{a} $ 或 $ \vb*{b} $ 为零向量时，则定义 $ \vb*{a} \cdot \vb*{b}=0$，数量积 $ \vb*{a} \cdot \vb*{b} $ 的坐标表示式为
+$$\vb*{a} \cdot \vb*{b}=a_{1} b_{1}+a_{2} b_{2}+a_{3} b_{3} .$$
+
+两个向量 $ \vb*{a}, \vb*{b} $ 垂直 (或称正交)，记作 $ \vb*{a} \perp \vb*{b} $，特别地，规定零向量与任一向量垂直. 
+数量积有以下基本性质:
+\begin{enumerate}[label=(\arabic{*})]
+    \item $\vb*{a} \cdot \vb*{b}=\vb*{b} \cdot \vb*{a} .$
+    \item  $(\lambda \vb*{a}) \cdot \vb*{b}=\lambda(\vb*{a} \cdot \vb*{b}) .$
+    \item $(\vb*{a}+\vb*{b}) \cdot \vb*{c}=\vb*{a} \cdot \vb*{c}+\vb*{b} \cdot \vb*{c} .$
+    \item $\vb*{a} \perp \vb*{b} $ 的充分必要条件是 $ \vb*{a} \cdot \vb*{b}=0 .$
+\end{enumerate}
+
+2. 向量的向量积 (叉乘积或外积)
+
+两个向量 $ \vb*{a} $ 和 $ \vb*{b} $ 的向量积是一个向量 $ \vb*{c} $，记为 $ \vb*{a} \times \vb*{b} $，
+即 $ \vb*{c}=\vb*{a} \times \vb*{b}$; $\vb*{c} $ 的模等于 $ |\vb*{a}||\vb*{b}| \sin (\widehat{\vb*{a}, \vb*{b}})$，$\vb*{c} $ 的方向垂直于 $ \vb*{a} $ 与 $ \vb*{b} $ 所决定的平面,且 $ \vb*{a}, \vb*{b}, \vb*{c} $ 顺次构成右手系. 
+若向量 $ \vb*{a} $ 或 $ \vb*{b} $ 为零向量时，则定义 $ \vb*{a} \times \vb*{b}=\mathbf{0} $，向量积 $ \vb*{a} \times \vb*{b} $ 坐标表示式为
+$$
+\vb*{a} \times \vb*{b}=\left|\begin{array}{ccc}
+\vb*{i} & \vb*{j} & \vb*{k} \\
+a_{1} & a_{2} & a_{3} \\
+b_{1} & b_{2} & b_{3}
+\end{array}\right|=\left\{\left|\begin{array}{ll}
+a_{2} & a_{3} \\
+b_{2} & b_{3}
+\end{array}\right|,-\left|\begin{array}{ll}
+a_{1} & a_{3} \\
+b_{1} & b_{3}
+\end{array}\right|,\left|\begin{array}{ll}
+a_{1} & a_{2} \\
+b_{1} & b_{2}
+\end{array}\right|\right\} .
+$$
+
+向量积有以下的性质:
+\begin{enumerate}[label=(\arabic{*})]
+    \item $\vb*{a} \times \vb*{b}=-\vb*{b} \times \vb*{a} .$
+    \item $(\lambda \vb*{a}) \times \vb*{b}=\lambda(\vb*{a} \times \vb*{b}) .$
+    \item $(\vb*{a}+\vb*{b}) \times \vb*{c}=\vb*{a} \times \vb*{c}+\vb*{b} \times \vb*{c} .$
+    \item $\vb*{a} / / \vb*{b}  的充分必要条件是  \vb*{a} \times \vb*{b}=\mathbf{0} .$
+\end{enumerate}
+
+3. 向量的混合积
+
+设 $ \vb*{a}=\left\{a_{1}, a_{2}, a_{3}\right\}, \vb*{b}=\left\{b_{1}, b_{2}, b_{3}\right\}, \vb*{c}=\left\{c_{1}, c_{2}, c_{3}\right\}$，
+则称 $ (\vb*{a} \times \vb*{b}) \cdot \vb*{c} $ 为向量 $ \vb*{a}, \vb*{b}, \vb*{c} $ 的混合积，记为 $ [\vb*{a}, \vb*{b}, \vb*{c}] $.
+
+混合积是一数量，其几何意义为: 混合积的绝对值等于以 $ \vb*{a}$ 、$ \vb*{b} $、$ \vb*{c} $ 为相邻三条棱的平行六面体的体积. 
+因此，向量 $ \vb*{a}$ 、$ \vb*{b} $、$ \vb*{c} $ 共面的充分必要条件是 $ (a \times b) \cdot c=0 .$

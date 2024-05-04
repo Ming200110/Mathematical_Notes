@@ -1,0 +1,125 @@
+\section{方向导数与梯度}
+
+方向导数和梯度是多元函数微积分中与偏导数密切相关的概念，用于描述函数在某一点处的变化率和最大增长率.
+
+\subsection{方向导数的计算}
+
+\begin{definition}[方向导数]
+    设 $ \boldsymbol{l} $ 是空间的常向量，$P_{0} $ 是定点，动点 $ P $ 使得 $ \overrightarrow{P_{0} P} $ 与 $ \boldsymbol{l} $ 方 向相同，则
+    $$\left.\frac{\partial f}{\partial \boldsymbol{\boldsymbol{l}}}\right|_{P_{0}} \xlongequal[]{\text{def}} \lim _{P \rightarrow P_{0}} \frac{f(P)-f\left(P_{0}\right)}{\left|P_{0} P\right|}.$$
+\end{definition}
+
+\begin{theorem}[方向导数的计算]
+    设 $ f(x, y, z) $ 在点 $ (a, b, c) $ 处可微，则函数 $ f(x, y, z) $ 在点 $ (a, b, c) $ 处沿任一方向 $ \boldsymbol{l} $ 的方向导数存在，
+    且若 $ \boldsymbol{l}^{0}=(\cos \alpha, \cos \beta, \cos \gamma) $，则有计算公式
+    $$\left.\frac{\partial f}{\partial\boldsymbol{l}}\right|_{(a, b, c)}=\left.\frac{\partial f}{\partial x}\right|_{(a, b, c)} \cos \alpha+\left.\frac{\partial f}{\partial y}\right|_{(a, b, c)} \cos \beta+\left.\frac{\partial f}{\partial z}\right|_{(a, b, c)} \cos \gamma$$
+    \index{方向导数的计算}
+\end{theorem}
+
+\begin{example}[2017 数一]
+    函数 $f(x,y,z)=x^2y+z^2$ 在点 $(1,2,0)$ 处沿向量 $\vb*{n}=\qty{1,2,2}$ 的方向导数为 
+    \begin{tasks}(4)
+        \task $12$
+        \task $6$
+        \task $4$
+        \task $2$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    $\displaystyle \eval{\pdv{f}{x}}_{(1,2,0)}=4,~\eval{\pdv{f}{y}}_{(1,2,0)}=1,~\eval{\pdv{f}{z}}_{(1,2,0)}=0$，且 $\dfrac{\vb*{n}}{|\vb*{n}|}=\qty{\dfrac{1}{3},\dfrac{2}{3},\dfrac{2}{3}}$，
+    因此 $\displaystyle\pdv{f}{\vb*{n}}=4\times\dfrac{1}{3}+1\times\dfrac{2}{3}+0\times\dfrac{2}{3}=2.$
+\end{solution}
+
+\begin{example}[1996 数一]
+    求函数 $u=\ln\qty(x+\sqrt{y^2+z^2})$ 在点 $A(1,0,1)$ 处沿点 $A$ 指向点 $B(3,-2,2)$ 方向的方向导数.
+\end{example}
+\begin{solution}
+    $\displaystyle \eval{\pdv{u}{x}}_{(1,0,1)}=\dfrac{1}{2},~\eval{\pdv{u}{y}}_{(1,0,1)}=0,~\eval{\pdv{u}{z}}_{(1,0,1)}=\dfrac{1}{2}$，方向 $\overrightarrow{AB}=(2,-2,1)$，
+    方向余弦为 $\cos\alpha=\dfrac{2}{3},~\cos\beta=\dfrac{-2}{3},~\cos\gamma=\dfrac{1}{3}$，那么 $\displaystyle\pdv{u}{\vb*{n}}=\dfrac{1}{2}\times\dfrac{2}{3}+0\times\dfrac{-2}{3}+\dfrac{1}{2}\times\dfrac{1}{3}=\dfrac{1}{2}.$
+\end{solution}
+
+\begin{example}
+    求函数 $u=\mathrm{e}^{xy}+x^2yz$ 在点 $(1,2,1)$ 处沿 $x$ 轴负方向的方向导数.
+\end{example}
+\begin{solution}
+    由公式
+    $$\left.\frac{\partial f}{\partial\boldsymbol{l}}\right|_{(a, b, c)}=\left.\frac{\partial f}{\partial x}\right|_{(a, b, c)} \cos \alpha+\left.\frac{\partial f}{\partial y}\right|_{(a, b, c)} \cos \beta+\left.\frac{\partial f}{\partial z}\right|_{(a, b, c)} \cos \gamma$$
+    其中 $(a,b,c)=(1,2,1),~(\cos\alpha,\cos\beta,\cos\gamma)=(-1,0,0)$ 且 $f'_x=y\mathrm{e}^{xy}+2yzx$，所以方向导数为 
+    $$\pdv{f}{\boldsymbol{l}}\biggl |_{1,2,1}=f'_x(1,2,1)\cos\alpha=-\qty(2\mathrm{e}^2+4).$$
+\end{solution}
+
+\begin{example}
+    求函数 $u=xy^2z^3$ 处沿曲面 $x^2+y^2=5$ 的外法向的方向导数.
+\end{example}
+\begin{solution}
+    已知 $F=x^2+y^2-5=0,~\boldsymbol{l}=2(x,y,0)$，故曲面在 $P$ 的外法向的方向余弦为
+    $$\cos\alpha=\dfrac{1}{\sqrt{5}},~\cos\beta=\dfrac{2}{\sqrt{5}},~\cos\gamma=0$$
+    并且
+    \begin{flalign*}
+        \qty(\pdv{u}{x},\pdv{u}{y},\pdv{u}{z})\biggl |_P=(y^2z^3,2xyz^3,2xy^2z^2)|_P=(-4,-4,12)
+    \end{flalign*}
+    于是 $$\pdv{u}{\boldsymbol{l}}\biggl |_P=u'_x(P)\cos\alpha+u'_y(P)\cos\beta+u'_z(P)\cos\gamma=-\dfrac{4}{\sqrt{5}}-\dfrac{8}{\sqrt{5}}+0=-\dfrac{12}{\sqrt{5}}.$$
+\end{solution}
+
+\subsection{梯度的计算}
+
+\begin{theorem}[方向导数与梯度的关系]
+    设 $ f(x, y, z) $ 在点 $ (a, b, c) $ 处可微，则函数 $ f(x, y, z) $ 在点 $ (a, b, c) $ 处沿梯度
+    $$\left.\mathbf{grad}~ f\right|_{(a, b, c)}=\left(f_{x}^{\prime}(a, b, c), f_{y}^{\prime}(a, b, c), f_{z}^{\prime}(a, b, c)\right)$$
+    的方向导数取最大值，且其值为梯度的模，即
+    $$\max _{l}\left\{\left.\frac{\partial f}{\partial \boldsymbol{l}}\right|_{(a, b, c)}\right\}=|\mathbf{grad}~ f|_{(a, b, c)} \mid =\sqrt{\left(f_{x}^{\prime}(a, b, c)\right)^{2}+\left(f_{y}^{\prime}(a, b, c)\right)^{2}+\left(f_{z}^{\prime}(a, b, c)\right)^{2}}$$
+    \index{方向导数与梯度的关系}
+\end{theorem}
+
+\begin{example}[2012 数一]
+    求 $\eval{\mathbf{grad}~\qty(xy+\dfrac{z}{y})}_{(2,1,1)}$.
+\end{example}
+\begin{solution}
+    由梯度的定义 $\displaystyle\mathbf{grad}~f(x,y,z)=\qty{\pdv{f}{x},\pdv{f}{y},\pdv{f}{z}}$，那么
+    $\eval{\mathbf{grad}~\qty(xy+\dfrac{z}{y})}_{(2,1,1)}=\eval{\qty(y,x-\dfrac{z}{y^2},\dfrac{1}{y})}_{(2,1,1)}=\qty{1,1,1}$，或 $\vb*{i}+\vb*{j}+\vb*{k}.$
+\end{solution}
+
+\begin{example}[1992 数一]
+    函数 $u=\ln\qty(x^2+y^2+z^2)$ 在点 $M(1,2,-2)$ 处的梯度 $\eval{\mathbf{grad}~u}_{M}.$
+\end{example}
+\begin{solution}
+    $\eval{\mathbf{grad}~u}_{M}=\eval{\dfrac{1}{x^2+y^2+z^2}(2x\vb*{i}+2y\vb*{j}+2z\vb*{k})}_{(1,2,-2)}=\dfrac{2}{9}\qty{1,2,-2}.z$
+\end{solution}
+
+\begin{example}[2015 数一]
+    已知函数 $f(x,y)=x+y+xy$，曲线 $C:x^2+y^2+xy=3$，求 $f(x,y)$ 在曲线 $C$ 上的最大方向导数.
+\end{example}
+\begin{solution}
+    函数 $f$ 在点 $(x,y)$ 处的最大方向导数为 $$\sqrt{{f'_x}^2+{f'_y}^2}=\sqrt{(1+y)^2+(1+x)^2}$$
+    构造 Lagrange 函数 $F(x,y,\lambda)=(1+y)^2+(1+x)^2+\lambda\qty(x^2+y^2+xy-3)$，所以 
+    $\begin{cases}
+        F'_x=\lambda (2 x + y) + 2 x + 2=0\\ 
+        F'_y=\lambda (x + 2 y) + 2 y + 2=0\\ 
+        F'_\lambda=x^2+y^2+xy-3=0
+    \end{cases}$ 解得 $\begin{cases}
+        x=-1\\ y=2
+    \end{cases}\text{或 }\begin{cases}
+        x=2\\ y=-1
+    \end{cases}$，代入 $\sqrt{(1+y)^2+(1+x)^2}$ 中，得 $f(x,y)$  在曲线 $C$ 上的最大方向导数为 $3$.
+\end{solution}
+
+\begin{example}
+    已知 $a,b$ 为实数，函数 $z=2+ax^2+by^2$ 在点 $(3,4)$ 的方向导数中沿方向 $\boldsymbol{l}=-3\boldsymbol{i}-4\boldsymbol{j}$ 的方向导数最大，且最大值为 $10.$
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求 $a,b$ 的值;
+        \item 求曲面 $z=2+ax^2+by^2~ (z\geqslant0)$ 的面积.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 函数 $z=2+ax^2+by^2$ 在点 $(3,4)$ 的梯度为 $$\mathbf{grad}~ z\biggl |_{3,4}=\qty(\pdv{z}{x},\pdv{z}{y})\biggl |_{(3,4)}=(6a,8b)$$
+        因沿梯度的方向导数取最大值，其值等于梯度的模，所以有 
+        $$\pdv{z}{\boldsymbol{l}}\biggl |_{(3,4)}=\biggl |\mathbf{grad}~z\biggl |_{(3,4)}\biggl |=10\Rightarrow \boldsymbol{l}^0=\qty(\dfrac{6a}{10},\dfrac{8b}{10})=\qty(-\dfrac{3}{5},-\dfrac{4}{5})$$
+        于是 $a=-1,~b=-1.$
+        \item 曲面 $z=2-x^2-y^2~ (z\geqslant0)$ 是由 $yOz$ 平面上的曲线 $y=\sqrt{2-z}~ (0\leqslant z\leqslant 2)$ 绕 $z$ 轴旋转而成，于是所求曲面的面积为
+        \begin{flalign*}
+            S=2\pi\int_{0}^{2}y\sqrt{1+(y'(z))^2}\dd z=2\pi\int_{0}^{2}\sqrt{2-z}\sqrt{1+\qty(\dfrac{-1}{2\sqrt{2-z}})^2}\dd z
+            =\pi\int_{0}^{2}\sqrt{9-4z}\dd z=-\dfrac{\pi}{6}(9-4z)^{\frac{3}{2}}\biggl |_0^2=\dfrac{13}{3}\pi.
+        \end{flalign*}
+    \end{enumerate}
+\end{solution}

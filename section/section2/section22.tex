@@ -1,0 +1,173 @@
+\section{函数的可导性}
+
+函数的可导性是指函数在某一点处存在导数 (或导数存在)，即该点处函数的斜率存在. 
+可导性是微积分中一个重要的概念，它在研究函数的变化率、极值、凹凸性等方面起着关键作用.
+
+\subsection{含绝对值函数的可导性}
+
+\subsubsection{\texorpdfstring{$|f(x)|$}. 在 \texorpdfstring{$x=x_0$}. 点的可导性}
+
+\begin{theorem}[含绝对值函数的可导性]
+    $ |f(x)| $ 在 $x=x_0$ 点的可导性的四种情况:\label{thereAreFourCasesOfDerivability}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 当 $f(x_0)>0$，时 $y=|f(x)|$ 在 $x_0$ 处可导，且 $\eval{y'}_{x=x_0}=f'(x_0)$.
+        \item 当 $f(x_0)<0$，时 $y=|f(x)|$ 在 $x_0$ 处可导，且 $\eval{y'}_{x=x_0}=-f'(x_0)$.
+        \item 当 $f(x_0)=0$ 但 $f'(x_0)\neq0$ 时，$y=|f(x)|$ 在 $x_0$ 处不可导.
+        \item 当 $f(x_0)=0$ 且 $f'(x_0)\neq0$ 时，$y=|f(x)|$ 在 $x_0$ 处可导，且 $\eval{y'}_{x=x_0}=0$.
+    \end{enumerate}
+    \index{含绝对值函数的可导性}
+\end{theorem}
+\begin{proof}[{\songti \textbf{证}}]
+    (1) 与 (2) 只需证明其中一个，(3) 与 (4) 也只需证明其中一个.\\
+    (1) 因 $f(x)$ 在 $x_0$ 处可导，则 $f(x_0)$ 在 $x_0$ 处连续，又 $f(x_0)>0$，由保号性可知，存在 $x_0$ 点的 $\delta$ 邻域 $U(x_0,\delta)$，
+    当 $x\in U(x_0,\delta)$ 时，$y=|f(x)|=f(x)$，故 $\eval{y'}_{x=x_0}=f'(x_0)$，同理可证 (2).\\
+    (3) $\displaystyle y'_{\pm}(x_0)=\lim_{x\to x_0^{\pm}}\dfrac{|f(x)|-|f(x_0)|}{x-x_0}=\lim_{x\to x_0^{\pm}}\qty|\dfrac{f(x)-f(x_0)}{x-x_0}|=\pm|f'(x_0)|$，
+    因 $|f(x_0)|\neq0$，所以 $y'_-(x_0)\neq y'_+(x_0)$，故 $y=|f(x)|$ 在 $x_0$，处不可导，同理可证 (4).
+\end{proof}
+
+\begin{example}[2000 数三]
+    设函数 $f(x)$ 在 $x=a$ 处可导，则函数 $|f(x)|$ 在点 $x=a$ 处不可导的充分条件是
+    \begin{tasks}(2)
+        \task $f(a)=0$ 且 $f'(a)=0$
+        \task $f(a)=0$ 且 $f'(a)\not=0$
+        \task $f(a)>0$ 且 $f'(a)>0$
+        \task $f(a)<0$ 且 $f'(a)<0$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    由定理 \ref{thereAreFourCasesOfDerivability} 知，选 B.
+\end{solution}
+
+\begin{example}
+    求 $y=\qty|x^2-1|$ 的导数.
+\end{example}
+\begin{solution}
+    令 $f(x)=x^2-1$，当 $ |x|>1 $ 时，$y=|f(x)|=f(x)=x^2-1$，那么 $y'=f'(x)=2x$; 当 $|x|<1$ 时，$y=|f(x)|=-f(x)=1-x^2$，那么 $y'=-f'(x)=-2x$；
+    当 $x=\pm 1$ 时，因 $f(\pm 1)=0$，但 $f'(\pm 1)\neq0$，故 $y=|f(x)|$ 在 $x=\pm1$ 处不可导，综上 $y'=\begin{cases}
+        2x,&|x|>1\\-2x,&|x|<1.
+    \end{cases}$
+\end{solution}
+
+\subsubsection{\texorpdfstring{$f(x)|g(x)|$}. 在 \texorpdfstring{$x=x_0$}. 点的可导性}
+
+\begin{theorem}
+    \label{hanshukedaoxing}
+    设 $f(x)$ 在 $x_0$ 处可导，$|g(x)|$ 在 $x_0$ 出连续但不可导，则 $\varphi (x)=f(x)|g(x)|$ 在 $x_0$ 处可导的充要条件是 $f(x_0)=0$，
+    且当 $\varphi(x)$ 在 $x_0$ 处可导时，有 $\varphi'(x_0)=f'(x_0)|g(x_0)|$，并且称 $f(x)$ 是 $|g(x)|$ 在 $x=x_0$ 点的磨光函数.
+\end{theorem}
+\begin{proof}[{\songti \textbf{证}}]
+    \textbf{充分性: }当 $f(x_0)=0$ 时，$$ \varphi'(x_0)=\lim_{x\to x_0}\dfrac{\varphi (x)-\varphi(x_0)}{x-x_0}=\lim_{x\to x_0}\dfrac{f(x)-f(x_0)}{x-x_0}|g(x_0)|=f'(x_0)|g(x_0)| $$
+    \textbf{必要性: }用反证法，反设 $f(x_0)\neq 0$，则由 $\varphi(x),f(x)$ 在 $x_0$ 点皆可导，可得 $\dfrac{\varphi(x)}{f(x)}=|g(x)|$ 在 $x_0$ 可导，与条件矛盾，所以当 $\varphi(x)$ 在 $x_0$ 可导时必有 $f(x_0)=0.$
+\end{proof}
+
+\begin{example}[1995 数一]
+    设 $f(x)$ 可导，$F(x)=f(x)(1+|\sin x|)$，则 $f(0)=0$ 是 $F(x)$ 在 $x=0$ 可导的
+    \begin{tasks}(2)
+        \task 充分必要条件
+        \task 充分但非必要条件
+        \task 必要但非充分条件
+        \task 即非充分也非必要条件
+    \end{tasks}
+\end{example}
+\begin{solution}
+    易知，$1+|\sin x|$ 在 $x=0$ 处连续但不可导，由定理 \ref{hanshukedaoxing} 知，$f(0)=0$ 是 $F(x)$ 在 $x=0$ 可导的充分必要条件，选 A.
+\end{solution}
+
+\begin{example}[1998 数二]
+    函数 $ F(x)=\qty(x^2-x-2)\qty|x^3-x| $ 不可导点的个数是
+    \begin{tasks}(4)
+        \task 3
+        \task 2
+        \task 1
+        \task 0
+    \end{tasks}
+\end{example}
+\begin{solution}
+    由 $\qty|x^3-x|$ 知不可导点为 $x=0,x=\pm1$，但 $f(x)=x^2-x-2=(x - 2) (x + 1)$ 处处可导，且 $f(-1)=0$，则 $F(-1)$ 可导，
+    但 $f(0)\neq 0,f(1)\neq 0$，故 $F(x)$ 在 $x=0,1$ 处不可导，因此不可导点的个数是 2，选 B.
+\end{solution}
+
+% \begin{theorem}
+%     设 $\varphi(x)$ 在 $(a,b)$ 内有定义，$x_0\in(a,b)$，则 $\varphi(x)$ 在 $x_0$ 处可导的充分必要条件是存在函数 $f(x)$ 在 $x_0$ 连续，
+%     并使 $\varphi(x)-\varphi(x_0)=(x-x_0)f(x)$，且 $\varphi'(x_0)=f(x_0)$.
+% \end{theorem}
+
+% \begin{example}
+%     讨论 $\varphi (x)=\qty|(x-2)^{\frac{2}{3}}(x-1)(x+1)^{\frac{4}{3}}|$ 的不可导点个数.
+% \end{example}
+
+\begin{theorem}
+    设 $f(x)=(x-a)^{n}|x-a|~~n\in\mathbb{Z}^{+}$，则 $f(x)$ 在 $x=a$ 点的各阶导数 $$f^{(k)}(a)=\begin{cases}
+        0,&k\leqslant n\\\text{不存在},&k>n.
+    \end{cases}$$
+\end{theorem}
+\begin{proof}[{\songti \textbf{证}}]
+    由 $f(x)=\begin{cases}
+        -(x-a)^{n+1},&x\leqslant a\\(x-a)^{n+1},&x>a
+    \end{cases}$ 得 $f^{(n)}(a)=\begin{cases}
+        -(n+1)!(x-a),&x\leqslant a\\ (n+1)!(x-a),&x>a
+    \end{cases}$，但 $f^{(n+1)}_-(a)=-(n+1)!\neq f^{(n+1)}_+(a)=(n+1)!$，故 $f^{(n+1)}(a)$ 不存在.
+\end{proof}
+
+\begin{example}[1992 数一]
+    设 $f(x)=3x^{3}+x^2|x|$，则 $f^{(n)}(0)$ 存在的最高阶数为
+    \begin{tasks}(4)
+        \task 0
+        \task 1
+        \task 2
+        \task 3
+    \end{tasks}
+\end{example}
+\begin{solution}
+    $f(x)=f_1(x)+f_2(x)$，其中 $f_1(x)=3x^3$ 在 $x=0$ 任意阶可导，但 $f_2(x)=x^2|x|$ 在 $x=0$ 点之多只有二阶导数，故选 C.
+\end{solution}
+
+\subsection{分段函数的可导性}
+
+% \begin{theorem}
+%     若 $f'_-(a),~f'_+(a)$ 均存在，且 $f'_-(a)=f'_+(a)$，那么函数 $f(x)$ 在 $x=a$ 处可导.
+% \end{theorem}
+% 
+% \begin{example}
+%     设 $f(x)=\left\{\begin{array}{ll}
+%             \dfrac{2}{x^{2}}(1-\cos x)                              & , x<0 \\
+%             1                                                       & , x=0 \\
+%             \dfrac{1}{x} \displaystyle\int_{0}^{x} \cos t^{2} \dd t & , x>0
+%         \end{array}\right.$，试讨论 $f(x)$ 在 $x=0$ 处的可导性.
+% \end{example}
+% \begin{solution}
+%     由导数的定义，
+%     \begin{flalign*}
+%         \lim_{x\to0^-}\dfrac{f(x)-f(0)}{x-0}=\lim_{x\to0^-}\dfrac{\dfrac{2}{x^2}(1-\cos x)-1}{x}=\lim_{x\to0^-}\dfrac{2(1-\cos x)-x^2}{x^3}\xlongequal[]{L'}\lim_{x\to0^-}\dfrac{2\sin x-2x}{3x^2}=0
+%     \end{flalign*}
+%     \begin{flalign*}
+%         \lim_{x\to0^+}\dfrac{f(x)-f(0)}{x-0}=\lim_{x\to0^+}\dfrac{\dfrac{1}{x}\displaystyle\int_{0}^{1}\cos t^2\dd t-1}{x}=\lim_{x\to0^+}\dfrac{\displaystyle\int_{0}^{1}\cos t^2\dd t-x}{x^2}=\lim_{x\to0^+}\dfrac{\cos x^2-1}{2x}=0
+%     \end{flalign*}
+%     因为 $f'_-(a)=0=f'_+(a)$，故 $f(x)$ 在 $x=0$ 处可导.
+% \end{solution}
+
+\begin{theorem}
+    设分段函数 $f(x)=\begin{cases}
+            g(x) ,& x<x_0 \\A,&x=x_0\\h(x),&x>x_0
+        \end{cases}$ 如果函数 $f(x)$ 满足:
+    \begin{enumerate*}[label=(\arabic{*})]
+        \item 在点 $x_0$ 处连续;
+        \item 在点 $x_0$ 的某空心邻域内可导;
+        \item $\lim\limits_{x\to x_0^-}g'(x)=B,\lim\limits_{x\to x_0^+}h'(x)=C$.
+    \end{enumerate*}
+    则 $f_{-}'(x_0)=B,~f_{+}'(x_0)=C.$
+\end{theorem}
+
+\begin{example}
+    设函数 $f(x)=\begin{cases}
+            \dfrac{\pi}{2}\qty(\mathrm{e}^x-1) ,&x\leqslant 0 \\ x\arctan\dfrac{1}{x},&x>0
+        \end{cases}$
+    讨论函数 $f(x)$ 在 $x=0$ 的可导性，并求导函数 $f'(x)$.
+\end{example}
+\begin{solution}
+    显然函数 $f(x)$ 在分段点 $x=0$ 连续，$$g'(x)=\qty(\dfrac{\pi}{2}\qty(\mathrm{e}^x-1))'=\dfrac{\pi}{2}\mathrm{e}^x,~h'(x)=\qty(x\arctan\dfrac{1}{x})'=\arctan\dfrac{1}{x}-\dfrac{x}{1+x^2}$$
+    于是有 $\displaystyle f_-'(0)=\lim_{x\to0^-}g'(x)=\lim_{x\to0^-}\dfrac{\pi}{2}\mathrm{e}^x=\dfrac{\pi}{2}$，$\displaystyle f_+'(0)=\lim_{x\to0^+}h'(x)=\lim_{x\to0^+}\qty(\arctan\dfrac{1}{x}-\dfrac{x}{1+x^2})=\dfrac{\pi}{2}$，
+    从而函数 $f(x)$ 在 $x=0$ 可导且 $f'(0)=\dfrac{\pi}{2}$，所以 $f'(x)=\begin{cases}
+            \dfrac{\pi}{2}\mathrm{e}^x ,&x\leqslant 0 \\ \arctan\dfrac{1}{x}-\dfrac{x}{1+x^2},&x>0.
+        \end{cases}$
+\end{solution}

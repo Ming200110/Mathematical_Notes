@@ -1,0 +1,165 @@
+\section{Fourier 级数}
+
+Fourier 级数是函数项级数的一种特殊形式. 它是研究和表示周期函数的有力工具.
+
+\subsection{Fourier 系数}
+
+\begin{definition}[ Fourier 系数]
+    形如 $\displaystyle\dfrac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n} \cos n x+b_{n} \sin n x\right) $ 的级数
+    称为 Fourier 级数或三角级数.
+    设 $ f(x) $ 是周期为 $ 2 \pi $ 的周期函数，且能展开为 Fourier 级数，即
+    $$f(x) \sim \frac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n} \cos n x+b_{n} \sin n x\right) .$$
+    若积分
+    \begin{flalign*}
+        a_{n} & =\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos n x \dd x x, n=0,1,2 \cdots \\
+        b_{n} & =\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin n x \dd x x, n=1,2 \cdots
+    \end{flalign*}
+    都存在，则称 $\displaystyle \frac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n} \cos n x+b_{n} \sin n x\right) $ 为 $f(x)$ 的 Fourier 级数，其中 $a_0,~a_n,~b_n,~n=1,2,\cdots$
+    称为 $f(x)$ 的 Fourier 系数.
+\end{definition}
+
+\begin{theorem}[Dirichlet 收敛定理]
+    设 $ f(x) $ 是以 $ 2 l $ 为周期的周期函数，如果它满足
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 一个周期内除有限个第一类间断点外都连续;
+        \item 一个周期内至多只有有限个极值点.
+    \end{enumerate}
+    则 $ f(x) $ 的 Fourier 级数收敛，并且
+    当 $ x $ 为 $ f(x) $ 的连续点时，级数收敛于 $ f(x) $;
+    当 $ x $ 为 $ f(x) $ 的间断点时，级数收敛于 $\displaystyle \frac{f\left(x^{-}\right)+f\left(x^{+}\right)}{2} .$
+    \index{Dirichlet 收敛定理}
+\end{theorem}
+
+\subsection{周期为 \texorpdfstring{$2l$}. 的 Fourier 展开}
+
+\begin{definition}[正弦级数与余弦级数]
+    设 $ f(x) $ 是周期为 $ 2 \pi $ 的周期函数，且能展开成 Fourier 系数，即
+    $$f(x) \sim \frac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n} \cos n x+b_{n} \sin n x\right)$$
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 当 $ f(x) $ 为奇函数时
+              $$a_{0}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \mathrm{d} x=0,~ a_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos n x \dd  x=0$$
+              此时 $ f(x) $ 的 Fourier 级数表达式为 $\displaystyle \sum_{n=1}^{\infty} b_{n} \sin n x $ 仅含正弦项，称为正弦级数;
+        \item 当 $ f(x) $ 为偶函数时
+              $$b_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin n x \dd  x=0$$
+              此时 $ f(x) $ 的 Fourier 级数表达式为: $\displaystyle \frac{a_{0}}{2}+\sum_{n=1}^{\infty} a_{n} \cos n x$，此式仅含余弦项，
+              称为余弦级数.
+    \end{enumerate}
+\end{definition}
+
+\begin{theorem}[Fourier 展开]
+    设 $ f(x) $ 的周期为 $ 2 l$，且满足收敛定理的条件，则其在 $ [-l, l] $ 上的 Fourier 级数展开式为
+    $$f(x) \sim \frac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n} \cos \frac{n \pi}{l} x+b_{n} \sin \frac{n \pi}{l} x\right) $$
+    其中 Fourier 系数 $ a_{0},~ a_{n},~ b_{n}~~(n=1,2,3, \cdots) $ 取值为:
+    \begin{flalign*}
+        a_{0} & =\frac{1}{l} \int_{-l}^{l} f(x) \mathrm{d} x,~a_{n}=\frac{1}{l} \int_{-l}^{l} f(x) \cos \frac{n \pi x}{l} \dd  x \\
+        b_{n} & =\frac{1}{l} \int_{-l}^{l} f(x) \sin \frac{n \pi x}{l} \dd  x
+    \end{flalign*}
+    特别地，进行变量代换 $ z=\dfrac{\pi}{l} x$，于是区间 $ -l \leqslant x<l$ 变换为 $ -\pi \leqslant z<\pi $，存在周期为 $ 2 \pi $ 的函数 $F(z) $ 使得 $ f(x)=f\left(\dfrac{l x}{\pi}\right)=F(z) $，
+    对 $ F(z) $ 进行 Fourier 展开，最后将 $ z=\dfrac{\pi}{l} x $ 回代即可.
+    \index{Fourier 展开}
+\end{theorem}
+
+\begin{definition}[周期延拓与奇偶延拓]
+    若 $ f(x) $ 仅在 $ [-\pi, \pi) $ 上有定义，此时需要将其展开为 Fourier 级数，则需要在 $ [-\pi, \pi) $ 外补充 $ f(x) $ 的定义，使其成为周期为 $ 2 \pi $ 的周期函数. 这种方法称为周期延拓.
+    若 $ f(x) $ 仅给出 $ [0, \pi] $ 上的定义，若要将其展开为 正弦级数，则需补充 $ [-\pi, 0] $ 的定义，使其成为奇函数，这种方法称为函数的奇延拓;
+    若要将其展开为余弦级数，则需补充 $ [-\pi, 0] $ 的定义，使其称为偶函数，这种方法称为函数的 偶延拓. 进行奇偶延拓后，补充周期延拓即可将函数 $ f(x) $ 进行 Fourier 展开.
+    给出函数 $ f(x) $ 在 $ [0, l] $ 的定义同理.
+\end{definition}
+
+\begin{example}
+    在所指定的区间内把下列函数展开为 Fourier 级数.
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l | l}
+            (\rownumber{}) 在区间 $(0,2l)$ 内展开 $f(x)=\begin{cases}A &,0<x<l \\0 & ,l<x<2l\end{cases}$. & (\rownumber{}) 在区间 $(-\pi,\pi)$ 内展开 $f(x)=x$    \\
+            (\rownumber{}) 在区间 $(0,2\pi)$ 内展开 $f(x)=\dfrac{\pi-x}{2}.$                              & (\rownumber{}) 在区间 $(-\pi,\pi)$ 内展开 $f(x)=|x|.$ \\
+            %(\rownumber{}) 在区间 $(-\pi,\pi)$ 内展开 $f(x)=\pi^2-x^2.$                                   & (\rownumber{}) 在区间 $(a,a+2l)$ 内展开 $f(x)=x.$
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 由于
+              \begin{flalign*}
+                  a_0 & =\dfrac{1}{l}\int_{0}^{2l}f(x)\dd x=\dfrac{1}{l}\int_{0}^{l}A\dd x=A;                                                                  \\
+                  a_n & =\dfrac{1}{l}\int_{0}^{2l}f(x)\cos\dfrac{n\pi x}{l}\dd x=\dfrac{1}{l}\int_{0}^{l}A\cos\dfrac{n\pi x}{l}\dd x=0;                        \\
+                  b_n & =\dfrac{1}{l}\int_{0}^{2l}f(x)\sin\dfrac{n\pi x}{l}\dd x=\dfrac{1}{l}\int_{0}^{l}A\sin\dfrac{n\pi x}{l}\dd x=\dfrac{A}{n\pi}[1-(-1)^n]
+              \end{flalign*}
+              故按展开定理，$f(x)$ 可展开为 $$\dfrac{A}{2}+\dfrac{2A}{\pi}\sum_{k=0}^{\infty}\dfrac{1}{2k+1}\sin(2k+1)\dfrac{\pi x}{l}=\begin{cases}
+                      A            & ,0<x<l   \\
+                      \dfrac{A}{2} & , x=l    \\
+                      0            & , l<x<2l
+                  \end{cases}$$
+        \item 因为 $f(x)=x$ 是奇函数，从而 $a_0=a_n=0$，且
+              $$b_n=\dfrac{1}{\pi}\int_{-\pi}^{\pi}x\sin nx\dd x=\dfrac{2}{\pi}\int_{0}^{\pi}x\sin nx\dd x=(-1)^{n-1}\dfrac{2}{n}$$
+              故按展开定理，$f(x)$ 可展开为 $\displaystyle 2\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{\sin nx}{n}=x.$
+        \item 由于
+              \begin{flalign*}
+                  a_0 & =\dfrac{1}{\pi}\int_{0}^{2\pi}\dfrac{\pi-x}{2}\dd x=\dfrac{1}{2\pi}\int_{0}^{2\pi}(\pi-x)\dd x=0;                                                                 \\
+                  a_n & =\dfrac{1}{\pi}\int_{0}^{2\pi}\dfrac{\pi-x}{2}\cos nx\dd x=\dfrac{\pi-x}{2n\pi}\sin nx\biggl |_0^{2\pi}+\dfrac{1}{2n\pi}\int_{0}^{2\pi}\sin nx\dd x=0;            \\
+                  b_n & =\dfrac{1}{\pi}\int_{0}^{2\pi}\dfrac{\pi-x}{2}\sin nx\dd x=-\dfrac{\pi-x}{2n\pi}\cos nx\biggl |_0^{2\pi}-\dfrac{1}{2n\pi}\int_{0}^{2\pi}\cos nx\dd x=\dfrac{1}{n}
+              \end{flalign*}
+              故按展开定理，$f(x)$ 可展开为 $\displaystyle \sum_{n=1}^{\infty}\dfrac{\sin nx}{n}=\dfrac{\pi-x}{2}.$
+        \item 因为 $f(x)=|x|$ 为偶函数，从而 $b_n=0$，且
+              \begin{flalign*}
+                  a_0 & =\dfrac{2}{\pi}\int_{0}^{\pi}x\dd x=\pi;                                                                                                                   \\
+                  a_n & =\dfrac{2}{\pi}\int_{0}^{\pi}x\cos nx\dd x=\dfrac{2}{n\pi}x\sin nx\biggl |_{0}^{\pi}-\dfrac{2}{n\pi}\int_{0}^{\pi}\sin nx\dd x=\dfrac{2}{n^2\pi}[(-1)^n-1]
+              \end{flalign*}
+              故按展开定理，$f(x)$ 可展开为 $\displaystyle \dfrac{\pi}{2}-\dfrac{4}{\pi}\sum_{n=0}^{\infty}\dfrac{\cos (2n+1)x}{(2n+1)^2}=|x|.$
+    \end{enumerate}
+\end{solution}
+
+\begin{example}
+    将函数 $f(x)=1-x^2~~(0\leqslant x\leqslant \pi)$ 展开为余弦级数，并求级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{n^2}$ 的和.
+\end{example}
+\begin{solution}
+    由题意 $l=\pi,~b_n=0~~(n=1,2,\cdots)$，那么 $a_0=\dfrac{2}{\pi}\int_{0}^{\pi}\qty(1-x^2)\dd x=2-\dfrac{2\pi^2}{3}$，
+    \begin{flalign*}
+        a_n & =\dfrac{1}{l}\displaystyle\int_{-l}^{l}f(x)\cos nx\dd x=\dfrac{2}{\pi}\int_{0}^{\pi}f(x)\cos nx\dd x=\dfrac{2}{\pi}\int_{0}^{\pi}\qty(1-x^2)\cos nx\dd x \\
+            & =\eval{\dfrac{2}{\pi}\qty(\dfrac{1-x^2}{n}\sin nx-\dfrac{2x}{n^2}\cos nx+\dfrac{2}{n^3}\sin nx)}_{0}^{\pi}=-\dfrac{4}{n^2}(-1)^n
+    \end{flalign*}
+    于是 $\displaystyle f(x)=1-\dfrac{\pi^2}{3}+4\sum_{n=1}^{\infty}\dfrac{(-1)^{n+1}}{n^2}$，将 $x=0$ 代入可得 $f(0)=1-\dfrac{\pi^2}{3}+4\displaystyle\sum_{n=1}^{\infty}\dfrac{(-1)^{n+1}}{n^2}$ 又由 $f(x)=1-x^2$ 知 $f(0)=1$，则 $\displaystyle\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{n^2}=\dfrac{\pi^2}{12}.$
+\end{solution}
+
+\subsection{Fourier 级数综合性问题}
+
+\subsubsection{已知 Fourier 展开求 Fourier 系数}
+
+\begin{example}
+    设 $f(x)$ 是在周期为 2 的周期函数且 $f(x)=\begin{cases}
+            x, & 0\leqslant x\leqslant 1 \\
+            0, & 1<x<2
+        \end{cases}$ $f(x)$ 的 Fourier 级数为 $\displaystyle \dfrac{a_0}{2}+\sum_{n=1}^{\infty}(a_n\cos n\pi x+b_n\sin n\pi x)$，则 $n\geqslant 1$ 时，求 $a_n.$
+\end{example}
+\begin{solution}
+    对于周期为 $2l$ 的周期函数的 Fourier 级数为 $\displaystyle \dfrac{a_0}{2}+\sum_{n=1}^{\infty}\qty(a_n\cos \dfrac{n\pi x}{l})+b_n\sin\dfrac{n\pi x}{l}$ 系数 $a_n=\displaystyle\dfrac{1}{l}\int_{-l}^{l}f(x)\cos\dfrac{n\pi x}{l}\dd x,~n=1,2,\cdots$，
+    由题意知，$f(x)$ 的周期为 2，故 $l=1$，所以 $a_n=\displaystyle\int_{-1}^{1}f(x)\cos n\pi x\dd x$，即
+    \begin{flalign*}
+        a_n & =\int_{0}^{2}f(x)\cos n\pi x\dd x=\int_{0}^{1}f(x)\cos n\pi x\dd x+\int_{1}^{2}f(x)\cos n\pi x\dd x=\int_{0}^{1}x\cos n\pi x\dd x \\
+            & =\eval{\dfrac{x}{n\pi}\sin n\pi x+\dfrac{1}{n^2\pi^2}\cos n\pi x}_{0}^{1}=\dfrac{(-1)^n-1}{n^2\pi^2}.
+    \end{flalign*}
+\end{solution}
+
+\begin{definition}[平均收敛]
+    若函数列 $f_n(x)$ 满足 $\displaystyle\lim_{n\to\infty}\qty(\dfrac{1}{n}\int_{-\pi}^{\pi}|f_n(x)-S(x)|^2\dd x)^{\frac{1}{2}}=0$，
+    则称 $f_n(x)$ 在 $[-\pi,\pi]$ 平均收敛于 $S(x)$.
+\end{definition}
+
+\begin{lemma}
+    若 $f(x),g(x)$ 在 $[-\pi,\pi]$ 平方可积，则
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $f(x)g(x)$ 在 $[-\pi,\pi]$ 可积，且
+        $$\qty|\int_{-\pi}^{\pi}f(x)g(x)\dd x|\leqslant \int_{-\pi}^{\pi}|f(x)g(x)|\dd x\leqslant \qty(\int_{-\pi}^{\pi}|f(x)|^2\dd x)^{\frac{1}{2}}\qty(\int_{-\pi}^{\pi}|g(x)|^2\dd x)^{\frac{1}{2}}$$
+        \item $f(x)+g(x)$ 在 $[-\pi,\pi]$ 可积，且 
+        $$\qty(\int_{-\pi}^{\pi}|f(x)+g(x)|^2\dd x)^{\frac{1}{2}}\leqslant \qty(\int_{-\pi}^{\pi}|f(x)|^2\dd x)^{\frac{1}{2}}+\qty(\int_{-\pi}^{\pi}|g(x)|^2\dd x)^{\frac{1}{2}}$$
+    \end{enumerate}
+\end{lemma}
+
+\begin{theorem}[均方逼近]
+    若 $f(x)$ 以 $2\pi$ 为周期，在 $[-\pi,\pi]$ 上平方可积，则在所有 $n$ 阶多项式 $\displaystyle T_n(x)=\dfrac{a_0}{2}+\sum_{k=1}^{n}(\alpha_k\cos kx+\beta_k\sin kx)$ 中，
+    当 $T_n(x)$ 取 $f(x)$ 的 Fourier 级数的 $n$ 阶部分和 $\displaystyle S_n(x)=\dfrac{a_0}{2}+\sum_{k=1}^{n}(a_k\cos kx+b_k\sin kx)$ 时，
+    $f(x)$ 与 $T_n(x)$ 的均方误差最小，即 
+    $$\min\norm*{f(x)-T_n(x)}=\norm*{f(x)-S_n(x)}.$$
+    \index{均方逼近}
+\end{theorem}
