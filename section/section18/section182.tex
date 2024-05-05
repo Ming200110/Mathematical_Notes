@@ -91,8 +91,8 @@
                       \cov(X-Y,Y) & =\cov(X,Y)-\cov(Y,Y)=E(XY)-E(X)E(Y)-D(Y) \\
                                   & =E(XY)-E(X)E(Y)-E\qty(Y^2)+E^2(Y)
                   \end{flalign*}
-                  其中 $\displaystyle E(XY)=\sum_i\sum_j x_iy_jp_{ij}=1\cdot\dfrac{1}{3}+2\cdot\dfrac{2}{12}=\dfrac{2}{3}$, 
-                  $E(X)=\dfrac{1}{3}+\dfrac{2}{6}=\dfrac{2}{3},~E(Y)=\dfrac{1}{3}+\dfrac{2}{3}=1$, 
+                  其中 $\displaystyle E(XY)=\sum_i\sum_j x_iy_jp_{ij}=1\cdot\dfrac{1}{3}+2\cdot\dfrac{2}{12}=\dfrac{2}{3}$,
+                  $E(X)=\dfrac{1}{3}+\dfrac{2}{6}=\dfrac{2}{3},~E(Y)=\dfrac{1}{3}+\dfrac{2}{3}=1$,
                   $E\qty(Y^2)=\dfrac{1}{3}+\dfrac{4}{3}=\dfrac{5}{3}$, 代入算得 $\cov(X-Y,Y)=-\dfrac{2}{3}.$
         \end{enumerate}
     \end{minipage}
@@ -141,14 +141,14 @@
                           a_{22}=P\qty{X=1,Y=0}=0\Rightarrow a_{12}=\dfrac{1}{3}\Rightarrow a_{13}=0\Rightarrow a_{23}=\dfrac{1}{3}
                       \end{cases}$$
             \item $Z=XY$ 的可能取值为 $-1,0,1$, 且 $P\qty{Z=1}=P\qty{X=1,Y=1}=\dfrac{1}{3}$, $$P\qty{Z=0}=P\qty{X=0,Y=*}+P\qty{X=*,Y=0}=\dfrac{1}{3}$$
-            同理 $P\qty{Z=-1}=\dfrac{1}{3}$, 于是 $Z$ 的概率分布为 $\begin{array}{c|ccc}
-                Z & -1          & 0           & 1           \\\hline
-                P & \frac{1}{3} & \frac{1}{3} & \frac{1}{3}
-            \end{array}.$
+                  同理 $P\qty{Z=-1}=\dfrac{1}{3}$, 于是 $Z$ 的概率分布为 $\begin{array}{c|ccc}
+                          Z & -1          & 0           & 1           \\\hline
+                          P & \frac{1}{3} & \frac{1}{3} & \frac{1}{3}
+                      \end{array}.$
             \item 易求得 $\cov(X,Y)=0$, 于是 $\rho_{XY}=0.\begin{array}{c|ccc}
-                Y & -1          & 0           & 1           \\\hline
-                P & \frac{1}{3} & \frac{1}{3} & \frac{1}{3}
-            \end{array}$
+                          Y & -1          & 0           & 1           \\\hline
+                          P & \frac{1}{3} & \frac{1}{3} & \frac{1}{3}
+                      \end{array}$
         \end{enumerate}
     \end{minipage}
 \end{solution}
@@ -156,7 +156,7 @@
 \subsection{相关系数}
 
 \begin{definition}[相关系数]
-    对于随机变量 $X,Y$, $D(X)>0,D(Y)>0$, 则称 $\dfrac{\cov(X,Y)}{\sqrt{D(X)}\sqrt{D(Y)}}$ 为随机变量 $X$ 和 $Y$ 的相关系数, 记作 $\rho_{XY}$.
+    对于随机变量 $X,Y$, $D(X)>0,D(Y)>0$, 则称 $\dfrac{\cov(X,Y)}{\sqrt{D(X)}\sqrt{D(Y)}}$ 为随机变量 $X$ 和 $Y$ 的\textit{相关系数}, 记作 $\rho_{XY}$.
 \end{definition}
 
 \begin{theorem}[相关系数的性质]
@@ -197,7 +197,7 @@
 \end{solution}
 
 \begin{example}[1994 数一]
-    已知随机变量 $X$ 和 $Y$ 分布服从正态分布 $N\qty(1,3^2)$ 和 $N\qty(0,4^2)$, 且 $X$ 与 $Y$ 的相关系数 $\rho_{XY}=-\dfrac{1}{2}$, 
+    已知随机变量 $X$ 和 $Y$ 分布服从正态分布 $N\qty(1,3^2)$ 和 $N\qty(0,4^2)$, 且 $X$ 与 $Y$ 的相关系数 $\rho_{XY}=-\dfrac{1}{2}$,
     设 $Z=\dfrac{X}{3}+\dfrac{Y}{2}$.\newline
     \begin{enumerate*}[label=(\arabic{*})]
         \item 求 $Z$ 的数学期望 $E(X)$ 和方差 $D(Z)$;
@@ -206,9 +206,9 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item $E(Z)=\dfrac{1}{3}E(X)+\dfrac{1}{2}E(Y)=\dfrac{1}{3}+0=\dfrac{1}{3}$, 
+        \item $E(Z)=\dfrac{1}{3}E(X)+\dfrac{1}{2}E(Y)=\dfrac{1}{3}+0=\dfrac{1}{3}$,
               $$D(Z)=\dfrac{1}{9}D(X)+\dfrac{1}{4}D(X)+2\cdot\dfrac{1}{3}\cdot\dfrac{1}{2}\cov(X,Y)=\dfrac{1}{9}D(X)+\dfrac{1}{4}D(X)+2\cdot\dfrac{1}{3}\cdot\dfrac{1}{2}\rho_{XY}\sqrt{D(X)}\sqrt{D(Y)}=3.$$
-        \item 由协方差的性质, 
+        \item 由协方差的性质,
               \begin{flalign*}
                   \cov(X,Z)=\cov\qty(X,\dfrac{1}{3}X+\dfrac{1}{2}Y)=\dfrac{1}{3}\cov(X,X)+\dfrac{1}{2}\cov(X,Y)=\dfrac{1}{3}D(X)+\dfrac{1}{2}\cdot\rho_{XY}\sqrt{D(X)}\sqrt{D(Y)}=0
               \end{flalign*}
@@ -247,7 +247,54 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    用排除法, 设 $Y=aX+b$, 由 $\rho_{XY}=1\Rightarrow a>0$, 排除 A、C, 
+    用排除法, 设 $Y=aX+b$, 由 $\rho_{XY}=1\Rightarrow a>0$, 排除 A、C,
     由 $E(X)=0,~E(Y)=1$, 且 $$E(Y)=E(aX+b)=aE(X)+b\Rightarrow b=1$$
     排除 B, 故选 D.
+\end{solution}
+
+\begin{example}
+    设二维随机变量 $(X,Y)$ 的概率密度为 $$f(x,y)=\begin{cases}
+            \dfrac{2}{\pi}\qty(1-x^2-y^2), & x^2+y^2\leqslant 1 \\
+            0,                             & \text{其他}
+        \end{cases}$$
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $X$ 与 $Y$ 是否相互独立, 说明理由;
+        \item 求 $\rho_{XY}$;
+        \item 求 $Z=\sqrt{X^2+Y^2}$ 的概率密度.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 注意到 $X$ 与 $Y$ 轮换对此, 那么
+              \begin{flalign*}
+                  f_{X}(x) & =\int_{-\infty}^{+\infty} f(x, y) \dd y=\frac{2}{\pi} \int_{-\sqrt{1-x^{2}}}^{\sqrt{1-x^{2}}}\left(1-x^
+                  {2}-y^{2}\right) \dd y =\frac{4}{\pi} \int_{0}^{\sqrt{1-x^{2}}}\left[\left(1-x^{2}\right)-y^{2}\right] \dd y                                                                               \\
+                           & =\frac{4}{\pi}\left[\left(1-x^{2}\right)^{\frac{3}{2}}-\frac{1}{3}\left(1-x^{2}\right)^{\frac{3}{2}}\right]  =\frac{8}{3 \pi}\left(1-x^{2}\right)^{\frac{3}{2}},|x| \leqslant 1
+              \end{flalign*}
+              故 $$f_{X}(x)=\begin{cases}
+                      \displaystyle \frac{8}{3 \pi}\left(1-x^{2}\right)^{\frac{3}{2}}, & |x| \leqslant 1 \\
+                      0,                                                               & |x|>1
+                  \end{cases}$$
+              同理可求得
+              $$f_{Y}(y)=\begin{cases}
+                      \displaystyle \frac{8}{3 \pi}\left(1-y^{2}\right)^{\frac{3}{2}}, & |y| \leqslant 1 \\
+                      0,                                                               & |y|>1
+                  \end{cases}$$
+              由于 $ f_{X}(x) \cdot f_{Y}(y) \neq f(x, y) $, 所以 $ X $ 与 $ Y $ 不相互独立.
+        \item 由 $\displaystyle EX=\int_{-\infty}^{+\infty} x f_{X} \dd x=\int_{-1}^{1} x \cdot \frac{8}{3 \pi}\left(1-x^{2}\right)^{\frac{3}{2}} \dd x=0$, 且被积函数关于 $ x, y $ 均为奇函数, $$\displaystyle E_{X Y}  =\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} x y f(x, y) \dd x \dd y
+                  =\iint\limits_{x^{2}+y^{2} \leqslant 1}\frac{2}{\pi} x y\left(1-x^{2}-y^{2}\right) \dd x \dd y=0$$
+              所以 $ \cov(X, Y)=E X Y-E X E Y=0 $, 从而可得 $ \rho_{X Y}=0 $.
+        \item 当 $ z<0 $ 时, $ Z=\sqrt{X^{2}+Y^{2}} $ 的分布函数为 $ F_{Z}(z)=0 $.
+              当 $ 0 \leqslant z<1 $ 时,
+              $$
+                  F_{z}(z) =P\{Z \leqslant z\}=P\left\{\sqrt{X^{2}+Y^{2}} \leqslant z\right\} \\
+                  =\iint\limits_{x^{2}+y^{2} \leqslant z^{2}} f(x, y) \dd x \dd y \\
+                  =\int_{0}^{2 \pi} \dd \theta \int_{0}^{z} \frac{2}{\pi}\left(1-r^{2}\right) r \dd r=2 z^{2}-z^{4}
+              $$
+              当 $ z \geqslant 1 $ 时, $F_{Z}(z)=1 $, 故 $ Z $ 的概率密度为
+              $f_{Z}(z)=F_{Z}^{\prime}(z)=\begin{cases}
+                      4 z-4 z^{3}, & 0<z<1,          \\
+                      0,           & \text { 其他. }
+                  \end{cases}$
+    \end{enumerate}
 \end{solution}
