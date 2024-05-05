@@ -1,51 +1,51 @@
 \section{方阵的幂}
 
 \begin{definition}[方阵的幂]
-    对 $ n $ 阶方阵 $ A $，定义
-    $\displaystyle\vb*{A}^{k}=\underbrace{\vb*{A} \cdot \vb*{A} \cdot \cdots \cdot \vb*{A}}_{k \text{个}}$，
+    对 $ n $ 阶方阵 $ A $, 定义
+    $\displaystyle\vb*{A}^{k}=\underbrace{\vb*{A} \cdot \vb*{A} \cdot \cdots \cdot \vb*{A}}_{k \text{个}}$, 
     称为 $ \vb*{A} $ 的 $ k $ 次幂.
 \end{definition}
 
 \begin{example}
-    设 $\vb*{A}=\mqty(\dfrac{2}{3}&-\dfrac{1}{3}&-\dfrac{1}{3}\\[6pt]-\dfrac{1}{3}&\dfrac{2}{3}&-\dfrac{1}{3}\\[6pt]-\dfrac{1}{3}&-\dfrac{1}{3}&\dfrac{2}{3})$，求 $\vb*{A}^9$.
+    设 $\vb*{A}=\mqty(\dfrac{2}{3}&-\dfrac{1}{3}&-\dfrac{1}{3}\\[6pt]-\dfrac{1}{3}&\dfrac{2}{3}&-\dfrac{1}{3}\\[6pt]-\dfrac{1}{3}&-\dfrac{1}{3}&\dfrac{2}{3})$, 求 $\vb*{A}^9$.
 \end{example}
 \begin{solution}
-    $\vb*{A}^2=\mqty(\dfrac{2}{3}&-\dfrac{1}{3}&-\dfrac{1}{3}\\[6pt]-\dfrac{1}{3}&\dfrac{2}{3}&-\dfrac{1}{3}\\[6pt]-\dfrac{1}{3}&-\dfrac{1}{3}&\dfrac{2}{3})^{2}=\dfrac{1}{9}\mqty(6&-3&-3\\-3&6&-3\\-3&-3&6)=\vb*{A}$，因此 $\vb*{A}^9=\vb*{A}\qty(\vb*{A}^2)^4=\vb*{A}\vb*{A}^4=\vb*{A}\qty(\vb*{A}^2)^2=\vb*{A}^2=\vb*{A}.$
+    $\vb*{A}^2=\mqty(\dfrac{2}{3}&-\dfrac{1}{3}&-\dfrac{1}{3}\\[6pt]-\dfrac{1}{3}&\dfrac{2}{3}&-\dfrac{1}{3}\\[6pt]-\dfrac{1}{3}&-\dfrac{1}{3}&\dfrac{2}{3})^{2}=\dfrac{1}{9}\mqty(6&-3&-3\\-3&6&-3\\-3&-3&6)=\vb*{A}$, 因此 $\vb*{A}^9=\vb*{A}\qty(\vb*{A}^2)^4=\vb*{A}\vb*{A}^4=\vb*{A}\qty(\vb*{A}^2)^2=\vb*{A}^2=\vb*{A}.$
 \end{solution}
 
 \subsection{利用方阵的迹求解}
 
 \begin{theorem}[秩一矩阵的幂]
-    当 $\vb*{A}$ 为方阵且秩 $\rank\vb*{A}=1$，则 $\vb*{A}^n=\qty[\tr(\vb*{A})]^{n-1}\vb*{A}$.
+    当 $\vb*{A}$ 为方阵且秩 $\rank\vb*{A}=1$, 则 $\vb*{A}^n=\qty[\tr(\vb*{A})]^{n-1}\vb*{A}$.
 \end{theorem}
 
 \begin{example}
-    设 $\vb*{A}=\mqty(a&b&c&d\\2a&2b&2c&2d\\3a&3b&3c&3d\\4a&4b&4c&4d)~  (a,b,c,d)$ 不全为 0，求解 $\vb*{A}^n.$
+    设 $\vb*{A}=\mqty(a&b&c&d\\2a&2b&2c&2d\\3a&3b&3c&3d\\4a&4b&4c&4d)~  (a,b,c,d)$ 不全为 0, 求解 $\vb*{A}^n.$
 \end{example}
 \begin{solution}
-    显然 $\rank\vb*{A}=1$，则 $$\vb*{A}^n=\qty[\tr(\vb*{A})]^{n-1}\vb*{A}=(a+2b+3c+4d)^{n-1}\vb*{A}.$$
+    显然 $\rank\vb*{A}=1$, 则 $$\vb*{A}^n=\qty[\tr(\vb*{A})]^{n-1}\vb*{A}=(a+2b+3c+4d)^{n-1}\vb*{A}.$$
 \end{solution}
 
 \begin{example}
-    设 $\vb*{A}=\mqty(0&0&1\\0&1&0\\1&0&0)$，已知矩阵 $\vb*{B}$ 与矩阵 $\vb*{A}$ 相似，求
-    $\rank(\vb*{B}-2\vb*{E})+\rank(\vb*{B}-\vb*{E})$，及 $(\vb*{A}-\vb*{E})^n$，$n$ 为大于 1 的正整数.
+    设 $\vb*{A}=\mqty(0&0&1\\0&1&0\\1&0&0)$, 已知矩阵 $\vb*{B}$ 与矩阵 $\vb*{A}$ 相似, 求
+    $\rank(\vb*{B}-2\vb*{E})+\rank(\vb*{B}-\vb*{E})$, 及 $(\vb*{A}-\vb*{E})^n$, $n$ 为大于 1 的正整数.
 \end{example}
 \begin{solution}
-    因为 $\vb*{B}\sim\vb*{A}$，所以
+    因为 $\vb*{B}\sim\vb*{A}$, 所以
     \begin{flalign*}
         \rank(\vb*{B}-2\vb*{E})+\rank(\vb*{B}-\vb*{E}) & =\rank(\vb*{A}-2\vb*{E})+\rank(\vb*{A}-\vb*{E})=\rank\mqty(-2 & 0 & 1 \\0&-1&0\\1&0&-2)+\rank\mqty(-1&0&1\\0&0&0\\1&0&-1)\\
                                                        & =3+1=4
     \end{flalign*}
-    因为 $\rank(\vb*{A}-\vb*{E})=1$，所以 $(\vb*{A}-\vb*{E})^n=\qty[\tr(\vb*{A}-\vb*{E})\vb*{A}]^{n-1}(\vb*{A}-\vb*{E})=(-2)^{n-1}\mqty(-1&0&1\\0&0&0\\1&0&-1).$
+    因为 $\rank(\vb*{A}-\vb*{E})=1$, 所以 $(\vb*{A}-\vb*{E})^n=\qty[\tr(\vb*{A}-\vb*{E})\vb*{A}]^{n-1}(\vb*{A}-\vb*{E})=(-2)^{n-1}\mqty(-1&0&1\\0&0&0\\1&0&-1).$
 \end{solution}
 
 \subsection{利用幂零矩阵求解}
 
 \begin{example}
-    设 $\vb*{A}=\mqty(0&1&2&3\\0&0&2&3\\0&0&0&3\\0&0&0&0)$，求解 $\vb*{A}^n.$
+    设 $\vb*{A}=\mqty(0&1&2&3\\0&0&2&3\\0&0&0&3\\0&0&0&0)$, 求解 $\vb*{A}^n.$
 \end{example}
 \begin{solution}
-    因为 $\vb*{A}^4=\vb*{O}$，并且
+    因为 $\vb*{A}^4=\vb*{O}$, 并且
     \begin{flalign*}
         \vb*{A}^2=\mqty(0 & 1 & 2 & 3 \\0&0&2&3\\0&0&0&3\\0&0&0&0)\cdot\mqty(0&1&2&3\\0&0&2&3\\0&0&0&3\\0&0&0&0)=\mqty(0&0&2&9\\0&0&0&6\\0&0&0&0\\0&0&0&0)\\
         \vb*{A}^3=\mqty(0 & 0 & 2 & 9 \\0&0&0&6\\0&0&0&0\\0&0&0&0)\cdot \mqty(0&1&2&3\\0&0&2&3\\0&0&0&3\\0&0&0&0)=\mqty(0&0&2&9\\0&0&0&6\\0&0&0&0\\0&0&0&0)
@@ -58,7 +58,7 @@
     设 $\vb*{A}=\begin{pmatrix}
             1 & 3 \\
             0 & 1
-        \end{pmatrix}$，求 $\vb*{A}^n$.
+        \end{pmatrix}$, 求 $\vb*{A}^n$.
 \end{example}
 \begin{solution}
     由 $\vb*{A}=\begin{pmatrix}
@@ -70,16 +70,16 @@
         \end{pmatrix}+\begin{pmatrix}
             0 & 3 \\
             0 & 0
-        \end{pmatrix}=\vb*{E}+\vb*{B}$，而
+        \end{pmatrix}=\vb*{E}+\vb*{B}$, 而
     $\displaystyle\vb*{B}^2=\begin{pmatrix}
             0 & 3 \\
             0 & 0
         \end{pmatrix}\begin{pmatrix}
             0 & 3 \\
             0 & 0
-        \end{pmatrix}=\mathrm{0}$，
-    所以当 $k\geqslant2$ 时，有 $\vb*{B}^k=\mathrm{0}$，
-    而单位矩阵 $\vb*{E}$ 与任意矩阵可换，由二项式定理，得
+        \end{pmatrix}=\mathrm{0}$, 
+    所以当 $k\geqslant2$ 时, 有 $\vb*{B}^k=\mathrm{0}$, 
+    而单位矩阵 $\vb*{E}$ 与任意矩阵可换, 由二项式定理, 得
     \begin{flalign*}
         \vb*{A}^n & =(\vb*{E}+\vb*{B})^n=\sum_{k=0}^{n}\mathrm{C}_n^k\vb*{E}^{n-k}\vb*{B}^k=\vb*{E}^n+\mathrm{C}_n^1\vb*{E}^{n-1}B \\
                   & =\begin{pmatrix}
@@ -126,7 +126,7 @@
                                                                     \dfrac{1}{2}
                                                                 \end{pmatrix}(1,-1) =\vb*{E}+\vb*{\alpha}\vb*{\beta}^{\top}
     \end{flalign*}
-    其中 $\vb*{E}$ 是二阶单位矩阵，$\vb*{\alpha}=\qty(\dfrac{1}{2},\dfrac{1}{2})^{\top}$，$\vb*{\beta}=(1,-1)^{\top}$，并且 $\vb*{\beta}\vb*{\alpha}^T=0$，所以
+    其中 $\vb*{E}$ 是二阶单位矩阵, $\vb*{\alpha}=\qty(\dfrac{1}{2},\dfrac{1}{2})^{\top}$, $\vb*{\beta}=(1,-1)^{\top}$, 并且 $\vb*{\beta}\vb*{\alpha}^T=0$, 所以
     $$\qty(\vb*{\alpha\beta}^\top)^2=\qty(\vb*{\alpha\beta}^{\top})\qty(\vb*{\alpha\beta}^{\top})=\vb*{\alpha}\qty(\vb*{\beta}^{\top}\vb*{\alpha})\vb*{\beta}^{\top}=\vb*{O}$$
     于是 \begin{flalign*}
         \begin{pmatrix}
@@ -148,18 +148,18 @@
 \subsection{Cayley-Hamilton 定理}
 
 \begin{theorem}[Cayley-Hamilton]
-    设 $n$ 阶方阵 $\vb*{A}$ 的特征多项式为 $\varphi(\lambda)=\lambda^n+a_{n-1}\lambda^{n-1}+\cdots+a_1\lambda+a_0$，则 $$\varphi(\vb*{A})=\vb*{A}^n+a_{n-1}\vb*{A}^{n-1}+\cdots++a_1\vb*{A}+a_0\vb*{E}_n=\vb*{O}.$$
+    设 $n$ 阶方阵 $\vb*{A}$ 的特征多项式为 $\varphi(\lambda)=\lambda^n+a_{n-1}\lambda^{n-1}+\cdots+a_1\lambda+a_0$, 则 $$\varphi(\vb*{A})=\vb*{A}^n+a_{n-1}\vb*{A}^{n-1}+\cdots++a_1\vb*{A}+a_0\vb*{E}_n=\vb*{O}.$$
 \end{theorem}
 
 \subsection{矩阵幂转化}
 
 \begin{example}
-    设 $\vb*{A}=\mqty(\underline{1}&3&-1\\0&\underline{4}&5\\0&0&\underline{9})$，求\textbf{一个}矩阵 $\vb*{B}$ 使得 $\vb*{B}^2=\vb*{A}.$
+    设 $\vb*{A}=\mqty(\underline{1}&3&-1\\0&\underline{4}&5\\0&0&\underline{9})$, 求\textbf{一个}矩阵 $\vb*{B}$ 使得 $\vb*{B}^2=\vb*{A}.$
 \end{example}
 \begin{solution}
-    因为 $\vb*{A}$ 是一上三角矩阵，那么 $\vb*{A}$ 的特征值分别为 $\lambda_1=1,~\lambda_2=4,~\lambda_3=9$，所以 $\vb*{A}$ 一定能相似对角化，
-    因此存在一可逆实矩阵 $\vb*{P}$，使得 $\vb*{P}^{-1}\vb*{AP}=\diag(1,4,9)$，易得 $\lambda_1$ 对于的特征向量为 $\vb*{\xi}_1=(1,0,0)^\top$; $\lambda_2$ 对应的特征向量为 $\vb*{\xi}_2=(1,1,0)^\top$;
-    $\lambda_3$ 对应的特征向量为 $\vb*{\xi}_3=(1,4,4)^\top$，则取 $\vb*{P}=(\vb*{\xi}_1,\vb*{\xi}_2,\vb*{\xi}_3)$，于是 
+    因为 $\vb*{A}$ 是一上三角矩阵, 那么 $\vb*{A}$ 的特征值分别为 $\lambda_1=1,~\lambda_2=4,~\lambda_3=9$, 所以 $\vb*{A}$ 一定能相似对角化, 
+    因此存在一可逆实矩阵 $\vb*{P}$, 使得 $\vb*{P}^{-1}\vb*{AP}=\diag(1,4,9)$, 易得 $\lambda_1$ 对于的特征向量为 $\vb*{\xi}_1=(1,0,0)^\top$; $\lambda_2$ 对应的特征向量为 $\vb*{\xi}_2=(1,1,0)^\top$;
+    $\lambda_3$ 对应的特征向量为 $\vb*{\xi}_3=(1,4,4)^\top$, 则取 $\vb*{P}=(\vb*{\xi}_1,\vb*{\xi}_2,\vb*{\xi}_3)$, 于是 
     $$\vb*{A}=\vb*{P}\diag(1,4,9)\vb*{P}^{-1}=\vb*{P}\diag((\pm1)^2,(\pm2)^2,(\pm3)^2)\vb*{P}^{-1}=\vb*{P\Lambda P}^{-1}\vb*{P\Lambda P}^{-1}\Rightarrow \vb*{B}=\vb*{P\Lambda P}^{-1}$$
     因此 $\vb*{B}=\mqty(1&1&1\\0&1&4\\0&0&4)\mqty(\dmat{1,2,3})\mqty(1&-1&\dfrac{3}{4}\\[6pt]0&1&-1\\0&0&\dfrac{1}{4})=\mqty(1&1&-\dfrac{1}{2}\\[6pt]0&2&1\\0&0&3).$
 \end{solution}

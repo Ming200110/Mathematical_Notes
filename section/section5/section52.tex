@@ -1,8 +1,8 @@
 \section{多元函数的偏导数}
 
-在多元函数中，偏导数是描述函数对于各个自变量的变化率的概念.
-对于一个多元函数 $f(\vb*{x})$，其中 $\vb*{x}=(x_1,x_2,\cdots,x_n)$，对于第 $i$ 个自变量 $x_i$ 的偏导数记作 $\displaystyle\pdv{f}{x_i}$，
-表示在其他自变量保持不变的情况下，函数 $f$ 对于 $x_i$ 的变化率.
+在多元函数中, 偏导数是描述函数对于各个自变量的变化率的概念.
+对于一个多元函数 $f(\vb*{x})$, 其中 $\vb*{x}=(x_1,x_2,\cdots,x_n)$, 对于第 $i$ 个自变量 $x_i$ 的偏导数记作 $\displaystyle\pdv{f}{x_i}$, 
+表示在其他自变量保持不变的情况下, 函数 $f$ 对于 $x_i$ 的变化率.
 
 \subsection{偏导数与隐函数}
 
@@ -14,7 +14,7 @@
 \end{definition}
 
 \begin{example}
-    设 $z=uv,~x=\mathrm{e}^u\cos v,~y=\mathrm{e}^u\sin v$，求 $\displaystyle \pdv{z}{x},~\pdv{z}{y}.$
+    设 $z=uv,~x=\mathrm{e}^u\cos v,~y=\mathrm{e}^u\sin v$, 求 $\displaystyle \pdv{z}{x},~\pdv{z}{y}.$
 \end{example}
 \begin{solution}
     $\displaystyle\begin{cases}
@@ -24,7 +24,7 @@
         \begin{cases}
             u=\dfrac{1}{2}\ln\qty(x^2+y^2) \\
             v=\arctan \dfrac{y}{x}
-        \end{cases}\Rightarrow z=\dfrac{1}{2}\ln\qty(x^2+y^2)\cdot\arctan\dfrac{y}{x}$，所以
+        \end{cases}\Rightarrow z=\dfrac{1}{2}\ln\qty(x^2+y^2)\cdot\arctan\dfrac{y}{x}$, 所以
     \begin{flalign*}
         \pdv{z}{x} & =\dfrac{x}{x^2+y^2}\arctan\dfrac{y}{x}+\dfrac{1}{2}\ln\qty(x^2+y^2)\cdot\dfrac{-y}{x^2+y^2} \\
         \pdv{z}{y} & =\dfrac{y}{x^2+y^2}\arctan\dfrac{y}{x}+\dfrac{1}{2}\ln\qty(x^2+y^2)\cdot\dfrac{ x}{x^2+y^2}
@@ -32,14 +32,14 @@
 \end{solution}
 
 \begin{example}[2012 数二]
-    设 $z=f\qty(\ln x+\dfrac{1}{y})$，其中函数 $f(u)$ 可微，求 $\displaystyle x\pdv{z}{x}+y^2\pdv{z}{y}$.
+    设 $z=f\qty(\ln x+\dfrac{1}{y})$, 其中函数 $f(u)$ 可微, 求 $\displaystyle x\pdv{z}{x}+y^2\pdv{z}{y}$.
 \end{example}
 \begin{solution}
-    易得 $\displaystyle\pdv{z}{x}=f'\cdot\dfrac{1}{x},~\pdv{z}{y}=-f'\cdot\dfrac{1}{y^2}$，于是 $\displaystyle x\pdv{z}{x}+y^2\pdv{z}{y}=0$.
+    易得 $\displaystyle\pdv{z}{x}=f'\cdot\dfrac{1}{x},~\pdv{z}{y}=-f'\cdot\dfrac{1}{y^2}$, 于是 $\displaystyle x\pdv{z}{x}+y^2\pdv{z}{y}=0$.
 \end{solution}
 
 \begin{example}[2015 数二]
-    设函数 $f(u,v)$ 满足 $f\qty(x+y,\dfrac{y}{x})=x^2-y^2$，则 $\displaystyle\eval{\pdv{f}{u}}_{\substack{u=1\\v=1}}$ 与 $\displaystyle\eval{\pdv{f}{v}}_{\substack{u=1\\v=1}}$ 依次是
+    设函数 $f(u,v)$ 满足 $f\qty(x+y,\dfrac{y}{x})=x^2-y^2$, 则 $\displaystyle\eval{\pdv{f}{u}}_{\substack{u=1\\v=1}}$ 与 $\displaystyle\eval{\pdv{f}{v}}_{\substack{u=1\\v=1}}$ 依次是
     \begin{tasks}(4)
         \task $\dfrac{1}{2},0$
         \task $0,\dfrac{1}{2}$
@@ -48,32 +48,32 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    \textbf{法一: }令 $u=x+y,~v=\dfrac{y}{x}$，解得 $\begin{cases}
+    \textbf{法一: }令 $u=x+y,~v=\dfrac{y}{x}$, 解得 $\begin{cases}
         x=\dfrac{u}{1+v}\\[6pt] y=\dfrac{uu}{1+v}
-    \end{cases}$ 那么 $f(u,v)=\dfrac{u^2\qty(1-v^2)}{(1+v)^2}=\dfrac{u^2(1-v)}{1+v}$，于是 
+    \end{cases}$ 那么 $f(u,v)=\dfrac{u^2\qty(1-v^2)}{(1+v)^2}=\dfrac{u^2(1-v)}{1+v}$, 于是 
     $$\eval{\pdv{f}{u}}_{\substack{u=1\\v=1}}=\eval{\dfrac{2u(1-v)}{1+v}}_{\substack{u=1\\v=1}}=0,~\eval{\pdv{f}{v}}_{\substack{u=1\\v=1}}=\eval{\dfrac{-2u^2}{(1+v)^2}}_{\substack{u=1\\v=1}}=-\dfrac{1}{2}.$$
-    \textbf{法二: }令 $u=x+y,~v=\dfrac{y}{x}$，当 $u=v=1$ 时，解得 $x=y=\dfrac{1}{2}$，方程 $f\qty(x+y,\dfrac{y}{x})=x^2-y^2$ 两边分别对 $x,~y$ 求偏导数，得 
+    \textbf{法二: }令 $u=x+y,~v=\dfrac{y}{x}$, 当 $u=v=1$ 时, 解得 $x=y=\dfrac{1}{2}$, 方程 $f\qty(x+y,\dfrac{y}{x})=x^2-y^2$ 两边分别对 $x,~y$ 求偏导数, 得 
     $$f'_u+f'_v\qty(-\dfrac{y}{x^2})=2x,~f'_u+f'_v\dfrac{1}{x}=-2y$$
-    把 $x=y=\dfrac{1}{2}$ 代入上两式，最终解得选 D.
+    把 $x=y=\dfrac{1}{2}$ 代入上两式, 最终解得选 D.
 \end{solution}
 
 \begin{example}[2009 数二]
-    设 $z=\qty(x+\e^y)^x$，求 $\displaystyle\eval{\pdv{z}{x}}_{(1,0)}.$
+    设 $z=\qty(x+\e^y)^x$, 求 $\displaystyle\eval{\pdv{z}{x}}_{(1,0)}.$
 \end{example}
 \begin{solution}
-    由 $z=\qty(x+\e^y)^x$，得 $z(x,0)=(x+1)^x$，那么 
+    由 $z=\qty(x+\e^y)^x$, 得 $z(x,0)=(x+1)^x$, 那么 
     \begin{flalign*}
         \eval{\pdv{z}{x}}_{(1,0)}=\eval{\dv{x}(x+1)^x}_{x=1}=\eval{\dv{x}\e ^{x\ln(x+1)}}_{x=1}=\eval{\e ^{x\ln(x+1)}\qty[\ln(x+1)+\dfrac{x}{x+1}]}_{x=1}=2\ln 2+1.
     \end{flalign*}
 \end{solution}
 
 \begin{example}
-    设 $u=f(x,y,z)$ 有连续的一阶偏导数，又函数 $y=y(x)$ 及 $z=z(x)$ 分别由下列两式确定: $\e ^{xy}-xy=2$ 和 $\displaystyle \e ^x=\int_{0}^{x-t}\dfrac{\sin t}{t}\dd t$，求 $\dfrac{\dd u}{\dd x}.$
+    设 $u=f(x,y,z)$ 有连续的一阶偏导数, 又函数 $y=y(x)$ 及 $z=z(x)$ 分别由下列两式确定: $\e ^{xy}-xy=2$ 和 $\displaystyle \e ^x=\int_{0}^{x-t}\dfrac{\sin t}{t}\dd t$, 求 $\dfrac{\dd u}{\dd x}.$
 \end{example}
 \begin{solution}
-    $\displaystyle \dv{u}{x}=\pdv{f}{x}+\pdv{f}{y}\cdot\dv{y}{x}+\pdv{f}{z}\cdot\dv{z}{x}$，由 $\e ^{xy}-xy=2$ 可得 $\displaystyle\dv{y}{x}=-\dfrac{y}{x}$，方程 $\displaystyle \e ^x=\int_{0}^{x-t}\dfrac{\sin t}{t}\dd t$ 两边对 $x$ 求导，
+    $\displaystyle \dv{u}{x}=\pdv{f}{x}+\pdv{f}{y}\cdot\dv{y}{x}+\pdv{f}{z}\cdot\dv{z}{x}$, 由 $\e ^{xy}-xy=2$ 可得 $\displaystyle\dv{y}{x}=-\dfrac{y}{x}$, 方程 $\displaystyle \e ^x=\int_{0}^{x-t}\dfrac{\sin t}{t}\dd t$ 两边对 $x$ 求导, 
     $$\e^x=\dfrac{\sin(x-z)}{x-z}\cdot\qty(1-\dv{z}{x})\Rightarrow \dv{z}{x}=1-\dfrac{\e^x(x-z)}{\sin(x-z)}$$
-    代入 $\dfrac{\dd z}{\dd x}$，得 $\displaystyle\dv{z}{x}=\pdv{f}{x}-\dfrac{y}{x}\pdv{f}{y}+\qty[1-\dfrac{\e^x(x-z)}{\sin(x-z)}]\pdv{f}{z}.$
+    代入 $\dfrac{\dd z}{\dd x}$, 得 $\displaystyle\dv{z}{x}=\pdv{f}{x}-\dfrac{y}{x}\pdv{f}{y}+\qty[1-\dfrac{\e^x(x-z)}{\sin(x-z)}]\pdv{f}{z}.$
 \end{solution}
 
 \begin{example}
@@ -86,31 +86,31 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    因为 $\displaystyle\lim_{\substack{x\to0\\y\to1}}f(x,y)=\lim_{\substack{x\to0\\y\to1}}\qty[x+(y-1)\arcsin\sqrt{\dfrac{|x|}{y}}]=0$，于是
+    因为 $\displaystyle\lim_{\substack{x\to0\\y\to1}}f(x,y)=\lim_{\substack{x\to0\\y\to1}}\qty[x+(y-1)\arcsin\sqrt{\dfrac{|x|}{y}}]=0$, 于是
     \begin{flalign*}
         \lim_{\Delta x\to0^+}\dfrac{f(0+\Delta x,1)-f(0,1)}{\Delta x}=\lim_{\Delta x\to0^+}\dfrac{\Delta x+(1-1)\arcsin\sqrt{\dfrac{\Delta x}{1}}}{\Delta x}=1 \\
         \lim_{\Delta x\to0^-}\dfrac{f(0+\Delta x,1)-f(0,1)}{\Delta x}=\lim_{\Delta x\to0^-}\dfrac{\Delta x+(1-1)\arcsin\sqrt{\dfrac{-\Delta x}{1}}}{\Delta x}=1
     \end{flalign*}
-    则 $f'_x(0,1)=1$，同理可得 $f'_y(0,1)=0$，并且
+    则 $f'_x(0,1)=1$, 同理可得 $f'_y(0,1)=0$, 并且
     \begin{flalign*}
          & \lim_{\substack{\Delta x\to0  \\ \Delta y\to0}} \dfrac{f(0+\Delta x,1+\Delta y)-f(0,1)-\qty[f'_x(0,1)\Delta x+f'_y(0,1)\Delta y]}{\sqrt{(\Delta x)^2+(\Delta y)^2} }
         =\lim_{\substack{\Delta x\to0    \\ \Delta y\to0}}\dfrac{\Delta x+(\Delta y)\arcsin\sqrt{\dfrac{|\Delta x|}{1+\Delta y}}-0-\Delta x}{\sqrt{(\Delta x)^2+(\Delta y)^2} }\\
          & =\lim_{\substack{\Delta x\to0 \\ \Delta y\to0}}\arcsin\sqrt{\dfrac{|\Delta x|}{1+\Delta y}}\cdot\dfrac{\Delta y}{\sqrt{(\Delta x)^2+(\Delta y)^2} }=0~  \qty(\arcsin\sqrt{\dfrac{|\Delta x|}{1+\Delta y}}\to0,\qty|\dfrac{\Delta y}{\sqrt{(\Delta x)^2+(\Delta y)^2} }|\leqslant 1)
     \end{flalign*}
-    故 $f(x,y)$ 在 $(0,1)$ 处可微，所以 $\dd f\biggl |_{(0,1)}=1\cdot\dd x+0\cdot\dd y=\dd x$，选 C.
+    故 $f(x,y)$ 在 $(0,1)$ 处可微, 所以 $\dd f\biggl |_{(0,1)}=1\cdot\dd x+0\cdot\dd y=\dd x$, 选 C.
 \end{solution}
 
 \subsubsection{隐函数}
 
 \begin{theorem}[隐函数存在定理 A]
-    \label{yhansczdl}设函数 $F(x,y,z)$ 在点 $P(x_0,y_0,z_0)$ 的某一邻域内具有连续偏导数，且 $$F(x_0,y_0,z_0)=0,~F'_z(x_0,y_0,z_0)\neq 0$$
-    则方程 $F(x,y,z)=0$ 在点 $P(x_0,y_0,z_0)$ 的某一邻域内能确定唯一一个连续且具有连续导数的函数 $z=f(x,y)$，且有
+    \label{yhansczdl}设函数 $F(x,y,z)$ 在点 $P(x_0,y_0,z_0)$ 的某一邻域内具有连续偏导数, 且 $$F(x_0,y_0,z_0)=0,~F'_z(x_0,y_0,z_0)\neq 0$$
+    则方程 $F(x,y,z)=0$ 在点 $P(x_0,y_0,z_0)$ 的某一邻域内能确定唯一一个连续且具有连续导数的函数 $z=f(x,y)$, 且有
     $$\pdv{z}{x}=-\dfrac{F'_x}{F'_z},~\pdv{z}{y}=-\dfrac{F'_y}{F'_z}.$$
     \index{隐函数存在定理}
 \end{theorem}
 
 \begin{theorem}[隐函数存在定理 B]
-    由方程组确定的隐函数的导数，方程组
+    由方程组确定的隐函数的导数, 方程组
     \begin{equation*}
         \begin{cases}
             F(x,y,u,v)=0 \\G(x,y,u,v)=0
@@ -125,80 +125,80 @@
         \end{cases}
         \tag*{(2)}
     \end{equation*}
-    若 $\mqty|F'_u&F'_v\\G'_u&G'_v|\neq 0$，则方程组 (1) 确定了两个隐函数 $u=u(x,y),v=v(x,y)$，且 $\displaystyle\pdv{u}{x},~\pdv{v}{x}$ 可由方程组 (2) 求出，
+    若 $\mqty|F'_u&F'_v\\G'_u&G'_v|\neq 0$, 则方程组 (1) 确定了两个隐函数 $u=u(x,y),v=v(x,y)$, 且 $\displaystyle\pdv{u}{x},~\pdv{v}{x}$ 可由方程组 (2) 求出, 
     同理可得 $\displaystyle\pdv{u}{y},~\pdv{v}{y}$.
 \end{theorem}
 
 \begin{example}
-    设 $F(x,y,z)$ 连续可偏导，$F'_y\cdot F'_z\neq 0$，且 $F(1,1,-2)=0$，则在点 $(1,1,-2)$ 邻域内，由 $F(x,y,z)=0$
+    设 $F(x,y,z)$ 连续可偏导, $F'_y\cdot F'_z\neq 0$, 且 $F(1,1,-2)=0$, 则在点 $(1,1,-2)$ 邻域内, 由 $F(x,y,z)=0$
     \begin{tasks}(1)
-        \task 既可确定 $x$ 为 $y,z$ 的二元函数，也可确定 $y$ 为 $x,z$ 的二元函数
-        \task 既可确定 $x$ 为 $y,z$ 的二元函数，也可确定 $z$ 为 $x,y$ 的二元函数
-        \task 既可确定 $y$ 为 $x,z$ 的二元函数，也可确定 $z$ 为 $x,y$ 的二元函数
-        \task 可确定 $x$ 为 $y,z$ 的二元函数，$y$ 为 $x,z$ 的二元函数， $z$ 为 $x,y$ 的二元函数
+        \task 既可确定 $x$ 为 $y,z$ 的二元函数, 也可确定 $y$ 为 $x,z$ 的二元函数
+        \task 既可确定 $x$ 为 $y,z$ 的二元函数, 也可确定 $z$ 为 $x,y$ 的二元函数
+        \task 既可确定 $y$ 为 $x,z$ 的二元函数, 也可确定 $z$ 为 $x,y$ 的二元函数
+        \task 可确定 $x$ 为 $y,z$ 的二元函数, $y$ 为 $x,z$ 的二元函数,  $z$ 为 $x,y$ 的二元函数
     \end{tasks}
 \end{example}
 \begin{solution}
-    根据定理 \ref{yhansczdl}，$F(x,y,z)=0$ 确定的隐函数 $z=z(x,y)$ 的偏导数为
+    根据定理 \ref{yhansczdl}, $F(x,y,z)=0$ 确定的隐函数 $z=z(x,y)$ 的偏导数为
     $$\pdv{z}{x}=-\dfrac{F'_x}{F'_z},~\pdv{z}{y}=-\dfrac{F'_y}{F'_z}$$
-    因此确定 $z$ 为 $x,y$ 的二元函数，需要 $F'_z\neq0$; 确定 $x$ 为 $y,z$ 的二元函数，需要 $F'_x\neq0$; 确定 $y$ 为 $x,z$ 的二元函数，需要 $F'_y\neq0$，
-    而 $F'_y\cdot F'_z\neq 0$ 得 $F'_y\neq0,~F'_z\neq0$，因此可确定 $y$ 为 $x,z$ 的二元函数，也可确定 $z$ 为 $x,y$ 的二元函数，故选 C.
+    因此确定 $z$ 为 $x,y$ 的二元函数, 需要 $F'_z\neq0$; 确定 $x$ 为 $y,z$ 的二元函数, 需要 $F'_x\neq0$; 确定 $y$ 为 $x,z$ 的二元函数, 需要 $F'_y\neq0$, 
+    而 $F'_y\cdot F'_z\neq 0$ 得 $F'_y\neq0,~F'_z\neq0$, 因此可确定 $y$ 为 $x,z$ 的二元函数, 也可确定 $z$ 为 $x,y$ 的二元函数, 故选 C.
 \end{solution}
 
 \begin{example}[2018 数三]
-    设函数 $z=z(x,y)$ 由方程 $\ln z+\e ^{z-1}=xy$ 确定，求 $\displaystyle\eval{\pdv{z}{x}}_{\qty(2,\frac{1}{2})}.$
+    设函数 $z=z(x,y)$ 由方程 $\ln z+\e ^{z-1}=xy$ 确定, 求 $\displaystyle\eval{\pdv{z}{x}}_{\qty(2,\frac{1}{2})}.$
 \end{example}
 \begin{solution}
-    \textbf{法一: }求偏导，$\displaystyle\dfrac{1}{z}\cdot z'_x+\e^{z-1}\cdot z'_x=y$，代入 $x=2,y=\dfrac{1}{2},z=1$，求得 $z'_x\qty(2,\dfrac{1}{2})=\dfrac{1}{4}.$\\ 
-    \textbf{法二: }求全微分: $\dfrac{1}{z}\dd z+\e ^{z-1}\dd z=y\dd x+x\dd y\Rightarrow \dd z=\dfrac{yz}{1+z\e ^{z-1}}\dd x+\dfrac{xz}{1+z\e ^{z-1}}\dd y$，那么 $\displaystyle\eval{\pdv{z}{x}}_{\qty(2,\frac{1}{2})}=\dfrac{1}{4}.$\\ 
-    \textbf{法三: }公式法: 令 $F(x,y,z)=\ln z+\e ^{z-1}-xy$，那么 $\displaystyle\eval{\pdv{z}{x}}_{\qty(2,\frac{1}{2})}=-\eval{\dfrac{F'_x}{F'_y}}_{\qty(2,\frac{1}{2})}=\eval{\dfrac{y}{\dfrac{1}{z}+\e ^{z-1}}}_{\qty(2,\frac{1}{2})}=\dfrac{1}{4}.$
+    \textbf{法一: }求偏导, $\displaystyle\dfrac{1}{z}\cdot z'_x+\e^{z-1}\cdot z'_x=y$, 代入 $x=2,y=\dfrac{1}{2},z=1$, 求得 $z'_x\qty(2,\dfrac{1}{2})=\dfrac{1}{4}.$\\ 
+    \textbf{法二: }求全微分: $\dfrac{1}{z}\dd z+\e ^{z-1}\dd z=y\dd x+x\dd y\Rightarrow \dd z=\dfrac{yz}{1+z\e ^{z-1}}\dd x+\dfrac{xz}{1+z\e ^{z-1}}\dd y$, 那么 $\displaystyle\eval{\pdv{z}{x}}_{\qty(2,\frac{1}{2})}=\dfrac{1}{4}.$\\ 
+    \textbf{法三: }公式法: 令 $F(x,y,z)=\ln z+\e ^{z-1}-xy$, 那么 $\displaystyle\eval{\pdv{z}{x}}_{\qty(2,\frac{1}{2})}=-\eval{\dfrac{F'_x}{F'_y}}_{\qty(2,\frac{1}{2})}=\eval{\dfrac{y}{\dfrac{1}{z}+\e ^{z-1}}}_{\qty(2,\frac{1}{2})}=\dfrac{1}{4}.$
 \end{solution}
 
 \subsection{全微分形式不变性}
 
 \begin{definition}[全微分的定义]
-    设点 $P_0(x_0,y_0)$ 为 $f(x,y)$ 定义域 $D$ 的一个内点，如果函数 $z=f(x,y)$ 在点 $P_0(x_0,y_0)$ 处的全增量 $\Delta z$ 可表示为
+    设点 $P_0(x_0,y_0)$ 为 $f(x,y)$ 定义域 $D$ 的一个内点, 如果函数 $z=f(x,y)$ 在点 $P_0(x_0,y_0)$ 处的全增量 $\Delta z$ 可表示为
     $$\Delta z=f(x_0+\Delta x,y_0+\Delta y)-f(x_0,y-0)=A\Delta x+B\Delta y+o\qty(\rho)$$
-    其中 $A,~B$ 是与 $\Delta x,~\Delta y$ 无关的常量，则称函数 $z=f(x,y)$ \textit{在点} $P_0(x_0,y_0)$ \textit{处可微}，并称函数
-    $z=f(x,y)$ 的全增量 $\Delta z$ 的线性主部 $A\Delta x+B\Delta y$ 为函数 $z=f(x,y)$ 在点 $P_0(x_0,y_0)$ 处的全微分，记作
+    其中 $A,~B$ 是与 $\Delta x,~\Delta y$ 无关的常量, 则称函数 $z=f(x,y)$ \textit{在点} $P_0(x_0,y_0)$ \textit{处可微}, 并称函数
+    $z=f(x,y)$ 的全增量 $\Delta z$ 的线性主部 $A\Delta x+B\Delta y$ 为函数 $z=f(x,y)$ 在点 $P_0(x_0,y_0)$ 处的全微分, 记作
     $$\dd z=A\Delta x+B\Delta y=A\dd x+B\dd y~~(\dd x=\Delta x,~\dd y=\Delta y)$$
-    当函数 $z=f(x,y)$ 在点 $P_0(x_0,y_0)$ 处可微时，有 $$\dd z=f'_x(x_0,y_0)\dd x+f'_y(x_0,y_0)\dd y.$$
+    当函数 $z=f(x,y)$ 在点 $P_0(x_0,y_0)$ 处可微时, 有 $$\dd z=f'_x(x_0,y_0)\dd x+f'_y(x_0,y_0)\dd y.$$
 \end{definition}
 
 \begin{theorem}[全微分的形式不变性]
-    设函数 $ z=f(u, v), u=\varphi(x, y) $ 及 $ v=\psi(x, y) $ 分别具有连续偏导数，则 $ z=f(u, v) $ 的全微分
+    设函数 $ z=f(u, v), u=\varphi(x, y) $ 及 $ v=\psi(x, y) $ 分别具有连续偏导数, 则 $ z=f(u, v) $ 的全微分
     $$\dd  z=\frac{\partial z}{\partial u} \dd  u+\frac{\partial z}{\partial v} \dd  v$$
-    若把 $ u $ 和 $ v $ 视为中间变量，则复合函数 $ z=f[\varphi(x, y), \psi(x, y)] $ 的全微分为
+    若把 $ u $ 和 $ v $ 视为中间变量, 则复合函数 $ z=f[\varphi(x, y), \psi(x, y)] $ 的全微分为
     $$\dd  z=\frac{\partial z}{\partial x} \dd  x+\frac{\partial z}{\partial y} \dd  y$$
-    不论是 $ u $ 和 $ v $ 自变量还是中间变量，以上微分形式保持不变，这一性质称为一阶全微分形式不变性.
+    不论是 $ u $ 和 $ v $ 自变量还是中间变量, 以上微分形式保持不变, 这一性质称为一阶全微分形式不变性.
     \index{全微分的形式不变性}
 \end{theorem}
 
 \begin{example}
-    设 $\displaystyle f(x,y)=x\cos\frac{x}{y}+(2-y)\ln\arctan\frac{x^2-y^2}{x^2+y^2}$，求 $f'_x(0,2).$
+    设 $\displaystyle f(x,y)=x\cos\frac{x}{y}+(2-y)\ln\arctan\frac{x^2-y^2}{x^2+y^2}$, 求 $f'_x(0,2).$
 \end{example}
 \begin{solution}
-    利用全微分不变性，
+    利用全微分不变性, 
     $$\dd f(x,y)=\cos\frac{x}{y}\dd x-x\sin\frac{x}{y}\cdot\frac{y\dd x-x\dd y}{y^2}-\ln\arctan\frac{x^2-y^2}{x^2+y^2}\dd y$$
-    因为 $\dd f(0,2)=\dd x-\ln\arctan(-1)\dd y$，所以 $f_x(0,2)=1$.
+    因为 $\dd f(0,2)=\dd x-\ln\arctan(-1)\dd y$, 所以 $f_x(0,2)=1$.
 \end{solution}
 
 \begin{example}
-    设 $z=z(x,y)$ 是由 $x-2z=\mathrm{e}^{y+3z}-1$ 所确定的函数，求 $\displaystyle 2\pdv{z}{x}-3\pdv{z}{y}.$
+    设 $z=z(x,y)$ 是由 $x-2z=\mathrm{e}^{y+3z}-1$ 所确定的函数, 求 $\displaystyle 2\pdv{z}{x}-3\pdv{z}{y}.$
 \end{example}
 \begin{solution}
-    由全微分的形式不变性，得 $\dd x-2\dd z=\mathrm{e}^{y+3z}(\dd y+3\dd z)$，即
+    由全微分的形式不变性, 得 $\dd x-2\dd z=\mathrm{e}^{y+3z}(\dd y+3\dd z)$, 即
     $$\dd z=\dfrac{1}{3\mathrm{e}^{y+3z}+2}\dd x-\dfrac{\mathrm{e}^{y+3z}}{3\mathrm{e}^{y+3z}+2}\dd y$$
-    于是 $\displaystyle\pdv{z}{x}=\dfrac{1}{3\mathrm{e}^{y+3z}+2},~\pdv{z}{y}=-\dfrac{\mathrm{e}^{y+3z}}{3\mathrm{e}^{y+3z}+2}$，那么 $\displaystyle 2\pdv{z}{x}-3\pdv{z}{y}=1.$
+    于是 $\displaystyle\pdv{z}{x}=\dfrac{1}{3\mathrm{e}^{y+3z}+2},~\pdv{z}{y}=-\dfrac{\mathrm{e}^{y+3z}}{3\mathrm{e}^{y+3z}+2}$, 那么 $\displaystyle 2\pdv{z}{x}-3\pdv{z}{y}=1.$
 \end{solution}
 
 \begin{example}
-    设 $\mathrm{e}^x-xyz=0$，求 $\displaystyle\frac{\partial z}{\partial x},~\frac{\partial z}{\partial y},~\frac{\partial^2z}{\partial x^2}.$
+    设 $\mathrm{e}^x-xyz=0$, 求 $\displaystyle\frac{\partial z}{\partial x},~\frac{\partial z}{\partial y},~\frac{\partial^2z}{\partial x^2}.$
 \end{example}
 \begin{solution}
-    由方程 $\mathrm{e}^x-xyz=0$ 两边分别求微分，得
+    由方程 $\mathrm{e}^x-xyz=0$ 两边分别求微分, 得
     $$\mathrm{e}^x\dd x-yz\dd x+xz\dd y+xy\dd z=0$$
-    整理得，$\displaystyle\dd z=\frac{yz-\mathrm{e}^x}{xy}\dd x-\frac{z}{y}\dd y$，由全微分不变性，得 $\displaystyle\frac{\partial z}{\partial x}=\frac{yz-\mathrm{e}^x}{xy},~\frac{\partial z}{\partial y}=-\frac{z}{y}$，
+    整理得, $\displaystyle\dd z=\frac{yz-\mathrm{e}^x}{xy}\dd x-\frac{z}{y}\dd y$, 由全微分不变性, 得 $\displaystyle\frac{\partial z}{\partial x}=\frac{yz-\mathrm{e}^x}{xy},~\frac{\partial z}{\partial y}=-\frac{z}{y}$, 
     \begin{flalign*}
         \dfrac{\partial^2z}{\partial x^2}=\dfrac{\partial }{\partial x}\left(\dfrac{yz-\mathrm{e}^x}{xy}\right)
         =\dfrac{\dfrac{\partial z}{\partial x}-\mathrm{e}^x}{y}=\dfrac{yz-\mathrm{e}^x(1+xy)}{xy^2}.
@@ -206,70 +206,70 @@
 \end{solution}
 
 \begin{example}
-    设 $\displaystyle\frac{x}{z}=\ln\frac{z}{y}$，求 $\displaystyle\frac{\partial z}{\partial x},~\frac{\partial z}{\partial y}.$
+    设 $\displaystyle\frac{x}{z}=\ln\frac{z}{y}$, 求 $\displaystyle\frac{\partial z}{\partial x},~\frac{\partial z}{\partial y}.$
 \end{example}
 \begin{solution}
-    由方程 $\displaystyle\frac{x}{z}=\ln\frac{z}{y}$ 两边分别求微分，得
+    由方程 $\displaystyle\frac{x}{z}=\ln\frac{z}{y}$ 两边分别求微分, 得
     $$\frac{z\dd x-x\dd z}{z^2}=\frac{y}{z}\cdot\frac{y\dd z-z\dd y}{y^2}$$
-    整理得，$\displaystyle\dd z=\frac{z}{x+z}\dd x+\frac{z^2}{y(x+z)}\dd y$，由全微分不变性，得 $\displaystyle\frac{\partial z}{\partial x}=\frac{z}{x+z},~\frac{\partial z}{\partial y}=\frac{z^2}{y(x+z)}$.
+    整理得, $\displaystyle\dd z=\frac{z}{x+z}\dd x+\frac{z^2}{y(x+z)}\dd y$, 由全微分不变性, 得 $\displaystyle\frac{\partial z}{\partial x}=\frac{z}{x+z},~\frac{\partial z}{\partial y}=\frac{z^2}{y(x+z)}$.
 \end{solution}
 
 \begin{example}
-    设 $z+\mathrm{e}^z=xy$，求 $\displaystyle\frac{\partial z}{\partial x},~\frac{\partial z}{\partial y},~\frac{\partial^2z}{\partial x\partial y}.$
+    设 $z+\mathrm{e}^z=xy$, 求 $\displaystyle\frac{\partial z}{\partial x},~\frac{\partial z}{\partial y},~\frac{\partial^2z}{\partial x\partial y}.$
 \end{example}
 \begin{solution}
-    由方程 $z+\mathrm{e}^z=xy$ 两边分别求微分，得
+    由方程 $z+\mathrm{e}^z=xy$ 两边分别求微分, 得
     $$\dd z+\mathrm{e}^x\dd x=y\dd x+x\dd y$$
-    整理得，$\dd z=(y-\mathrm{e}^x)\dd x+x\dd y$，由全微分不变性，得 $\displaystyle\frac{\partial z}{\partial x}=y-\mathrm{e}^x,~\frac{\partial z}{\partial y}=x$，
+    整理得, $\dd z=(y-\mathrm{e}^x)\dd x+x\dd y$, 由全微分不变性, 得 $\displaystyle\frac{\partial z}{\partial x}=y-\mathrm{e}^x,~\frac{\partial z}{\partial y}=x$, 
     $$\frac{\partial ^2z}{\partial x\partial y}=\frac{\partial }{\partial y}\left(y-\mathrm{e}^x\right)=1.$$
 \end{solution}
 
 \begin{example}
-    设 $z=z(x,y)$ 是由 $z\mathrm{e}^x=xy$ 所确定的函数，求 $\displaystyle\dd z,~\frac{\partial^2z}{\partial x\partial y}.$
+    设 $z=z(x,y)$ 是由 $z\mathrm{e}^x=xy$ 所确定的函数, 求 $\displaystyle\dd z,~\frac{\partial^2z}{\partial x\partial y}.$
 \end{example}
 \begin{solution}
-    由方程 $z\mathrm{e}^x=xy$ 两边分别求微分，得
+    由方程 $z\mathrm{e}^x=xy$ 两边分别求微分, 得
     $$\mathrm{e}^x\dd z+z\mathrm{e}^x\dd x=y\dd x+x\dd y$$
-    整理得，$\displaystyle\dd z=\frac{y-z\mathrm{e}^x}{\mathrm{e}^x}\dd x+\frac{x}{\mathrm{e}^x}\dd y$，由全微分不变性，得 $\displaystyle\frac{\partial z}{\partial x}=\frac{y-z\mathrm{e}^x}{\mathrm{e}^x},~\frac{\partial z}{\partial y}=\frac{x}{\mathrm{e}^x}$，
+    整理得, $\displaystyle\dd z=\frac{y-z\mathrm{e}^x}{\mathrm{e}^x}\dd x+\frac{x}{\mathrm{e}^x}\dd y$, 由全微分不变性, 得 $\displaystyle\frac{\partial z}{\partial x}=\frac{y-z\mathrm{e}^x}{\mathrm{e}^x},~\frac{\partial z}{\partial y}=\frac{x}{\mathrm{e}^x}$, 
     $$\frac{\partial^2z}{\partial x\partial y}=\frac{\partial}{\partial y}\left(\frac{y-z\mathrm{e}^x}{\mathrm{e}^x}\right)=\mathrm{e}^{-x}\left(1-\frac{\partial z}{\partial y}\mathrm{e}^x\right)=\frac{1-x}{\mathrm{e}^x}.$$
 \end{solution}
 
 \begin{example}[2006 年江苏省高等数学竞赛题]
-    已知由 $x=z\mathrm{e}^{y+z}$ 可确定 $z=z(x,y)$，求 $\dd z|_{(\mathrm{e},0)}.$
+    已知由 $x=z\mathrm{e}^{y+z}$ 可确定 $z=z(x,y)$, 求 $\dd z|_{(\mathrm{e},0)}.$
 \end{example}
 \begin{solution}
-    由方程 $x=z\mathrm{e}^{y+z}$ 两边分别求微分，得
+    由方程 $x=z\mathrm{e}^{y+z}$ 两边分别求微分, 得
     $$\dd x=\mathrm{e}^{y+z}\dd z+z\mathrm{e}^{y+z}(\dd z+\dd y)$$
-    整理得，$\displaystyle \dd z=\frac{1}{\mathrm{e}^{y+z}(1+z)}-\frac{z}{1+z}\dd y$，所以 $\displaystyle\dd z|_{(\mathrm{e,0})}=\frac{1}{2\mathrm{e}}\dd x-\frac{1}{2}\dd y$.
+    整理得, $\displaystyle \dd z=\frac{1}{\mathrm{e}^{y+z}(1+z)}-\frac{z}{1+z}\dd y$, 所以 $\displaystyle\dd z|_{(\mathrm{e,0})}=\frac{1}{2\mathrm{e}}\dd x-\frac{1}{2}\dd y$.
 \end{solution}
 
 \begin{example}[2015 数二]
-    若函数 $z=z(x,y)$ 由方程 $\mathrm{e}^{x+2y+3z}+xyz=1$ 所确定，求 $\dd z|_{(0,0)}.$
+    若函数 $z=z(x,y)$ 由方程 $\mathrm{e}^{x+2y+3z}+xyz=1$ 所确定, 求 $\dd z|_{(0,0)}.$
 \end{example}
 \begin{solution}
-    由方程 $\mathrm{e}^{x+2y+3z}+xyz=1$ 两边分别求微分，得
+    由方程 $\mathrm{e}^{x+2y+3z}+xyz=1$ 两边分别求微分, 得
     $$\mathrm{e}^{x+2y+3z}(\dd x+2\dd y+3\dd z)+yz\dd x+xz\dd y+xy\dd z=0$$
-    整理得，$\displaystyle\dd z=-\frac{\mathrm{e}^{x+2y+3z}+yz}{3\mathrm{e}^{x+2y+3z}+xy}\dd x-\frac{2\mathrm{e}^{x+2y+3z}+xz}{3\mathrm{e}^{x+2y+3z}+xy}\dd y$，所以 $\displaystyle\dd z|_{(0,0)}=-\frac{1}{3}\dd x-\frac{2}{3}\dd y$.
+    整理得, $\displaystyle\dd z=-\frac{\mathrm{e}^{x+2y+3z}+yz}{3\mathrm{e}^{x+2y+3z}+xy}\dd x-\frac{2\mathrm{e}^{x+2y+3z}+xz}{3\mathrm{e}^{x+2y+3z}+xy}\dd y$, 所以 $\displaystyle\dd z|_{(0,0)}=-\frac{1}{3}\dd x-\frac{2}{3}\dd y$.
 \end{solution}
 
 \begin{example}[2016 数一]
-    设函数 $f(u,v)$ 可微，$z=z(x,y)$ 由方程 $(x+1)z-y^2=x^2f(x-z,y)$ 确定，求 $\dd z|_{(0,1)}.$
+    设函数 $f(u,v)$ 可微, $z=z(x,y)$ 由方程 $(x+1)z-y^2=x^2f(x-z,y)$ 确定, 求 $\dd z|_{(0,1)}.$
 \end{example}
 \begin{solution}
-    由方程 $(x+1)z-y^2=x^2f(x-z,y)$ 两边分别求微分，得
+    由方程 $(x+1)z-y^2=x^2f(x-z,y)$ 两边分别求微分, 得
     $$z\dd x+(x+1)\dd z-2y\dd y=2x\dd x\cdot f(x-z,y)+x^2\left[f_1'(\dd x-\dd z)+f_2'\dd y\right]$$
-    整理得，$\displaystyle\dd z=\frac{2xf(x-z,y)+x^2f_1'-z}{x+1}\dd x+\frac{2y+x^2f_2'}{x+1}\dd y$，所以 $\displaystyle\dd z|_{(0,1)}=-\dd x+2\dd y.$
+    整理得, $\displaystyle\dd z=\frac{2xf(x-z,y)+x^2f_1'-z}{x+1}\dd x+\frac{2y+x^2f_2'}{x+1}\dd y$, 所以 $\displaystyle\dd z|_{(0,1)}=-\dd x+2\dd y.$
 \end{solution}
 
 \begin{example}[第九届数学竞赛决赛]
-    设函数 $f(x,y)$ 具有一阶连续偏导数，且满足 $$\dd f(x,y)=y\mathrm{e}^y\dd x+x(1+y)\mathrm{e}^y\dd y$$ 及 $f(0,0)=0$，求 $f(x,y).$
+    设函数 $f(x,y)$ 具有一阶连续偏导数, 且满足 $$\dd f(x,y)=y\mathrm{e}^y\dd x+x(1+y)\mathrm{e}^y\dd y$$ 及 $f(0,0)=0$, 求 $f(x,y).$
 \end{example}
 \begin{solution}
-    对方程 $\dd f(x,y)=y\mathrm{e}^y\dd x+x(1+y)\mathrm{e}^y\dd y$ 两边积分，有 $f(x,y)=xy\mathrm{e}^y+C$，又 $f(0,0)=0$，所以 $f(x,y)=xy\mathrm{e}^y$.
+    对方程 $\dd f(x,y)=y\mathrm{e}^y\dd x+x(1+y)\mathrm{e}^y\dd y$ 两边积分, 有 $f(x,y)=xy\mathrm{e}^y+C$, 又 $f(0,0)=0$, 所以 $f(x,y)=xy\mathrm{e}^y$.
 \end{solution}
 
 \begin{example}[2021 数一]
-    设函数 $f(x,y)$ 可微，且 $f\qty(x+1,\e^x)=x(x+1)^2,~f\qty(x,x^2)=2x^2\ln x$，则 $\dd f(1,1)$
+    设函数 $f(x,y)$ 可微, 且 $f\qty(x+1,\e^x)=x(x+1)^2,~f\qty(x,x^2)=2x^2\ln x$, 则 $\dd f(1,1)$
     \begin{tasks}(4)
         \task $\dd x+\dd y$
         \task $\dd x-\dd y$
@@ -287,7 +287,7 @@
         \end{cases}\Rightarrow \begin{cases}
             f_1'(1,1)=0 \\
             f_2'(1,1)=1
-        \end{cases}$，因此
+        \end{cases}$, 因此
     $$\dd f(1,1)=f_1'(1,1)\dd x+f_2'(1,1)\dd y=\dd y$$
     故选 C.
 \end{solution}
@@ -305,7 +305,7 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    令 $g(x)=x\ln(x+1)(x+1)^{\ln(x+1)},~h(x)=(x-1)\qty(x^2-1)x^{2(x-1)}$，那么 $$\begin{cases}
+    令 $g(x)=x\ln(x+1)(x+1)^{\ln(x+1)},~h(x)=(x-1)\qty(x^2-1)x^{2(x-1)}$, 那么 $$\begin{cases}
             f(x+1,\ln(x+1))=(x+1)^3+g(x) \\
             f\qty(x^2,x-1)=x^4\e^{x-1}+h(x)
         \end{cases}\Rightarrow \begin{cases}
@@ -336,7 +336,7 @@
 \subsubsection{对自变量作变量替换}
 
 \begin{example}[2023 四川大学]
-    设 $x=u+v^2,y=u^2-v^3,z=2uv$，求 $\displaystyle\pdv{z}{x}{y}\biggl |_{\substack{u=2\\v=1}}.$
+    设 $x=u+v^2,y=u^2-v^3,z=2uv$, 求 $\displaystyle\pdv{z}{x}{y}\biggl |_{\substack{u=2\\v=1}}.$
 \end{example}
 \begin{solution}
     对方程组 $\begin{cases}
@@ -353,19 +353,19 @@
             0
         \end{pmatrix}\Rightarrow \qty(\pdv{u}{x},\pdv{u}{y})=\mqty(\dfrac{3v}{3v+4u},\dfrac{2u}{3v^2+4uv})$$
     于是 $$\pdv{z}{x}=\pdv{z}{u}\cdot\pdv{u}{x}+\pdv{z}{v}\cdot\pdv{v}{x}=\dfrac{6v^3+4u^2}{3v^2+4uv}$$
-    再对上式两边的 $y$ 求偏导，得
+    再对上式两边的 $y$ 求偏导, 得
     \begin{flalign*}
         \frac{\partial^{2} z}{\partial x \partial y}=\frac{8 u\left(4 u v+3 v^{2}\right)-\left(6 v^{3}+4 u^{2}\right) \cdot(4 v)}{\left(4 u v+3 v^{2}\right)^{2}} \frac{2}{4 u+3 v}
         +\frac{18 v^{2} \cdot\left(4 u v+3 v^{2}\right)-\left(6 v^{3}+4 u^{2}\right) \cdot(4 u+6 v)}{\left(4 u v+3 v^{2}\right)^{2}} \cdot \frac{-1}{4 u v+3 v^{2}}
     \end{flalign*}
-    代入 $u=2,v=1$，可得 $\displaystyle\pdv{z}{x}{y}\biggl |_{\substack{u=2\\v=1}}=\dfrac{26}{121}.$
+    代入 $u=2,v=1$, 可得 $\displaystyle\pdv{z}{x}{y}\biggl |_{\substack{u=2\\v=1}}=\dfrac{26}{121}.$
 \end{solution}
 
 \begin{example}
-    试用关系 $u=\ln\sqrt{x^2+y^2},~v=\arctan \dfrac{y}{x}$，将 $\displaystyle (x+y)\pdv{z}{x}-(x-y)\pdv{z}{y}=0$ 变成关于 $u,~v$ 的方程.
+    试用关系 $u=\ln\sqrt{x^2+y^2},~v=\arctan \dfrac{y}{x}$, 将 $\displaystyle (x+y)\pdv{z}{x}-(x-y)\pdv{z}{y}=0$ 变成关于 $u,~v$ 的方程.
 \end{example}
 \begin{solution}
-    依赖关系如图 \ref{uxyv2xy} 所示，\newline
+    依赖关系如图 \ref{uxyv2xy} 所示, \newline
     \begin{minipage}{0.18\linewidth}
         \begin{figure}[H]
             \centering
@@ -389,10 +389,10 @@
 \end{solution}
 
 \begin{example}
-    试用关系 $u=x^2-y^2,v=2xy$，将 $\displaystyle\frac{\partial ^2W}{\partial x^2}+\frac{\partial ^2W}{\partial y^2}=0$ 变成关于 $u,v$ 的方程.
+    试用关系 $u=x^2-y^2,v=2xy$, 将 $\displaystyle\frac{\partial ^2W}{\partial x^2}+\frac{\partial ^2W}{\partial y^2}=0$ 变成关于 $u,v$ 的方程.
 \end{example}
 \begin{solution}
-    依赖关系如图 \ref{uxyv2xyWxWy} 所示，于是有\newline
+    依赖关系如图 \ref{uxyv2xyWxWy} 所示, 于是有\newline
     \begin{minipage}{0.18\linewidth}
         \begin{figure}[H]
             \centering
@@ -419,7 +419,7 @@
     试将方程 $\displaystyle\frac{\partial^2z}{\partial x^2}+\frac{\partial^2z}{\partial y^2}=0$ 变换为极坐标的形式.
 \end{example}
 \begin{solution}
-    因为 $z=z(x,y),~x=r\cos\theta,~y=r\sin\theta$，所以依赖关系如图 \ref{zxzy0} 所示，于是有\newline
+    因为 $z=z(x,y),~x=r\cos\theta,~y=r\sin\theta$, 所以依赖关系如图 \ref{zxzy0} 所示, 于是有\newline
     \begin{minipage}{.18\linewidth}
         \begin{figure}[H]
             \centering
@@ -439,21 +439,21 @@
                                          & =\frac{\partial^2z}{\partial r^2}\cos^2\theta-\frac{\partial^2z}{\partial \theta\partial r}\frac{1}{r}\sin\theta\cos\theta+\frac{\partial z}{\partial \theta}\frac{1}{r^2}\sin\theta\cos\theta                                                                                                                         \\
                                          & ~ ~ -\frac{\partial^2z}{\partial r\partial \theta}\frac{1}{r}\sin\theta\cos\theta+\frac{\partial z}{\partial \theta}\frac{1}{r}\sin^2\theta+\frac{\partial^2z}{\partial \theta^2}\frac{1}{r^2}\sin^2\theta+\frac{\partial z}{\partial \theta}\frac{1}{r^2}\sin\theta\cos\theta
     \end{flalign*}
-    同理，有
+    同理, 有
     \begin{flalign*}
         \frac{\partial^2z}{\partial y^2}= & \frac{\partial^2z}{\partial r^2}\sin^2\theta+\frac{\partial^2z}{\partial r\partial \theta}\frac{1}{r}\sin\theta\cos\theta-\frac{\partial z}{\partial \theta}\frac{1}{r^2}\sin\theta\cos\theta+\frac{\partial^2z}{\partial \theta\partial r}\frac{1}{r}\sin\theta\cos\theta \\
                                           & +\frac{\partial z}{\partial r}\frac{1}{r}\cos^2\theta+\frac{\partial^2z}{\partial \theta^2}\frac{1}{r^2}\cos^2\theta-\frac{\partial z}{\partial \theta}\frac{1}{r^2}\sin\theta\cos\theta
     \end{flalign*}
-    将上述结果代入原方程，化简即得 $$\frac{\partial^2z}{\partial r^2}+\frac{1}{r}\frac{\partial z}{\partial r}+\frac{1}{r^2}\frac{\partial^2z}{\partial \theta^2}=0.$$
+    将上述结果代入原方程, 化简即得 $$\frac{\partial^2z}{\partial r^2}+\frac{1}{r}\frac{\partial z}{\partial r}+\frac{1}{r^2}\frac{\partial^2z}{\partial \theta^2}=0.$$
 \end{solution}
 
 \begin{example}
-    设 $u=x+y,~v=\dfrac{1}{x}+\dfrac{1}{y}$，试用 $u,~v$ 作新自变量变换方程
+    设 $u=x+y,~v=\dfrac{1}{x}+\dfrac{1}{y}$, 试用 $u,~v$ 作新自变量变换方程
     $$x^2\pdv[2]{z}{x}-\qty(x^2+y^2)\pdv{z}{x}{y}+y^2\pdv[2]{z}{y}=0.$$
     (假设出现的二阶偏导数都连续.)
 \end{example}
 \begin{solution}
-    依赖关系如图 \ref{uxyv1x1y} 所示，\newline
+    依赖关系如图 \ref{uxyv1x1y} 所示, \newline
     \begin{minipage}{.68\linewidth}
         $$\pdv{z}{x}=\pdv{z}{u}-\dfrac{1}{x^2}\pdv{z}{v},~\pdv{z}{y}=\pdv{z}{u}-\dfrac{1}{y^2}\pdv{z}{v}$$
         \begin{flalign*}
@@ -480,7 +480,7 @@
                           & =\pdv[2]{z}{u}-\qty(\dfrac{1}{x^2}+\dfrac{1}{y^2})\pdv{z}{u}{v}+\dfrac{1}{x^2y^2}\pdv[2]{z}{v}
             \tag{3}
         \end{flalign*}
-        将式 (1)、(2)、(3) 代入 $\displaystyle x^2\pdv[2]{z}{x}-\qty(x^2+y^2)\pdv{z}{x}{y}+y^2\pdv[2]{z}{y}=0$，化简得
+        将式 (1)、(2)、(3) 代入 $\displaystyle x^2\pdv[2]{z}{x}-\qty(x^2+y^2)\pdv{z}{x}{y}+y^2\pdv[2]{z}{y}=0$, 化简得
         $$\displaystyle uv(uv-4)\pdv{z}{u}{v}+2v\pdv{z}{v}=0.$$
     \end{minipage}\hfill
     \begin{minipage}{.28\linewidth}
@@ -494,12 +494,12 @@
 \end{solution}
 
 \begin{example}
-    $z$ 为 $x,y$ 的可微函数，试将方程$$x^2\frac{\partial z}{\partial x}+y^2\frac{\partial z}{\partial y}=z^2$$变成 $w=w(u,v)$ 的方程，
+    $z$ 为 $x,y$ 的可微函数, 试将方程$$x^2\frac{\partial z}{\partial x}+y^2\frac{\partial z}{\partial y}=z^2$$变成 $w=w(u,v)$ 的方程, 
     假设$$x=u,~y=\frac{u}{1+uv},~z=\frac{u}{1+uw}.$$
 \end{example}
 \begin{solution}
-    已知 $\displaystyle z=\dfrac{u}{1+uw},~w=w(u,v),~u=x,~v=\dfrac{1}{y}-\dfrac{1}{x}$，
-    于是存在关系如图 \ref{xyxyzyz2} 所示，\newline
+    已知 $\displaystyle z=\dfrac{u}{1+uw},~w=w(u,v),~u=x,~v=\dfrac{1}{y}-\dfrac{1}{x}$, 
+    于是存在关系如图 \ref{xyxyzyz2} 所示, \newline
     \begin{minipage}{.25\linewidth}
         \begin{figure}[H]
             \centering
@@ -523,7 +523,7 @@
 \end{solution}
 
 \begin{example}
-    取 $u,~v$ 为新的自变量，而 $w=w(u,v)$ 为新函数，变化下列方程：
+    取 $u,~v$ 为新的自变量, 而 $w=w(u,v)$ 为新函数, 变化下列方程：
     $$\pdv[2]{z}{x}-2\pdv{z}{x}{y}+\pdv[2]{z}{y}=0~  u=x+y,~v=\dfrac{y}{x},~w=\dfrac{z}{x}.$$
 \end{example}
 \begin{solution}
@@ -532,17 +532,17 @@
         \pdv{z}{x} & =\pdv{w}{x}\cdot x+w=\qty(\pdv{w}{u}\cdot\pdv{u}{x}+\pdv{w}{v}\cdot\pdv{v}{x})\cdot x+w=x\pdv{w}{u}-\dfrac{y}{x}\pdv{w}{v}+w \\
         \pdv{z}{y} & =x\cdot\pdv{w}{y}=x\cdot\qty(\pdv{w}{u}\cdot\pdv{u}{y}+\pdv{w}{v}\cdot\pdv{v}{y})=x\pdv{w}{u}+\pdv{w}{v}
     \end{flalign*}
-    令 $\displaystyle R=\pdv{z}{x}-\pdv{z}{y}=w-\qty(1+\dfrac{y}{x})\pdv{w}{v}$，于是
+    令 $\displaystyle R=\pdv{z}{x}-\pdv{z}{y}=w-\qty(1+\dfrac{y}{x})\pdv{w}{v}$, 于是
     \begin{flalign*}
          & \pdv[2]{z}{x}-2\pdv{z}{x}{y}+\pdv[2]{z}{y}=\qty(\pdv[2]{z}{x}-\pdv{z}{x}{y})-\qty(\pdv{z}{x}{y}-\pdv[2]{z}{y})=\pdv{x}\qty(\pdv{z}{x}-\pdv{z}{y})-\pdv{y}\qty(\pdv{z}{x}-\pdv{z}{y}) \\
          & =\pdv{R}{x}-\pdv{R}{y}=\pdv{R}{u}\cdot\pdv{u}{x}+\pdv{R}{v}\cdot\pdv{v}{x}-\pdv{R}{u}\cdot\pdv{u}{y}-\pdv{R}{v}\cdot\pdv{v}{y}                                                       \\
          & =\pdv{R}{v}\qty(-\dfrac{y}{x^2}-\dfrac{1}{x})=\pdv{v}\qty[w-(1+v)\pdv{w}{v}]\qty(-\dfrac{y}{x^2}-\dfrac{1}{x})=\dfrac{1}{x}(1+v)^2\pdv[2]{w}{v}=0.
     \end{flalign*}
-    由于 $x\neq0,~1+v\neq0$，故原方程变为 $\displaystyle\pdv[2]{w}{v}=0.$
+    由于 $x\neq0,~1+v\neq0$, 故原方程变为 $\displaystyle\pdv[2]{w}{v}=0.$
 \end{solution}
 
 \begin{example}
-    取 $u,~v$ 为新的自变量，而 $w=w(u,v)$ 为新函数，变化下列方程：
+    取 $u,~v$ 为新的自变量, 而 $w=w(u,v)$ 为新函数, 变化下列方程：
     $$\pdv[2]{z}{x}-2\pdv{z}{x}{y}+\qty(1+\dfrac{y}{x})\pdv[2]{z}{y}=0~  u=x,~v=x+y,~w=x+y+z.$$
 \end{example}
 \begin{solution}
@@ -551,7 +551,7 @@
         \pdv{z}{x} & =-1+\pdv{w}{x}=-1+\pdv{w}{u}\cdot\dv{d}{x}+\pdv{w}{v}\cdot\pdv{v}{x}=-1+\pdv{w}{u}+\pdv{w}{v} \\
         \pdv{z}{y} & =-1+\pdv{w}{y}=-1+\pdv{w}{v}\cdot\pdv{v}{y}=-1+\pdv{w}{v}
     \end{flalign*}
-    令 $\displaystyle R=\pdv{z}{x}-\pdv{z}{y}=\pdv{w}{u}$，于是
+    令 $\displaystyle R=\pdv{z}{x}-\pdv{z}{y}=\pdv{w}{u}$, 于是
     \begin{flalign*}
          & \pdv[2]{z}{x}-2\pdv{z}{x}{y}+\pdv[2]{z}{y}=\pdv{R}{x}-\pdv{R}{y}=\pdv{R}{u}\cdot\dv{u}{x}+\pdv{R}{v}\cdot\pdv{v}{x}-\pdv{R}{v}\cdot\pdv{v}{y}=\pdv[2]{w}{u}                                           \\
          & \dfrac{y}{x}\pdv[2]{z}{y}=\qty(\dfrac{v}{u}-1)\pdv{y}\qty(\pdv{w}{v}-1)=\qty(\dfrac{v}{u}-1)\qty[\pdv{u}\qty(\pdv{w}{v})\pdv{u}{y}+\pdv{v}\qty(\pdv{w}{v})\pdv{v}{y}]=\qty(\pdv{v}{u}-1)\pdv[2]{w}{v}
@@ -560,7 +560,7 @@
 \end{solution}
 
 \begin{example}
-    取 $u,~v$ 为新的自变量，而 $w=w(u,v)$ 为新函数，变化下列方程：
+    取 $u,~v$ 为新的自变量, 而 $w=w(u,v)$ 为新函数, 变化下列方程：
     $$\qty(1-x^2)\pdv[2]{z}{x}+\qty(1-y^2)\pdv[2]{z}{y}=x\pdv{z}{x}+y\pdv{z}{y}~  x=\sin u,~y=\sin v,~z=\mathrm{e}^w.$$
 \end{example}
 \begin{solution}
@@ -572,7 +572,7 @@
         \pdv[2]{z}{w} & =\pdv{x}\qty(\mathrm{e}^w\sec u\pdv{w}{u})=\pdv{u}\qty(\mathrm{e}^w\sec u\pdv{w}{u})\dv{u}{x}=\mathrm{e}^w\sec^2u\qty[\qty(\pdv{w}{u})^2+\pdv[2]{w}{u}+\tan u\pdv{w}{u}] \\
         \pdv[2]{z}{y} & =\mathrm{e}^w\sec^2v\qty[\qty(\pdv{w}{v})^2+\pdv[2]{w}{v}+\tan v\pdv{w}{v}]
     \end{flalign*}
-    将上述结果代入原方程，并注意到 $1-x^2=\cos^2u,~  1-y^2=\cos^2v$，化简即得 $$\pdv[2]{w}{u}+\pdv[2]{w}{v}+\qty(\pdv{w}{u})^2+\qty(\pdv{w}{v})^2=0.$$
+    将上述结果代入原方程, 并注意到 $1-x^2=\cos^2u,~  1-y^2=\cos^2v$, 化简即得 $$\pdv[2]{w}{u}+\pdv[2]{w}{v}+\qty(\pdv{w}{u})^2+\qty(\pdv{w}{v})^2=0.$$
 \end{solution}
 
 \subsubsection{求变换中的常数}
@@ -581,10 +581,10 @@
     设变换 $\displaystyle\begin{cases}
             u=x-2y \\
             v=x+ay
-        \end{cases}$，可把方程 $\displaystyle 6\pdv[2]{z}{x}+\pdv{z}{x}{y}-\pdv[2]{z}{y}=0$ 化简为 $\displaystyle\pdv{z}{u}{v}=0$，求常数 $a$，其中 $z=z(x,y)$ 具有连续的二阶偏导数.
+        \end{cases}$, 可把方程 $\displaystyle 6\pdv[2]{z}{x}+\pdv{z}{x}{y}-\pdv[2]{z}{y}=0$ 化简为 $\displaystyle\pdv{z}{u}{v}=0$, 求常数 $a$, 其中 $z=z(x,y)$ 具有连续的二阶偏导数.
 \end{example}
 \begin{solution}
-    $\displaystyle \pdv{z}{x}=\pdv{z}{u}\cdot\pdv{u}{x}+\pdv{z}{v}\cdot\pdv{v}{x}=\pdv{z}{u}+\pdv{z}{v},~\pdv{z}{y}=\pdv{z}{u}\cdot\pdv{u}{y}+\pdv{z}{v}\cdot\pdv{v}{y}=-2\pdv{z}{u}+a\pdv{z}{v}$，由此得到
+    $\displaystyle \pdv{z}{x}=\pdv{z}{u}\cdot\pdv{u}{x}+\pdv{z}{v}\cdot\pdv{v}{x}=\pdv{z}{u}+\pdv{z}{v},~\pdv{z}{y}=\pdv{z}{u}\cdot\pdv{u}{y}+\pdv{z}{v}\cdot\pdv{v}{y}=-2\pdv{z}{u}+a\pdv{z}{v}$, 由此得到
     $$\pdv{x}=\pdv{u}+\pdv{v},~\pdv{y}=-2\pdv{u}+a\pdv{v}$$
     于是
     \begin{flalign*}
@@ -592,7 +592,7 @@
         \pdv[2]{z}{y}           & =\pdv{y}\qty(\pdv{z}{y})=\qty(-2\pdv{u}+a\pdv{v})\qty(-2\pdv{z}{u}+a\pdv{z}{v})=4\pdv[2]{z}{u}-4a\pdv{z}{u}{v}+a^2\pdv[2]{z}{v} \\
         \pdv{x}\qty(\pdv{z}{y}) & =\qty(\pdv{u}+\pdv{v})\qty(-2\pdv{z}{u}+a\pdv{z}{v})=-2\pdv[2]{z}{u}+(a-2)\pdv{z}{u}{v}+a\pdv[2]{z}{v}
     \end{flalign*}
-    由 $\displaystyle 6\pdv[2]{z}{x}+\pdv{z}{x}{y}-\pdv[2]{z}{y}=0$ 得 $\displaystyle(10+5a)\pdv{z}{u}{v}+(6+a-a^2)\pdv[2]{z}{v}=0$，于是有
+    由 $\displaystyle 6\pdv[2]{z}{x}+\pdv{z}{x}{y}-\pdv[2]{z}{y}=0$ 得 $\displaystyle(10+5a)\pdv{z}{u}{v}+(6+a-a^2)\pdv[2]{z}{v}=0$, 于是有
     $\displaystyle\begin{cases}
             10+5a\neq0 \\
             6+a-a^2=0
@@ -600,35 +600,35 @@
 \end{solution}
 
 \begin{example}
-    设函数 $z=z(u,v)$ 有连续 $2$ 阶导数，并且变换 $u=x+2y,v=x+ay$ 能将方程 $2z''_{xx}+z''_{xy}-z''_{yy}=0$ 变成 $z''_{uv}=0$，求 $a$.
+    设函数 $z=z(u,v)$ 有连续 $2$ 阶导数, 并且变换 $u=x+2y,v=x+ay$ 能将方程 $2z''_{xx}+z''_{xy}-z''_{yy}=0$ 变成 $z''_{uv}=0$, 求 $a$.
 \end{example}
 \begin{solution}
-    因为 $z=z(u,v),~u=x+2y,~v=x+ay$，所以依赖关系如图 \ref{uxyv1x1y} 所示，那么有
+    因为 $z=z(u,v),~u=x+2y,~v=x+ay$, 所以依赖关系如图 \ref{uxyv1x1y} 所示, 那么有
     $$\displaystyle\frac{\partial z}{\partial x}=\frac{\partial z}{\partial n}\cdot\frac{\partial u}{\partial x}+\frac{\partial z}{\partial v}\cdot\frac{\partial v}{\partial x}=\frac{\partial z}{\partial u}+\frac{\partial z}{\partial v}$$
     同理有 $$\displaystyle\frac{\partial z}{\partial y}=2\frac{\partial z}{\partial u}+a\frac{\partial z}{\partial v}$$
     于是 $$z''_{xx}=z''_{uu}+z''_{vv},~z''_{xy}=2z''_{uu}+az''_{vv},~z''_{yy}=4z_{uu}+a^2z''_{vv}$$
     因此 $$0=2z''_{xx}+z''_{xy}-z''_{yy}=(2+a-a^2)z''_{vv}=(1+a)(2-a)z''_{vv}$$
-    得 $a=-1\text{ 或 }a=2$，但 $a=2$ 不合题意，否则 $u=x+2y=v$，整个 $xOy$ 平面将变成 $u=v$ 的一条直线，将不可逆，故 $a=-1.$
+    得 $a=-1\text{ 或 }a=2$, 但 $a=2$ 不合题意, 否则 $u=x+2y=v$, 整个 $xOy$ 平面将变成 $u=v$ 的一条直线, 将不可逆, 故 $a=-1.$
 \end{solution}
 
 \subsection{高阶全微分}
 
 \begin{definition}[二阶全微分]
-    设函数 $ y=f\left(x_{1},x_{2},\cdots,x_{n}\right) $ 在 $ x_{0} $ 处可微，则
+    设函数 $ y=f\left(x_{1},x_{2},\cdots,x_{n}\right) $ 在 $ x_{0} $ 处可微, 则
     $$\dd  y=\frac{\partial f\left(x_{0}\right)}{\partial x_{1}} \dd  x_{1}+\frac{\partial f\left(x_{0}\right)}{\partial x_{2}} \dd  x_{2}+\cdots+\frac{\partial f\left(x_{0}\right)}{\partial x_{n}} \dd  x_{n}$$
-    若函数 $ f $ 在开集 $ D $ 上的每一点都可微，则对于给定的 $ \dd  x_{1},\dd  x_{2},\cdots,\dd  x_{n}$，全微分 $ \dd  y $ 是 $ D $ 上的一个 $ n $ 元函数:
+    若函数 $ f $ 在开集 $ D $ 上的每一点都可微, 则对于给定的 $ \dd  x_{1},\dd  x_{2},\cdots,\dd  x_{n}$, 全微分 $ \dd  y $ 是 $ D $ 上的一个 $ n $ 元函数:
     $$\dd  y=\frac{\partial y}{\partial x_{1}} \dd  x_{1}+\frac{\partial y}{\partial x_{2}} \dd  x_{2}+\cdots+\frac{\partial y}{\partial x_{n}} \dd  x_{n}$$
-    若 $ f $ 在 $ D $ 上有二阶连续偏导数，则 $ \dd  y $ 就有一阶连续偏导数，于是函数 $ \dd  y $ 继续可微，它的微分记作 $ \dd ^{2} y $，称为 $ f $ 的二阶微分.
+    若 $ f $ 在 $ D $ 上有二阶连续偏导数, 则 $ \dd  y $ 就有一阶连续偏导数, 于是函数 $ \dd  y $ 继续可微, 它的微分记作 $ \dd ^{2} y $, 称为 $ f $ 的二阶微分.
 \end{definition}
 \begin{definition}[高阶全微分]
-    二阶微分实际上仍然是函数的全微分，因此我们只需按照全微分的定义按部就班地计算二阶微分:
+    二阶微分实际上仍然是函数的全微分, 因此我们只需按照全微分的定义按部就班地计算二阶微分:
     \begin{flalign*}
         \dd ^{2} y & =\dd (\dd  y)=\dd \left(\sum_{i=1}^{n} \frac{\partial y}{\partial x_{i}} \dd  x_{i}\right)=\sum_{i=1}^{n} \dd \left(\frac{\partial y}{\partial x_{i}}\right) \dd  x_{i}                                                        \\
                    & =\sum_{i=1}^{n}\left(\sum_{j=1}^{n} \frac{\partial^{2} y}{\partial x_{j} \partial x_{i}} \dd  x_{j}\right) \dd  x_{i}=\sum_{i=1}^{n} \sum_{j=1}^{n} \frac{\partial^{2} y}{\partial x_{j} \partial x_{i}} \dd  x_{j} \dd  x_{i}
     \end{flalign*}
     用同样的方法可以继续定义三阶微分. 于是用数学归纳法可以定义 $ k $ 阶全微分:
     $$\dd ^{k} y=\dd \left(\dd ^{k-1} y\right)$$
-    但是随着阶数的增加，计算复杂度呈指数级增长，为了使得形式上的简洁，我们可以把一阶全微分等式的右侧看作一个算子对 $ y $ 作用:
+    但是随着阶数的增加, 计算复杂度呈指数级增长, 为了使得形式上的简洁, 我们可以把一阶全微分等式的右侧看作一个算子对 $ y $ 作用:
     \begin{flalign*}
         \dd  y     & =\left(\frac{\partial}{\partial x_{1}} \dd  x_{1}+\frac{\partial}{\partial x_{2}} \dd  x_{2}+\cdots+\frac{\partial}{\partial x_{n}} \dd  x_{n}\right) y     \\
         \dd ^{k} y & =\left(\frac{\partial}{\partial x_{1}} \dd  x_{1}+\frac{\partial}{\partial x_{2}} \dd  x_{2}+\cdots+\frac{\partial}{\partial x_{n}} \dd  x_{n}\right)^{k} y
@@ -642,13 +642,13 @@
 \end{theorem}
 
 \begin{example}
-    已知 $x^2+2xy-y^2=a^2$，求 $\displaystyle\dv[2]{y}{x}.$
+    已知 $x^2+2xy-y^2=a^2$, 求 $\displaystyle\dv[2]{y}{x}.$
 \end{example}
 \begin{solution}
-    \textbf{法一: }设 $F(x,y)=x^2+2xy-y^2-a^2=0$，则 $$\dv{y}{x}=-\dfrac{F_x'}{F_y'}=-\dfrac{2x+2y}{2x-2y}=\dfrac{y+x}{y-x}$$
+    \textbf{法一: }设 $F(x,y)=x^2+2xy-y^2-a^2=0$, 则 $$\dv{y}{x}=-\dfrac{F_x'}{F_y'}=-\dfrac{2x+2y}{2x-2y}=\dfrac{y+x}{y-x}$$
     那么 $$\dv[2]{y}{x}=\dv{x}\qty(\dfrac{y+x}{y-x})=\dfrac{\qty(y'+1)(y-x)-\qty(y'-1)(y+x)}{(y-x)^2}=\dfrac{2y-2xy'}{(y-x)^2}=\dfrac{2y^2-4xy-2x^2}{(y-x)^3}=\dfrac{2a^2}{(x-y)^3}.$$
-    \textbf{法二: }对等式两边全微分，有 $$2x\dd x+2y\dd x+2x\dd y-2y\dd y=0\Rightarrow x\dd x+y\dd x+x\dd y-y\dd y=0$$
-    对上式再微分一次，并注意到 $\dd ^2x=0$，于是
+    \textbf{法二: }对等式两边全微分, 有 $$2x\dd x+2y\dd x+2x\dd y-2y\dd y=0\Rightarrow x\dd x+y\dd x+x\dd y-y\dd y=0$$
+    对上式再微分一次, 并注意到 $\dd ^2x=0$, 于是
     $$\dd x^2+0+\dd y\dd x+0+\dd x\dd y+x\dd ^2y-\dd y^2-y\dd ^2y=0\Rightarrow \dd x^2+2\dd x\dd y-\dd y^2+(x-y)\dd ^2y=0$$
     因此 $$\dv[2]{y}{x}=\dfrac{1+2\dfrac{\dd y}{\dd x}-\qty(\dfrac{\dd y}{\dd x})^2}{y-x}=\dfrac{1+2\qty(\dfrac{y+x}{y-x})-\qty(\dfrac{y+x}{y-x})^2}{y-x}=\dfrac{2a^2}{(x-y)^3}.$$
 \end{solution}
@@ -660,7 +660,7 @@
     试求函数 $f$ 的表达式.
 \end{example}
 \begin{solution}
-    令 $t=\dfrac{1}{2}\ln\qty(x^2+y^2)$，于是
+    令 $t=\dfrac{1}{2}\ln\qty(x^2+y^2)$, 于是
     \begin{flalign*}
         \pdv{u}{x}    & =f'(t)\cdot\pdv{t}{x}=f'(t)\cdot\dfrac{x}{x^2+y^2}                                \\
         \pdv{u}{y}    & =f'(t)\cdot\pdv{t}{y}=f'(t)\cdot\dfrac{y}{x^2+y^2}                                \\
@@ -675,47 +675,47 @@
 \end{solution}
 
 \begin{example}
-    已知 $z=xf\qty(\dfrac{y}{x})+2y\varphi\qty(\dfrac{x}{y})$，其中 $f,~\varphi$ 皆为二次可微函数.
+    已知 $z=xf\qty(\dfrac{y}{x})+2y\varphi\qty(\dfrac{x}{y})$, 其中 $f,~\varphi$ 皆为二次可微函数.
     \begin{enumerate}[label=(\arabic{*})]
         \item 求 $\displaystyle \pdv{z}{x},~\pdv{z}{x}{y}.$
-        \item 当 $f=\varphi$，且 $\displaystyle \pdv{z}{x}{y}\biggl |_{x=a}=-by^2$ 时，求 $f(y).$
+        \item 当 $f=\varphi$, 且 $\displaystyle \pdv{z}{x}{y}\biggl |_{x=a}=-by^2$ 时, 求 $f(y).$
     \end{enumerate}
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item $\displaystyle\pdv{z}{x}=f\qty(\dfrac{y}{x})-\dfrac{y}{x}f'\qty(\dfrac{y}{x})+2\varphi'\qty(\dfrac{x}{y})$，那么
+        \item $\displaystyle\pdv{z}{x}=f\qty(\dfrac{y}{x})-\dfrac{y}{x}f'\qty(\dfrac{y}{x})+2\varphi'\qty(\dfrac{x}{y})$, 那么
               \begin{flalign*}
                   \pdv{z}{x}{y}=\pdv{y}\qty[f\qty(\dfrac{y}{x})-\dfrac{y}{x}f'\qty(\dfrac{y}{x})+2\varphi'\qty(\dfrac{x}{y})]=-\dfrac{y}{x^2}f''\qty(\dfrac{y}{x})-\dfrac{2x}{y^2}\varphi''\qty(\dfrac{x}{y}).
               \end{flalign*}
         \item 当 $f=\varphi,~x=a$ 时
               $$I=\pdv{z}{x}{y}\biggl |_{x=a}=-\dfrac{y}{a^2}f''\qty(\dfrac{y}{a})-\dfrac{2a}{y^2}f''\qty(\dfrac{a}{y})=-by^2$$
-              令 $y=au$ 得 $\displaystyle I=u^3f''(u)+2f''\qty(\dfrac{1}{u})=a^3bu^4$，用 $\dfrac{1}{u}$ 替换 $u$ 得 $J=\dfrac{1}{u^3}f''\qty(\dfrac{1}{u})+2f''(u)=\dfrac{a^3b}{u^4}$，
-              联立 $I$ 和 $J$，消去 $f''\qty(\dfrac{1}{u})$ 得 $f''(u)=\dfrac{1}{3}a^3b\qty(\dfrac{2}{u^4}-u)$，两次积分得
+              令 $y=au$ 得 $\displaystyle I=u^3f''(u)+2f''\qty(\dfrac{1}{u})=a^3bu^4$, 用 $\dfrac{1}{u}$ 替换 $u$ 得 $J=\dfrac{1}{u^3}f''\qty(\dfrac{1}{u})+2f''(u)=\dfrac{a^3b}{u^4}$, 
+              联立 $I$ 和 $J$, 消去 $f''\qty(\dfrac{1}{u})$ 得 $f''(u)=\dfrac{1}{3}a^3b\qty(\dfrac{2}{u^4}-u)$, 两次积分得
               $$f(u)=\dfrac{1}{9}a^3b\qty(\dfrac{1}{u^2}-\dfrac{1}{2}u^3)+C_1u+C_2$$
-              所以 $\displaystyle f(y)=\dfrac{1}{9}a^3b\qty(\dfrac{1}{y^2}-\dfrac{1}{2}y^3)+C_1y+C_2$，其中 $C_1,~C_2$ 是常数.
+              所以 $\displaystyle f(y)=\dfrac{1}{9}a^3b\qty(\dfrac{1}{y^2}-\dfrac{1}{2}y^3)+C_1y+C_2$, 其中 $C_1,~C_2$ 是常数.
     \end{enumerate}
 \end{solution}
 
 \begin{example}
-    若函数 $f(x,y,z)$ 满足 $f(tx,ty,tz)=t^nf(x,y,z)$，则称它为 $n$ 次齐次函数，试证可微的 $n$ 次齐次函数满足关系式:
+    若函数 $f(x,y,z)$ 满足 $f(tx,ty,tz)=t^nf(x,y,z)$, 则称它为 $n$ 次齐次函数, 试证可微的 $n$ 次齐次函数满足关系式:
     $$x\frac{\partial f}{\partial x}+y\frac{\partial f}{\partial y}+z\frac{\partial f}{\partial z}=nf.$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    由于 $f$ 可微，且 $f(tx,ty,tz)=t^nf(x,y,z)$，那么有 $$xf'_1+yf'_2+zf'_3=nt^{n-1}f(x,y,z)$$
-    令 $t=1$，即得等式.
+    由于 $f$ 可微, 且 $f(tx,ty,tz)=t^nf(x,y,z)$, 那么有 $$xf'_1+yf'_2+zf'_3=nt^{n-1}f(x,y,z)$$
+    令 $t=1$, 即得等式.
 \end{proof}
 \begin{example}
-    设 $u=f(z)$ ，其中 $z$ 为方程式$$z=x+y\varphi(z)$$所定义的变量 (为 $x$ 和 $y$ 的隐函数).
+    设 $u=f(z)$ , 其中 $z$ 为方程式$$z=x+y\varphi(z)$$所定义的变量 (为 $x$ 和 $y$ 的隐函数).
     证明 Lagrange 公式 $$\frac{\partial^nu}{\partial y^n}=\frac{\partial^{n-1}}{\partial x^{n-1}}\left[\varphi^n(z)\frac{\partial u}{\partial x}\right].$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    $u$ 是 $x,y$ 的复合函数，存在依赖关系如图 \ref{uzxyLagrange} 所示，\newline
+    $u$ 是 $x,y$ 的复合函数, 存在依赖关系如图 \ref{uzxyLagrange} 所示, \newline
     \begin{minipage}{0.78\linewidth}
-        由隐函数求导法则，可得$\displaystyle\frac{\partial z}{\partial y}=\frac{\varphi(z)}{1-y\varphi'(z)},~\frac{\partial z}{\partial x}=\frac{1}{1-y\varphi'(z)}$，
-        用数学归纳法，当 $n=1$ 时，
+        由隐函数求导法则, 可得$\displaystyle\frac{\partial z}{\partial y}=\frac{\varphi(z)}{1-y\varphi'(z)},~\frac{\partial z}{\partial x}=\frac{1}{1-y\varphi'(z)}$, 
+        用数学归纳法, 当 $n=1$ 时, 
         $$\displaystyle\frac{\partial u}{\partial y}=f'(z)\cdot\frac{\partial z}{\partial y}=\frac{f'(z)\varphi(z)}{1-y\varphi'(z)}$$
-        同理可得，$\displaystyle\frac{\partial u}{\partial x}=\frac{f'(z)}{1-y\varphi'(z)}$，所以有 $\displaystyle\frac{\partial u}{\partial y}=\varphi(z)\frac{\partial u}{\partial x}$，
-        这就是待证式当 $n=1$ 时的情况. 现假设当 $n-1$ 时等式成立，来证明对 $n$ 的情况也成立. 事实上，
+        同理可得, $\displaystyle\frac{\partial u}{\partial x}=\frac{f'(z)}{1-y\varphi'(z)}$, 所以有 $\displaystyle\frac{\partial u}{\partial y}=\varphi(z)\frac{\partial u}{\partial x}$, 
+        这就是待证式当 $n=1$ 时的情况. 现假设当 $n-1$ 时等式成立, 来证明对 $n$ 的情况也成立. 事实上, 
         \begin{flalign*}
             I & =\frac{\partial^nu}{\partial y^n}=\frac{\partial }{\partial y}\left(\frac{\partial^{n-1}u}{\partial y^{n-1}}\right)=\frac{\partial }{\partial y}\frac{\partial^{n-2}}{\partial x^{n-2}}\left[\varphi^{n-1}(z)\frac{\partial u}{\partial x}\right]=\frac{\partial^{n-2}}{\partial x^{n-2}}\frac{\partial}{\partial y}\left[\varphi^{n-1}(z)\frac{\partial u}{\partial x}\right] \\
               & =\frac{\partial^{n-2}}{\partial x^{n-2}}\left[(n-1)\varphi^{n-2}(z)\cdot\varphi'(z)\frac{\partial z}{\partial y}\frac{\partial u}{\partial x}+\varphi^{n-1}(z)\frac{\partial^2 u}{\partial x\partial y}\right]
@@ -723,8 +723,8 @@
         \begin{flalign*}
             J=\frac{\partial^{n-1}}{\partial x^{n-1}}\left[\varphi^{n-1}(z)\frac{\partial u}{\partial y}\right]=\frac{\partial^{n-2}}{\partial x^{n-2}}\left[(n-1)\varphi^{n-2}(z)\varphi'(z)\frac{\partial z}{\partial x}\frac{\partial u}{\partial y}+\varphi^{n-1}(z)\frac{\partial^2u}{\partial x\partial y}\right]
         \end{flalign*}
-        由于 $z'_y=\varphi(z)z'_x$ 及 $\displaystyle\frac{\partial u}{\partial y}=\varphi(z)\frac{\partial u}{\partial x}$，有 $\displaystyle\frac{\partial z}{\partial y}\frac{\partial u}{\partial x}=\frac{\partial z}{\partial x}\frac{\partial u}{\partial y}$，
-        故 $I=J$，等式成立.
+        由于 $z'_y=\varphi(z)z'_x$ 及 $\displaystyle\frac{\partial u}{\partial y}=\varphi(z)\frac{\partial u}{\partial x}$, 有 $\displaystyle\frac{\partial z}{\partial y}\frac{\partial u}{\partial x}=\frac{\partial z}{\partial x}\frac{\partial u}{\partial y}$, 
+        故 $I=J$, 等式成立.
     \end{minipage}\hfill
     \begin{minipage}{0.18\linewidth}
         \begin{figure}[H]
@@ -737,10 +737,10 @@
 \end{proof}
 
 \begin{example}
-    若 $u=\dfrac{x+y}{x-y}$，求 $\displaystyle\dfrac{\partial^{m+n}u}{\partial x^m\partial y^n}\biggl |_{(2,1)}.$
+    若 $u=\dfrac{x+y}{x-y}$, 求 $\displaystyle\dfrac{\partial^{m+n}u}{\partial x^m\partial y^n}\biggl |_{(2,1)}.$
 \end{example}
 \begin{solution}
-    因为 $u=1+\dfrac{2y}{x-y}$，所以
+    因为 $u=1+\dfrac{2y}{x-y}$, 所以
     \begin{flalign*}
         \pdv[m]{u}{x}=(-1)^m\dfrac{m!2y}{(x-y)^{m+1}}=-2m!\qty[\dfrac{1}{(y-x)^m}+\dfrac{x}{(y-x)^{m+1}}]
     \end{flalign*}
@@ -761,23 +761,23 @@
 
 \begin{example}
     已知可微函数 $f(u,v)$ 满足 $$\pdv{f(u,v)}{u}-\pdv{f(u,v)}{v}=2(u-v)\mathrm{e}^{-(u+v)}$$
-    且 $f(u,0)=u^2\mathrm{e}^{-u}$，
+    且 $f(u,0)=u^2\mathrm{e}^{-u}$, 
     \begin{enumerate}[label=(\arabic{*})]
-        \item 记 $g(x,y)=f(x,y-x)$，求 $\displaystyle\pdv{g(x,y)}{x}$;
+        \item 记 $g(x,y)=f(x,y-x)$, 求 $\displaystyle\pdv{g(x,y)}{x}$;
         \item 求 $f(u,v)$ 的表达式.
     \end{enumerate}
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 由题意，$\displaystyle\pdv{g(x,y)}{x}=\pdv{f(x,y-x)}{x}=f'_u-f'_v=2(u-v)\mathrm{e}^{-(u+v)}=2(2x-y)\mathrm{e}^{-y}$
-        \item 由 (1) 可知，$\displaystyle f(x,y-x)=g(x,y)=\int 2(2x-y)\mathrm{e}^{-y}\dd x+\varphi(y)=\dfrac{1}{2}(2x-y)^2\mathrm{e}^{-y}+\varphi(y)$，令 $x=y=u$，得
+        \item 由题意, $\displaystyle\pdv{g(x,y)}{x}=\pdv{f(x,y-x)}{x}=f'_u-f'_v=2(u-v)\mathrm{e}^{-(u+v)}=2(2x-y)\mathrm{e}^{-y}$
+        \item 由 (1) 可知, $\displaystyle f(x,y-x)=g(x,y)=\int 2(2x-y)\mathrm{e}^{-y}\dd x+\varphi(y)=\dfrac{1}{2}(2x-y)^2\mathrm{e}^{-y}+\varphi(y)$, 令 $x=y=u$, 得
               $$f(u,0)=\dfrac{1}{2}u^2\mathrm{e}^{-y}+\varphi(u)=u^2\mathrm{e}^{-u}$$
-              于是 $\varphi(u)=\dfrac{1}{2}u^2\mathrm{e}^{-u}$，再令 $x=u,y-x=v$，那么 $f(u,v)=\qty(u^2+v^2)\mathrm{e}^{-(u+v)}.$
+              于是 $\varphi(u)=\dfrac{1}{2}u^2\mathrm{e}^{-u}$, 再令 $x=u,y-x=v$, 那么 $f(u,v)=\qty(u^2+v^2)\mathrm{e}^{-(u+v)}.$
     \end{enumerate}
 \end{solution}
 
 \begin{example}
-    设函数 $u=u(x,y)$ 具有连续的二阶偏导数，并且满足等式 $$\pdv[2]{u}{x}-\pdv[2]{u}{y}=0$$
+    设函数 $u=u(x,y)$ 具有连续的二阶偏导数, 并且满足等式 $$\pdv[2]{u}{x}-\pdv[2]{u}{y}=0$$
     \begin{enumerate}[label=(\arabic{*})]
         \item 证明: 用变量代换 $\xi=x-y,~\eta=x+y$ 可将上式转化为 $\displaystyle\pdv{u}{\xi}{\eta}=0$;
         \item 求满足 $\displaystyle u(x,2x)=x,~\eval{\pdv{u}{x}}_{(x,2x)}=x^2$ 和 $\displaystyle\pdv[2]{u}{x}-\pdv[2]{u}{y}=0$ 的函数 $u(x,y).$
@@ -785,11 +785,11 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item $\displaystyle\pdv{u}{x}=\pdv{u}{\xi}\cdot\pdv{\xi}{x}+\pdv{u}{\eta}\cdot\pdv{\eta}{x}=\pdv{u}{\xi}+\pdv{u}{\eta}$，于是 $\displaystyle\pdv[2]{u}{x}=\pdv[2]{u}{\xi}+2\pdv{u}{\xi}{\eta}+\pdv[2]{u}{\eta}$，同理可得
+        \item $\displaystyle\pdv{u}{x}=\pdv{u}{\xi}\cdot\pdv{\xi}{x}+\pdv{u}{\eta}\cdot\pdv{\eta}{x}=\pdv{u}{\xi}+\pdv{u}{\eta}$, 于是 $\displaystyle\pdv[2]{u}{x}=\pdv[2]{u}{\xi}+2\pdv{u}{\xi}{\eta}+\pdv[2]{u}{\eta}$, 同理可得
               $$\pdv[2]{u}{y}=\pdv[2]{u}{\xi}-2\pdv{u}{\xi}{\eta}+\pdv[2]{u}{\eta}$$
-              又 $\displaystyle \pdv[2]{u}{x}-\pdv[2]{u}{y}=0$，故得证 $\displaystyle\pdv{u}{\xi}{\eta}=0.$
-        \item 由 $\displaystyle\pdv{u}{\xi}{\eta}=0$ 两边对 $\eta$ 积分得 $\displaystyle\pdv{y}{\xi}=f(\xi)$，两边再对 $\xi$ 积分得 $$u(\xi,\eta)=\int f(\xi) \dd \xi+g(\eta)=F(\xi)+g(\eta)$$
-              又 $\xi=x-y,~\eta=x+y$，于是 $u(x,y)=F(x-y)+g(x+y)$，则 $u(x,2x)=F(-x)+g(3x)=x$，
+              又 $\displaystyle \pdv[2]{u}{x}-\pdv[2]{u}{y}=0$, 故得证 $\displaystyle\pdv{u}{\xi}{\eta}=0.$
+        \item 由 $\displaystyle\pdv{u}{\xi}{\eta}=0$ 两边对 $\eta$ 积分得 $\displaystyle\pdv{y}{\xi}=f(\xi)$, 两边再对 $\xi$ 积分得 $$u(\xi,\eta)=\int f(\xi) \dd \xi+g(\eta)=F(\xi)+g(\eta)$$
+              又 $\xi=x-y,~\eta=x+y$, 于是 $u(x,y)=F(x-y)+g(x+y)$, 则 $u(x,2x)=F(-x)+g(3x)=x$, 
               $$\eval{\pdv{u}{x}}_{(x,2x)}=F'(-x)+g'(3x)=x^2\Rightarrow -F(-x)+\dfrac{1}{3}g(3x)=\dfrac{1}{3}x^3+C$$
               于是 $\left\{\begin{matrix}
                       F(-x)  & + & g(3x)             & = & x                 \\[6pt]
@@ -797,7 +797,7 @@
                   \end{matrix}\right.\Rightarrow \left\{\begin{matrix}
                       F(x) & = & -\dfrac{1}{4}x & + & \dfrac{1}{4}x^3   & + & C \\[6pt]
                       g(x) & = & \dfrac{1}{4}x  & + & \dfrac{1}{108}x^3 & + & C
-                  \end{matrix}\right.$，故
+                  \end{matrix}\right.$, 故
               $$u(x,y)=F(x-y)+g(x+y)=\dfrac{(x+y)^3}{108}+\dfrac{(x-y)}{4}+\dfrac{1}{2}y.$$
     \end{enumerate}
 \end{solution}

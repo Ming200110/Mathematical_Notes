@@ -1,10 +1,10 @@
 \section{极限典型问题}
 
-这一节讨论与极限相关联的三类典型问题，即极限的存在性问题、极限的局部逆问题和无穷小量及其阶的比较.
+这一节讨论与极限相关联的三类典型问题, 即极限的存在性问题、极限的局部逆问题和无穷小量及其阶的比较.
 
 \subsection{极限的存在性问题}
 
-讨论极限的存在性，是高等数学中既十分典型又经常遇到的问题，在研究非初等函数的连续性与可导性，
+讨论极限的存在性, 是高等数学中既十分典型又经常遇到的问题, 在研究非初等函数的连续性与可导性, 
 往往归结为这类问题.
 
 \begin{example}
@@ -15,23 +15,23 @@
     求极限 $\displaystyle\lim_{x\to0}f(x).$
 \end{example}
 \begin{solution}
-    利用 L'Hospital 法则易求得在 $x=0$ 处的左右极限值，
+    利用 L'Hospital 法则易求得在 $x=0$ 处的左右极限值, 
     $$\lim_{x\to0^-}f(x)=\lim_{x\to0^-}\dfrac{\displaystyle\int_{0}^{x^2}\sqrt{1+\tan^2t}\dd t}{2x^2} \xlongequal{L'}\lim_{x\to0^-}\dfrac{2x\cdot\sqrt{1+\tan^2x^2}}{4x}=\dfrac{1}{2}$$
     并且 $$\lim_{xto0^+}f(x)=\lim_{x\to0^+}\dfrac{\sqrt{1+x^2}-1}{\ln\qty(1+x^2)}=\dfrac{1}{2}$$
-    由 $f(0^-)=f(0^+)=\dfrac{1}{2}$，故 $\displaystyle \lim_{x\to0}f(x)=\dfrac{1}{2}.$
+    由 $f(0^-)=f(0^+)=\dfrac{1}{2}$, 故 $\displaystyle \lim_{x\to0}f(x)=\dfrac{1}{2}.$
 \end{solution}
 
 \subsection{极限的局部逆问题}
 
-如果已知函数的极限存在，但是在函数的表达式中含有一个 (或多个) 待定的参数，要求确定待定参数的值，
+如果已知函数的极限存在, 但是在函数的表达式中含有一个 (或多个) 待定的参数, 要求确定待定参数的值, 
 这就是所谓的函数极限的局部逆问题.
 
 % \begin{example}
-%     试确定常数 $a,b,c$ 的值，使 $\displaystyle\lim_{x\to0}\dfrac{ax-\sin x}{\displaystyle\int_{b}^{x}\dfrac{\ln\qty(1+t^3)}{t}\dd t}=c\neq0.$
+%     试确定常数 $a,b,c$ 的值, 使 $\displaystyle\lim_{x\to0}\dfrac{ax-\sin x}{\displaystyle\int_{b}^{x}\dfrac{\ln\qty(1+t^3)}{t}\dd t}=c\neq0.$
 % \end{example}
 
 \begin{example}[2018 数二]
-    若 $\displaystyle\lim_{x\to0}\qty(\e^x+ax^2+bx)^{x^{-2}}=1$，则
+    若 $\displaystyle\lim_{x\to0}\qty(\e^x+ax^2+bx)^{x^{-2}}=1$, 则
     \begin{tasks}(4)
         \task $a=\dfrac{1}{2},~b=-1$
         \task $a=-\dfrac{1}{2},~b=-1$
@@ -40,8 +40,8 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    由题设条件 $\displaystyle\lim_{x\to0}\qty(\e^x+ax^2+bx)^{x^{-2}}=\exp\lim_{x\to0}\dfrac{1}{x^2}\ln\qty(\e^x+ax^2+bx)=1$，
-    于是有 $\displaystyle\lim_{x\to0}\dfrac{\ln\qty(\e^x+ax^2+bx)}{x^2}=0$，即
+    由题设条件 $\displaystyle\lim_{x\to0}\qty(\e^x+ax^2+bx)^{x^{-2}}=\exp\lim_{x\to0}\dfrac{1}{x^2}\ln\qty(\e^x+ax^2+bx)=1$, 
+    于是有 $\displaystyle\lim_{x\to0}\dfrac{\ln\qty(\e^x+ax^2+bx)}{x^2}=0$, 即
     \begin{flalign*}
         \lim_{x\to0}\dfrac{\ln\qty(\e^x+ax^2+bx)}{x^2} & =\lim_{x\to0}\dfrac{\e^x+ax^2+bx+1}{x^2}=\lim_{x\to0}\dfrac{1+x+\dfrac{1}{2}x^2+ax^2+bx+1+o\qty(x^2)}{x^2} \\
                                                        & =\lim_{x\to0}\qty[\qty(\dfrac{1}{2}+a)+\dfrac{b+1}{x}+\dfrac{2}{x^2}]=0\Rightarrow\begin{cases}
@@ -52,31 +52,31 @@
 \end{solution}
 
 \begin{example}[2018 数一]
-    若 $\displaystyle\lim_{x\to0}\qty(\dfrac{1-\tan x}{1+\tan x})^{\frac{1}{\sin kx}}=\e$，求 $k.$
+    若 $\displaystyle\lim_{x\to0}\qty(\dfrac{1-\tan x}{1+\tan x})^{\frac{1}{\sin kx}}=\e$, 求 $k.$
 \end{example}
 \begin{solution}
-    $\displaystyle \exp\lim_{x\to0}\dfrac{1}{\sin kx}\ln\qty(\dfrac{1-\tan x}{1+\tan x})=\exp\lim_{x\to0}\dfrac{\ln(1-\tan x)-\ln(1+\tan x)}{\sin kx}=\exp\lim_{x\to0}\dfrac{-2\tan x}{\xi_x \cdot \sin kx}=\e$，
+    $\displaystyle \exp\lim_{x\to0}\dfrac{1}{\sin kx}\ln\qty(\dfrac{1-\tan x}{1+\tan x})=\exp\lim_{x\to0}\dfrac{\ln(1-\tan x)-\ln(1+\tan x)}{\sin kx}=\exp\lim_{x\to0}\dfrac{-2\tan x}{\xi_x \cdot \sin kx}=\e$, 
     于是 $$\lim_{x\to0}\dfrac{-2\tan x}{\xi_x\cdot\sin kx}=\lim_{x\to0}\dfrac{-2x}{\xi_xk}=1\Rightarrow k=-2$$ 
     其中 $\xi_x\to1~ (x\to0).$
 \end{solution}
 
 \begin{example}
-    试确定常数 $A,B,C$，使下式当 $x\to0 $ 时成立:
+    试确定常数 $A,B,C$, 使下式当 $x\to0 $ 时成立:
     $$\dfrac{\e^{\sin x}}{\sin x}=\dfrac{1+Bx+Cx^2}{x+Ax^2}+o\qty(x^2).$$
 \end{example}
 \begin{solution}
-    将所给等式两边同时乘以 $(1+Ax)\sin x$，并注意到 $x\to0$ 时，$(1+Ax)\sin x\cdot o\qty(x^2)=o\qty(x^3)$，得
+    将所给等式两边同时乘以 $(1+Ax)\sin x$, 并注意到 $x\to0$ 时, $(1+Ax)\sin x\cdot o\qty(x^2)=o\qty(x^3)$, 得
     $$(1+Ax)\e^{\sin x}=\dfrac{\sin x}{x}\qty(1+Bx+Cx^2)+o\qty(x^3)$$
-    将 $\e^{\sin x},\dfrac{\sin x}{x}$ 分别展开到 $x$ 的三阶，于是有
+    将 $\e^{\sin x},\dfrac{\sin x}{x}$ 分别展开到 $x$ 的三阶, 于是有
     $$\e^{\sin x}=1+x+\dfrac{1}{2}x^2+o\qty(x^2),~\dfrac{\sin x}{x}=1-\dfrac{1}{6}x^2+o\qty(x^2)$$
-    代入上式，得
+    代入上式, 得
     \begin{flalign*}
         \qty(1+x+\dfrac{1}{2}x^2)(1+Ax)=\qty(1-\dfrac{1}{6}x^2)\qty(1+Bx+Cx^2)+o\qty(x^3) \\
         (A+1-B)x+\qty(A-C+\dfrac{2}{3})x^2+\qty(\dfrac{A}{2}+\dfrac{B}{6})x^3=o\qty(x^3)
     \end{flalign*}
-    欲使上式成立，必须有 $\begin{cases}
+    欲使上式成立, 必须有 $\begin{cases}
             A+1-B=0 \\[6pt]A-C+\dfrac{1}{3}=0\\[6pt]\dfrac{A}{2}+\dfrac{B}{6}=0
-        \end{cases}$，联立解得 $A=-\dfrac{1}{4},~B=\dfrac{3}{4},~C=\dfrac{5}{12}.$
+        \end{cases}$, 联立解得 $A=-\dfrac{1}{4},~B=\dfrac{3}{4},~C=\dfrac{5}{12}.$
 \end{solution}
 
 \subsection{无穷小量及其阶的比较}
@@ -84,7 +84,7 @@
 有关无穷小量的概念可参考定义 \ref{infinitesimalDefinitions}.
 
 \begin{example}[2019 数一]
-    当 $x\to0$ 时，若 $x-\tan x$ 与 $x^{k}$ 是同阶无穷小，则 $k$ 等于 
+    当 $x\to0$ 时, 若 $x-\tan x$ 与 $x^{k}$ 是同阶无穷小, 则 $k$ 等于 
     \begin{tasks}(4)
         \task 1
         \task 2
@@ -93,11 +93,11 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    由于当 $x\to0$ 时，$x-\tan x\sim-\dfrac{1}{3}x^3$，则 $\displaystyle\lim_{x\to0}\dfrac{x-\tan x}{x^3}=-\dfrac{1}{3}$，所以 $k=3$，选 C.
+    由于当 $x\to0$ 时, $x-\tan x\sim-\dfrac{1}{3}x^3$, 则 $\displaystyle\lim_{x\to0}\dfrac{x-\tan x}{x^3}=-\dfrac{1}{3}$, 所以 $k=3$, 选 C.
 \end{solution}
 
 \begin{example}
-    设 $x\to0$ 时，$\e ^{x\cos x^2}-\e ^{x}$ 与 $x^n$ 是同阶无穷小，则 $n $ 为
+    设 $x\to0$ 时, $\e ^{x\cos x^2}-\e ^{x}$ 与 $x^n$ 是同阶无穷小, 则 $n $ 为
     \begin{tasks}(4)
         \task 5
         \task 4
@@ -106,11 +106,11 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    因为 $\e ^{x\cos x^2}-\e ^{x}=\e^x\qty[\e ^{x\qty(\cos x^2-1)}-1]\sim x\qty(\cos x^2-1)\sim -\dfrac{1}{2}x^5$，所以 $n=5$，故选 A
+    因为 $\e ^{x\cos x^2}-\e ^{x}=\e^x\qty[\e ^{x\qty(\cos x^2-1)}-1]\sim x\qty(\cos x^2-1)\sim -\dfrac{1}{2}x^5$, 所以 $n=5$, 故选 A
 \end{solution}
 
 \begin{example}[2001 数二]
-    设当 $x\to0 $ 时，$(1-\cos x)\ln\qty(1+x^2)$ 是比 $x\sin x^n$ 高阶的无穷小，而 $x\sin x^n$ 是比 $\e ^{x^2}-1$ 高阶的无穷小，则正整数 $n$ 
+    设当 $x\to0 $ 时, $(1-\cos x)\ln\qty(1+x^2)$ 是比 $x\sin x^n$ 高阶的无穷小, 而 $x\sin x^n$ 是比 $\e ^{x^2}-1$ 高阶的无穷小, 则正整数 $n$ 
     \begin{tasks}(4)
         \task 1
         \task 2
@@ -119,5 +119,5 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    因为 $(1-\cos x)\ln\qty(1+x^2)\sim\dfrac{1}{2}x^4,~x\sin x^n\sim x^{n+1},~\e ^{x^2}-1\sim x^2$，由题意知 $4>n+1>2$，解得 $n=2$，故选 B.
+    因为 $(1-\cos x)\ln\qty(1+x^2)\sim\dfrac{1}{2}x^4,~x\sin x^n\sim x^{n+1},~\e ^{x^2}-1\sim x^2$, 由题意知 $4>n+1>2$, 解得 $n=2$, 故选 B.
 \end{solution}

@@ -2,8 +2,8 @@
 
 高阶微分方程是指涉及一个未知函数及其多阶导数的微分方程. 通常形式为:
 $$F\qty(x,y,y',y'',\cdots,y^{(n)})=0$$
-其中 $y$ 是未知函数，$y^{(i)}~~(i=0,1,\cdots,n)$ 是 $y$ 的 $i$ 阶导数，
-$F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数，解高阶微分方程需要使用微积分知识、积分技巧以及一些特定的方法，如常数变易法、特征方程法等.
+其中 $y$ 是未知函数, $y^{(i)}~~(i=0,1,\cdots,n)$ 是 $y$ 的 $i$ 阶导数, 
+$F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要使用微积分知识、积分技巧以及一些特定的方法, 如常数变易法、特征方程法等.
 
 \subsection{常系数齐次线性微分方程}
 
@@ -16,19 +16,19 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数，解高阶微分方程需�
         \tag{1}
     \end{equation*}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 特征方程有两个相异实根 $ r_{1} \neq r_{2}$，则方程 (1) 的通解为 $ Y=C_{1} \e^{r_{1} x}+C_{2} \e^{r_{2} x} $;
-        \item 特征方程有两个相等实根 $ r_{1}=r_{2}=r $，则方程 (1) 的通解为 $ Y=\left(C_{1}+C_{2} x\right) \e^{r x} $;
-        \item 特征方程有一对共轭复根 $ r_{1,2}=\alpha \pm \mathrm{i} \beta $，则方程 (1) 的通解为
+        \item 特征方程有两个相异实根 $ r_{1} \neq r_{2}$, 则方程 (1) 的通解为 $ Y=C_{1} \e^{r_{1} x}+C_{2} \e^{r_{2} x} $;
+        \item 特征方程有两个相等实根 $ r_{1}=r_{2}=r $, 则方程 (1) 的通解为 $ Y=\left(C_{1}+C_{2} x\right) \e^{r x} $;
+        \item 特征方程有一对共轭复根 $ r_{1,2}=\alpha \pm \mathrm{i} \beta $, 则方程 (1) 的通解为
               $$Y=\e^{\alpha x}\left(C_{1} \cos \beta x+\right.   \left.C_{2} \sin \beta x\right) $$
     \end{enumerate}
     \index{二阶常系数线性齐次微分方程的通解结构}
 \end{theorem}
 
 \begin{example}[第十三届数学竞赛决赛]
-    求区间 $[0,1]$ 上的连续函数 $f(x)$，使之满足 $$f(x)=1+(1-x)\int_{0}^{x}yf(y)\dd y+x\int_{x}^{1}(1-y)f(y)\dd y.$$
+    求区间 $[0,1]$ 上的连续函数 $f(x)$, 使之满足 $$f(x)=1+(1-x)\int_{0}^{x}yf(y)\dd y+x\int_{x}^{1}(1-y)f(y)\dd y.$$
 \end{example}
 \begin{solution}
-    分别令 $x=0,1$，代入关系式，得 $f(0)=f(1)=1$，并对关系式求导，有
+    分别令 $x=0,1$, 代入关系式, 得 $f(0)=f(1)=1$, 并对关系式求导, 有
     \begin{flalign*}
         f'(x)=-\int_{0}^{x}yf(y)\dd y+\int_{x}^{1}(1-y)f(y)\dd y
     \end{flalign*}
@@ -36,8 +36,8 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数，解高阶微分方程需�
     \begin{flalign*}
         f''(x)+f(x)=0
     \end{flalign*}
-    该常系数齐次线性微分方程的特征方程为 $r^2+1=0$，特征根为 $r=\pm i$，故通解为 $$f(x)=C_1\cos x+C_2\sin x$$
-    代入初值 $f(0)=f(1)=1$，得 $$C_1=1,~C_2=\dfrac{1-\cos 1}{\sin 1}=\tan\dfrac{1}{2}$$
+    该常系数齐次线性微分方程的特征方程为 $r^2+1=0$, 特征根为 $r=\pm i$, 故通解为 $$f(x)=C_1\cos x+C_2\sin x$$
+    代入初值 $f(0)=f(1)=1$, 得 $$C_1=1,~C_2=\dfrac{1-\cos 1}{\sin 1}=\tan\dfrac{1}{2}$$
     故所求函数为 $$f(x)=\cos x+\tan\dfrac{1}{2}\sin x.$$
 \end{solution}
 
@@ -49,20 +49,20 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数，解高阶微分方程需�
         y^{(n)}+p_{1} y^{(n-1)}+p_{2} y^{(n-2)}+\cdots+p_{n-1} y^{\prime}+p_{n} y=0
         \tag{2}
     \end{equation*}
-    其中 $ p_{1}, p_{2}, \cdots, p_{n} $ 是常数，代数方程
+    其中 $ p_{1}, p_{2}, \cdots, p_{n} $ 是常数, 代数方程
     $$r^{n}+p_{1} r^{n-1}+p_{2} r^{n-2}+\cdots+p_{n-1} r+p_{n}=0$$
-    称为微分方程 (2) 的特征方程，特征方程的根叫作微分方程 (2) 的特征根.
+    称为微分方程 (2) 的特征方程, 特征方程的根叫作微分方程 (2) 的特征根.
     \begin{enumerate}[label=(\arabic{*})]
-        \item 如果 $ r_{1} $ 是特征方程的单根，则
+        \item 如果 $ r_{1} $ 是特征方程的单根, 则
               $$y=C \e^{r_{1} x}$$
               是微分方程 (2) 的解;
-        \item 如果特征方程有一对共轭复根 $ r_{1}=\alpha+i \beta, r_{2}=\alpha-i \beta$，则
+        \item 如果特征方程有一对共轭复根 $ r_{1}=\alpha+i \beta, r_{2}=\alpha-i \beta$, 则
               $$y=\e^{\alpha x}\left(C_{1} \cos \beta x+C_{2} \sin \beta x\right)$$
               是微分方程 (2) 的解;
-        \item 如果 $ r_{1} $ 是特征方程的 $ k $ 重根，则
+        \item 如果 $ r_{1} $ 是特征方程的 $ k $ 重根, 则
               $$y=\left(C_{1}+C_{2} x+\cdots+C_{k} x^{k-1}\right) \e^{r_{1} x}$$
               是微分方程 (2) 的解;
-        \item 如果 $ r_{1}=\alpha+i \beta, r_{2}=\alpha-i \beta $ 都是特征方程的 $ k $ 重根，则
+        \item 如果 $ r_{1}=\alpha+i \beta, r_{2}=\alpha-i \beta $ 都是特征方程的 $ k $ 重根, 则
               $$y=\e^{\alpha x}\left[\left(C_{1}+C_{2} x+\cdots+C_{k} x^{k-1}\right) \cos \beta x+\left(D_{1}+D_{2} x+\cdots+D_{k} x^{k-1}\right) \sin \beta x\right]$$
               是微分方程 (2) 的解.
     \end{enumerate}
@@ -74,21 +74,21 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数，解高阶微分方程需�
 \subsubsection{二阶常系数非齐次线性微分方程的通解结构}
 
 % \begin{theorem}
-%     一般地，设线性无关的函数 $y_1,~y_2,~y_3$ 都是以下二阶非齐次线性微分方程的解，则
+%     一般地, 设线性无关的函数 $y_1,~y_2,~y_3$ 都是以下二阶非齐次线性微分方程的解, 则
 %     $$y''(x)+p(x)y'+q(x)y=f(x)$$
 %     \begin{enumerate}[label=(\arabic{*})]
-%         \item $y_1-y_2,~y_1-y_3,~y_2-y_3$ 都是 $y''+p(x)y'+q(x)y=0$ 的解，
+%         \item $y_1-y_2,~y_1-y_3,~y_2-y_3$ 都是 $y''+p(x)y'+q(x)y=0$ 的解, 
 %               且 $y_1-y_3$ 与 $y_2-y_3$ 线性无关;
 %         \item 非齐次线性微分方程的通解为 $$y=C_1(y_1-y_3)+C_2(y_2-y_3)+y_3=C_1y_1+C_2y_2+(1-C_1-C_2)y_3.$$
 %     \end{enumerate}
 % \end{theorem}
 
 % \begin{example}
-%     已知 $y_1=x,~y_2=x+\sin x,~y_3=\e ^x+x$ 为某二阶非齐次线性微分方程的三个特解，求该微分方程，并求其通解.
+%     已知 $y_1=x,~y_2=x+\sin x,~y_3=\e ^x+x$ 为某二阶非齐次线性微分方程的三个特解, 求该微分方程, 并求其通解.
 % \end{example}
 % \begin{solution}
-%     因为 $\dfrac{y_2-y_1}{y_3-y_1}=\dfrac{\sin x}{\e ^x}\neq C$，所以 $y_2-y_1$ 与 $y_3-y_2$ 线性无关，从而得所求微分方程的通解为 $y=C_1\sin x+C_2\e ^x+x$，
-%     分别求一、二阶导数，并解出 $C_1,~C_2$，
+%     因为 $\dfrac{y_2-y_1}{y_3-y_1}=\dfrac{\sin x}{\e ^x}\neq C$, 所以 $y_2-y_1$ 与 $y_3-y_2$ 线性无关, 从而得所求微分方程的通解为 $y=C_1\sin x+C_2\e ^x+x$, 
+%     分别求一、二阶导数, 并解出 $C_1,~C_2$, 
 %     $$\left\{\begin{matrix}
 %             y'  & = & C_1\cos x  & + & 7C_2\e ^x & + & 1 \\
 %             y'' & = & -C_1\sin x & + & C_2\e ^x
@@ -98,18 +98,18 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数，解高阶微分方程需�
 % \end{solution}
 
 % \begin{example}
-%     设二阶线性微分方程 $y''+p(x)y'+q(x)y=f(x)$ 有三个特解 $y_1=\e ^x,~y_2=\e ^x+\e ^{\frac{x}{2}},~y_3=\e ^x+\e ^{-x}$，
-%     试求该微分方程，并求其通解.
+%     设二阶线性微分方程 $y''+p(x)y'+q(x)y=f(x)$ 有三个特解 $y_1=\e ^x,~y_2=\e ^x+\e ^{\frac{x}{2}},~y_3=\e ^x+\e ^{-x}$, 
+%     试求该微分方程, 并求其通解.
 % \end{example}
 
 \begin{example}[1997 数二]
     设某个二阶常系数非齐次线性微分方程有三个特解:
     $$y_1=x\e ^x+\e ^{2x},~y_2=x\e ^x+\e ^{-x},~y_3=x\e ^x+\e ^{2x}-\e ^{-x}$$
-    求该微分方程，并给出其通解.
+    求该微分方程, 并给出其通解.
 \end{example}
 \begin{solution}
-    因为 $\dfrac{y_1-y_3}{(y_1-y_2)+(y_1-y_3)}=\dfrac{\e ^{-x}}{\e ^{2x}}\neq C$，于是该方程的通解为 $$y=C_1\e ^{-x}+C_2\e ^{2x}+x\e ^x$$
-    分别求一、二阶导数，有
+    因为 $\dfrac{y_1-y_3}{(y_1-y_2)+(y_1-y_3)}=\dfrac{\e ^{-x}}{\e ^{2x}}\neq C$, 于是该方程的通解为 $$y=C_1\e ^{-x}+C_2\e ^{2x}+x\e ^x$$
+    分别求一、二阶导数, 有
     $$y'=-C_1\e ^{-x}+2C_2\e ^{2x}+\e ^x(x+1),~y''=C_1\e ^{-x}+4C_2\e ^{2x}+\e ^x(x+2)$$
     于是 $$\mqty(-\e ^{-x}&2\e ^{2x}\\ \e ^{-x}&4\e ^{2x} )\mqty(C_1\\C_2)=\mqty(y'-\e ^x(x+1)\\y''-\e ^x(x+2))$$
     即 \begin{flalign*}
@@ -121,27 +121,27 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数，解高阶微分方程需�
 \subsubsection{微分算子法}
 
 微分算子法是在求解非齐次线性微分方程 $$y^{(n)}+a_1y^{(n-1)}+\cdots+a_{n-1}y'+a_ny=f(x)$$
-的一个特解时常采用的一种方法. 具体地说，在求解常系数微分方程上述方程时，可以先求解其特征方程，
-得到相应齐次方程的通解，再求出非齐次方程的一个特解即可.
+的一个特解时常采用的一种方法. 具体地说, 在求解常系数微分方程上述方程时, 可以先求解其特征方程, 
+得到相应齐次方程的通解, 再求出非齐次方程的一个特解即可.
 
 \begin{definition}[微分算子]
-    为了求非齐次方程的一个特解，引入\textit{微分算子}:
+    为了求非齐次方程的一个特解, 引入\textit{微分算子}:
     $$\mathrm{D}=\frac{\mathrm{d}}{\mathrm{d}x},~\mathrm{D}^2=\frac{\mathrm{d^2}}{\mathrm{d}x^2},~\cdots,~\mathrm{D}^n=\frac{\mathrm{d}^n}{\mathrm{d}x^n}$$
     以及\textit{算子多项式} $$L(\mathrm{D})=\mathrm{D}^n+a_1\mathrm{D}^{n-1}+\cdots+a_{n-1}\mathrm{D}+a_n$$
-    这样一来，微分方程可以写成 $$L(\mathrm{D})y=f(x)$$
-    显然，如果记 $\displaystyle\frac{1}{\mathrm{D}}f(x)$ 为此方程的任一解，则
+    这样一来, 微分方程可以写成 $$L(\mathrm{D})y=f(x)$$
+    显然, 如果记 $\displaystyle\frac{1}{\mathrm{D}}f(x)$ 为此方程的任一解, 则
     $$L(\mathrm{D})\left(\frac{1}{L(\mathrm{D})}f(x)\right)=f(x)$$
-    因此，在形式上可以把 $\displaystyle\frac{1}{\mathrm{D}}f(x)$ 看成是 $L(\mathrm{D})$ 的逆算子.
+    因此, 在形式上可以把 $\displaystyle\frac{1}{\mathrm{D}}f(x)$ 看成是 $L(\mathrm{D})$ 的逆算子.
 \end{definition}
 
 \begin{theorem}
     $\displaystyle\frac{1}{\mathrm{D}}f(x)=\int f(x)\mathrm{d}x.$
 \end{theorem}
 \begin{theorem}
-    对于任意常数 $a$，$\displaystyle\frac{1}{\mathrm{D}-a}f(x)=\e ^{ax}\int\e ^{-ax}f(x)\mathrm{d}x.$
+    对于任意常数 $a$, $\displaystyle\frac{1}{\mathrm{D}-a}f(x)=\e ^{ax}\int\e ^{-ax}f(x)\mathrm{d}x.$
 \end{theorem}
 \begin{theorem}
-    对于任意常数 $\alpha$ 和 $\beta$，$\displaystyle\frac{1}{L(\mathrm{D})}(\alpha u(x)+\beta v(x))=\alpha\frac{1}{L(\mathrm{D})}u(x)+\beta\frac{1}{L(\mathrm{D})}v(x).$
+    对于任意常数 $\alpha$ 和 $\beta$, $\displaystyle\frac{1}{L(\mathrm{D})}(\alpha u(x)+\beta v(x))=\alpha\frac{1}{L(\mathrm{D})}u(x)+\beta\frac{1}{L(\mathrm{D})}v(x).$
 \end{theorem}
 \begin{theorem}
     $\displaystyle\frac{1}{L_1(\mathrm{D})L_2(\mathrm{D})}f(x)=\frac{1}{L_1(\mathrm{D})}\left(\frac{1}{L_2(\mathrm{D})}f(x)\right)=\frac{1}{L_2(\mathrm{D})}\left(\frac{1}{L_1(\mathrm{D})}f(x)\right).$
@@ -150,8 +150,8 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数，解高阶微分方程需�
 \begin{theorem}[算子特性]
     \begin{enumerate}[label=(\arabic{*})]
         \item $F(\mathrm{D})=\mathrm{D}^m,~\dfrac{1}{F(\mathrm{D})}f^{(m)}(x)=f(x)$;
-        \item $F(\mathrm{D})=\mathrm{D}-k$ 时，$\dfrac{1}{F(\mathrm{D})}\e^{bx}=\dfrac{e^{bx}}{b-k},~b\neq k$;
-        \item $F(\mathrm{D})=(\mathrm{D}-b)(\mathrm{D}-a)$ 时，$\dfrac{1}{F(\mathrm{D})}f(x)=\dfrac{1}{\mathrm{D}-b}\dfrac{1}{\mathrm{D}-a}f(x)$，当 $ab\neq0$ 时，$\dfrac{1}{\mathrm{D}-b}\dfrac{1}{\mathrm{D}-a}=\dfrac{1}{ab}$;
+        \item $F(\mathrm{D})=\mathrm{D}-k$ 时, $\dfrac{1}{F(\mathrm{D})}\e^{bx}=\dfrac{e^{bx}}{b-k},~b\neq k$;
+        \item $F(\mathrm{D})=(\mathrm{D}-b)(\mathrm{D}-a)$ 时, $\dfrac{1}{F(\mathrm{D})}f(x)=\dfrac{1}{\mathrm{D}-b}\dfrac{1}{\mathrm{D}-a}f(x)$, 当 $ab\neq0$ 时, $\dfrac{1}{\mathrm{D}-b}\dfrac{1}{\mathrm{D}-a}=\dfrac{1}{ab}$;
         \item $\dfrac{1}{F(\mathrm{D})}\e^{kx}=\dfrac{1}{F(k)}\e^{kx},~F(k)\neq0$;
         \item $\dfrac{1}{F(\mathrm{D})}u(x)\e^{kx}=\e^{kx}\dfrac{1}{F(\mathrm{D}+k)}u(x)$;
         \item $\dfrac{1}{F(\mathrm{D})}\qty[f_1(x)+f_2(x)]=\dfrac{1}{F(\mathrm{D})}f_1(x)+\dfrac{1}{F(\mathrm{D})}f_2(x)$;
@@ -164,10 +164,10 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数，解高阶微分方程需�
     \label{y3y2y2xex}求微分方程 $y''-3y'+2y=2x\e ^x$ 的通解.
 \end{example}
 \begin{solution}
-    记 $\displaystyle \mathrm{D}=\frac{\mathrm{d}}{\mathrm{d}x},~\mathrm{I}y=y$，则原方程可改写为 $\left(\mathrm{D}^2-3\mathrm{D}+2\mathrm{I}\right)y=2x\e ^x$，即 $(\mathrm{D}-\mathrm{I})(\mathrm{D}-2\mathrm{I})y=2x\e ^x$，
-    令 $(\mathrm{D}-2\mathrm{I})y=z(x)$，则有 $(\mathrm{D}-\mathrm{I})z(x)=2x\e ^x$，即 $\displaystyle \frac{\mathrm{d}z(x)}{\mathrm{d}x}-z(x)=2x\e ^x$，解得
+    记 $\displaystyle \mathrm{D}=\frac{\mathrm{d}}{\mathrm{d}x},~\mathrm{I}y=y$, 则原方程可改写为 $\left(\mathrm{D}^2-3\mathrm{D}+2\mathrm{I}\right)y=2x\e ^x$, 即 $(\mathrm{D}-\mathrm{I})(\mathrm{D}-2\mathrm{I})y=2x\e ^x$, 
+    令 $(\mathrm{D}-2\mathrm{I})y=z(x)$, 则有 $(\mathrm{D}-\mathrm{I})z(x)=2x\e ^x$, 即 $\displaystyle \frac{\mathrm{d}z(x)}{\mathrm{d}x}-z(x)=2x\e ^x$, 解得
     $$z(x)=\e ^{\int\mathrm{d}x}\left[\int 2x\e ^x\cdot \e ^{-\int \mathrm{d}x}+C_1\right]=\e ^x\left(x^2+C_1\right)$$
-    再由 $(\mathrm{D}-2\mathrm{I})y=z(x)$ 化为 $\displaystyle \frac{\mathrm{d}y}{\mathrm{d}x}-2y=\e ^x\left(x^2+C_1\right)$，故原方程的通解为
+    再由 $(\mathrm{D}-2\mathrm{I})y=z(x)$ 化为 $\displaystyle \frac{\mathrm{d}y}{\mathrm{d}x}-2y=\e ^x\left(x^2+C_1\right)$, 故原方程的通解为
     \begin{flalign*}
         y & =\e ^{\int \mathrm{d}x}\left[\int \e ^x\left(x^2+C_1\right)\cdot\e ^{-\int 2\mathrm{d}x}+C_2\right]=\e ^{2x}\left[\int \e ^{-x}\left(x^2+C_1\right)\mathrm{d}x+C_2\right] \\
           & =\e ^{2x}\left[(-x^2\e ^{-x}-2x\e ^{-x}-2\e ^{-x})-C_1\e ^{-x}+C_2\right]=\left(-x^2-2x-2-C_1\right)\e ^x+C_2\e ^{2x}
@@ -179,15 +179,15 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数，解高阶微分方程需�
     求微分方程 $y''+y'-2y=\dfrac{\e ^x}{1+\e ^x}.$
 \end{example}
 \begin{solution}
-    记 $\displaystyle \mathrm{D}=\dv{x}$，则原方程可改写为 $\qty(\mathrm{D}^2+\mathrm{D}-2)y=\dfrac{\e ^x}{1+\e ^x}$，即 $(\mathrm{D}+2)(\mathrm{D}-1)y=\dfrac{\e ^x}{1+\e ^x}$，
-    令 $z(x)=(\mathrm{D}-1)y$，则有 $(\mathrm{D}+2)z(x)=\dfrac{\e ^x}{1+\e ^x}$，即 $\displaystyle\dv{z(x)}{x}+2z=\dfrac{\e ^x}{1+\e ^x}$，解得
+    记 $\displaystyle \mathrm{D}=\dv{x}$, 则原方程可改写为 $\qty(\mathrm{D}^2+\mathrm{D}-2)y=\dfrac{\e ^x}{1+\e ^x}$, 即 $(\mathrm{D}+2)(\mathrm{D}-1)y=\dfrac{\e ^x}{1+\e ^x}$, 
+    令 $z(x)=(\mathrm{D}-1)y$, 则有 $(\mathrm{D}+2)z(x)=\dfrac{\e ^x}{1+\e ^x}$, 即 $\displaystyle\dv{z(x)}{x}+2z=\dfrac{\e ^x}{1+\e ^x}$, 解得
     $$z(x)=\e ^{-2\int\dd x}\qty[\int\dfrac{\e ^x}{1+\e ^x}\cdot \e ^{2\int\dd x}\dd x+C_1]=\dfrac{1}{2}-\dfrac{1}{\e ^x}+\dfrac{\ln\qty(\e ^x+1)}{\e ^{2x}}$$
-    再由 $(\mathrm{D}-1)y=z(x)$ 化为 $\displaystyle \dv{y}{x}-y=\dfrac{1}{2}-\dfrac{1}{\e ^x}+\dfrac{\ln\qty(\e ^x+1)}{\e ^{2x}}$，故原方程的通解为
+    再由 $(\mathrm{D}-1)y=z(x)$ 化为 $\displaystyle \dv{y}{x}-y=\dfrac{1}{2}-\dfrac{1}{\e ^x}+\dfrac{\ln\qty(\e ^x+1)}{\e ^{2x}}$, 故原方程的通解为
     \begin{flalign*}
         y & =\e ^{\int\dd x}\qty{\int\qty[\dfrac{1}{2}-\dfrac{1}{\e ^x}+\dfrac{\ln\qty(\e ^x+1)}{\e ^{2x}}]\cdot\e ^{-\int\dd x}\dd x+C_2}=\e ^x \qty{\int \qty[\dfrac{1}{2\e ^x}-\dfrac{1}{\e ^{2x}}+\dfrac{\ln\qty(\e ^x+1)}{\e ^{3x}}]\dd x+C_2} \\
           & =-\dfrac{\qty(\e ^{3x}+1)\ln\qty(\e ^x+1)}{3\e ^{2x}}+\dfrac{x\e ^x}{3}+C_2\e ^x+\dfrac{1}{3\e ^x}+\dfrac{C_1}{\e ^{2x}}-\dfrac{1}{6}
     \end{flalign*}
-    其中 $\displaystyle\int \dfrac{\ln\qty(\e ^x+1)}{\e ^{3x}}\dd x\xlongequal[]{\e ^x=t}\int\dfrac{\ln(t+1)}{t^4}\dd t=-\dfrac{1}{3}\int \ln(t+1)\dd \dfrac{1}{t^3}=-\dfrac{1}{3}\qty[\dfrac{\ln(t+1)}{t^3}-\int\dfrac{\dd t}{t^3(t+1)}]$，且
+    其中 $\displaystyle\int \dfrac{\ln\qty(\e ^x+1)}{\e ^{3x}}\dd x\xlongequal[]{\e ^x=t}\int\dfrac{\ln(t+1)}{t^4}\dd t=-\dfrac{1}{3}\int \ln(t+1)\dd \dfrac{1}{t^3}=-\dfrac{1}{3}\qty[\dfrac{\ln(t+1)}{t^3}-\int\dfrac{\dd t}{t^3(t+1)}]$, 且
     \begin{flalign*}
         \int\dfrac{\dd t}{t^3(t+1)}\xlongequal[]{u=\frac{t}{t+1}}\int\qty(\dfrac{1}{u}-\dfrac{2}{u^2}+\dfrac{1}{u^3})\dd u=\ln|u|+\dfrac{4u-1}{2u^2}+C
     \end{flalign*}
@@ -197,10 +197,10 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数，解高阶微分方程需�
 \subsubsection{Laplace 变换法}
 
 \begin{definition}[Laplace 变换]
-    假设函数 $f(x)$ 在区间 $[0,+\infty)$ 上分段连续，如果参变量积分
+    假设函数 $f(x)$ 在区间 $[0,+\infty)$ 上分段连续, 如果参变量积分
     $$F(s)=\int_{0}^{+\infty}\e ^{-st}f(t)\mathrm{d}t$$
-    收敛，则称函数 $F(s)$ 为 $f(x)$ 的 \textit{Laplace 变换}，并记为 $$F(s)=\mathcal{L}\{f(t)\}$$
-    称函数 $f(t)$ 为 $F(s)$ 的 \textit{Laplace 逆变换}，并记为 $$f(t)=\mathcal{L}^{-1}\{F(s)\}.$$
+    收敛, 则称函数 $F(s)$ 为 $f(x)$ 的 \textit{Laplace 变换}, 并记为 $$F(s)=\mathcal{L}\{f(t)\}$$
+    称函数 $f(t)$ 为 $F(s)$ 的 \textit{Laplace 逆变换}, 并记为 $$f(t)=\mathcal{L}^{-1}\{F(s)\}.$$
 \end{definition}
 
 常见的 Laplace 变换 (以下 $s>0,\alpha,\lambda,~n>-1$)
@@ -223,8 +223,8 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数，解高阶微分方程需�
     (用 Laplace 变换) 求解例题 \ref{y3y2y2xex}.
 \end{example}
 \begin{solution}\scriptsize\linespread{0.8}
-    对方程两边进行 Laplace 变换，得 $\displaystyle s^2Y(s)-3sY(s)+2Y(s)=\frac{2}{(s-1)^2}$，解得 $$Y(s)=2\left[\frac{1}{s-2}-\frac{1}{s-1}-\frac{1}{(s-1)^2}-\frac{1}{(s-1)^3}\right]$$
-    所以一个特解为 $\displaystyle y^*=2\left(\e ^{2x}-\e ^x-x\e ^x-\frac{x^2}{2}\e ^x\right)$，又对应齐次线性微分方程 $y''-3y'+2y=0$ 的通解为 $Y=C_1\e ^x+C_2\e ^{2x}$，
+    对方程两边进行 Laplace 变换, 得 $\displaystyle s^2Y(s)-3sY(s)+2Y(s)=\frac{2}{(s-1)^2}$, 解得 $$Y(s)=2\left[\frac{1}{s-2}-\frac{1}{s-1}-\frac{1}{(s-1)^2}-\frac{1}{(s-1)^3}\right]$$
+    所以一个特解为 $\displaystyle y^*=2\left(\e ^{2x}-\e ^x-x\e ^x-\frac{x^2}{2}\e ^x\right)$, 又对应齐次线性微分方程 $y''-3y'+2y=0$ 的通解为 $Y=C_1\e ^x+C_2\e ^{2x}$, 
     故原方程的通解为 $$y=Y+y^*=C_1\e ^x+C_2\e ^{2x}-\left(x^2+2x+2\right)\e ^x.$$
 \end{solution}
 
@@ -232,11 +232,11 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数，解高阶微分方程需�
 
 \subsubsection{$y^{(n)}=f(x)$}
 
-方程特点是右端为自变量 $x$ 的函数，且不含有函数 $y$ 及其导数 $y',y'',\cdots,y^{(n-1)}$，将方程两边对 $x$ 积分 $n$ 次，即得其通解
+方程特点是右端为自变量 $x$ 的函数, 且不含有函数 $y$ 及其导数 $y',y'',\cdots,y^{(n-1)}$, 将方程两边对 $x$ 积分 $n$ 次, 即得其通解
 $$y=\int\dd x\cdots\int f(x)\dd x+\sum_{i=1}^{n}\dfrac{\C_i}{(n-i)!}x^{n-i}.$$
 
 \begin{theorem}
-    对于二阶常系数非齐次线性微分方程 $y''+py'+qy=f(x)$，若由特征方程 $r^2+pr+q=0$ 求出特征根为 $\lambda_1,~\lambda_2$，且有
+    对于二阶常系数非齐次线性微分方程 $y''+py'+qy=f(x)$, 若由特征方程 $r^2+pr+q=0$ 求出特征根为 $\lambda_1,~\lambda_2$, 且有
     $$\lambda_1+\lambda_2=-p,~\lambda_1\cdot\lambda_2=q$$
     那么方程总可以化为 $$\qty(y'-\lambda_1y)'-\lambda_2\qty(y'-\lambda_1y)=f(x).$$
 \end{theorem}
@@ -245,7 +245,7 @@ $$y=\int\dd x\cdots\int f(x)\dd x+\sum_{i=1}^{n}\dfrac{\C_i}{(n-i)!}x^{n-i}.$$
     试用降阶法求解例题 \ref{y3y2y2xex}.
 \end{example}
 \begin{solution}
-    将原方程改写为 $\qty(y'-2y)'-(y'-2y)=2x\e ^x$，设 $u=y'-2y$，则上述方程化为 $u'-u=2x\e ^x$，解得
+    将原方程改写为 $\qty(y'-2y)'-(y'-2y)=2x\e ^x$, 设 $u=y'-2y$, 则上述方程化为 $u'-u=2x\e ^x$, 解得
     $$u=\e ^{\int\dd x}\qty[\int 2x\e ^x\e ^{-\int\dd x}\dd x+C_1]=\e ^x\qty(\int 2x\dd x+C_1)=x^2\e ^x+C_1\e ^x$$
     再求一阶微分方程 $y'-2y=x^2\e ^x+C_1\e ^x$ 得原方程的通解为
     $$y=\e ^{2x}\qty[\int\qty(x^2\e ^x+C_1\e ^x)\e ^{-2x}\dd x+C_2]=-\qty(x^2+2x+1)\e ^x-C_1\e ^x+C_2\e ^{2x}.$$
@@ -261,7 +261,7 @@ $$y=\int\dd x\cdots\int f(x)\dd x+\sum_{i=1}^{n}\dfrac{\C_i}{(n-i)!}x^{n-i}.$$
 \end{definition}
 
 \begin{theorem}
-    若采用记号 $\mathrm{D}$ 表示对 $x$ 求导的运算 $\displaystyle\dv{x}$，那么有
+    若采用记号 $\mathrm{D}$ 表示对 $x$ 求导的运算 $\displaystyle\dv{x}$, 那么有
     $$x^ky^{(k)}=\mathrm{D}(\mathrm{D}-1)\cdots(\mathrm{D}-k+1)=\mathrm{D}^{\underline{k}}.$$
 \end{theorem}
 
@@ -269,7 +269,7 @@ $$y=\int\dd x\cdots\int f(x)\dd x+\sum_{i=1}^{n}\dfrac{\C_i}{(n-i)!}x^{n-i}.$$
     \label{x2y2xy2y0}求微分方程 $x^2y''-2xy'+2y=0$ 的通解.
 \end{example}
 \begin{solution}
-    令 $x=\e ^t,~\mathrm{D}=\displaystyle\dv{t}$，那么原方程化为 $\qty(\mathrm{D}^2-\mathrm{D})y=0$，易得 $y=C_1x^2+C_2x.$
+    令 $x=\e ^t,~\mathrm{D}=\displaystyle\dv{t}$, 那么原方程化为 $\qty(\mathrm{D}^2-\mathrm{D})y=0$, 易得 $y=C_1x^2+C_2x.$
 \end{solution}
 
 \subsubsection{非齐次 Euler 微分方程}
@@ -290,12 +290,12 @@ $$y=\int\dd x\cdots\int f(x)\dd x+\sum_{i=1}^{n}\dfrac{\C_i}{(n-i)!}x^{n-i}.$$
     求微分方程 $4x^4y'''-4x^3y''+4x^2y'=1$ 的通解.
 \end{example}
 \begin{solution}
-    将原方程改写为 $x^3y'''-x^2y''+xy'=\dfrac{1}{4x}$，并令 $x=\e ^t,~\mathrm{D}=\displaystyle\dv{x}$，于是原式化为
+    将原方程改写为 $x^3y'''-x^2y''+xy'=\dfrac{1}{4x}$, 并令 $x=\e ^t,~\mathrm{D}=\displaystyle\dv{x}$, 于是原式化为
     $$\mathrm{D}(\mathrm{D}-1)(\mathrm{D}-2)y-\mathrm{D}(\mathrm{D}-1)y+\mathrm{D}y=\mathrm{D}(\mathrm{D}-2)^2y=\dfrac{1}{4\e ^t}$$
-    令 $(\mathrm{D}-2)^2y=z$，那么 $z=\dfrac{1}{\mathrm{D}}\dfrac{1}{4\e ^t}=\displaystyle\int\dfrac{\dd t}{4\e ^t}=-\dfrac{1}{4}\e ^{-t}+C_1$，再令 $w=(\mathrm{D}-2)y$，于是，
-    $(\mathrm{D}-2)w=w'-2w=-\dfrac{1}{4}\e ^{-t}+C_1$，由一阶线性微分方程通解公式得
+    令 $(\mathrm{D}-2)^2y=z$, 那么 $z=\dfrac{1}{\mathrm{D}}\dfrac{1}{4\e ^t}=\displaystyle\int\dfrac{\dd t}{4\e ^t}=-\dfrac{1}{4}\e ^{-t}+C_1$, 再令 $w=(\mathrm{D}-2)y$, 于是, 
+    $(\mathrm{D}-2)w=w'-2w=-\dfrac{1}{4}\e ^{-t}+C_1$, 由一阶线性微分方程通解公式得
     $$w=\e ^{2\int\dd t}\qty[\int\qty(-\dfrac{1}{4}\e ^{-t}+C_1)\e ^{-2\int\dd t}\dd t+C_2]=\e ^{2t}\qty[\dfrac{1}{12}\e ^{-3t}-\dfrac{C_1}{2}\e ^{-2t}+C_2]=\dfrac{1}{12}\e ^{-t}+\dfrac{C_1}{2}+C_2\e ^{2t}$$
-    又 $y'-2y=w$，再由一阶线性微分方程通解公式得
+    又 $y'-2y=w$, 再由一阶线性微分方程通解公式得
     $$y=C_2x^2\ln x+C_1x^2-\dfrac{1}{36x}+C_3.$$
 \end{solution}
 
@@ -303,49 +303,49 @@ $$y=\int\dd x\cdots\int f(x)\dd x+\sum_{i=1}^{n}\dfrac{\C_i}{(n-i)!}x^{n-i}.$$
     求微分方程 $(1+x)^2y''-(1+x)y'+y=\dfrac{1}{1+x}$ 满足初值条件 $y(0)=y'(0)=0$ 的特解.
 \end{example}
 \begin{solution}
-    令 $1+x=t$，再令 $t=\e ^u,~\mathrm{D}=\displaystyle\dv{t}$，于是原式化为
+    令 $1+x=t$, 再令 $t=\e ^u,~\mathrm{D}=\displaystyle\dv{t}$, 于是原式化为
     $$\mathrm{D}(\mathrm{D}-1)y-\mathrm{D}y+y=\e ^{-u}\Rightarrow (\mathrm{D}-1)^2y=\e ^{-u}$$
-    令 $z=(\mathrm{D}-1)y$，于是上式化为 $z'-z=\e ^{-u}$，由一阶线性微分方程通解公式得
+    令 $z=(\mathrm{D}-1)y$, 于是上式化为 $z'-z=\e ^{-u}$, 由一阶线性微分方程通解公式得
     $$z=\e ^{\int\dd u}\qty[\int\e ^{-u}\cdot\e ^{-\int\dd u}\dd u+C_1]=\e ^u\qty[-\dfrac{1}{2}\e ^{-2u}+C_1]=-\dfrac{1}{2}\e ^{-u}+C_1\e ^u$$
-    由已知得 $z(0)=\eval{-\dfrac{1}{2(1+x)}+C_1(1+x)}_{x=0}=0\Rightarrow C_1=\dfrac{1}{2}$，又 $y'-y=-\dfrac{1}{2}\e ^{-u}+\dfrac{1}{2}\e ^u$，再求一阶微分方程通解公式
+    由已知得 $z(0)=\eval{-\dfrac{1}{2(1+x)}+C_1(1+x)}_{x=0}=0\Rightarrow C_1=\dfrac{1}{2}$, 又 $y'-y=-\dfrac{1}{2}\e ^{-u}+\dfrac{1}{2}\e ^u$, 再求一阶微分方程通解公式
     $$y=\e ^{\int\dd u}\qty[\int\qty(-\dfrac{1}{2}\e ^{-u}+\dfrac{1}{2}\e ^u)\e ^{-\int\dd u}\dd u+C_2]=\e ^u\qty[\dfrac{1}{4}\e ^{-2u}+\dfrac{1}{2}u+C_2]=\dfrac{1}{4}\e ^{-u}+\dfrac{1}{2}u\e ^u+C_2$$
-    回代 $\e ^u=1+x$，并 $y(0)=0$，解得 $C_2=-\dfrac{1}{4}$，于是该方程的特解为 $$y=\dfrac{x+1}{2}\ln(x+1)+\dfrac{1}{4}(x+1)-\dfrac{x+1}{4}.$$
+    回代 $\e ^u=1+x$, 并 $y(0)=0$, 解得 $C_2=-\dfrac{1}{4}$, 于是该方程的特解为 $$y=\dfrac{x+1}{2}\ln(x+1)+\dfrac{1}{4}(x+1)-\dfrac{x+1}{4}.$$
 \end{solution}
 
 \begin{example}
     \label{x2y2xy2y2x3}求微分方程 $x^2y''-2xy'+2y=2x^3$ 的通解.
 \end{example}
 \begin{solution}
-    \textbf{法一: }令 $\displaystyle x=\e ^t,~\mathrm{D}=\dv{t}$，则 $xy'=\mathrm{D}y,~x^2y''=\mathrm{D}(\mathrm{D}-1)y$，
+    \textbf{法一: }令 $\displaystyle x=\e ^t,~\mathrm{D}=\dv{t}$, 则 $xy'=\mathrm{D}y,~x^2y''=\mathrm{D}(\mathrm{D}-1)y$, 
     原方程化为 $$\qty(\mathrm{D}^2-3\mathrm{D}+2)y=2\e ^{3t}=(\mathrm{D}-1)(\mathrm{D}-2)y=2\e ^{3t}$$
-    令 $(\mathrm{D}-2)y=z$，那么有 $\displaystyle(\mathrm{D}-1)z=\dv{z}{t}-z=2\e ^{3t}$，为一阶线性微分方程，则有通解
+    令 $(\mathrm{D}-2)y=z$, 那么有 $\displaystyle(\mathrm{D}-1)z=\dv{z}{t}-z=2\e ^{3t}$, 为一阶线性微分方程, 则有通解
     $$z=\e ^{\int\dd t}\qty[\int 2\e ^{3t}\cdot\e ^{-\int\dd t}+C_1]=\e ^t\qty[\int 2\e ^{2t}\dd t+C_1]=\e ^{3t}+C_1\e ^t$$
-    又 $z=(\mathrm{D}-2)y=\displaystyle\dv{y}{t}-2y=\e ^{3t}+C_1\e ^t$，故又有通解公式
+    又 $z=(\mathrm{D}-2)y=\displaystyle\dv{y}{t}-2y=\e ^{3t}+C_1\e ^t$, 故又有通解公式
     $$y=\e ^{2\int\dd t}\qty[\int\qty(\e ^{3t}+C_1\e ^t)\cdot\e ^{-2\int\dd t}\dd t+C_2]=\e ^{2t}\qty[\e ^t-C_1\e ^{-t}+C_2]=\e ^{3t}-C_1\e ^t+C_2\e ^{2t}$$
-    回代 $\e ^t=x$，解得该方程的通解为 $y=x^3+C_2x^2-C_1x.$\\
-    \textbf{法二: }设 $y=x^k$，代入对应齐次线性微分方程 $$x^2y''-2xy'+2y=0$$
-    得到 $k$ 满足的方程，即特征方程为 $k^2-3k+2=0$，解得 $k_1=1,~k_2=2$，于是齐次 Euler 微分方程的通解为 $Y=C_1x+C_2x^2$，
-    又因为 $f(x)=2x^3$ 于是 $f\qty(\e ^t)=2\e ^{3t}$，而 3 不是特征根，故可设其特解为 $y^*=a\e ^{3t}$，即原方程的特解为 $y^*=ax^3$，代入原方程解得 $a=1$，所以原方程的通解为 $y=C_1x+C_2x^2+x^3.$
+    回代 $\e ^t=x$, 解得该方程的通解为 $y=x^3+C_2x^2-C_1x.$\\
+    \textbf{法二: }设 $y=x^k$, 代入对应齐次线性微分方程 $$x^2y''-2xy'+2y=0$$
+    得到 $k$ 满足的方程, 即特征方程为 $k^2-3k+2=0$, 解得 $k_1=1,~k_2=2$, 于是齐次 Euler 微分方程的通解为 $Y=C_1x+C_2x^2$, 
+    又因为 $f(x)=2x^3$ 于是 $f\qty(\e ^t)=2\e ^{3t}$, 而 3 不是特征根, 故可设其特解为 $y^*=a\e ^{3t}$, 即原方程的特解为 $y^*=ax^3$, 代入原方程解得 $a=1$, 所以原方程的通解为 $y=C_1x+C_2x^2+x^3.$
 \end{solution}
 
 \begin{example}
     求微分方程 $x^2y''-2xy'+2y+x-2x^3=0$ 的通解.
 \end{example}
 \begin{solution}
-    \textbf{法一: }令 $x=\e ^t,~\mathrm{D}=\displaystyle\dv{t}$，那么原方程化为
+    \textbf{法一: }令 $x=\e ^t,~\mathrm{D}=\displaystyle\dv{t}$, 那么原方程化为
     $$(\mathrm{D}-1)(\mathrm{D}-2)y=2\e ^{3t}-\e ^t$$
-    令 $(\mathrm{D}-2)y=z$，那么有 $(\mathrm{D}-1)z=\displaystyle\dv{z}{t}-z=2\e ^{3t}-\e ^t$，为一阶线性微分方程，则有通解
+    令 $(\mathrm{D}-2)y=z$, 那么有 $(\mathrm{D}-1)z=\displaystyle\dv{z}{t}-z=2\e ^{3t}-\e ^t$, 为一阶线性微分方程, 则有通解
     $$z=\e ^{\int\dd t}\qty[\int\qty(2\e ^{3t}-\e ^t)\e ^{-\int\dd t}\dd t+C_1]=\e ^t\qty[\e ^{2t}-t+C_1]=\e ^{3t}-t\e ^{t}+C_1\e ^t$$
-    又 $z=(\mathrm{D}-2)y=\displaystyle\dv{y}{t}-2y=\e ^{3t}-t\e ^{t}+C_1\e ^t$，故又有通解公式
+    又 $z=(\mathrm{D}-2)y=\displaystyle\dv{y}{t}-2y=\e ^{3t}-t\e ^{t}+C_1\e ^t$, 故又有通解公式
     \begin{flalign*}
         y & =\e ^{2\int\dd t}\qty[\int\qty(\e ^{3t}-t\e ^t+C_1\e ^t)\e ^{-2\int\dd t}\dd t+C_2]=\e ^{2t}\qty[\e ^t+(t+1)\e ^{-t}-C_1\e ^{-t}+C_2] \\
           & =\e ^{3t}+(t+1)\e ^t-C_1\e ^t+C_2\e ^{2t}=x^3+C_2x^2+x\ln x+C_1'x
     \end{flalign*}
     其中 $C_1'=1-C_1.$\\
-    \textbf{法二: }令 $y=x^k$，代入对应齐次线性微分方程，即例题 \ref{x2y2xy2y0}，得通解为 $Y=C_1x^2+C_2x$，
-    又 $f(x)=2x^3-x$ 即 $f\qty(\e ^t)=2\e ^{3t}-\e ^t$，而 3 不是特征根，但 1 是方程的一重特征根，
-    故可设其特解为 $y^*=2A\e ^{3t}+Bt\e ^t$，
-    即设原方程的特解为 $y^*=2Ax^3+Bx\ln x$，代入原方程解得，$A=\dfrac{1}{2},~B=1$，所以原方程的通解为
+    \textbf{法二: }令 $y=x^k$, 代入对应齐次线性微分方程, 即例题 \ref{x2y2xy2y0}, 得通解为 $Y=C_1x^2+C_2x$, 
+    又 $f(x)=2x^3-x$ 即 $f\qty(\e ^t)=2\e ^{3t}-\e ^t$, 而 3 不是特征根, 但 1 是方程的一重特征根, 
+    故可设其特解为 $y^*=2A\e ^{3t}+Bt\e ^t$, 
+    即设原方程的特解为 $y^*=2Ax^3+Bx\ln x$, 代入原方程解得, $A=\dfrac{1}{2},~B=1$, 所以原方程的通解为
     $y=x^3+C_1x^2+C_1x+x\ln x.$
 \end{solution}
 
@@ -355,17 +355,17 @@ $$y=\int\dd x\cdots\int f(x)\dd x+\sum_{i=1}^{n}\dfrac{\C_i}{(n-i)!}x^{n-i}.$$
 
 \begin{lemma}[Liouville 引理]
     \label{Liouville}设函数 $y_1(x)$ 为二阶变系数齐次线性微分方程 $$y''+P(x)y'+Q(x)y=0$$
-    的一个非零解，则该方程的与 $y_1(x)$ 线性无关的另一个特解为
+    的一个非零解, 则该方程的与 $y_1(x)$ 线性无关的另一个特解为
     $$y_2(x)=y_1(x)\cdot\int\dfrac{\exp\qty(-\displaystyle\int P(x)\dd x)}{y_1^2(x)}\dd x.$$
 \end{lemma}
 
 \begin{example}[2016 数二]
-    已知函数 $y_1(x)=\e ^x,~y_2(x)=u(x)\e ^x$ 是二阶微分方程 $$(2x-1)y''-(2x+1)y'+2y=0$$ 的两个解，
-    若 $u(-1)=\e ,~u(0)=-1$，求 $u(x)$，并写出该微分方程的通解.
+    已知函数 $y_1(x)=\e ^x,~y_2(x)=u(x)\e ^x$ 是二阶微分方程 $$(2x-1)y''-(2x+1)y'+2y=0$$ 的两个解, 
+    若 $u(-1)=\e ,~u(0)=-1$, 求 $u(x)$, 并写出该微分方程的通解.
 \end{example}
 \begin{solution}
-    由引理 $\ref{Liouville}$ 知，$u(x)=\displaystyle\int\dfrac{\exp\qty(\displaystyle\int\dfrac{2x+1}{2x-1}\dd x)}{\e ^{2x}}\dd x=C_1\int(2x-1)\e ^{-x}\dd x=-C_1\e ^{-x}(1+2x)+C_2$，
-    由 $u(-1)=\e ,~u(0)=-1$，解得 $C_1=1,~C_2=0$，则 $u(x)=-\e ^{-x}(1+2x)$，那么 $y_1$ 与 $y_2$ 线性无关，则微分方程的通解为
+    由引理 $\ref{Liouville}$ 知, $u(x)=\displaystyle\int\dfrac{\exp\qty(\displaystyle\int\dfrac{2x+1}{2x-1}\dd x)}{\e ^{2x}}\dd x=C_1\int(2x-1)\e ^{-x}\dd x=-C_1\e ^{-x}(1+2x)+C_2$, 
+    由 $u(-1)=\e ,~u(0)=-1$, 解得 $C_1=1,~C_2=0$, 则 $u(x)=-\e ^{-x}(1+2x)$, 那么 $y_1$ 与 $y_2$ 线性无关, 则微分方程的通解为
     $$y=k_1\e ^x-k_2\e ^{-x}(1+2x)~  k_{1,2}\in\mathbf{R}.$$
 \end{solution}
 
@@ -374,16 +374,16 @@ $$y=\int\dd x\cdots\int f(x)\dd x+\sum_{i=1}^{n}\dfrac{\C_i}{(n-i)!}x^{n-i}.$$
     \begin{enumerate}[label=(\arabic{*})]
         \item 当关于 $r$ 的一元二次方程 $r^2p_1(x)+rp_2(x)+p_3(x)=0$ 的两个根
               $$r_{1,2}=\dfrac{-p_2(x)\pm\sqrt{p_2^2(x)-4p_1(x)p_3(x)}}{2p_1(x)}$$
-              中至少有一个 $r$ 是非零常数时，$y^*=\e ^{rx}$ 是该方程的一个特解;
-              特别地，当 $$p_1(x)\pm p_2(x)+p_3(x)=0$$
-              时，$y^*=\e ^{\pm x}$ 是原方程的一个特解;
-        \item 当 $\dfrac{p_2(x)+xp_3(x)}{p_3(x)}=a$ (其中 $a$ 为常数) 时，
-              $y^*=x-a$ 是该方程的一个特解; 特别地，当 $$p_2(x)+xp_3(x)=0$$ 时，
+              中至少有一个 $r$ 是非零常数时, $y^*=\e ^{rx}$ 是该方程的一个特解;
+              特别地, 当 $$p_1(x)\pm p_2(x)+p_3(x)=0$$
+              时, $y^*=\e ^{\pm x}$ 是原方程的一个特解;
+        \item 当 $\dfrac{p_2(x)+xp_3(x)}{p_3(x)}=a$ (其中 $a$ 为常数) 时, 
+              $y^*=x-a$ 是该方程的一个特解; 特别地, 当 $$p_2(x)+xp_3(x)=0$$ 时, 
               $y^*=x$ 是该方程的一个特解;
-        \item 当 $\alpha(\alpha-1)p_1(x)+\alpha xp_2(x)+x^2p_3(x)=0$ ($\alpha$ 为非零常数) 时，
+        \item 当 $\alpha(\alpha-1)p_1(x)+\alpha xp_2(x)+x^2p_3(x)=0$ ($\alpha$ 为非零常数) 时, 
               $y^*=x^\alpha$ 是该方程的一个特解;
-        \item 当 $\dfrac{p_3(x)-p_1(x)}{p_2(x)}=-\cot x$，时 $y^*=\sin x$ 是该方程的一个特解;
-        \item 当 $\dfrac{p_3(x)-p_1(x)}{p_2(x)}=\tan x$，时 $y^*=\cos x$ 是该方程的一个特解.
+        \item 当 $\dfrac{p_3(x)-p_1(x)}{p_2(x)}=-\cot x$, 时 $y^*=\sin x$ 是该方程的一个特解;
+        \item 当 $\dfrac{p_3(x)-p_1(x)}{p_2(x)}=\tan x$, 时 $y^*=\cos x$ 是该方程的一个特解.
     \end{enumerate}
 \end{theorem}
 
@@ -391,23 +391,23 @@ $$y=\int\dd x\cdots\int f(x)\dd x+\sum_{i=1}^{n}\dfrac{\C_i}{(n-i)!}x^{n-i}.$$
     求微分方程 $(2x-1)y''-(2x+1)y'+2y=0$ 满足初值条件 $y(0)=0,~y'(0)=1$ 的特解.
 \end{example}
 \begin{solution}
-    记 $p_1(x)=2x-1,~p_2(x)=-(2x+1),~p_3(x)=2$，则有 $p_1(x)+p_2(x)+p_3(x)=0$，且
+    记 $p_1(x)=2x-1,~p_2(x)=-(2x+1),~p_3(x)=2$, 则有 $p_1(x)+p_2(x)+p_3(x)=0$, 且
     $$\dfrac{p_2(x)+xp_3(x)}{p_3(x)}=-\dfrac{1}{2}$$
-    于是由定理 \ref{erjiebianxis} (1)(2) 可知 $y_1(x)=\e ^x,~y_2(x)=x+\dfrac{1}{2}$ 为原方程的两个特解，
-    且它们线性无关，于是方程的通解为 $y=C_1\e ^x+C_2\qty(x+\dfrac{1}{2})$，又有初值条件 $y(0)=0,~y'(0)=1$ 代入解得
-    $C_1=-1,~C_2=2$，于是该方程的特解为 $y=2x+1-\e ^x.$
+    于是由定理 \ref{erjiebianxis} (1)(2) 可知 $y_1(x)=\e ^x,~y_2(x)=x+\dfrac{1}{2}$ 为原方程的两个特解, 
+    且它们线性无关, 于是方程的通解为 $y=C_1\e ^x+C_2\qty(x+\dfrac{1}{2})$, 又有初值条件 $y(0)=0,~y'(0)=1$ 代入解得
+    $C_1=-1,~C_2=2$, 于是该方程的特解为 $y=2x+1-\e ^x.$
 \end{solution}
 
 \begin{example}
     求微分方程 $xy''+(x-2)y'-(2x+4)y=0$ 的通解.
 \end{example}
 \begin{solution}
-    记 $p_1(x)=x,~p_2(x)=x-2,~p_3(x)=-(2x+4)$，则由 $r^2p_1(x)+rp_2(x)+p_3(x)=0$ 解得
+    记 $p_1(x)=x,~p_2(x)=x-2,~p_3(x)=-(2x+4)$, 则由 $r^2p_1(x)+rp_2(x)+p_3(x)=0$ 解得
     \begin{flalign*}
         r_{1,2} & =\dfrac{-p_2(x)\pm\sqrt{p_2^2(x)-4p_1(x)p_3(x)}}{2p_1(x)}=\dfrac{2-x\pm\sqrt{(x-2)^2+4x(2x+4)}}{2x} \\
                 & =\dfrac{2-x\pm\qty|3x+2|}{2x}=1+\dfrac{2}{x}\text{ 或 }-2
     \end{flalign*}
-    于是由定理 \ref{erjiebianxis} (1) 知 $y_1(x)=\e ^{-2x}$ 是该方程的一个特解，
+    于是由定理 \ref{erjiebianxis} (1) 知 $y_1(x)=\e ^{-2x}$ 是该方程的一个特解, 
     再由引理 \ref{Liouville} 得与 $y_1(x)$ 线性无关的另一个特解为
     \begin{flalign*}
         y_2(x) & =y_1(x)\cdot\int\dfrac{\exp\qty(-\displaystyle\int P(x)\dd x)}{y_1^2(x)}\dd x=\e ^{-2x}\int\dfrac{\exp\qty(-\displaystyle\int\dfrac{x-2}{x}\dd x)}{\e ^{-4x}}\dd x \\
@@ -420,8 +420,8 @@ $$y=\int\dd x\cdots\int f(x)\dd x+\sum_{i=1}^{n}\dfrac{\C_i}{(n-i)!}x^{n-i}.$$
     求微分方程的通解 $\qty(x^2\ln x)y''-xy'+y=0$ 的通解.
 \end{example}
 \begin{solution}
-    记 $p_1(x)=x^2\ln x,~p_2(x)=-x,~p_3(x)=1$，则 $p_2(x)+xp_3(x)=0$，
-    于是由定理 \ref{erjiebianxis} (2) 知 $y_1(x)=x$ 是该方程的一个特解，再由引理 \ref{Liouville} 得与 $y_1(x)$ 线性无关的另一个特解为
+    记 $p_1(x)=x^2\ln x,~p_2(x)=-x,~p_3(x)=1$, 则 $p_2(x)+xp_3(x)=0$, 
+    于是由定理 \ref{erjiebianxis} (2) 知 $y_1(x)=x$ 是该方程的一个特解, 再由引理 \ref{Liouville} 得与 $y_1(x)$ 线性无关的另一个特解为
     \begin{flalign*}
         y_2(x) & =y_1(x)\cdot\int\dfrac{\exp\qty(-\displaystyle\int P(x)\dd x)}{y_1^2(x)}\dd x=x\int\dfrac{\exp\qty(\displaystyle\int\dfrac{x}{x^2\ln x}\dd x)}{x^2}\dd x \\
                & =x\int\dfrac{\ln x}{x^2}\dd x=-x\int\ln x\dd \qty(\dfrac{1}{x})=-(\ln x+1)
@@ -433,8 +433,8 @@ $$y=\int\dd x\cdots\int f(x)\dd x+\sum_{i=1}^{n}\dfrac{\C_i}{(n-i)!}x^{n-i}.$$
     求微分方程 $y''\cos x-2y'\sin x+3y\cos x=0$ 的通解.
 \end{example}
 \begin{solution}
-    记 $p_1(x)=\cos x,~p_2(x)=-2\sin x,~p_3(x)=3\cos x$，则 $\dfrac{p_3(x)-p_1(x)}{p_2(x)}=-\cot x$，
-    于是由定理 \ref{erjiebianxis} (4) 知，$y_1(x)=\sin x$ 是该方程的一个特解，再由引理 \ref{Liouville} 得与 $y_1(x)$ 线性无关的另一个特解为
+    记 $p_1(x)=\cos x,~p_2(x)=-2\sin x,~p_3(x)=3\cos x$, 则 $\dfrac{p_3(x)-p_1(x)}{p_2(x)}=-\cot x$, 
+    于是由定理 \ref{erjiebianxis} (4) 知, $y_1(x)=\sin x$ 是该方程的一个特解, 再由引理 \ref{Liouville} 得与 $y_1(x)$ 线性无关的另一个特解为
     \begin{flalign*}
         y_2(x) & =y_1(x)\cdot\int\dfrac{\exp\qty(-\displaystyle\int P(x)\dd x)}{y_1^2(x)}\dd x=\sin x\int\dfrac{\exp\qty(\displaystyle\int\dfrac{2\sin x}{\cos x}\dd x)}{\sin^2x}\dd x \\
                & =\sin x\int\dfrac{\dd x}{\sin^2x\cos^2x}=\sin x(\tan x-\cot x)
@@ -445,16 +445,16 @@ $$y=\int\dd x\cdots\int f(x)\dd x+\sum_{i=1}^{n}\dfrac{\C_i}{(n-i)!}x^{n-i}.$$
 \subsubsection{二阶变系数非齐次线性微分方程}
 
 \begin{example}
-    试用定理 \ref{Liouville}，求解例题 \ref{x2y2xy2y2x3} 的通解.
+    试用定理 \ref{Liouville}, 求解例题 \ref{x2y2xy2y2x3} 的通解.
 \end{example}
 \begin{solution}
-    记 $p_1(x)=x^2,~p_2(x)=-2x,~p_3(x)=2$，则 $p_2(x)+xp_3(x)=0$ 且
+    记 $p_1(x)=x^2,~p_2(x)=-2x,~p_3(x)=2$, 则 $p_2(x)+xp_3(x)=0$ 且
     $$\alpha(\alpha-1)p_1(x)+\alpha xp_2(x)+x^2p_3(x)=\qty(\alpha^2-3\alpha+2)x^2$$
-    令 $\qty(\alpha^2-3\alpha+2)=0$ 解得 $\alpha_1=1,~\alpha_2=2$，于是 $y_1(x)=x,~y_2(x)=x^2$
-    是对应齐次方程 $x^2y''-2xy'+2y=0$ 的两个线性无关的特解，从而由通解结构知齐次方程的通解为
+    令 $\qty(\alpha^2-3\alpha+2)=0$ 解得 $\alpha_1=1,~\alpha_2=2$, 于是 $y_1(x)=x,~y_2(x)=x^2$
+    是对应齐次方程 $x^2y''-2xy'+2y=0$ 的两个线性无关的特解, 从而由通解结构知齐次方程的通解为
     $$Y=C_1x+C_2x^2$$
-    下面利用常系数变易法求原方程的解，将原方程改写为 $$y''-\dfrac{2}{x}y'+\dfrac{2}{x^2}y=2x$$
-    令 $y=C_1(x)x+C_2(x)x^2$ 为原方程的解，代入原方程，且由
+    下面利用常系数变易法求原方程的解, 将原方程改写为 $$y''-\dfrac{2}{x}y'+\dfrac{2}{x^2}y=2x$$
+    令 $y=C_1(x)x+C_2(x)x^2$ 为原方程的解, 代入原方程, 且由
     $$\left\{\begin{matrix}
             C_2''(x) &   &          & = & 0 \\
             C_1''(x) & + & 2C_2'(x) & = & 2
@@ -462,16 +462,16 @@ $$y=\int\dd x\cdots\int f(x)\dd x+\sum_{i=1}^{n}\dfrac{\C_i}{(n-i)!}x^{n-i}.$$
     解得 $\begin{cases}
             C_1(x)=C_1-x^2 \\
             C_2(x)=C_2+2x
-        \end{cases}$，故所求通解为 $$y=\qty(C_1-x^2)x+(C_2+2x)x^2=C_1x+C_2x^2+x^3.$$
+        \end{cases}$, 故所求通解为 $$y=\qty(C_1-x^2)x+(C_2+2x)x^2=C_1x+C_2x^2+x^3.$$
 \end{solution}
 
 \begin{example}
-    已知 $y_1=\e ^x$ 是微分方程 $y''+\dfrac{x}{1-x}y'-\dfrac{1}{1-x}y=x-1$ 对应的齐次线性微分方程的一个特解，
+    已知 $y_1=\e ^x$ 是微分方程 $y''+\dfrac{x}{1-x}y'-\dfrac{1}{1-x}y=x-1$ 对应的齐次线性微分方程的一个特解, 
     求所给二阶变系数非齐次线性微分方程的通解.
 \end{example}
 \begin{solution}
-    记 $p_1(x)=1,~p_2(x)=\dfrac{x}{1-x},~p_3(x)=-\dfrac{1}{1-x}$，则 $p_2(x)+xp_3(x)=0$，
-    于是由定理 \ref{Liouville} (2) 知 $y_2(x)=x$ 是该方程的一个特解，则该方程对应的齐次线性微分方程的通解为
+    记 $p_1(x)=1,~p_2(x)=\dfrac{x}{1-x},~p_3(x)=-\dfrac{1}{1-x}$, 则 $p_2(x)+xp_3(x)=0$, 
+    于是由定理 \ref{Liouville} (2) 知 $y_2(x)=x$ 是该方程的一个特解, 则该方程对应的齐次线性微分方程的通解为
     $$Y=C_1\e ^x+C_2x$$
     利用常系数变易法求原方程的同解为 $$y=-1-x-x^2+C_1\e ^x-C_2x.$$
 \end{solution}

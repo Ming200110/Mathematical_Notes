@@ -3,30 +3,30 @@
 \subsection{随机变量的独立性与相关性}
 
 \begin{definition}[随机变量的相关性定义]
-    若随机变量 $ X $ 和 $ Y $ 的相关系数 $ \rho_{X Y}=0 $ 则称 $ X $ 和 $ Y $ 不相关，否则称 $ X $ 和 $ Y $ 相关.
+    若随机变量 $ X $ 和 $ Y $ 的相关系数 $ \rho_{X Y}=0 $ 则称 $ X $ 和 $ Y $ 不相关, 否则称 $ X $ 和 $ Y $ 相关.
 \end{definition}
 
 \begin{theorem}[独立性与相关性的判定]
-    随机变量 $X$ 和 $Y$ 不相关，即 $\rho_{XY}=0\Leftrightarrow \cov(X,Y)=0\Leftrightarrow E(XY)=E(X)E(Y)\Leftrightarrow D(X\pm Y)=D(X)\pm D(Y)\Leftarrow X\text{ 与 }Y\text{ 相互独立}$.
+    随机变量 $X$ 和 $Y$ 不相关, 即 $\rho_{XY}=0\Leftrightarrow \cov(X,Y)=0\Leftrightarrow E(XY)=E(X)E(Y)\Leftrightarrow D(X\pm Y)=D(X)\pm D(Y)\Leftarrow X\text{ 与 }Y\text{ 相互独立}$.
     \newline
-    特别地，当 $(X,Y)\sim N(\mu_1,\mu_2;\sigma_1^2,\sigma_2^2;\rho)$ 时，$X$ 和 $Y$ 不相关 $\Leftrightarrow X$ 和 $Y$ 相互独立;\\
-    当随机变量 $X$ 和 $Y$ 都服从 (0,1) 分布，则 $X$ 和 $Y$ 不相关 $\Leftrightarrow X$ 和 $Y$ 相互独立.
+    特别地, 当 $(X,Y)\sim N(\mu_1,\mu_2;\sigma_1^2,\sigma_2^2;\rho)$ 时, $X$ 和 $Y$ 不相关 $\Leftrightarrow X$ 和 $Y$ 相互独立;\\
+    当随机变量 $X$ 和 $Y$ 都服从 (0,1) 分布, 则 $X$ 和 $Y$ 不相关 $\Leftrightarrow X$ 和 $Y$ 相互独立.
 \end{theorem}
 
 \subsection{协方差}
 
 \begin{theorem}[协方差的性质]
     \begin{enumerate}[label=(\arabic{*})]
-        \item $\cov(X,Y)=\cov(Y,X)$，$\cov(X,X)=D(X)$;
-        \item $\cov(aX,bY)=ab\cov(X,Y)$，$a,b$ 是常数，$\cov(X,a)=0$;
+        \item $\cov(X,Y)=\cov(Y,X)$, $\cov(X,X)=D(X)$;
+        \item $\cov(aX,bY)=ab\cov(X,Y)$, $a,b$ 是常数, $\cov(X,a)=0$;
         \item $\cov(X_1+X_2,Y)=\cov(X_1,Y)+\cov(X_2,Y)$;
-        \item 若 $X,Y$ 相互独立，则 $\cov(X,Y)=0$，反之不对.
+        \item 若 $X,Y$ 相互独立, 则 $\cov(X,Y)=0$, 反之不对.
         \item $\cov(X,Y)=E(XY)-E(X)E(Y)$.
     \end{enumerate}
 \end{theorem}
 
 \begin{example}[2002 数三]
-    设随机变量 $X$ 和 $Y$ 的联合概率分布为表 \ref{-101007018015}，求协方差 $\cov\qty(X^2,Y^2).$
+    设随机变量 $X$ 和 $Y$ 的联合概率分布为表 \ref{-101007018015}, 求协方差 $\cov\qty(X^2,Y^2).$
 \end{example}
 \begin{solution}
     \begin{minipage}{0.3\linewidth}
@@ -49,7 +49,7 @@
             \end{array},~\begin{array}{c|ccc}
                 Y & -1   & 0   & 1    \\\hline
                 P & 0.15 & 0.5 & 0.35
-            \end{array}$，那么
+            \end{array}$, 那么
         $$E\qty(X^2)=0.6,~E\qty(Y^2)=0.5,~E\qty(X^2Y^2)=\sum_i\sum_j x_i^2y_j^2 p_{ij}=0.08+0.20=0.28$$
         所以 $\cov\qty(X^2,Y^2)=E\qty(X^2Y^2)-E\qty(X^2)E\qty(Y^2)=0.28-0.3=-0.02.$
     \end{minipage}
@@ -86,14 +86,14 @@
                       \end{array},~\begin{array}{c|ccc}
                           Y & 0           & 1           & 2           \\\hline
                           P & \frac{1}{3} & \frac{1}{3} & \frac{1}{3}
-                      \end{array}$，那么
+                      \end{array}$, 那么
                   \begin{flalign*}
                       \cov(X-Y,Y) & =\cov(X,Y)-\cov(Y,Y)=E(XY)-E(X)E(Y)-D(Y) \\
                                   & =E(XY)-E(X)E(Y)-E\qty(Y^2)+E^2(Y)
                   \end{flalign*}
-                  其中 $\displaystyle E(XY)=\sum_i\sum_j x_iy_jp_{ij}=1\cdot\dfrac{1}{3}+2\cdot\dfrac{2}{12}=\dfrac{2}{3}$，
-                  $E(X)=\dfrac{1}{3}+\dfrac{2}{6}=\dfrac{2}{3},~E(Y)=\dfrac{1}{3}+\dfrac{2}{3}=1$，
-                  $E\qty(Y^2)=\dfrac{1}{3}+\dfrac{4}{3}=\dfrac{5}{3}$，代入算得 $\cov(X-Y,Y)=-\dfrac{2}{3}.$
+                  其中 $\displaystyle E(XY)=\sum_i\sum_j x_iy_jp_{ij}=1\cdot\dfrac{1}{3}+2\cdot\dfrac{2}{12}=\dfrac{2}{3}$, 
+                  $E(X)=\dfrac{1}{3}+\dfrac{2}{6}=\dfrac{2}{3},~E(Y)=\dfrac{1}{3}+\dfrac{2}{3}=1$, 
+                  $E\qty(Y^2)=\dfrac{1}{3}+\dfrac{4}{3}=\dfrac{5}{3}$, 代入算得 $\cov(X-Y,Y)=-\dfrac{2}{3}.$
         \end{enumerate}
     \end{minipage}
 \end{solution}
@@ -109,7 +109,7 @@
         \end{array},~\begin{array}{c|ccc}
             Y & -1          & 0           & 1           \\\hline
             P & \frac{1}{3} & \frac{1}{3} & \frac{1}{3}
-        \end{array}$，且 $P\qty{X^2=Y^2}=1.$\newline
+        \end{array}$, 且 $P\qty{X^2=Y^2}=1.$\newline
     \begin{enumerate*}[label=(\arabic{*})]
         \item 二维随机变量 $(X,Y)$ 的概率分布;
         \item $Z=XY$ 的概率分布;
@@ -135,17 +135,17 @@
     \end{minipage}\hfill
     \begin{minipage}{0.68\linewidth}
         \begin{enumerate}[label=(\arabic{*})]
-            \item 因为 $P\qty{X^2=Y^2}=1$，所以 $P\qty{X^2\neq Y^2}=1-1=0$，于是有
+            \item 因为 $P\qty{X^2=Y^2}=1$, 所以 $P\qty{X^2\neq Y^2}=1-1=0$, 于是有
                   $$\begin{cases}
                           a_{11}=P\qty{X=0,Y=-1}=0\Rightarrow a_{21}=\dfrac{1}{3} \\[6pt]
                           a_{22}=P\qty{X=1,Y=0}=0\Rightarrow a_{12}=\dfrac{1}{3}\Rightarrow a_{13}=0\Rightarrow a_{23}=\dfrac{1}{3}
                       \end{cases}$$
-            \item $Z=XY$ 的可能取值为 $-1,0,1$，且 $P\qty{Z=1}=P\qty{X=1,Y=1}=\dfrac{1}{3}$，$$P\qty{Z=0}=P\qty{X=0,Y=*}+P\qty{X=*,Y=0}=\dfrac{1}{3}$$
-            同理 $P\qty{Z=-1}=\dfrac{1}{3}$，于是 $Z$ 的概率分布为 $\begin{array}{c|ccc}
+            \item $Z=XY$ 的可能取值为 $-1,0,1$, 且 $P\qty{Z=1}=P\qty{X=1,Y=1}=\dfrac{1}{3}$, $$P\qty{Z=0}=P\qty{X=0,Y=*}+P\qty{X=*,Y=0}=\dfrac{1}{3}$$
+            同理 $P\qty{Z=-1}=\dfrac{1}{3}$, 于是 $Z$ 的概率分布为 $\begin{array}{c|ccc}
                 Z & -1          & 0           & 1           \\\hline
                 P & \frac{1}{3} & \frac{1}{3} & \frac{1}{3}
             \end{array}.$
-            \item 易求得 $\cov(X,Y)=0$，于是 $\rho_{XY}=0.\begin{array}{c|ccc}
+            \item 易求得 $\cov(X,Y)=0$, 于是 $\rho_{XY}=0.\begin{array}{c|ccc}
                 Y & -1          & 0           & 1           \\\hline
                 P & \frac{1}{3} & \frac{1}{3} & \frac{1}{3}
             \end{array}$
@@ -156,18 +156,18 @@
 \subsection{相关系数}
 
 \begin{definition}[相关系数]
-    对于随机变量 $X,Y$，$D(X)>0,D(Y)>0$，则称 $\dfrac{\cov(X,Y)}{\sqrt{D(X)}\sqrt{D(Y)}}$ 为随机变量 $X$ 和 $Y$ 的相关系数，记作 $\rho_{XY}$.
+    对于随机变量 $X,Y$, $D(X)>0,D(Y)>0$, 则称 $\dfrac{\cov(X,Y)}{\sqrt{D(X)}\sqrt{D(Y)}}$ 为随机变量 $X$ 和 $Y$ 的相关系数, 记作 $\rho_{XY}$.
 \end{definition}
 
 \begin{theorem}[相关系数的性质]
     \begin{enumerate}[label=(\arabic{*})]
         \item $|\rho_{XY}|\leqslant 1$;
-        \item $|\rho_{XY}|=1\Leftrightarrow $ 存在 $a,b$ 使得 $P{Y=aX+b}=1$，其中 $a>0$ 时，$\rho_{XY}=1$ (正线性相关); $a<0$ 时，$\rho_{XY}=-1$ (负线性相关).
+        \item $|\rho_{XY}|=1\Leftrightarrow $ 存在 $a,b$ 使得 $P{Y=aX+b}=1$, 其中 $a>0$ 时, $\rho_{XY}=1$ (正线性相关); $a<0$ 时, $\rho_{XY}=-1$ (负线性相关).
     \end{enumerate}
 \end{theorem}
 
 \begin{example}
-    设随机变量 $X$ 和 $Y$ 的联合概率分布为表 \ref{-101007018}，求 $X$ 和 $Y$ 的相关系数 $\rho.$
+    设随机变量 $X$ 和 $Y$ 的联合概率分布为表 \ref{-101007018}, 求 $X$ 和 $Y$ 的相关系数 $\rho.$
 \end{example}
 \begin{solution}
     \begin{minipage}{0.3\linewidth}
@@ -190,14 +190,14 @@
             \end{array},~\begin{array}{c|ccc}
                 Y & -1   & 0   & 1    \\\hline
                 P & 0.15 & 0.5 & 0.35
-            \end{array}$，那么
+            \end{array}$, 那么
         $$E(X)=0.6,~E(Y)=0.2,~E(XY)=\sum_i\sum_j x_iy_j p_{ij}=-0.08+0.20=0.12$$
-        所以 $\cov(X,Y)=E(XY)-E(X)E(Y)=0$，所以 $\rho_{XY}=\dfrac{\cov(X,Y)}{\sqrt{D(X)}\sqrt{D(Y)}}=0.$
+        所以 $\cov(X,Y)=E(XY)-E(X)E(Y)=0$, 所以 $\rho_{XY}=\dfrac{\cov(X,Y)}{\sqrt{D(X)}\sqrt{D(Y)}}=0.$
     \end{minipage}
 \end{solution}
 
 \begin{example}[1994 数一]
-    已知随机变量 $X$ 和 $Y$ 分布服从正态分布 $N\qty(1,3^2)$ 和 $N\qty(0,4^2)$，且 $X$ 与 $Y$ 的相关系数 $\rho_{XY}=-\dfrac{1}{2}$，
+    已知随机变量 $X$ 和 $Y$ 分布服从正态分布 $N\qty(1,3^2)$ 和 $N\qty(0,4^2)$, 且 $X$ 与 $Y$ 的相关系数 $\rho_{XY}=-\dfrac{1}{2}$, 
     设 $Z=\dfrac{X}{3}+\dfrac{Y}{2}$.\newline
     \begin{enumerate*}[label=(\arabic{*})]
         \item 求 $Z$ 的数学期望 $E(X)$ 和方差 $D(Z)$;
@@ -206,9 +206,9 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item $E(Z)=\dfrac{1}{3}E(X)+\dfrac{1}{2}E(Y)=\dfrac{1}{3}+0=\dfrac{1}{3}$，
+        \item $E(Z)=\dfrac{1}{3}E(X)+\dfrac{1}{2}E(Y)=\dfrac{1}{3}+0=\dfrac{1}{3}$, 
               $$D(Z)=\dfrac{1}{9}D(X)+\dfrac{1}{4}D(X)+2\cdot\dfrac{1}{3}\cdot\dfrac{1}{2}\cov(X,Y)=\dfrac{1}{9}D(X)+\dfrac{1}{4}D(X)+2\cdot\dfrac{1}{3}\cdot\dfrac{1}{2}\rho_{XY}\sqrt{D(X)}\sqrt{D(Y)}=3.$$
-        \item 由协方差的性质，
+        \item 由协方差的性质, 
               \begin{flalign*}
                   \cov(X,Z)=\cov\qty(X,\dfrac{1}{3}X+\dfrac{1}{2}Y)=\dfrac{1}{3}\cov(X,X)+\dfrac{1}{2}\cov(X,Y)=\dfrac{1}{3}D(X)+\dfrac{1}{2}\cdot\rho_{XY}\sqrt{D(X)}\sqrt{D(Y)}=0
               \end{flalign*}
@@ -217,7 +217,7 @@
 \end{solution}
 
 \begin{example}[2000 数一]
-    设二维随机变量 $(X,Y)$ 服从二维正态分布，则随机变量 $\xi=X+Y$ 与 $\eta=X-Y$ 不相关的充分必要条件为
+    设二维随机变量 $(X,Y)$ 服从二维正态分布, 则随机变量 $\xi=X+Y$ 与 $\eta=X-Y$ 不相关的充分必要条件为
     \begin{tasks}(2)
         \task $E(X)=E(Y)$
         \task $E\qty(X^2)-E^2(X)=E\qty(Y^2)-E^2(Y)$
@@ -226,19 +226,19 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    因为不相关，所以 $\rho_{\xi\eta}=0\Rightarrow \cov(\xi,\eta)=0$，于是
+    因为不相关, 所以 $\rho_{\xi\eta}=0\Rightarrow \cov(\xi,\eta)=0$, 于是
     \begin{flalign*}
         \cov(\xi,\eta)=E(\xi\eta)-E(\xi)E(\eta)=E\qty(X^2-Y^2)-E(X+Y)E(X-Y)=E\qty(X^2-Y^2)-E^2(X)+E^2(Y)=0
     \end{flalign*}
-    即 $E\qty(X^2)-E^2(X)=E\qty(Y^2)-E^2(Y)$，故选 B.
+    即 $E\qty(X^2)-E^2(X)=E\qty(Y^2)-E^2(Y)$, 故选 B.
 \end{solution}
 
 \begin{theorem}
-    当 $Y=aX+b$ 时，$\rho_{XY}=\sgn(a).$
+    当 $Y=aX+b$ 时, $\rho_{XY}=\sgn(a).$
 \end{theorem}
 
 \begin{example}
-    设随机变量 $X\sim N(0,1),~Y\sim N(1,4)$，且相关系数 $\rho_{XY}=1$，则
+    设随机变量 $X\sim N(0,1),~Y\sim N(1,4)$, 且相关系数 $\rho_{XY}=1$, 则
     \begin{tasks}(2)
         \task $P\qty{Y=-2X -1}=1$
         \task $P\qty{Y=2X -1}=1$
@@ -247,7 +247,7 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    用排除法，设 $Y=aX+b$，由 $\rho_{XY}=1\Rightarrow a>0$，排除 A、C，
-    由 $E(X)=0,~E(Y)=1$，且 $$E(Y)=E(aX+b)=aE(X)+b\Rightarrow b=1$$
-    排除 B，故选 D.
+    用排除法, 设 $Y=aX+b$, 由 $\rho_{XY}=1\Rightarrow a>0$, 排除 A、C, 
+    由 $E(X)=0,~E(Y)=1$, 且 $$E(Y)=E(aX+b)=aE(X)+b\Rightarrow b=1$$
+    排除 B, 故选 D.
 \end{solution}

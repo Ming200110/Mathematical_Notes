@@ -1,1 +1,33 @@
 \section{大数定律}
+
+大数定律是概率论中的一个基本定理, 描述了随机变量序列的均值在样本数量足够大的情况下会收敛于其数学期望的概率性现象. 大数定律是概率论和统计学中的重要定理之一, 对于理解随机现象的规律和稳定性具有重要意义.
+
+\subsection{Bernoulli 大数定律}
+
+\begin{theorem}[Bernoulli 大数定律]
+    设 $ n_{A} $ 是 $ n $ 重 Bernoulli 试验中事件 $ A $ 发生的次数, $ p(0<   p<1  )$ 是事件 $ A $ 在一次试验中发生的概率, 则对任意给定的正数 $ \varepsilon $, 有
+    $$\lim _{n \rightarrow \infty} P\left\{\left|\frac{n_{A}}{n}-p\right|<\varepsilon\right\}=1 .$$
+\end{theorem}
+
+\subsection{Chebyshev 大数定律}
+
+\begin{theorem}[Chebyshev 大数定律]
+    设 $ X_{1}, X_{2}, \cdots, X_{n}, \cdots $ 是相互独立的随机变量序列, 其数学期望与方差都存在, 且方差一致有界, 即存在正数 $ M $, 对任意 $ i(i=1,2, \cdots) $, 有
+    $$D\left(X_{i}\right) \leqslant M$$
+    则对任意给定的正数 $ \varepsilon $, 恒有
+    $$\lim _{n \rightarrow \infty} P\left\{\left|\frac{1}{n} \sum_{i=1}^{n} X_{i}-\frac{1}{n} \sum_{i=1}^{n} E\left(X_{i}\right)\right|>\varepsilon\right\}=0 .$$
+\end{theorem}
+
+这一定理说明, 经过算术平均后得到的随机变量 $\displaystyle \bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i} $ 在统计上具有一种稳定性, 它的取值将比较紧密地聚集在其期望附近. 这正是大数定律的含义, 在概率论中, 大数定律是随机现象的统计稳定性的深刻描述, 同时也是数理统计的重要理论基础.
+
+Bernoulli 大数定律是 Chebyshev 大数定律的特殊情况, 即随机变量序列 $\displaystyle X_{i} \sim b(1, p) ,  \sum_{i=1}^{n} X_{i} $ 是 $ n $ 次独立重复试验中 $ A $ 发生的次数 $ n_{A} $, 即 $\displaystyle \bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i} $ 为事件 $ A $ 发生的频率 $\displaystyle \frac{n_{A}}{n} $, 而 $\displaystyle \frac{1}{n} \sum_{i=1}^{n} E\left(X_{i}\right)=p $.
+
+\subsection{Khinchin 大数定律}
+
+\begin{theorem}[Khinchin 大数定律]
+    设随机变量序列 $ X_{1}, X_{2}, \cdots, X_{n}, \cdots $ 相互独立且服从相同的分布, 具有数学期望 $ E\left(X_{i}\right)=\mu, i=1,2, \cdots $, 则对任意给定的正数 $ \varepsilon $, 有
+    $$\lim _{n \rightarrow \infty} P\left\{\left|\frac{1}{n} \sum_{i=1}^{n} X_{i}-\mu\right|<\varepsilon\right\}=1 .$$
+\end{theorem}
+
+Khinchin 大数定律中对 $ D\left(X_{i}\right) $ 不再有要求, 即不用再验证方差 $ D\left(X_{i}\right) $ 是否存在. 
+因此, 它比 Chebyshev 大数定律使用更方便.

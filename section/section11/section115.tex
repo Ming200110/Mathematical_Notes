@@ -3,11 +3,11 @@
 \subsection{方程组的同解}
 
 \begin{theorem}[同解与秩的等价形式]
-    若 $\vb*{Ax}=\vb*{0}$ 与 $\vb*{Bx}=\vb*{0}$ 同解，它的充要条件为 $$\rank\vb*{A}=\rank\vb*{B}=\rank\mqty(\vb*{A}\\\vb*{B}).$$
+    若 $\vb*{Ax}=\vb*{0}$ 与 $\vb*{Bx}=\vb*{0}$ 同解, 它的充要条件为 $$\rank\vb*{A}=\rank\vb*{B}=\rank\mqty(\vb*{A}\\\vb*{B}).$$
 \end{theorem}
 
 \begin{theorem}
-    若 $\vb*{Ax}=\vb*{0}$ 的解都是 $\vb*{Bx}=\vb*{0}$ 的解，且 $\rank\vb*{A}=\rank\vb*{B}$，则 $\vb*{Ax}=\vb*{0}$ 与 $\vb*{Bx}=\vb*{0}$ 同解.
+    若 $\vb*{Ax}=\vb*{0}$ 的解都是 $\vb*{Bx}=\vb*{0}$ 的解, 且 $\rank\vb*{A}=\rank\vb*{B}$, 则 $\vb*{Ax}=\vb*{0}$ 与 $\vb*{Bx}=\vb*{0}$ 同解.
 \end{theorem}
 
 \begin{example}[2015 华南理工大学]
@@ -19,23 +19,23 @@
         \end{matrix}\right.~ (II):\left\{\begin{matrix}
             x_1  & + & bx_2   & + & cx_3     & = & 0 \\
             2x_1 & + & b^2x_2 & + & (c+1)x_3 & = & 0
-        \end{matrix}\right.$$同解，求 $a,b,c$.
+        \end{matrix}\right.$$同解, 求 $a,b,c$.
 \end{example}
 \begin{solution}
-    \textbf{法一: }注意到齐次方程组 (II) 的未知量个数大于方程的个数，所以 (II) 必有非零解，由题意设 (I) 与 (II) 同解，
-    因此 (I) 也有非零解，对 (I) 的系数矩阵 $\vb*{A}$ 做初等行变换，得
+    \textbf{法一: }注意到齐次方程组 (II) 的未知量个数大于方程的个数, 所以 (II) 必有非零解, 由题意设 (I) 与 (II) 同解, 
+    因此 (I) 也有非零解, 对 (I) 的系数矩阵 $\vb*{A}$ 做初等行变换, 得
     $$\vb*{A}=\mqty(1&2&3\\2&3&5\\1&1&a)\to\mqty(1&0&1\\0&1&1\\0&0&a-2)$$
-    因为 $\rank\vb*{A}<3$，所以 $a=2$，可求得方程组 (I) 的一个基础解系为 $\vb*{\xi}=(1,1,-1)^\top$，
+    因为 $\rank\vb*{A}<3$, 所以 $a=2$, 可求得方程组 (I) 的一个基础解系为 $\vb*{\xi}=(1,1,-1)^\top$, 
     将 $\vb*{\xi}$ 代入 (II) 可求得 $\begin{cases}
             b=0 \\c=1
         \end{cases}$ 或 $\begin{cases}
             b=1 \\c=2
-        \end{cases}$，当 $b=0,~c=1$ 时，(II) 的系数矩阵 $\vb*{B}=\mqty(1&0&1\\2&0&2)$，$\rank\vb*{B}<\rank\vb*{A}$，
+        \end{cases}$, 当 $b=0,~c=1$ 时, (II) 的系数矩阵 $\vb*{B}=\mqty(1&0&1\\2&0&2)$, $\rank\vb*{B}<\rank\vb*{A}$, 
     可见方程组 (II) 与 (I) 不同解;
-    当 $b=1,~c=2$ 时，(II) 的系数矩阵 $\vb*{B}=\mqty(1&1&2\\2&1&3)\to\mqty(1&0&1\\0&1&1)$，所以 (II) 与 (I) 同解，
-    综上所述，当且仅当 $a=2,~b=1,~c=2$ 时，方程组 (I) 与方程组 (II) 同解.\\
-    \textbf{法二: }因为 (I) 与 (II) 同解，所以 $\rank\vb*{A}=\rank\vb*{B}=\rank\mqty(\vb*{A}\\\vb*{B})$，其中 $\vb*{A},~\vb*{B}$ 为方程组 (I) 和 (II) 的系数矩阵，
-    因为 $\rank\vb*{B}\leqslant 2$，所以 $\rank\vb*{A}\leqslant 2\Rightarrow \det\vb*{A}=0\Rightarrow a=2$，当 $a=2$ 时，$\vb*{A}=\mqty(1&2&3\\2&3&5\\1&1&2)\to\mqty(1&1&2\\0&1&1\\0&0&0)$，那么
+    当 $b=1,~c=2$ 时, (II) 的系数矩阵 $\vb*{B}=\mqty(1&1&2\\2&1&3)\to\mqty(1&0&1\\0&1&1)$, 所以 (II) 与 (I) 同解, 
+    综上所述, 当且仅当 $a=2,~b=1,~c=2$ 时, 方程组 (I) 与方程组 (II) 同解.\\
+    \textbf{法二: }因为 (I) 与 (II) 同解, 所以 $\rank\vb*{A}=\rank\vb*{B}=\rank\mqty(\vb*{A}\\\vb*{B})$, 其中 $\vb*{A},~\vb*{B}$ 为方程组 (I) 和 (II) 的系数矩阵, 
+    因为 $\rank\vb*{B}\leqslant 2$, 所以 $\rank\vb*{A}\leqslant 2\Rightarrow \det\vb*{A}=0\Rightarrow a=2$, 当 $a=2$ 时, $\vb*{A}=\mqty(1&2&3\\2&3&5\\1&1&2)\to\mqty(1&1&2\\0&1&1\\0&0&0)$, 那么
     $$\rank\mqty(\vb*{A}\\\vb*{B})=\mqty(1&1&2\\0&1&1\\0&0&0\\1&b&c\\2&b^2&c+1)=\rank\mqty(1&1&2\\0&1&1\\0&0&0\\0&b-1&c-2\\0&b^2-2&c-3)=2\Rightarrow \begin{cases}
             b-1=c-2 \\
             b^2-2=c-3
@@ -44,13 +44,13 @@
         \end{cases}\text{或} \begin{cases}
             b=1 \\c=2
         \end{cases}$$
-    当 $b=0,~c=1$ 时，$\rank\vb*{B}=\rank\mqty(1&0&1\\2&0&2)=1\neq2$，故舍去; 当 $b=1,~c=2$ 时，$\rank\vb*{B}=\rank\mqty(1&1&2\\2&1&3)=2$，因此 $a=2,~b=1,~c=2.$
+    当 $b=0,~c=1$ 时, $\rank\vb*{B}=\rank\mqty(1&0&1\\2&0&2)=1\neq2$, 故舍去; 当 $b=1,~c=2$ 时, $\rank\vb*{B}=\rank\mqty(1&1&2\\2&1&3)=2$, 因此 $a=2,~b=1,~c=2.$
 \end{solution}
 
 \subsection{方程组的公共解}
 
 \begin{theorem}[公共解的交集]
-    设 $\vb*{A}_{m\times n},~\vb*{B}_{s\times n}$ 满足 $\vb*{A}_{m\times n}\vb*{x}=\vb*{0}$ 与 $\vb*{B}_{s\times n}\vb*{x}=\vb*{0}$ 有公共解，其公共解也满足 $$\mqty(\vb*{A}_{m\times n}\\\vb*{B}_{s\times n})\vb*{x}=\vb*{0}.$$
+    设 $\vb*{A}_{m\times n},~\vb*{B}_{s\times n}$ 满足 $\vb*{A}_{m\times n}\vb*{x}=\vb*{0}$ 与 $\vb*{B}_{s\times n}\vb*{x}=\vb*{0}$ 有公共解, 其公共解也满足 $$\mqty(\vb*{A}_{m\times n}\\\vb*{B}_{s\times n})\vb*{x}=\vb*{0}.$$
 \end{theorem}
 
 \begin{example}
@@ -63,7 +63,7 @@
         \end{matrix}\right.$ 的公共解.
 \end{example}
 \begin{solution}
-    对方程组的增广矩阵施行初等行变换将其转变为最简行阶梯形，有
+    对方程组的增广矩阵施行初等行变换将其转变为最简行阶梯形, 有
     \begin{flalign*}
         \begin{pNiceArray}{cccc:c}
             1&1&1&0&1\\
@@ -96,17 +96,17 @@
             x_1+x_3=2 \\
             x_2=-1    \\
             x_4=\dfrac{5}{2}
-        \end{cases}$，令 $x_3=\xi$ (没有下划线)，则公共解为 $\mqty(2-\xi,-1,\xi,\dfrac{5}{2})^\top.$
+        \end{cases}$, 令 $x_3=\xi$ (没有下划线), 则公共解为 $\mqty(2-\xi,-1,\xi,\dfrac{5}{2})^\top.$
 \end{solution}
 
 \begin{example}
     已知两个四元齐次线性方程组 $(I),(II)$ 其中 $(I)$ 的一个基础解系为 $$(1,-2,1,3)^\top,~(3,-2,-1,3)^\top,~(II)\left\{\begin{matrix}
             x_1  & - & x_2  & + & x_3  &   &      & = & 0 \\
             2x_1 & + & 3x_2 & + & ax_3 & + & 2x_4 & = & 0
-        \end{matrix}\right.$$ 若 $(I)$ 与 $(II)$ 有非零公共解，求所有公共解.
+        \end{matrix}\right.$$ 若 $(I)$ 与 $(II)$ 有非零公共解, 求所有公共解.
 \end{example}
 \begin{solution}
-    由题意可知，$$\mqty(x_1\\x_2\\x_3\\x_4)=k_1\mqty(1\\-2\\1\\3)+k_2\mqty(3\\-2\\-1\\3)\Rightarrow\left\{\begin{matrix}
+    由题意可知, $$\mqty(x_1\\x_2\\x_3\\x_4)=k_1\mqty(1\\-2\\1\\3)+k_2\mqty(3\\-2\\-1\\3)\Rightarrow\left\{\begin{matrix}
             k_1   & + & 3k_2 & = & x_1 \\
             -2k_1 & - & 2k_2 & = & x_2 \\
             k_1   & - & k_2  & = & x_3 \\
@@ -130,7 +130,7 @@
     由上式三四行可知方程组 $(III)\left\{\begin{matrix}
             x_1 & + & x_2             & + & x_3 &   &     & = & 0 \\
                 &   & \dfrac{3}{2}x_2 &   &     & + & x_4 & = & 0
-        \end{matrix}\right.$ 与方程组 $(I)$ 同解，又因为 $(I)$ 与 $(II)$ 有非零公共解，即 $(III)$ 与 $(II)$ 有非零公共解，那么
+        \end{matrix}\right.$ 与方程组 $(I)$ 同解, 又因为 $(I)$ 与 $(II)$ 有非零公共解, 即 $(III)$ 与 $(II)$ 有非零公共解, 那么
         $$\vb*{A}=\mqty(1&1&1&0\\0&\dfrac{3}{2}&0&1\\[6pt]1&-1&1&0\\2&3&a&2)\xrightarrow[\substack{r_2\times\frac{2}{3}\\r_3+2r_2\\r_4-r_2}]{\substack{r_3-r_1\\r_4-2r_1}}\mqty(1&1&1&0\\0&1&0&\dfrac{2}{3}\\[6pt]0&0&0&\dfrac{4}{3}\\[6pt]0&0&a-2&\dfrac{4}{3})$$
-        因为矩阵 $\vb*{A}$ 有非零解，所以 $\rank\vb*{A}<4$，即 $a-2=0$，解得 $a=2$，所以矩阵 $\vb*{A}=\mqty(1&1&1&0\\0&1&0&\dfrac{2}{3}\\[6pt]0&0&0&\dfrac{4}{3}\\[6pt]0&0&0&0)$，那么易得公共解.
+        因为矩阵 $\vb*{A}$ 有非零解, 所以 $\rank\vb*{A}<4$, 即 $a-2=0$, 解得 $a=2$, 所以矩阵 $\vb*{A}=\mqty(1&1&1&0\\0&1&0&\dfrac{2}{3}\\[6pt]0&0&0&\dfrac{4}{3}\\[6pt]0&0&0&0)$, 那么易得公共解.
 \end{solution}

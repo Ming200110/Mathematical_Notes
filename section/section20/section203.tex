@@ -1,1 +1,29 @@
-\section{样本容量及概率}
+\section{正态总体的抽样分布}
+
+设总体 $ X $ (不管服从什么分布, 只要均值和方差存在) 的均值为 $ \mu $, 方差为 $ \sigma^{2}, X_{1}, X_{2}, \cdots ,  X_{n} $ 为来自 $ X $ 的一个样本, 样本均值 $\displaystyle \bar{X}=\frac{1}{n} \sum_{i=1}^{n} X_{i} $, 样本方差 $\displaystyle S^{2}=\frac{1}{n-1} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2} $, 则有 $\displaystyle E(\bar{X})=\mu, D(\bar{X})=\frac{\sigma^{2}}{n}, E\left(S^{2}\right)=\sigma^{2} $.
+
+鉴于正态总体在数理统计中的重要性, 我们将不加证明地给出有关来自于正态总体样本均值及样本方差的统计量分布的结论. 这些结论将在总体参数的区间估计和假设检验问题中用到.
+
+\subsection{单正态总体的抽样分布}
+
+\begin{theorem}[单正态总体的抽样分布]
+    设 $ X_{1}, X_{2}, \cdots, X_{n} $ 是来自正态总体 $ X \sim N\left(\mu, \sigma^{2}\right) $ 的简单随机样本, 样本均值为 $ \bar{X} $, 样本方差为 $ S^{2}$, 则
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\bar{X} \sim N\left(\mu, \dfrac{\sigma^{2}}{n}\right), \dfrac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1) $;
+        \item $\bar{X} $ 与 $ S^{2} $ 相互独立, 且
+              $\displaystyle \dfrac{(n-1) S^{2}}{\sigma^{2}}=\dfrac{1}{\sigma^{2}} \sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2} \sim \chi^{2}(n-1)$;
+        \item $\displaystyle \dfrac{\bar{X}-\mu}{S / \sqrt{n}} \sim t(n-1) $;
+        \item $\displaystyle \dfrac{1}{\sigma^{2}} \sum_{i=1}^{n}\left(X_{i}-\mu\right)^{2} \sim \chi^{2}(n) .$
+    \end{enumerate}
+\end{theorem}
+
+\subsection{双正态总体的抽样分布}
+
+\begin{theorem}[双正态总体的抽样分布]
+    设 $ X_{1}, X_{2}, \cdots, X_{n_{1}} $ 与 $ Y_{1}, Y_{2}, \cdots, Y_{n_{2}} $ 分别为来自于总体 $ X \sim N\left(\mu_{1}, \sigma_{1}^{2}\right) $ 和 $ Y \sim N\left(\mu_{2}, \sigma_{2}^{2}\right) $ 的样本, 且这两个样本相互独立. 设 $\displaystyle \bar{X}=\dfrac{1}{n_{1}} \sum_{i=1}^{n_{1}} X_{i} $, $\displaystyle \bar{Y}=\dfrac{1}{n_{2}} \sum_{i=1}^{n_{2}} Y_{i} $ 分别是两个样本的样本均值, $$\displaystyle S_{1}^{2}=\dfrac{1}{n_{1}-1} \sum_{i=1}^{n_{1}}\left(X_{i}-\bar{X}\right)^{2}, S_{2}^{2}=\dfrac{1}{n_{2}-1} \sum_{i=1}^{n_{2}}\left(Y_{i}-\bar{Y}\right)^{2}$$ 分别是两个样本的样本方差, 则有:
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\displaystyle \dfrac{\bar{X}-\bar{Y}-\left(\mu_{1}-\mu_{2}\right)}{\sqrt{\dfrac{\sigma_{1}^{2}}{n_{1}}+\dfrac{\sigma_{2}^{2}}{n_{2}}}} \sim N(0,1) ;$
+        \item $\displaystyle \dfrac{S_{1}^{2} / S_{2}^{2}}{\sigma_{1}^{2} / \sigma_{2}^{2}} \sim F\left(n_{1}-1, n_{2}-1\right) ;$
+        \item $\displaystyle \dfrac{\bar{X}-\bar{Y}-\left(\mu_{1}-\mu_{2}\right)}{S_{\mathrm{w}} \sqrt{\dfrac{1}{n_{1}}+\dfrac{1}{n_{2}}}} \sim t\left(n_{1}+n_{2}-2\right) $, 其中 $\displaystyle S_{\mathrm{w}}^{2}=\dfrac{\left(n_{1}-1\right) S_{1}^{2}+\left(n_{2}-1\right) S_{2}^{2}}{n_{1}+n_{2}-2} .$
+    \end{enumerate}
+\end{theorem}

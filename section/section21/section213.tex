@@ -1,36 +1,36 @@
 \section{单侧置信区间}
 
-单侧置信区间是指在统计学中用于估计参数的一种区间估计方法，只考虑了参数的一个方向. 单侧置信区间通常用于确定参数的下限或上限，而不是同时确定参数的上限和下限. 
+单侧置信区间是指在统计学中用于估计参数的一种区间估计方法, 只考虑了参数的一个方向. 单侧置信区间通常用于确定参数的下限或上限, 而不是同时确定参数的上限和下限. 
 
 \begin{definition}[单侧置信下限]
-    对于给定值 $ \alpha(0<\alpha<1), \underline{\theta}=\theta\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 是由样本 $ X_{1}, X_{2}, \cdots, X_{n}$ 确定的统计量，对于任意的 $ \theta \in \Theta $ 满足 $ P\qty{\theta>\underline{\theta}} \geqslant 1-\alpha$，称随机区间 $ (\underline{\theta},+\infty) $ 为参数 $ \theta $ 的置信水平为 $ 1-\alpha $ 的\textit{单侧置信区间}，$ \theta $ 称为 $ \theta $ 的置信水平为 $ 1-\alpha $ 的\textit{单侧置信下限}.
+    对于给定值 $ \alpha(0<\alpha<1), \underline{\theta}=\theta\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 是由样本 $ X_{1}, X_{2}, \cdots, X_{n}$ 确定的统计量, 对于任意的 $ \theta \in \Theta $ 满足 $ P\qty{\theta>\underline{\theta}} \geqslant 1-\alpha$, 称随机区间 $ (\underline{\theta},+\infty) $ 为参数 $ \theta $ 的置信水平为 $ 1-\alpha $ 的\textit{单侧置信区间}, $ \theta $ 称为 $ \theta $ 的置信水平为 $ 1-\alpha $ 的\textit{单侧置信下限}.
 \end{definition}
 
 \begin{definition}[单侧置信上限]
-    对于给定值 $ \alpha(0<\alpha<1), \bar{\theta}=\bar{\theta}\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 是由样本 $ X_{1}, X_{2}, \cdots, X_{n} $ 确定的统计量，对于任意的 $ \theta \in \Theta $ 满足 $ P\{\theta<\bar{\theta}\} \geqslant 1-\alpha$，称随机区间 $ (-\infty, \bar{\theta}) $ 为参数 $ \theta $ 的置信水平为 $ 1-\alpha $ 的\textit{单侧置信区间}，$ \bar{\theta} $ 称为 $ \theta $ 的置信水平为 $ 1-\alpha $ 的\textit{单侧置信上限}.
+    对于给定值 $ \alpha(0<\alpha<1), \bar{\theta}=\bar{\theta}\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 是由样本 $ X_{1}, X_{2}, \cdots, X_{n} $ 确定的统计量, 对于任意的 $ \theta \in \Theta $ 满足 $ P\{\theta<\bar{\theta}\} \geqslant 1-\alpha$, 称随机区间 $ (-\infty, \bar{\theta}) $ 为参数 $ \theta $ 的置信水平为 $ 1-\alpha $ 的\textit{单侧置信区间}, $ \bar{\theta} $ 称为 $ \theta $ 的置信水平为 $ 1-\alpha $ 的\textit{单侧置信上限}.
 \end{definition}
 
 单侧置信上限和单侧置信下限的求法与双侧置信区间的求法类似, 步骤如下:
 \begin{enumerate}[label=(\arabic{*})]
     \item 选择枢轴量的方法与双侧置信区间枢轴量的确定方法是相同的;
-    \item 对于给定的置信水平 $ 1-\alpha $，若求单侧置信下限，根据 $ P\{\theta>\underline{\theta}\} \geqslant 1-\alpha $，若求单侧置信上限，根据 $ P\{\theta<\bar{\theta}\} \geqslant 1-\alpha$，求出分位数 $ \underline{\theta} $ 或者 $ \bar{\theta} $;
-    \item 由 $ \theta>\underline{\theta} $ 或者 $ \theta<\bar{\theta} $，作恒等变形后解出参数 $ \theta $ 的取值范围，即所求的单侧置信区间;
-    \item 代人已知样本数据进行计算，求出具体区间.
+    \item 对于给定的置信水平 $ 1-\alpha $, 若求单侧置信下限, 根据 $ P\{\theta>\underline{\theta}\} \geqslant 1-\alpha $, 若求单侧置信上限, 根据 $ P\{\theta<\bar{\theta}\} \geqslant 1-\alpha$, 求出分位数 $ \underline{\theta} $ 或者 $ \bar{\theta} $;
+    \item 由 $ \theta>\underline{\theta} $ 或者 $ \theta<\bar{\theta} $, 作恒等变形后解出参数 $ \theta $ 的取值范围, 即所求的单侧置信区间;
+    \item 代人已知样本数据进行计算, 求出具体区间.
 \end{enumerate}
 
 \begin{example}
-    从一批电视机中随机地抽取 $6$ 台做寿命试验，测得寿命 (单位: h) 为
+    从一批电视机中随机地抽取 $6$ 台做寿命试验, 测得寿命 (单位: h) 为
     $$\begin{array}{llllll}
             24000 & 25500 & 30100 & 28530 & 30150 & 29870
         \end{array}$$
-    设电视机的寿命服从正态分布，求电视机平均寿命的单侧置信下限 ($\alpha=0.1$) .
+    设电视机的寿命服从正态分布, 求电视机平均寿命的单侧置信下限 ($\alpha=0.1$) .
 \end{example}
 \begin{solution}
-    设电视机的寿命 $X\sim N\qty(\mu,\sigma^2)$，$\sigma^2$ 未知，由于 $\dfrac{\bar{X}-\mu}{S/\sqrt{n}}\sim t(n-1)$ 含有待估计参数 $\mu$，且不含有其他未知参数，故使用 $\dfrac{\bar{X}-\mu}{S/\sqrt{n}}\sim t(n-1)$ 作为枢纽量，则 
+    设电视机的寿命 $X\sim N\qty(\mu,\sigma^2)$, $\sigma^2$ 未知, 由于 $\dfrac{\bar{X}-\mu}{S/\sqrt{n}}\sim t(n-1)$ 含有待估计参数 $\mu$, 且不含有其他未知参数, 故使用 $\dfrac{\bar{X}-\mu}{S/\sqrt{n}}\sim t(n-1)$ 作为枢纽量, 则 
     $$P\qty{\dfrac{\bar{X}-\mu}{S/\sqrt{n}}\sim t(n-1)<t_{\alpha}(n-1)}=1-\alpha$$
     即 
     $$P\qty{\mu>\bar{X}-t_{\alpha}(n-1)S/\sqrt{n}}=1-\alpha$$
     于是得到 $\mu$ 的置信水平为 $1-\alpha$ 的单侧置信下限为 $$\bar{X}-t_{\alpha}(n-1)S/\sqrt{n}$$
-    根据已知数据，得 $ \bar{x}=28025, s=2647.9, n=6 , $由 $ \alpha=0.1 $，
-    查表知 $ t_{\alpha}(n-1)=t_{0.1}(5)=  1.4759 $，于是得到 $ \mu $ 的置信水平为 $0.9$ 的单侧置信下限为 $ 28025-1.4759 \times 2647.9 / \sqrt{6}=  26430.$
+    根据已知数据, 得 $ \bar{x}=28025, s=2647.9, n=6 , $由 $ \alpha=0.1 $, 
+    查表知 $ t_{\alpha}(n-1)=t_{0.1}(5)=  1.4759 $, 于是得到 $ \mu $ 的置信水平为 $0.9$ 的单侧置信下限为 $ 28025-1.4759 \times 2647.9 / \sqrt{6}=  26430.$
 \end{solution}

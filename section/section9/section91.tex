@@ -3,34 +3,34 @@
 \subsection{行列式的定义及性质}
 
 \begin{definition}
-    $n $ 级排列由 $ 1,2, \cdots, n $ 组成的一个有序数组称为一个 $ n $ 级排列，通常记为 $ i_{1} i_{2} \cdots i_{n} $.
+    $n $ 级排列由 $ 1,2, \cdots, n $ 组成的一个有序数组称为一个 $ n $ 级排列, 通常记为 $ i_{1} i_{2} \cdots i_{n} $.
 \end{definition}
 \begin{definition}
-    在一个排列中，如果一对数的前后位置与大小顺序相反，即前面的数大于后面的数，则它们构成一个逆序.
+    在一个排列中, 如果一对数的前后位置与大小顺序相反, 即前面的数大于后面的数, 则它们构成一个逆序.
 \end{definition}
 \begin{definition}
-    一个排列中的逆序总数，称为这个排列的逆序数，通常记为 $ \tau\left(i_{1} i_{2} \cdots i_{n}\right) $.
+    一个排列中的逆序总数, 称为这个排列的逆序数, 通常记为 $ \tau\left(i_{1} i_{2} \cdots i_{n}\right) $.
 \end{definition}
 \begin{definition}
-    逆序数为奇数 (偶数) 的排列，称为奇 (偶) 排列.
+    逆序数为奇数 (偶数) 的排列, 称为奇 (偶) 排列.
 \end{definition}
 \begin{definition}
-    把一个排列中某两个数的位置互换，而其余的数不动，就得到另一个排列，这样的一个变换称为一次对换.
+    把一个排列中某两个数的位置互换, 而其余的数不动, 就得到另一个排列, 这样的一个变换称为一次对换.
 \end{definition}
 \begin{theorem}
-    任意一个排列经过一次对换后，奇偶性改变.
+    任意一个排列经过一次对换后, 奇偶性改变.
 \end{theorem}
 \begin{theorem}
-    $ n $ 级排列共有 $ n! $ 种，奇偶排列各占一半.
+    $ n $ 级排列共有 $ n! $ 种, 奇偶排列各占一半.
 \end{theorem}
 
 \begin{example}
-    选择 $i$ 与 $k$，使 $a_{1i}a_{32}a_{4k}a_{25}a_{53}$ 成为五阶行列式中一个带负号的项.
+    选择 $i$ 与 $k$, 使 $a_{1i}a_{32}a_{4k}a_{25}a_{53}$ 成为五阶行列式中一个带负号的项.
 \end{example}
 \begin{solution}
-    将给定的项改写成行标自然顺序，即 $$a_{1i}a_{25}a_{32}a_{4k}a_{53}$$
-    列标构成的排列 $i52k4$ 中缺 $1$ 和 $4$，令 $i=1,k=4,\tau(15243)=3+1=4$，故该项带正号;
-    令 $i=4,k=1,\tau(45213)=3+3+1=7$，故该项带负号.
+    将给定的项改写成行标自然顺序, 即 $$a_{1i}a_{25}a_{32}a_{4k}a_{53}$$
+    列标构成的排列 $i52k4$ 中缺 $1$ 和 $4$, 令 $i=1,k=4,\tau(15243)=3+1=4$, 故该项带正号;
+    令 $i=4,k=1,\tau(45213)=3+3+1=7$, 故该项带负号.
 \end{solution}
 
 \begin{example}
@@ -42,27 +42,27 @@
         \end{vmatrix}$ 中 $x^4$ 与 $x^3$ 的系数.
 \end{example}
 \begin{solution}
-    只有行列式的对角线上的元素相乘才出现 $x^4$，并且带正号，于是 $x^4$ 的系数为 $2$；
-    同理，含 $x^3$ 的项只有一项，即 $$x\cdot 1\cdot x\cdot x=x^3$$
-    而且其列标所构成的排列为 $2134$，于是 $\tau(2134)=1$，即 $x^3$ 的系数为 $-1.$
+    只有行列式的对角线上的元素相乘才出现 $x^4$, 并且带正号, 于是 $x^4$ 的系数为 $2$；
+    同理, 含 $x^3$ 的项只有一项, 即 $$x\cdot 1\cdot x\cdot x=x^3$$
+    而且其列标所构成的排列为 $2134$, 于是 $\tau(2134)=1$, 即 $x^3$ 的系数为 $-1.$
 \end{solution}
 
 \begin{definition}
     $~ \left|\begin{array}{cccc}a_{11} & a_{12} & \cdots & a_{1 n} \\ a_{21} & a_{22} & \cdots & a_{2 n} \\ \vdots & \vdots & & \vdots \\ a_{n 1} & a_{n 2} & \cdots & a_{n n}\end{array}\right| $
-    是所有取自不同行不同列的 $ n $ 个元素的乘积 $ a_{1_{1}} a_{2 j_{2}} \cdots a_{n j_{n}} $ 的代数和，这里 $ j_{1} j_{2} \cdots j_{n} $ 是一个 $ n $ 级排列.
-    当 $ j_{1} j_{2} \cdots j_{n} $ 是偶排列时，该项前面带正号; 当 $ j_{1} j_{2} \cdots j_{n} $ 是奇排列时，该项前面带负号，即
+    是所有取自不同行不同列的 $ n $ 个元素的乘积 $ a_{1_{1}} a_{2 j_{2}} \cdots a_{n j_{n}} $ 的代数和, 这里 $ j_{1} j_{2} \cdots j_{n} $ 是一个 $ n $ 级排列.
+    当 $ j_{1} j_{2} \cdots j_{n} $ 是偶排列时, 该项前面带正号; 当 $ j_{1} j_{2} \cdots j_{n} $ 是奇排列时, 该项前面带负号, 即
     $$\left|\begin{array}{cccc}
             a_{11}  & a_{12}  & \cdots & a_{1 n} \\
             a_{21}  & a_{22}  & \cdots & a_{2 n} \\
             \vdots  & \vdots  &        & \vdots  \\
             a_{n 1} & a_{n 2} & \cdots & a_{n n}
         \end{array}\right|=\sum_{j_{1} j_{2} \cdots j_{n}}(-1)^{\tau\left(j_{j_{2}} \cdots j_{n}\right)} a_{1 j_{1}} a_{2 j_{2}} \cdots a_{n j_{n}}$$
-    其中 $ \displaystyle\sum_{j_{1} j_{2} \cdots j_{n}} $ 表示对所有 $ n $ 级排列求和. $ n $ 阶行列式有时简记为 $ \left|a_{i j}\right|_{n} $，而且有如下另外两种类似的定义:
+    其中 $ \displaystyle\sum_{j_{1} j_{2} \cdots j_{n}} $ 表示对所有 $ n $ 级排列求和. $ n $ 阶行列式有时简记为 $ \left|a_{i j}\right|_{n} $, 而且有如下另外两种类似的定义:
     $$\left|a_{i j}\right|_{n}=\sum_{i_{1} i_{2} \cdots i_{n}}(-1)^{\tau\left(i_{1} i_{2} \cdots i_{n}\right)} a_{i_{1} 1} a_{i_{2} 2} \cdots a_{i_{n} n}$$
     和 $$\left|a_{i j}\right|_{n}=\sum_{\substack{i_{i} i_{2} \cdots i_{n} \\  j_{1} j_{2} \cdots j_{n}}}(-1)^{\tau\left(i_{1} i_{2} \cdots i_{n}\right)+\tau\left(j_{j_{2}} \cdots \cdot j_{n}\right)} a_{i_{1} j_{1}} a_{i_{2} j_{2}} \cdots a_{i_{n_{n}} j_{n}} .$$
 \end{definition}
 
-由 $ n $ 级排列的性质可知，$n $ 阶行列式共有 $ n! $ 项，其中冠以正号的项和冠以负号的项 (不算元素本身所带的负号) 各占一半.
+由 $ n $ 级排列的性质可知, $n $ 阶行列式共有 $ n! $ 项, 其中冠以正号的项和冠以负号的项 (不算元素本身所带的负号) 各占一半.
 
 \begin{example}
     \label{n jie hang lie shi wei fen fa}
@@ -83,7 +83,7 @@
         \end{vmatrix}.$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    从行列式的定义出发予以证明，
+    从行列式的定义出发予以证明, 
     \begin{flalign*}
          & \frac{\dd  }{\dd  x}
         \begin{vmatrix}
@@ -107,23 +107,23 @@
 \end{proof}
 
 \begin{theorem}
-    行列式 $ D $ 与它的转置行列式 $ D^{\top} $ (将 $ D $ 行的项转为列的项，如第 1 行转为第 1 列，$ \cdots $，第 $ n $ 行转为第 $ n $ 列) 相等.
+    行列式 $ D $ 与它的转置行列式 $ D^{\top} $ (将 $ D $ 行的项转为列的项, 如第 1 行转为第 1 列, $ \cdots $, 第 $ n $ 行转为第 $ n $ 列) 相等.
 \end{theorem}
 \begin{theorem}
-    互换行列式的两行 (列)，行列式变号 (例如，交换第 1 行和第 2 行，记为 $ r_{1} \leftrightarrow r_{2} $; 交换第 1 列和第 2 列，
+    互换行列式的两行 (列), 行列式变号 (例如, 交换第 1 行和第 2 行, 记为 $ r_{1} \leftrightarrow r_{2} $; 交换第 1 列和第 2 列, 
     记为 $ c_{1} \leftrightarrow c_{2} $).
 \end{theorem}
 \begin{theorem}
-    行列式的某一行(列) 中所有的元素都乘以同一数 $ k $，等于用数 $ k $ 乘此行列式.
+    行列式的某一行(列) 中所有的元素都乘以同一数 $ k $, 等于用数 $ k $ 乘此行列式.
 \end{theorem}
 \begin{inference}
     行列式中某一行 (列) 的所有元素的公因子可以提到整个行列式的外面.
 \end{inference}
 \begin{theorem}
-    行列式中如果有两行 (列) 元素成比例，则此行列式等于零.
+    行列式中如果有两行 (列) 元素成比例, 则此行列式等于零.
 \end{theorem}
 \begin{theorem}
-    若行列式的某一列 (行) 的所有元素都是两数之和，例如第 $ i $ 列的元素都是两数之和，即
+    若行列式的某一列 (行) 的所有元素都是两数之和, 例如第 $ i $ 列的元素都是两数之和, 即
     $$\begin{vmatrix}
             a_{11} & a_{12} & \cdots & a_{1i}+a_{1i}' & \cdots & a_{1n} \\
             a_{21} & a_{22} & \cdots & a_{2i}+a_{2i}' & \cdots & a_{2n} \\
@@ -145,7 +145,7 @@
         \end{vmatrix}$$
 \end{theorem}
 \begin{theorem}
-    把行列式的某一行 (列) 的各元素乘以同一数然后加到另一行 (列) 对应的元素上，行列式不变.
+    把行列式的某一行 (列) 的各元素乘以同一数然后加到另一行 (列) 对应的元素上, 行列式不变.
 \end{theorem}
 
 常见的行列式展开.
@@ -212,14 +212,14 @@
 \subsection{行列式按行 (列) 展开定理}
 
 \begin{theorem}[Laplace 展开定理]
-    取定行指标 $i_1,i_2,\cdots,i_p,1\leqslant i_1<i_2<\cdots<i_p\leqslant n$，遍取行列式 $\det\vb*{A}$ 中第 $i_1,i_2,\cdots,i_p$ 行上的 $p$ 阶子式，
-    并分别乘以相应的代数余子式，其和即为 $\det\vb*{A}$，具体地说，有
+    取定行指标 $i_1,i_2,\cdots,i_p,1\leqslant i_1<i_2<\cdots<i_p\leqslant n$, 遍取行列式 $\det\vb*{A}$ 中第 $i_1,i_2,\cdots,i_p$ 行上的 $p$ 阶子式, 
+    并分别乘以相应的代数余子式, 其和即为 $\det\vb*{A}$, 具体地说, 有
     $$\det\vb*{A} =\sum_{1\leqslant j_1<j_2<\cdots<j_p\leqslant n}\vb*{A}
         \mqty(i_1i_2\cdots i_p\\j_1j_2\cdots j_p)
         \qty[(-1)^{\sum\limits_{k=1}^pi_k+\sum\limits_{k=1}^pj_k}\vb*{A}
             \mqty(i_{p+1}i_{p+2}\cdots i_n\\
             j_{p+1}j_{p+2}\cdots j_n)]$$
-    其中 $i_1i_2\cdots i_pi_{p+1}\cdots i_n$ 和 $j_1j_2\cdots j_pj_{p+1}\cdots j_n$ 都是 $1,2,\cdots,n$ 的排列，
+    其中 $i_1i_2\cdots i_pi_{p+1}\cdots i_n$ 和 $j_1j_2\cdots j_pj_{p+1}\cdots j_n$ 都是 $1,2,\cdots,n$ 的排列, 
     并且 $1\leqslant i_{p+1}<i_{p+2}<\cdots\leqslant i_n,1\leqslant j_{p+1}<j_{p+2}<\cdots\leqslant j_n$.
 \end{theorem}
 
@@ -250,14 +250,14 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 将行列式 $D$ 按第 1 列、第 3 列作 Laplace 展开，得到
+        \item 将行列式 $D$ 按第 1 列、第 3 列作 Laplace 展开, 得到
               \begin{flalign*}
                   D & =\sum_{1\leqslant i_1<i_2\leqslant 5}\vb*{A} \mqty(i_1 & i_2 \\1&3)\qty[(-1)^{i_1+i_2+1+3}\vb*{A}\mqty(i_3&i_4&i_5\\2&4&5)]\\
                     & =(-1)^{1+3+1+3}\mqty|-4                                & 2   \\2&1|\mqty|3&1&-5\\-1&-1&0\\4&2&5|+(-1)^{1+4+1+3}\mqty|-4&2\\-1&3|\mqty|3&1&-5\\-3&-3&1\\4&2&5|\\
                     & ~  +(-1)^{3+4+1+3}\mqty|2                              & 1   \\-1&3|\mqty|1&-2&1\\3&1&-5\\4&2&5|\\
                     & =-8\times(-20)-(-10)\times(-62)-7\times87=-1069.
               \end{flalign*}
-        \item 将行列式 $D$ 按第 3 列、第 4 列和第 5 列作 Laplace 展开，得到
+        \item 将行列式 $D$ 按第 3 列、第 4 列和第 5 列作 Laplace 展开, 得到
               \begin{flalign*}
                   D & =\sum_{1\leqslant i_1<i_2<i_3\leqslant 6}\vb*{A}\mqty(i_1 & i_2 & i_3 \\3&4&5)\qty[(-1)^{i_1+i_2+i_3+3+4+5}\vb*{A}\mqty(i_4&i_5&i_6\\1&2&6)]\\
                     & =(-1)^{3+4+5+3+4+5}\mqty|1                                & 1   & 1   \\x_1&x_2&x_3\\x_1^2&x_2^2&x_3^2|\cdot\mqty|1&1&1\\x_1&x_2&x_3\\x_1^2&x_2^2&x_3^2|=\prod_{1\leqslant j<i\leqslant 3}(x_i-x_j)^2.
@@ -270,10 +270,10 @@
 \subsubsection{化为三角形矩阵}
 
 \begin{example}[2016 复旦大学]
-    设 $\boldsymbol A=(a_{ij})_{n\times n}$，其中 $a_{ij}=\max\{i,j\}$，求行列式 $\det \boldsymbol{A}.$
+    设 $\boldsymbol A=(a_{ij})_{n\times n}$, 其中 $a_{ij}=\max\{i,j\}$, 求行列式 $\det \boldsymbol{A}.$
 \end{example}
 \begin{solution}
-    对于 $i=2,\cdots,n$，依次将第 $i$ 行的 $-1$ 倍加到第 $i-1$ 行，得
+    对于 $i=2,\cdots,n$, 依次将第 $i$ 行的 $-1$ 倍加到第 $i-1$ 行, 得
     \begin{flalign*}
         \det\boldsymbol{A} & =
         \begin{vmatrix}
@@ -296,10 +296,10 @@
 \end{solution}
 
 \begin{example}
-    设 $n\geqslant 2$，计算 $n$ 阶行列式 $D_n=\det (a_{ij})$，其中 $a_{ij}=|i-j|$，$i,j=1,2,\cdots,n.$
+    设 $n\geqslant 2$, 计算 $n$ 阶行列式 $D_n=\det (a_{ij})$, 其中 $a_{ij}=|i-j|$, $i,j=1,2,\cdots,n.$
 \end{example}
 \begin{solution}
-    从最后一行起，依次将后一行减去前一行，再将所得行列式的最后一行加到其他行，得
+    从最后一行起, 依次将后一行减去前一行, 再将所得行列式的最后一行加到其他行, 得
     \begin{flalign*}
         D_n & =\begin{vmatrix}
                    0      & 1      & 2      & \cdots & n-2    & n-1    \\
@@ -341,7 +341,7 @@
         \end{vmatrix}.$
 \end{example}
 \begin{solution}
-    依次将第 $n$ 行减去第 $n-1$ 行，第 $n-1$ 行减去第 $n-2$ 行，$\cdots$，第 $2$ 行减去第 $1$ 行，再将各列加到第 $1$ 列，得
+    依次将第 $n$ 行减去第 $n-1$ 行, 第 $n-1$ 行减去第 $n-2$ 行, $\cdots$, 第 $2$ 行减去第 $1$ 行, 再将各列加到第 $1$ 列, 得
     \begin{flalign*}
         D_n &
         \xlongequal[i=n,\cdots,1]{r_i-r_{i-1}}
@@ -384,7 +384,7 @@
 \end{solution}
 
 \begin{example}[2008 山西师范大学]
-    计算 $f(x+1)-f(x)$，其中
+    计算 $f(x+1)-f(x)$, 其中
     $$f(x)=\begin{vmatrix}
             1      & 0      & 0                  & 0                  & \cdots & 0                      & x       \\
             1      & 2      & 0                  & 0                  & \cdots & 0                      & x^2     \\
@@ -394,7 +394,7 @@
             1      & n+1    & \mathrm{C}_{n+1}^2 & \mathrm{C}_{n+1}^3 & \cdots & \mathrm{C}_{n+1}^{n-1} & x^{n+1}
         \end{vmatrix}.$$
 \end{example}
-\begin{solution}由二项式定理 $\displaystyle (a+b)^n=\sum_{k=0}^{n}\mathrm{C}_n^k a^{n-k}b^n$，
+\begin{solution}由二项式定理 $\displaystyle (a+b)^n=\sum_{k=0}^{n}\mathrm{C}_n^k a^{n-k}b^n$, 
     \begin{flalign*}
         f(x+1)-f(x)=
         \begin{vmatrix}
@@ -406,7 +406,7 @@
             1      & n+1    & \mathrm{C}_{n+1}^2 & \mathrm{C}_{n+1}^3 & \cdots & \mathrm{C}_{n+1}^{n-1} & (n+1)x^{n}+\mathrm{C}_{n+1}^2x^{n-1}+\cdots+1
         \end{vmatrix}
     \end{flalign*}
-    将第一列乘 $-1$，第二列乘 $-x$，第二列乘 $-x^2$，$\cdots$，第 $n$ 列乘 $-x^{n-1}$，都加到最后一列，得
+    将第一列乘 $-1$, 第二列乘 $-x$, 第二列乘 $-x^2$, $\cdots$, 第 $n$ 列乘 $-x^{n-1}$, 都加到最后一列, 得
     \begin{flalign*}
         f(x+1)-f(x)\xlongequal[j=1,\cdots,n]{c_{n+1}-x^{j-1}c_j}
         \left|\begin{array}{ccccccc}
@@ -432,7 +432,7 @@
         \end{vmatrix}.$
 \end{example}
 \begin{solution}
-    第二列至第 $n$ 列都加到第一列，再将第一列的 $-1$ 倍加到其他各列，得
+    第二列至第 $n$ 列都加到第一列, 再将第一列的 $-1$ 倍加到其他各列, 得
     \begin{flalign*}
         D_n & \xlongequal[j=2,\cdots,n]{c_1+c_j}
         \begin{vmatrix}
@@ -455,7 +455,7 @@
 \end{solution}
 
 \begin{example}[2008 北京科技大学]
-    计算行列式 $|\boldsymbol{A}|$，
+    计算行列式 $|\boldsymbol{A}|$, 
     其中 $$\boldsymbol{A}=\begin{pmatrix}
             1      & 2      & \cdots & n-1     & n+x    \\
             1      & 2      & \cdots & (n-1)+x & n      \\
@@ -465,7 +465,7 @@
         \end{pmatrix}.$$
 \end{example}
 \begin{solution}
-    从第二行至第 $n$ 行都减去第一行，再把所有列都加到最后一列，得对角型行列式
+    从第二行至第 $n$ 行都减去第一行, 再把所有列都加到最后一列, 得对角型行列式
     \begin{flalign*}
         |\boldsymbol{A}| & \xlongequal[i=2,\cdots,n]{r_i-r_1}
         \begin{vmatrix}
@@ -498,7 +498,7 @@
         \end{vmatrix}.$
 \end{example}
 \begin{solution}
-    先把第一列乘二，再把第一行除以二，得
+    先把第一列乘二, 再把第一行除以二, 得
     \begin{flalign*}
         D_n & \xlongequal[r_1/2]{c_1\times2}
         \begin{vmatrix}
@@ -539,7 +539,7 @@
         \end{vmatrix}.$$
 \end{example}
 \begin{solution}
-    从最后一行开始，每行都减去其前一行，然后各列都加到第一列，并按第一列展开，得
+    从最后一行开始, 每行都减去其前一行, 然后各列都加到第一列, 并按第一列展开, 得
     \begin{flalign*}
         D & \xlongequal[i=n,\cdots,2]{r_i-r_{i-1}}
         \begin{vmatrix}
@@ -575,7 +575,7 @@
 %         \end{vmatrix}$.
 % \end{example}
 % \begin{solution}
-%     第一列与第二列都减去第三列，并提取前两列的公因子 $(a+b+c)$，再将第三列加上第一列的 $c$ 倍，最后利用对角线法则展开，得
+%     第一列与第二列都减去第三列, 并提取前两列的公因子 $(a+b+c)$, 再将第三列加上第一列的 $c$ 倍, 最后利用对角线法则展开, 得
 %     \begin{flalign*}
 %         D & \xlongequal[j=1,2]{c_j-c_3}
 %         \begin{vmatrix}
@@ -627,8 +627,8 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 把 $D_n$ 第 $1$ 列乘 $\displaystyle-\frac{1}{2}a$ 加到第 $2$ 列，再把第 $2$ 列乘 $\displaystyle-\frac{2}{3}a$ 加到第 $3$ 列，
-              如此下去，直至把第 $n-1$ 列乘 $\displaystyle-\frac{n-1}{n}a$ 加到第 $n$ 列，得
+        \item 把 $D_n$ 第 $1$ 列乘 $\displaystyle-\frac{1}{2}a$ 加到第 $2$ 列, 再把第 $2$ 列乘 $\displaystyle-\frac{2}{3}a$ 加到第 $3$ 列, 
+              如此下去, 直至把第 $n-1$ 列乘 $\displaystyle-\frac{n-1}{n}a$ 加到第 $n$ 列, 得
               \begin{flalign*}
                   D_n\xlongequal[j=1,\cdots,n-1]{c_{j+1}-c_j\times\frac{j}{j+1}a}
                   \begin{vmatrix}
@@ -640,7 +640,7 @@
                   \end{vmatrix}
                   =(n+1)a^n.
               \end{flalign*}
-        \item 把 $D_n$ 按第一行展开，得
+        \item 把 $D_n$ 按第一行展开, 得
               \begin{flalign*}
                   D_n=(a+b)D_{n-1}-ab\begin{vmatrix}
                                          1 & ab  &        &        &     \\
@@ -651,15 +651,15 @@
                                      \end{vmatrix}_{n-1}=(a+b)D_{n-1}-abD_{n-2}.
               \end{flalign*}
               所以有递推公式 $$D_n-aD_{n-1}=b(D_{n-1}-aD_{n-2})$$
-              由此逐次递推，得 $$D_n-aD_{n-1}=b^2(D_{n-2}-aD_{n-3})=\cdots=b^{n-2}(D_2-aD_1)$$
+              由此逐次递推, 得 $$D_n-aD_{n-1}=b^2(D_{n-2}-aD_{n-3})=\cdots=b^{n-2}(D_2-aD_1)$$
               注意到 $$D_1=a+b,~D_2=\begin{vmatrix}
                       a+b & ab  \\
                       1   & a+b
                   \end{vmatrix}=a^2+ab+b^2$$
               所以 $$D_n-aD_{n-1}=b^n$$
-              根据对称性，有 $$D_n-bD_{n-1}=a^n$$
-              若 $a=b$ (可见上题)，则 $D_n=a^n+aD_{n-1}$，由此递推，得 $$D_n=(n+1)a^n$$
-              若 $a\not=b$，可得 $\displaystyle D_n=\frac{b^{n+1}-a^{n+1}}{b-a}.$
+              根据对称性, 有 $$D_n-bD_{n-1}=a^n$$
+              若 $a=b$ (可见上题), 则 $D_n=a^n+aD_{n-1}$, 由此递推, 得 $$D_n=(n+1)a^n$$
+              若 $a\not=b$, 可得 $\displaystyle D_n=\frac{b^{n+1}-a^{n+1}}{b-a}.$
     \end{enumerate}
 \end{solution}
 
@@ -675,7 +675,7 @@
         \end{vmatrix}.$$
 \end{example}
 \begin{solution}
-    \textbf{法一: }将第二列的 $-x$ 倍加到第一列，第三列的 $-x$ 倍加到第二列，以此类推，
+    \textbf{法一: }将第二列的 $-x$ 倍加到第一列, 第三列的 $-x$ 倍加到第二列, 以此类推, 
     $$D_{n+2}\xlongequal[j=1,\cdots,n]{c_j-xc_{j+1}}\begin{vmatrix}
             a+x    & -1     &        &        &        &    \\
             0      & a+x    & -1     &        &        &    \\
@@ -684,7 +684,7 @@
             0      & 0      & 0      & \cdots & a+x    & -1 \\
             0      & 0      & 0      & \cdots & 0      & a
         \end{vmatrix}=a(a+x)^n.$$
-    \textbf{法二: }先把第二列乘 $a$ 加到第一列，并提出第一列的公因子 $x+a$，再按第一行展开，得
+    \textbf{法二: }先把第二列乘 $a$ 加到第一列, 并提出第一列的公因子 $x+a$, 再按第一行展开, 得
     \begin{flalign*}
         D_{n+1}=(x+a)D_n=(x+a)^2D_{n-1}=\cdots=(x+a)^{n-1}D_2=(x+a)^{n-1}
         \begin{vmatrix}
@@ -695,7 +695,7 @@
 \end{solution}
 
 \begin{example}[2006 中国科学院]
-    已知 $\alpha,\beta,\gamma$ 为实数，求
+    已知 $\alpha,\beta,\gamma$ 为实数, 求
     $\det\boldsymbol{A}=\begin{pmatrix}
             \alpha & \beta  &        &        &        \\
             \gamma & \alpha & \beta  &        &        \\
@@ -705,27 +705,27 @@
         \end{pmatrix}\in \mathbb{R}^{n\times n}$ 的值.
 \end{example}
 \begin{solution}
-    显然，若 $\beta=0$ 或 $\gamma=0$，则 $\det\boldsymbol{A}=\alpha^n$. 因此，下设 $\beta\gamma\not=0$
-    把 $D_n=\det\boldsymbol{A}$ 按第一行展开，得 $$D_a=\alpha D_{n-1}-\beta\gamma D_{n-2}$$
-    令 $p+q=\alpha,pq=\beta\gamma$，则 $p,q$ 是二次方程 $x^2-\alpha x+\beta\gamma=0$ 的根. 故有如下递推公式
+    显然, 若 $\beta=0$ 或 $\gamma=0$, 则 $\det\boldsymbol{A}=\alpha^n$. 因此, 下设 $\beta\gamma\not=0$
+    把 $D_n=\det\boldsymbol{A}$ 按第一行展开, 得 $$D_a=\alpha D_{n-1}-\beta\gamma D_{n-2}$$
+    令 $p+q=\alpha,pq=\beta\gamma$, 则 $p,q$ 是二次方程 $x^2-\alpha x+\beta\gamma=0$ 的根. 故有如下递推公式
     $$D_n-pD_{n-1}=q(D_{n-1}-pD_{n-2})$$
-    由此逐次递推，得 $$D_n-pD_{n-1}=q^2(D_{n-2}-pD_{n-3})=\cdots=q^{n-2}(D_2-pD_1)$$
+    由此逐次递推, 得 $$D_n-pD_{n-1}=q^2(D_{n-2}-pD_{n-3})=\cdots=q^{n-2}(D_2-pD_1)$$
     注意到 $$D_1=\alpha=p+q,~D_2=\begin{vmatrix}
             \alpha & \beta  \\
             \gamma & \alpha
         \end{vmatrix}=\alpha^2-\beta\gamma=p^2+pq+q^2$$
     所以 $$D_n-pD_{n-1}=q^{n-2}[p^2+pq+q^2-p(p+q)]=q^n$$
     根据对称性 $$D_n-qD_{n-1}=p^n$$
-    若 $\alpha^2=4\beta\gamma$，则 $p=q$，所以 $D_n=p^p+pD_{n-1}$. 由此递推，得
+    若 $\alpha^2=4\beta\gamma$, 则 $p=q$, 所以 $D_n=p^p+pD_{n-1}$. 由此递推, 得
     $$D_n=(n+1)p^n=(n+1)\left(\frac{\alpha}{2}\right)^n$$
-    若 $\alpha^2\not=4\beta\gamma$，则 $p\not=q$，则有
+    若 $\alpha^2\not=4\beta\gamma$, 则 $p\not=q$, 则有
     $$D_n=\frac{p^{n+1}-q^{n+1}}{p-q}=\frac{\left(\alpha+\sqrt{\alpha^2-4\beta\gamma}\right)^{n+1}-\left(\alpha-\sqrt{\alpha^2-4\beta\gamma}\right)^{n+1}}{2^{n+1}\sqrt{\alpha^2-4\beta\gamma}}.$$
 \end{solution}
 
 \subsubsection{升阶法}
 
 \begin{example}
-    计算下列行列式 $|\boldsymbol{A}|$，$a_i\neq0~~(i=1,2,\cdots,n)$，
+    计算下列行列式 $|\boldsymbol{A}|$, $a_i\neq0~~(i=1,2,\cdots,n)$, 
     \label{ascendingMethod}
     \setcounter{magicrownumbers}{0}
     \begin{table}[H]
@@ -751,7 +751,7 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 把 $|\boldsymbol{A}|$ 添加一行、一列且保持值不变，
+        \item 把 $|\boldsymbol{A}|$ 添加一行、一列且保持值不变, 
               \begin{flalign*}
                   |\boldsymbol{A}| & =
                   \begin{vNiceArray}{c:cccc}
@@ -779,7 +779,7 @@
                   \end{vmatrix}
                   =1+\sum_{k=1}^{n}a_k^2.
               \end{flalign*}
-        \item 同样地，把 $|\boldsymbol{A}|$ 添加一行、一列且保持值不变，
+        \item 同样地, 把 $|\boldsymbol{A}|$ 添加一行、一列且保持值不变, 
               \begin{flalign*}
                   |\boldsymbol{A}| & =
                   \begin{vNiceArray}{c:cccc}
@@ -822,7 +822,7 @@
     其中 $n\geqslant3.$
 \end{example}
 \begin{solution}
-    \textbf{法一: }利用升阶法，
+    \textbf{法一: }利用升阶法, 
     \begin{flalign*}
         D & =
         \begin{vNiceArray}{c:cccc}
@@ -859,7 +859,7 @@
             -1     & -b_n   & 0      & 0      & \cdots & 0
         \end{vNiceArray}\xlongequal[n\geqslant3]{\text{Laplace}}0.
     \end{flalign*}
-    \textbf{法二: }由行列式的乘法规则，并注意到 $n\geqslant3$，得
+    \textbf{法二: }由行列式的乘法规则, 并注意到 $n\geqslant3$, 得
     $$D=
         \begin{vmatrix}
             1      & b_1    & 0      & \cdots & 0      \\
@@ -887,7 +887,7 @@
         \end{vmatrix}.$$
 \end{example}
 \begin{solution}
-    利用升阶法，考虑 $n+1$ 阶行列式
+    利用升阶法, 考虑 $n+1$ 阶行列式
     $$\Delta=\begin{vNiceArray}{c:ccccc}
             1  & a_1   &        &        &           &       \\ \hdottedline
             -1 & 1-a_1 & a_2    &        &           &       \\
@@ -896,7 +896,7 @@
             &       &        & -1     & 1-a_{n-1} & a_n   \\
             &       &        &        & -1        & 1-a_n
         \end{vNiceArray}_{n+1}\xlongequal[i=1,\cdots,n]{r_{i+1}+r_i}1$$
-    另一方面，将 $\Delta$ 按第一行展开，得 $\Delta =D+a_1D'$，即 $D=1-a_1D'$，其中 $D'$ 是 $\Delta$ 右下角的 $n-1$ 阶子式，由此递推，可得
+    另一方面, 将 $\Delta$ 按第一行展开, 得 $\Delta =D+a_1D'$, 即 $D=1-a_1D'$, 其中 $D'$ 是 $\Delta$ 右下角的 $n-1$ 阶子式, 由此递推, 可得
     $$D=1-a_1+a_1a_2-a_1a_2a_3+\cdots+(-1)^na_1a_2\cdots a_n.$$
 \end{solution}
 
@@ -912,20 +912,20 @@
     设矩阵 $\boldsymbol{A}=\begin{pmatrix}
             2  & 1 \\
             -1 & 2
-        \end{pmatrix}$，$\boldsymbol{E}$ 为 $2$ 阶单位矩阵，矩阵 $\boldsymbol{B}$ 满足 $\boldsymbol{BA}=\boldsymbol{B}+2\boldsymbol{E}$，求 $|\boldsymbol{B}|$.
+        \end{pmatrix}$, $\boldsymbol{E}$ 为 $2$ 阶单位矩阵, 矩阵 $\boldsymbol{B}$ 满足 $\boldsymbol{BA}=\boldsymbol{B}+2\boldsymbol{E}$, 求 $|\boldsymbol{B}|$.
 \end{example}
 \begin{solution}
-    由 $\boldsymbol{BA}=\boldsymbol{B}+2\boldsymbol{E}$ 得 $\boldsymbol{B}(\boldsymbol{A}-\boldsymbol{E})=2\boldsymbol{E}$，两边取行列式，有
+    由 $\boldsymbol{BA}=\boldsymbol{B}+2\boldsymbol{E}$ 得 $\boldsymbol{B}(\boldsymbol{A}-\boldsymbol{E})=2\boldsymbol{E}$, 两边取行列式, 有
     $$|\boldsymbol{B}|\cdot|\boldsymbol{A}-\boldsymbol{E}|=|2\boldsymbol{E}|=4$$
     因为 $|\boldsymbol{A}-\boldsymbol{E}|=\begin{vmatrix}
             1  & 1 \\
             -1 & 1
-        \end{vmatrix}=2$，所以 $|\boldsymbol{B}|=2.$
+        \end{vmatrix}=2$, 所以 $|\boldsymbol{B}|=2.$
 \end{solution}
 
 \begin{example}
-    已知 $\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\beta},\vb*{\gamma}$ 均为 4 维列向量，又 $\vb*{A}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\beta}),~\vb*{B}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\gamma})$，
-    若 $|\vb*{A}|=3,|\vb*{B}|=2$，求 $|\vb*{A}+2\vb*{B}|.$
+    已知 $\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\beta},\vb*{\gamma}$ 均为 4 维列向量, 又 $\vb*{A}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\beta}),~\vb*{B}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\gamma})$, 
+    若 $|\vb*{A}|=3,|\vb*{B}|=2$, 求 $|\vb*{A}+2\vb*{B}|.$
 \end{example}
 \begin{solution}
     $|\vb*{A}+2\vb*{B}|=|3\vb*{\alpha}_1,3\vb*{\alpha}_2,3\vb*{\alpha}_3,\vb*{\beta}+2\vb*{\gamma}|=3^3|\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\beta}+2\vb*{\gamma}|=3^3\qty(|\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\beta}|+2|\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\gamma}|)=27\times 7=187.$

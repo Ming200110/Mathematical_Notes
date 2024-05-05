@@ -1,9 +1,38 @@
-\section{统计量的数字特征}
+\section{随机样本}
+
+在数理统计中, 总体 $ X $ 的分布通常是未知的, 或者在形式上是已知的但含有未知参数. 
+那么为了获得总体的分布信息, 从理论上讲, 需要对总体 $ X $ 中的所有个体进行观察测试, 但这往往是做不到的. 
+例如, 由于测试砖的耐压性的试验具有破坏性, 一旦我们获得每块砖的耐压数据, 这批砖也就全部报废了. 
+所以, 我们不可能对所有个体逐一观察测试, 而是从总体 $ X $ 中随机抽取若干个个休进行观察测试. 从总体中抽取若干个个体的过程叫做抽样, 抽取的若干个个体称为样本, 样本中所含个体的数量称为样本容量.
+
+由上知, 抽取样本是为了研究总体的性质, 为了保证所抽取的样本具有代表性, 抽样方法必须满足以下两个条件:
+\begin{enumerate}[label=(\arabic{*})]
+    \item 随机性. 每次抽取时, 总体中每个个体被抽到的可能性均等, 可以通过编号抽签的方法或利用随机数表的方法产生.
+    \item 独立性. 每次抽取必须是相互独立的,即每次抽取的结果既不影响其他各次抽取的结果, 也不受其他各次抽取结果的影响.
+\end{enumerate}
+
+这种随机的、独立的抽样方法称为简单随机抽样, 由此得到的样本称为简单随机样本. 今后, 如无特殊说明, 样本专指简单随机样本.
+
+\begin{definition}[样本与样本值]
+    设总体 $ X $ 的分布函数为 $ F(x) $, 若随机变量 $ X_{1}, X_{2}, \cdots, X_{n} $ 相互独立, 且都与总体 $ X $ 具有相同的分布函数, 则称 $ X_{1}, X_{2}, \cdots, X_{n} $ 是来自总体 $ X $ 的\textit{简单随机样本}, 简称为\textit{样本}, $ n $ 称为\textit{样本容量}. 
+    在对总体 $ X $ 进行一次具体的抽样并作观测之后, 得到样本 $ X_{1} ,  X_{2}, \cdots, X_{n} $ 的确切数值 $ x_{1}, x_{2}, \cdots, x_{n} $, 称为\textit{样本观测值}, 简称为\textit{样本值}.
+\end{definition}
+
+根据定义, 若 $ X_{1}, X_{2}, \cdots, X_{n} $ 是分布函数为 $ F(x) $ 的总体 $ X $ 的容量为 $ n $ 的简单随机样本, 则 $ X_{1}, X_{2}, \cdots, X_{n} $ 的联合分布函数为 $\displaystyle F^{*}\left(x_{1}, x_{2}, \cdots, x_{n}\right)=\prod_{i=1}^{n} F\left(x_{i}\right) $.
+
+若总体 $ X $ 是离散型随机变量, 其分布律为 $ P\left\{X=x_{i}\right\}=p_{i}(i=1,2, \cdots) $, 则 $ X_{1}, X_{2}, \cdots ,  X_{n} $ 的联合分布律为
+$$P\left\{X_{1}=x_{1}, X_{2}=x_{2}, \cdots, X_{n}=x_{n}\right\}=\prod_{i=1}^{n} P\left\{X_{i}=x_{i}\right\}=\prod_{i=1}^{n} p_{i} .$$
+
+若总体 $ X $ 是连续型随机变量, 其概率密度为 $ f(x) $, 则 $ X_{1}, X_{2}, \cdots, X_{n} $ 的联合概率密度为 $$ f^{*}\left(x_{1}, x_{2}, \cdots, x_{n}\right)=\prod_{i=1}^{n} f\left(x_{i}\right) $$.
+
+\begin{definition}[统计量与其观测值]
+    设 $ X_{1}, X_{2}, \cdots, X_{n} $ 是来自总体 $ X $ 的一个样本, $ x_{1}, x_{2}, \cdots, x_{n} $ 是样本观测值, $ g\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 是 $ X_{1}, X_{2}, \cdots, X_{n} $ 的函数. 如果 $ g\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 中不含未知参数, 则称 $ g\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 为一个\textit{统计量}, 而 $ g\left(x_{1}, x_{2}, \cdots, x_{n}\right) $ 称为\textit{统计量的观测值}.
+\end{definition}
 
 \subsection{常用统计量}
 
 \begin{definition}[常用统计量]
-    设 $ X_{1}, X_{2}, \cdots, X_{n} $ 是来自总体 $ X $ 的简单随机样本，以下为常用统计量:
+    设 $ X_{1}, X_{2}, \cdots, X_{n} $ 是来自总体 $ X $ 的简单随机样本, 以下为常用统计量:
     \begin{enumerate}[label=(\arabic{*})]
         \item 样本均值 $ \bar{X}=\dfrac{1}{n} \displaystyle\sum_{i=1}^{n} X_{i} $;
         \item 样本方差 $S^{2}=\dfrac{1}{n-1} \displaystyle\sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2}=\dfrac{1}{n-1}\left(\displaystyle\sum_{i=1}^{n} X_{i}^{2}-n \bar{X}^{2}\right) $;
@@ -13,10 +42,10 @@
         其中 $ B_{1}=0, B_{2}=\dfrac{n-1}{n} S^{2} $;
         \item 最小顺序统计量 $X_{(1)}=\min \left\{X_{1}, X_{2}, \cdots, X_{n}\right\}$
         $$F_{(1)}(x)=P\left\{\min \left\{X_{1}, X_{2}, \cdots, X_{n}\right\} \leqslant x\right\}=1-[1-F(x)]^{n}$$
-        对连续型随机变量，概率密度函数为 $f_{(1)}(x)=n[1-F(x)]^{n-1} f(x) $;
+        对连续型随机变量, 概率密度函数为 $f_{(1)}(x)=n[1-F(x)]^{n-1} f(x) $;
         \item 最大顺序统计量 $X_{(n)}=\max \left\{X_{1}, X_{2}, \cdots, X_{n}\right\}$
         $$F_{(n)}(x)=P\left\{\max \left\{X_{1}, X_{2}, \cdots, X_{n}\right\} \leqslant x\right\}=[F(x)]^{n}$$
-        对连续型随机变量，概率密度函数为 $f_{(n)}(x)=n[F(x)]^{n-1} f(x) .$
+        对连续型随机变量, 概率密度函数为 $f_{(n)}(x)=n[F(x)]^{n-1} f(x) .$
     \end{enumerate}
 \end{definition}
 
@@ -24,24 +53,24 @@
 
 \begin{theorem}[样本数字特征的性质]
     \begin{enumerate}[label=(\arabic{*})]
-        \item 若总体 $ X $ 的数学期望 $ E(X)=\mu$，则 $E(\bar{X})=E(X)=\mu ;$
-        \item 若总体 $ X $ 的方差为 $ D(X)=\sigma^{2} $，则 $D(\bar{X})=\dfrac{1}{n} D(X)=\dfrac{\sigma^{2}}{n},~E\left(S^{2}\right)=D(X)=\sigma^{2} .$
+        \item 若总体 $ X $ 的数学期望 $ E(X)=\mu$, 则 $E(\bar{X})=E(X)=\mu ;$
+        \item 若总体 $ X $ 的方差为 $ D(X)=\sigma^{2} $, 则 $D(\bar{X})=\dfrac{1}{n} D(X)=\dfrac{\sigma^{2}}{n},~E\left(S^{2}\right)=D(X)=\sigma^{2} .$
     \end{enumerate}
 \end{theorem}
 
 \begin{example}
-    设 $X_1,X_2,\cdots,X_n$ 是来自指数分布总体 $E(\lambda)$ 的简单随机样本 $\bar{X}$ 和 $S^2$ 分别是样本均值和样本方差，记统计量 $T=\bar{X}-S^2$，求 $E(T).$
+    设 $X_1,X_2,\cdots,X_n$ 是来自指数分布总体 $E(\lambda)$ 的简单随机样本 $\bar{X}$ 和 $S^2$ 分别是样本均值和样本方差, 记统计量 $T=\bar{X}-S^2$, 求 $E(T).$
 \end{example}
 \begin{solution}
-    $E(T)=E\qty(\bar{X}-S^2)=E\qty(\bar{X})-E\qty(S^2)=E\qty(\bar{X})-D(X)$，因为 $X\sim E(\lambda)$，所以 $E(X)=\dfrac{1}{\lambda},~D(X)=\dfrac{1}{\lambda^2}$，因此 $E(T)=\dfrac{1}{\lambda}-\dfrac{1}{\lambda^2}=\dfrac{\lambda-1}{\lambda^2}.$
+    $E(T)=E\qty(\bar{X}-S^2)=E\qty(\bar{X})-E\qty(S^2)=E\qty(\bar{X})-D(X)$, 因为 $X\sim E(\lambda)$, 所以 $E(X)=\dfrac{1}{\lambda},~D(X)=\dfrac{1}{\lambda^2}$, 因此 $E(T)=\dfrac{1}{\lambda}-\dfrac{1}{\lambda^2}=\dfrac{\lambda-1}{\lambda^2}.$
 \end{solution}
 
 \begin{example}
-    设 $X_1,X_2,\cdots,X_n$ 是来自 $X\sim P(\lambda)$ 的简单随机样本，$\bar{X}$ 和 $S^2$ 分布为样本均值和方差，求统计量 $T=\bar{X}^2-\dfrac{S^2}{n}$ 的数学期望 $E(T).$
+    设 $X_1,X_2,\cdots,X_n$ 是来自 $X\sim P(\lambda)$ 的简单随机样本, $\bar{X}$ 和 $S^2$ 分布为样本均值和方差, 求统计量 $T=\bar{X}^2-\dfrac{S^2}{n}$ 的数学期望 $E(T).$
 \end{example}
 \begin{solution}
-    $E(T)=E\qty(\bar{X}^2-\dfrac{S^2}{n})=E\qty(\bar{X}^2)-E\qty(\dfrac{S^2}{n})=E\qty(\bar{X}^2)-\dfrac{1}{n}E\qty(S^2)=D\qty(\bar{X})+E^2\qty(\bar{X})-\dfrac{1}{n}D(X)$，
-    因为 $X\sim P(\lambda)$，所以 $E(X)=D(X)=\lambda$，且 
+    $E(T)=E\qty(\bar{X}^2-\dfrac{S^2}{n})=E\qty(\bar{X}^2)-E\qty(\dfrac{S^2}{n})=E\qty(\bar{X}^2)-\dfrac{1}{n}E\qty(S^2)=D\qty(\bar{X})+E^2\qty(\bar{X})-\dfrac{1}{n}D(X)$, 
+    因为 $X\sim P(\lambda)$, 所以 $E(X)=D(X)=\lambda$, 且 
     \begin{flalign*}
         E\qty(\bar{X})&=E\qty(\dfrac{1}{n}\sum_{i=1}^{n}X_i)=\dfrac{1}{n}\sum_{i=1}^{n}E(X_i)=\dfrac{1}{n}\cdot n\lambda=\lambda\\
         D\qty(\bar{X})&=D\qty(\dfrac{1}{n}\sum_{i=1}^{n}X_i)=\dfrac{1}{n^2}\sum_{i=1}^{n}D(X_i)=\dfrac{1}{n^2}\cdot n\lambda=\dfrac{\lambda}{n}

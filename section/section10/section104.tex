@@ -3,19 +3,19 @@
 \subsection{秩的相关不等式证明}
 
 \begin{definition}[满秩方阵]
-    对于 $n$ 阶方阵 $\vb*{A}$，若 $\rank\vb*{A}=n$，则称 $\vb*{A}$ 为满秩 (非退化) 方阵，否则称为降秩 (退化) 方阵.
+    对于 $n$ 阶方阵 $\vb*{A}$, 若 $\rank\vb*{A}=n$, 则称 $\vb*{A}$ 为满秩 (非退化) 方阵, 否则称为降秩 (退化) 方阵.
 \end{definition}
 
 \begin{theorem}[矩阵与向量组秩的联系]
-    设 $\vb*{\alpha}_i~ (i=1,2,\cdots,m),~\vb*{\beta}$ 是 $n$ 维列向量，则
+    设 $\vb*{\alpha}_i~ (i=1,2,\cdots,m),~\vb*{\beta}$ 是 $n$ 维列向量, 则
     $$\rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_m)\leqslant \rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_m,\vb*{\beta})\leqslant \rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_m)+1.$$
 \end{theorem}
 
 \begin{example}
-    设 $\vb*{A},~\vb*{B}$ 分别是 $f\times m,~f\times n$ 的矩阵，证明: $\rank\vb*{A}\leqslant \rank(\vb*{A},\vb*{B})\leqslant \rank\vb*{A}+n.$
+    设 $\vb*{A},~\vb*{B}$ 分别是 $f\times m,~f\times n$ 的矩阵, 证明: $\rank\vb*{A}\leqslant \rank(\vb*{A},\vb*{B})\leqslant \rank\vb*{A}+n.$
 \end{example}
 \begin{proof}{\songti \textbf{证}}
-    设 $\vb*{A}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_m),~\vb*{B}=(\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_n)$，那么 
+    设 $\vb*{A}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_m),~\vb*{B}=(\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_n)$, 那么 
     $$\rank\vb*{A}=\rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_m)\leqslant \rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_m,\vb*{\beta}_1)\leqslant\cdots\leqslant \rank(\vb*{\alpha}_1,\cdots,\vb*{\alpha}_m,\vb*{\beta}_1,\cdots,\vb*{\beta}_n)=\rank(\vb*{A},\vb*{B})$$
     又因为 
     $$\rank(\vb*{A},\vb*{B})=\rank(\vb*{\alpha}_1,\cdots,\vb*{\alpha}_m,\vb*{\beta}_1,\cdots,\vb*{\beta}_n)\leqslant \rank(\vb*{\alpha}_1,\cdots,\vb*{\alpha}_m,\vb*{\beta}_1,\cdots,\vb*{\beta}_{n-1})+1\leqslant \cdots\leqslant \rank(\vb*{\alpha}_1,\cdots,\vb*{\alpha}_m)+n$$
@@ -23,106 +23,106 @@
 \end{proof}
 
 \begin{theorem}
-    对于 $m\times n$ 矩阵 $\vb*{A}$ 与 $\vb*{B}$，有 $\rank(\vb*{A}+\vb*{B})\leqslant \rank(\vb*{A},\vb*{B})$.
+    对于 $m\times n$ 矩阵 $\vb*{A}$ 与 $\vb*{B}$, 有 $\rank(\vb*{A}+\vb*{B})\leqslant \rank(\vb*{A},\vb*{B})$.
 \end{theorem}
 \begin{proof}[{\songti \textbf{证}}]
-    不妨设 $\vb*{A}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_m),~\vb*{B}=(\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_m)$，则结论显然成立.
+    不妨设 $\vb*{A}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_m),~\vb*{B}=(\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_m)$, 则结论显然成立.
 \end{proof}
 
 \begin{theorem}
-    对于 $m\times n$ 矩阵 $\vb*{A}$ 与 $m\times s$ 矩阵 $\vb*{B}$，有 $\rank(\vb*{A},\vb*{B})\leqslant \rank\vb*{A}+\rank\vb*{B}.$
+    对于 $m\times n$ 矩阵 $\vb*{A}$ 与 $m\times s$ 矩阵 $\vb*{B}$, 有 $\rank(\vb*{A},\vb*{B})\leqslant \rank\vb*{A}+\rank\vb*{B}.$
 \end{theorem}
 \begin{proof}[{\songti \textbf{证}}]
     提示: 用极大无关组可证明.
 \end{proof}
 
 \begin{theorem}
-    对于 $n$ 阶方阵 $\vb*{A},~\vb*{B}$，则 $\rank(\vb*{A}\pm\vb*{B})\leqslant \rank\vb*{A}+\rank\vb*{B}.$
+    对于 $n$ 阶方阵 $\vb*{A},~\vb*{B}$, 则 $\rank(\vb*{A}\pm\vb*{B})\leqslant \rank\vb*{A}+\rank\vb*{B}.$
 \end{theorem}
 
 \begin{theorem}
-    对于 $m\times n$ 矩阵 $\vb*{A}$ 与 $n\times s$ 矩阵 $\vb*{B}$，有 $\rank(\vb*{AB})\leqslant \min\qty{\rank\vb*{A},\rank\vb*{B}}.$
+    对于 $m\times n$ 矩阵 $\vb*{A}$ 与 $n\times s$ 矩阵 $\vb*{B}$, 有 $\rank(\vb*{AB})\leqslant \min\qty{\rank\vb*{A},\rank\vb*{B}}.$
 \end{theorem}
 \begin{proof}[{\songti \textbf{证}}]
-    先设 $\vb*{A}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_n),~\vb*{B}=\mqty(b_{11}&\cdots&b_{1s}\\\vdots&&\vdots\\b_{n1}&\cdots&b_{ns})$，
-    并且无论是 $b_{11}\vb*{\alpha}_1+\cdots+b_{n1}\vb*{\alpha}_n$ 还是 $b_{1s}\vb*{\alpha}_1+\cdots+b_{ns}\vb*{\alpha}_n$，均可由 $\vb*{\alpha}_1,\cdots,\vb*{\alpha}_n$ 线性表示，于是
+    先设 $\vb*{A}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_n),~\vb*{B}=\mqty(b_{11}&\cdots&b_{1s}\\\vdots&&\vdots\\b_{n1}&\cdots&b_{ns})$, 
+    并且无论是 $b_{11}\vb*{\alpha}_1+\cdots+b_{n1}\vb*{\alpha}_n$ 还是 $b_{1s}\vb*{\alpha}_1+\cdots+b_{ns}\vb*{\alpha}_n$, 均可由 $\vb*{\alpha}_1,\cdots,\vb*{\alpha}_n$ 线性表示, 于是
     $$\rank(\vb*{AB})=\rank(b_{11}\vb*{\alpha}_1+\cdots+b_{n1}\vb*{\alpha}_n,\cdots,b_{1s}\vb*{\alpha}_1+\cdots+b_{ns}\vb*{\alpha}_n)\leqslant \rank(\vb*{\alpha}_1,\cdots,\vb*{\alpha}_n)=\rank(\vb*{A})$$
-    再设 $\vb*{A}=\mqty(a_{11}&\cdots&a_{1n}\\\vdots&&\vdots\\a_{m1}&\cdots&a_{mn}),~\vb*{B}=\mqty(\vb*{\beta}_1\\ \vdots\\\vb*{\beta}_n)^\top$，同理 $\rank(\vb*{AB})\leqslant \rank\vb*{B}$，
+    再设 $\vb*{A}=\mqty(a_{11}&\cdots&a_{1n}\\\vdots&&\vdots\\a_{m1}&\cdots&a_{mn}),~\vb*{B}=\mqty(\vb*{\beta}_1\\ \vdots\\\vb*{\beta}_n)^\top$, 同理 $\rank(\vb*{AB})\leqslant \rank\vb*{B}$, 
     则 $$\rank(\vb*{AB})\leqslant \rank\vb*{A}\text{ 且 }\rank(\vb*{AB})\leqslant \rank\vb*{B}.$$
 \end{proof}
 
 \begin{theorem}
-    若 $\vb*{A}$ 是 $m\times n$ 矩阵，$\vb*{B}$ 是 $n\times s$ 矩阵，且 $\vb*{AB}=\vb*{O}$，则 $\rank\vb*{A}+\rank\vb*{B}\leqslant n.$
+    若 $\vb*{A}$ 是 $m\times n$ 矩阵, $\vb*{B}$ 是 $n\times s$ 矩阵, 且 $\vb*{AB}=\vb*{O}$, 则 $\rank\vb*{A}+\rank\vb*{B}\leqslant n.$
 \end{theorem}
 
 \begin{theorem}
-    对于 $m\times n$ 矩阵 $\vb*{A}$ 与 $s\times t$ 矩阵 $\vb*{B}$，有 $\rank\mqty(\vb*{A}&\vb*{O}\\\vb*{C}&\vb*{B})\geqslant \rank\vb*{A}+\rank\vb*{B}.$
+    对于 $m\times n$ 矩阵 $\vb*{A}$ 与 $s\times t$ 矩阵 $\vb*{B}$, 有 $\rank\mqty(\vb*{A}&\vb*{O}\\\vb*{C}&\vb*{B})\geqslant \rank\vb*{A}+\rank\vb*{B}.$
 \end{theorem}
 
 \begin{example}
-    设 $\vb*{A},~\vb*{B}$ 为 $n$ 阶方阵，证明:
+    设 $\vb*{A},~\vb*{B}$ 为 $n$ 阶方阵, 证明:
     $$\rank(\vb*{AB}-\vb*{E})\leqslant \rank(\vb*{A}-\vb*{E})+\rank(\vb*{B}-\vb*{E})$$
     这里 $\vb*{E}$ 为 $n$ 阶单位矩阵.
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    因为 $\vb*{AB}-\vb*{E}=(\vb*{A}-\vb*{E})\vb*{B}+(\vb*{B}-\vb*{E})$，于是 
+    因为 $\vb*{AB}-\vb*{E}=(\vb*{A}-\vb*{E})\vb*{B}+(\vb*{B}-\vb*{E})$, 于是 
     $$\rank(\vb*{AB}-\vb*{E})\leqslant \rank((\vb*{A}-\vb*{E})\vb*{B})+\rank(\vb*{B}-\vb*{E})\leqslant \rank(\vb*{A}-\vb*{E})+\rank(\vb*{B}-\vb*{E}).$$
 \end{proof}
 
 \begin{example}
-    设 $\vb*{A},~\vb*{B}$ 为 $n$ 阶方阵，证明:
+    设 $\vb*{A},~\vb*{B}$ 为 $n$ 阶方阵, 证明:
     \begin{enumerate}[label=(\arabic{*})]
         \item $\rank(\vb*{A}-\vb*{B})\geqslant \rank\vb*{A}-\rank\vb*{B}$;
-        \item 若 $\vb*{A}$ 是可逆矩阵，则结论 (1) 中的等号成立当且仅当 $\vb*{BA}^{-1}\vb*{B}=\vb*{B}.$
+        \item 若 $\vb*{A}$ 是可逆矩阵, 则结论 (1) 中的等号成立当且仅当 $\vb*{BA}^{-1}\vb*{B}=\vb*{B}.$
     \end{enumerate}
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
     \begin{enumerate}[label=(\arabic{*})]
-        \item 由 $\vb*{A}=(\vb*{A}-\vb*{B})+\vb*{B}$，且 $\rank\vb*{A}\leqslant \rank(\vb*{A}-\vb*{B})+\rank\vb*{B}$，移项得 $\rank(\vb*{A}-\vb*{B})\geqslant \rank\vb*{A}-\rank\vb*{B}$;
-        \item 利用分块矩阵的初等行变换，得 
+        \item 由 $\vb*{A}=(\vb*{A}-\vb*{B})+\vb*{B}$, 且 $\rank\vb*{A}\leqslant \rank(\vb*{A}-\vb*{B})+\rank\vb*{B}$, 移项得 $\rank(\vb*{A}-\vb*{B})\geqslant \rank\vb*{A}-\rank\vb*{B}$;
+        \item 利用分块矩阵的初等行变换, 得 
         $$\mqty(\vb*{A}-\vb*{B}&\vb*{O}\\\vb*{O}&\vb*{B})\to\mqty(\vb*{A}&\vb*{B}\\\vb*{B}&\vb*{B})\xrightarrow[]{\text{行}}\mqty(\vb*{A}&\vb*{B}\\\vb*{O}&\vb*{B}-\vb*{BA}^{-1}\vb*{B})\xrightarrow[]{\text{列}}\mqty(\vb*{A}&\vb*{O}\\\vb*{O}&\vb*{B}-\vb*{BA}^{-1}\vb*{B})$$
-        因为初等行变化不会改变矩阵的秩，所以 
+        因为初等行变化不会改变矩阵的秩, 所以 
         $$\rank\mqty(\vb*{A}-\vb*{B}&\vb*{O}\\\vb*{O}&\vb*{B})=\rank\mqty(\vb*{A}&\vb*{O}\\\vb*{O}&\vb*{B}-\vb*{BA}^{-1}\vb*{B})$$
         即
         $$\rank(\vb*{A}-\vb*{B})+\rank\vb*{B}=\rank\vb*{A}+\rank(\vb*{B}-\vb*{BA}^{-1}\vb*{B})$$
-        故 $\rank(\vb*{A}-\vb*{B})=\rank\vb*{A}-\rank\vb*{B}$ 当且仅当 $\rank(\vb*{B}-\vb*{BA}^{-1}\vb*{B})=0$，即 $\vb*{BA}^{-1}\vb*{B}=\vb*{B}.$
+        故 $\rank(\vb*{A}-\vb*{B})=\rank\vb*{A}-\rank\vb*{B}$ 当且仅当 $\rank(\vb*{B}-\vb*{BA}^{-1}\vb*{B})=0$, 即 $\vb*{BA}^{-1}\vb*{B}=\vb*{B}.$
     \end{enumerate}
 \end{proof}
 
 \begin{example}
-    设 $\vb*{A},~\vb*{B}$ 都是数域 $P$ 上的 $n$ 阶方阵，满足 $\vb*{AB}=\vb*{BA}$，证明:
+    设 $\vb*{A},~\vb*{B}$ 都是数域 $P$ 上的 $n$ 阶方阵, 满足 $\vb*{AB}=\vb*{BA}$, 证明:
     $$\rank(\vb*{A}+\vb*{B})\leqslant \rank\vb*{A}+\rank\vb*{B}-\rank(\vb*{AB}).$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    利用分块矩阵的初等行变换，有
+    利用分块矩阵的初等行变换, 有
     $$\mqty(\vb*{A}&\vb*{O}\\\vb*{O}&\vb*{B})\xrightarrow[]{\text{行}}\mqty(\vb*{A}&\vb*{B}\\\vb*{O}&\vb*{B})\xrightarrow[]{\text{列}}\mqty(\vb*{A}+\vb*{B}&\vb*{B}\\\vb*{B}&\vb*{B})$$
-    因为 $\vb*{AB}=\vb*{BA}$，于是
+    因为 $\vb*{AB}=\vb*{BA}$, 于是
     $$\mqty(\vb*{E}&\vb*{O}\\-\vb*{B}&\vb*{A}+\vb*{B})\mqty(\vb*{A}+\vb*{B}&\vb*{B}\\\vb*{B}&\vb*{B})=\mqty(\vb*{A}+\vb*{B}&\vb*{B}\\\vb*{O}&\vb*{AB})$$
-    于是，有 $$\rank\vb*{A}+\rank\vb*{B}=\rank\mqty(\vb*{A}+\vb*{B}&\vb*{B}\\\vb*{B}&\vb*{B})\geqslant \rank\mqty(\vb*{A}+\vb*{B}&\vb*{B}\\\vb*{O}&\vb*{AB})\geqslant \rank(\vb*{A}+\vb*{B})+\rank(\vb*{AB})$$
+    于是, 有 $$\rank\vb*{A}+\rank\vb*{B}=\rank\mqty(\vb*{A}+\vb*{B}&\vb*{B}\\\vb*{B}&\vb*{B})\geqslant \rank\mqty(\vb*{A}+\vb*{B}&\vb*{B}\\\vb*{O}&\vb*{AB})\geqslant \rank(\vb*{A}+\vb*{B})+\rank(\vb*{AB})$$
     即得证不等式.
 \end{proof}
 
 \subsection{秩的相关等式证明}
 
 \begin{theorem}
-    对于 $m\times n$ 矩阵 $\vb*{A}$ 与 $s\times t$ 矩阵 $\vb*{B}$，有 $\rank\mqty(\vb*{A}&\vb*{O}\\\vb*{O}&\vb*{B})=\rank\vb*{A}+\rank\vb*{B}.$
+    对于 $m\times n$ 矩阵 $\vb*{A}$ 与 $s\times t$ 矩阵 $\vb*{B}$, 有 $\rank\mqty(\vb*{A}&\vb*{O}\\\vb*{O}&\vb*{B})=\rank\vb*{A}+\rank\vb*{B}.$
 \end{theorem}
 
 \begin{theorem}[秩的第一降阶定理]
-    若 $\vb*{A}$ 是 $r$ 阶可逆矩阵，分块矩阵 $\vb*{M}=\mqty(\vb*{A}&\vb*{B}\\\vb*{C}&\vb*{D})$，那么 $$\rank\vb*{M}=r+\rank(\vb*{D}-\vb*{CA}^{-1}\vb*{B}).$$
+    若 $\vb*{A}$ 是 $r$ 阶可逆矩阵, 分块矩阵 $\vb*{M}=\mqty(\vb*{A}&\vb*{B}\\\vb*{C}&\vb*{D})$, 那么 $$\rank\vb*{M}=r+\rank(\vb*{D}-\vb*{CA}^{-1}\vb*{B}).$$
 \end{theorem}
 
 \begin{example}
-    设 $\vb*{A},~\vb*{D}$ 分别为 $m$ 阶与 $n$ 阶可逆矩阵，$\vb*{B},~\vb*{C}$ 分别为 $m\times n$ 与 $n\times m$ 矩阵，证明:
+    设 $\vb*{A},~\vb*{D}$ 分别为 $m$ 阶与 $n$ 阶可逆矩阵, $\vb*{B},~\vb*{C}$ 分别为 $m\times n$ 与 $n\times m$ 矩阵, 证明:
     $$\rank \vb*{A}-\rank\qty(\vb*{A}-\vb*{BD}^{-1}\vb*{C})=\rank \vb*{D}-\rank\qty(\vb*{D}-\vb*{CA}^{-1}\vb*{B}).$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    利用分块矩阵的初等行变换，得
+    利用分块矩阵的初等行变换, 得
     \begin{flalign*}
         \mqty(\vb*{A}&\vb*{O}\\\vb*{O}&\vb*{D}-\vb*{CA}^{-1}\vb*{B})&\xrightarrow[]{\text{行}}\mqty(\vb*{A}&\vb*{O}\\\vb*{C}&\vb*{D}-\vb*{CA}^{-1}\vb*{B})\xrightarrow[]{\text{列}}\mqty(\vb*{A}&\vb*{B}\\\vb*{C}&\vb*{D})\\
         \mqty(\vb*{A}-\vb*{BD}^{-1}\vb*{C}&\vb*{O}\\\vb*{O}&\vb*{D})&\xrightarrow[]{\text{行}}\mqty(\vb*{A}-\vb*{BD}^{-1}\vb*{C}&\vb*{B}\\\vb*{O}&\vb*{D})\xrightarrow[]{\text{列}}\mqty(\vb*{A}&\vb*{B}\\\vb*{C}&\vb*{D})
     \end{flalign*}
-    因为初等行变化不会改变矩阵的秩，于是 
+    因为初等行变化不会改变矩阵的秩, 于是 
     \begin{flalign*}
         \rank\vb*{A}+\rank\qty(\vb*{D}-\vb*{CA}^{-1}\vb*{B})&=\rank\mqty(\vb*{A}&\vb*{O}\\\vb*{O}&\vb*{D}-\vb*{CA}^{-1}\vb*{B})=\rank\mqty(\vb*{A}&\vb*{B}\\\vb*{C}&\vb*{D})\\
         \rank\qty(\vb*{A}-\vb*{BD}^{-1}\vb*{C})+\rank\vb*{D}&=\rank\mqty(\vb*{A}-\vb*{BD}^{-1}\vb*{C}&\vb*{O}\\\vb*{O}&\vb*{D})=\rank\mqty(\vb*{A}&\vb*{B}\\\vb*{C}&\vb*{D})
@@ -131,32 +131,32 @@
 \end{proof}
 \begin{inference}
     \label{rankmn}
-    特别地，令 $\vb*{A}=\lambda_0\vb*{E}_m,~\vb*{D}=\vb*{E}_n$，其中 $\lambda_0$ 为任意非零常数，则有
+    特别地, 令 $\vb*{A}=\lambda_0\vb*{E}_m,~\vb*{D}=\vb*{E}_n$, 其中 $\lambda_0$ 为任意非零常数, 则有
     $$m-\rank\qty(\lambda_0\vb*{E}_m-\vb*{BC})=n-\rank\qty(\lambda_0\vb*{E}_n-\vb*{CB}).$$
 \end{inference}
 
 \begin{example}
-    设 $\vb*{A}$ 是 $m\times n$ 矩阵，$\vb*{B}$ 是 $n\times s$ 矩阵，且 $\rank(\vb*{AB})=\rank\vb*{B}$，证明:
-    对任一 $s\times t$ 矩阵 $\vb*{C}$，有 $\rank(\vb*{ABC})=\rank(\vb*{BC}).$
+    设 $\vb*{A}$ 是 $m\times n$ 矩阵, $\vb*{B}$ 是 $n\times s$ 矩阵, 且 $\rank(\vb*{AB})=\rank\vb*{B}$, 证明:
+    对任一 $s\times t$ 矩阵 $\vb*{C}$, 有 $\rank(\vb*{ABC})=\rank(\vb*{BC}).$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    利用分块矩阵的初等行变换，得 
+    利用分块矩阵的初等行变换, 得 
     $$\mqty(\vb*{ABC}&\vb*{O}\\\vb*{O}&\vb*{B})\xrightarrow[]{\text{行}}\mqty(\vb*{ABC}&\vb*{AB}\\\vb*{O}&\vb*{B})\xrightarrow[]{\text{列}}\mqty(\vb*{O}&\vb*{AB}\\-\vb*{BC}&\vb*{B})\xrightarrow[]{\text{列}}\mqty(\vb*{AB}&\vb*{O}\\\vb*{B}&\vb*{BC})$$
-    因为初等行变化不会改变矩阵的秩，所以
+    因为初等行变化不会改变矩阵的秩, 所以
     $$\rank\mqty(\vb*{ABC}&\vb*{O}\\\vb*{O}&\vb*{B})=\rank(\vb*{ABC})+\rank\vb*{B}=\rank\mqty(\vb*{AB}&\vb*{O}\\\vb*{B}&\vb*{BC})\geqslant \rank(\vb*{AB})+\rank(\vb*{BC})$$
-    又 $\rank(\vb*{AB})=\rank\vb*{B}$，所以 $\rank(\vb*{ABC})\geqslant \rank(\vb*{BC})$，又 $\rank(\vb*{ABC})\leqslant \rank(\vb*{BC})$，
+    又 $\rank(\vb*{AB})=\rank\vb*{B}$, 所以 $\rank(\vb*{ABC})\geqslant \rank(\vb*{BC})$, 又 $\rank(\vb*{ABC})\leqslant \rank(\vb*{BC})$, 
     故 $$\rank(\vb*{ABC})=\rank(\vb*{BC}).$$
 \end{proof}
 
 \subsection{秩的应用}
 
 \begin{example}
-    设 $\vb*{A},~\vb*{B}$ 分别是实数域上的 $3\times4$ 和 $4\times3$ 矩阵，且满足
+    设 $\vb*{A},~\vb*{B}$ 分别是实数域上的 $3\times4$ 和 $4\times3$ 矩阵, 且满足
     $$\vb*{AB}=\mqty(-9&2&2\\-20&5&4\\-35&7&8),~\vb*{BA}=\mqty(-14 &2x-5 &2 &6\\0 &1 &0 &0\\-15 &3x-3 &3 &6\\-32 &6x-7 &4 &14)$$
     求 $x$ 的值.
 \end{example}
 \begin{solution}
-    由推论 \ref{rankmn}，令 $\lambda_0=1$，于是  $3-\rank\qty(\vb*{E}_3-\vb*{AB})=4-\rank\qty(\vb*{E}_4-\vb*{BA})$，那么 
+    由推论 \ref{rankmn}, 令 $\lambda_0=1$, 于是  $3-\rank\qty(\vb*{E}_3-\vb*{AB})=4-\rank\qty(\vb*{E}_4-\vb*{BA})$, 那么 
     \begin{flalign*}
         \rank\qty(\vb*{E}_4-\vb*{BA})&=4-3+\rank\qty(\vb*{E}_3-\vb*{AB})\\
         \rank\mqty(15 &5-2x &-2 &-6\\0 &0 &0 &0\\15 &3-3x &-2 &-6\\32 &7-6x &-4 &-13)&=1+\rank\mqty(10 &-2 &-2\\20 &-4 &-4\\35 &-7 &-7)=2
@@ -165,7 +165,7 @@
 \end{solution}
 
 \begin{example}
-    设 $\vb*{A}$ 是 4 阶矩阵，向量 $\vb*{\alpha},~\vb*{\beta}$ 是齐次方程组 $(\vb*{A}-\vb*{E})\vb*{x}=\vb*{0}$ 的基础解系，向量 $\vb*{\gamma}$ 是齐次方程组 $(\vb*{A}+\vb*{E})\vb*{x}=\vb*{0}$ 的基础解系，求 $\qty(\vb*{A}^2-\vb*{E})\vb*{x}=\vb*{0}$ 的通解
+    设 $\vb*{A}$ 是 4 阶矩阵, 向量 $\vb*{\alpha},~\vb*{\beta}$ 是齐次方程组 $(\vb*{A}-\vb*{E})\vb*{x}=\vb*{0}$ 的基础解系, 向量 $\vb*{\gamma}$ 是齐次方程组 $(\vb*{A}+\vb*{E})\vb*{x}=\vb*{0}$ 的基础解系, 求 $\qty(\vb*{A}^2-\vb*{E})\vb*{x}=\vb*{0}$ 的通解
     \begin{tasks}(2)
         \task $c_1\vb*{\alpha}+c_2\vb*{\beta}$ 其中 $c_1,~c_2$ 为任意常数
         \task $c_1\vb*{\alpha}+c_2\vb*{\gamma}$ 其中 $c_1,~c_2$ 为任意常数
@@ -174,11 +174,11 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    因为向量 $\vb*{\alpha},~\vb*{\beta}$ 是齐次方程组 $(\vb*{A}-\vb*{E})\vb*{x}=\vb*{0}$ 的基础解系，所以 $$s=n-\rank(\vb*{A}-\vb*{E})\Rightarrow 2=4-\rank(\vb*{A}-\vb*{E})\Rightarrow \rank(\vb*{A}-\vb*{E})=2$$
-    同理 $\rank(\vb*{A}+\vb*{E})=3$，又因为 
+    因为向量 $\vb*{\alpha},~\vb*{\beta}$ 是齐次方程组 $(\vb*{A}-\vb*{E})\vb*{x}=\vb*{0}$ 的基础解系, 所以 $$s=n-\rank(\vb*{A}-\vb*{E})\Rightarrow 2=4-\rank(\vb*{A}-\vb*{E})\Rightarrow \rank(\vb*{A}-\vb*{E})=2$$
+    同理 $\rank(\vb*{A}+\vb*{E})=3$, 又因为 
     $$\rank\qty(\vb*{A}^2-\vb*{E})=\rank[(\vb*{A}+\vb*{E})(\vb*{A}-\vb*{E})]\leqslant \min\qty{\rank(\vb*{A}+\vb*{E}),\rank(\vb*{A}-\vb*{E})}\Rightarrow \rank\qty(\vb*{A}^2-\vb*{E})\leqslant 2$$
-    当 $\rank\qty(\vb*{A}^2-\vb*{E})=0$ 时，$\vb*{A}^2-\vb*{E}=\vb*{O}\Rightarrow (\vb*{A}+\vb*{E})(\vb*{A}-\vb*{E})=\vb*{O}\Rightarrow \rank(\vb*{A}+\vb*{E})+\rank(\vb*{A}-\vb*{E})\leqslant 4$，而 $\rank(\vb*{A}+\vb*{E})=3,~\rank(\vb*{A}-\vb*{E})=2$，与之矛盾;
-    当 $\rank\qty(\vb*{A}^2-\vb*{E})=2$ 时，说明有 2 个线性无关解，$\qty(\vb*{A}^2-\vb*{E})\vb*{x}=\vb*{0}\Rightarrow (\vb*{A}+\vb*{E})(\vb*{A}-\vb*{E})\vb*{x}=\vb*{0}$，即 $\vb*{\alpha},~\vb*{\beta},~\vb*{\gamma}$ 是方程组的三个解，
-    又因为 $\vb*{\alpha},~\vb*{\beta}$ 是齐次方程组 $(\vb*{A}-\vb*{E})\vb*{x}=\vb*{0}$ 的基础解系，说明 $\vb*{\alpha},~\vb*{\beta}$ 线性无关，且 $\vb*{\alpha},~\vb*{\beta}$ 是特征值 1 对应的特征向量，$\vb*{\gamma}$ 是 -1 对应的特征向量，因此 $\vb*{\gamma}$ 与 $\vb*{\alpha}$ 或 $\vb*{\gamma}$ 线性无关，故方程组有 3 个线性无关解，矛盾;
-    所以 $\rank\qty(\vb*{A}^2-\vb*{E})=1\Rightarrow s'=n-\rank\qty(\vb*{A}^2-\vb*{E})=4-1=3$，因此选 D.
+    当 $\rank\qty(\vb*{A}^2-\vb*{E})=0$ 时, $\vb*{A}^2-\vb*{E}=\vb*{O}\Rightarrow (\vb*{A}+\vb*{E})(\vb*{A}-\vb*{E})=\vb*{O}\Rightarrow \rank(\vb*{A}+\vb*{E})+\rank(\vb*{A}-\vb*{E})\leqslant 4$, 而 $\rank(\vb*{A}+\vb*{E})=3,~\rank(\vb*{A}-\vb*{E})=2$, 与之矛盾;
+    当 $\rank\qty(\vb*{A}^2-\vb*{E})=2$ 时, 说明有 2 个线性无关解, $\qty(\vb*{A}^2-\vb*{E})\vb*{x}=\vb*{0}\Rightarrow (\vb*{A}+\vb*{E})(\vb*{A}-\vb*{E})\vb*{x}=\vb*{0}$, 即 $\vb*{\alpha},~\vb*{\beta},~\vb*{\gamma}$ 是方程组的三个解, 
+    又因为 $\vb*{\alpha},~\vb*{\beta}$ 是齐次方程组 $(\vb*{A}-\vb*{E})\vb*{x}=\vb*{0}$ 的基础解系, 说明 $\vb*{\alpha},~\vb*{\beta}$ 线性无关, 且 $\vb*{\alpha},~\vb*{\beta}$ 是特征值 1 对应的特征向量, $\vb*{\gamma}$ 是 -1 对应的特征向量, 因此 $\vb*{\gamma}$ 与 $\vb*{\alpha}$ 或 $\vb*{\gamma}$ 线性无关, 故方程组有 3 个线性无关解, 矛盾;
+    所以 $\rank\qty(\vb*{A}^2-\vb*{E})=1\Rightarrow s'=n-\rank\qty(\vb*{A}^2-\vb*{E})=4-1=3$, 因此选 D.
 \end{solution}

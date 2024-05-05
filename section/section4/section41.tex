@@ -3,45 +3,45 @@
 \subsection{模、方向角、投影}
 
 \begin{definition}[投影]
-    $\vec{a}$ 在 $\vec{b}$ 方向上的\textit{投影}记为 $\mathrm{Prj}_{\vec{b} } \vec{a}$，
+    $\vec{a}$ 在 $\vec{b}$ 方向上的\textit{投影}记为 $\mathrm{Prj}_{\vec{b} } \vec{a}$, 
     且 $\mathrm{Prj}_{\vec{b} } \vec{a}=|\vec{a}| \cdot \cos\left \langle \vec{a},\vec{b} \right \rangle .$
 \end{definition}
 
 \begin{example}
-    设 $\vec{a}=(2,1,-1),~\vec{b}=(1,-3,1)$，试在 $\vec{a},~\vec{b}$ 所决定的平面内，求与 $\vec{a}$ 垂直，且模为 $\sqrt{93}$ 的向量.
+    设 $\vec{a}=(2,1,-1),~\vec{b}=(1,-3,1)$, 试在 $\vec{a},~\vec{b}$ 所决定的平面内, 求与 $\vec{a}$ 垂直, 且模为 $\sqrt{93}$ 的向量.
 \end{example}
 \begin{solution}
-    \textbf{法一: }设所求向量为 $ \vec{c}=(x, y, z)$，则由题设有 $ \vec{c} \perp \vec{a} \times \vec{b},~ \vec{c} \perp \vec{a},~|\vec{c}|=\sqrt{93}$，
-    而 $ \vec{a} \times \vec{b}=\left|\begin{array}{ccc}\vec{i} & \vec{j} & \vec{k} \\ 2 & 1 & -1 \\ 1 & -3 & 1\end{array}\right|=-2 \vec{i}-3 \vec{j}-7 \vec{k}$，于是有
+    \textbf{法一: }设所求向量为 $ \vec{c}=(x, y, z)$, 则由题设有 $ \vec{c} \perp \vec{a} \times \vec{b},~ \vec{c} \perp \vec{a},~|\vec{c}|=\sqrt{93}$, 
+    而 $ \vec{a} \times \vec{b}=\left|\begin{array}{ccc}\vec{i} & \vec{j} & \vec{k} \\ 2 & 1 & -1 \\ 1 & -3 & 1\end{array}\right|=-2 \vec{i}-3 \vec{j}-7 \vec{k}$, 于是有
     $\left\{\begin{array}{llll}
             -2x & -3y  & -7z  & =0  \\
             2x  & +y   & -z   & =0  \\
             x^2 & +y^2 & +z^2 & =93
-        \end{array}\right.$，解得 $ x=\pm 5,~ y=\mp 8,~ z=\pm 2 $，从而 $ \vec{c}=\pm(5,-8,2) .$\\
-    \textbf{法二: }设所求向量为 $ \vec{c}$，则由题设有 $ \vec{c} \perp \vec{a} \times \vec{b},~ \vec{c} \perp \vec{a},~|\vec{c}|=\sqrt{93}$，
-    于是 $ \vec{c} / /(\vec{a} \times \vec{b}) \times \vec{a}$，从而得
+        \end{array}\right.$, 解得 $ x=\pm 5,~ y=\mp 8,~ z=\pm 2 $, 从而 $ \vec{c}=\pm(5,-8,2) .$\\
+    \textbf{法二: }设所求向量为 $ \vec{c}$, 则由题设有 $ \vec{c} \perp \vec{a} \times \vec{b},~ \vec{c} \perp \vec{a},~|\vec{c}|=\sqrt{93}$, 
+    于是 $ \vec{c} / /(\vec{a} \times \vec{b}) \times \vec{a}$, 从而得
     $$ \vec{c}=\left|\vec{c}\right| \cdot\left(\pm \frac{(\vec{a} \times \vec{b}) \times \vec{a}}{|(\vec{a} \times \vec{b}) \times \vec{a}|}\right)=\pm(5,-8,2) .$$
-    \textbf{法三: }设所求向量为 $ \vec{c}$，则可设 $ \vec{c}=\lambda \vec{a}+\mu \vec{b}=(2 \lambda+\mu, \lambda-3 \mu,-\lambda+\mu)$，
-    由已知 $ \vec{c} \perp \vec{a} $ 得 $ \vec{c} \cdot \vec{a}=0$，即 $$ 2(2 \lambda+\mu)+\lambda-3 \mu-(-\lambda+\mu)=0$$
-    解得 $ \mu=3 \lambda$，又 $ |\vec{c}|=\sqrt{93}$，所以 $ \sqrt{(2 \lambda+\mu)^{2}+(\lambda-3 \mu)^{2}+(\mu-\lambda)^{2}}=\sqrt{93}$，
-    代人 $ \mu=3 \lambda$，得 $ \lambda^{2}=1$，解得 $ \lambda=\pm 1, \mu=\pm 3$，故 $ \vec{c}=\pm(5,-8,2) .$
+    \textbf{法三: }设所求向量为 $ \vec{c}$, 则可设 $ \vec{c}=\lambda \vec{a}+\mu \vec{b}=(2 \lambda+\mu, \lambda-3 \mu,-\lambda+\mu)$, 
+    由已知 $ \vec{c} \perp \vec{a} $ 得 $ \vec{c} \cdot \vec{a}=0$, 即 $$ 2(2 \lambda+\mu)+\lambda-3 \mu-(-\lambda+\mu)=0$$
+    解得 $ \mu=3 \lambda$, 又 $ |\vec{c}|=\sqrt{93}$, 所以 $ \sqrt{(2 \lambda+\mu)^{2}+(\lambda-3 \mu)^{2}+(\mu-\lambda)^{2}}=\sqrt{93}$, 
+    代人 $ \mu=3 \lambda$, 得 $ \lambda^{2}=1$, 解得 $ \lambda=\pm 1, \mu=\pm 3$, 故 $ \vec{c}=\pm(5,-8,2) .$
 \end{solution}
 
 \begin{example}
-    设向量 $\vb*{a}+3\vb*{b}$ 与 $\vb*{a}-4\vb*{b}$ 分别垂直于向量 $7\vb*{a}-5\vb*{b}$ 与 $7\vb*{a}-2\vb*{b}$，试求 $\vb*{a}$ 与 $\vb*{b}$ 之间的夹角.
+    设向量 $\vb*{a}+3\vb*{b}$ 与 $\vb*{a}-4\vb*{b}$ 分别垂直于向量 $7\vb*{a}-5\vb*{b}$ 与 $7\vb*{a}-2\vb*{b}$, 试求 $\vb*{a}$ 与 $\vb*{b}$ 之间的夹角.
 \end{example}
 \begin{solution}
-    因为 $\qty(\vb*{a}+3\vb*{b})\bot \qty(7\vb*{a}-5\vb*{b})$，所以 $7\vb*{a}^2-15\vb*{b}^2=-16\vb*{ab}$，同理可得 $7\vb*{a}^2+8\vb*{b}^2=30\vb*{ab}$，
+    因为 $\qty(\vb*{a}+3\vb*{b})\bot \qty(7\vb*{a}-5\vb*{b})$, 所以 $7\vb*{a}^2-15\vb*{b}^2=-16\vb*{ab}$, 同理可得 $7\vb*{a}^2+8\vb*{b}^2=30\vb*{ab}$, 
     联立解得 $\begin{cases}
             \vb*{b}^2=2\vb*{ab} \\\vb*{a}^2=\vb*{b}^2
-        \end{cases}$，于是 $\cos<\vb*{a},\vb*{b}>=\dfrac{\vb*{ab}}{|\vb*{a}|\cdot|\vb*{b}|}=\dfrac{1}{2}$，因此 $\vb*{a}$ 与 $\vb*{b}$ 之间的夹角为 $\dfrac{\pi}{3} .$
+        \end{cases}$, 于是 $\cos<\vb*{a},\vb*{b}>=\dfrac{\vb*{ab}}{|\vb*{a}|\cdot|\vb*{b}|}=\dfrac{1}{2}$, 因此 $\vb*{a}$ 与 $\vb*{b}$ 之间的夹角为 $\dfrac{\pi}{3} .$
 \end{solution}
 
 % \begin{example}
-%     设 $\vec{a}=\vec{i},~\vec{b}=\vec{j}-2\vec{k},~\vec{c}=2\vec{i}-2\vec{j}+\vec{k}$，求一个单位向量 $\vec{e}$，使 $\vec{e}\bot\vec{c}$，且 $\vec{a},~\vec{b},~\vec{e}$ 共面.
+%     设 $\vec{a}=\vec{i},~\vec{b}=\vec{j}-2\vec{k},~\vec{c}=2\vec{i}-2\vec{j}+\vec{k}$, 求一个单位向量 $\vec{e}$, 使 $\vec{e}\bot\vec{c}$, 且 $\vec{a},~\vec{b},~\vec{e}$ 共面.
 % \end{example}
 % \begin{solution}
-%     \textbf{法一: }设 $\vec{e}=(x,y,z)$，那么 $x^2+y^2+z^2=1$，且 $\vec{e}\cdot \left(\vec{a}\times\vec{b}\right)=0,~\vec{e}\bot\vec{c}$，所以
+%     \textbf{法一: }设 $\vec{e}=(x,y,z)$, 那么 $x^2+y^2+z^2=1$, 且 $\vec{e}\cdot \left(\vec{a}\times\vec{b}\right)=0,~\vec{e}\bot\vec{c}$, 所以
 %     $$\left\{\begin{array}{llll}
 %             2x  & -2y  & +z   & =0 \\
 %                 & 2y  & +z   & =0 \\
@@ -61,13 +61,13 @@
 \subsubsection{数量积}
 
 \begin{definition}[向量的数量积 (点乘积或内积)]
-    向量 $ \vb*{a}=\left\{a_{1}, a_{2}, a_{3}\right\} $ 与 $ \vb*{b}=\left\{b_{1}, b_{2}, b_{3}\right\} $ 的\textit{数量积}是一个数 $ |\vb*{a}| \cdot|\vb*{b}| \cos (\widehat{\vb*{a}, \vb*{b}}) $ (其中 $ 0 \leqslant(\widehat{a, b}) \leqslant \pi$)，
-    记作 $ \vb*{a} \cdot \vb*{b} $. 若向量 $ \vb*{a} $ 或 $ \vb*{b} $ 为零向量时，则定义 $ \vb*{a} \cdot \vb*{b}=0$，数量积 $ \vb*{a} \cdot \vb*{b} $ 的坐标表示式为
+    向量 $ \vb*{a}=\left\{a_{1}, a_{2}, a_{3}\right\} $ 与 $ \vb*{b}=\left\{b_{1}, b_{2}, b_{3}\right\} $ 的\textit{数量积}是一个数 $ |\vb*{a}| \cdot|\vb*{b}| \cos (\widehat{\vb*{a}, \vb*{b}}) $ (其中 $ 0 \leqslant(\widehat{a, b}) \leqslant \pi$), 
+    记作 $ \vb*{a} \cdot \vb*{b} $. 若向量 $ \vb*{a} $ 或 $ \vb*{b} $ 为零向量时, 则定义 $ \vb*{a} \cdot \vb*{b}=0$, 数量积 $ \vb*{a} \cdot \vb*{b} $ 的坐标表示式为
     $$\vb*{a} \cdot \vb*{b}=a_{1} b_{1}+a_{2} b_{2}+a_{3} b_{3} .$$
 \end{definition}
 
 \begin{definition}[向量正交]
-    两个向量 $ \vb*{a}, \vb*{b} $ 垂直 (或称\textit{正交})，记作 $ \vb*{a} \perp \vb*{b} $，特别地，规定零向量与任一向量垂直.
+    两个向量 $ \vb*{a}, \vb*{b} $ 垂直 (或称\textit{正交}), 记作 $ \vb*{a} \perp \vb*{b} $, 特别地, 规定零向量与任一向量垂直.
 \end{definition}
 
 数量积有以下基本性质:
@@ -81,9 +81,9 @@
 \subsubsection{向量积}
 
 \begin{definition}[向量的向量积 (叉乘积或外积)]
-    两个向量 $ \vb*{a} $ 和 $ \vb*{b} $ 的\textit{向量积}是一个向量 $ \vb*{c} $，记为 $ \vb*{a} \times \vb*{b} $，
-    即 $ \vb*{c}=\vb*{a} \times \vb*{b}$; $\vb*{c} $ 的模等于 $ |\vb*{a}||\vb*{b}| \sin (\widehat{\vb*{a}, \vb*{b}})$，$\vb*{c} $ 的方向垂直于 $ \vb*{a} $ 与 $ \vb*{b} $ 所决定的平面,且 $ \vb*{a}, \vb*{b}, \vb*{c} $ 顺次构成右手系.
-    若向量 $ \vb*{a} $ 或 $ \vb*{b} $ 为零向量时，则定义 $ \vb*{a} \times \vb*{b}=\mathbf{0} $，向量积 $ \vb*{a} \times \vb*{b} $ 坐标表示式为
+    两个向量 $ \vb*{a} $ 和 $ \vb*{b} $ 的\textit{向量积}是一个向量 $ \vb*{c} $, 记为 $ \vb*{a} \times \vb*{b} $, 
+    即 $ \vb*{c}=\vb*{a} \times \vb*{b}$; $\vb*{c} $ 的模等于 $ |\vb*{a}||\vb*{b}| \sin (\widehat{\vb*{a}, \vb*{b}})$, $\vb*{c} $ 的方向垂直于 $ \vb*{a} $ 与 $ \vb*{b} $ 所决定的平面,且 $ \vb*{a}, \vb*{b}, \vb*{c} $ 顺次构成右手系.
+    若向量 $ \vb*{a} $ 或 $ \vb*{b} $ 为零向量时, 则定义 $ \vb*{a} \times \vb*{b}=\mathbf{0} $, 向量积 $ \vb*{a} \times \vb*{b} $ 坐标表示式为
     $$
         \vb*{a} \times \vb*{b}=\left|\begin{array}{ccc}
             \vb*{i} & \vb*{j} & \vb*{k} \\
@@ -111,7 +111,7 @@
 \end{enumerate}
 
 % \begin{theorem}[向量积公式]
-%     设 $\vec{x}=(x_1,x_2,x_3),\vec{y}=(y_1,y_2,y_3)$，那么
+%     设 $\vec{x}=(x_1,x_2,x_3),\vec{y}=(y_1,y_2,y_3)$, 那么
 %     $$\vec{x}\times\vec{y}=\qty(\begin{vmatrix}
 %                 x_2 & x_3 \\
 %                 y_2 & y_3
@@ -130,20 +130,20 @@
 \end{theorem}
 
 \begin{example}[2023 四川大学]
-    设向量 $\vec{a}=(1,2,3),\vec{b}=(4,5,6),\vec{c}=(7,8,9)$，求 $\vec{a}\times\qty(\vec{b}\times\vec{c}).$
+    设向量 $\vec{a}=(1,2,3),\vec{b}=(4,5,6),\vec{c}=(7,8,9)$, 求 $\vec{a}\times\qty(\vec{b}\times\vec{c}).$
 \end{example}
 \begin{solution}
     \textbf{法一: }由向量积的计算公式计算 $\vec{b}\times\vec{c}$:
     $$\vec{b}\times\vec{c}=\qty(\mqty|5&6\\8&9|,\mqty|6&4\\9&7|,\mqty|4&5\\7&8|)=(-3,6,-3)$$
     进一步计算 $\vec{a}\times\qty(\vec{b}\times\vec{c})$:
     $$\vec{a}\times\qty(\vec{b}\times\vec{c})=\qty(\mqty|2&3\\6&-3|,\mqty|3&1\\-3&-3|,\mqty|1&2\\-3&6|)=(-24,-6,12).$$
-    \textbf{法二: }由二重外积公式: $\vec{a}\times\qty(\vec{b}\times\vec{c})=\vec{b}\cdot\qty(\vec{a}\cdot\vec{c})-\vec{c}\cdot\qty(\vec{a}\cdot\vec{b})$，其中
+    \textbf{法二: }由二重外积公式: $\vec{a}\times\qty(\vec{b}\times\vec{c})=\vec{b}\cdot\qty(\vec{a}\cdot\vec{c})-\vec{c}\cdot\qty(\vec{a}\cdot\vec{b})$, 其中
     $$\vec{a}\cdot\vec{c}=50,~\vec{a}\cdot\vec{b}=32$$
     于是得 $\vec{a}\times\qty(\vec{b}\times\vec{c})=(-24,-6,12).$
 \end{solution}
 
 \begin{theorem}[Lagrange 恒等式]
-    对于任意两个向量 $\vb*{a}$ 和 $\vb*{b}$，满足以下恒等关系式:
+    对于任意两个向量 $\vb*{a}$ 和 $\vb*{b}$, 满足以下恒等关系式:
     $$|\vb*{a} \times \vb*{b}|^{2}=|\vb*{a}|^{2}|\vb*{b}|^{2}-(\vb*{a} \cdot \vb*{b})^{2}
         =\mqty|\vb*{a} \cdot \vb*{a} & \vb*{a} \cdot \vb*{b} \\
         \vb*{a} \cdot \vb*{b} & \vb*{b} \cdot \vb*{b}|.$$
@@ -151,7 +151,7 @@
 \end{theorem}
 
 % \begin{example}
-%     若非零向量 $ \vb*{a}, \vb*{b} $ 满足关系式 $ |\vb*{a}-\vb*{b}|=|\vb*{a}+\vb*{b}| $，则必有.
+%     若非零向量 $ \vb*{a}, \vb*{b} $ 满足关系式 $ |\vb*{a}-\vb*{b}|=|\vb*{a}+\vb*{b}| $, 则必有.
 %     % \begin{task}
 %     %     \task $ \vb*{a}-\vb*{b}=\vb*{a}+\vb*{b} $
 %     % \end{task}
@@ -161,23 +161,23 @@
 % \end{example}
 % 
 % \begin{example}
-%     设 $ (\vec{a} \times \vec{b}) \cdot \vec{c}=2 $，求 $ [(\vec{a}+\vec{b}) \times(\vec{b}+\vec{c})] \cdot(\vec{c}+\vec{a}).$
+%     设 $ (\vec{a} \times \vec{b}) \cdot \vec{c}=2 $, 求 $ [(\vec{a}+\vec{b}) \times(\vec{b}+\vec{c})] \cdot(\vec{c}+\vec{a}).$
 % \end{example}
 % 
 % \begin{example}
-%     设点 $ A $ 位于第一卦限，向径 $ \overrightarrow{O A} $ 与 $ x $ 轴、$y $ 轴的夹角依次为 $ \dfrac{\pi}{3}, \dfrac{\pi}{4} $，且 $ |O A|=6 $，求点 $ A $ 的坐标.
+%     设点 $ A $ 位于第一卦限, 向径 $ \overrightarrow{O A} $ 与 $ x $ 轴、$y $ 轴的夹角依次为 $ \dfrac{\pi}{3}, \dfrac{\pi}{4} $, 且 $ |O A|=6 $, 求点 $ A $ 的坐标.
 % \end{example}
 % 
 % \begin{example}
-%     已知向量 $ \vec{a}=(2,-3,6), \vec{b}=(-1,2,-2) $，又向量 $ \vec{c} $ 在 $ \vec{a}, \vec{b} $ 夹角的平分线上，且 $ |\vec{c}|=3 \sqrt{42} $，求向量 $ \vec{c} .$
+%     已知向量 $ \vec{a}=(2,-3,6), \vec{b}=(-1,2,-2) $, 又向量 $ \vec{c} $ 在 $ \vec{a}, \vec{b} $ 夹角的平分线上, 且 $ |\vec{c}|=3 \sqrt{42} $, 求向量 $ \vec{c} .$
 % \end{example}
 % 
 % \begin{example}
-%     设有一向量与 $ x $ 轴正向、$y $ 轴正向的夹角相等，而与 $ z $ 轴正向的夹角是前者的两倍，求与该向量同方向的单位向量.
+%     设有一向量与 $ x $ 轴正向、$y $ 轴正向的夹角相等, 而与 $ z $ 轴正向的夹角是前者的两倍, 求与该向量同方向的单位向量.
 % \end{example}
 % 
 % \begin{example}
-%     设向量 $ \vec{a}=\vec{i}+2 \vec{j}-\vec{k}, \vec{b}=-\vec{i}+\vec{j}$，
+%     设向量 $ \vec{a}=\vec{i}+2 \vec{j}-\vec{k}, \vec{b}=-\vec{i}+\vec{j}$, 
 %     \begin{enumerate}[label=(\arabic{*})]
 %         \item 计算 $ \vec{a} \cdot \vec{b} $ 及 $ \vec{a} \times \vec{b}$;
 %         \item 求它们夹角 $ \theta $ 的正弦与余弦;
@@ -186,7 +186,7 @@
 % \end{example}
 % 
 % \begin{example}
-%     已知一四面体的顶点为 $ A_{k}\left(x_{k}, y_{k}, z_{k}\right)(k=1,2,3,4) $，求该四面体的体积.
+%     已知一四面体的顶点为 $ A_{k}\left(x_{k}, y_{k}, z_{k}\right)(k=1,2,3,4) $, 求该四面体的体积.
 % \end{example}
 % 
 % \begin{example}
@@ -194,23 +194,23 @@
 % \end{example}
 % 
 % \begin{example}
-%     设向量 $ \vb*{a}, \vb*{b}, \vb*{c} $ 不共面，且 $ \vb*{d}=\boldsymbol{\alpha} \vb*{a}+\boldsymbol{\beta} \vb*{b}+\gamma \vb*{c} $，
+%     设向量 $ \vb*{a}, \vb*{b}, \vb*{c} $ 不共面, 且 $ \vb*{d}=\boldsymbol{\alpha} \vb*{a}+\boldsymbol{\beta} \vb*{b}+\gamma \vb*{c} $, 
 %     如果 $ \vb*{a}, \vb*{b}, \vb*{c}, \vb*{d} $ 有公共起点.
 %     \begin{enumerate}[label=(\arabic{*})]
-%         \item 问系数 $ \boldsymbol{\alpha}, \boldsymbol{\beta}, \gamma $ 应满足什么条件，才能使向量 $ \vb*{a}, \vb*{b}, \vb*{c}, \vb*{d} $ 的终点在同一平面上?
-%         \item 如果 $ \vb*{a}=(1,2,1), \vb*{b}=(0,3,1), \vb*{c}=(2,0,3) $，判定向量 $ \vb*{a}, \vb*{b}, \vb*{c} $ 是否共面?
-%         \item 设 $ \vb*{d}=(-1,-3,1) $，由 (2) 求 $ \alpha, \beta, \gamma $，使得
+%         \item 问系数 $ \boldsymbol{\alpha}, \boldsymbol{\beta}, \gamma $ 应满足什么条件, 才能使向量 $ \vb*{a}, \vb*{b}, \vb*{c}, \vb*{d} $ 的终点在同一平面上?
+%         \item 如果 $ \vb*{a}=(1,2,1), \vb*{b}=(0,3,1), \vb*{c}=(2,0,3) $, 判定向量 $ \vb*{a}, \vb*{b}, \vb*{c} $ 是否共面?
+%         \item 设 $ \vb*{d}=(-1,-3,1) $, 由 (2) 求 $ \alpha, \beta, \gamma $, 使得
 %         $$\vb*{d}=\alpha \vb*{a}+\beta \vb*{b}+\gamma \vb*{c}$$
-%         如果 $ \vb*{a}, \vb*{b}, \vb*{c}, \vb*{d} $ 有公共起点，它们是否共面?
+%         如果 $ \vb*{a}, \vb*{b}, \vb*{c}, \vb*{d} $ 有公共起点, 它们是否共面?
 %     \end{enumerate}
 % \end{example}
 % 
 % \begin{example}
-%     问当 $ t $ 为何值时，空间四点 $ A(1,0,0), B(0,2,0), C(0,0,3) ,  D(-1,2, t) $ 共面? 并求平面四边形 $ A B C D $ 的面积.
+%     问当 $ t $ 为何值时, 空间四点 $ A(1,0,0), B(0,2,0), C(0,0,3) ,  D(-1,2, t) $ 共面? 并求平面四边形 $ A B C D $ 的面积.
 % \end{example}
 % 
 % \begin{example}
-%     设 $ \vec{a}, \vec{b} $ 为两个非零向量，$ \displaystyle |\vec{b}|=1,(\widehat{\vec{a}, \vec{b}})=\frac{\pi}{3} $，计算极限
+%     设 $ \vec{a}, \vec{b} $ 为两个非零向量, $ \displaystyle |\vec{b}|=1,(\widehat{\vec{a}, \vec{b}})=\frac{\pi}{3} $, 计算极限
 %     $$\lim _{x \rightarrow 0} \frac{|\vec{a}+x \vec{b}|-|\vec{a}|}{x}.$$
 % \end{example}
 % 
@@ -218,7 +218,7 @@
 %     已知向量 $ \overrightarrow{A B}=\vec{a}, \overrightarrow{A C}=\vec{b}, \angle A D B=\dfrac{\pi}{2}$ .
 %     \begin{enumerate}[label=(\arabic{*})]
 %         \item 证明: $ \displaystyle\triangle B A D $ 的面积 $ \displaystyle S_{\triangle B A D}=\frac{|\vec{a} \cdot \vec{b}||\vec{a} \times \vec{b}|}{2|\vec{b}|^{2}}$;
-%         \item 当 $ \vec{a}, \vec{b} $ 间的夹角为何值时，$ \triangle B A D $ 的面积最大，并求最大面积值.
+%         \item 当 $ \vec{a}, \vec{b} $ 间的夹角为何值时, $ \triangle B A D $ 的面积最大, 并求最大面积值.
 %     \end{enumerate}
 % \end{example}
 % 
@@ -227,30 +227,30 @@
 % \end{example}
 % 
 % \begin{example}
-%     设 $ \mathrm{e}_{1}, \mathrm{e}_{2}, \mathrm{e}_{3} $ 不共面，证明：任一向量 $ \vb*{a} $ 可以表示成
+%     设 $ \mathrm{e}_{1}, \mathrm{e}_{2}, \mathrm{e}_{3} $ 不共面, 证明：任一向量 $ \vb*{a} $ 可以表示成
 %     $$a=\frac{1}{\left(e_{1}, e_{2}, e_{3}\right)}\left[\left(a, e_{2}, e_{3}\right) e_{1}+\left(a, e_{3}, e_{1}\right) e_{2}+\left(a, e_{1}, e_{2}\right) e_{3}\right].$$
 % \end{example}
 % 
 % \begin{example}
-%     设 $ \vb*{a}, \vb*{b}, \vb*{c} $ 不共面，且向量 $ \vb*{r} $ 满足
+%     设 $ \vb*{a}, \vb*{b}, \vb*{c} $ 不共面, 且向量 $ \vb*{r} $ 满足
 %     $$\vb*{a} \cdot \vb*{r}=\alpha, \vb*{b} \cdot \vb*{r}=\boldsymbol{\beta}, \vb*{c} \cdot \vb*{r}=\gamma$$
 %     那么有 $ \displaystyle\vb*{r}=\frac{1}{(\vb*{a}, \vb*{b}, \vb*{c})}[\boldsymbol{\alpha}(\vb*{b} \times \vb*{c})+\boldsymbol{\beta}(\vb*{c} \times \vb*{a})+\gamma(\vb*{a} \times \vb*{b})] .$
 % \end{example}
 % 
 % \begin{example}
-%     证明: $ (\vb*{a} \cdot \vb*{b})^{2}+(\vb*{a} \times \vb*{b})^{2}=|\vb*{a}|^{2}|\vb*{b}|^{2}$，
-%     由此推导用三角形三边长 $ a, b, c $ 计算三角形的面积公式，其中向量 $ (\vb*{a})^{2}=\vb*{a} \cdot \vb*{a} .$
+%     证明: $ (\vb*{a} \cdot \vb*{b})^{2}+(\vb*{a} \times \vb*{b})^{2}=|\vb*{a}|^{2}|\vb*{b}|^{2}$, 
+%     由此推导用三角形三边长 $ a, b, c $ 计算三角形的面积公式, 其中向量 $ (\vb*{a})^{2}=\vb*{a} \cdot \vb*{a} .$
 % \end{example}
 
 \subsubsection{混合积}
 
 \begin{definition}[向量的混合积]
-    设 $ \vb*{a}=\left\{a_{1}, a_{2}, a_{3}\right\}, \vb*{b}=\left\{b_{1}, b_{2}, b_{3}\right\}, \vb*{c}=\left\{c_{1}, c_{2}, c_{3}\right\}$，
-    则称 $ (\vb*{a} \times \vb*{b}) \cdot \vb*{c} $ 为向量 $ \vb*{a}, \vb*{b}, \vb*{c} $ 的混合积，记为 $ [\vb*{a}, \vb*{b}, \vb*{c}] $.
+    设 $ \vb*{a}=\left\{a_{1}, a_{2}, a_{3}\right\}, \vb*{b}=\left\{b_{1}, b_{2}, b_{3}\right\}, \vb*{c}=\left\{c_{1}, c_{2}, c_{3}\right\}$, 
+    则称 $ (\vb*{a} \times \vb*{b}) \cdot \vb*{c} $ 为向量 $ \vb*{a}, \vb*{b}, \vb*{c} $ 的混合积, 记为 $ [\vb*{a}, \vb*{b}, \vb*{c}] $.
 \end{definition}
 
 \begin{theorem}[共面条件]
-    混合积是一数量，其几何意义为: 混合积的绝对值等于以 $ \vb*{a}$ 、$ \vb*{b} $、$ \vb*{c} $ 为相邻三条棱的平行六面体的体积.
-    因此，向量 $ \vb*{a}$ 、$ \vb*{b} $、$ \vb*{c} $ 共面的充分必要条件是 $ (a \times b) \cdot c=0 .$
+    混合积是一数量, 其几何意义为: 混合积的绝对值等于以 $ \vb*{a}$ 、$ \vb*{b} $、$ \vb*{c} $ 为相邻三条棱的平行六面体的体积.
+    因此, 向量 $ \vb*{a}$ 、$ \vb*{b} $、$ \vb*{c} $ 共面的充分必要条件是 $ (a \times b) \cdot c=0 .$
     \index{共面条件}
 \end{theorem}

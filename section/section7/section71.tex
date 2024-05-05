@@ -44,30 +44,30 @@
 %               令 $\displaystyle\begin{cases}
 %                       x-y=2 \\
 %                       4k^2-4k=xy
-%                   \end{cases}$，解得 $\displaystyle\begin{cases}
+%                   \end{cases}$, 解得 $\displaystyle\begin{cases}
 %                       x=2k \\
 %                       y=2k-2
-%                   \end{cases}$，或 $\displaystyle\begin{cases}
+%                   \end{cases}$, 或 $\displaystyle\begin{cases}
 %                       x=2-2k \\
 %                       y=-2k
-%                   \end{cases}$，\\
-%               当 $x=2k$ 时，\begin{flalign*}
+%                   \end{cases}$, \\
+%               当 $x=2k$ 时, \begin{flalign*}
 %                   \sum_{k=2}^\infty \arctan\frac{2}{4k^2-4k+1} & =\sum_{k=2}^\infty[\arctan2k-\arctan(2k-2)]=-\arctan2+\lim_{n\to\infty}\arctan2n \\
 %                                                                & =\frac{\pi}{2}-\arctan2.
 %               \end{flalign*}
-%               当 $x=2-2k$ 时，\begin{flalign*}
+%               当 $x=2-2k$ 时, \begin{flalign*}
 %                   \sum_{k=2}^\infty \arctan\frac{2}{4k^2-4k+1} & =\sum_{k=2}^{\infty}[\arctan(2-2k)-\arctan(-2k)]                    \\
 %                                                                & =\sum_{k=2}^\infty[\arctan2k-\arctan(2k-2)]=\frac{\pi}{2}-\arctan2.
 %               \end{flalign*}
-%               综上，原级数的和为 $\displaystyle\frac{\pi}{2}-\arctan2.$
+%               综上, 原级数的和为 $\displaystyle\frac{\pi}{2}-\arctan2.$
 %     \end{enumerate}
 % \end{solution}
 % \begin{example}
-%     设 $x\in[0,\pi]$，试求级数 $\displaystyle\sum_{n=1}^{\infty}\frac{\sin nx}{n}$ 的和函数.
+%     设 $x\in[0,\pi]$, 试求级数 $\displaystyle\sum_{n=1}^{\infty}\frac{\sin nx}{n}$ 的和函数.
 % \end{example}
 % \begin{solution}
-%     若 $x=0$ 或 $\pi$，显然级数和为 0.\\
-%     现设 $0<x\le \pi$，记 $\displaystyle S_n(x)=\sum_{k=1}^{n}\frac{\sin kx}{k}$，则
+%     若 $x=0$ 或 $\pi$, 显然级数和为 0.\\
+%     现设 $0<x\le \pi$, 记 $\displaystyle S_n(x)=\sum_{k=1}^{n}\frac{\sin kx}{k}$, 则
 %     \begin{flalign*}
 %         S_n'(x) & =\left(\sum_{k=1}^{n}\dfrac{\sin kx}{k}\right)'=\sum_{k=1}^{n}\cos kx=\dfrac{1}{2\sin\dfrac{x}{2}}\sum_{k=1}^{n}2\sin\dfrac{x}{2}\cos kx \\
 %                 & =\dfrac{1}{2\sin\dfrac{x}{2}}\sum_{k=1}^{n}\left[\sin\left(k+\dfrac{1}{2}\right)x-\sin\left(k-\dfrac{1}{2}\right)x\right]                \\
@@ -79,7 +79,7 @@
 %         S_n(x) & =S_n(x)-S_n(\pi)=-\int_{x}^{\pi}S_n'(t)\mathrm{d}t                                                                 \\
 %                & =-\frac{1}{2}\int_{x}^{\pi}\frac{1}{\sin\frac{t}{2}}\sin\left(n+\frac{1}{2}\right)t\mathrm{d}t+\frac{1}{2}(\pi-x).
 %     \end{flalign*}
-%     利用 Riemann 引理，$n\to\infty$ 时上式第一项趋向零，所以级数和
+%     利用 Riemann 引理, $n\to\infty$ 时上式第一项趋向零, 所以级数和
 %     $$S(x)=\begin{cases}
 %             0                               & ,x=0,\pi  \\
 %             \displaystyle\frac{1}{2}(\pi-x) & ,0<x<\pi.
@@ -91,62 +91,62 @@
 % \end{example}
 % \begin{solution}
 %     \textbf{法一: }因为 $$\arcsin x=\sum_{n=0}^{\infty}\dfrac{(2n)!}{4^n(n!)^2(2n+1)}=x+\sum_{n=1}^{\infty}\dfrac{(2n-1)!!}{(2n)!!}\cdot\dfrac{x^{2n+1}}{2n+1}~  |x|\leqslant 1$$
-%     令 $x=\sin u$，则上式化为 $$u=\sin u+\sum_{n=1}^{\infty}\dfrac{(2n-1)!!}{(2n)!!}\cdot\dfrac{\sin^{2n+1}u}{2n+1}~  |u|\leqslant\dfrac{\pi}{2}$$
-%     再将上式两端从 $0$ 到 $\dfrac{\pi}{2}$ 积分，得
+%     令 $x=\sin u$, 则上式化为 $$u=\sin u+\sum_{n=1}^{\infty}\dfrac{(2n-1)!!}{(2n)!!}\cdot\dfrac{\sin^{2n+1}u}{2n+1}~  |u|\leqslant\dfrac{\pi}{2}$$
+%     再将上式两端从 $0$ 到 $\dfrac{\pi}{2}$ 积分, 得
 %     \begin{flalign*}
 %         \dfrac{\pi^2}{8}&=1+\sum_{n=1}^{\infty}\dfrac{(2n-1)!!}{(2n+1)\cdot(2n)!!}\cdot\int_{0}^{\frac{\pi}{2}}\sin^{2n+1}u\dd u=1+\sum_{n=1}^{\infty}\dfrac{(2n-1)!!}{(2n+1)\cdot(2n)!!}\cdot\dfrac{(2n)!!}{(2n+1)!!}\\
 %         &=1+\sum_{n=1}^{\infty}\dfrac{1}{(2n+1)^2}=\sum_{n=1}^{\infty}\dfrac{1}{(2n-1)^2}
 %     \end{flalign*}
 %     于是 $\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n^2}=\sum_{n=1}^{\infty}\dfrac{1}{(2n-1)^2}+\sum_{n=1}^{\infty}\dfrac{1}{(2n)^2}=\dfrac{\pi^2}{8}+\dfrac{1}{4}\sum_{n=1}^{\infty}\dfrac{1}{n^2}\Rightarrow \sum_{n=1}^{\infty}\dfrac{1}{n^2}=\dfrac{\pi^2}{6}.$\\
 %     \textbf{法二: }由复数运算的 De~  Moivre 公式: $$(\cos x+\mathrm{i}\sin x)^m=\cos mx+\mathrm{i}\sin mx$$
-%     对比等号两边的虚部，则有 $$\sin mx=\mathrm{C}_m^1\cos^{m-1}x\sin x-\mathrm{C}_m^3\cos^{m-3}x\sin ^3x+\cdots$$
-%     令 $m=2n+1$，得到 $$\sin(2n+1)x=\mathrm{C}_{2n+1}^1\cos^{2n}x\sin x-\mathrm{C}_{2n+1}^3\cos^{2n-2}x\sin ^3x+\cdots$$
-%     当 $x=\dfrac{k\pi}{2n+1}~ (1\leqslant k\leqslant n)$ 时，$\sin(2n+1)x=0,~\sin x\neq 0$，此时有
+%     对比等号两边的虚部, 则有 $$\sin mx=\mathrm{C}_m^1\cos^{m-1}x\sin x-\mathrm{C}_m^3\cos^{m-3}x\sin ^3x+\cdots$$
+%     令 $m=2n+1$, 得到 $$\sin(2n+1)x=\mathrm{C}_{2n+1}^1\cos^{2n}x\sin x-\mathrm{C}_{2n+1}^3\cos^{2n-2}x\sin ^3x+\cdots$$
+%     当 $x=\dfrac{k\pi}{2n+1}~ (1\leqslant k\leqslant n)$ 时, $\sin(2n+1)x=0,~\sin x\neq 0$, 此时有
 %     $$\mathrm{C}_{2n+1}^1\cot^{2n}x-\mathrm{C}_{2n+1}^3\cot^{2n-2}x+\cdots=0$$
-%     即 $\cot^2\dfrac{\pi}{2n+1},~\cot^2\dfrac{2\pi}{2n+1},~\cdots,~\cot^2\dfrac{n\pi}{2n+1}$ 是方程 $\mathrm{C}_{2n+1}^1u^n-\mathrm{C}_{2n+1}^3u^{n-1}+\cdots=0$ 的根，
-%     由根与系数的关系，有 $$\sum_{k=1}^{n}\cot^2\dfrac{k\pi}{2n+1}=-\dfrac{\mathrm{C}_{2n+1}^3}{\mathrm{C}_{2n+1}^1}=\dfrac{n(2n-1)}{3}$$
-%     又因为 $\csc^2\alpha=\cot^2\alpha+1$，于是
+%     即 $\cot^2\dfrac{\pi}{2n+1},~\cot^2\dfrac{2\pi}{2n+1},~\cdots,~\cot^2\dfrac{n\pi}{2n+1}$ 是方程 $\mathrm{C}_{2n+1}^1u^n-\mathrm{C}_{2n+1}^3u^{n-1}+\cdots=0$ 的根, 
+%     由根与系数的关系, 有 $$\sum_{k=1}^{n}\cot^2\dfrac{k\pi}{2n+1}=-\dfrac{\mathrm{C}_{2n+1}^3}{\mathrm{C}_{2n+1}^1}=\dfrac{n(2n-1)}{3}$$
+%     又因为 $\csc^2\alpha=\cot^2\alpha+1$, 于是
 %     $$\sum_{k=1}^{n}\csc^2\dfrac{k\pi}{2n+1}=\dfrac{n(2n-1)}{3}+n=\dfrac{n(2n+2)}{3}$$
-%     再由 $\sin x<x<\tan x ~ \qty(0<x<\dfrac{\pi}{2})$，得 $\cot x<\dfrac{1}{x}<\csc x$，于是得
+%     再由 $\sin x<x<\tan x ~ \qty(0<x<\dfrac{\pi}{2})$, 得 $\cot x<\dfrac{1}{x}<\csc x$, 于是得
 %     $$\dfrac{n(2n-1)}{3}\leqslant \dfrac{(2n+1)^2}{\pi^2}\sum_{k=1}^{n}\dfrac{1}{k^2}\leqslant \dfrac{n(2n+2)}{3}\Rightarrow \dfrac{n(2n-1)\pi^2}{3(2n+1)^2}\leqslant \sum_{k=1}^{n}\dfrac{1}{k^2}\leqslant \dfrac{n(2n+2)\pi^2}{3(2n+1)^2}$$
-%     令 $n\to\infty$，由夹逼准则得 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^2}=\dfrac{\pi^2}{6}.$
+%     令 $n\to\infty$, 由夹逼准则得 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^2}=\dfrac{\pi^2}{6}.$
 % \end{solution}
 
 \subsection{常数项级数的敛散性及其判别法}
 
-在高等数学中，常数项级数是指由实数列 $\qty{a_n}$ 所构成的表达式:
+在高等数学中, 常数项级数是指由实数列 $\qty{a_n}$ 所构成的表达式:
 $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
 其中 $a_n$ 称为级数的一般项.
 
-令 $S_n=a_1+a_2+\cdots+a_n$，则称 $S_n$ 为级数的部分和，而称 $\qty{S_n}$ 为级数的部分和数列.
-若 $S_n\to S(n\to\infty)$，则称级数收敛，并称其收敛于和 $S$，而称 $r_n=S-S_n$ 为级数的余项，
+令 $S_n=a_1+a_2+\cdots+a_n$, 则称 $S_n$ 为级数的部分和, 而称 $\qty{S_n}$ 为级数的部分和数列.
+若 $S_n\to S(n\to\infty)$, 则称级数收敛, 并称其收敛于和 $S$, 而称 $r_n=S-S_n$ 为级数的余项, 
 否则就称级数发散.
 
-研究一个级数是收敛还是发散，称为级数的审敛.
+研究一个级数是收敛还是发散, 称为级数的审敛.
 \begin{theorem}[级数收敛的必要条件]
-    若级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛，则 $\displaystyle\lim_{n\to\infty}a_n=0$.
+    若级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛, 则 $\displaystyle\lim_{n\to\infty}a_n=0$.
     \index{级数收敛的必要条件}
 \end{theorem}
 
-为了迅速而又准确地判断一个级数的敛散性，掌握以下几个已知其敛散性的级数往往是有益的.
+为了迅速而又准确地判断一个级数的敛散性, 掌握以下几个已知其敛散性的级数往往是有益的.
 
 \begin{theorem}[几何级数]
-    若有几何级数 $\displaystyle\sum_{n=1}^{\infty}ar^n$，那么当 $|r|<1$ 时收敛，且其和为 $\dfrac{a}{1-r}$; 当 $|r|\geqslant 1$ 时发散.
+    若有几何级数 $\displaystyle\sum_{n=1}^{\infty}ar^n$, 那么当 $|r|<1$ 时收敛, 且其和为 $\dfrac{a}{1-r}$; 当 $|r|\geqslant 1$ 时发散.
     \index{几何级数}
 \end{theorem}
 
 \begin{theorem}[调和级数]
-    称 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n}$ 为调和级数，并且该级数是发散的.
+    称 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n}$ 为调和级数, 并且该级数是发散的.
     \index{调和级数}
 \end{theorem}
 
 \begin{theorem}[p-级数]
-    若有 p-级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^p}$，那么当 $p>1$ 时收敛，当 $p\leqslant 1$ 时发散.
+    若有 p-级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^p}$, 那么当 $p>1$ 时收敛, 当 $p\leqslant 1$ 时发散.
     \index{p-级数}
 \end{theorem}
 
 \begin{example}
-    级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^{1+\frac{1}{n}}}$ 的敛散性的下列结论中，正确的是 
+    级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^{1+\frac{1}{n}}}$ 的敛散性的下列结论中, 正确的是 
     \begin{tasks}(2)
         \task 因 $1+\dfrac{1}{n}>1$ 故级数收敛
         \task 因 $\displaystyle\lim_{n\to\infty}\dfrac{1}{n^{1+\frac{1}{n}}}=0$ 故级数收敛
@@ -155,28 +155,28 @@ $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
         \end{tasks}
 \end{example}
 \begin{solution}
-    p-级数 中的 $p$ 表示为常数，与 $n$ 无关，所以选项 A 错误，事实上，$\displaystyle \lim_{n\to\infty}\dfrac{\dfrac{1}{n^{1+\frac{1}{n}}}}{\dfrac{1}{n}}=\lim_{n\to\infty}\dfrac{1}{n^{\frac{1}{n}}}=1$，其中 $\displaystyle\lim_{n\to\infty}n^{\frac{1}{n}}=1$ (重要极限)，
-    则原级数的敛散性与 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n}$ 同敛散，又 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n}$ 发散，故级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^{1+\frac{1}{n}}}$ 发散，选 D.
+    p-级数 中的 $p$ 表示为常数, 与 $n$ 无关, 所以选项 A 错误, 事实上, $\displaystyle \lim_{n\to\infty}\dfrac{\dfrac{1}{n^{1+\frac{1}{n}}}}{\dfrac{1}{n}}=\lim_{n\to\infty}\dfrac{1}{n^{\frac{1}{n}}}=1$, 其中 $\displaystyle\lim_{n\to\infty}n^{\frac{1}{n}}=1$ (重要极限), 
+    则原级数的敛散性与 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n}$ 同敛散, 又 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n}$ 发散, 故级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^{1+\frac{1}{n}}}$ 发散, 选 D.
 \end{solution}
 
-此外，级数还有 4 个基本性质:
+此外, 级数还有 4 个基本性质:
 \begin{enumerate}[label=(\arabic{*})]
-    \item 去掉级数前面有限项或者在级数前面添加有限项，不影响级数的敛散性;
-    \item 对于任意非零常数 $c$，级数 $\displaystyle\sum_{n=1}^{\infty}a_n\text{ 与 }\sum_{n=1}^{\infty}ca_n$ 具有相同的敛散性;
-    \item 若级数 $\displaystyle\sum_{n=1}^{\infty}a_n\text{ 与 }\sum_{n=1}^{\infty}b_n$ 都收敛，它们的和分别为 $s\text{ 与 }t$，则 $\displaystyle\sum_{n=1}^{\infty}(a_n\pm b_n)$ 收敛且和为 $s\pm t$;
-    \item 收敛级数任意加括号后所成的级数仍然收敛，且其和不变.
+    \item 去掉级数前面有限项或者在级数前面添加有限项, 不影响级数的敛散性;
+    \item 对于任意非零常数 $c$, 级数 $\displaystyle\sum_{n=1}^{\infty}a_n\text{ 与 }\sum_{n=1}^{\infty}ca_n$ 具有相同的敛散性;
+    \item 若级数 $\displaystyle\sum_{n=1}^{\infty}a_n\text{ 与 }\sum_{n=1}^{\infty}b_n$ 都收敛, 它们的和分别为 $s\text{ 与 }t$, 则 $\displaystyle\sum_{n=1}^{\infty}(a_n\pm b_n)$ 收敛且和为 $s\pm t$;
+    \item 收敛级数任意加括号后所成的级数仍然收敛, 且其和不变.
 \end{enumerate}
 
 \begin{example}
     判别级数的敛散性 $\displaystyle\sum_{n=1}^{\infty}\ln\qty(1+2^n)\ln\dfrac{n+1}{n}.$
 \end{example}
 \begin{solution}
-    将所给级数的一般项作适当变形，有
+    将所给级数的一般项作适当变形, 有
     \begin{flalign*}
         a_n & =\ln\qty[2^n\qty(\dfrac{1}{2^n}+1)]\ln\qty(1+\dfrac{1}{n})=\qty[n\ln 2+\ln\qty(\dfrac{1}{2^n}+1)]\ln\qty(1+\dfrac{1}{n}) \\
             & =\ln 2\ln\qty(1+\dfrac{1}{n})^n+\ln\qty(\dfrac{1}{2^n}+1)\ln\qty(1+\dfrac{1}{n})
     \end{flalign*}
-    可见，$\displaystyle\lim_{n\to\infty}a_n=\ln 2$，即 $\displaystyle\lim_{n\to\infty}\not\to0$，不满足级数收敛的必要条件，故级数发散.
+    可见, $\displaystyle\lim_{n\to\infty}a_n=\ln 2$, 即 $\displaystyle\lim_{n\to\infty}\not\to0$, 不满足级数收敛的必要条件, 故级数发散.
 \end{solution}
 
 \subsection{正项级数的审敛法}
@@ -187,80 +187,80 @@ $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
 \end{theorem}
 
 \begin{theorem}[比较审敛法]
-    设 $\displaystyle  \sum_{n=1}^{\infty} u_{n}, \sum_{n=1}^{\infty} v_{n} $ 是两个正项级数，且 $ u_{n} \leqslant v_{n}(n=1,2, \cdots) $，
-    若 $\displaystyle  \sum_{n=1}^{\infty} v_{n} $ 收敛，则 $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 收敛; 若 $\displaystyle  \sum_{n=1}^{\infty} u_{n}  $发散，则 $\displaystyle \sum_{n=1}^{\infty} v_{n} $ 发散 (“大收敛，小发散”).\\
-    特别地，条件 $ u_{n} \leqslant v_{n}(n=1,2, \cdots) $ 可改为 $ u_{n} \leqslant c v_{n}(n \geqslant k, c>0)$，结论仍然成立.
+    设 $\displaystyle  \sum_{n=1}^{\infty} u_{n}, \sum_{n=1}^{\infty} v_{n} $ 是两个正项级数, 且 $ u_{n} \leqslant v_{n}(n=1,2, \cdots) $, 
+    若 $\displaystyle  \sum_{n=1}^{\infty} v_{n} $ 收敛, 则 $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 收敛; 若 $\displaystyle  \sum_{n=1}^{\infty} u_{n}  $发散, 则 $\displaystyle \sum_{n=1}^{\infty} v_{n} $ 发散 (“大收敛, 小发散”).\\
+    特别地, 条件 $ u_{n} \leqslant v_{n}(n=1,2, \cdots) $ 可改为 $ u_{n} \leqslant c v_{n}(n \geqslant k, c>0)$, 结论仍然成立.
     \index{比较审敛法}
 \end{theorem}
 
 \begin{theorem}[比较审敛法的极限形式]
-    设 $\displaystyle  \sum_{n=1}^{\infty} u_{n}, \sum_{n=1}^{\infty} v_{n} $ 是两个正项级数，若 $\displaystyle  \lim _{n \rightarrow \infty} \frac{u_{n}}{v_{n}}=l $，则有
+    设 $\displaystyle  \sum_{n=1}^{\infty} u_{n}, \sum_{n=1}^{\infty} v_{n} $ 是两个正项级数, 若 $\displaystyle  \lim _{n \rightarrow \infty} \frac{u_{n}}{v_{n}}=l $, 则有
     \begin{enumerate}[label=(\arabic{*})]
-        \item 当 $ 0<l<+\infty  $时，$\displaystyle \sum_{n=1}^{\infty} u_{n} $ 与 $\displaystyle  \sum_{n=1}^{\infty} v_{n} $ 同收敛或同发散;
-        \item 当 $ l=0 $ 且 $\displaystyle  \sum_{n=1}^{\infty} v_{n} $ 收敛时，$\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 也收敛;
-        \item 当 $ l=+\infty $ 且 $\displaystyle  \sum_{n=1}^{\infty} v_{n} $ 发散时，$\displaystyle \sum_{n=1}^{\infty} u_{n} $ 也发散.
+        \item 当 $ 0<l<+\infty  $时, $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 与 $\displaystyle  \sum_{n=1}^{\infty} v_{n} $ 同收敛或同发散;
+        \item 当 $ l=0 $ 且 $\displaystyle  \sum_{n=1}^{\infty} v_{n} $ 收敛时, $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 也收敛;
+        \item 当 $ l=+\infty $ 且 $\displaystyle  \sum_{n=1}^{\infty} v_{n} $ 发散时, $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 也发散.
     \end{enumerate}
     \index{比较审敛法的极限形式}
 \end{theorem}
 
 \begin{example}[2009 数一]
-    设有两个数列 $ \left\{a_{n}\right\},\left\{b_{n}\right\}$，若 $\displaystyle \lim _{n \to \infty} a_{n}=0 $ 则
+    设有两个数列 $ \left\{a_{n}\right\},\left\{b_{n}\right\}$, 若 $\displaystyle \lim _{n \to \infty} a_{n}=0 $ 则
     \begin{tasks}(2)
-        \task 当 $\displaystyle \sum_{n=1}^{\infty} b_{n} $ 收敛时，$\displaystyle \sum_{n=1}^{\infty} a_{n} b_{n} $ 收敛
-        \task 当 $\displaystyle \sum_{n=1}^{\infty} b_{n} $ 发散时，$\displaystyle \sum_{n=1}^{\infty} a_{n} b_{n} $ 发散
-        \task 当 $\displaystyle \sum_{n=1}^{\infty}\left|b_{n}\right| $ 收敛时，$\displaystyle \sum_{n=1}^{\infty} a_{n}^{2} b_{n}^{2} $ 收敛
-        \task 当 $\displaystyle \sum_{n=1}^{\infty}\left|b_{n}\right| $ 发散时，$\displaystyle \sum_{n=1}^{\infty} a_{n}^{2} b_{n}^{2} $ 发散
+        \task 当 $\displaystyle \sum_{n=1}^{\infty} b_{n} $ 收敛时, $\displaystyle \sum_{n=1}^{\infty} a_{n} b_{n} $ 收敛
+        \task 当 $\displaystyle \sum_{n=1}^{\infty} b_{n} $ 发散时, $\displaystyle \sum_{n=1}^{\infty} a_{n} b_{n} $ 发散
+        \task 当 $\displaystyle \sum_{n=1}^{\infty}\left|b_{n}\right| $ 收敛时, $\displaystyle \sum_{n=1}^{\infty} a_{n}^{2} b_{n}^{2} $ 收敛
+        \task 当 $\displaystyle \sum_{n=1}^{\infty}\left|b_{n}\right| $ 发散时, $\displaystyle \sum_{n=1}^{\infty} a_{n}^{2} b_{n}^{2} $ 发散
     \end{tasks}
 \end{example}
 \begin{solution}
-    若令 $ a_{n}=b_{n}=\dfrac{(-1)^{n}}{\sqrt{n}}$，则 $\displaystyle \lim _{n \rightarrow \infty} a_{n}=0, \sum_{n=1}^{\infty} b_{n} $ 收敛，
-    却有 $\displaystyle  \sum_{n=1}^{\infty} a_{n} b_{n}=\sum_{n=1}^{\infty} \frac{1}{n} $ 发散 $\displaystyle \sum_{n=1}^{\infty} a_{n}^{2} b_{n}^{2}=\sum_{n=1}^{\infty} \frac{1}{n^{2}} $ 收敛，
+    若令 $ a_{n}=b_{n}=\dfrac{(-1)^{n}}{\sqrt{n}}$, 则 $\displaystyle \lim _{n \rightarrow \infty} a_{n}=0, \sum_{n=1}^{\infty} b_{n} $ 收敛, 
+    却有 $\displaystyle  \sum_{n=1}^{\infty} a_{n} b_{n}=\sum_{n=1}^{\infty} \frac{1}{n} $ 发散 $\displaystyle \sum_{n=1}^{\infty} a_{n}^{2} b_{n}^{2}=\sum_{n=1}^{\infty} \frac{1}{n^{2}} $ 收敛, 
     故排除 A, D;
-    若取 $ a_{n}=b_{n}=\dfrac{1}{n} $，则 $\displaystyle  \lim _{n \rightarrow \infty} a_{n}=0, \sum_{n=1}^{\infty}\left|b_{n}\right| $ 发散，
-    却有 $\displaystyle \sum_{n=1}^{\infty} a_{n} b_{n}=\sum_{n=1}^{\infty} \frac{1}{n^{2}} $ 收敛，故排除 B;
-    又 $\displaystyle \sum_{n=1}^{\infty}\left|b_{n}\right| $ 与 $\displaystyle \sum_{n=1}^{\infty} a_{n}^{2} b_{n}^{2} $ 均为正项级数，且
+    若取 $ a_{n}=b_{n}=\dfrac{1}{n} $, 则 $\displaystyle  \lim _{n \rightarrow \infty} a_{n}=0, \sum_{n=1}^{\infty}\left|b_{n}\right| $ 发散, 
+    却有 $\displaystyle \sum_{n=1}^{\infty} a_{n} b_{n}=\sum_{n=1}^{\infty} \frac{1}{n^{2}} $ 收敛, 故排除 B;
+    又 $\displaystyle \sum_{n=1}^{\infty}\left|b_{n}\right| $ 与 $\displaystyle \sum_{n=1}^{\infty} a_{n}^{2} b_{n}^{2} $ 均为正项级数, 且
     $$\displaystyle\lim _{n \rightarrow \infty} a_{n}=0, \lim _{n \rightarrow \infty}\left|b_{n}\right|=0 ,~\lim_{n\to\infty}\dfrac{a_n^2b_n^2}{|b_n|}=\lim_{n\to\infty}an^2\cdot\lim_{n\to\infty}|b_n|=0$$
-    由正项级数比较判别法的极限形式知: 当 $\displaystyle\sum_{n=1}^{\infty}|b_n|$ 收敛时，$\displaystyle\sum_{n=1}^{\infty}a_n^2b_n^2$ 收敛，因此选 C.
+    由正项级数比较判别法的极限形式知: 当 $\displaystyle\sum_{n=1}^{\infty}|b_n|$ 收敛时, $\displaystyle\sum_{n=1}^{\infty}a_n^2b_n^2$ 收敛, 因此选 C.
 \end{solution}
 
 \begin{theorem}[比值审敛法]
-    设 $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 为正项级数，若 $\displaystyle  \lim _{n \rightarrow \infty} \frac{u_{n+1}}{u_{n}}=\rho $，则当 $ \rho<1 $ 时，级数收敛; 
-    当 $ \rho>1 $ 时，级数发散; 当 $ \rho=1 $ 时，级数可能收敛，也可能发散.\\
-    特别地，当 $ \dfrac{u_{n+1}}{u_{n}}>1 $ 时，级数 $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 一定发散; 当 $ \dfrac{u_{n+1}}{u_{n}}<1 $ 时，级数可能收敛，也可能发散.
+    设 $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 为正项级数, 若 $\displaystyle  \lim _{n \rightarrow \infty} \frac{u_{n+1}}{u_{n}}=\rho $, 则当 $ \rho<1 $ 时, 级数收敛; 
+    当 $ \rho>1 $ 时, 级数发散; 当 $ \rho=1 $ 时, 级数可能收敛, 也可能发散.\\
+    特别地, 当 $ \dfrac{u_{n+1}}{u_{n}}>1 $ 时, 级数 $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 一定发散; 当 $ \dfrac{u_{n+1}}{u_{n}}<1 $ 时, 级数可能收敛, 也可能发散.
     \index{比值审敛法}
 \end{theorem}
 
 \begin{theorem}[根值审敛法]
-    设 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 为正项级数，若 $\displaystyle \lim _{n \rightarrow \infty} \sqrt[n]{u_{n}}=\rho $，则当 $ \rho<1 $ 时，级数收敛; 
-    当 $ \rho>1 $ 时，级数发散; 当 $ \rho=1 $ 时，级数可能收敛，也可能发散.
+    设 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 为正项级数, 若 $\displaystyle \lim _{n \rightarrow \infty} \sqrt[n]{u_{n}}=\rho $, 则当 $ \rho<1 $ 时, 级数收敛; 
+    当 $ \rho>1 $ 时, 级数发散; 当 $ \rho=1 $ 时, 级数可能收敛, 也可能发散.
     \index{根值审敛法}
 \end{theorem}
 
 \begin{theorem}[积分判别法]
-    设 $ f(x) $ 为 $ [1,+\infty) $ 上的非负递减函数，则正项级数 $\displaystyle  \sum_{n=1}^{\infty} f(n) $ 与反常积分 $\displaystyle \int_{1}^{+\infty} f(x) \dd x $ 同时收敛或同时发散.
+    设 $ f(x) $ 为 $ [1,+\infty) $ 上的非负递减函数, 则正项级数 $\displaystyle  \sum_{n=1}^{\infty} f(n) $ 与反常积分 $\displaystyle \int_{1}^{+\infty} f(x) \dd x $ 同时收敛或同时发散.
     \index{积分判别法}
 \end{theorem}
 
 \subsection{交错级数}
 
 \begin{theorem}[Leibniz 定理]
-    若 $\qty{u_n}$ 单调递减，且 $\displaystyle\lim_{n\to\infty}u_n=0$，则 $\displaystyle\sum_{n=0}^{\infty}(-1)^nu_n$ 收敛.
+    若 $\qty{u_n}$ 单调递减, 且 $\displaystyle\lim_{n\to\infty}u_n=0$, 则 $\displaystyle\sum_{n=0}^{\infty}(-1)^nu_n$ 收敛.
     \index{Leibniz 定理}
 \end{theorem}
 
 \begin{example}
-    设 $a_n=\displaystyle\int_{0}^{1}x^n\sqrt{1-x^2}\dd x,~b_n=\displaystyle\int_{0}^{\frac{\pi}{2}}\sin^nt\dd t~~(n=1,2,\cdots)$，
+    设 $a_n=\displaystyle\int_{0}^{1}x^n\sqrt{1-x^2}\dd x,~b_n=\displaystyle\int_{0}^{\frac{\pi}{2}}\sin^nt\dd t~~(n=1,2,\cdots)$, 
     \begin{enumerate}[label=(\arabic{*})]
         \item 求极限 $\displaystyle\lim_{n\to\infty}\dfrac{a_n}{b_n}$;
-        \item 证明: 级数 $\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{a_n}{b_n}$ 收敛，并求其和.
+        \item 证明: 级数 $\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{a_n}{b_n}$ 收敛, 并求其和.
     \end{enumerate}
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 由推论 \ref{inference:Wallis} 知，$b_n=\displaystyle\int_{0}^{\frac{\pi}{2}}\sin ^nt\dd t=\begin{cases}
+        \item 由推论 \ref{inference:Wallis} 知, $b_n=\displaystyle\int_{0}^{\frac{\pi}{2}}\sin ^nt\dd t=\begin{cases}
                       \dfrac{(n-1)!!}{n!!}\cdot\dfrac{\pi}{2}, & n\text{ 为正偶数}      \\[6pt]
                       \dfrac{(n-1)!!}{n!!},                    & n\text{ 大于 1 的奇数}
-                  \end{cases}$，并且
+                  \end{cases}$, 并且
               \begin{flalign*}
                   a_n\xlongequal{x=\cos t}\int_{0}^{\frac{\pi}{2}}\cos^nt\cdot\sin^2t\dd t=\begin{cases}
                     \dfrac{(n-1)!!}{(n+2)!!}\cdot\dfrac{\pi}{2},&n\text{ 为正偶数}      \\[6pt]
@@ -272,9 +272,9 @@ $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
                 \dfrac{(n-1)!!}{(n+2)!!}\cdot\dfrac{n!!}{(n-1)!!}=\dfrac{1}{n+2}\to0,& n\text{ 大于 1 的奇数}
               \end{cases}$$
               故 $\displaystyle\lim_{n\to\infty}\dfrac{a_n}{b_n}=0.$
-        \item 由 (1) 可知 $\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{1}{n+2}$ 为交错级数，由 Leibniz 定理，知级数收敛，并令 $S(x)=\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{x^{n+2}}{n+2}$，则
+        \item 由 (1) 可知 $\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{1}{n+2}$ 为交错级数, 由 Leibniz 定理, 知级数收敛, 并令 $S(x)=\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{x^{n+2}}{n+2}$, 则
               $$S'(x)=\sum_{n=1}^{\infty}(-1)^{n-1}x^{n+1}=\sum_{n=0}^{\infty}(-1)^nx^{n+2}=\dfrac{x^2}{1+x}~~(-1<x<1)$$
-              即 $S(x)=S(0)+\displaystyle\int_{0}^{x}S'(t)\dd t=\int_{0}^{x}\dfrac{t^2}{1+t}\dd t=\eval{\dfrac{1}{2}t^2-t+\ln|1+t|}_{0}^{x}=\dfrac{1}{2}x^2-x+\ln(1+x),x\in(-1,1]$，
+              即 $S(x)=S(0)+\displaystyle\int_{0}^{x}S'(t)\dd t=\int_{0}^{x}\dfrac{t^2}{1+t}\dd t=\eval{\dfrac{1}{2}t^2-t+\ln|1+t|}_{0}^{x}=\dfrac{1}{2}x^2-x+\ln(1+x),x\in(-1,1]$, 
               故 $$\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{a_n}{b_n}=\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{1}{n+2}=S(1)=\ln 2-\dfrac{1}{2}.$$
     \end{enumerate}
 \end{solution}
@@ -282,13 +282,13 @@ $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
 \subsection{一般数项级数的判别法}
 
 \begin{definition}[绝对收敛与条件收敛]
-    若级数 $\displaystyle \sum_{n=1}^{\infty}\left|u_{n}\right| $ 收敛，则称级数 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 绝对收敛，
-    若级数 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 收敛，而级数 $\displaystyle  \sum_{n=1}^{\infty}\left|u_{n}\right| $ 发散，则称级数 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 条件收敛.
+    若级数 $\displaystyle \sum_{n=1}^{\infty}\left|u_{n}\right| $ 收敛, 则称级数 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 绝对收敛, 
+    若级数 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 收敛, 而级数 $\displaystyle  \sum_{n=1}^{\infty}\left|u_{n}\right| $ 发散, 则称级数 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 条件收敛.
 \end{definition}
 
 判别任意项级数收敛的常用方法:
 \begin{enumerate}[label=(\arabic{*})]
-    \item 绝对值判别法: 若 $\displaystyle  \sum_{n=1}^{\infty}\left|u_{n}\right| $ 收敛，则 $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 绝对收敛;
+    \item 绝对值判别法: 若 $\displaystyle  \sum_{n=1}^{\infty}\left|u_{n}\right| $ 收敛, 则 $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 绝对收敛;
     \item 交错级数一般使用 Leibniz 判别法;
     \item 将级数分解成两个收敛级数之和.
 \end{enumerate}
@@ -301,51 +301,51 @@ $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
 \end{enumerate}
 
 \begin{theorem}
-    设 $\displaystyle\sum_{n=1}^{\infty}u_n$ 是任意项级数，其中 $\sum$ 的上标都是 $\infty$，下标并非总是 $1$，
+    设 $\displaystyle\sum_{n=1}^{\infty}u_n$ 是任意项级数, 其中 $\sum$ 的上标都是 $\infty$, 下标并非总是 $1$, 
     \begin{enumerate}[label=(\arabic{*})]
-        \item 若 $\displaystyle \sum_{n=1}^{\infty}|u_n|$ 收敛，则 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛; 
-        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 发散，则 $\displaystyle\sum_{n=1}^{\infty}|u_n|$ 发散;
-        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛，则 $\displaystyle\sum_{n=1}^{\infty}|u_n|$ 不一定收敛;
-        \item 若 $\displaystyle\sum_{n=1}^{\infty}u^2_n$ 收敛，则 $\displaystyle\sum_{n=1}^{\infty}\dfrac{u_n}{n}$ 绝对收敛;
-        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛，则 $\displaystyle\sum_{n=1}^{\infty}u^2_n$ 不一定收敛;
-        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛，则 $\displaystyle\sum_{n=1}^{\infty}u_{2n},~\displaystyle\sum_{n=1}^{\infty}u_{2n-1}$ 不一定收敛;
-        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛，则 $\displaystyle\sum_{n=1}^{\infty}(u_{2n-1}+u_{2n})$ 收敛;
-        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛，则 $\displaystyle\sum_{n=1}^{\infty}(u_{n}\pm u_{n+1})$ 收敛.
+        \item 若 $\displaystyle \sum_{n=1}^{\infty}|u_n|$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛; 
+        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 发散, 则 $\displaystyle\sum_{n=1}^{\infty}|u_n|$ 发散;
+        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}|u_n|$ 不一定收敛;
+        \item 若 $\displaystyle\sum_{n=1}^{\infty}u^2_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}\dfrac{u_n}{n}$ 绝对收敛;
+        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u^2_n$ 不一定收敛;
+        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u_{2n},~\displaystyle\sum_{n=1}^{\infty}u_{2n-1}$ 不一定收敛;
+        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}(u_{2n-1}+u_{2n})$ 收敛;
+        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}(u_{n}\pm u_{n+1})$ 收敛.
     \end{enumerate}
 \end{theorem}
 
 % \subsubsection{Cauchy 准则及应用}
 % 
-% \paragraph{Cauchy 准则} 级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛的充要条件是: $\forall \varepsilon>0,~\exists N>0$，当 $n>N$ 时
+% \paragraph{Cauchy 准则} 级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛的充要条件是: $\forall \varepsilon>0,~\exists N>0$, 当 $n>N$ 时
 % $$\left| \sum ^{n+p}_{k=n+1}a_{k}\right|  <\varepsilon ~ \left( \forall p\in \mathbf{N}\right). $$
 % 
-% \paragraph{Cauchy 准则的否定形式} 级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 发散的充要条件是: $\exists \varepsilon_0>0,~\forall N>0$，$\exists n>N$ 及某个自然数 $p$，
+% \paragraph{Cauchy 准则的否定形式} 级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 发散的充要条件是: $\exists \varepsilon_0>0,~\forall N>0$, $\exists n>N$ 及某个自然数 $p$, 
 % 使得 $\displaystyle\left| \sum ^{n+p}_{k=n+1}a_{k}\right| \geq \varepsilon _{0}.$
 % 
 % \subsubsection{正项级数敛散性的判定}
 % 
-% 判断级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 的敛散性，通常有如下方法:
+% 判断级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 的敛散性, 通常有如下方法:
 % 
-% \paragraph{定义法} 若通项 $a_n\not\to0~ (n\to\infty)$，则 $\displaystyle\sum_{n=1}^{\infty}a_n$ 发散.
+% \paragraph{定义法} 若通项 $a_n\not\to0~ (n\to\infty)$, 则 $\displaystyle\sum_{n=1}^{\infty}a_n$ 发散.
 % 
-% \paragraph{判阶法} 如果 $a\to0~ (n\to+\infty)$，并且相对 $\dfrac{1}{n}$ 来讲，它是 $p$ 阶的无穷小量，那么当 $p>1$ 时，级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛; 当 $p\leqslant1$ 时，$\displaystyle\sum_{n=1}^{\infty}a_n$ 发散.
+% \paragraph{判阶法} 如果 $a\to0~ (n\to+\infty)$, 并且相对 $\dfrac{1}{n}$ 来讲, 它是 $p$ 阶的无穷小量, 那么当 $p>1$ 时, 级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛; 当 $p\leqslant1$ 时, $\displaystyle\sum_{n=1}^{\infty}a_n$ 发散.
 % 
-% \paragraph{D' Alembert 判别法 (比值判别法)} 对正项级数 $\displaystyle\sum_{n=1}^{\infty}a_n$，\\
-% 若 $\exists q>0,~N>0\text{，使得 }\forall n>N\text{，有 }\dfrac{a_{n+1}}{a_n}\leqslant q<1$，则级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛; \\
-% 若 $\exists N>0,~n>N$ 时，恒有 $\dfrac{a_{n+1}}{a_n}\geqslant 1$，则级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 发散. \\
-% 特别地，若 $\displaystyle\lim_{n\to\infty}\dfrac{a_{n+1}}{a_n}=l$，则当 $l<1$ 时，级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛; 当 $l>1$ 时，$\displaystyle\sum_{n=1}^{\infty}a_n$ 发散.
+% \paragraph{D' Alembert 判别法 (比值判别法)} 对正项级数 $\displaystyle\sum_{n=1}^{\infty}a_n$, \\
+% 若 $\exists q>0,~N>0\text{, 使得 }\forall n>N\text{, 有 }\dfrac{a_{n+1}}{a_n}\leqslant q<1$, 则级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛; \\
+% 若 $\exists N>0,~n>N$ 时, 恒有 $\dfrac{a_{n+1}}{a_n}\geqslant 1$, 则级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 发散. \\
+% 特别地, 若 $\displaystyle\lim_{n\to\infty}\dfrac{a_{n+1}}{a_n}=l$, 则当 $l<1$ 时, 级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛; 当 $l>1$ 时, $\displaystyle\sum_{n=1}^{\infty}a_n$ 发散.
 % 
-% \paragraph{Cauchy 判别法 (根式判别法)} 对正项级数 $\displaystyle\sum_{n=1}^{\infty}a_n$，\\
-% 若 $a_n\geqslant 0,~\exists q,N>0,~\forall n>N$，有 $\sqrt[n]{a_n}\leqslant q<1$，则级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛; \\
-% 若 $\exists N>0,~\forall n>N\text{，有 }\sqrt[n]{a_n}\geqslant1$，则级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 发散.\\
-% 特别地，若 $\displaystyle\lim_{n\to\infty}\sqrt[n]{a_n}=l$，则当 $l<1$ 时，$\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛；当 $l>1$ 时，$\displaystyle\sum_{n=1}^{\infty}a_n$ 发散.
+% \paragraph{Cauchy 判别法 (根式判别法)} 对正项级数 $\displaystyle\sum_{n=1}^{\infty}a_n$, \\
+% 若 $a_n\geqslant 0,~\exists q,N>0,~\forall n>N$, 有 $\sqrt[n]{a_n}\leqslant q<1$, 则级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛; \\
+% 若 $\exists N>0,~\forall n>N\text{, 有 }\sqrt[n]{a_n}\geqslant1$, 则级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 发散.\\
+% 特别地, 若 $\displaystyle\lim_{n\to\infty}\sqrt[n]{a_n}=l$, 则当 $l<1$ 时, $\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛；当 $l>1$ 时, $\displaystyle\sum_{n=1}^{\infty}a_n$ 发散.
 % 
-% \paragraph{比较判别法} $\displaystyle\sum_{n=1}^{\infty}a_n$ 和 $\displaystyle\sum_{n=1}^{\infty}b_n$ 是正项级数，若从某项开始恒有 $a_n\leqslant b_n$，
-% 若 $\displaystyle\sum_{n=1}^{\infty}b_n$ 收敛，则 $\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛; 反之，若 $\displaystyle\sum_{n=1}^{\infty}a_n$ 发散，则 $\displaystyle\sum_{n=1}^{\infty}b_n$ 也发散. (小发散，大收敛).
+% \paragraph{比较判别法} $\displaystyle\sum_{n=1}^{\infty}a_n$ 和 $\displaystyle\sum_{n=1}^{\infty}b_n$ 是正项级数, 若从某项开始恒有 $a_n\leqslant b_n$, 
+% 若 $\displaystyle\sum_{n=1}^{\infty}b_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛; 反之, 若 $\displaystyle\sum_{n=1}^{\infty}a_n$ 发散, 则 $\displaystyle\sum_{n=1}^{\infty}b_n$ 也发散. (小发散, 大收敛).
 % 
-% \paragraph{Cauchy 积分判别法} 若在区间 $[1,+\infty)$ 上，$f(x)\searrow$，且 $f(x)\geqslant0$，则级数 $\displaystyle\sum_{n=1}^{\infty}f(n)$ 与 $\displaystyle\int_{1}^{+\infty}f(x)\mathrm{d}x$ 同时敛散.
+% \paragraph{Cauchy 积分判别法} 若在区间 $[1,+\infty)$ 上, $f(x)\searrow$, 且 $f(x)\geqslant0$, 则级数 $\displaystyle\sum_{n=1}^{\infty}f(n)$ 与 $\displaystyle\int_{1}^{+\infty}f(x)\mathrm{d}x$ 同时敛散.
 % 
-% \paragraph{部分和有界} 考虑部分和 $\displaystyle\sum_{k=1}^{n}a_k$ 是否关于 $n$ 有界，有界则收敛，无界则发散.
+% \paragraph{部分和有界} 考虑部分和 $\displaystyle\sum_{k=1}^{n}a_k$ 是否关于 $n$ 有界, 有界则收敛, 无界则发散.
 % 
 % \subsubsection{变号级数敛散性的判断}
 % 

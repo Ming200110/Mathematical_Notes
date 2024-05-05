@@ -4,17 +4,17 @@
 % 
 % 若 $X$ 的概率分布列为
 % $$P\left( X=k\right) =\binom{n}{k}p^{k}\left( 1-p\right) ^{n-k}~ (k=0,1,\cdots ,n)$$
-% 则称 $X$ 服从二项分布，记为 $X\sim b(n,p)$，其中 $0<p<1.$
+% 则称 $X$ 服从二项分布, 记为 $X\sim b(n,p)$, 其中 $0<p<1.$
 % 
 % \begin{example}
-%     设随机变量 $X\sim b(n,p)$，求 $E(X)$ 和 $D(X).$
+%     设随机变量 $X\sim b(n,p)$, 求 $E(X)$ 和 $D(X).$
 % \end{example}
 % \begin{solution}
-%     由期望的定义，
+%     由期望的定义, 
 %     \begin{flalign*}
 %         E\left( X\right) =\sum ^{n}_{k=0}k\binom{n}{k}p^{k}\left( 1-p\right) ^{n-k}=np\sum ^{n}_{k=1}\binom{n-1}{k-1}p^{k-1}\left( 1-p\right) ^{\left( n-1\right) -\left( k-1\right) }=np[p+(1-p)]^{n-1}=np,
 %     \end{flalign*}
-%     因为，$D(X)=E(X^2)-E^2(X)$，下求 $E(X^2)$，
+%     因为, $D(X)=E(X^2)-E^2(X)$, 下求 $E(X^2)$, 
 %     \begin{flalign*}
 %         E(X^2) & =\sum ^{n}_{k=0}k^{2}\binom{n}{k}p^{k}\left( 1-p\right) ^{n-k}=\sum ^{n}_{k=1}\left( k-1+1\right) k\binom{n}{k}p^{k}\left( 1-p\right) ^{n-k}                                                                \\
 %                & =\sum ^{n}_{k=1}\left( k-1\right) k\binom{n}{k}p^{k}\left( 1-p\right) ^{n-k}+\sum ^{n}_{k=1}k\binom{n}{k}p^{k}\left( 1-p\right) ^{n-k}                                                                      \\
@@ -25,10 +25,10 @@
 %     故 $D(X)=n(n-1)p^2+np-(np)^2=np(1-p).$
 % \end{solution}
 % \begin{example}
-%     设随机变量 $X\sim b(n,p)$，已知 $E(X)=2.4,D(X)=1.44$，求参数 $n$ 和 $p$.
+%     设随机变量 $X\sim b(n,p)$, 已知 $E(X)=2.4,D(X)=1.44$, 求参数 $n$ 和 $p$.
 % \end{example}
 % \begin{solution}
-%     因为 $E(X)=np,D(X)=np(1-p)$，所以 $n=6,p=0.4.$
+%     因为 $E(X)=np,D(X)=np(1-p)$, 所以 $n=6,p=0.4.$
 % \end{solution}
 % 
 % \subsection{0-1 分布}

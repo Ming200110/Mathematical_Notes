@@ -127,7 +127,7 @@
   \item 幂级数的性质, \hyperpage{313}
   \item 幂级数的运算性质, \hyperpage{312}
   \item 平面图形面积公式, \hyperpage{153}
-  \item 平面曲线弧长公式, \hyperpage{154}
+  \item 平面曲线弧长公式, \hyperpage{155}
 
   \indexspace
 
@@ -140,14 +140,14 @@
   \item 方向导数与 Hamilton 算符, \hyperpage{302}
   \item 方向导数与梯度的关系, \hyperpage{240}
   \item 方向导数的计算, \hyperpage{239}
-  \item 旋转体的体积公式, \hyperpage{153}
+  \item 旋转体的体积公式, \hyperpage{154}
   \item 旋转体的侧面积公式, \hyperpage{153}
   \item 无穷小量的乘法, \hyperpage{30}
   \item 无穷小量的传递性, \hyperpage{30}
   \item 无穷小量的加法, \hyperpage{30}
   \item 曲率的计算公式, \hyperpage{115}
   \item 极限值与函数式的转换, \hyperpage{19}
-  \item 根值审敛法, \hyperpage{308}
+  \item 根值审敛法, \hyperpage{307}
   \item 正项级数收敛的充要条件, \hyperpage{307}
   \item 比值审敛法, \hyperpage{307}
   \item 比较审敛法, \hyperpage{307}
@@ -172,7 +172,7 @@
   \item 第二型倍元公式, \hyperpage{190}
   \item 第二型曲面积分的分部积分公式, \hyperpage{289}
   \item 第二型递推性质, \hyperpage{189}
-  \item 第二积分中值定理, \hyperpage{151}
+  \item 第二积分中值定理, \hyperpage{152}
   \item 等价无穷小的充要条件, \hyperpage{30}
   \item 等价积分, \hyperpage{45}
   \item 算子特性, \hyperpage{341}

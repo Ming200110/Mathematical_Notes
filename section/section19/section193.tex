@@ -1,21 +1,23 @@
 \section{中心极限定理}
 
+中心极限定理是概率论和统计学中的一个基本定理, 描述了独立同分布随机变量和其均值之间的关系. 中心极限定理指出, 对于具有有限方差的独立同分布随机变量, 它们的样本均值在样本量足够大的情况下, 以接近正态分布的形式收敛. 
+
 \subsection{Levy Lindeberg 定理}
 
 \begin{theorem}[Levy Lindeberg 中心极限定理]
-    设随机变量 $ X_{1}, X_{2}, \cdots, X_{n}, \cdots $ 相互独立，服从同一分布，且具有数学期望和方差:
+    设随机变量 $ X_{1}, X_{2}, \cdots, X_{n}, \cdots $ 相互独立, 服从同一分布, 且具有数学期望和方差:
     $$E\left(X_{i}\right)=\mu, D\left(X_{i}\right)=\sigma^{2}>0(i=1,2, \cdots)$$
     则对任意实数 $ x $ 都有
     $$\lim _{n \rightarrow \infty} P\left\{\frac{\sum_{i=1}^{n} X_{i}-n \mu}{\sqrt{n} \sigma} \leqslant x\right\}=\int_{-\infty}^{x} \frac{1}{\sqrt{2 \pi}} \mathrm{e}^{-\frac{t^{2}}{2}}\dd t=\varPhi(x)$$
     其中 $ \varPhi(x) $ 是标准正态分布函数.\\
-    当 $ n $ 充分大时，
-    $\displaystyle \sum_{i=1}^{n} X_{i} \text { 近似服从正态分布 } N\left(n \mu, n \sigma^{2}\right) $，
+    当 $ n $ 充分大时, 
+    $\displaystyle \sum_{i=1}^{n} X_{i} \text { 近似服从正态分布 } N\left(n \mu, n \sigma^{2}\right) $, 
     而 $\dfrac{\displaystyle \dfrac{1}{n}\sum_{i=1}^{n} X_{i}-\mu}{\sigma / \sqrt{n}} \stackrel{\text { 近似 }}{\sim} N(0,1) .$
 \end{theorem}
 
 \begin{example}[2022 数一]
-    设 $ X_{1}, X_{2}, \cdots, X_{100} $ 为来自总体 $ X $ 的简单随机样本，
-    其中 $ P\{X=0\}=P\{X=1\}=\dfrac{1}{2}$，$\varPhi(x) $ 表示标准正态分布函数，则利用中心极限定理可得 $ \displaystyle P\left\{\sum_{i=1}^{100} X_{i} \leqslant 55\right\} $ 的近似值为 
+    设 $ X_{1}, X_{2}, \cdots, X_{100} $ 为来自总体 $ X $ 的简单随机样本, 
+    其中 $ P\{X=0\}=P\{X=1\}=\dfrac{1}{2}$, $\varPhi(x) $ 表示标准正态分布函数, 则利用中心极限定理可得 $ \displaystyle P\left\{\sum_{i=1}^{100} X_{i} \leqslant 55\right\} $ 的近似值为 
     \begin{tasks}(4)
         \task $1-\varPhi(1)$
         \task $\varPhi(1)$
@@ -27,14 +29,14 @@
     由 $\begin{array}{c|cc}
         X & 0           & 1           \\\hline
         P & \frac{1}{2} & \frac{1}{2}
-    \end{array}$，$E(X)=\dfrac{1}{2},~D(X)=\dfrac{1}{4}$，那么 $\displaystyle E\qty(\sum_{i=1}^{100}X_i)=100E(X)=50,~D\qty(\sum_{i=1}^{100}X_i)=100 D(X)=25$，根据中心极限定理得出
-    $\displaystyle\sum_{i=1}^{100}X_i$ 近似服从正态分布 $N(50,25)$，将其标准化为 $\dfrac{\displaystyle\sum_{i=1}^{100}X_i-50}{\sqrt{25}}\sim N(0,1)$，因此 
+    \end{array}$, $E(X)=\dfrac{1}{2},~D(X)=\dfrac{1}{4}$, 那么 $\displaystyle E\qty(\sum_{i=1}^{100}X_i)=100E(X)=50,~D\qty(\sum_{i=1}^{100}X_i)=100 D(X)=25$, 根据中心极限定理得出
+    $\displaystyle\sum_{i=1}^{100}X_i$ 近似服从正态分布 $N(50,25)$, 将其标准化为 $\dfrac{\displaystyle\sum_{i=1}^{100}X_i-50}{\sqrt{25}}\sim N(0,1)$, 因此 
     $$P\qty{\dfrac{\sum_{i=1}^{100}X_i-50}{\sqrt{25}}\leqslant \dfrac{55-50}{\sqrt{25}}}=\varPhi\qty(\dfrac{55-50}{\sqrt{25}})=\varPhi(1)$$
     故选 B.
 \end{solution}
 
 \begin{example}
-    设 $ X_{1}, X_{2}, \cdots, X_{n}, \cdots $ 为独立同分布的随机变量序列，且均服从参数为 $ \lambda(\lambda>1) $ 的指数分布，记 $ \varPhi(x) $ 为标准正态分布函数，则有
+    设 $ X_{1}, X_{2}, \cdots, X_{n}, \cdots $ 为独立同分布的随机变量序列, 且均服从参数为 $ \lambda(\lambda>1) $ 的指数分布, 记 $ \varPhi(x) $ 为标准正态分布函数, 则有
     \begin{tasks}(2)
         \task $\displaystyle \lim _{n \rightarrow \infty} P\left\{\dfrac{\sum_{i=1}^{n} X_{i}-n \lambda}{\lambda \sqrt{n}} \leqslant x\right\}=\varPhi(x) $
         \task $\displaystyle \lim _{n \rightarrow \infty} P\left\{\dfrac{\sum_{i=1}^{n} X_{i}-n \lambda}{\sqrt{n \lambda}} \leqslant x\right\}=\varPhi(x) $
@@ -43,8 +45,8 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    因为 $X\sim E(\lambda)$，所以 $E(X)=\dfrac{1}{\lambda},~D(X)=\dfrac{1}{\lambda^2}$，那么 $E\qty(\displaystyle\sum_{i=1}^{n}X_i)=nE(X)=\dfrac{n}{\lambda},~D\qty(\displaystyle \sum_{i=1}^{n}X_i)=nD(X)=\dfrac{n}{\lambda^2}$，
-    根据中心极限定理得出 $\displaystyle\sum_{i=1}^{n}X_i$ 近似服从正态分布 $N\qty(\dfrac{n}{\lambda},\dfrac{n}{\lambda^2})$，将其标准化为 $\dfrac{\displaystyle\sum_{i=1}^{n}X_i-\dfrac{n}{\lambda}}{\sqrt{\dfrac{n}{\lambda^2}}}\sim N(0,1)$，因此 
+    因为 $X\sim E(\lambda)$, 所以 $E(X)=\dfrac{1}{\lambda},~D(X)=\dfrac{1}{\lambda^2}$, 那么 $E\qty(\displaystyle\sum_{i=1}^{n}X_i)=nE(X)=\dfrac{n}{\lambda},~D\qty(\displaystyle \sum_{i=1}^{n}X_i)=nD(X)=\dfrac{n}{\lambda^2}$, 
+    根据中心极限定理得出 $\displaystyle\sum_{i=1}^{n}X_i$ 近似服从正态分布 $N\qty(\dfrac{n}{\lambda},\dfrac{n}{\lambda^2})$, 将其标准化为 $\dfrac{\displaystyle\sum_{i=1}^{n}X_i-\dfrac{n}{\lambda}}{\sqrt{\dfrac{n}{\lambda^2}}}\sim N(0,1)$, 因此 
     $$P=\qty{\dfrac{\displaystyle\sum_{i=1}^{n}X_i-\dfrac{n}{\lambda}}{\sqrt{\dfrac{n}{\lambda^2}}}\leqslant x}=P\qty{\dfrac{\lambda\sum_{i=1}^{n}X_i-n}{\sqrt{n}}\leqslant x}=\varPhi(x)$$
     故选 C.
 \end{solution}
@@ -52,6 +54,6 @@
 \subsection{De Moivre-Laplace 定理}
 
 \begin{theorem}[De Moivre-Laplace 中心极限定理]
-    设随机变量 $ X_{n} $ 服从参数为 $ n, p~~(0<p<1)$ 的二项分布 $ X_{n} \sim B(n, p)~~(n=1,2, \cdots) $，对于任意 $ x $，有
+    设随机变量 $ X_{n} $ 服从参数为 $ n, p~~(0<p<1)$ 的二项分布 $ X_{n} \sim B(n, p)~~(n=1,2, \cdots) $, 对于任意 $ x $, 有
     $$\lim _{n \rightarrow \infty} P\left\{\frac{X_{n}-n p}{\sqrt{n p(1-p)}} \leqslant x\right\}=\int_{-\infty}^{x} \frac{1}{\sqrt{2 \pi}} e^{-\frac{t^{2}}{2}} \dd  t=\varPhi(x).$$
 \end{theorem}

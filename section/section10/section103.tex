@@ -3,7 +3,7 @@
 \subsection{初等变换}
 
 \begin{example}
-    设 $\vb*{A}=\mqty(\xmat*{a}{3}{3}),~\vb*{B}=\mqty(a_{21}&a_{22}&a_{23}\\a_{11}&a_{12}&a_{13}\\a_{31}+a_{11}&a_{32}+a_{12}&a_{33}+a_{13})$，
+    设 $\vb*{A}=\mqty(\xmat*{a}{3}{3}),~\vb*{B}=\mqty(a_{21}&a_{22}&a_{23}\\a_{11}&a_{12}&a_{13}\\a_{31}+a_{11}&a_{32}+a_{12}&a_{33}+a_{13})$, 
     $$\vb*{P}_1=\mqty(0&1&0\\1&0&0\\0&0&1),~\vb*{P}_2=\mqty(1&0&0\\0&1&0\\1&0&1)$$
     则必有
     \begin{tasks}(4)
@@ -14,28 +14,28 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    矩阵 $\vb*{B}$ 是矩阵 $\vb*{A}$ 经过初等行变换得到的，首先把矩阵 $\vb*{A}$ 的第一行加到第三行，即 $\vb*{P}_2\vb*{A}$;
-    然后再把 $\vb*{P}_2\vb*{A}$ 的第一行与第二行互换，即选 C.
+    矩阵 $\vb*{B}$ 是矩阵 $\vb*{A}$ 经过初等行变换得到的, 首先把矩阵 $\vb*{A}$ 的第一行加到第三行, 即 $\vb*{P}_2\vb*{A}$;
+    然后再把 $\vb*{P}_2\vb*{A}$ 的第一行与第二行互换, 即选 C.
 \end{solution}
 
 \begin{example}
-    设 $\vb*{A}$ 是 3 阶方阵，将 $\vb*{A}$ 的第 1 列与第 2 列交换得到 $\vb*{B}$，再把 $\vb*{B}$ 的第 2 列加到第 3 列 得到 $\vb*{C}$，求满足 $\vb*{AQ}=\vb*{C}$ 的可逆矩阵 $\vb*{Q}$.
+    设 $\vb*{A}$ 是 3 阶方阵, 将 $\vb*{A}$ 的第 1 列与第 2 列交换得到 $\vb*{B}$, 再把 $\vb*{B}$ 的第 2 列加到第 3 列 得到 $\vb*{C}$, 求满足 $\vb*{AQ}=\vb*{C}$ 的可逆矩阵 $\vb*{Q}$.
 \end{example}
 \begin{solution}
-    将所述变换用相应的初等矩阵表示，即 $\vb*{B}=\vb*{AE}_{12}$，$\vb*{C}=\vb*{BE}_{23}(1)$，那么 $\vb*{C}=\vb*{AE}_{12}\vb*{E}_{23}(1)$，则
+    将所述变换用相应的初等矩阵表示, 即 $\vb*{B}=\vb*{AE}_{12}$, $\vb*{C}=\vb*{BE}_{23}(1)$, 那么 $\vb*{C}=\vb*{AE}_{12}\vb*{E}_{23}(1)$, 则
     $$\vb*{Q}=\vb*{E}_{12}\vb*{E}_{23}(1)=\mqty(0&1&0\\1&0&0\\0&0&1)\mqty(1&0&0\\0&1&1\\0&0&1)=\mqty(0&1&1\\1&0&0\\0&0&1).$$
 \end{solution}
 
 \begin{example}
-    设 $\vb*{A}=\mqty(1&2&3\\4&5&6\\7&8&9),~\vb*{P}=\mqty(\admat{1,1,1}),~\vb*{Q}=\mqty(1&&\\&&1\\&1&)$，求 $\vb*{P}^{2022}\vb*{AQ}^{2023}.$
+    设 $\vb*{A}=\mqty(1&2&3\\4&5&6\\7&8&9),~\vb*{P}=\mqty(\admat{1,1,1}),~\vb*{Q}=\mqty(1&&\\&&1\\&1&)$, 求 $\vb*{P}^{2022}\vb*{AQ}^{2023}.$
 \end{example}
 \begin{solution}
-    $\vb*{P}$ 左乘 $\vb*{A}$ 相当于把 $\vb*{A}$ 的第 1、3 行互换，故 $\vb*{P}^{2022}\vb*{A}$ 是把 $\vb*{A}$ 的第 1、3 行互换 2022 次，结果仍为 $\vb*{A}$;
-    同理 $\vb*{AQ}^{2023}$ 相当于把 $\vb*{A}$ 的第 2、3 列互换 2023 次，那么结果为 $\mqty(1&3&2\\4&6&5\\7&9&8).$
+    $\vb*{P}$ 左乘 $\vb*{A}$ 相当于把 $\vb*{A}$ 的第 1、3 行互换, 故 $\vb*{P}^{2022}\vb*{A}$ 是把 $\vb*{A}$ 的第 1、3 行互换 2022 次, 结果仍为 $\vb*{A}$;
+    同理 $\vb*{AQ}^{2023}$ 相当于把 $\vb*{A}$ 的第 2、3 列互换 2023 次, 那么结果为 $\mqty(1&3&2\\4&6&5\\7&9&8).$
 \end{solution}
 
 \begin{example}[2006 数一]
-    设 $\vb*{A}$ 为 3 阶方阵，将 $\vb*{A}$ 的第 2 行加到第 1 行得 $\vb*{B}$，再将 $\vb*{B}$ 的第 1 列的 -1 倍加到第 2 列得 $\vb*{C}$，记 $\vb*{P}=\mqty(1&1&0\\0&1&0\\0&0&1)$，则有
+    设 $\vb*{A}$ 为 3 阶方阵, 将 $\vb*{A}$ 的第 2 行加到第 1 行得 $\vb*{B}$, 再将 $\vb*{B}$ 的第 1 列的 -1 倍加到第 2 列得 $\vb*{C}$, 记 $\vb*{P}=\mqty(1&1&0\\0&1&0\\0&0&1)$, 则有
     \begin{tasks}(4)
         \task $\vb*{C}=\vb*{P}^{-1}\vb*{AP}$
         \task $\vb*{C}=\vb*{PAP}^{-1}$
@@ -44,12 +44,12 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    将所述变换用相应的初等矩阵表示，$\vb*{B}=\vb*{E}_{12}(1)\vb*{A},~\vb*{C}=\vb*{BE}_{12}(-1)$，于是 $$\vb*{C}=\vb*{E}_{12}(1)\vb*{A}\vb*{E}_{23}(1)=\vb*{PAP}^{-1}$$
+    将所述变换用相应的初等矩阵表示, $\vb*{B}=\vb*{E}_{12}(1)\vb*{A},~\vb*{C}=\vb*{BE}_{12}(-1)$, 于是 $$\vb*{C}=\vb*{E}_{12}(1)\vb*{A}\vb*{E}_{23}(1)=\vb*{PAP}^{-1}$$
     故选 B.
 \end{solution}
 
 \begin{example}[2009 数二]
-    设 $\vb*{A},~\vb*{P}$ 均为 3 阶方阵，且 $\vb*{P}^\top\vb*{AP}=\mqty(1&0&0\\0&1&0\\0&0&2)$，若 $\vb*{P}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3)$，$\vb*{Q}=(\vb*{\alpha}_1+\vb*{\alpha}_2,\vb*{\alpha}_2,\vb*{\alpha}_3)$，
+    设 $\vb*{A},~\vb*{P}$ 均为 3 阶方阵, 且 $\vb*{P}^\top\vb*{AP}=\mqty(1&0&0\\0&1&0\\0&0&2)$, 若 $\vb*{P}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3)$, $\vb*{Q}=(\vb*{\alpha}_1+\vb*{\alpha}_2,\vb*{\alpha}_2,\vb*{\alpha}_3)$, 
     则 $\vb*{Q}^\top\vb*{AQ}$ 为
     \begin{tasks}(4)
         \task $\mqty(2&1&0\\1&1&0\\0&0&2)$
@@ -59,7 +59,7 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    由题意，$\vb*{Q}=\vb*{PE}_{21}(1)$，那么
+    由题意, $\vb*{Q}=\vb*{PE}_{21}(1)$, 那么
     \begin{flalign*}
         \vb*{Q}^\top\vb*{AQ} & =\qty(\vb*{PE}_{21}(1))^\top\vb*{APE}_{21}(1)=\vb*{E}_{21}^\top(1)\vb*{P}^\top\vb*{APE}_{21}(1)         \\
                              & =\mqty(1                                                                                        & 1 & 0 \\0&1&0\\0&0&1)\mqty(1&0&0\\0&1&0\\0&0&2)\mqty(1&0&0\\1&1&0\\0&0&1)=\mqty(2&1&0\\1&1&0\\0&0&2)
@@ -70,7 +70,7 @@
 \subsection{初等矩阵}
 
 \begin{definition}[初等矩阵]
-    由于初等变换有 3 种，相应可以得到 3 种初等矩阵:
+    由于初等变换有 3 种, 相应可以得到 3 种初等矩阵:
     \begin{enumerate}[label=(\arabic{*})]
         \item $\vb*{E}_{i j} \Leftrightarrow $ 交换 $ \vb*{E} $ 的第 $ i, j $ 两行 (或列) 所得到的矩阵;
         \item $\vb*{E}_{i}(k) \Leftrightarrow \vb*{E} $ 的第 $ i $ 行 (或列) 乘以非零常数 $ k $ 所得到的矩阵;
@@ -90,27 +90,27 @@
     试将矩阵 $\mqty(2&3\\3&5)$ 写成若干个形如 $\mqty(1&0\\x&1)$ 与 $\mqty(1&y\\0&1)$ 的矩阵的乘积.
 \end{example}
 \begin{solution}
-    显然，所给矩阵非奇异，故可经一系列初等变换化为单位矩阵，具体地，有
+    显然, 所给矩阵非奇异, 故可经一系列初等变换化为单位矩阵, 具体地, 有
     $$\mqty(2&3\\3&5)\xrightarrow[c_2-c_1]{r_2-r_1}\mqty(2&1\\1&1)\xrightarrow[c_2-c_1]{c_1-c_2}\mqty(1&0\\0&1)$$
-    用初等矩阵表示，即
+    用初等矩阵表示, 即
     $$\vb*{E}_{21}(-1)\mqty(2&3\\3&5)\vb*{E}_{12}(-1)\vb*{E}_{21}(-1)\vb*{E}_{12}(-1)=\mqty(1&0\\0&1)$$
-    因此，有
+    因此, 有
     \begin{flalign*}
         \mqty(2 & 3 \\3&5)=\vb*{E}_{21}^{-1}(-1)\vb*{E}_{12}^{-1}(-1)\vb*{E}_{21}^{-1}(-1)\vb*{E}_{12}^{-1}(-1)=\mqty(1&0\\1&1)\mqty(1&1\\0&1)\mqty(1&0\\1&1)\mqty(1&1\\0&1)
     \end{flalign*}
 \end{solution}
 
 \begin{example}
-    设 $a\neq0$，把矩阵 $\mqty(a&0\\0&a^{-1})$ 表示成一些形如 $\mqty(1&x\\0&1)$ 与 $\mqty(1&0\\y&1)$ 的矩阵的乘积.
+    设 $a\neq0$, 把矩阵 $\mqty(a&0\\0&a^{-1})$ 表示成一些形如 $\mqty(1&x\\0&1)$ 与 $\mqty(1&0\\y&1)$ 的矩阵的乘积.
 \end{example}
 \begin{solution}
-    考虑如何用消法变换将 $\mqty(a&0\\0&a^{-1})$ 化为单位矩阵，
+    考虑如何用消法变换将 $\mqty(a&0\\0&a^{-1})$ 化为单位矩阵, 
     $$\mqty(a&0\\0&a^{-1})\xrightarrow[r_1+\frac{1-a}{a}r_2]{r_2+r_1}\mqty(1&\dfrac{1-a}{a^2}\\[6pt]a&a^{-1})\xrightarrow[r_1+\frac{a-1}{a^2}r_2]{r_2-ar_1}\mqty(1&0\\0&1)$$
-    将上述过程用初等矩阵表示，得
+    将上述过程用初等矩阵表示, 得
     \begin{flalign*}
         \vb*{E}_{12}\qty(\dfrac{a-1}{a^2})\vb*{E}_{21}(-a)\vb*{E}_{12}\qty(\dfrac{1-a}{a^2})\vb*{E}_{21}(1)\mqty(a & 0 \\0&a^{-1})=\mqty(1&0\\0&1)
     \end{flalign*}
-    因此，有
+    因此, 有
     \begin{flalign*}
         \mqty(a & 0 \\0&a^{-1})&=\vb*{E}_{21}^{-1}(1)\vb*{E}_{12}^{-1}\qty(\dfrac{1-a}{a^2})\vb*{E}_{21}^{-1}(-a)\vb*{E}_{12}^{-1}\qty(\dfrac{a-1}{a^2})=\mqty(1 & 0 \\-1&1)\mqty(1&\dfrac{a-1}{a}\\[6pt]0&1)\mqty(1&0\\a&1)\mqty(1&\dfrac{1-a}{a^2}\\[6pt]0&1)
     \end{flalign*}
@@ -125,8 +125,8 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 易得 $\rank\vb*{A}=2$，并且 $\vb*{B}=\mqty(-1&2&2\\2&-1&2\\-2&2&a)\xrightarrow[\substack{r_2\times\frac{1}{3}\\r_3-r_2}]{\substack{r_2+2r_1\\r_3+r_2}}\mqty(-1&2&2\\0&1&2\\0&0&a)$，则 $\rank\vb*{B}=2\Rightarrow a=0$.
-        \item 记 $\vb*{X}=(\vb*{x}_1,\vb*{x}_2,\vb*{x}_3),~\vb*{B}^\top=(\vb*{\beta}_1,\vb*{\beta}_2,\vb*{\beta}_3)$，求解 $\vb*{A}^\top\vb*{X}=\vb*{B}^\top$，转化为求解三个方程组 $\vb*{A}^\top\vb*{x}_i=\vb*{\beta}_i~~(i=1,2,3)$，于是
+        \item 易得 $\rank\vb*{A}=2$, 并且 $\vb*{B}=\mqty(-1&2&2\\2&-1&2\\-2&2&a)\xrightarrow[\substack{r_2\times\frac{1}{3}\\r_3-r_2}]{\substack{r_2+2r_1\\r_3+r_2}}\mqty(-1&2&2\\0&1&2\\0&0&a)$, 则 $\rank\vb*{B}=2\Rightarrow a=0$.
+        \item 记 $\vb*{X}=(\vb*{x}_1,\vb*{x}_2,\vb*{x}_3),~\vb*{B}^\top=(\vb*{\beta}_1,\vb*{\beta}_2,\vb*{\beta}_3)$, 求解 $\vb*{A}^\top\vb*{X}=\vb*{B}^\top$, 转化为求解三个方程组 $\vb*{A}^\top\vb*{x}_i=\vb*{\beta}_i~~(i=1,2,3)$, 于是
               $$\begin{pNiceArray}{c|c}
                       \vb*{A}^\top&\vb*{B}^\top
                   \end{pNiceArray}=\begin{pNiceArray}{ccc|ccc}
@@ -138,7 +138,7 @@
                       0&1&-1&\textcolor{cyan}{-2}&\textcolor{magenta}{1}&\textcolor{orange}{-2}\\
                       0&0&0&\textcolor{cyan}{0}&  \textcolor{magenta}{0}&\textcolor{orange}{0}
                   \end{pNiceArray}$$
-              因此 $\vb*{A}^\top\vb*{X}=\vb*{0}$ 的基础解系为 $\vb*{\xi}=\mqty(-1\\1\\1)$，
+              因此 $\vb*{A}^\top\vb*{X}=\vb*{0}$ 的基础解系为 $\vb*{\xi}=\mqty(-1\\1\\1)$, 
               $\vb*{A}^\top\vb*{x}_i=\vb*{\beta}_i$ 的通解分别为
               \begin{flalign*}
                   \vb*{\eta}_1=k_1\vb*{\xi}+\mqty(\textcolor{cyan}{1}    \\\textcolor{cyan}{-2}\\\textcolor{cyan}{0})=\mqty(1-k_1\\-2+k_1\\k_1),~
@@ -150,36 +150,36 @@
                   \textcolor{orange}{0})=\mqty(-k_3                      \\-2+k_3\\k_3)
               \end{flalign*}
               故满足 $\vb*{A}^\top\vb*{X}=\vb*{B}^\top$ 的解为
-              $\vb*{X}\mqty(\vb*{\eta}_1,\vb*{\eta}_2,\vb*{\eta}_3)$，当 $\det\vb*{X}\neq0$ 时，$\vb*{X}$ 可逆，即
+              $\vb*{X}\mqty(\vb*{\eta}_1,\vb*{\eta}_2,\vb*{\eta}_3)$, 当 $\det\vb*{X}\neq0$ 时, $\vb*{X}$ 可逆, 即
               $$\mqty|1-k_1&1-k_2&-k_3\\-2+k_1&1+k_2&-2+k_3\\k_1&k_2&k_3|=\mqty|1&1&0\\-2&1&-2\\k_1&k_2&k_3|=-2k_1+2k_2+3k_3\neq0.$$
     \end{enumerate}
 \end{solution}
 
 \begin{example}
     设矩阵 $$\vb*{A}=\mqty(1&0&0&2\\0&0&0&1\\-3&0&0&0)$$
-    求三阶可逆矩阵 $\vb*{P}$，四阶可逆矩阵 $\vb*{Q}$，使得 $\vb*{A}=\vb*{P}\mqty(1&0&0&0\\0&1&0&0\\0&0&0&0)\vb*{Q}.$
+    求三阶可逆矩阵 $\vb*{P}$, 四阶可逆矩阵 $\vb*{Q}$, 使得 $\vb*{A}=\vb*{P}\mqty(1&0&0&0\\0&1&0&0\\0&0&0&0)\vb*{Q}.$
 \end{example}
 \begin{solution}
-    先对 $\vb*{A}$ 作初等变换，有
+    先对 $\vb*{A}$ 作初等变换, 有
     $$\vb*{A}\xrightarrow[\substack{r_3+3r_1\\c_2\leftrightarrow c_4}]{r_1-2r_2}\mqty(1&0&0&0\\0&1&0&0\\0&0&0&0)$$
     对应的初等矩阵为
     $$\vb*{E}_{31}(3)\vb*{E}_{12}(-2)\vb*{AE}_{24}=\mqty(1&0&0&0\\0&1&0&0\\0&0&0&0)$$
-    于是 $\vb*{P}=\qty(\vb*{E}_{31}(3)\vb*{E}_{12}(-2))^{-1}=\vb*{E}_{12}(2)\vb*{E}_{31}(-3)$，$\vb*{Q}=\vb*{E}_{24}^{-1}=\vb*{E}_{24}$，即
+    于是 $\vb*{P}=\qty(\vb*{E}_{31}(3)\vb*{E}_{12}(-2))^{-1}=\vb*{E}_{12}(2)\vb*{E}_{31}(-3)$, $\vb*{Q}=\vb*{E}_{24}^{-1}=\vb*{E}_{24}$, 即
     $$\vb*{P}=\mqty(1&2&0\\0&1&0\\-3&0&1),~\vb*{Q}=\mqty(1&0&0&0\\0&0&0&1\\0&0&1&0\\0&1&0&0).$$
 \end{solution}
 
 \begin{inference}
     \label{lambdanm}
-    设 $\vb*{A},~\vb*{B}$ 分别是 $n\times m$ 和 $m\times n$ 矩阵 $(n\geqslant m),~\lambda\neq0$，求证:
+    设 $\vb*{A},~\vb*{B}$ 分别是 $n\times m$ 和 $m\times n$ 矩阵 $(n\geqslant m),~\lambda\neq0$, 求证:
     $$\qty|\lambda\vb*{E}_n-\vb*{AB}|=\lambda^{n-m}\qty|\lambda\vb*{E}_m-\vb*{BA}|.$$
 \end{inference}
 \begin{proof}[{\songti \textbf{证}}]
-    只需证 $n>m$ 的情形，对分块矩阵 $\mqty(\vb*{E}_n&\vb*{A}\\\vb*{B}&\lambda\vb*{E}_m)$ 和 $\mqty(\lambda\vb*{E}_n&\vb*{A}\\\vb*{B}&\vb*{E}_m)$ 作初等行变换，有
+    只需证 $n>m$ 的情形, 对分块矩阵 $\mqty(\vb*{E}_n&\vb*{A}\\\vb*{B}&\lambda\vb*{E}_m)$ 和 $\mqty(\lambda\vb*{E}_n&\vb*{A}\\\vb*{B}&\vb*{E}_m)$ 作初等行变换, 有
     \begin{flalign*}
         \mqty(\vb*{E}_n & \vb*{O}  \\-\vb*{B}&\vb*{E}_m)\mqty(\vb*{E}_n&\vb*{A}\\\vb*{B}&\lambda\vb*{E}_m)=\mqty(\vb*{E}_m&\vb*{A}\\\vb*{O}&\lambda\vb*{E}_m-\vb*{AB})\\
         \mqty(\vb*{E}_n & -\vb*{A} \\\vb*{O}&\vb*{E}_m)\mqty(\lambda\vb*{E}_n&\vb*{A}\\\vb*{B}&\vb*{E}_m)=\mqty(\lambda\vb*{E}_n-\vb*{AB}&\vb*{O}\\\vb*{B}&\vb*{E}_m)
     \end{flalign*}
-    对上述二式两边同时取行列式，可得
+    对上述二式两边同时取行列式, 可得
     $$\lambda^m\qty|\lambda\vb*{E}_n-\vb*{AB}|=\lambda^m\mqty|\lambda\vb*{E}_n&\vb*{A}\\\vb*{B}&\vb*{E}_m|=\mqty|\lambda\vb*{E}_n&\vb*{A}\\\lambda\vb*{B}&\lambda\vb*{E}_m|=\lambda^n\mqty|\vb*{E}_n&\vb*{A}\\\vb*{B}&\lambda\vb*{E}_m|=\lambda^m\qty|\lambda\vb*{E}_m-\vb*{AB}|$$
     所以 $\qty|\lambda\vb*{E}_n-\vb*{AB}|=\lambda^{n-m}\qty|\lambda\vb*{E}_m-\vb*{BA}|.$
 \end{proof}
@@ -194,7 +194,7 @@
         \end{vmatrix}$.
 \end{example}
 \begin{solution}
-    令 $\vb*{A}=(a_1,a_2,\cdots,a_n)^\top,~\vb*{X}=(x_1,x_2,\cdots,x_n)^\top$，$\vb*{e}=(1,1,\cdots,1)^\top$，那么由推论 \ref{lambdanm} 可得
+    令 $\vb*{A}=(a_1,a_2,\cdots,a_n)^\top,~\vb*{X}=(x_1,x_2,\cdots,x_n)^\top$, $\vb*{e}=(1,1,\cdots,1)^\top$, 那么由推论 \ref{lambdanm} 可得
     \begin{flalign*}
         D_n & =\qty|\vb*{E}_n+\vb*{Ae}^\top+\vb*{eX}^\top|=\qty|\vb*{E}_n+(\vb*{A},\vb*{e})\mqty(\vb*{e}^\top                       \\\vb*{X}^\top)|=\qty|\vb*{E}_2+\mqty(\vb*{e}^\top                                                                                    \\\vb*{X}^\top)(\vb*{A},\vb*{e})|=\qty|\vb*{E}_2+\mqty(\vb*{e}^\top\vb*{A}&\vb*{e}^\top\vb*{e}\\\vb*{X}^\top\vb*{A}&\vb*{X}^\top\vb*{e})|\\
             & =\mqty|1+\vb*{e}^\top\vb*{A}                                                                    & \vb*{e}^\top\vb*{e} \\\vb*{X}^\top\vb*{A}&1+\vb*{X}^\top\vb*{e}|=\qty(1+\vb*{e}^\top\vb*{A})\qty(1+\vb*{X}^\top\vb*{e})-\qty(\vb*{e}^\top\vb*{e})\qty(\vb*{X}^\top\vb*{A})=\qty(1+\sum_{i=1}^{n}a_i)\qty(1+\sum_{i=1}^{n}x_i)-n\sum_{i=1}^{n}a_ix_i
@@ -203,7 +203,7 @@
 
 \begin{example}[2008 上海交通大学]
     \scriptsize\linespread{0.8}
-    设 $\displaystyle\prod_{i=1}^{n}a_i\neq0$，计算 $n$ 阶行列式
+    设 $\displaystyle\prod_{i=1}^{n}a_i\neq0$, 计算 $n$ 阶行列式
     $$D=\begin{vmatrix}
             0       & a_1+a_2 & a_1+a_3 & \cdots & a_1+a_n \\
             a_2+a_1 & 0       & a_2+a_3 & \cdots & a_2+a_n \\
@@ -213,7 +213,7 @@
         \end{vmatrix}.$$
 \end{example}
 \begin{solution}
-    取 $\vb*{\varLambda}=\mathrm{diag} (-2a_1,-2a_2,\cdots,-2a_n),~\vb*{A}^\top=\mqty(a_1&a_2&\cdots& a_n\\1&1&\cdots& 1),~\vb*{B}=\mqty(1&1&\cdots& 1\\a_1&a_2&\cdots& a_n)$，那么
+    取 $\vb*{\varLambda}=\mathrm{diag} (-2a_1,-2a_2,\cdots,-2a_n),~\vb*{A}^\top=\mqty(a_1&a_2&\cdots& a_n\\1&1&\cdots& 1),~\vb*{B}=\mqty(1&1&\cdots& 1\\a_1&a_2&\cdots& a_n)$, 那么
     \begin{flalign*}
         D & =\det\qty(\vb*{\varLambda}+\vb*{AB})=\det\vb*{\varLambda}\cdot\det\qty(\vb*{E}_n+\vb*{\varLambda}^{-1}\vb*{AB}) =(-2)^n\prod_{i=1}^{n}a_i\det\qty(\vb*{E}_2+\vb*{B\Lambda}^{-1}\vb*{A})                                                          \\
           & =(-2)^n\prod_{i=1}^{n}a_i\mqty|1-\dfrac{n}{2}                                                                                                                                           & -\dfrac{1}{2}\displaystyle\sum_{j=1}^{n}\dfrac{1}{a_j} \\\displaystyle-\dfrac{1}{2}\sum_{i=1}^{n}a_i&1-\dfrac{n}{2}| =(-2)^n\prod_{i=1}^{n}a_i\qty[(n-2)^2-\sum_{i,j=1}^{n}\dfrac{a_i}{a_j}].

@@ -1,12 +1,12 @@
 \section{幂级数}
 
-幂级数可以在某个区间内收敛，也可以在某些点处发散. 对于幂级数，我们通常关心以下几个问题: 
+幂级数可以在某个区间内收敛, 也可以在某些点处发散. 对于幂级数, 我们通常关心以下几个问题: 
 
 \begin{enumerate}
-    \item 收敛半径: 幂级数的收敛半径 $R$ 是一个非负实数，表示幂级数在哪些区间内收敛. 收敛半径的计算可以使用根试验、比值试验、比较试验等方法.
-    \item 收敛区间: 根据收敛半径 $R$，我们可以确定幂级数的收敛区间. 在收敛区间内，幂级数可以表示为某个函数的展开形式.
-    \item 函数表示: 在收敛区间内，幂级数可以表示为一个函数的展开形式. 这种展开形式有助于我们研究函数的性质和行为.
-    \item 求和: 在幂级数的收敛区间内，我们可以通过幂级数的求和来计算函数在某一点的值，或者对函数进行近似.
+    \item 收敛半径: 幂级数的收敛半径 $R$ 是一个非负实数, 表示幂级数在哪些区间内收敛. 收敛半径的计算可以使用根试验、比值试验、比较试验等方法.
+    \item 收敛区间: 根据收敛半径 $R$, 我们可以确定幂级数的收敛区间. 在收敛区间内, 幂级数可以表示为某个函数的展开形式.
+    \item 函数表示: 在收敛区间内, 幂级数可以表示为一个函数的展开形式. 这种展开形式有助于我们研究函数的性质和行为.
+    \item 求和: 在幂级数的收敛区间内, 我们可以通过幂级数的求和来计算函数在某一点的值, 或者对函数进行近似.
 \end{enumerate}
 
 \subsection{下降阶乘幂}
@@ -73,7 +73,7 @@
     $\displaystyle\sum\nolimits_a^b x^{\underline{m}}\delta x=\begin{cases}
             \eval{\dfrac{x^{\underline{m+1}}}{m+1}}_{a}^{b}, & m\neq -1 \\
             \eval{H_x}_{a}^{b},                              & m=-1
-        \end{cases}$，
+        \end{cases}$, 
     其中 $\displaystyle H_x=\sum_{k=1}^{x}\dfrac{1}{k}$ 称为调和级数.
 \end{theorem}
 
@@ -102,10 +102,10 @@
 \end{table}
 
 \begin{example}[第五届数学竞赛初赛]
-    判断级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}}{(n+1)(n+2)}$ 的敛散性，若收敛，则求其和.
+    判断级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}}{(n+1)(n+2)}$ 的敛散性, 若收敛, 则求其和.
 \end{example}
 \begin{solution}
-    令 $\displaystyle H_n=\sum_{k=1}^{n}\dfrac{1}{k}~,S_n=\sum_{k=1}^{n}\dfrac{H_k}{(k+1)(k+2)}=\sum_{\substack{1\leqslant k<n+1\\k\in \mathbb{N}_+}}\dfrac{H_k}{(k+1)(k+2)}=\sum\nolimits_1^{n+1}\dfrac{H_x}{(x+1)(x+2)}\delta x$，
+    令 $\displaystyle H_n=\sum_{k=1}^{n}\dfrac{1}{k}~,S_n=\sum_{k=1}^{n}\dfrac{H_k}{(k+1)(k+2)}=\sum_{\substack{1\leqslant k<n+1\\k\in \mathbb{N}_+}}\dfrac{H_k}{(k+1)(k+2)}=\sum\nolimits_1^{n+1}\dfrac{H_x}{(x+1)(x+2)}\delta x$, 
     那么记 $$u(x)=H_x~,\varDelta v(x)=\dfrac{1}{(x+1)(x+2)}=-\dfrac{1}{x+2}-\qty(-\dfrac{1}{x+1})$$
     因此 $$\varDelta u(x)=x^{\underline{-1}},~v(x)=-\dfrac{1}{x+1}=-x^{\underline{-1}},~\mathrm{E}v(x)=-(x+1)^{\underline{-1}}$$
     于是 \begin{flalign*}
@@ -114,61 +114,61 @@
             & =1-\dfrac{1}{n+2}-\dfrac{H_{n+1}}{n+2}=1-\dfrac{1}{n+1}-\dfrac{H_n}{n+2}
     \end{flalign*}
     又因为 $$\lim_{n\to\infty}\dfrac{H_n}{n+2}=\lim_{n\to\infty}\dfrac{\ln n+\gamma+\alpha(n)}{n+2}=\lim_{n\to\infty}\dfrac{\ln n}{n+2}=0~~(\alpha(n)\to0)$$
-    所以 $\displaystyle\lim_{n\to\infty}S_n=1$，因此级数收敛，且其和为 1.
+    所以 $\displaystyle\lim_{n\to\infty}S_n=1$, 因此级数收敛, 且其和为 1.
 \end{solution}
 
 \subsection{幂级数的性质}
 
 \begin{definition}[幂级数]
-    形如 $\displaystyle  \sum_{n=0}^{\infty} a_{n}\left(x-x_{0}\right)^{n} $ 的函数项级数称为 $ x-x_{0} $ 的\textit{幂级数}，
-    其中 $ a_{n}(n=0,1,2 , \cdots) $ 称为幂级数的项 $ \left(x-x_{0}\right)^{n} $ 的系数. 当 $ x_{0}=0 $ 时，$\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 称为 $ x $ 的幂级数.
+    形如 $\displaystyle  \sum_{n=0}^{\infty} a_{n}\left(x-x_{0}\right)^{n} $ 的函数项级数称为 $ x-x_{0} $ 的\textit{幂级数}, 
+    其中 $ a_{n}(n=0,1,2 , \cdots) $ 称为幂级数的项 $ \left(x-x_{0}\right)^{n} $ 的系数. 当 $ x_{0}=0 $ 时, $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 称为 $ x $ 的幂级数.
 \end{definition}
 
 \begin{theorem}[Abel 定理]
-    若幂级数 $\displaystyle  \sum_{n=1}^{\infty} a_{n} x^{n} $ 在 $ x=x_{0}\left(x_{0} \neq 0\right) $ 处收敛，
+    若幂级数 $\displaystyle  \sum_{n=1}^{\infty} a_{n} x^{n} $ 在 $ x=x_{0}\left(x_{0} \neq 0\right) $ 处收敛, 
     则它在满足不等式 $ |x|<\left|x_{0}\right| $ 的一切 $ x $ 处绝对收敛;
-    若幂级数 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 在 $ x=x_{0} $ 处发散，则它在满足不等式 $ |x|>\left|x_{0}\right| $ 的一切 $ x $ 处发散.
+    若幂级数 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 在 $ x=x_{0} $ 处发散, 则它在满足不等式 $ |x|>\left|x_{0}\right| $ 的一切 $ x $ 处发散.
     \index{Abel 定理}
 \end{theorem}
 
 
 \begin{definition}[收敛半径与收敛区间]
-    由 Abel 定理可知，必存在 $ R>0 $，当 $ |x|<R $ 时，幂级数绝对收敛; 当 $ |x|>R $ 时，幂级数发散，则称 $ R $ 为幂级数 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 的收敛半径，$(-R, R) $ 为其收敛区间.\\
-    特别地，当 $ x=R $ 与 $ x=-R $ 时，幂级数可能收敛，也可能发散;
-    若幂级数 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 仅在 $ x=0 $ 处收敛，其他点处都发散，则 $ R=0 $，收敛域为 $ \qty{0}$;
-    若幂级数 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 处处收敛，则 $ R=\infty $，收敛域为 $ (-\infty,+\infty) $.
+    由 Abel 定理可知, 必存在 $ R>0 $, 当 $ |x|<R $ 时, 幂级数绝对收敛; 当 $ |x|>R $ 时, 幂级数发散, 则称 $ R $ 为幂级数 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 的收敛半径, $(-R, R) $ 为其收敛区间.\\
+    特别地, 当 $ x=R $ 与 $ x=-R $ 时, 幂级数可能收敛, 也可能发散;
+    若幂级数 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 仅在 $ x=0 $ 处收敛, 其他点处都发散, 则 $ R=0 $, 收敛域为 $ \qty{0}$;
+    若幂级数 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 处处收敛, 则 $ R=\infty $, 收敛域为 $ (-\infty,+\infty) $.
 \end{definition}
 
 \begin{theorem}
-    设 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n}\left(a_{n} \neq 0\right) $，其收敛半径为 $ R $，
+    设 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n}\left(a_{n} \neq 0\right) $, 其收敛半径为 $ R $, 
     则 $\displaystyle  R=\lim _{n \rightarrow \infty}\left|\frac{a_{n}}{a_{n+1}}\right| $ 或 $\displaystyle R=\dfrac{1}{\displaystyle\lim _{n \rightarrow \infty} \sqrt[n]{\left|a_{n}\right|}} .$
 \end{theorem}
 
 \begin{theorem}[奇偶次项幂级数的收敛半径]
     对于只含有偶次项 $\displaystyle\sum_{n=1}^{\infty}(x-x_0)^{2n}$ 或只含有奇次项 $\displaystyle\sum_{n=1}^{\infty}(x-x_0)^{2n+1}$ 的幂级数的收敛半径为:
-    若 $\displaystyle\lim_{n\to\infty}\qty|\dfrac{a_{n+1}}{a_n}|=\rho$，则 $R=\dfrac{1}{\sqrt{\rho}}$; 若 $\displaystyle\lim_{n\to\infty}\sqrt[n]{a_n}=\rho$，则 $R=\dfrac{1}{\sqrt{\rho}}.$
+    若 $\displaystyle\lim_{n\to\infty}\qty|\dfrac{a_{n+1}}{a_n}|=\rho$, 则 $R=\dfrac{1}{\sqrt{\rho}}$; 若 $\displaystyle\lim_{n\to\infty}\sqrt[n]{a_n}=\rho$, 则 $R=\dfrac{1}{\sqrt{\rho}}.$
     \index{奇偶次项幂级数的收敛半径}
 \end{theorem}
 
 \begin{theorem}[幂级数的运算性质]
-    若幂级数 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 与 $\displaystyle \sum_{n=0}^{\infty} b_{n} x^{n} $ 的收敛半径分别为 $ R_{1} $ 和 $ R_{2} $，
-    当 $ R_{1} \neq R_{2} $ 时，令 $ R   =\min \left\{R_{1},R_{2}\right\} $，则有
+    若幂级数 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 与 $\displaystyle \sum_{n=0}^{\infty} b_{n} x^{n} $ 的收敛半径分别为 $ R_{1} $ 和 $ R_{2} $, 
+    当 $ R_{1} \neq R_{2} $ 时, 令 $ R   =\min \left\{R_{1},R_{2}\right\} $, 则有
     \begin{enumerate}[label=(\arabic{*})]
-        \item $\displaystyle k \sum_{n=1}^{\infty} a_{n} x^{n}=\sum_{n=1}^{\infty} k a_{n} x^{n},|x|<R_{1} $，其中 $ k $ 为常数;
+        \item $\displaystyle k \sum_{n=1}^{\infty} a_{n} x^{n}=\sum_{n=1}^{\infty} k a_{n} x^{n},|x|<R_{1} $, 其中 $ k $ 为常数;
         \item $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} \pm \sum_{n=0}^{\infty} b_{n} x^{n}=\sum_{n=0}^{\infty}\left(a_{n} \pm b_{n}\right) x^{n},|x|<R $;
-        \item $\displaystyle \left(\sum_{n=0}^{\infty} a_{n} x^{n}\right)\left(\sum_{n=0}^{\infty} b_{n} x^{n}\right)=\sum_{n=0}^{\infty} c_{n} x^{n},|x|<R $，其中 $\displaystyle c_{n}=\sum_{k=0}^{n} a_{k} b_{n-k} .$
+        \item $\displaystyle \left(\sum_{n=0}^{\infty} a_{n} x^{n}\right)\left(\sum_{n=0}^{\infty} b_{n} x^{n}\right)=\sum_{n=0}^{\infty} c_{n} x^{n},|x|<R $, 其中 $\displaystyle c_{n}=\sum_{k=0}^{n} a_{k} b_{n-k} .$
     \end{enumerate}
     \index{幂级数的运算性质}
 \end{theorem}
 
 \begin{theorem}[幂级数的性质]
-    设 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 的收敛半径为 $ R(R>0) $，则有
+    设 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 的收敛半径为 $ R(R>0) $, 则有
     \begin{enumerate}[label=(\arabic{*})]
-        \item 和函数 $\displaystyle s(x)=\sum_{n=0}^{\infty} a_{n} x^{n} $ 在收敛域上连续，若 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 在端点 $ x=R $ (或 $ x=-R$)  处收敛，
+        \item 和函数 $\displaystyle s(x)=\sum_{n=0}^{\infty} a_{n} x^{n} $ 在收敛域上连续, 若 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 在端点 $ x=R $ (或 $ x=-R$)  处收敛, 
               则 $ s(x) $ 在 $ x=R $ 处左连续 (或在 $ x=-R $ 处右连续);
-        \item 和函数 $\displaystyle s(x)=\sum_{n=0}^{\infty} a_{n} x^{n} $ 在收敛区间上可导，且有逐项求导公式
+        \item 和函数 $\displaystyle s(x)=\sum_{n=0}^{\infty} a_{n} x^{n} $ 在收敛区间上可导, 且有逐项求导公式
               $$s^{\prime}(x)=\left(\sum_{n=0}^{\infty} a_{n} x^{n}\right)^{\prime}=\sum_{n=1}^{\infty} n a_{n} x^{n-1} $$
-        \item 和函数 $\displaystyle s(x)=\sum_{n=0}^{\infty} a_{n} x^{n} $ 在收敛域上可积，且有逐项求积公式
+        \item 和函数 $\displaystyle s(x)=\sum_{n=0}^{\infty} a_{n} x^{n} $ 在收敛域上可积, 且有逐项求积公式
               $$\int_{0}^{x}s(t)\dd t=\sum_{n=0}^{\infty}\int_{0}^{x}a_nt^n\dd t=\sum_{n=0}^{\infty}\dfrac{a_n}{n+1}x^{n+1}.$$
     \end{enumerate}
     \index{幂级数的性质}
@@ -217,7 +217,7 @@
     \begin{enumerate}[label=(\arabic{*})]
         \item $\displaystyle\mathrm{e}^{-x^2}=\sum ^{\infty }_{n=0}\dfrac{\left( -x^{2}\right) ^{n}}{n!}=\sum ^{\infty }_{n=0}(-1) ^{n}\dfrac{x^{2n}}{n!}~~( \left| x\right|  < +\infty ) .$
         \item $\displaystyle \cos ^{2}x=\dfrac{1+\cos 2x}{2}=\dfrac{1}{2}+\dfrac{1}{2}\sum ^{\infty }_{n=0}\dfrac{(-1) ^{n}}{\left( 2n\right) !}\left( 2x\right) ^{2n}=1+\sum ^{\infty }_{n=1}(-1) ^{n}\dfrac{2^{2n-1}}{\left( 2n\right) !}x^{2n}~~( \left| x\right|  < +\infty ) .$
-        \item 注意到 $\sin^3x=\dfrac{3}{4}\sin x-\dfrac{1}{4}\sin 3x$，于是
+        \item 注意到 $\sin^3x=\dfrac{3}{4}\sin x-\dfrac{1}{4}\sin 3x$, 于是
               \begin{flalign*}
                   \sin ^{3}x & =\dfrac{3}{4}\sin x-\dfrac{1}{4}\sin 3x=\dfrac{3}{4}\sum ^{\infty }_{n=0}\dfrac{(-1) ^{n}}{\left( 2n+1\right) !}x^{2n+1}-\dfrac{1}{4}\sum ^{\infty }_{n=0}\dfrac{(-1) ^{n}}{\left( 2n+1\right) !}\left( 3x\right) ^{2n+1} \\
                              & =\dfrac{3}{4}\sum ^{\infty }_{n=0}(-1) ^{n+1}\dfrac{3^{2n}-1}{\left( 2n+1\right) !}x^{2n+1}~~( \left| x\right|  < +\infty ) .
@@ -227,11 +227,11 @@
         \item $\displaystyle\ln\sqrt{\dfrac{1+x}{1-x}}=\dfrac{1}{2}\ln \dfrac{1+x}{1-x}=\sum ^{\infty }_{n=0}\dfrac{x^{2n+1}}{2n+1}~~( \left| x\right|  < 1). $
         \item 由 $(1+x)^\alpha$ 展开式得 $$\left( 1+x^{2}\right) ^{-2}=1+\sum ^{\infty }_{n=1}\dfrac{\left( -2\right) (-2-1) \ldots \left( -2+n-1\right) }{n!}\left( x^{2}\right) ^{n}=1+\sum ^{\infty }_{n=1}(-1) ^{n}\left( n+1\right) x^{2n}$$
               故 $\displaystyle\dfrac{x^{2}}{\left( 1+x^{2}\right) ^{2}}=x^{2}+\sum ^{\infty }_{n=1}(-1) ^{n}\left( n+1\right) x^{2n+2}=\sum ^{\infty }_{n=1}(-1) ^{n-1}x^{2n}~~( \left| x\right|  < 1) .$
-        \item 因为 $\displaystyle \dfrac{x}{2+x-x^{2}}=\dfrac{x}{3}\left( \dfrac{1}{1+x}+\dfrac{1}{2-x}\right) =\dfrac{x}{3}\left( \dfrac{1}{1+x}+\dfrac{1}{2}\cdot \dfrac{1}{1-\dfrac{x}{2}}\right) $，所以
+        \item 因为 $\displaystyle \dfrac{x}{2+x-x^{2}}=\dfrac{x}{3}\left( \dfrac{1}{1+x}+\dfrac{1}{2-x}\right) =\dfrac{x}{3}\left( \dfrac{1}{1+x}+\dfrac{1}{2}\cdot \dfrac{1}{1-\dfrac{x}{2}}\right) $, 所以
               \begin{flalign*}
                   \dfrac{x}{2+x-x^{2}}=\dfrac{x}{3}\left[ \sum ^{\infty }_{n=0}(-1) ^{n}x^{n}+\dfrac{1}{2}\sum ^{\infty }_{n=0}\left( \dfrac{x}{2}\right) ^{n}\right] =\dfrac{1}{3}\sum ^{\infty }_{n=0}\left[ (-1) ^{n}+\dfrac{1}{2^{n+1}}\right] x^{n+1}~~(\left| x\right|  <1).
               \end{flalign*}
-        \item 因为 $\arctan \dfrac{A-B}{1+AB}=\arctan A-\arctan B$，所以
+        \item 因为 $\arctan \dfrac{A-B}{1+AB}=\arctan A-\arctan B$, 所以
               \begin{flalign*}
                   \arctan\dfrac{1-2x}{1+2x}=\arctan 1-\arctan 2x=\dfrac{\pi}{4}-\sum_{n=0}^{\infty}\dfrac{(-1)^n}{2n+1}(2x)^{2n+1}~~\left(x\neq-\dfrac{1}{2}\right).
               \end{flalign*}
@@ -252,32 +252,32 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item $\displaystyle f(x)=(1+x)\ln(1+x)=(1+x)\sum_{n=0}^{\infty}\dfrac{(-1)^n}{n+1}x^{n+1}~  |x|<1$，又 $|x|=1$ 时，级数收敛，因此原级数的收敛域为 $|x|\leqslant 1$.
+        \item $\displaystyle f(x)=(1+x)\ln(1+x)=(1+x)\sum_{n=0}^{\infty}\dfrac{(-1)^n}{n+1}x^{n+1}~  |x|<1$, 又 $|x|=1$ 时, 级数收敛, 因此原级数的收敛域为 $|x|\leqslant 1$.
         \item $\displaystyle f(x)=\dfrac{1}{4}\cdot 2\sum_{n=0}^{\infty}\dfrac{x^{2n+1}}{2n+1}+\dfrac{1}{2}\cdot\sum_{n=0}^{\infty}\dfrac{(-1)^n}{2n+1}x^{2n+1}=\sum_{n=0}^{\infty}\dfrac{x^{4n+1}}{4n+1}~  (|x|<1).$
-        \item \textbf{法一: }由 $\arctan\dfrac{A-B}{1+AB}=\arctan A-\arctan B$，于是 $$\displaystyle \arctan \dfrac{2-2x}{1+4x}=\arctan 2-\arctan(2x)=\arctan 2-\sum_{n=0}^{\infty}\dfrac{(-1)^n}{2n+1}(2x)^{2n+1}~  \qty(|x|<\dfrac{1}{2})$$
-              当 $|x|=\dfrac{1}{2}$ 时，级数为交错级数，且满足 Leibniz 判别法的条件，因此原级数的收敛域为 $|x|\leqslant\dfrac{1}{2}.$\\
-              \textbf{法二: }$f'(x)=\qty(\arctan\dfrac{2-2x}{1+4x})'=-\dfrac{2}{1+4x^2}$，于是
+        \item \textbf{法一: }由 $\arctan\dfrac{A-B}{1+AB}=\arctan A-\arctan B$, 于是 $$\displaystyle \arctan \dfrac{2-2x}{1+4x}=\arctan 2-\arctan(2x)=\arctan 2-\sum_{n=0}^{\infty}\dfrac{(-1)^n}{2n+1}(2x)^{2n+1}~  \qty(|x|<\dfrac{1}{2})$$
+              当 $|x|=\dfrac{1}{2}$ 时, 级数为交错级数, 且满足 Leibniz 判别法的条件, 因此原级数的收敛域为 $|x|\leqslant\dfrac{1}{2}.$\\
+              \textbf{法二: }$f'(x)=\qty(\arctan\dfrac{2-2x}{1+4x})'=-\dfrac{2}{1+4x^2}$, 于是
               \begin{flalign*}
                   \arctan\dfrac{2-2x}{1+4x} & =-2\int_{0}^{x}\dfrac{\dd t}{1+4t^2}+\arctan 2=-2\int_{0}^{x}\qty[\sum_{n=0}^{\infty}(-1)^n(4t^2)^n]\dd t+\arctan 2                \\
                                             & =-2\sum_{n=0}^{\infty}(-1)^n4^n\int_{0}^{x}t^{2n}\dd t+\arctan 2=\arctan 2+\sum_{n=1}^{\infty}(-1)^n\dfrac{2^{2n-1}}{2n-1}x^{2n-1}
               \end{flalign*}
               收敛域的求法同法一.
-        \item 由于 $\displaystyle f'(x)=\qty(\arctan\dfrac{2x}{2-x^2})'=\dfrac{4+2x^2}{4+x^4}$，故
+        \item 由于 $\displaystyle f'(x)=\qty(\arctan\dfrac{2x}{2-x^2})'=\dfrac{4+2x^2}{4+x^4}$, 故
               \begin{flalign*}
                   \arctan\dfrac{2x}{2-x^2} & =\int_{0}^{x}\dfrac{4+2t^2}{4+t^4}\dd t=\int_{0}^{x}\qty(1+\dfrac{t^2}{2})\sum_{n=0}^{\infty}(-1)^n\qty(\dfrac{t^4}{4})^n\dd t                                                 \\
                                            & =\int_{0}^{x}\qty[\sum_{n=0}^{\infty}(-1)^{\qty[\frac{n}{2}]}\dfrac{t^{2n}}{2^n}]\dd t=\sum_{n=0}^{\infty}(-1)^{\qty[\frac{n}{2}]}\dfrac{x^{2n+1}}{2^n(2n+1)}~  (|x|<\sqrt{2})
               \end{flalign*}
-              当 $|x|=\sqrt{2}$ 时，级数为 $$\sqrt{2}\sum_{n=0}^{\infty}(-1)^{\qty[\frac{n}{2}]}\dfrac{1}{2n+1}~  \text{及}~  -\sqrt{2}\sum_{n=0}^{\infty}(-1)^{\qty[\frac{n}{2}]}\dfrac{1}{2n+1}$$
+              当 $|x|=\sqrt{2}$ 时, 级数为 $$\sqrt{2}\sum_{n=0}^{\infty}(-1)^{\qty[\frac{n}{2}]}\dfrac{1}{2n+1}~  \text{及}~  -\sqrt{2}\sum_{n=0}^{\infty}(-1)^{\qty[\frac{n}{2}]}\dfrac{1}{2n+1}$$
               它们均由两收敛级数 $$\sum_{n=0}^{\infty}(-1)^{n-1}\dfrac{1}{4n+1}~ \text{及}~  \sum_{n=0}^{\infty}(-1)^{n-1}\dfrac{1}{4n+3}$$
-              逐项相加并乘以常数 $\sqrt{2}$ 及 $-\sqrt{2}$ 而得，故它们收敛，因此原级数的收敛域为 $|x|\leqslant\sqrt{2}.$
+              逐项相加并乘以常数 $\sqrt{2}$ 及 $-\sqrt{2}$ 而得, 故它们收敛, 因此原级数的收敛域为 $|x|\leqslant\sqrt{2}.$
         \item $\displaystyle f(x)=x\cdot\sum_{n=0}^{\infty}\dfrac{(-1)^n}{2n+1}x^{2n+1}-\dfrac{1}{2}\sum_{n=0}^{\infty}\dfrac{(-1)^n}{n+1}(x^2)^{n+1}=\sum_{n=0}^{\infty}\dfrac{(-1)^nx^{2n+2}}{(2n+1)(2n+2)}~ (|x|<1)$
-              当 $|x|=1$ 时，级数 $\displaystyle\sum_{n=0}^{\infty}\dfrac{(-1)^n}{(2n+1)(2n+2)}$ 收敛，因此原级数的收敛域为 $|x|\leqslant 1$.
-        \item 因为 $\qty[\ln\qty(x+\sqrt{1+x^2})]'=\dfrac{1}{\sqrt{1+x^2}}$，所以
+              当 $|x|=1$ 时, 级数 $\displaystyle\sum_{n=0}^{\infty}\dfrac{(-1)^n}{(2n+1)(2n+2)}$ 收敛, 因此原级数的收敛域为 $|x|\leqslant 1$.
+        \item 因为 $\qty[\ln\qty(x+\sqrt{1+x^2})]'=\dfrac{1}{\sqrt{1+x^2}}$, 所以
               \begin{flalign*}
                   \ln\qty(x+\sqrt{1+x^2}) & =\int_{0}^{x}\dfrac{\dd t}{\sqrt{1+t^2}}=\int_{0}^{x}\qty[1+\sum_{n=1}^{\infty}(-1)^n\dfrac{(2n-1)!!}{(2n)!!}t^{2n}]\dd t                                  \\
                                           & =x+\sum_{n=1}^{\infty}(-1)^n\dfrac{(2n-1)!!}{(2n)!!}\int_{0}^{x}t^{2n}\dd t=x+\sum_{n=1}^{\infty}(-1)^n\dfrac{(2n-1)!!}{(2n)!!}\cdot\dfrac{x^{2n+1}}{2n+1}
               \end{flalign*}
-              于是，
+              于是, 
               \begin{flalign*}
                   \text{原式} & =x\qty[x+\sum_{n=1}^{\infty}(-1)^n\dfrac{(2n-1)!!}{(2n)!!}\cdot\dfrac{x^{2n+1}}{2n+1}]-\qty[1+\dfrac{1}{2}x^2+\sum_{n=1}^{\infty}(-1)^n\dfrac{(2n-1)!!}{(2n+2)!!}x^{2n+2}] \\
                               & =-1+\dfrac{x^2}{2}+\sum_{n=1}^{\infty}\qty[(-1)^n\dfrac{(2n-1)!!}{(2n+2)!!}\dfrac{x^{2n+2}}{2n+1}]~  (|x|\leqslant 1).
@@ -286,10 +286,10 @@
 \end{solution}
 
 \begin{example}[2003 数一]
-    将函数 $f(x)=\arctan \dfrac{1-2x}{1+2x}$ 展开成 $x$ 的幂级数，并求级数 $\displaystyle\sum_{n=0}^{\infty}\dfrac{(-1)^n}{2n+1}$ 的和.
+    将函数 $f(x)=\arctan \dfrac{1-2x}{1+2x}$ 展开成 $x$ 的幂级数, 并求级数 $\displaystyle\sum_{n=0}^{\infty}\dfrac{(-1)^n}{2n+1}$ 的和.
 \end{example}
 \begin{solution}
-    由 $\arctan \dfrac{A-B}{1+AB}=\arctan A-\arctan B$，所以
+    由 $\arctan \dfrac{A-B}{1+AB}=\arctan A-\arctan B$, 所以
     $$f(x)=\arctan \dfrac{1-2x}{1+2x}=\arctan 1-\arctan 2x=\dfrac{\pi}{4}-\sum_{n=0}^{\infty}(-1)^n\dfrac{(2x)^{2n+1}}{2n+1}$$
     于是 \begin{flalign*}
         \sum_{n=0}^{\infty}\dfrac{(-1)^n}{2n+1} & =\sum_{n=0}^{\infty}(-1)^n\dfrac{(2x)^{2n+1}}{2n+1}\biggl |_{x=\frac{1}{2}}=\dfrac{\pi}{4}-f\qty(\dfrac{1}{2})=\dfrac{\pi}{4}-\arctan \dfrac{1-1}{1+1}=\dfrac{\pi}{4}.
@@ -297,10 +297,10 @@
 \end{solution}
 
 \begin{example}[2007 数三]
-    将函数 $f(x)=\dfrac{1}{x^2-3x-4}$ 展开成 $x-1$ 的幂级数，并指出其收敛区间.
+    将函数 $f(x)=\dfrac{1}{x^2-3x-4}$ 展开成 $x-1$ 的幂级数, 并指出其收敛区间.
 \end{example}
 \begin{solution}
-    因为 $\dfrac{1}{x^2-3x-4}=\dfrac{1}{5}\qty(\dfrac{1}{x-4}-\dfrac{1}{x+1})$，其中
+    因为 $\dfrac{1}{x^2-3x-4}=\dfrac{1}{5}\qty(\dfrac{1}{x-4}-\dfrac{1}{x+1})$, 其中
     \begin{flalign*}
         \dfrac{1}{x-4} & =\dfrac{1}{(x-1)-3}=-\dfrac{1}{3}\cdot\dfrac{1}{1-\dfrac{x-1}{3}}=-\sum_{n=0}^{\infty}\dfrac{(x-1)^n}{3^{n+1}}~  x\in(-2,4)   \\
         \dfrac{1}{x+1} & =\dfrac{1}{x-1+2}=\dfrac{1}{2}\cdot\dfrac{1}{\dfrac{x-1}{2}+1}=(-1)^n\sum_{n=0}^{\infty}\dfrac{(x-1)^n}{2^{n+1}}~  x\in(-1,3)
@@ -313,13 +313,13 @@
     关于 $x$ 的幂级数展开式和收敛半径.
 \end{example}
 \begin{solution}
-    显然 $x^2\pm 2x+2>0$，故
+    显然 $x^2\pm 2x+2>0$, 故
     $$f(x)=\arctan\qty(\dfrac{2x}{2-x^2})+\dfrac{1}{4}\ln\qty(x^2-2x+2)-\dfrac{1}{4}\ln\qty(x^2+2x+2)-\dfrac{1}{2}\arctan(x-1)-\dfrac{1}{2}\arctan(x-1)$$
-    对 $f(x)$ 求导，整理可得 $f'(x)=\dfrac{2x^2}{x^4+4}$，由于
+    对 $f(x)$ 求导, 整理可得 $f'(x)=\dfrac{2x^2}{x^4+4}$, 由于
     $$\dfrac{1}{4+x^4}=\dfrac{1}{4}\cdot\dfrac{1}{1+\dfrac{x^4}{4}}=\dfrac{1}{4}\sum_{n=0}^{\infty}(-1)^n\dfrac{x^{4n}}{4^n}$$
-    其中 $\dfrac{x^4}{4}<1$，故得其收敛半径为 $R=\sqrt{2}$，
+    其中 $\dfrac{x^4}{4}<1$, 故得其收敛半径为 $R=\sqrt{2}$, 
     于是 $$f'(x)=\dfrac{2x^2}{x^4+4}=\displaystyle \dfrac{1}{2}\sum_{n=0}^{\infty}(-1)^n\dfrac{x^{4n+2}}{4^n}$$
-    对上式两端在 $[0,x]$ 上积分，且 $f(0)=0$，得
+    对上式两端在 $[0,x]$ 上积分, 且 $f(0)=0$, 得
     \begin{flalign*}
         f(x)-f(0) & =\int_{0}^{x}\dfrac{1}{2}\sum_{n=0}^{\infty}(-1)^n\dfrac{t^{4n+2}}{4n}\dd t                                                                        \\
         f(x)      & =\dfrac{1}{2}\sum_{n=0}^{\infty}\int_{0}^{x}(-1)^n\dfrac{t^{4n+2}}{4n}\dd t=\dfrac{1}{2}\sum_{n=0}^{\infty}(-1)^n\dfrac{x^{4n+3}}{(4n+3)2^{2n+1}}.
@@ -330,41 +330,41 @@
 
 \subsubsection{求幂级数的收敛域}
 
-求幂级数 $\displaystyle\sum_{n=0}^{\infty}a_nx^n$ 的收敛域的一般方法是，先由公式
+求幂级数 $\displaystyle\sum_{n=0}^{\infty}a_nx^n$ 的收敛域的一般方法是, 先由公式
 $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
-求出收敛半径，若 $R=0$，则幂级数仅在 $x=0$ 处收敛; 若 $R=+\infty$，则幂级数的收敛域为 $(-\infty,+\infty)$;
-若 $0<R<+\infty$，则再考察幂级数在 $x=-R$ 和 $x=R$ 处的敛散性，进而确定幂级数的收敛域是 $(-R,R),[-R,R),(-R,R]$ 或 $[-R,R]$ 之中的某一区间.
+求出收敛半径, 若 $R=0$, 则幂级数仅在 $x=0$ 处收敛; 若 $R=+\infty$, 则幂级数的收敛域为 $(-\infty,+\infty)$;
+若 $0<R<+\infty$, 则再考察幂级数在 $x=-R$ 和 $x=R$ 处的敛散性, 进而确定幂级数的收敛域是 $(-R,R),[-R,R),(-R,R]$ 或 $[-R,R]$ 之中的某一区间.
 
 \begin{example}
     求幂级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{n^2}{n^3+1}x^n$ 的收敛域.
 \end{example}
 \begin{solution}
-    令 $a_n=\dfrac{n^2}{n^3+1}$，则收敛半径
+    令 $a_n=\dfrac{n^2}{n^3+1}$, 则收敛半径
     $$R=\displaystyle\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|=\lim_{n\to\infty}\dfrac{n^2}{n^3+1}\cdot\dfrac{(n+1)^3+1}{(n+1)^2}=1$$
-    在 $x=-1$ 处，级数为 $\displaystyle\sum_{n=1}^{\infty}(-1)^n\dfrac{n^2}{n^3+1}$，这是交错级数，并且 $\displaystyle\lim_{n\to\infty}\dfrac{n^2}{n^3+1}=0$，故由 Leibniz 判别法可知级数收敛，
-    在 $x=1$ 处，级数为 $\displaystyle\sum_{n=1}^{\infty}\dfrac{n^2}{n^3+1}$，因为 $\dfrac{n^2}{n^3+1}\geqslant \dfrac{1}{n+1}$，
-    而 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n+1}$ 发散，故由比较判别法知级数发散，因此，级数的收敛域为 $[-1,1).$
+    在 $x=-1$ 处, 级数为 $\displaystyle\sum_{n=1}^{\infty}(-1)^n\dfrac{n^2}{n^3+1}$, 这是交错级数, 并且 $\displaystyle\lim_{n\to\infty}\dfrac{n^2}{n^3+1}=0$, 故由 Leibniz 判别法可知级数收敛, 
+    在 $x=1$ 处, 级数为 $\displaystyle\sum_{n=1}^{\infty}\dfrac{n^2}{n^3+1}$, 因为 $\dfrac{n^2}{n^3+1}\geqslant \dfrac{1}{n+1}$, 
+    而 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n+1}$ 发散, 故由比较判别法知级数发散, 因此, 级数的收敛域为 $[-1,1).$
 \end{solution}
 
-求幂级数 $\displaystyle\sum_{n=0}^{\infty}a_n(x-x_0)^n$ 的收敛域的方法有两种: 一种是作变量代换: $y=x-x_0$，
-得到级数 $\displaystyle\sum_{n=0}^{\infty}a_ny^n$，可按前述方法求得其收敛域，进而可求得原级数的收敛域，另一种是使用比值法.
+求幂级数 $\displaystyle\sum_{n=0}^{\infty}a_n(x-x_0)^n$ 的收敛域的方法有两种: 一种是作变量代换: $y=x-x_0$, 
+得到级数 $\displaystyle\sum_{n=0}^{\infty}a_ny^n$, 可按前述方法求得其收敛域, 进而可求得原级数的收敛域, 另一种是使用比值法.
 
 \begin{example}
     求级数 $\displaystyle\sum_{n=1}^{\infty}n!\dfrac{(x-5)^n}{n^n}$ 的收敛域.
 \end{example}
 \begin{solution}
-    \textbf{法一: }令 $y=x-5$，得级数 $\displaystyle\sum_{n=1}^{\infty}n!\qty(\dfrac{y}{n})^n$，其收敛半径
+    \textbf{法一: }令 $y=x-5$, 得级数 $\displaystyle\sum_{n=1}^{\infty}n!\qty(\dfrac{y}{n})^n$, 其收敛半径
     $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|=\lim_{n\to\infty}\dfrac{n!}{n^n}\cdot\dfrac{(n+1)^{n+1}}{(n+1)!}=\lim_{n\to\infty}\qty(1+\dfrac{1}{n})^n=\e$$
-    当 $y=-\e$ 时，级数为 $\displaystyle\sum_{n=1}^{\infty}(-1)^n\dfrac{n!\e^n}{n^n}$，这是交错级数，可以证明: $\dfrac{n!\e}{n^n}$ 不趋于零 $(n\to\infty)$，级数发散;
-    当 $y=\e$ 时，级数成为 $\displaystyle\sum_{n=1}^{\infty}\dfrac{n!\e^n}{n^n}$，显然也发散，故级数 $\displaystyle\sum_{n=1}^{\infty}n!\qty(\dfrac{y}{n})^n$ 的收敛域为 $(-\e,\e)$，
+    当 $y=-\e$ 时, 级数为 $\displaystyle\sum_{n=1}^{\infty}(-1)^n\dfrac{n!\e^n}{n^n}$, 这是交错级数, 可以证明: $\dfrac{n!\e}{n^n}$ 不趋于零 $(n\to\infty)$, 级数发散;
+    当 $y=\e$ 时, 级数成为 $\displaystyle\sum_{n=1}^{\infty}\dfrac{n!\e^n}{n^n}$, 显然也发散, 故级数 $\displaystyle\sum_{n=1}^{\infty}n!\qty(\dfrac{y}{n})^n$ 的收敛域为 $(-\e,\e)$, 
     从而可知原级数的收敛域为 $(5-\e ,5+\e)$.\\
     \textbf{法二: }因为 $$\rho=\lim_{n\to\infty}\qty|\dfrac{(n+1)!\dfrac{(x-5)^{n+1}}{(n+1)^{n+1}}}{n!\dfrac{(x-5)^n}{n^n}}|=\lim_{n\to\infty}\qty(\dfrac{1}{n+1})^n|x-5|=\dfrac{|x-5|}{\e}$$
-    根据正项级数的比值判别法，当 $\rho<1$，即 $|x-5|<\e,~5-\e<x<5+\e$ 时，所给级数绝对收敛;
-    当 $\rho\geqslant 1$，即 $x\geqslant 5+\e$ 或 $x\leqslant 5-\e$ 时，由于级数的一般项不趋于零，故级数发散，综上，级数的收敛域为 $(5-\e,5+\e).$
+    根据正项级数的比值判别法, 当 $\rho<1$, 即 $|x-5|<\e,~5-\e<x<5+\e$ 时, 所给级数绝对收敛;
+    当 $\rho\geqslant 1$, 即 $x\geqslant 5+\e$ 或 $x\leqslant 5-\e$ 时, 由于级数的一般项不趋于零, 故级数发散, 综上, 级数的收敛域为 $(5-\e,5+\e).$
 \end{solution}
 
 % \begin{example}[2002 数三]
-%     设幂级数 $\displaystyle\sum_{n=1}^{\infty}a_nx^n$ 与 $\displaystyle\sum_{n=1}^{\infty}b_nx^n$ 的收敛半径分别为 $\dfrac{\sqrt{5}}{3}\text{ 与 }\dfrac{1}{3}$，
+%     设幂级数 $\displaystyle\sum_{n=1}^{\infty}a_nx^n$ 与 $\displaystyle\sum_{n=1}^{\infty}b_nx^n$ 的收敛半径分别为 $\dfrac{\sqrt{5}}{3}\text{ 与 }\dfrac{1}{3}$, 
 %     则幂级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{a_n^2}{b_n^2}x^n$ 的收敛半径为 
 %     \begin{tasks}(4)
 %         \task $5$
@@ -374,20 +374,20 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
 %     \end{tasks}
 % \end{example}
 % \begin{solution}
-%     所求的收敛半径为 $R=\displaystyle\lim_{n\to\infty}\dfrac{\qty(\dfrac{a_n}{a_{n+1}})^2}{\qty(\dfrac{b_n}{b_{n+1}})^2}=\dfrac{\lim\limits_{n\to\infty}\qty(\dfrac{a_n}{a_{n+1}})^2}{\lim\limits_{n\to\infty}\qty(\dfrac{b_n}{b_{n+1}})^2}=\dfrac{5}{9}\cdot 9=5$，故选 A.
+%     所求的收敛半径为 $R=\displaystyle\lim_{n\to\infty}\dfrac{\qty(\dfrac{a_n}{a_{n+1}})^2}{\qty(\dfrac{b_n}{b_{n+1}})^2}=\dfrac{\lim\limits_{n\to\infty}\qty(\dfrac{a_n}{a_{n+1}})^2}{\lim\limits_{n\to\infty}\qty(\dfrac{b_n}{b_{n+1}})^2}=\dfrac{5}{9}\cdot 9=5$, 故选 A.
 % \end{solution}
 
 \begin{example}[2009 数三]
     求幂级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{\e^n-(-1)^n}{n^2}x^n$ 的收敛半径.
 \end{example}
 \begin{solution}
-    令 $a_n=\dfrac{\e^n-(-1)^n}{n^2}$，则
+    令 $a_n=\dfrac{\e^n-(-1)^n}{n^2}$, 则
     $$\rho=\lim_{n\to\infty}\qty|\dfrac{a_{n+1}}{a_n}|=\lim_{n\to\infty}\dfrac{n^2}{(n+1)^2}\cdot\dfrac{\e^{n+1}-(-1)^{n+1}}{\e^{n}-(-1)^n}=\lim_{n\to\infty}\dfrac{\e+\qty(\dfrac{-1}{\e})^n}{1-\qty(\dfrac{-1}{\e})^n}=\e$$
     于是收敛半径为 $R=\dfrac{1}{\rho}=\dfrac{1}{\e}.$
 \end{solution}
 
 \begin{example}[2020 数三]
-    设幂级数 $\displaystyle\sum_{n=1}^{\infty}na_n(x-2)^n$ 的收敛区间为 $(-2,6)$，则 $\displaystyle\sum_{n=1}^{\infty}a_n(x+1)^{2n}$ 的收敛区间为
+    设幂级数 $\displaystyle\sum_{n=1}^{\infty}na_n(x-2)^n$ 的收敛区间为 $(-2,6)$, 则 $\displaystyle\sum_{n=1}^{\infty}a_n(x+1)^{2n}$ 的收敛区间为
     \begin{tasks}(4)
         \task $(-2,6)$
         \task $(-3,1)$
@@ -396,10 +396,10 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     \end{tasks}
 \end{example}
 \begin{solution}
-    因为幂级数 $\displaystyle\sum_{n=1}^{\infty}na_n(x-2)^n$ 收敛区间为 $(-2,6)$，所以幂级数 $\displaystyle\sum_{n=1}^{\infty}na_n(x-2)^n$ 的收敛半径为 4，令 $t=x-2$，则
+    因为幂级数 $\displaystyle\sum_{n=1}^{\infty}na_n(x-2)^n$ 收敛区间为 $(-2,6)$, 所以幂级数 $\displaystyle\sum_{n=1}^{\infty}na_n(x-2)^n$ 的收敛半径为 4, 令 $t=x-2$, 则
     $$\sum_{n=1}^{\infty}na_n(x-2)^n=(x-2)\sum_{n=1}^{\infty}na_n(x-2)^{n-1}=t\sum_{n=1}^{\infty}na_nt^{n-1}=t\sum_{n=1}^{\infty}\qty(a_nt^n)'$$
-    因而幂级数 $\displaystyle\sum_{n=1}^{\infty}a_nt^n$ 的收敛半径为 4，又因为 $$\sum_{n=1}^{\infty}a_n(x+1)^{2n}=\sum_{n=1}^{\infty}a_n\qty[(x+1)^2]^n$$
-    则 $(x+1)^2<4$，解得 $-3<x<1$，故选 B.
+    因而幂级数 $\displaystyle\sum_{n=1}^{\infty}a_nt^n$ 的收敛半径为 4, 又因为 $$\sum_{n=1}^{\infty}a_n(x+1)^{2n}=\sum_{n=1}^{\infty}a_n\qty[(x+1)^2]^n$$
+    则 $(x+1)^2<4$, 解得 $-3<x<1$, 故选 B.
 \end{solution}
 
 \subsubsection{求幂级数的和函数}
@@ -410,8 +410,8 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     求幂级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n}(3+x)^{2n}$ 的和函数.
 \end{example}
 \begin{solution}
-    因为 $\displaystyle \sum_{n=0}^{\infty}(-1)^{n+1}\dfrac{x^{n+1}}{n+1}=\ln(1+x)$，所以有
-    $\displaystyle\ln(1-x)=-\sum_{n=1}^{\infty}\dfrac{x^n}{n}$，
+    因为 $\displaystyle \sum_{n=0}^{\infty}(-1)^{n+1}\dfrac{x^{n+1}}{n+1}=\ln(1+x)$, 所以有
+    $\displaystyle\ln(1-x)=-\sum_{n=1}^{\infty}\dfrac{x^n}{n}$, 
     于是 $$\displaystyle\sum_{n=1}^{\infty}\dfrac{(3+x)^{2n}}{n}=\sum_{n=1}^{\infty}\dfrac{\qty[(3+x)^{2}]^{n}}{n}=-\ln\qty[1-(x+3)^2]~ (-4<x<-2).$$
 \end{solution}
 
@@ -419,23 +419,23 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     求幂级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{x^{3n}}{n\cdot 8^n}$ 的和函数.
 \end{example}
 \begin{solution}
-    设 $S(x)=\displaystyle\sum_{n=1}^{\infty}\dfrac{x^{3n}}{n\cdot 8^n}=\sum_{n=1}^{\infty}\dfrac{1}{n}\cdot\qty(\dfrac{x}{2})^{3n}$，那么
+    设 $S(x)=\displaystyle\sum_{n=1}^{\infty}\dfrac{x^{3n}}{n\cdot 8^n}=\sum_{n=1}^{\infty}\dfrac{1}{n}\cdot\qty(\dfrac{x}{2})^{3n}$, 那么
     $$S'(x)=\dfrac{3}{2}\sum_{n=1}^{\infty}\qty(\dfrac{x}{2})^{3n-1}\Rightarrow \dfrac{x}{2}S'(x)=\dfrac{3}{2}\sum_{n=0}^{\infty}\qty(\dfrac{x}{2})^{3n}-\dfrac{3}{2}=\dfrac{3}{2}\cdot\dfrac{8}{8-x^3}-\dfrac{3}{2}$$
-    解得 $S'(x)=\dfrac{24}{8x-x^4}-\dfrac{3}{x}$，两边对 $x$ 积分得
+    解得 $S'(x)=\dfrac{24}{8x-x^4}-\dfrac{3}{x}$, 两边对 $x$ 积分得
     $$\int S(x)\dd x=24\int\dfrac{\dd x}{8x-x^4}-3\int\dfrac{\dd x}{x}=-\ln\qty(8-x^3)+C$$
-    又 $S(0)=0$，解得 $C=\ln8$，于是幂级数的和函数 $S(x)=\ln\dfrac{8}{8-x^3}.$
+    又 $S(0)=0$, 解得 $C=\ln8$, 于是幂级数的和函数 $S(x)=\ln\dfrac{8}{8-x^3}.$
 \end{solution}
 
 \begin{example}
     求幂级数 $\displaystyle \sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{n^2-n+1}{n\cdot 2^{2n+1}}(x-1)^n$ 的和函数.
 \end{example}
 \begin{solution}
-    易求得幂级数的收敛区间为 $(-3,5)$，并将原幂级数化为 $\displaystyle\dfrac{1}{2}\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{n^2-n+1}{n}\cdot\qty(\dfrac{x-1}{4})^n$，令 $y=\dfrac{x-1}{4}$，有
+    易求得幂级数的收敛区间为 $(-3,5)$, 并将原幂级数化为 $\displaystyle\dfrac{1}{2}\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{n^2-n+1}{n}\cdot\qty(\dfrac{x-1}{4})^n$, 令 $y=\dfrac{x-1}{4}$, 有
     $$S(y)=\dfrac{1}{2}\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{n^2-n+1}{n}\cdot y^n=\dfrac{1}{2}y^2\sum_{n=1}^{\infty}(-1)^{n-1}(n-1)y^{n-2}+\dfrac{1}{2}\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{n}y^n:=\dfrac{y^2}{2}S_1(y)+\dfrac{1}{2}S_2(y)$$
     于是 $$\int_{0}^{y}S_1(t)\dd t=\sum_{n=1}^{\infty}(-1)^{n-1}(n-1)\int_{0}^{y}t^{n-2}\dd t=\sum_{n=1}^{\infty}(-1)^{n-1}y^{n-1}=\dfrac{1}{1+y}\Rightarrow S_1(y)=-\dfrac{1}{(1+y)^2}~ (|y|<1)$$
-    又 $\displaystyle S_2(y)=\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{y^n}{n}=\ln(1+y)~ (-1<x\leqslant 1)$，故
+    又 $\displaystyle S_2(y)=\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{y^n}{n}=\ln(1+y)~ (-1<x\leqslant 1)$, 故
     $$S(y)=\dfrac{y^2}{2}S_1(y)+\dfrac{1}{2}S_2(y)=-\dfrac{1}{2}\qty(\dfrac{y}{1+y})^2+\dfrac{1}{2}\ln(1+y)~ (|y|<1)$$
-    于是，所求幂级数的和函数为
+    于是, 所求幂级数的和函数为
     $$\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{n^2-n+1}{n\cdot 2^{2n+1}}(x-1)^n=S\qty(\dfrac{x-1}{4})=\dfrac{1}{2}\ln\dfrac{x+3}{4}-\dfrac{1}{2}\qty(\dfrac{x-1}{x+3})^2~ (-3<x<5).$$
 \end{solution}
 
@@ -443,13 +443,13 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     求 $\displaystyle \sum_{n=0}^{\infty}\dfrac{(-1)^nn^3}{(n+1)!}x^n$ 的收敛区间及和函数.
 \end{example}
 \begin{solution}
-    易得级数的收敛区间为 $(-\infty,+\infty)$，又因为 $n^3=(n+1)\qty(n^2-n+1)-1$，于是 $\dfrac{n^3}{(n+1)!}=\dfrac{1}{(n-2)!}+\dfrac{1}{n!}-\dfrac{1}{(n+1)!}$，那么
+    易得级数的收敛区间为 $(-\infty,+\infty)$, 又因为 $n^3=(n+1)\qty(n^2-n+1)-1$, 于是 $\dfrac{n^3}{(n+1)!}=\dfrac{1}{(n-2)!}+\dfrac{1}{n!}-\dfrac{1}{(n+1)!}$, 那么
     \begin{flalign*}
         \sum_{n=0}^{\infty}\dfrac{(-1)^nn^3}{(n+1)!}x^n & =\sum_{n=0}^{\infty}\dfrac{n^3}{(n+1)!}(-x)^n=-\dfrac{x}{2}+\sum_{n=2}^{\infty}\dfrac{(-x)^n}{(n-2)!}+\sum_{n=2}^{\infty}\dfrac{(-x)^n}{n!}-\sum_{n=2}^{\infty}\dfrac{(-x)^n}{(n+1)!} \\
                                                         & =-\dfrac{x}{2}+x^2\sum_{n=2}^{\infty}\dfrac{(-x)^{n-2}}{(n-2)!}+\sum_{n=2}^{\infty}\dfrac{(-x)^{n}}{n!}-\dfrac{1}{x}\sum_{n=2}^{\infty}\dfrac{(-x)^{n+1}}{(n+1)!}                     \\
                                                         & =-\dfrac{x}{2}+x^2\e^{-x}+\qty(\e^{-x}-1+x)+\dfrac{1}{x}\qty(\e^{-x}-1+x-\dfrac{x^2}{2})=\e\qty(x^2+1+\dfrac{1}{x})-\dfrac{1}{x}~~x\neq 0
     \end{flalign*}
-    显然，当 $x=0$ 时，和函数为 0，因此 $\displaystyle \sum_{n=0}^{\infty}\dfrac{(-1)^nn^3}{(n+1)!}x^n=\begin{cases}
+    显然, 当 $x=0$ 时, 和函数为 0, 因此 $\displaystyle \sum_{n=0}^{\infty}\dfrac{(-1)^nn^3}{(n+1)!}x^n=\begin{cases}
             \e^{-x}\qty(x^2-1+\dfrac{1}{x})-\dfrac{1}{x}, & x\neq 0 \\
             0,                                            & x=0.
         \end{cases}$
@@ -459,32 +459,32 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     求 $\displaystyle\sum_{k=1}^{\infty}\dfrac{k+2}{k!+(k+1)!+(k+2)!}$.
 \end{example}
 \begin{solution}
-    因为 $\dfrac{k+2}{k!+(k+1)!+(k+2)!}=\dfrac{1}{k!(k+2)}$，于是考虑 $S(x)=\displaystyle\sum_{n=0}^{\infty}\dfrac{x^{n+2}}{n!(n+2)}$，
+    因为 $\dfrac{k+2}{k!+(k+1)!+(k+2)!}=\dfrac{1}{k!(k+2)}$, 于是考虑 $S(x)=\displaystyle\sum_{n=0}^{\infty}\dfrac{x^{n+2}}{n!(n+2)}$, 
     则 $$S'(x)=\sum_{n=0}^{\infty}\dfrac{x^{n+1}}{n!}=x\sum_{n=0}^{\infty}\dfrac{x^n}{n!}=x\e^x$$
     所以 $$S(x)=S(0)+\int_{0}^{x}S'(t)\dd t=\int_{0}^{x}t\e^t\dd t=\eval{(t-1)\e^t}_{0}^{x}=(x-1)\e^x+1$$
     则 $\displaystyle\sum_{k=1}^{\infty}\dfrac{k+2}{k!+(k+1)!+(k+2)!}=S(1)-\dfrac{1}{2}=\dfrac{1}{2}.$
 \end{solution}
 
-对于有些系数含有阶乘符号的幂级数，求其和函数的一种行之有效的方法是: 首先设法建立关于和函数的微分方程，然后求解微分方程，即得所求和函数.
+对于有些系数含有阶乘符号的幂级数, 求其和函数的一种行之有效的方法是: 首先设法建立关于和函数的微分方程, 然后求解微分方程, 即得所求和函数.
 
 \begin{example}
     求幂级数 $\displaystyle\sum_{n=0}^{\infty}\dfrac{(2n)!!}{(2n+1)!!}x^{2n+1}$ 的和函数.
 \end{example}
 \begin{solution}
-    设 $S(x)=\displaystyle\sum_{n=0}^{\infty}\dfrac{(2n)!!}{(2n+1)!!}x^{2n+1}$，易求得收敛区间为 $(-1,1)$，那么
+    设 $S(x)=\displaystyle\sum_{n=0}^{\infty}\dfrac{(2n)!!}{(2n+1)!!}x^{2n+1}$, 易求得收敛区间为 $(-1,1)$, 那么
     \begin{flalign*}
         S'(x)=1+\sum_{n=1}^{\infty}\dfrac{(2n)!!}{(2n-1)!!}x^{2n+2}=1+x\sum_{n=1}^{\infty}\dfrac{(2n)!!}{(2n-1)!!}x^{2n+1}
         =1+x\qty[x\sum_{n=0}^{\infty}\dfrac{(2n)!!}{(2n+1)!!}x^{2n+1}]'=1+xS(x)+x^2S'(x)
     \end{flalign*}
-    即 $S'(x)-\dfrac{x}{1-x^2}S(x)=\dfrac{1}{1-x^2}$，该方程为一阶非齐次线性微分方程，由通解公式
+    即 $S'(x)-\dfrac{x}{1-x^2}S(x)=\dfrac{1}{1-x^2}$, 该方程为一阶非齐次线性微分方程, 由通解公式
     $$S(x)=\mathrm{e}^{\int\frac{x}{1-x^2}\dd x}\qty[\int\dfrac{1}{1-x^2}\cdot\mathrm{e}^{-\int\frac{x}{1-x^2}\dd x}\dd x+C]=\dfrac{1}{\sqrt{1-x^2}}\qty[\int\dfrac{\dd x}{\sqrt{1-x^2}}+C]=\dfrac{\arcsin x}{\sqrt{1-x^2}}+\dfrac{C}{\sqrt{1-x^2}}$$
-    又 $S(0)=0$，解得 $C=0$，于是幂级数的和函数 $S(x)=\dfrac{\arcsin x}{\sqrt{1-x^2}}.$
+    又 $S(0)=0$, 解得 $C=0$, 于是幂级数的和函数 $S(x)=\dfrac{\arcsin x}{\sqrt{1-x^2}}.$
 \end{solution}
 
 % \subsubsection{由递推关系式求幂级数的和函数}
 % 
 % \begin{example}
-%     设 $a_1=1,~a_2=1,~a_{n+2}=2a_{n+1}+3a_{n}~ (n\geqslant 1)$，求 $\displaystyle\sum_{n=1}^{\infty}a_nx^n$ 的收敛域及和函数.
+%     设 $a_1=1,~a_2=1,~a_{n+2}=2a_{n+1}+3a_{n}~ (n\geqslant 1)$, 求 $\displaystyle\sum_{n=1}^{\infty}a_nx^n$ 的收敛域及和函数.
 % \end{example}
 % \begin{solution}
 %     
@@ -496,29 +496,29 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     求幂级数 $\displaystyle\sum_{n=1}^\infty\frac{n+1}{n}x^n$ 的收敛域及和函数.
 \end{example}
 \begin{solution}
-    记 $\displaystyle u_n=\frac{n+1}{n}$，则由 $\displaystyle\lim_{n\to\infty}\left|\frac{u_{n+1}}{u_n}\right|=\lim_{n\to\infty}\frac{n(n+2)}{(n+1)^2}=1$ 知，收敛半径 $R=1$.
-    又当 $x=\pm 1$ 时，
+    记 $\displaystyle u_n=\frac{n+1}{n}$, 则由 $\displaystyle\lim_{n\to\infty}\left|\frac{u_{n+1}}{u_n}\right|=\lim_{n\to\infty}\frac{n(n+2)}{(n+1)^2}=1$ 知, 收敛半径 $R=1$.
+    又当 $x=\pm 1$ 时, 
     $$\displaystyle\sum_{n=1}^\infty\frac{n+1}{n}x^n=\sum_{n=1}^\infty\frac{n+1}{n}(\pm 1)^n=\sum_{n=1}^\infty(\pm 1)^n+\sum_{n=1}^\infty(\pm 1)^n\frac{1}{n}$$
-    发散，故原级数的收敛域为 $(-1,1)$.
-    设和函数为 $S(x)$，即 $$\displaystyle S(x)=\sum_{n=1}^\infty\frac{n+1}{n}x^n,~x\in(-1,1)$$
-    两边在 $(0,x)$ 上积分，得
+    发散, 故原级数的收敛域为 $(-1,1)$.
+    设和函数为 $S(x)$, 即 $$\displaystyle S(x)=\sum_{n=1}^\infty\frac{n+1}{n}x^n,~x\in(-1,1)$$
+    两边在 $(0,x)$ 上积分, 得
     $$\int_0^xS(t)\mathrm{d}t=\int_0^x\left(\sum_{n=1}^\infty\frac{n+1}{n}t^n\right)\mathrm{d}t=\sum_{n=1}^\infty\int_0^x\frac{n+1}{n}t^n\mathrm{d}t=\sum_{n=1}^\infty\frac{x^{n+1}}{n}$$
-    即 $\displaystyle\frac{1}{x}\int_0^xS(t)\mathrm{d}t=\sum_{n=1}^\infty\frac{x^n}{n}$，然后两边分别对 $x$ 求导，得
+    即 $\displaystyle\frac{1}{x}\int_0^xS(t)\mathrm{d}t=\sum_{n=1}^\infty\frac{x^n}{n}$, 然后两边分别对 $x$ 求导, 得
     $$\left(\frac{1}{x}\int_0^xS(t)\mathrm{d}t\right)'=\left(\sum_{n=1}^\infty\frac{x^n}{n}\right)'=\sum_{n=1}^\infty x^{n-1}=\frac{1}{1-x}$$
     于是$$\frac{1}{x}\int_0^xS(t)\mathrm{d}t=\int_0^x\frac{\mathrm{d}x}{1-x}=-\ln(1-x)+C$$
-    即 $\displaystyle\int_0^xS(t)\mathrm{d}t=-x\ln(1-x)+Cx$，两边再次求导，得
+    即 $\displaystyle\int_0^xS(t)\mathrm{d}t=-x\ln(1-x)+Cx$, 两边再次求导, 得
     $$S(x)=\frac{x}{1-x}-\ln(1-x)+C$$
-    因为 $S(x)$ 在 $(-1,1)$ 内连续，且 $S(0)=0$，所以 $C=0$，所以原级数的和函数为
+    因为 $S(x)$ 在 $(-1,1)$ 内连续, 且 $S(0)=0$, 所以 $C=0$, 所以原级数的和函数为
     $$S(x)=\frac{x}{1-x}-\ln(1-x),~x\in(-1,1).$$
 \end{solution}
 
 \begin{example}
-    求幂级数 $\displaystyle\sum_{n=0}^\infty(n+1)x^n$ 的收敛域及和函数，并求 $\displaystyle\sum_{n=1}^\infty\frac{n}{2^n}$ 的和.
+    求幂级数 $\displaystyle\sum_{n=0}^\infty(n+1)x^n$ 的收敛域及和函数, 并求 $\displaystyle\sum_{n=1}^\infty\frac{n}{2^n}$ 的和.
 \end{example}
 \begin{solution}
-    记 $u_n=n+1$，则由 $\displaystyle\lim_{n\to\infty}\left|\frac{u_{n+1}}{u_n}\right|=\lim_{n\to\infty}\frac{n+2}{n+1}=1$ 知，收敛半径 $R=1$.
-    又当 $x=\pm 1$ 时，$$\displaystyle\sum_{n=0}^\infty(n+1)(\pm 1)^n=\sum_{n=0}^\infty(\pm 1)^n+\sum_{n=0}^\infty n(\pm 1)^n$$
-    发散，故原级数的收敛域为 $(-1,1)$. 设和函数为 $S(x)$，即 $\displaystyle S(x)=\sum_{n=0}^\infty(n+1)x^n,~x\in(-1,1)$.两边在 $(0,x)$ 上积分，得
+    记 $u_n=n+1$, 则由 $\displaystyle\lim_{n\to\infty}\left|\frac{u_{n+1}}{u_n}\right|=\lim_{n\to\infty}\frac{n+2}{n+1}=1$ 知, 收敛半径 $R=1$.
+    又当 $x=\pm 1$ 时, $$\displaystyle\sum_{n=0}^\infty(n+1)(\pm 1)^n=\sum_{n=0}^\infty(\pm 1)^n+\sum_{n=0}^\infty n(\pm 1)^n$$
+    发散, 故原级数的收敛域为 $(-1,1)$. 设和函数为 $S(x)$, 即 $\displaystyle S(x)=\sum_{n=0}^\infty(n+1)x^n,~x\in(-1,1)$.两边在 $(0,x)$ 上积分, 得
     $$\int_0^xS(t)\mathrm{d}t=\int_0^x\left(\sum_{n=0}^\infty(n+1)t^n\right)\mathrm{d}t=\sum_{n=0}^\infty\int_0^x(n+1)t^n\mathrm{d}t=\sum_{n=0}^\infty x^{n+1}$$
     即 $\displaystyle\frac{1}{x}\int_0^xS(t)\mathrm{d}t=\sum_{n=0}^\infty x^n=\frac{1}{1-x}\Rightarrow \int_0^xS(t)\mathrm{d}t=\frac{x}{1-x}\overset{\text{求导}}{\Rightarrow}S(x)=\frac{1}{(1-x)^2},~x\in(-1,1)$.
     所以 $$\displaystyle\sum_{n=1}^\infty\frac{n}{2^n}=\frac{1}{2}\sum_{n=1}^\infty n \frac{1}{2^{n-1}}=x\sum_{n=0}^\infty(n+1)x^n\Biggl |_{x=\frac{1}{2}}=\frac{x}{(1-x)^2}\Biggl |_{x=\frac{1}{2}}=2$$.
@@ -528,9 +528,9 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     求幂级数 $\displaystyle\sum_{n=0}^\infty(n+1)(n+3)x^n$ 的收敛域及和函数.
 \end{example}
 \begin{solution}
-    记 $\displaystyle u_n=(n+1)(n+3)$，则由 $\displaystyle\lim_{n\to\infty}\left|\frac{u_{n+1}}{u_n}\right|=\lim_{n\to\infty}\frac{(n+2)(n+4)}{(n+1)(n+3)}=1$ 知，收敛半径 $R=1$.
-    又当 $x=\pm 1$ 时，$\displaystyle\sum_{n=0}^\infty(n+1)(n+3)(\pm 1)^n$ 发散，故原级数的收敛域为 $(-1,1)$.\\
-    设和函数为 $S(x)$，即 $\displaystyle S(x)=\sum_{n=0}^\infty(n+1)(n+3)x^n,~x\in(-1,1)$.两边在 $(0,x)$ 上积分，得
+    记 $\displaystyle u_n=(n+1)(n+3)$, 则由 $\displaystyle\lim_{n\to\infty}\left|\frac{u_{n+1}}{u_n}\right|=\lim_{n\to\infty}\frac{(n+2)(n+4)}{(n+1)(n+3)}=1$ 知, 收敛半径 $R=1$.
+    又当 $x=\pm 1$ 时, $\displaystyle\sum_{n=0}^\infty(n+1)(n+3)(\pm 1)^n$ 发散, 故原级数的收敛域为 $(-1,1)$.\\
+    设和函数为 $S(x)$, 即 $\displaystyle S(x)=\sum_{n=0}^\infty(n+1)(n+3)x^n,~x\in(-1,1)$.两边在 $(0,x)$ 上积分, 得
     \begin{flalign*}
         \int_0^xS(t)\mathrm{d}t & =\int_0^x\left(\sum_{n=0}^\infty(n+1)(n+3)t^n\right)\mathrm{d}t=\sum_{n=0}^\infty\int_0^x(n+1)(n+3)t^n\mathrm{d}t=\sum_{n=0}^\infty(n+3)x^{n+1} \\
                                 & =\sum_{n=0}^\infty(n+2)x^{n+1}+\sum_{n=0}^\infty x^{n+1}=\left(\sum_{n=0}^\infty\int_0^x (n+2)t^{n+1}\mathrm{d}t\right)'+\frac{x}{1-x}          \\
@@ -539,23 +539,23 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     于是 $\displaystyle S(x)=\left[\frac{3x-2x^2}{(1-x)^2}\right]'=\frac{x+3}{(1-x)^3},~x\in(-1,1)$.
 \end{solution}
 \begin{example}[首届数学竞赛预赛]
-    已知 $u_n(x)$ 满足 $u_n'(x)=u_n(x)+x^{n-1}\mathrm{e}^x$ ($n$ 为正整数)，且 $\displaystyle u_n(1)=\frac{\mathrm{e}}{n}$，求函数项级数 $\displaystyle\sum_{n=1}^\infty u_n(x)$ 之和.
+    已知 $u_n(x)$ 满足 $u_n'(x)=u_n(x)+x^{n-1}\mathrm{e}^x$ ($n$ 为正整数), 且 $\displaystyle u_n(1)=\frac{\mathrm{e}}{n}$, 求函数项级数 $\displaystyle\sum_{n=1}^\infty u_n(x)$ 之和.
 \end{example}
 \begin{solution}
-    由 $u_n'(x)-u_n(x)=x^{n-1}\mathrm{e}^x$ 得，$\displaystyle u_n(x)=\mathrm{e}^{\int\mathrm{d}x}\left[\int x^{n-1}\mathrm{e}^x\cdot\mathrm{e}^{-\int\mathrm{d}x}\mathrm{d}x+C\right]=\frac{x^n}{n}\mathrm{e}^x+C\mathrm{e}^x$，
-    又因为 $\displaystyle u_n(1)=\frac{\mathrm{e}}{n}$，所以 $C=0$，所以 $\displaystyle\sum_{n=1}^\infty u_n(x)=\sum_{n=1}^\infty\frac{x^n}{n}\mathrm{e}^x=\mathrm{e}^x\sum_{n=1}^\infty\frac{x^n}{n}=-\mathrm{e}^x\ln(1-x),~x\in(-1,1)$.
+    由 $u_n'(x)-u_n(x)=x^{n-1}\mathrm{e}^x$ 得, $\displaystyle u_n(x)=\mathrm{e}^{\int\mathrm{d}x}\left[\int x^{n-1}\mathrm{e}^x\cdot\mathrm{e}^{-\int\mathrm{d}x}\mathrm{d}x+C\right]=\frac{x^n}{n}\mathrm{e}^x+C\mathrm{e}^x$, 
+    又因为 $\displaystyle u_n(1)=\frac{\mathrm{e}}{n}$, 所以 $C=0$, 所以 $\displaystyle\sum_{n=1}^\infty u_n(x)=\sum_{n=1}^\infty\frac{x^n}{n}\mathrm{e}^x=\mathrm{e}^x\sum_{n=1}^\infty\frac{x^n}{n}=-\mathrm{e}^x\ln(1-x),~x\in(-1,1)$.
 \end{solution}
 
 \begin{example}
-    设 $a_0=1,a_1=-2,a_2=\dfrac{7}{2}$，$$a_{n+1}=-\qty(1+\dfrac{1}{n+1})a_n~ (n\geqslant 2)$$
+    设 $a_0=1,a_1=-2,a_2=\dfrac{7}{2}$, $$a_{n+1}=-\qty(1+\dfrac{1}{n+1})a_n~ (n\geqslant 2)$$
     求幂级数 $\displaystyle\sum_{n=0}^{\infty}a_nx^n$ 在 $(-1,1)$ 内的和函数 $S(x)$.
 \end{example}
 \begin{solution}
-    收敛半径 $R=\displaystyle\lim_{n\to\infty}\dfrac{|a_n|}{|a_{n+1}|}=\lim_{n\to\infty}\dfrac{1}{1+\dfrac{1}{n+1}}=1$，所以 $|x|<1$ 时幂级数收敛，
+    收敛半径 $R=\displaystyle\lim_{n\to\infty}\dfrac{|a_n|}{|a_{n+1}|}=\lim_{n\to\infty}\dfrac{1}{1+\dfrac{1}{n+1}}=1$, 所以 $|x|<1$ 时幂级数收敛, 
     \begin{flalign*}
         S(x)=\sum_{n=0}^{\infty}a_nx^n=a_0+a_1x+a_2x^2+\sum_{n=3}^{\infty}a_nx^n=1+2x+\dfrac{7}{2}x^2+\sum_{n=0}^{\infty}a_nx^n
     \end{flalign*}
-    当 $n\geqslant 2$ 时，由
+    当 $n\geqslant 2$ 时, 由
     \begin{flalign*}
         a_{n+1} & =(-1)\dfrac{n+2}{n+1}a_n=(-1)^2\dfrac{n+2}{n+1}\cdot\dfrac{n+1}{n}a_{n-1}=\cdots=(-1)^{n-1}\dfrac{n+2}{n+1}\cdot\dfrac{n+1}{n}\cdots\dfrac{4}{3}a_{2} \\
                 & =(-1)^{n-1}\dfrac{n+2}{3}\cdot\dfrac{7}{2}=(-1)^{n-1}\dfrac{7}{6}(n+2)
@@ -571,27 +571,27 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     求幂级数 $\displaystyle \sum_{n=1}^\infty\frac{n}{8^n(2n-1)}x^{3n-1}$ 的收敛域与和函数.
 \end{example}
 \begin{solution}
-    记 $\displaystyle a_n=\frac{n}{8^n(2n-1)}x^{3n-1}$，那么
+    记 $\displaystyle a_n=\frac{n}{8^n(2n-1)}x^{3n-1}$, 那么
     $$\lim_{n\to\infty}\left |\frac{a_{n+1}}{a_n}\right |=\lim_{n\to\infty}\left |\frac{(n+1)x^{3n+2}}{8^{n+1}(2n+1)}\cdot\frac{8^n(2n-1)}{nx^{3n-1}}\right |=\left |\frac{x}{2}\right |^3$$
-    $|x|<2$ 时原级数收敛，$|x|>2$ 时原级数发散；当 $x=\pm 2$ 时，
+    $|x|<2$ 时原级数收敛, $|x|>2$ 时原级数发散；当 $x=\pm 2$ 时, 
     $$\lim_{n\to\infty}\sum_{n=1}^\infty\frac{n}{8^n(2n-1)}(\pm 2)^{3n-1}=\lim_{n\to\infty}\frac{1}{2}\sum_{n=1}^\infty\frac{(\pm 1)^nn}{2n-1}=\frac{1}{2}\not=0$$
-    所以原级数发散，因此原级数的收敛域为 $(-2,2)$.
+    所以原级数发散, 因此原级数的收敛域为 $(-2,2)$.
     \begin{flalign*}
         \sum_{n=1}^\infty\frac{n}{8^n(2n-1)}x^{3n-1}=\frac{1}{2}\sum_{n=1}^\infty\frac{2n-1+1}{8^n(2n-1)}x^{3n-1}
         =\frac{1}{2x}\sum_{n=1}^\infty\left(\frac{x}{2}\right)^{3n}+\frac{1}{2}\sum_{n=1}^\infty\frac{x^{3n-1}}{8^n(2n-1)}
     \end{flalign*}
-    其中，$\displaystyle \lim_{n\to\infty}\frac{1}{2x}\sum_{k=1}^n\left(\frac{x}{2}\right)^{3k}=\frac{x^2}{2(8-x^3)}$，现求第二项的和.\\
-    当 $x\in (0,2)$ 时，令 $\displaystyle\frac{x}{2}=t^{\frac{2}{3}}$，则
+    其中, $\displaystyle \lim_{n\to\infty}\frac{1}{2x}\sum_{k=1}^n\left(\frac{x}{2}\right)^{3k}=\frac{x^2}{2(8-x^3)}$, 现求第二项的和.\\
+    当 $x\in (0,2)$ 时, 令 $\displaystyle\frac{x}{2}=t^{\frac{2}{3}}$, 则
     \begin{flalign*}
         \frac{1}{2}\sum_{n=1}^\infty\frac{x^{3n-1}}{8^n(2n-1)} & =\frac{t}{2x}\sum_{n=1}^\infty\frac{t^{2n-1}}{2n-1}=\frac{t}{2x}\left(\sum_{n=1}^\infty\int_0^t\frac{t^{2n-1}}{2n-1}\mathrm{d}t\right)'                                                                                                                    \\
                                                                & =\frac{t}{2x}\int_0^t\sum_{n=1}^\infty\frac{\left(t^{2n-1}\right)'}{2n-1}\mathrm{d}t=\frac{t}{2x}\int_0^t\frac{\mathrm{d}t}{1-t^2}=\frac{t}{4x}\ln\frac{1+t}{1-t}=\frac{\sqrt{x}}{8\sqrt{2}}\ln\frac{2\sqrt{2}+x^{\frac{3}{2}}}{2\sqrt{2}-x^{\frac{3}{2}}}
     \end{flalign*}
-    当 $x\in(-2,0)$ 时，令 $\displaystyle \frac{x}{2}=-t^{\frac{3}{2}}~~(t>0)$，则
+    当 $x\in(-2,0)$ 时, 令 $\displaystyle \frac{x}{2}=-t^{\frac{3}{2}}~~(t>0)$, 则
     \begin{flalign*}
         \frac{1}{2}\sum_{n=1}^\infty\frac{x^{3n-1}}{8^n(2n-1)} & =\frac{t}{2x}\sum_{n=1}^\infty\frac{(-1)^n}{2n-1}t^{2n-1}=\frac{t}{2x}\int_0^t\sum_{n=1}^\infty\frac{(-1)^n}{2n-1}\left(t^{2n-1}\right)'\mathrm{d}t \\
                                                                & =-\frac{t}{2x}\int_0^t\frac{\mathrm{d}t}{1+t^2}=\frac{t}{2x}\arctan t=-\frac{\sqrt{-x}}{4\sqrt{2}}\arctan\frac{x\sqrt{-x}}{2\sqrt{2}}
     \end{flalign*}
-    综上，所求和函数为
+    综上, 所求和函数为
     $$S(x)=\left\{\begin{matrix}
             \displaystyle\frac{x^2}{2(8-x^3)}+\frac{\sqrt{x}}{8\sqrt{2}}\ln\frac{2\sqrt{2}+x^{\frac{3}{2}}}{2\sqrt{2}-x^{\frac{3}{2}}} , & 0\leqslant x<2 \\
             \displaystyle\frac{x^2}{2(8-x^3)}-\frac{\sqrt{-x}}{4\sqrt{2}}\arctan\frac{x\sqrt{-x}}{2\sqrt{2}}                          ,  & -2<x<0
@@ -599,43 +599,43 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
 \end{solution}
 
 \begin{example}
-    设 $\alpha =\lim\limits_{x\to0^+}\dfrac{x^2\tan\dfrac{x}{2}}{1-(1+x)^{\int_{0}^{x}\sin^2\sqrt{t}\dd t}}$，求常数项级数 $\displaystyle\sum_{n=1}^{\infty}n^2\sin ^{n-1}\alpha$ 的和.
+    设 $\alpha =\lim\limits_{x\to0^+}\dfrac{x^2\tan\dfrac{x}{2}}{1-(1+x)^{\int_{0}^{x}\sin^2\sqrt{t}\dd t}}$, 求常数项级数 $\displaystyle\sum_{n=1}^{\infty}n^2\sin ^{n-1}\alpha$ 的和.
 \end{example}
 \begin{solution}
-    对极限式做恒等变换，有
+    对极限式做恒等变换, 有
     \begin{flalign*}
         \alpha & = -\lim_{x\to0^+}\dfrac{x^2\tan\dfrac{x}{2}}{\exp\displaystyle\int_{0}^{x}\sin^2\sqrt{t}\dd t\ln(1+x)-1}=-\lim_{x\to0^+}\dfrac{\dfrac{x^3}{2}}{\displaystyle\int_{0}^{x}\sin^2\sqrt{t}\dd t\ln(1+x)} \\
                & =-\lim_{x\to0^+}\dfrac{\dfrac{1}{2}x^2}{\displaystyle\int_{0}^{x}\sin^2\sqrt{t}\dd t}\xlongequal[]{L'}-\lim_{x\to0^+}\dfrac{x}{\sin^2\sqrt{x}}=-1
     \end{flalign*}
-    为求 $\displaystyle\sum_{n=1}^{\infty}n^2\sin^{n-1}\alpha$ 的和，先求幂级数 $\displaystyle\sum_{n=1}^{\infty}n^2x^{n-1}$ 的和函数 $S(x)$，显然它的收敛域为 $(-1,1)$，当 $x\in(-1,1)$ 时，由幂级数在收敛区间的解析性质，有
+    为求 $\displaystyle\sum_{n=1}^{\infty}n^2\sin^{n-1}\alpha$ 的和, 先求幂级数 $\displaystyle\sum_{n=1}^{\infty}n^2x^{n-1}$ 的和函数 $S(x)$, 显然它的收敛域为 $(-1,1)$, 当 $x\in(-1,1)$ 时, 由幂级数在收敛区间的解析性质, 有
     \begin{flalign*}
         S(x) & =\sum_{n=1}^{\infty}n^2x^{n-1}=\sum_{n=2}^{\infty}n(n-1)x^{n-1}+\sum_{n=1}^{\infty}nx^{n-1}                                  \\
              & =x\sum_{n=2}^{\infty}n(n-1)x^{n-2}+\sum_{n=1}^{\infty}nx^{n-1}=x\qty(\sum_{n=2}^{\infty}x^n)''+\qty(\sum_{n=1}^{\infty}x^n)' \\
              & =x\qty(x^2\sum_{n=0}^{\infty}x^n)''+\qty(x\sum_{n=0}^{\infty}x^n)'=x\qty(\dfrac{x^2}{1-x})''+\qty(\dfrac{x}{1-x})'           \\
              & =\dfrac{2x}{(1-x)^3}+\dfrac{1}{(1-x)^2}=\dfrac{1+x}{(1-x)^3}
     \end{flalign*}
-    由于 $|\sin\alpha|=|\sin(-1)|<1$，故
+    由于 $|\sin\alpha|=|\sin(-1)|<1$, 故
     $$\sum_{n=1}^{\infty}n^2\sin^{n-1}\alpha=S(\sin\alpha)=\dfrac{1-\sin 1}{(1+\sin 1)^3}.$$
 \end{solution}
 
 \begin{example}
-    设函数 $\displaystyle f(x)=\dfrac{1}{1-x-x^2}$，$a_n=\dfrac{1}{n!}f^{(n)}(0)~ (n\geqslant 0)$，证明: 级数 $\displaystyle\sum_{n=0}^{\infty}\dfrac{a_{n+1}}{a_na_{n+2}}$ 收敛并求它的和.
+    设函数 $\displaystyle f(x)=\dfrac{1}{1-x-x^2}$, $a_n=\dfrac{1}{n!}f^{(n)}(0)~ (n\geqslant 0)$, 证明: 级数 $\displaystyle\sum_{n=0}^{\infty}\dfrac{a_{n+1}}{a_na_{n+2}}$ 收敛并求它的和.
 \end{example}
 \begin{proof}[{\songti \textbf{证法一}}]
-    令 $\displaystyle f(x)=\sum_{n=0}^{\infty}a_nx^n$，那么
+    令 $\displaystyle f(x)=\sum_{n=0}^{\infty}a_nx^n$, 那么
     \begin{flalign*}
         1 & =(1-x-x^2)f(x)=(1-x-x^2)\sum_{n=0}^{\infty}a_nx^n=\sum_{n=0}^{\infty}a_nx^n-\sum_{n=0}^{\infty}a_nx^{n+1}-\sum_{n=0}^{\infty}a_nx^{n+2} \\
           & =a_0+(a_1-a_0)x+\sum_{n=0}^{\infty}(a_{n+2}-a_{n+1}-a_n)x^{n+2}
     \end{flalign*}
-    比较系数得 $a_0=1,~a_1=a_0,~a_{n+2}=a_{n+1}+a_n$，从而有 $a_n\geqslant n$，故 $\displaystyle \lim_{n\to+\infty}a_n=+\infty$，故
+    比较系数得 $a_0=1,~a_1=a_0,~a_{n+2}=a_{n+1}+a_n$, 从而有 $a_n\geqslant n$, 故 $\displaystyle \lim_{n\to+\infty}a_n=+\infty$, 故
     $$\dfrac{a_{n+1}}{a_na_{n+2}}=\dfrac{a_{n+2}-a_{n}}{a_na_{n+2}}=\dfrac{1}{a_n}-\dfrac{1}{a_{n+2}}$$
     所以 $\displaystyle \lim_{m\to+\infty}\sum_{n=0}^{m}\qty(\dfrac{1}{a_n}-\dfrac{1}{a_{n+2}})=\lim_{m\to+\infty}\qty(\dfrac{1}{a_0}+\dfrac{1}{a_1}-\dfrac{1}{a_{m+1}}-\dfrac{1}{a_{m+2}})=1+1=2.$
 \end{proof}
 \begin{proof}[{\songti \textbf{证法二}}]
-    对 $(x^2+x-1)f(x)=-1$ 求 $n+2$ 阶导，
+    对 $(x^2+x-1)f(x)=-1$ 求 $n+2$ 阶导, 
     $$\sum_{k=0}^{n+2}\mathrm{C}_{n+2}^k(x^2+x-1)^{(k)}f^{(n+2-k)}(x)=0$$
     故 $$(x^2+x-1)f^{(n+2)}(x)+(n+2)(2x+1)f^{(n+1)}(x)+(n+2)(n+1)f^{(n)}(x)=0$$
-    将 $x=0$，代入上式，并化简得
+    将 $x=0$, 代入上式, 并化简得
     $$f^{(n+1)}(0)=\dfrac{1}{n+2}\qty[f^{(n+2)}(0)-(n+2)(n+1)f^{(n)}(0)]$$
     于是有
     \begin{flalign*}
@@ -651,25 +651,25 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
 \subsubsection{证明不等式}
 
 \begin{example}
-    设 $x>0,x\neq1$，证明 $0<\dfrac{x\ln x}{x^2-1}<\dfrac{1}{2}.$
+    设 $x>0,x\neq1$, 证明 $0<\dfrac{x\ln x}{x^2-1}<\dfrac{1}{2}.$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    当 $0<x<1$ 或 $x>1$ 时，$x^{2}-1$ 与 $x\ln x$ 同号，所以 $\dfrac{x\ln x}{x^{2}-1}>0$，
-    令 $x=\dfrac{1+t}{1-t}$，则 $\dfrac{x\ln x}{x^{2}-1}=\dfrac{1}{4}\left(\dfrac{1}{t}-t\right)\cdot\ln\dfrac{1+t}{1-t},~0<|t|<1$，
-    而由 $\ln\dfrac{1+t}{1-t}$ 的幂级数展开式，有
+    当 $0<x<1$ 或 $x>1$ 时, $x^{2}-1$ 与 $x\ln x$ 同号, 所以 $\dfrac{x\ln x}{x^{2}-1}>0$, 
+    令 $x=\dfrac{1+t}{1-t}$, 则 $\dfrac{x\ln x}{x^{2}-1}=\dfrac{1}{4}\left(\dfrac{1}{t}-t\right)\cdot\ln\dfrac{1+t}{1-t},~0<|t|<1$, 
+    而由 $\ln\dfrac{1+t}{1-t}$ 的幂级数展开式, 有
     \begin{flalign*}
         \dfrac{1}{4}\left( \dfrac{1}{t}-t\right) \ln \dfrac{1+t}{1-t} & =\dfrac{1}{2}\left( \dfrac{1}{t}-t\right) \sum ^{\infty }_{n=0}\dfrac{t^{2n+1}}{2n+1}=\dfrac{1}{2}\left( \sum ^{\infty }_{n=0}\dfrac{t^{2n}}{2n+1}-\sum ^{\infty }_{n=0}\dfrac{t^{2n+2}}{2n+1}\right) \\
                                                                       & =\dfrac{1}{2}-\dfrac{1}{3}t^{2}+\sum ^{\infty }_{n=2}\left( \dfrac{1}{2n+1}-\dfrac{1}{2n-1}\right) t^{2n}=\dfrac{1}{2}-\dfrac{1}{3}t^{2}-\sum ^{\infty }_{n=2}\dfrac{t^{2n}}{4n^{2}-1}
     \end{flalign*}
-    记 $\displaystyle u_{n}=\dfrac{t^{2n}}{4n^{2}-1}\text{，则 } \lim _{n\rightarrow \infty }\dfrac{u_{n}+1}{u_{n}}=t^{2}\Rightarrow \sum ^{\infty }_{n=2}\dfrac{t^{2n}}{4n^{2}-1}$ 收敛，且和大于 $0$，
+    记 $\displaystyle u_{n}=\dfrac{t^{2n}}{4n^{2}-1}\text{, 则 } \lim _{n\rightarrow \infty }\dfrac{u_{n}+1}{u_{n}}=t^{2}\Rightarrow \sum ^{\infty }_{n=2}\dfrac{t^{2n}}{4n^{2}-1}$ 收敛, 且和大于 $0$, 
     于是 $0<\dfrac{x\ln x}{x^2-1}<\dfrac{1}{2}.$
 \end{proof}
 
 \begin{example}
-    设 $x>0,x\neq1$，证明 $\dfrac{\ln x}{x-1}\leqslant \dfrac{1}{\sqrt{x}}.$
+    设 $x>0,x\neq1$, 证明 $\dfrac{\ln x}{x-1}\leqslant \dfrac{1}{\sqrt{x}}.$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    要证 $\dfrac{\ln x}{x-1}\leqslant \dfrac{1}{\sqrt{x}}$，即证 $I=\dfrac{\ln x}{x-1}-\dfrac{1}{\sqrt{x}}\leqslant 0$，为此
+    要证 $\dfrac{\ln x}{x-1}\leqslant \dfrac{1}{\sqrt{x}}$, 即证 $I=\dfrac{\ln x}{x-1}-\dfrac{1}{\sqrt{x}}\leqslant 0$, 为此
     \begin{flalign*}
         I=\xlongequal[0<|t|<1]{x=\left(\dfrac{1+t}{1-t}\right)^2}\dfrac{1}{t}\ln \dfrac{1+t}{1-t}-\dfrac{2}{1-t^{2}}=\dfrac{2}{t}\sum ^{\infty }_{n=0}\dfrac{t^{2n+1}}{2n+1}-2\sum ^{\infty }_{n=0}t^{2n}=\sum ^{\infty }_{n=0}\dfrac{-4nt^{2n}}{2n+1}\leqslant 0
     \end{flalign*}
@@ -677,15 +677,15 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
 \end{proof}
 
 \begin{example}
-    设 $0<x<1$，证明: $3\ln \dfrac{1+x}{1-x} <\dfrac{6x-4x^{3}}{1-x^{2}}.$
+    设 $0<x<1$, 证明: $3\ln \dfrac{1+x}{1-x} <\dfrac{6x-4x^{3}}{1-x^{2}}.$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    因为 $3\ln\dfrac{1+x}{1-x}=6\displaystyle\sum_{n=0}^{\infty}\dfrac{x^{2n+1}}{2n+1},~|x|<1$，于是要证 $$6\displaystyle\sum_{n=0}^{\infty}\dfrac{x^{2n+1}}{2n+1}<\dfrac{6x-4x^3}{1-x^2}$$
-    又 $6x+2x^3\leqslant 6\displaystyle\sum_{n=0}^{\infty}\dfrac{x^{2n+1}}{2n+1}$，只需证
+    因为 $3\ln\dfrac{1+x}{1-x}=6\displaystyle\sum_{n=0}^{\infty}\dfrac{x^{2n+1}}{2n+1},~|x|<1$, 于是要证 $$6\displaystyle\sum_{n=0}^{\infty}\dfrac{x^{2n+1}}{2n+1}<\dfrac{6x-4x^3}{1-x^2}$$
+    又 $6x+2x^3\leqslant 6\displaystyle\sum_{n=0}^{\infty}\dfrac{x^{2n+1}}{2n+1}$, 只需证
     \begin{flalign*}
         6x+2x^3<4x+\dfrac{2x}{1-x^2}\Rightarrow 2x+2x^3-\dfrac{2x}{1-x^2}>0\Rightarrow 1-x^4>1
     \end{flalign*}
-    而 $0<x<1$，故上式成立，即得待证不等式.
+    而 $0<x<1$, 故上式成立, 即得待证不等式.
 \end{proof}
 
 \subsubsection{求和问题}
@@ -702,7 +702,7 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
 % \end{example}
 
 \begin{example}\scriptsize\linespread{0.8}
-    证明: $\displaystyle\lim_{m,n\to+\infty}\sum_{i=1}^m\sum_{j=1}^n\frac{(-1)^{i+j}}{i+j}$ 存在，并求之.
+    证明: $\displaystyle\lim_{m,n\to+\infty}\sum_{i=1}^m\sum_{j=1}^n\frac{(-1)^{i+j}}{i+j}$ 存在, 并求之.
 \end{example}
 \begin{solution}\scriptsize\linespread{0.8}
     因为$$\int_{-1}^0x^{i+j-1}\mathrm{d}x=\frac{1}{i+j}x^{i+j}\Big |_{-1}^0=-\frac{(-1)^{i+j}}{i+j}$$
@@ -713,27 +713,27 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
                 & =-\sum_{i=1}^m\int_{-1}^0\frac{x^i\left(1-x^n\right)}{1-x}\mathrm{d}x=-\int_{-1}^0\frac{1}{1-x}\sum_{i=1}^m\left(x^i-x^{n+i}\right)\mathrm{d}x \\
                 & =-\int_{-1}^0\frac{x-x^{m+1}}{(1-x)^2}\mathrm{d}x+\int_{-1}^0\frac{x^{n+1}-x^{n+m+1}}{(1-x)^2}\mathrm{d}x
     \end{flalign*}
-    而 $x\in[-1,0],~(1-x)^2\ge1$，所以 $\displaystyle\int_{-1}^0\frac{x^i}{(1-x)^2}\mathrm{d}x\leqslant \int_{-1}^0x^i\mathrm{d}x$，又 $\displaystyle\lim_{i\to+\infty}\int_{-1}^0x^i\mathrm{d}x=0$，
-    所以 $\displaystyle \lim_{i\to+\infty}\int_{-1}^0\frac{x^i}{(1-x)^2}\mathrm{d}x=0$，所以 $\displaystyle\lim_{m,n\to+\infty}S_{m,n}=-\int_{-1}^0\frac{x}{(1-x)^2}\mathrm{d}x=\ln2-\frac{1}{2}.$
+    而 $x\in[-1,0],~(1-x)^2\ge1$, 所以 $\displaystyle\int_{-1}^0\frac{x^i}{(1-x)^2}\mathrm{d}x\leqslant \int_{-1}^0x^i\mathrm{d}x$, 又 $\displaystyle\lim_{i\to+\infty}\int_{-1}^0x^i\mathrm{d}x=0$, 
+    所以 $\displaystyle \lim_{i\to+\infty}\int_{-1}^0\frac{x^i}{(1-x)^2}\mathrm{d}x=0$, 所以 $\displaystyle\lim_{m,n\to+\infty}S_{m,n}=-\int_{-1}^0\frac{x}{(1-x)^2}\mathrm{d}x=\ln2-\frac{1}{2}.$
 \end{solution}
 
 \begin{example}
     求级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{3n-1}$ 与 $\displaystyle\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{(3n-1)(2n-1)}$ 的和.
 \end{example}
 \begin{solution}
-    令 $S(x)=\displaystyle\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{3n-1}x^{3n-1}$，那么 $S'(x)=\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}x^{3n-2}=\sum_{n=0}^{\infty}(-1)^nx^{3n+1}=\dfrac{x}{1+x^3},|x|<1$，
+    令 $S(x)=\displaystyle\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{3n-1}x^{3n-1}$, 那么 $S'(x)=\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}x^{3n-2}=\sum_{n=0}^{\infty}(-1)^nx^{3n+1}=\dfrac{x}{1+x^3},|x|<1$, 
     于是 \begin{flalign*}
         S(1) & =\int_{0}^{1}S'(x)\dd x=\int_{0}^{1}\dfrac{x}{1+x^3}\dd x=\int_{0}^{1}\dfrac{x}{(x+1)\qty(x^2-x+1)}\dd x=\dfrac{1}{3}\int_{0}^{1}\qty(\dfrac{1}{2}\dfrac{2x-1}{x^2-x+1}+\dfrac{1}{2}\dfrac{3}{x^2-x+1}-\dfrac{1}{x+1})\dd x \\
              & =\eval{\dfrac{1}{6}\ln\qty(x^2-x+1)-\dfrac{1}{3}\ln(x+1)+\dfrac{1}{\sqrt{3}}\arctan\dfrac{2x-1}{\sqrt{3}}}_{0}^{1}=\dfrac{\pi}{3\sqrt{3}}-\dfrac{1}{3}\ln 2
     \end{flalign*}
-    因为 $\dfrac{1}{(3n-1)(2n-1)}=\dfrac{2}{2n-1}-\dfrac{3}{2n-1}$，所以 $$\displaystyle\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{(3n-1)(2n-1)}=\sum_{n=1}^{\infty}(-1)^{n-1}\qty(\dfrac{2}{2n-1}-\dfrac{3}{3n-1})=2\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{2n-1}-3\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{3n-1}$$
-    令 $\displaystyle Q(x)=\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{2n-1}$，那么 $$Q'(x)=\sum_{n=1}^{\infty}(-1)^{n-1}x^{2n-2}=\sum_{n=0}^{\infty}(-1)^nx^{2n}=\dfrac{1}{1+x^2}~~|x|<1$$
-    因此 $\displaystyle 2\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{2n-1}=2Q(1)=2Q(0)+2\int_{0}^{1}\dfrac{\dd x}{1+x^2}=\eval{2\arctan x}_{0}^{1}=\dfrac{\pi}{2},~3\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{3n-1}=3S(1)=\dfrac{\pi}{\sqrt{3}}-\ln 2$，
+    因为 $\dfrac{1}{(3n-1)(2n-1)}=\dfrac{2}{2n-1}-\dfrac{3}{2n-1}$, 所以 $$\displaystyle\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{(3n-1)(2n-1)}=\sum_{n=1}^{\infty}(-1)^{n-1}\qty(\dfrac{2}{2n-1}-\dfrac{3}{3n-1})=2\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{2n-1}-3\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{3n-1}$$
+    令 $\displaystyle Q(x)=\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{2n-1}$, 那么 $$Q'(x)=\sum_{n=1}^{\infty}(-1)^{n-1}x^{2n-2}=\sum_{n=0}^{\infty}(-1)^nx^{2n}=\dfrac{1}{1+x^2}~~|x|<1$$
+    因此 $\displaystyle 2\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{2n-1}=2Q(1)=2Q(0)+2\int_{0}^{1}\dfrac{\dd x}{1+x^2}=\eval{2\arctan x}_{0}^{1}=\dfrac{\pi}{2},~3\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{3n-1}=3S(1)=\dfrac{\pi}{\sqrt{3}}-\ln 2$, 
     故 $$\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{(3n-1)(2n-1)}=\dfrac{\pi}{2}-\dfrac{\pi}{\sqrt{3}}+\ln 2.$$
 \end{solution}
 
 \begin{example}
-    设 $a_n=\displaystyle\int_{0}^{+\infty}x^n\e^{-x}\dd x~~(n=0,1,2,\cdots)$，
+    设 $a_n=\displaystyle\int_{0}^{+\infty}x^n\e^{-x}\dd x~~(n=0,1,2,\cdots)$, 
     \begin{enumerate*}[label=(\arabic{*})]
         \item 求 $\displaystyle\lim_{n\to\infty}\dfrac{a_{n-1}}{a_n}$;
         \item 求级数 $\displaystyle\sum_{n=0}^{\infty}\dfrac{1+n^2}{a_n}$ 的和.
@@ -741,8 +741,8 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 因为 $\displaystyle \Gamma(\alpha)=\int_{0}^{+\infty}x^{\alpha-1}\e^{-x}\dd x~~(\alpha>0)$，且 $\Gamma(\alpha+1)=\Gamma(\alpha)$，因此 $$\lim_{n\to\infty}\dfrac{a_{n-1}}{a_n}=\lim_{n\to\infty}\dfrac{\Gamma(n)}{\Gamma(n+1)}=\lim_{n\to\infty}\dfrac{\Gamma(n)}{n\Gamma(n)}=0.$$
-        \item 又因为 $a_n=\Gamma(n+1)=n!$，因此级数转化为 $\displaystyle\sum_{n=0}^{\infty}\dfrac{1+n^2}{n!}$，为此构造幂级数 $S(x)=\displaystyle\sum_{n=0}^{\infty}\dfrac{1+n^2}{n!}x^n$，那么
+        \item 因为 $\displaystyle \Gamma(\alpha)=\int_{0}^{+\infty}x^{\alpha-1}\e^{-x}\dd x~~(\alpha>0)$, 且 $\Gamma(\alpha+1)=\Gamma(\alpha)$, 因此 $$\lim_{n\to\infty}\dfrac{a_{n-1}}{a_n}=\lim_{n\to\infty}\dfrac{\Gamma(n)}{\Gamma(n+1)}=\lim_{n\to\infty}\dfrac{\Gamma(n)}{n\Gamma(n)}=0.$$
+        \item 又因为 $a_n=\Gamma(n+1)=n!$, 因此级数转化为 $\displaystyle\sum_{n=0}^{\infty}\dfrac{1+n^2}{n!}$, 为此构造幂级数 $S(x)=\displaystyle\sum_{n=0}^{\infty}\dfrac{1+n^2}{n!}x^n$, 那么
               \begin{flalign*}
                   S(x) & =\sum_{n=0}^{\infty}\dfrac{x^n}{n!}+\sum_{n=0}^{\infty}\dfrac{n^2x^n}{n!}=\e^{x}+\sum_{n=1}^{\infty}\dfrac{n}{(n-1)!}x^n=\e^x+x\qty(\sum_{n=1}^{\infty}\dfrac{x^n}{(n-1)!})'=\e^x+x\qty(x\sum_{n=1}^{\infty}\dfrac{x^{n-1}}{(n-1)!})' \\
                        & =\e^{x}+x\qty(x\e^{x})'=\e^x+x\e^{x}+x^2\e^{x}\Rightarrow \sum_{n=0}^{\infty}\dfrac{1+n^2}{a_n}=S(1)=3\e.
@@ -751,7 +751,7 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
 \end{solution}
 
 \begin{example}
-    设 $a_n=\displaystyle\int_{0}^{n\pi}x|\sin x|\dd x,~n=1,2,\cdots$，
+    设 $a_n=\displaystyle\int_{0}^{n\pi}x|\sin x|\dd x,~n=1,2,\cdots$, 
     \begin{enumerate*}[label=(\arabic{*})]
         \item 证明: $\displaystyle\lim_{n\to\infty}\sum_{k=1}^{n}\dfrac{a_k}{2^k}=\pi\sum_{n=1}^{\infty}\dfrac{n^2}{2^n}$;
         \item 求级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{n^2}{2^n}$ 的和.
@@ -765,7 +765,7 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
                       & =\sum_{k=0}^{n-1}\int_{0}^{\pi}(k\pi+t)\sin t\dd t=\pi\sum_{k=0}^{n-1}(2k+1)=n^2\pi
               \end{flalign*}
               因此 $\displaystyle\lim_{n\to\infty}\sum_{k=1}^{n}\dfrac{a_k}{2^k}=\pi\sum_{n=1}^{\infty}\dfrac{n^2}{2^n}.$
-        \item 令 $S(x)=\displaystyle\sum_{n=1}^{\infty}n^2x^n$，即求 $S\qty(\dfrac{1}{2})$ 的值，为此，
+        \item 令 $S(x)=\displaystyle\sum_{n=1}^{\infty}n^2x^n$, 即求 $S\qty(\dfrac{1}{2})$ 的值, 为此, 
               \begin{flalign*}
                   S(x)   & =x\sum_{n=1}^{\infty}n^2x^{n-1}=xS_1(x)                                                                                                  \\
                   S_1(x) & =\qty(\sum_{n=1}^{\infty}\int_{0}^{x}n^2t^{n-1}\dd t)'=\qty(\sum_{n=1}^{\infty}nx^n)'=\qty(x\sum_{n=1}^{\infty}nx^{n-1})'=\qty(xS_2(x))' \\
@@ -782,7 +782,7 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     \label{jishusin2xlnsinxlncosx}
 \end{example}
 \begin{solution}
-    同样地，换元得到 $\displaystyle I=\dfrac{1}{4}\int_{0}^{1}\ln t\ln(1-t)\dd t$，并且 $\displaystyle -\ln(1-x)=\sum_{n=1}^{\infty}\dfrac{x^n}{n}~ |x|<1$，所以\footnote{
+    同样地, 换元得到 $\displaystyle I=\dfrac{1}{4}\int_{0}^{1}\ln t\ln(1-t)\dd t$, 并且 $\displaystyle -\ln(1-x)=\sum_{n=1}^{\infty}\dfrac{x^n}{n}~ |x|<1$, 所以\footnote{
         $\displaystyle\sum_{n=1}^{\infty}\qty[\dfrac{1}{n}-\dfrac{1}{n+1}-\dfrac{1}{(n+1)^2}]=\sum_{n=1}^{\infty}\qty(\dfrac{1}{n}-\dfrac{1}{n+1})-\sum_{n=1}^{\infty}\dfrac{1}{(n+1)^2}
             =\lim_{n\to\infty}\dfrac{n}{n+1}-\qty[\sum_{n=1}^{\infty}\dfrac{1}{n^2}-1]=2-\dfrac{\pi^2}{6}.$
     }

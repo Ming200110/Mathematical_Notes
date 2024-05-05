@@ -1,12 +1,12 @@
 \section{反常积分}
 
-反常积分是指在积分区间上函数有无穷大或无界的情况下的积分，无法直接通过定积分来计算的积分. 反常积分分为两类: 
-第一类是无穷积分，即积分区间为无穷的情况; 第二类是间断积分，即积分函数在积分区间上有间断点的情况.
+反常积分是指在积分区间上函数有无穷大或无界的情况下的积分, 无法直接通过定积分来计算的积分. 反常积分分为两类: 
+第一类是无穷积分, 即积分区间为无穷的情况; 第二类是间断积分, 即积分函数在积分区间上有间断点的情况.
 
 \subsection{反常积分的计算}
 
 \begin{theorem}[反常积分的区间再现公式]
-    若 $\displaystyle\int_{0}^{+\infty}f(x)\dd x$ 收敛，则对任意的正整数 $k$，都有
+    若 $\displaystyle\int_{0}^{+\infty}f(x)\dd x$ 收敛, 则对任意的正整数 $k$, 都有
     $$\int_{0}^{+\infty}f(x)\dd x=\int_{0}^{+\infty}\dfrac{k}{x^2}f\left(\dfrac{k}{x}\right)\dd x=\dfrac{1}{2}\int_{0}^{+\infty}\left[f(x)+\dfrac{k}{x^2}f\left(\dfrac{k}{x}\right)\right]\dd x.$$
     \index{反常积分的区间再现公式}
 \end{theorem}
@@ -25,36 +25,36 @@
 
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item \textbf{法一: }令 $ x=\tan t$，则 $ \dd  x=\sec ^{2} t \dd  t$，
+        \item \textbf{法一: }令 $ x=\tan t$, 则 $ \dd  x=\sec ^{2} t \dd  t$, 
               \begin{flalign*}
                   \text{原式}  =\int_{0}^{\frac{\pi}{2}}\dfrac{\dd t}{1+\tan^\alpha t}\xlongequal[]{t=\frac{\pi}{2}-u}\int_{0}^{\frac{\pi}{2}}\dfrac{\dd u}{1+\cot^\alpha u}=\int_{0}^{\frac{\pi}{2}}\frac{\tan^\alpha u}{\tan^\alpha u+1}\dd u
                   =\frac{1}{2} \int_{0}^{\frac{\pi}{2}} \frac{\tan ^{\alpha} u+1}{\tan ^{\alpha} u+1} \dd  u=\frac{1}{2} \int_{0}^{\frac{\pi}{2}} \dd  u=\frac{\pi}{4} .
               \end{flalign*}
-              \textbf{法二: }令 $ x=\dfrac{1}{t}$，则 $ \dd  x=-\dfrac{1}{t^{2}} \dd  t$，
+              \textbf{法二: }令 $ x=\dfrac{1}{t}$, 则 $ \dd  x=-\dfrac{1}{t^{2}} \dd  t$, 
               \begin{flalign*}
                   \text{原式} & =\int_{+\infty}^{0} \dfrac{-\dfrac{1}{t^{2}} \dd  t}{\left(1+\dfrac{1}{t^{2}}\right)\left(1+\dfrac{1}{t^{\alpha}}\right)}=\int_{0}^{+\infty} \dfrac{t^{\alpha} \dd  t}{\left(1+t^{2}\right)\left(t^{\alpha}+1\right)}=\int_{0}^{+\infty} \dfrac{x^{\alpha} \dd  x}{\left(1+x^{2}\right)\left(x^{\alpha}+1\right)} \\
                               & =\dfrac{1}{2}\left[\int_{0}^{+\infty} \dfrac{\dd  x}{\left(1+x^{2}\right)\left(1+x^{\alpha}\right)}+\int_{0}^{+\infty} \dfrac{x^{\alpha} \dd  x}{\left(1+x^{2}\right)\left(1+x^{\alpha}\right)}\right]=\dfrac{1}{2} \int_{0}^{+\infty} \dfrac{\dd  x}{1+x^{2}}=\dfrac{\pi}{4}
               \end{flalign*}
-              \textbf{法三: }$\displaystyle \int _{0}^{+\infty }\dfrac{\dd x}{\left( 1+x^{2}\right) \left( 1+x^{\alpha }\right) }=\int _{0}^{1}\dfrac{\dd x}{\left( 1+x^{2}\right) \left( 1+x^{\alpha }\right) }+\int _{1}^{+\infty }\dfrac{\dd x}{\left( 1+x^{2}\right) \left( 1+x^{\alpha }\right) }$，于是
+              \textbf{法三: }$\displaystyle \int _{0}^{+\infty }\dfrac{\dd x}{\left( 1+x^{2}\right) \left( 1+x^{\alpha }\right) }=\int _{0}^{1}\dfrac{\dd x}{\left( 1+x^{2}\right) \left( 1+x^{\alpha }\right) }+\int _{1}^{+\infty }\dfrac{\dd x}{\left( 1+x^{2}\right) \left( 1+x^{\alpha }\right) }$, 于是
               $$\int_{1}^{+\infty} \dfrac{\dd  x}{\left(1+x^{2}\right)\left(1+x^{\alpha}\right)}=\int_{1}^{0} \dfrac{-\dfrac{1}{t^{2}} \dd  t}{\left(1+\dfrac{1}{t^{2}}\right)\left(1+\dfrac{1}{t^{\alpha}}\right)}=\int_{0}^{1} \dfrac{t^{\alpha} \dd  t}{\left(1+t^{2}\right)\left(1+t^{\alpha}\right)}$$
               于是原式=$\displaystyle\int_{0}^{1} \frac{\dd  x}{\left(1+x^{2}\right)\left(1+x^{\alpha}\right)}+\int_{0}^{1} \frac{x^{\alpha} \dd  x}{\left(1+x^{2}\right)\left(1+x^{\alpha}\right)}=\int_{0}^{1} \frac{1}{1+x^{2}} \dd  x=\frac{\pi}{4} .$\\
               \textbf{法四: }$\displaystyle\text{原式}=\dfrac{1}{2}\int_{0}^{+\infty}\dfrac{\left(1+x^\alpha\right)^{-1}+\left(1+\dfrac{1}{x^\alpha}\right)^{-1}}{1+x^2}\dd x=\dfrac{1}{2}\int_{0}^{+\infty}\frac{\dd x}{1+x^2}=\frac{\pi}{4}.$
         \item $\displaystyle\text{原式}=\dfrac{1}{2}\int_{0}^{+\infty}\dfrac{\arctan\sqrt[3]{x}+\arctan\dfrac{1}{\sqrt[3]{x}}}{1+x^2}\dd x=\frac{\pi}{4}\int_{0}^{+\infty}\dfrac{\dd x}{1+x^2}=\frac{\pi^2}{8}.$
         \item $\displaystyle\text{原式}=\dfrac{1}{2}\int_{0}^{+\infty}\dfrac{\dfrac{x^2}{1+x^2}+\dfrac{1}{1+x^2}}{1+x^2}\dd x=\dfrac{1}{2}\int_{0}^{+\infty}\dfrac{\dd x}{1+x^2}=\dfrac{\pi}{4}.$
-        \item \textbf{法一: }令 $x=a\tan t$，则
+        \item \textbf{法一: }令 $x=a\tan t$, 则
               \begin{flalign*}
                    & \text{原式}=\int_{0}^{\frac{\pi}{2}}\frac{\ln(a\tan t)}{a^2\tan^2t+a^2}\cdot a\sec^2t\dd t=\frac{1}{a}\int_{0}^{\frac{\pi}{2}}(\ln a+\ln\tan t)\dd t=\frac{\pi}{2a}\ln a+\frac{1}{a}\int_{0}^{\frac{\pi}{2}}\ln\tan t\dd t \\
                    & \int_{0}^{\frac{\pi}{2}}\ln\tan t\dd t\xlongequal[]{u=\frac{\pi}{2}-t}\int_{\frac{\pi}{2}}^{0}\ln\tan\left(\frac{\pi}{2}-u\right)(-\dd u)=\int_{0}^{\frac{\pi}{2}}\ln\cot u\dd u
               \end{flalign*}
-              $\displaystyle\int_{0}^{\frac{\pi}{2}}\ln \tan t\dd t+\int_{0}^{\frac{\pi}{2}}\ln\cot u\dd u=\int_{0}^{\frac{\pi}{2}}\ln(\tan x\cot x)\dd x=0\Rightarrow\int_{0}^{\frac{\pi}{2}}\ln\tan x\dd x=0$，
+              $\displaystyle\int_{0}^{\frac{\pi}{2}}\ln \tan t\dd t+\int_{0}^{\frac{\pi}{2}}\ln\cot u\dd u=\int_{0}^{\frac{\pi}{2}}\ln(\tan x\cot x)\dd x=0\Rightarrow\int_{0}^{\frac{\pi}{2}}\ln\tan x\dd x=0$, 
               原式=$\dfrac{\pi}{2a}\ln a.$\\
-              \textbf{法二: }$\displaystyle\int _{0}^{+\infty }\dfrac{\ln x}{x^{2}+a^{2}}\dd x=\int ^{a}_{0}\dfrac{\ln x}{x^{2}+a^{2}}\dd x+\int _{a}^{+\infty }\dfrac{\ln x}{x^{2}+a^{2}}\dd x$，其中
+              \textbf{法二: }$\displaystyle\int _{0}^{+\infty }\dfrac{\ln x}{x^{2}+a^{2}}\dd x=\int ^{a}_{0}\dfrac{\ln x}{x^{2}+a^{2}}\dd x+\int _{a}^{+\infty }\dfrac{\ln x}{x^{2}+a^{2}}\dd x$, 其中
               \begin{flalign*}
                   \int _{a}^{+\infty }\dfrac{\ln x}{x^{2}+a^{2}}\dd x\xlongequal[]{x=\frac{a^2}{t}}\int _{a}^{0}\dfrac{\ln \dfrac{a^{2}}{t}}{\dfrac{a^{4}}{t^{2}}+a^{2}}\left( -\dfrac{a^{2}}{t^{2}}\right) \dd t=\int _{0}^{a}\dfrac{\ln a^{2}-\ln t}{t^{2}+a^{2}}\dd t
               \end{flalign*}
-              于是，$\displaystyle\int ^{+\infty }_{0}\dfrac{\ln x}{x^{2}+a^{2}}\dd x=\int _{0}^{a}\dfrac{\ln a^{2}}{x^{2}+a^{2}}\dd x=2\ln a\left( \dfrac{1}{a}\arctan \dfrac{x}{a}\right) _{0}^{a}=\dfrac{\pi }{2a}\ln a.$\\
+              于是, $\displaystyle\int ^{+\infty }_{0}\dfrac{\ln x}{x^{2}+a^{2}}\dd x=\int _{0}^{a}\dfrac{\ln a^{2}}{x^{2}+a^{2}}\dd x=2\ln a\left( \dfrac{1}{a}\arctan \dfrac{x}{a}\right) _{0}^{a}=\dfrac{\pi }{2a}\ln a.$\\
               \textbf{法三: }$\displaystyle\text{原式}=\frac{1}{a^2}\int_{0}^{+\infty}\frac{\ln x}{\left(\dfrac{x}{a}\right)^2+1}\dd x\xlongequal[]{\frac{x}{a}=t}\frac{1}{a}\int_{0}^{+\infty}\frac{\ln at}{t^2+1}\dd t=\frac{1}{2a}\int_{0}^{+\infty}\frac{\ln at+\ln\dfrac{a}{t}}{t^2+1}\dd t=\frac{\pi}{2a}\ln a.$
-        \item 令 $x=\tan t$，则原式=$\displaystyle \int_{0}^{\frac{\pi}{2}}\frac{t\dd t}{\sec^3t}=\int_{0}^{\frac{\pi}{2}}t\cos^3t\dd t$，由表格积分法:
+        \item 令 $x=\tan t$, 则原式=$\displaystyle \int_{0}^{\frac{\pi}{2}}\frac{t\dd t}{\sec^3t}=\int_{0}^{\frac{\pi}{2}}t\cos^3t\dd t$, 由表格积分法:
               \begin{table}[H]
                   \centering
                   \begin{tabular}{l| c c c}
@@ -82,11 +82,11 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 原式化为 $\displaystyle\int_{3}^{+\infty}\dfrac{\dd x}{(x-1)^4\sqrt{(x-1)^2-1}}$，令 $x-1=\sec\theta$，则
+        \item 原式化为 $\displaystyle\int_{3}^{+\infty}\dfrac{\dd x}{(x-1)^4\sqrt{(x-1)^2-1}}$, 令 $x-1=\sec\theta$, 则
               \begin{flalign*}
                   \text{原式} & =\int_{\frac{\pi}{3}}^{\frac{\pi}{2}}\dfrac{\sec\theta\tan\theta}{\sec^4\theta\tan\theta}\dd \theta=\int_{\frac{\pi}{3}}^{\frac{\pi}{2}}\cos^3\theta\dd \theta=\dfrac{1}{3}\cos^2\sin\theta+\dfrac{2}{3}\sin\theta\biggl |_{\frac{\pi}{3}}^{\frac{\pi}{2}}=\dfrac{2}{3}-\dfrac{3\sqrt{3}}{8}.
               \end{flalign*}
-        \item 由于 $\qty(\dfrac{1}{1+\e ^{-x}})'=\dfrac{\e ^{-x}}{\qty(\e ^{-x}+1)^2}$，由分部积分法，得
+        \item 由于 $\qty(\dfrac{1}{1+\e ^{-x}})'=\dfrac{\e ^{-x}}{\qty(\e ^{-x}+1)^2}$, 由分部积分法, 得
               \begin{flalign*}
                   F(x)  =\int\dfrac{x\e ^{-x}}{\qty(1+\e ^{-x})^2}\dd x=\int x\dd \qty(\dfrac{1}{1+\e ^{-x}})=\dfrac{x}{1+\e ^{-x}}-\int\dfrac{\dd x}{1+\e ^{-x}}
                   =\dfrac{x}{1+\e ^{-x}}-\ln\qty(\e ^{-x}+1)+C
@@ -105,18 +105,18 @@
 \end{solution}
 
 \begin{example}
-    已知 $\displaystyle\lim_{x\to\infty}\qty(\dfrac{x-a}{x+a})^x=\int_{a}^{+\infty}4x^2\e ^{-2x}\dd x$，求常数 $a$ 的值.
+    已知 $\displaystyle\lim_{x\to\infty}\qty(\dfrac{x-a}{x+a})^x=\int_{a}^{+\infty}4x^2\e ^{-2x}\dd x$, 求常数 $a$ 的值.
 \end{example}
 \begin{solution}
-    等式左边易化简为 $\e ^{-2a}$，等式右边由表格积分法得 $$\e ^{-2a}=\e ^{-2x}\qty(-2x^2-2x-1)\biggl |_{a}^{+\infty}=\e ^{-2a}\qty(2a^2+2a+1)$$
-    即 $2a^2+2a+1=1$，解得 $a=0\text{ 或 }-1.$
+    等式左边易化简为 $\e ^{-2a}$, 等式右边由表格积分法得 $$\e ^{-2a}=\e ^{-2x}\qty(-2x^2-2x-1)\biggl |_{a}^{+\infty}=\e ^{-2a}\qty(2a^2+2a+1)$$
+    即 $2a^2+2a+1=1$, 解得 $a=0\text{ 或 }-1.$
 \end{solution}
 
 \begin{example}
     试证: $\displaystyle\int_{0}^{\frac{\pi}{2}}\dfrac{x\cos x\sin x}{\qty(a^2\cos^2 x+b^2\sin^2 x)^2}\dd x=\dfrac{\pi}{4ab^2(a+b)}~ (a,b>0,a\neq b).$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    注意到 $(\tan x)'=\sec^2 x$，于是
+    注意到 $(\tan x)'=\sec^2 x$, 于是
     \begin{flalign*}
         I & =\int_{0}^{\frac{\pi}{2}}\dfrac{x\cos x\sin x}{\qty(a^2\cos^2x+b^2\sin ^2x)^2}\dd x=\int_{0}^{\frac{\pi}{2}}\dfrac{x\tan x}{\qty(a^2+b^2\tan^2x)^2}\dd (\tan x)\xlongequal{\tan x= t}\int_{0}^{+\infty}\dfrac{t\arctan t}{\qty(a^2+b^2t^2)^2}\dd t \\
           & =\dfrac{-1}{2b^2}\int_{0}^{+\infty}\arctan t\dd \qty(\dfrac{1}{a^2+b^2t^2})=\dfrac{-1}{2b^2}\qty[\dfrac{\arctan t}{a^2+b^2t^2}\biggl |_{0}^{+\infty}-\int_{0}^{+\infty}\dfrac{\dd t}{\qty(a^2+b^2t^2)\qty(1+t^2)}]                                 \\
@@ -125,11 +125,11 @@
 \end{proof}
 
 \begin{example}
-    \label{fxdfracx12x1}设 $f(x)=\dfrac{(x+1)^2(x-1)}{x^3(x-2)}$，求 $\displaystyle I=\int_{-1}^{3}\dfrac{f'(x)}{1+f^2(x)}\dd x.$
+    \label{fxdfracx12x1}设 $f(x)=\dfrac{(x+1)^2(x-1)}{x^3(x-2)}$, 求 $\displaystyle I=\int_{-1}^{3}\dfrac{f'(x)}{1+f^2(x)}\dd x.$
 \end{example}
 \begin{solution}
-    易得 $x=0,2$ 为 $f(x)$ 的无穷间断点，故积分为反常积分，且有 $$I=\int_{-1}^{0}+\int_{0}^{2}+\int_{2}^{3}$$
-    且 $\displaystyle\int\dfrac{f'(x)}{1+f^2(x)}\dd x=\arctan f(x)+C$，于是
+    易得 $x=0,2$ 为 $f(x)$ 的无穷间断点, 故积分为反常积分, 且有 $$I=\int_{-1}^{0}+\int_{0}^{2}+\int_{2}^{3}$$
+    且 $\displaystyle\int\dfrac{f'(x)}{1+f^2(x)}\dd x=\arctan f(x)+C$, 于是
     \begin{flalign*}
         I=\arctan f(x)\biggl |_{-1}^{0^-}+\arctan f(x)\biggl |_{0^+}^{2^-}+\arctan f(x)\biggl |_{2^+}^{3}\arctan\dfrac{32}{27}-2\pi.
     \end{flalign*}
@@ -151,12 +151,12 @@
 \end{solution}
 
 \begin{theorem}
-    若 $a,b>0$，则
+    若 $a,b>0$, 则
     $$\int_{0}^{+\infty}f\left(ax+\frac{b}{x}\right)\dd x=\frac{1}{a}\int_{0}^{+\infty}f\left(\sqrt{t^2+4ab}\right)\dd t$$
     其中函数 $f(x)$ 的积分均有意义.
 \end{theorem}
 \begin{proof}[{\songti \textbf{证}}]
-    令 $\displaystyle ax-\frac{b}{x}=t$，那么 $\displaystyle x=\frac{1}{2a}\left(t+\sqrt{t^2+4ab}\right)$，$\displaystyle\dd x=\frac{t+\sqrt{t^2+4ab}}{2a\sqrt{t^2+4ab}}\dd t.$
+    令 $\displaystyle ax-\frac{b}{x}=t$, 那么 $\displaystyle x=\frac{1}{2a}\left(t+\sqrt{t^2+4ab}\right)$, $\displaystyle\dd x=\frac{t+\sqrt{t^2+4ab}}{2a\sqrt{t^2+4ab}}\dd t.$
     \begin{flalign*}
         I & =\int_{0}^{+\infty}f\left(ax+\frac{b}{x}\right)\dd x=\frac{1}{2a}\left(\int_{-\infty}^{0}+\int_{0}^{+\infty}\right)f\left(\sqrt{t^2+4ab}\right)\frac{t+\sqrt{t^2+4ab}}{\sqrt{t^2+4ab}}\dd t             \\
           & =\frac{1}{2a}\left[\int_{0}^{+\infty}f\left(\sqrt{u^2+4ab}\right)\frac{\sqrt{u^2+4ab}-u}{\sqrt{u^2+4ab}}\dd u+\int_{0}^{\infty}f\left(t^2+4ab\right)\frac{t+\sqrt{t^2+4ab}}{\sqrt{t^2+4ab}}\dd t\right] \\
@@ -164,7 +164,7 @@
     \end{flalign*}
 \end{proof}
 \begin{example}
-    已知 $\displaystyle\int_{0}^{+\infty}\e ^{-x^2}\dd x=\frac{\sqrt{\pi}}{2}$，
+    已知 $\displaystyle\int_{0}^{+\infty}\e ^{-x^2}\dd x=\frac{\sqrt{\pi}}{2}$, 
     试证 $\displaystyle\int_{0}^{+\infty}\e ^{-a^2x^2-\frac{b^2}{x^2}}\dd x=\frac{\sqrt{\pi}}{2a}\e ^{-2ab}.$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
@@ -184,10 +184,10 @@
 \end{solution}
 
 \begin{example}
-    设 $m,n$ 为自然数，求 $\displaystyle\int_{0}^{1}t^n\ln^mt\dd t.$
+    设 $m,n$ 为自然数, 求 $\displaystyle\int_{0}^{1}t^n\ln^mt\dd t.$
 \end{example}
 \begin{solution}
-    利用分部积分法获得递推公式，
+    利用分部积分法获得递推公式, 
     \begin{flalign*}
         I_m & =\int_{0}^{1}t^n\ln^mt\dd t=\frac{1}{n+1}\int_{0}^{1}\ln^mt\dd t^{n+1}
         =\frac{1}{n+1}\ln^mt\cdot t^{n+1}\bigg |_0^1-\frac{m}{n+1}\int_{0}^{1}t^n\ln^{m-1}t\dd t=-\frac{m}{n+1}I_{m-1} \\
@@ -201,10 +201,10 @@
     \index{Euler 积分}
 \end{theorem}
 \begin{proof}[{\songti \textbf{证}}]
-    被积函数 $ f(x)=\ln \sin x $ 在 $ x=0 $ 点的右邻域内无界，由 L'Hospital 法则求得 $ \displaystyle \lim _{x \rightarrow 0^{+}} \frac{\ln \sin x}{x^{-\frac{1}{2}}}=0$，
-    故由广义积分的比较判别法知广义积分 $ \displaystyle \int_{0}^{\frac{\pi}{2}} \ln \sin x \dd  x $ 收敛，
-    同理可证: 广义积分 $ \displaystyle \int_{0}^{\frac{\pi}{2}} \ln \cos x \dd  x $ 收敛，
-    令 $ x=\dfrac{\pi}{2}-t$，则
+    被积函数 $ f(x)=\ln \sin x $ 在 $ x=0 $ 点的右邻域内无界, 由 L'Hospital 法则求得 $ \displaystyle \lim _{x \rightarrow 0^{+}} \frac{\ln \sin x}{x^{-\frac{1}{2}}}=0$, 
+    故由广义积分的比较判别法知广义积分 $ \displaystyle \int_{0}^{\frac{\pi}{2}} \ln \sin x \dd  x $ 收敛, 
+    同理可证: 广义积分 $ \displaystyle \int_{0}^{\frac{\pi}{2}} \ln \cos x \dd  x $ 收敛, 
+    令 $ x=\dfrac{\pi}{2}-t$, 则
     $$\int_{0}^{\frac{\pi}{2}} \ln \sin x \dd  x=\int_{\frac{\pi}{2}}^{0} \ln \sin \left(\frac{\pi}{2}-t\right)(-\dd  t)=\int_{0}^{\frac{\pi}{2}} \ln \cos t \dd  t=\int_{0}^{\frac{\pi}{2}} \ln \cos x \dd  x$$
     \begin{flalign*}
         I & =\int_{0}^{\frac{\pi}{2}}\ln\sin x\dd x\xlongequal[]{x=2t}\int_{0}^{\frac{\pi}{4}}2\ln\sin 2t\dd t=2\ln2\cdot\frac{\pi}{4}+2\int_{0}^{\frac{\pi}{4}}\ln\sin t\dd t+2\int_{0}^{\frac{\pi}{4}}\ln\cos t\dd t \\
@@ -229,7 +229,7 @@
     计算积分 $\displaystyle I_n=\int_{1}^{+\infty}\frac{\dd x}{\displaystyle\prod\limits_{k=0}^{n}(x+k)}.$
 \end{example}
 \begin{solution}\scriptsize\linespread{0.8}
-    设 $$\frac{1}{\displaystyle\prod\limits_{k=0}^{n}(x+k)}=\sum_{k=0}^{n}\frac{A_k}{x+k}$$ 其中 $A_k$ 为待定系数. 将 $\displaystyle\prod_{k=0}^{n}(x+k)$ 同乘等式两边，然后令 $x\to-k$，得
+    设 $$\frac{1}{\displaystyle\prod\limits_{k=0}^{n}(x+k)}=\sum_{k=0}^{n}\frac{A_k}{x+k}$$ 其中 $A_k$ 为待定系数. 将 $\displaystyle\prod_{k=0}^{n}(x+k)$ 同乘等式两边, 然后令 $x\to-k$, 得
     \begin{flalign*}
         A_k=\frac{1}{(-k)(-k+1)\cdots(-1)\cdot1\cdot2\cdot\cdots\cdot(-k+n)}
         =(-1)^k\frac{1}{k!(n-k)!}=(-1)^k\frac{\mathrm{C}_n^k}{n!}
@@ -249,7 +249,7 @@
 \subsection{反常积分敛散性}
 
 % \begin{theorem}
-%     Abel 判别法: 若 $\displaystyle\int_a^{+\infty}f(x)\dd x$ 收敛，且 $x\nearrow +\infty$ 时，$g(x)$ 单调有界，则 $\displaystyle\int_a^{+\infty}f(x)g(x)\dd x$ 收敛.
+%     Abel 判别法: 若 $\displaystyle\int_a^{+\infty}f(x)\dd x$ 收敛, 且 $x\nearrow +\infty$ 时, $g(x)$ 单调有界, 则 $\displaystyle\int_a^{+\infty}f(x)g(x)\dd x$ 收敛.
 % \end{theorem}
 
 \subsubsection{积分的收敛域}
@@ -266,11 +266,11 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 当 $a\geqslant 0$ 时，$\displaystyle \int_{a}^{+\infty}\dfrac{\e ^{-ax}}{1+x^2}\dd x\leqslant \int_{a}^{+\infty}\dfrac{\dd x}{1+x^2}=\arctan x\biggl |_a^{+\infty}=\dfrac{\pi}{2}-\arctan a$，原积分收敛；
-              当 $a<0$ 时，原积分显然发散，于是，积分 $\displaystyle\int_{a}^{+\infty}\dfrac{\e ^{-ax}}{1+x^2}\dd x$ 的收敛域为 $a\geqslant 0$ 的一切 $a$ 值.
-        \item 若 $q=0$，则由于积分 $\displaystyle\int_{A}^{+\infty}\dfrac{\dd x}{x^p}$ 仅当 $p>1$ 时收敛，而积分 $\displaystyle\int_{0}^{A}\dfrac{\dd x}{x^p}$ 仅当 $p\leqslant1$ 时收敛，故积分
+        \item 当 $a\geqslant 0$ 时, $\displaystyle \int_{a}^{+\infty}\dfrac{\e ^{-ax}}{1+x^2}\dd x\leqslant \int_{a}^{+\infty}\dfrac{\dd x}{1+x^2}=\arctan x\biggl |_a^{+\infty}=\dfrac{\pi}{2}-\arctan a$, 原积分收敛；
+              当 $a<0$ 时, 原积分显然发散, 于是, 积分 $\displaystyle\int_{a}^{+\infty}\dfrac{\e ^{-ax}}{1+x^2}\dd x$ 的收敛域为 $a\geqslant 0$ 的一切 $a$ 值.
+        \item 若 $q=0$, 则由于积分 $\displaystyle\int_{A}^{+\infty}\dfrac{\dd x}{x^p}$ 仅当 $p>1$ 时收敛, 而积分 $\displaystyle\int_{0}^{A}\dfrac{\dd x}{x^p}$ 仅当 $p\leqslant1$ 时收敛, 故积分
               $\displaystyle\int_{0}^{+\infty}\dfrac{\sin 1}{x^p}\dd x$ 对于任何的 $p$ 值及 $q=0$ 发散；\\
-              若 $q\neq 0$，则积分 $\displaystyle\int_{0}^{+\infty}\dfrac{\sin x^q}{x^p}\dd x=\int_{0}^{+\infty}x^{-p}\sin x^q\dd x$
+              若 $q\neq 0$, 则积分 $\displaystyle\int_{0}^{+\infty}\dfrac{\sin x^q}{x^p}\dd x=\int_{0}^{+\infty}x^{-p}\sin x^q\dd x$
     \end{enumerate}
 \end{solution}
 
@@ -280,8 +280,8 @@
     判断广义积分 $\displaystyle\int_{1}^{+\infty}\dfrac{\qty(\e ^{\frac{1}{x}}-1)^\alpha}{\ln^\beta \qty(1+\dfrac{1}{x})}\dd x$ 收敛性.
 \end{example}
 \begin{solution}
-    当 $x\to+\infty $ 时，$\e ^{\frac{1}{x}}-1\sim \dfrac{1}{x},~\ln\qty(1+\dfrac{1}{x})$，所以 $\displaystyle \dfrac{\qty(\e ^{\frac{1}{x}}-1)^\alpha}{\ln^\beta \qty(1+\dfrac{1}{x})}\sim \dfrac{1}{x^{\alpha-\beta}}~  (x\to+\infty)$，
-    由此可知，当 $\alpha-\beta>1$ 时，原积分收敛，其余情况均发散.
+    当 $x\to+\infty $ 时, $\e ^{\frac{1}{x}}-1\sim \dfrac{1}{x},~\ln\qty(1+\dfrac{1}{x})$, 所以 $\displaystyle \dfrac{\qty(\e ^{\frac{1}{x}}-1)^\alpha}{\ln^\beta \qty(1+\dfrac{1}{x})}\sim \dfrac{1}{x^{\alpha-\beta}}~  (x\to+\infty)$, 
+    由此可知, 当 $\alpha-\beta>1$ 时, 原积分收敛, 其余情况均发散.
 \end{solution}
 
 \begin{example}
@@ -290,12 +290,12 @@
 \begin{solution}
     原积分的敛散性的判定等价于判定以下级数的连续性
     $$\int_{0}^{+\infty}\dfrac{x\dd x}{1+x^6\sin^2x}=\sum_{n=0}^{+\infty}\int_{n\pi}^{(n+1)\pi}\dfrac{x\dd x}{1+x^6\sin^2x}\xlongequal[]{x-n\pi=t}\sum_{n=0}^{+\infty}\int_{0}^{\pi}\dfrac{(t+n\pi)\dd t}{1+(t+n\pi)^6\sin^2t}$$
-    记 $\displaystyle a_n=\int_{0}^{\pi}\dfrac{(t+n\pi)\dd t}{1+(t+n\pi)^6\sin^2t}$ 则 $\displaystyle a_n\leqslant \int_{0}^{\pi}\dfrac{\pi(n+1)\dd t}{1+(n\pi)^6\sin^2t}=\pi(n+1)\int_{0}^{\pi}\dfrac{\dd t}{1+(n\pi)^6\sin^2t}$，其中
+    记 $\displaystyle a_n=\int_{0}^{\pi}\dfrac{(t+n\pi)\dd t}{1+(t+n\pi)^6\sin^2t}$ 则 $\displaystyle a_n\leqslant \int_{0}^{\pi}\dfrac{\pi(n+1)\dd t}{1+(n\pi)^6\sin^2t}=\pi(n+1)\int_{0}^{\pi}\dfrac{\dd t}{1+(n\pi)^6\sin^2t}$, 其中
     \begin{flalign*}
         \int_{0}^{\pi}\dfrac{\dd t}{1+(n\pi)^6\sin^2t} & =\int_{0}^{\pi}\dfrac{\csc^2t\dd t}{\csc^2t+(n\pi)^6}=-\int_{0}^{\pi}\dfrac{\dd \cot t}{1+(n\pi)^6+\cot^2t}                  \\
                                                        & =-\dfrac{1}{\sqrt{\pi^6n^6+1}}\arctan\qty(\dfrac{\cot t}{\sqrt{\pi^6n^6+1}})\bigg |_{0}^{\pi}=\dfrac{\pi}{\sqrt{\pi^6n^6+1}}
     \end{flalign*}
-    即 $a_n\leqslant\dfrac{\pi^2(n+1)}{\sqrt{\pi^6n^6+1}}$，由比较判别法的极限形式可知，它与 $\dfrac{1}{n^2}$ 构成的 $p=2$ 的 $p-$级数具有相同的敛散性，所以级数收敛，从而可得积分也收敛.
+    即 $a_n\leqslant\dfrac{\pi^2(n+1)}{\sqrt{\pi^6n^6+1}}$, 由比较判别法的极限形式可知, 它与 $\dfrac{1}{n^2}$ 构成的 $p=2$ 的 $p-$级数具有相同的敛散性, 所以级数收敛, 从而可得积分也收敛.
 \end{solution}
 
 \subsubsection{无穷限反常积分的敛散性与无穷远处的极限}
@@ -303,10 +303,10 @@
 \begin{example}
     设有下列命题
     \begin{enumerate}[label=(\arabic{*})]
-        \item 设 $ f(x) $ 在 $ (-\infty,+\infty) $ 内连续是奇函数，则 $\displaystyle  \int_{-\infty}^{+\infty} f(x) \dd x=0 $;
-        \item 设 $ f(x) $ 在 $ (-\infty,+\infty) $ 内连续，又 $\displaystyle \lim _{R \rightarrow+\infty} \int_{-R}^{R} f(x) \dd x $ 存在，则 $\displaystyle \int_{-\infty}^{+\infty} f(x) \dd x $ 收敛;
-        \item $\displaystyle \int_{a}^{+\infty} f(x) \dd x,~ \int_{a}^{+\infty} g(x) \dd x $ 均发散，则 $\displaystyle  \int_{a}^{+\infty}[f(x)+g(x)] \dd x $ 可能发散，也可能收敛;
-        \item 若 $ \displaystyle \int_{-\infty}^{0} f(x) \dd x $ 与 $\displaystyle  \int_{0}^{+\infty} f(x) \dd x $ 均发散，则不能确定 $\displaystyle \int_{-\infty}^{+\infty} f(x) \dd x $ 是否收敛.
+        \item 设 $ f(x) $ 在 $ (-\infty,+\infty) $ 内连续是奇函数, 则 $\displaystyle  \int_{-\infty}^{+\infty} f(x) \dd x=0 $;
+        \item 设 $ f(x) $ 在 $ (-\infty,+\infty) $ 内连续, 又 $\displaystyle \lim _{R \rightarrow+\infty} \int_{-R}^{R} f(x) \dd x $ 存在, 则 $\displaystyle \int_{-\infty}^{+\infty} f(x) \dd x $ 收敛;
+        \item $\displaystyle \int_{a}^{+\infty} f(x) \dd x,~ \int_{a}^{+\infty} g(x) \dd x $ 均发散, 则 $\displaystyle  \int_{a}^{+\infty}[f(x)+g(x)] \dd x $ 可能发散, 也可能收敛;
+        \item 若 $ \displaystyle \int_{-\infty}^{0} f(x) \dd x $ 与 $\displaystyle  \int_{0}^{+\infty} f(x) \dd x $ 均发散, 则不能确定 $\displaystyle \int_{-\infty}^{+\infty} f(x) \dd x $ 是否收敛.
     \end{enumerate}
     则以上命题中正确的个数是
     \begin{tasks}(4)
@@ -317,19 +317,19 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    命题 (1) 显然错误，不妨令 $f(x)=x$，则 $\displaystyle\int_{-\infty}^{+\infty}x\dd x$ 发散，一般地，若 $f(x)$ 在区间 $[-a,a]$ 上是奇函数，且 $\displaystyle\int_{-a}^{a}f(x)\dd x$ 收敛，则 $\displaystyle\int_{0}^{a}f(x)\dd x$ 收敛;
-    同样地，命题 (2) 显然错误，也令 $f(x)=x$，则 $\displaystyle\lim_{R\to+\infty}\int_{-R}^{R}x\dd x=0$，但 $\displaystyle\int_{-\infty}^{+\infty}x\dd x$ 发散;
-    命题 (3) 正确，对于不同名的函数的线性组合，其组合后的收敛性与各函数的收敛性无关; 命题 (4) 错误，对于相同的函数，若 $ \displaystyle \int_{-\infty}^{0} f(x) \dd x $ 与 $\displaystyle  \int_{0}^{+\infty} f(x) \dd x $ 均发散，
-    则 $\displaystyle \int_{-\infty}^{+\infty} f(x) \dd x $ 一定发散，综上，选 A.
+    命题 (1) 显然错误, 不妨令 $f(x)=x$, 则 $\displaystyle\int_{-\infty}^{+\infty}x\dd x$ 发散, 一般地, 若 $f(x)$ 在区间 $[-a,a]$ 上是奇函数, 且 $\displaystyle\int_{-a}^{a}f(x)\dd x$ 收敛, 则 $\displaystyle\int_{0}^{a}f(x)\dd x$ 收敛;
+    同样地, 命题 (2) 显然错误, 也令 $f(x)=x$, 则 $\displaystyle\lim_{R\to+\infty}\int_{-R}^{R}x\dd x=0$, 但 $\displaystyle\int_{-\infty}^{+\infty}x\dd x$ 发散;
+    命题 (3) 正确, 对于不同名的函数的线性组合, 其组合后的收敛性与各函数的收敛性无关; 命题 (4) 错误, 对于相同的函数, 若 $ \displaystyle \int_{-\infty}^{0} f(x) \dd x $ 与 $\displaystyle  \int_{0}^{+\infty} f(x) \dd x $ 均发散, 
+    则 $\displaystyle \int_{-\infty}^{+\infty} f(x) \dd x $ 一定发散, 综上, 选 A.
 \end{solution}
 
 \subsection{反常积分的极限}
 
 \begin{example}
-    设 $\displaystyle \varphi (x)=\int_{0}^{x}\cos\dfrac{1}{t}\dd t$，求 $\varphi'(0).$
+    设 $\displaystyle \varphi (x)=\int_{0}^{x}\cos\dfrac{1}{t}\dd t$, 求 $\varphi'(0).$
 \end{example}
 \begin{solution}
-    因为 $\displaystyle \varphi'(0)=\lim_{x\to0}\dfrac{\varphi(x)-\varphi(0)}{x}=\lim_{x\to0}\dfrac{\displaystyle\int_{0}^{x}\cos\dfrac{1}{t}\dd t}{x}$，但不能用 L'Hospital 法则，故
+    因为 $\displaystyle \varphi'(0)=\lim_{x\to0}\dfrac{\varphi(x)-\varphi(0)}{x}=\lim_{x\to0}\dfrac{\displaystyle\int_{0}^{x}\cos\dfrac{1}{t}\dd t}{x}$, 但不能用 L'Hospital 法则, 故
     \begin{flalign*}
         \int_{0}^{x}\cos\dfrac{1}{t}\dd t  \xlongequal[]{\frac{1}{t}=u}\int_{\frac{1}{x}}^{+\infty}\dfrac{\cos u}{u^2}\dd u=\int_{\frac{1}{x}}^{+\infty}\dfrac{1}{u^2}\dd \sin u=\dfrac{\sin u}{u^2}\biggl |_{\frac{1}{x}}^{+\infty}+\int_{\frac{1}{x}}^{+\infty}\dfrac{2\sin u}{u^3}\dd u
         =-x^2\sin\dfrac{1}{x}+\int_{\frac{1}{x}}^{+\infty}\dfrac{2\sin u}{u^3}\dd u
@@ -344,12 +344,12 @@
 % \subsection{反常积分作为“积分和”的极限}
 
 \begin{example}
-    设 $0<a<d,~\displaystyle A_n=\dfrac{1}{n}\sum_{k=0}^{n-1}(a+kd)$，$\displaystyle G_n=\sqrt[n]{\prod\limits_{k=0}^{n-1}(a+kd)}$，
+    设 $0<a<d,~\displaystyle A_n=\dfrac{1}{n}\sum_{k=0}^{n-1}(a+kd)$, $\displaystyle G_n=\sqrt[n]{\prod\limits_{k=0}^{n-1}(a+kd)}$, 
     试证 $\displaystyle\lim_{n\to\infty}\dfrac{G_n}{A_n}=\dfrac{2}{\e }$.
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
     由于 $\displaystyle\dfrac{G_n}{A_n}=\dfrac{\sqrt[n]{\displaystyle\prod_{k=0}^{n-1}(a+kd)}}{\displaystyle\dfrac{1}{n}\sum_{k=0}^{n-1}(a+kd)}=\dfrac{\sqrt[n]{\displaystyle\prod_{k=0}^{n-1}(a+kd)}}{a+\dfrac{1}{2}(n-1)d}
-        \xlongequal[]{c=\frac{a}{d}}\dfrac{\sqrt[n]{\displaystyle\prod_{k=0}^{n-1}\dfrac{c+k}{n}}}{\dfrac{c}{n}+\dfrac{n-1}{2n}}$，
+        \xlongequal[]{c=\frac{a}{d}}\dfrac{\sqrt[n]{\displaystyle\prod_{k=0}^{n-1}\dfrac{c+k}{n}}}{\dfrac{c}{n}+\dfrac{n-1}{2n}}$, 
     \begin{flalign*}
         \lim_{n\to\infty}\dfrac{1}{n}\sum_{k=0}^{n-1}\ln\dfrac{c+k}{n}=\int_{0}^{1}\ln x\dd x=-1~  \lim_{n\to\infty}\qty(\dfrac{c}{n}+\dfrac{n-1}{n})=\dfrac{1}{2}
     \end{flalign*}
@@ -357,9 +357,9 @@
 \end{proof}
 
 \begin{theorem}[Frullani 积分定理]
-    形如 $\displaystyle\int_{0}^{+\infty}\dfrac{f(ax)-f(bx)}{x}\dd x~ (a>0,b>0)$，其中 $f(x)$ 在 $(0,+\infty)$ 内连续，且 $f(0^+),f(+\infty)\in\mathbb{R} $，则有
+    形如 $\displaystyle\int_{0}^{+\infty}\dfrac{f(ax)-f(bx)}{x}\dd x~ (a>0,b>0)$, 其中 $f(x)$ 在 $(0,+\infty)$ 内连续, 且 $f(0^+),f(+\infty)\in\mathbb{R} $, 则有
     $$\int_{0}^{+\infty}\dfrac{f(ax)-f(bx)}{x}\dd x=(f(+\infty)-f(0^+))\ln\dfrac{a}{b}.$$
-    若 $\displaystyle\lim_{x\to+\infty}f(x)$ 不存在，但积分 $\displaystyle\int_{0}^{+\infty}\dfrac{f(x)}{x}\dd x$ 存在，则
+    若 $\displaystyle\lim_{x\to+\infty}f(x)$ 不存在, 但积分 $\displaystyle\int_{0}^{+\infty}\dfrac{f(x)}{x}\dd x$ 存在, 则
     $$\int_{0}^{+\infty}\dfrac{f(ax)-f(bx)}{x}\dd x=-f(0)\ln\dfrac{a}{b}.$$
     \index{Frullani 积分定理}
 \end{theorem}
@@ -377,15 +377,15 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 取 $f(x)=\arctan x$，则 $f(+\infty)=\dfrac{\pi}{2},~f(0^+)=0$，故原积分 $=\dfrac{\pi}{2}\ln\dfrac{a}{b}.$
-        \item 令 $\ln x=-t$，原式化为 $\displaystyle\int_{0}^{+\infty}\dfrac{\e ^{-bt}-\e ^{-at}}{t}\dd t=\ln\dfrac{a}{b}.$
-        \item 当 $a=b$ 时，积分化为 $$\int_{0}^{+\infty}\dfrac{\cos ax-\cos ^2ax}{x}\dd x=\int_{0}^{1}\dfrac{\cos ax-\cos ^2ax}{x}\dd x+\int_{1}^{+\infty}\dfrac{\cos ax-\cos ^2ax}{x}\dd x$$
-              由于 $\displaystyle\lim_{x\to0}\dfrac{\cos ax-\cos ^2ax}{x}=\lim_{x\to0}\dfrac{1-\cos ax}{x}\xlongequal[]{\text{L'}}\lim_{x\to0}a\sin ax=0$，故 $\displaystyle\int_{0}^{1}\dfrac{\cos ax-\cos ^2ax}{x}\dd x$ 为正常积分，而
+        \item 取 $f(x)=\arctan x$, 则 $f(+\infty)=\dfrac{\pi}{2},~f(0^+)=0$, 故原积分 $=\dfrac{\pi}{2}\ln\dfrac{a}{b}.$
+        \item 令 $\ln x=-t$, 原式化为 $\displaystyle\int_{0}^{+\infty}\dfrac{\e ^{-bt}-\e ^{-at}}{t}\dd t=\ln\dfrac{a}{b}.$
+        \item 当 $a=b$ 时, 积分化为 $$\int_{0}^{+\infty}\dfrac{\cos ax-\cos ^2ax}{x}\dd x=\int_{0}^{1}\dfrac{\cos ax-\cos ^2ax}{x}\dd x+\int_{1}^{+\infty}\dfrac{\cos ax-\cos ^2ax}{x}\dd x$$
+              由于 $\displaystyle\lim_{x\to0}\dfrac{\cos ax-\cos ^2ax}{x}=\lim_{x\to0}\dfrac{1-\cos ax}{x}\xlongequal[]{\text{L'}}\lim_{x\to0}a\sin ax=0$, 故 $\displaystyle\int_{0}^{1}\dfrac{\cos ax-\cos ^2ax}{x}\dd x$ 为正常积分, 而
               $$\int_{1}^{+\infty}\dfrac{\cos ax-\cos ^2ax}{x}\dd x=\int_{1}^{+\infty}\dfrac{\cos ax}{x}\dd x-\int_{1}^{+\infty}\dfrac{\cos ^2ax}{x}\dd x$$
-              由 Dirichlet 判别法，$\displaystyle\int_{1}^{+\infty}\dfrac{\cos ax}{x}\dd x$ 收敛，又
+              由 Dirichlet 判别法, $\displaystyle\int_{1}^{+\infty}\dfrac{\cos ax}{x}\dd x$ 收敛, 又
               $$\int_{1}^{+\infty}\dfrac{\cos ^2ax}{x}\dd x=\int_{1}^{+\infty}\dfrac{\dfrac{1+\cos 2x}{2}}{x}\dd x=\int_{1}^{+\infty}\dfrac{\dd x}{2x}+\int_{1}^{+\infty}\dfrac{\cos 2ax}{2x}\dd x$$
-              由 Dirichlet 判别法知 $\displaystyle\int_{1}^{+\infty}\dfrac{\cos 2ax}{2x}\dd x$ 收敛，但 $\displaystyle\int_{1}^{+\infty}\dfrac{\dd x}{2x}$ 发散，从而当 $a=b$ 时，原积分发散;\\
-              当 $a>b$ 时，
+              由 Dirichlet 判别法知 $\displaystyle\int_{1}^{+\infty}\dfrac{\cos 2ax}{2x}\dd x$ 收敛, 但 $\displaystyle\int_{1}^{+\infty}\dfrac{\dd x}{2x}$ 发散, 从而当 $a=b$ 时, 原积分发散;\\
+              当 $a>b$ 时, 
               \begin{flalign*}
                   I & =\int_{0}^{+\infty}\dfrac{1-\cos ax}{x}\cos bx\dd x=\int_{0}^{+\infty}\dfrac{2\sin^2\dfrac{a}{2}x}{x}\cos bx\dd x
                   =\int_{0}^{+\infty}\dfrac{\sin\dfrac{a}{2}x\qty(2\sin\dfrac{a}{2}x\cos bx)}{x}\dd x                                              \\
@@ -393,12 +393,12 @@
                     & =\int_{0}^{+\infty}\dfrac{\dfrac{1}{2}[\cos(-b)x-\cos(a+b)x]+\dfrac{1}{2}[\cos bx-\cos(a-b)x]}{x}\dd x                       \\
                     & =\dfrac{1}{2}\int_{0}^{+\infty}\dfrac{\cos bx-\cos(a+b)}{x}+\dfrac{1}{2}\int_{0}^{+\infty}\dfrac{\cos bx-\cos(a-b)x}{x}\dd x
               \end{flalign*}
-              取 $f(x)=\cos x$，则 $\displaystyle f(0^+)=1,~\lim_{x\to+\infty}\cos x$ 不存在，但 $\displaystyle\int_{0}^{+\infty}\dfrac{f(x)}{x}\dd x=\int_{0}^{+\infty}\dfrac{\cos x}{x}\dd x$ 存在，于是
+              取 $f(x)=\cos x$, 则 $\displaystyle f(0^+)=1,~\lim_{x\to+\infty}\cos x$ 不存在, 但 $\displaystyle\int_{0}^{+\infty}\dfrac{f(x)}{x}\dd x=\int_{0}^{+\infty}\dfrac{\cos x}{x}\dd x$ 存在, 于是
               \begin{flalign*}
                   \int_{0}^{+\infty}\dfrac{1-\cos ax}{x}\cos bx\dd x=\dfrac{1}{2}\ln\dfrac{a+b}{b}+\dfrac{1}{2}\ln\dfrac{a-b}{b}=\dfrac{1}{2}\ln\dfrac{a^2-b^2}{b^2}=\ln\dfrac{\sqrt{a^2-b^2}}{b}
               \end{flalign*}
-              若 $a<b$，$\displaystyle\int_{0}^{+\infty}\dfrac{1-\cos ax}{x}\cos bx\dd x=\ln\dfrac{\sqrt{b^2-a^2}}{b}$，总之，当 $a\neq b$ 时，原积分 $=\ln\dfrac{\sqrt{|a^2-b^2|}}{b}.$
-        \item 先将 $\displaystyle \dfrac{1}{x^2}\qty(\dfrac{x}{\e ^x-\e ^{-x}}-\dfrac{1}{2})$ 展开，
+              若 $a<b$, $\displaystyle\int_{0}^{+\infty}\dfrac{1-\cos ax}{x}\cos bx\dd x=\ln\dfrac{\sqrt{b^2-a^2}}{b}$, 总之, 当 $a\neq b$ 时, 原积分 $=\ln\dfrac{\sqrt{|a^2-b^2|}}{b}.$
+        \item 先将 $\displaystyle \dfrac{1}{x^2}\qty(\dfrac{x}{\e ^x-\e ^{-x}}-\dfrac{1}{2})$ 展开, 
               \begin{flalign*}
                   I & =\dfrac{1}{x^2}\qty(\dfrac{x}{\e ^x-\e ^{-x}}-\dfrac{1}{2})=\dfrac{1}{x^2}\qty(\dfrac{x\e ^x}{\e ^{2x}-1}-\dfrac{1}{2})=\dfrac{1}{x^2}\qty[\dfrac{x(\e ^x+1)}{\e ^{2x}-1}-\dfrac{x}{\e ^{2x}-1}-\dfrac{1}{2}] \\
                     & =\dfrac{1}{x^2}\qty(\dfrac{x}{\e ^x-1}-\dfrac{x}{\e ^{2x}-1}-\dfrac{1}{2}) =\dfrac{1}{2x}\qty(\dfrac{2}{\e ^x-1}-\dfrac{2}{\e ^{2x}-1}-\dfrac{1}{x})                                                                               \\
@@ -410,7 +410,7 @@
                   \int_{0}^{+\infty}\qty(\dfrac{x}{\e ^x}-\e ^{-x}-\dfrac{1}{2})\dfrac{\dd x}{x^2}= & \int_{0}^{+\infty}-\dfrac{1}{2x}\qty(\e ^{-x}-\e ^{-2x})\dd x+\int_{0}^{+\infty}\dfrac{1}{x}\qty(\dfrac{1}{\e ^x-1}-\dfrac{1}{x}+\dfrac{\e ^{-x}}{2})\dd x \\
                                                                                                                   & -\int_{0}^{+\infty}\dfrac{1}{x}\qty(\dfrac{1}{\e ^{2x}-1}-\dfrac{1}{2x}+\dfrac{\e ^{-2x}}{2})
               \end{flalign*}
-              在上式右端第二个积分中令 $x=2t$，于是
+              在上式右端第二个积分中令 $x=2t$, 于是
               $$\int_{0}^{+\infty}\dfrac{1}{x}\qty(\dfrac{1}{\e ^x-1}-\dfrac{1}{x}+\dfrac{\e ^{-x}}{2})\dd x=\int_{0}^{+\infty}\dfrac{1}{t}\qty(\dfrac{1}{\e ^{2t}-1}-\dfrac{1}{2t}+\dfrac{\e ^{-2t}}{2})\dd t$$
               因此 $$\int_{0}^{+\infty}\qty(\dfrac{x}{\e ^x-\e ^{-x}}-\dfrac{1}{2})\dfrac{\dd x}{x^2}=-\dfrac{1}{2}\int_{0}^{+\infty}\dfrac{\e ^{-x}-\e ^{-2x}}{x}\dd x=-\dfrac{1}{2}\ln 2.$$
     \end{enumerate}
@@ -422,13 +422,13 @@
     求曲线 $y=2\e ^{-x}\sin x~ (x\geqslant 0)$ 与 $x$ 轴围成的无界图形的面积 $S$.
 \end{example}
 \begin{solution}
-    由积分的几何意义，得
+    由积分的几何意义, 得
     \begin{flalign*}
         S=\lim_{A\to+\infty}\int_{0}^{A}\qty|2\e ^{-x}\sin x|\dd x=\int_{0}^{+\infty}\qty|2\e ^{-x}\sin x|\dd x=2\sum_{n=0}^{\infty}(-1)^n\int_{n\pi}^{(n+1)\pi}\e ^{-x}\sin x\dd x
     \end{flalign*}
-    由于 $\displaystyle\int\e ^{-x}\sin x\dd x=-\dfrac{1}{2}\e ^{-x}(\sin x+\cos x)+C$，所以
+    由于 $\displaystyle\int\e ^{-x}\sin x\dd x=-\dfrac{1}{2}\e ^{-x}(\sin x+\cos x)+C$, 所以
     $$\int_{n\pi}^{(n+1)\pi}\e ^{-x}\sin x\dd x=-\dfrac{1}{2}\e ^{-x}(\sin x+\cos x)\biggl |_{n\pi}^{(n+1)\pi}=-\dfrac{1}{2}\qty[\e ^{-(n+1)\pi}(-1)^{n+1}-\e ^{-n\pi}(-1)^n]$$
-    代入以上面积计算的积分结果，得
+    代入以上面积计算的积分结果, 得
     \begin{flalign*}
         S & =2\sum_{n=0}^{\infty}(-1)^n\int_{n\pi}^{(n+1)\pi}\e ^{-x}\sin x\dd x=2\sum_{n=0}^{\infty}(-1)^{n+1}\qty[\e ^{-(n+1)\pi}(-1)^{n+1}-\e ^{-n\pi}(-1)^n]     \\
           & =\sum_{n=0}^{\infty}\e ^{-(n+1)\pi}+\sum_{n=0}^{\infty}\e ^{-n\pi}=\dfrac{\e ^{-\pi}+1}{1-\e ^{-\pi}}=\dfrac{\e ^\pi+1}{\e ^\pi-1}.
@@ -439,23 +439,23 @@
     计算 $I=\displaystyle\lim_{x\to+\infty}x\int_{x}^{+\infty}\dfrac{|\sin t|}{t^2}\dd t$.
 \end{example}
 \begin{solution}\scriptsize\linespread{0.8}
-    \textbf{法一: }设 $f(x)=\displaystyle\int_{x}^{+\infty}\dfrac{|\sin t|}{t^2}\dd t,g(x)=\dfrac{1}{x}$，于是由函数型 Stolz 定理以及第一积分中值定理，可知
+    \textbf{法一: }设 $f(x)=\displaystyle\int_{x}^{+\infty}\dfrac{|\sin t|}{t^2}\dd t,g(x)=\dfrac{1}{x}$, 于是由函数型 Stolz 定理以及第一积分中值定理, 可知
     \begin{flalign*}
         I & =\lim_{x\to+\infty}\dfrac{f(x)}{g(x)}\xlongequal[]{\text{Stolz}}\lim_{x\to+\infty}\dfrac{f(x+\pi)-f(x)}{g(x+\pi)-g(x)}=\lim_{x\to+\infty}\dfrac{1}{\dfrac{1}{x+\pi}-\dfrac{1}{x}}\qty(\int_{x+\pi}^{+\infty}\dfrac{|\sin t|}{t^2}\dd t-\int_{x}^{+\infty}\dfrac{|\sin t|}{t^2}\dd t) \\
           & =\dfrac{1}{\pi}\lim_{x\to+\infty}(x+\pi)x\int_{x}^{x+\pi}\dfrac{|\sin t|}{t^2}\dd t=\dfrac{1}{\pi}\lim_{x\to+\infty}(x+\pi)x\dfrac{1}{\xi^2}\int_{}^{\pi}|\sin t|\dd t=\dfrac{2}{\pi}\lim_{x\to+\infty}\dfrac{x(x+\pi)}{\xi^2}
     \end{flalign*}
-    因为 $\xi\in(x,x+\pi)$，故 $\dfrac{x(x+\pi)}{(x+\pi)^2}<\dfrac{x(x+\pi)}{\xi^2}<\dfrac{x(x+\pi)}{x^2}$，故由夹逼准则得原极限等于 $\dfrac{2}{\pi}.$\\
-    \textbf{法二: }由题意可知，
+    因为 $\xi\in(x,x+\pi)$, 故 $\dfrac{x(x+\pi)}{(x+\pi)^2}<\dfrac{x(x+\pi)}{\xi^2}<\dfrac{x(x+\pi)}{x^2}$, 故由夹逼准则得原极限等于 $\dfrac{2}{\pi}.$\\
+    \textbf{法二: }由题意可知, 
     $$\int_{x}^{x+\pi}\dfrac{|\sin t|}{t^2}\dd t=\sum_{n=0}^{\infty}\int_{x+n\pi}^{x+(n+1)\pi}\dfrac{|\sin t|}{t^2}\dd t$$
-    由第一积分中值定理可知，$\exists\xi_n\in(x+n\pi,x+(n+1)\pi)$，使得
+    由第一积分中值定理可知, $\exists\xi_n\in(x+n\pi,x+(n+1)\pi)$, 使得
     $$\int_{x+n\pi}^{x+(n+1)\pi}\dfrac{|\sin t|}{t^2}\dd t=\dfrac{1}{\xi_n^2}\int_{x+n\pi}^{x+(n+1)\pi}|\sin t|\dd t=\dfrac{1}{\xi_n^2}\int_{0}^{\pi}|\sin t|\dd t=\dfrac{2}{\xi_n^2}$$
     即 $$\sum_{n=0}^{\infty}\dfrac{2}{\qty[x+(n+1)\pi]^2}<\dfrac{2}{\xi_n^2}<\sum_{n=0}^{\infty}\dfrac{2}{(x+n\pi)^2}$$
-    一方面，
+    一方面, 
     \begin{flalign*}
         \sum_{n=0}^{\infty}\dfrac{2}{(x+n\pi)^2}  <\sum_{n=0}^{\infty}\dfrac{2}{(x+n\pi)(x+n\pi-\pi)}=\dfrac{2}{\pi}\sum_{n=0}^{\infty}\qty(\dfrac{1}{x+n\pi-\pi}-\dfrac{1}{x+n\pi})
         =\dfrac{2}{\pi}\qty(\dfrac{1}{x-\pi}-\dfrac{1}{x+n\pi})<\dfrac{2}{\pi}\dfrac{1}{x-\pi}
     \end{flalign*}
-    另一方面，
+    另一方面, 
     \begin{flalign*}
         \sum_{n=0}^{\infty}\dfrac{2}{\qty[x+(n+1)\pi]^2}  >\sum_{n=0}^{\infty}\dfrac{2}{\qty[x+(n+1)\pi][x+(n+2)\pi]}>\dfrac{2}{\pi}\sum_{n=0}^{\infty}\qty[\dfrac{1}{x+(n+1)\pi}-\dfrac{1}{x+(n+2)\pi}]
         =\dfrac{2}{\pi}\qty[\dfrac{1}{x+\pi}-\dfrac{1}{x+(n+2)\pi}]

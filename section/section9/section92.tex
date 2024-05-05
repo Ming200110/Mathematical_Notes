@@ -15,7 +15,7 @@
         =\prod_{1\leqslant j<i\leqslant n}(x_i-x_j).$$
 \end{theorem}
 % \begin{proof}[{\songti \textbf{证法一}}]
-%     将行列式第 $2$ 列至第 $n$ 列都减去第 $1$ 列，然后再将其按第 $1$ 行展开，
+%     将行列式第 $2$ 列至第 $n$ 列都减去第 $1$ 列, 然后再将其按第 $1$ 行展开, 
 %     \begin{flalign*}
 %         D_n & \xlongequal[j=2,\cdots,n]{c_j-c_1}
 %         \begin{vmatrix}
@@ -63,8 +63,8 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 将 $D_{n+1}$ 的第 $n+1$ 行依次与第 $n,n-1,\cdots,1$ 行互换，再将新的行列式的第 $n+1$ 行依次与第 $n,n-1,\dots,2$ 行互换，
-              如此下去，总共经过 $n+(n+1)+\cdots+2+1=\dfrac{n(n+1)}{2}$ 次行与行的互换，最后得 Vandermonde 行列式
+        \item 将 $D_{n+1}$ 的第 $n+1$ 行依次与第 $n,n-1,\cdots,1$ 行互换, 再将新的行列式的第 $n+1$ 行依次与第 $n,n-1,\dots,2$ 行互换, 
+              如此下去, 总共经过 $n+(n+1)+\cdots+2+1=\dfrac{n(n+1)}{2}$ 次行与行的互换, 最后得 Vandermonde 行列式
               \begin{flalign*}
                   D_{n+1} & =(-1)^{\frac{n(n+1)}{2}}
                   \begin{vmatrix}
@@ -77,7 +77,7 @@
                   =(-1)^{\frac{n(n+1)}{2}}\prod_{0\leqslant j<i\leqslant n}[(a-i)-(a-j)] \\
                           & =\prod_{0\leqslant j<i\leqslant n}(i-j)=\prod_{k=1}^{n}k!.
               \end{flalign*}
-        \item 利用升阶法，将 $D$ 添上一行一列，然后将第一行的 $i$ 倍加到后面各行，再将第 $j$ 列与后面的 $n-j$ 列逐次交换，$j=2,3,\cdots,n-1$，化为 Vandermonde 行列式，
+        \item 利用升阶法, 将 $D$ 添上一行一列, 然后将第一行的 $i$ 倍加到后面各行, 再将第 $j$ 列与后面的 $n-j$ 列逐次交换, $j=2,3,\cdots,n-1$, 化为 Vandermonde 行列式, 
               \begin{flalign*}
                   D & =
                   \begin{vNiceArray}{c:ccccc}
@@ -137,11 +137,11 @@
                   \end{vmatrix}.$
         \end{tabular}
     \end{table}
-    其中 $\displaystyle S=\sum_{i=1}^{n}a_i$，且 $a_i\neq0.$
+    其中 $\displaystyle S=\sum_{i=1}^{n}a_i$, 且 $a_i\neq0.$
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 先拆项，再利用 Vandermonde 行列式计算，
+        \item 先拆项, 再利用 Vandermonde 行列式计算, 
               \begin{flalign*}
                   D_n & =
                   \begin{vmatrix}
@@ -174,7 +174,7 @@
                   \end{vmatrix}                                                            \\
                       & =\left[1+(-1)^{n-1}\dfrac{S}{\displaystyle \prod_{i=1}^na_i}\right]\prod_{1\leqslant j<i\leqslant n}(x_i-x_j).
               \end{flalign*}
-        \item 先拆项，再利用 Vandermonde 行列式计算，
+        \item 先拆项, 再利用 Vandermonde 行列式计算, 
               \begin{flalign*}
                   D & =
                   \begin{vmatrix}
@@ -227,7 +227,7 @@
         \end{vmatrix}.$$
 \end{example}
 \begin{solution}
-    在 $D$ 中增加一行一列，凑成 $n+1$ 阶 Vandermonde 行列式:
+    在 $D$ 中增加一行一列, 凑成 $n+1$ 阶 Vandermonde 行列式:
     $$D_{n+1}=\begin{vmatrix}
             \begin{array}{cccc|c|}
                 1         & 1         & \cdots & 1         & 1       \\
@@ -239,33 +239,33 @@
                 x_1^n     & x_2^n     & \cdots & x_n^n     & y^n
             \end{array}
         \end{vmatrix}=\prod_{k=1}^{n}(y-x_k)\prod_{1\leqslant j<i\leqslant n}(x_i-x_j)$$
-        这是关于变量 $y$ 的恒等式，一方面，将上式左边 $D_{n+1}$ 按第 $D_{n+1}$ 列展开，得 $y$ 的 $n$ 次多项式:
+        这是关于变量 $y$ 的恒等式, 一方面, 将上式左边 $D_{n+1}$ 按第 $D_{n+1}$ 列展开, 得 $y$ 的 $n$ 次多项式:
         $$D_{n+1}=A_{1,n+1}+yA_{2,n+1}+\cdots+y^{n-1}A_{n,n+1}+y^nA_{n+1,n+1}$$
-        其中 $A_{k,n+1}$ 是 $D_{n+1}$ 的 $(k,n+1)$ 元的代数余子式 $(1\leqslant k\leqslant n+1)$，且 $y^{n-1}$ 的系数为
+        其中 $A_{k,n+1}$ 是 $D_{n+1}$ 的 $(k,n+1)$ 元的代数余子式 $(1\leqslant k\leqslant n+1)$, 且 $y^{n-1}$ 的系数为
         $$A_{n,n+1}=(-1)^{n+n+1}D=-D$$
-        另一方面，对于 $D_{n+1}$ 的右边，因为 $$\prod_{k=1}^{n}(y-x_k)=y^n-\sum_{k=1}^{n}x_ky^{n-1}+\cdots+(-1)^n\prod_{k=1}^{n}x_k$$
-        所以，$y^{n-1}$ 的系数为 $\displaystyle-\sum_{k=1}^{n}x_k\prod_{1\leqslant j<i\leqslant n}(x_i-x_j)$，因此，有
+        另一方面, 对于 $D_{n+1}$ 的右边, 因为 $$\prod_{k=1}^{n}(y-x_k)=y^n-\sum_{k=1}^{n}x_ky^{n-1}+\cdots+(-1)^n\prod_{k=1}^{n}x_k$$
+        所以, $y^{n-1}$ 的系数为 $\displaystyle-\sum_{k=1}^{n}x_k\prod_{1\leqslant j<i\leqslant n}(x_i-x_j)$, 因此, 有
         $$D=\sum_{k=1}^{n}x_k\prod_{1\leqslant j<i\leqslant n}(x_i-x_j).$$
 \end{solution}
 
 \subsection{代数余子式问题}
 
 \begin{definition}
-    在 $ n $ 阶行列式 $ D=\left|a_{i j}\right| $ 中，去掉元素 $ a_{i j} $ 所在的第 $ i $ 行和第 $ j $ 列后，余下的 $ n-1 $ 阶行列式，称为 $ a_{i j} $ 的余子式，记为 $ M_{i j} .$
+    在 $ n $ 阶行列式 $ D=\left|a_{i j}\right| $ 中, 去掉元素 $ a_{i j} $ 所在的第 $ i $ 行和第 $ j $ 列后, 余下的 $ n-1 $ 阶行列式, 称为 $ a_{i j} $ 的余子式, 记为 $ M_{i j} .$
 \end{definition}
 \begin{definition}
     称 $ A_{i j}=(-1)^{i+j} M_{i j} $ 为 $ a_{i j} $ 的代数余子式.
 \end{definition}
 \begin{definition}
-    在 $ n $ 阶行列式 $ D=\left|a_{i j}\right| $ 中，任意选定 $ k $ 行 $ k $ 列 $ (1 \leqslant k \leqslant n) $，
-    位于这些行列交叉处的 $ k^{2} $ 个元素，按原来顺序构成一个 $ k $ 阶行列式，称为 $ D $ 的一个 $ k $ 阶子式.
+    在 $ n $ 阶行列式 $ D=\left|a_{i j}\right| $ 中, 任意选定 $ k $ 行 $ k $ 列 $ (1 \leqslant k \leqslant n) $, 
+    位于这些行列交叉处的 $ k^{2} $ 个元素, 按原来顺序构成一个 $ k $ 阶行列式, 称为 $ D $ 的一个 $ k $ 阶子式.
 \end{definition}
 \begin{theorem}
-    行列式等于它的任一行 (列) 的各元素与其对应的代数余子式乘积之和，即按第 $ i $ 行展开，$D=a_{i 1} A_{i 1}+a_{i 2} A_{i 2}+\cdots+a_{i n} A_{i n}(i=1,2, \cdots, n) $;
-    按第 $ j $ 列展开，$D=a_{1 j} A_{1 j}+a_{2 j} A_{2 j}+\cdots+a_{n j} A_{n j}(j=1,2, \cdots, n) .$
+    行列式等于它的任一行 (列) 的各元素与其对应的代数余子式乘积之和, 即按第 $ i $ 行展开, $D=a_{i 1} A_{i 1}+a_{i 2} A_{i 2}+\cdots+a_{i n} A_{i n}(i=1,2, \cdots, n) $;
+    按第 $ j $ 列展开, $D=a_{1 j} A_{1 j}+a_{2 j} A_{2 j}+\cdots+a_{n j} A_{n j}(j=1,2, \cdots, n) .$
 \end{theorem}
 \begin{theorem}
-    行列式某一行 (列) 的元素与另一行 (列) 的对应元素的代数余子式乘积之和等于零，即
+    行列式某一行 (列) 的元素与另一行 (列) 的对应元素的代数余子式乘积之和等于零, 即
     $$a_{i 1} A_{j 1}+a_{i 2} A_{j 2}+\cdots+a_{i n} A_{j n}=0, i \neq j$$
     或
     $$a_{1 i} A_{1 j}+a_{2 i} A_{2 j}+\cdots+a_{n i} A_{n j}=0, i \neq j .$$
@@ -278,7 +278,7 @@
             3  & 0 & 5 & -9 \\
             a  & b & c & d
         \end{pmatrix}$$
-    而 $A_{ij}$ 是 $\boldsymbol{A}$ 的 $(i,j)$ 元的代数余子式 $(i,j=1,2,3,4)$，试计算
+    而 $A_{ij}$ 是 $\boldsymbol{A}$ 的 $(i,j)$ 元的代数余子式 $(i,j=1,2,3,4)$, 试计算
     \begin{enumerate}[label=(\arabic{*})]
         \item $2A_{14}-2A_{24}+3A_{34}-3A_{44}$;
         \item $A_{41}+A_{42}+A_{43}+A_{44}.$
@@ -286,20 +286,20 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 由于 $a_{11}A_{14}+a_{21}A_{24}+a_{31}A_{34}+a_{41}A_{44}=0$，所以
+        \item 由于 $a_{11}A_{14}+a_{21}A_{24}+a_{31}A_{34}+a_{41}A_{44}=0$, 所以
               $$2A_{14}-2A_{24}+3A_{34}+a_{44}=0\Rightarrow 2A_{14}-2A_{24}+3A_{34}-3A_{44}=-(a+3)A_{44}$$
               且 $\displaystyle A_{44}=(-1)^{4+4}\begin{vmatrix}
                       2  & 0 & 1 \\
                       -2 & 1 & 4 \\
                       3  & 0 & 5
-                  \end{vmatrix}=7$，所以 $2A_{14}-2A_{24}+3A_{34}-3A_{44}=-7(a+3)$.
+                  \end{vmatrix}=7$, 所以 $2A_{14}-2A_{24}+3A_{34}-3A_{44}=-7(a+3)$.
         \item 构造一个新矩阵 $$\boldsymbol{B}=\begin{pmatrix}
                       2  & 0 & 1 & 8  \\
                       -2 & 1 & 4 & -7 \\
                       3  & 0 & 5 & -9 \\
                       1  & 1 & 1 & 1
                   \end{pmatrix}$$
-              易知 $|\boldsymbol{B}|=-217$，所以 $A_{41}+A_{42}+A_{43}+A_{44}=-217.$
+              易知 $|\boldsymbol{B}|=-217$, 所以 $A_{41}+A_{42}+A_{43}+A_{44}=-217.$
     \end{enumerate}
 \end{solution}
 
@@ -311,26 +311,26 @@
             a^2 & b^2 & c^2 & d^2 \\
             a^4 & b^4 & c^4 & d^4
         \end{vmatrix}$$
-    计算 $A_{11}+A_{12}+A_{13}+A_{14}$，其中 $A_{ij}$ 是元素 $a_{ij}$ 的代数余子式.
+    计算 $A_{11}+A_{12}+A_{13}+A_{14}$, 其中 $A_{ij}$ 是元素 $a_{ij}$ 的代数余子式.
 \end{example}
 \begin{solution}
-    由于 $A_{ij}$ 与 $a_{ij}$ 的值无关，现构造一个新的行列式
+    由于 $A_{ij}$ 与 $a_{ij}$ 的值无关, 现构造一个新的行列式
     $$D_1=\begin{vmatrix}
             1   & 1   & 1   & 1   \\
             a   & b   & c   & d   \\
             a^2 & b^2 & c^2 & d^2 \\
             a^4 & b^4 & c^4 & d^4
         \end{vmatrix}$$
-        由例 \ref{fmty} 知 $D_1=(a+b+c+d)(a-b)(a-c)(a-d)(b-c)(b-d)(c-d)$，
+        由例 \ref{fmty} 知 $D_1=(a+b+c+d)(a-b)(a-c)(a-d)(b-c)(b-d)(c-d)$, 
         将 $D_1$ 按第一行展开即得 
         $$A_{11}+A_{12}+A_{13}+A_{14}=(a+b+c+d)(a-b)(a-c)(a-d)(b-c)(b-d)(c-d).$$
 \end{solution}
 
 \begin{example}
-    设 3 阶矩阵 $\vb*{A}=(a_{ij})_{3\times 3}$ 满足 $\vb*{A}^\top=k\vb*{A}^*~~(k>0)$，若 $a_{11}=a_{12}=a_{13}=c>0$，求 $c.$
+    设 3 阶矩阵 $\vb*{A}=(a_{ij})_{3\times 3}$ 满足 $\vb*{A}^\top=k\vb*{A}^*~~(k>0)$, 若 $a_{11}=a_{12}=a_{13}=c>0$, 求 $c.$
 \end{example}
 \begin{solution}
-    对 $\vb*{A}^\top=k\vb*{A}^*$ 两边取行列式，则 $$\det\qty(\vb*{A}^\top)=\det\qty(k\vb*{A}^*)\Rightarrow \det\vb*{A}=k^n(\det\vb*{A})^{n-1}=k^3(\det\vb*{A})^2\Rightarrow \det\vb*{A}=\dfrac{1}{k^3}$$
-    又因为 $\vb*{A}^\top=k\vb*{A}^*$，所以 $a_{ij}=kA_{ij}$，其中 $A_{ij}$ 是 $a_{ij}$ 对应的代数余子式，那么 $$\det\vb*{A}=a_{11}A_{11}+a_{12}A_{12}+a_{13}A_{13}=\dfrac{1}{k}\sum_{i=1}^{3}a_{1i}^2=\dfrac{3c^2}{k}$$
+    对 $\vb*{A}^\top=k\vb*{A}^*$ 两边取行列式, 则 $$\det\qty(\vb*{A}^\top)=\det\qty(k\vb*{A}^*)\Rightarrow \det\vb*{A}=k^n(\det\vb*{A})^{n-1}=k^3(\det\vb*{A})^2\Rightarrow \det\vb*{A}=\dfrac{1}{k^3}$$
+    又因为 $\vb*{A}^\top=k\vb*{A}^*$, 所以 $a_{ij}=kA_{ij}$, 其中 $A_{ij}$ 是 $a_{ij}$ 对应的代数余子式, 那么 $$\det\vb*{A}=a_{11}A_{11}+a_{12}A_{12}+a_{13}A_{13}=\dfrac{1}{k}\sum_{i=1}^{3}a_{1i}^2=\dfrac{3c^2}{k}$$
     于是 $\dfrac{1}{k^3}=\dfrac{3c^2}{k}\Rightarrow c=\dfrac{\sqrt{3}}{3k}.$
 \end{solution}

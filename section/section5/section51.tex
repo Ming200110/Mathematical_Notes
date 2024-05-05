@@ -3,22 +3,22 @@
 \subsection{多元函数的极限}
 
 \begin{definition}[二元函数的极限]
-    设二元函数 $ f(x, y) $ 在区间 $ (a, b) $ 的某去心邻域内有定义，
-    若 $ \forall \varepsilon>0, \exists \delta>0 $，当 $ 0<\sqrt{(x-a)^{2}+(y-b)^{2}}<\delta $ 时恒有
+    设二元函数 $ f(x, y) $ 在区间 $ (a, b) $ 的某去心邻域内有定义, 
+    若 $ \forall \varepsilon>0, \exists \delta>0 $, 当 $ 0<\sqrt{(x-a)^{2}+(y-b)^{2}}<\delta $ 时恒有
     $$|f(x, y)-A|<\varepsilon$$
     则称
     $$\lim _{\substack{x \rightarrow a \\ y \rightarrow b}} f(x, y)=A.$$
 \end{definition}
 
-在二元函数极限的定义中，动点 $ (x, y) $ 在 $ (a, b) $ 的邻近以任意路径趋向于点 $ (a, b) $ 时，函数值 $ f(x, y) $ 与常数 $ A $ 需任意地接近.
-这些任意路径是不可能一一取到的. 若取两条不同的路径让 $ (x, y) \rightarrow(a, b) $，而 $ f(x, y) $ 取不同的极限，
+在二元函数极限的定义中, 动点 $ (x, y) $ 在 $ (a, b) $ 的邻近以任意路径趋向于点 $ (a, b) $ 时, 函数值 $ f(x, y) $ 与常数 $ A $ 需任意地接近.
+这些任意路径是不可能一一取到的. 若取两条不同的路径让 $ (x, y) \rightarrow(a, b) $, 而 $ f(x, y) $ 取不同的极限, 
 则可推知: $ (x, y) \rightarrow(a, b) $ 时 $ f(x, y) $ 的极限不存在.
 
 通常求二元函数极限的方法如下:
 \begin{enumerate}[label=(\arabic{*})]
     \item 利用定义求极限;
     \item 利用路径法;
-    \item 在 $ (x, y) \rightarrow(0,0) $ 时化为极坐标求极限，即 $ (x, y) \rightarrow(0,0) \Leftrightarrow \rho \rightarrow 0^+ $;
+    \item 在 $ (x, y) \rightarrow(0,0) $ 时化为极坐标求极限, 即 $ (x, y) \rightarrow(0,0) \Leftrightarrow \rho \rightarrow 0^+ $;
     \item 利用无穷小量乘以有界变量仍为无穷小量;
     \item 利用夹逼准则求极限.
 \end{enumerate}
@@ -54,10 +54,10 @@
     \textbf{法一: }令 $\begin{cases}
         x=\rho\cos\theta\\y=\rho\sin\theta
     \end{cases}$
-    于是原极限等于 $\displaystyle\lim_{\rho\to0^+}\dfrac{2\rho^3\cos^2\theta\sin\theta }{\rho^4\cos^4\theta+\rho^2\sin^2\theta}=2\cos^2\theta\sin\theta\lim_{\rho\to0^+}\dfrac{\rho^3}{\rho^4\cos^4\theta+\rho^2\sin^2\theta}=\infty$，即不存在，选 A.\\
-    \textbf{法二: }取 $x\to0,~y=x$，则有 $(x,y)\to(0,0)$，于是 $$\displaystyle\lim_{x\to0,y=x}\dfrac{2x^2\cdot x}{x^4+x^2}=\lim_{x\to0,y=x}\dfrac{2x^3}{(1+x^2)x^2}=0$$
-    再取 $x\to0,~y=x^2$，同理 $(x,y)\to(0,0)$，于是 $$\displaystyle\lim_{x\to0,y=x^2}\dfrac{2x^2\cdot x^2}{x^4+x^4}=1$$
-    发现两条不同的趋向路径，算出的极限值不同，又因为极限值具有唯一性，故原式的极限值不存在.
+    于是原极限等于 $\displaystyle\lim_{\rho\to0^+}\dfrac{2\rho^3\cos^2\theta\sin\theta }{\rho^4\cos^4\theta+\rho^2\sin^2\theta}=2\cos^2\theta\sin\theta\lim_{\rho\to0^+}\dfrac{\rho^3}{\rho^4\cos^4\theta+\rho^2\sin^2\theta}=\infty$, 即不存在, 选 A.\\
+    \textbf{法二: }取 $x\to0,~y=x$, 则有 $(x,y)\to(0,0)$, 于是 $$\displaystyle\lim_{x\to0,y=x}\dfrac{2x^2\cdot x}{x^4+x^2}=\lim_{x\to0,y=x}\dfrac{2x^3}{(1+x^2)x^2}=0$$
+    再取 $x\to0,~y=x^2$, 同理 $(x,y)\to(0,0)$, 于是 $$\displaystyle\lim_{x\to0,y=x^2}\dfrac{2x^2\cdot x^2}{x^4+x^4}=1$$
+    发现两条不同的趋向路径, 算出的极限值不同, 又因为极限值具有唯一性, 故原式的极限值不存在.
 \end{solution}
 
 % \begin{example}
@@ -78,7 +78,7 @@
     多元初等函数在其有定义的区域上连续.
 \end{theorem}
 \begin{theorem}
-    若 $ f(x, y) $ 在有界闭域 $ D $ 上连续，则 $ f(x, y) $ 在 $ D $ 上为有界函数，$f(x, y) $ 在 $ D $ 上取到最大值与最小值.
+    若 $ f(x, y) $ 在有界闭域 $ D $ 上连续, 则 $ f(x, y) $ 在 $ D $ 上为有界函数, $f(x, y) $ 在 $ D $ 上取到最大值与最小值.
 \end{theorem}
 
 \subsubsection{连续、偏导数存在、可微及偏导数连续之间的关系}
@@ -103,34 +103,34 @@
 
 \paragraph{判断函数在某点处可微性的一般步骤}
 \begin{enumerate}[label=(\arabic{*})]
-    \item 判断 $f(x,y)$ 在 $(a,b)$ 处的两个偏导数是否存在，若不存在，则 $f(x,y)$ 在 $(a,b)$ 点不可微；若存在，则求出两个偏导数 $f'_x(a,b)$ 和 $f'_y(a,b)$;
-    \item 求出 $(x,y)\neq (a,b)$ 时的两个偏导函数 $f'_x(x,y)$ 和 $f'_y(x,y)$，若它们在 $(a,b)$ 点处连续，则 $f(x,y)$ 在该点处可微，否则按 (3) 继续判断;
-    \item 求二重极限 $$\lim_{(x,y)\to(a,b)}\dfrac{f(x,y)-f(a,b)-f'_x(a,b)x-f'_y(a,b)y}{\sqrt{x^2+y^2}}$$ 若极限等于 0，则 $f(x,y)$ 在 $(a,b)$ 点可微，否则 (包括极限不存在的情况) 不可微.
+    \item 判断 $f(x,y)$ 在 $(a,b)$ 处的两个偏导数是否存在, 若不存在, 则 $f(x,y)$ 在 $(a,b)$ 点不可微；若存在, 则求出两个偏导数 $f'_x(a,b)$ 和 $f'_y(a,b)$;
+    \item 求出 $(x,y)\neq (a,b)$ 时的两个偏导函数 $f'_x(x,y)$ 和 $f'_y(x,y)$, 若它们在 $(a,b)$ 点处连续, 则 $f(x,y)$ 在该点处可微, 否则按 (3) 继续判断;
+    \item 求二重极限 $$\lim_{(x,y)\to(a,b)}\dfrac{f(x,y)-f(a,b)-f'_x(a,b)x-f'_y(a,b)y}{\sqrt{x^2+y^2}}$$ 若极限等于 0, 则 $f(x,y)$ 在 $(a,b)$ 点可微, 否则 (包括极限不存在的情况) 不可微.
 \end{enumerate}
 
 \begin{example}
     设 $f(x,y)=\begin{cases}
             \dfrac{x^2y}{x^2+y^2}, & x^2+y^2\neq 0 \\
             0,                     & x^2+y^2=0
-        \end{cases},z(t)=f\qty(\e^{2t}-1,\arctan t)$，求 $z'(0).$
+        \end{cases},z(t)=f\qty(\e^{2t}-1,\arctan t)$, 求 $z'(0).$
 \end{example}
 \begin{errorSolution}
-    $z'(t)=f'_x\cdot \qty(2\e^{2t})+f'_y\cdot\dfrac{1}{1+t^2}\Rightarrow z'(0)=2f_x'(0,0)+\dfrac{1}{2}f_y'(0,0)$，下求 $f_x'(0,0)$ 和 $f_y'(0,0)$，由定义 
+    $z'(t)=f'_x\cdot \qty(2\e^{2t})+f'_y\cdot\dfrac{1}{1+t^2}\Rightarrow z'(0)=2f_x'(0,0)+\dfrac{1}{2}f_y'(0,0)$, 下求 $f_x'(0,0)$ 和 $f_y'(0,0)$, 由定义 
     \begin{flalign*}
         f_x'(0,0)=\lim_{x\to0}\dfrac{f(x,0)-f(0,0)}{x-0}=\lim_{x\to0}\dfrac{f(x,0)}{x}=0\\
         f_y'(0,0)=\lim_{y\to0}\dfrac{f(0,y)-f(0,0)}{y-0}=\lim_{y\to0}\dfrac{f(0,y)}{y}=0
     \end{flalign*}
     那么 $z'(0)=0.$\\
-    \textbf{错因: }只有函数 $z=f(u,v)$ 在对应点 $(u,v)$ 具有连续偏导数，那么复合函数 $z=f[\varphi(u,v),\psi(u,v)]$ 在点 $(x,y)$ 的两个偏导数才存在. 
-    对于本题，即外层函数 $f$ 在 $(0,0)$ 可微，才能使用链式求导法则.\\
+    \textbf{错因: }只有函数 $z=f(u,v)$ 在对应点 $(u,v)$ 具有连续偏导数, 那么复合函数 $z=f[\varphi(u,v),\psi(u,v)]$ 在点 $(x,y)$ 的两个偏导数才存在. 
+    对于本题, 即外层函数 $f$ 在 $(0,0)$ 可微, 才能使用链式求导法则.\\
 \end{errorSolution}
 \begin{solution}
-    先判断 $f$ 在 $(0,0)$ 处是否可微，
+    先判断 $f$ 在 $(0,0)$ 处是否可微, 
     \begin{flalign*}
         \lim_{(x,y)\to(0,0)}\dfrac{f(x,y)-f(0,0)-f_x'(0,0)x-f_y'(0,0)y}{\sqrt{x^2+y^2}}&=\lim_{(x,y)\to(0,0)}\dfrac{f(x,y)}{\sqrt{x^2+y^2}}=\lim_{(x,y)\to(0,0)}\dfrac{x^2y}{\qty(x^2+y^2)^{\frac{3}{2}}}\\
         & \xlongequal[y=\rho\sin\theta]{x=\rho\cos\theta}\lim_{\rho\to0^+}\dfrac{\rho^3\cos^2\theta\sin\theta}{\rho^3}=\cos^2\theta\sin\theta\neq0
     \end{flalign*}
-    则 $f$ 在 $(0,0)$ 处不可微，于是
+    则 $f$ 在 $(0,0)$ 处不可微, 于是
     \begin{flalign*}
         z'(0)=\lim_{t\to0}\dfrac{z(t)-z(0)}{t-0}=\lim_{t\to0}\dfrac{\qty(\e^{2t}-1)^2\arctan t}{t\qty[\qty(\e^{2t}-1)^2+\arctan^2t]}=\lim_{t\to0}\dfrac{4t^2}{4t^2+t^2+o\qty(t^2)}=\dfrac{4}{3}.
     \end{flalign*}
@@ -156,12 +156,12 @@
 \end{solution}
 
 \begin{example}
-    设 $f'(0)=k$，试证明 $\displaystyle\lim_{\substack{a\to0^-\\b\to0^+}}\frac{f(b)-f(a)}{b-a}=k.$
+    设 $f'(0)=k$, 试证明 $\displaystyle\lim_{\substack{a\to0^-\\b\to0^+}}\frac{f(b)-f(a)}{b-a}=k.$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    用拟合法，$\displaystyle k=\frac{b}{b-a}\cdot k-\frac{a}{b-a}\cdot k$，那么
+    用拟合法, $\displaystyle k=\frac{b}{b-a}\cdot k-\frac{a}{b-a}\cdot k$, 那么
     $$\frac{f(b)-f(a)}{b-a}=\frac{b}{b-a}\cdot\frac{f(b)-f(0)}{b-0}-\frac{a}{b-a}\cdot\frac{f(a)-f(0)}{a-0}$$
-    因为 $a<0<b$，得 $\displaystyle\left|\frac{a}{b-a}\right|<1,\left|\frac{b}{b-a}\right|<1$.
+    因为 $a<0<b$, 得 $\displaystyle\left|\frac{a}{b-a}\right|<1,\left|\frac{b}{b-a}\right|<1$.
     \begin{flalign*}
         \left|\frac{f(b)-f(a)}{b-a}-k\right| & \leqslant \left|\frac{b}{b-a}\right|\cdot\left|\frac{f(b)-f(0)}{b-0}-k\right|+\left|\frac{a}{b-a}\right|\cdot\left|\frac{f(a)-f(0)}{a-0}-k\right| \\
                                              & \leqslant \left|\frac{f(b)-f(0)}{b-0}-k\right|+\left|\frac{f(a)-f(0)}{a-0}-k\right|\to 0~ (a\to0^-,b\to0^+).
@@ -169,7 +169,7 @@
 \end{proof}
 
 \begin{example}\scriptsize\linespread{0.8}
-    讨论如下向量函数的连续性: 设 $(u,v)=F(x,y)=(f(x,y),g(x,y))$，其中
+    讨论如下向量函数的连续性: 设 $(u,v)=F(x,y)=(f(x,y),g(x,y))$, 其中
     $$u=f(x,y)=\begin{cases}
             \displaystyle \frac{x}{\left ( x^2+y^2 \right )^\alpha  }\ln(|x|+|y|) ,& \text{当 } x^2+y^2\not=0\text{ 时} \\
             \displaystyle 0                                                       ,&  \text{当 } x^2+y^2=0\text{ 时}
@@ -180,7 +180,7 @@
         \end{cases}.$$
 \end{example}
 \begin{solution}\scriptsize\linespread{0.8}
-    显然 $f(x,y),g(x,y)$ 当 $x^2+y^2\not=0$ 时连续，因此 $(x,y)\not=(0,0)$ 时 $F$ 连续. 下面只研究 $(0,0)$ 点的情况，因为
+    显然 $f(x,y),g(x,y)$ 当 $x^2+y^2\not=0$ 时连续, 因此 $(x,y)\not=(0,0)$ 时 $F$ 连续. 下面只研究 $(0,0)$ 点的情况, 因为
     \begin{flalign*}
         u^2+v^2 & =\frac{x^2+y^2}{\left(x^2+y^2\right)^{2\alpha}}\ln^2(|x|+|y|)=\left(x^2+y^2\right)^{1-2\alpha}\ln^2(|x|+|y|) \\
                 & \to\begin{cases}
@@ -188,38 +188,38 @@
                          +\infty ,& \text{当 }\displaystyle  \alpha \geqslant \frac{1}{2}\text{ 时}
                      \end{cases}~ (r^2=x^2+y^2\to0\text{ 时}).
     \end{flalign*}
-    故当且仅当 $\displaystyle\alpha<\frac{1}{2}$ 时 $F$ 在点 $(0,0)$ 连续，下面对上式中的极限进行补充证明.
-    当 $\displaystyle\alpha\geqslant\frac{1}{2}$ 时，显然极限为 $+\infty$. 现设 $\displaystyle\alpha<\frac{1}{2}$，记 $\mu =1-2\alpha$，则 $\mu>0$,
+    故当且仅当 $\displaystyle\alpha<\frac{1}{2}$ 时 $F$ 在点 $(0,0)$ 连续, 下面对上式中的极限进行补充证明.
+    当 $\displaystyle\alpha\geqslant\frac{1}{2}$ 时, 显然极限为 $+\infty$. 现设 $\displaystyle\alpha<\frac{1}{2}$, 记 $\mu =1-2\alpha$, 则 $\mu>0$,
     $$\left(x^2+y^2\right)^{1-2\alpha}\ln^2(|x|+|y|)=\frac{\left(x^2+y^2\right)^\mu}{(|x|+|y|)^{2\mu}}\cdot(|x|+|y|)^{2\mu}\ln^2(|x|+|y|)$$
     这时 $$0\leqslant \frac{\left(x^2+y^2\right)^\mu}{(|x|+|y|)^{2\mu}}=\frac{\left(x^2+y^2\right)^\mu}{(x^2+2|x|~|y|+y^2)^{\mu}}\leqslant \frac{\left(x^2+y^2\right)^{\mu}}{\left(x^2+y^2\right)^{\mu}}=1$$
-    但 $\displaystyle (|x|+|y|)^{2\mu}\ln^2(|x|+|y|)\to0$，所以
+    但 $\displaystyle (|x|+|y|)^{2\mu}\ln^2(|x|+|y|)\to0$, 所以
     $$\left(x^2+y^2\right)^{1-2\alpha}\ln^2(|x|+|y|)\to0~ (r\to0).$$
 \end{solution}
 
 \subsection{二元函数的 Taylor 展开}
 
 \begin{theorem}[二元函数的 Taylor 展开唯一性]
-    假设 $ f(x, y) $ 具有 $ n+1 $ 阶连续偏导数，若用某种方法得到展开式:
+    假设 $ f(x, y) $ 具有 $ n+1 $ 阶连续偏导数, 若用某种方法得到展开式:
     $$f(x, y)=\sum_{i+j=0}^{n} A_{i j}\left(x-x_{0}\right)^{i}\left(y-y_{0}\right)^{j}+o\left(\rho^{n}\right)$$
-    其中 $ \rho=\sqrt{\left(x-x_{0}\right)^{2}+\left(y-y_{0}\right)^{2}}$，则必有
+    其中 $ \rho=\sqrt{\left(x-x_{0}\right)^{2}+\left(y-y_{0}\right)^{2}}$, 则必有
     $$A_{i j}=\left.\frac{C_{i+j}^{i}}{(i+j) !} \frac{\partial^{i+j}}{\partial x^{i} \partial y^{j}} f(x, y)\right|_{\left(x_{0}, y_{0}\right)}=\frac{1}{i ! j !} \frac{\partial^{i+j}}{\partial x^{i} \partial y^{j}} f\left(x_{0}, y_{0}\right) .$$
     \index{二元函数的 Taylor 展开唯一性}
 \end{theorem}
 
 \begin{example}
-    设 $f(x,y)$ 连续，$f(0,0)=0$，$f(x,y)$ 在 $(0,0)$ 处可微且 $f'_y(0,0)=1$，求 $$\displaystyle I=\lim_{x\to0^+}\dfrac{\displaystyle\int_{0}^{x^3}\dd t\int_{\sqrt[3]{t}}^{x}f(t,u)\dd u}{1-\sqrt[3]{1-x^5}}.$$
+    设 $f(x,y)$ 连续, $f(0,0)=0$, $f(x,y)$ 在 $(0,0)$ 处可微且 $f'_y(0,0)=1$, 求 $$\displaystyle I=\lim_{x\to0^+}\dfrac{\displaystyle\int_{0}^{x^3}\dd t\int_{\sqrt[3]{t}}^{x}f(t,u)\dd u}{1-\sqrt[3]{1-x^5}}.$$
 \end{example}
 \begin{solution}
-    当 $x\to0^+$ 时，$1-\sqrt[3]{1-x^5}\sim\dfrac{1}{3}x^5$，考虑交换积分次序，
+    当 $x\to0^+$ 时, $1-\sqrt[3]{1-x^5}\sim\dfrac{1}{3}x^5$, 考虑交换积分次序, 
     $$\int_{0}^{x^3}\dd t\int_{\sqrt[3]{t}}^{x}f(t,u)\dd u=\iint\limits_{\substack{0\leqslant t\leqslant x^3\\0\leqslant u\leqslant u}}f(t,u)\dd t\dd u=\int_{0}^{x}\dd u\int_{0}^{u^3}f(t,u)\dd t$$
-    于是，
+    于是, 
     \begin{flalign*}
         I=\lim_{x\to0^+}\dfrac{\displaystyle \int_{0}^{x}\dd u\int_{0}^{u^3}f(t,u)\dd t}{\dfrac{1}{3}x^5}\xlongequal[]{L'}3\lim_{x\to0^+}\dfrac{\displaystyle\int_{0}^{x^3}f(t,x)\dd t}{5x^4}\xlongequal[]{L'}3\lim_{x\to0^+}\dfrac{3x^2f\qty(x^3,x)}{20x^3}=\dfrac{9}{20}\lim_{x\to0^+}\dfrac{f\qty(x^3,x)}{x}
     \end{flalign*}
-    其中 $\displaystyle\lim_{x\to0^+}\dfrac{f\qty(x^3,x)}{x}=\lim_{x\to0^+}\dfrac{f(\xi,x)}{x},~\xi\in\qty(0,x^3)$，由二元函数的 Taylor 公式可得:
+    其中 $\displaystyle\lim_{x\to0^+}\dfrac{f\qty(x^3,x)}{x}=\lim_{x\to0^+}\dfrac{f(\xi,x)}{x},~\xi\in\qty(0,x^3)$, 由二元函数的 Taylor 公式可得:
     $$f(\xi,x)=f(0,0)+f'_x(0,0)\xi+f'_y(0,0)x+o\qty(x)$$
     \begin{flalign*}
         \lim_{x\to0^+}\dfrac{f(\xi,x)}{x}=\lim_{x\to0^+}\dfrac{f(0,0)+f'_x(0,0)\xi+f'_y(0,0)x+o\qty(x)}{x}=\lim_{x\to0^+}\qty[\dfrac{f'_x(0,0)\xi}{x}+f'_y(0,0)+\dfrac{o\qty(x)}{x}]=1
     \end{flalign*}
-    其中 $\qty|\dfrac{f'_x(0,0)\xi}{x}|<\dfrac{f'_x(0,0)x^2}{x}\to0$，于是原式 $=\dfrac{9}{20}.$
+    其中 $\qty|\dfrac{f'_x(0,0)\xi}{x}|<\dfrac{f'_x(0,0)x^2}{x}\to0$, 于是原式 $=\dfrac{9}{20}.$
 \end{solution}

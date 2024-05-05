@@ -3,7 +3,7 @@
 \subsection{正定性}
 
 \begin{theorem}[Hurwitz 定理]
-    对称矩阵 $\vb*{A}$ 为正定的充分必要条件: $\vb*{A}$ 的各阶主子式 (顺序主子式) 都为正，即
+    对称矩阵 $\vb*{A}$ 为正定的充分必要条件: $\vb*{A}$ 的各阶主子式 (顺序主子式) 都为正, 即
     $$a_{11}>0,~\begin{vmatrix}
             a_{11} & a_{12} \\
             a_{21} & a_{22}
@@ -12,7 +12,7 @@
             \vdots &        & \vdots\ \\
             a_{n1} & \cdots & a_{nn}
         \end{vmatrix}>0.$$
-    对称矩阵 $\vb*{A}$  为负定的充分必要条件: 奇数阶主子式为负，偶数主子式为正，即
+    对称矩阵 $\vb*{A}$  为负定的充分必要条件: 奇数阶主子式为负, 偶数主子式为正, 即
     $$(-1)^r\begin{vmatrix}
             a_{11} & \cdots & a_{1r} \\
             \vdots &        & \vdots \\
@@ -22,12 +22,12 @@
 \end{theorem}
 
 \begin{theorem}[实对称方阵的等价命题]
-    设 $\vb*{S}=(s_{ij})$ 是 $n$ 阶实对称方阵，则下述命题等价:
+    设 $\vb*{S}=(s_{ij})$ 是 $n$ 阶实对称方阵, 则下述命题等价:
     \begin{enumerate}[label=(\arabic{*})]
         \item 方阵 $\vb*{S}$ 是正定的;
         \item 方阵 $\vb*{S}$ 的每一个特征值均为正的;
-        \item 存在正定对称方阵 $\vb*{S}_1$，使得 $\vb*{S}=\vb*{S}_1^2$;
-        \item 存在可逆方阵 $\vb*{P}$，使得 $\vb*{S}=\vb*{P}^\top\vb*{P}$;
+        \item 存在正定对称方阵 $\vb*{S}_1$, 使得 $\vb*{S}=\vb*{S}_1^2$;
+        \item 存在可逆方阵 $\vb*{P}$, 使得 $\vb*{S}=\vb*{P}^\top\vb*{P}$;
         \item 方阵 $\vb*{S}$ 的每个主子式均为正的;
         \item 方阵 $\vb*{S}$ 的顺序主子式均为正的.
     \end{enumerate}
@@ -42,11 +42,11 @@
             x_1 & 5   & -2  & 0   \\
             x_2 & -2  & 6   & -2  \\
             x_3 & 0   & -2  & 4
-    \end{NiceArray}$，所以 $f$ 的矩阵 $\vb*{A}=\begin{pmatrix}
+    \end{NiceArray}$, 所以 $f$ 的矩阵 $\vb*{A}=\begin{pmatrix}
             5  & -2 & 0  \\
             -2 & 6  & -2 \\
             0  & -2 & 4
-        \end{pmatrix}$，故 $\vb*{A}$ 的顺序主子式分别为
+        \end{pmatrix}$, 故 $\vb*{A}$ 的顺序主子式分别为
     $$|5|=5>0,~\begin{vmatrix}
             5  & -2 \\
             -2 & 6
@@ -59,7 +59,7 @@
 \end{solution}
 
 \begin{example}
-    $t$ 满足什么条件时，下列二次型是正定的:
+    $t$ 满足什么条件时, 下列二次型是正定的:
     \begin{enumerate}[label=(\arabic{*})]
         \item $f=x_1^2+x_2^2+5x_3^2+2tx_1x_2-2x_1x_3+4x_2x_3$;
         \item $f=x_1^2+4x_2^2+x_3^2+2tx_1x_2+10x_1x_3+6x_2x_3$.
@@ -72,11 +72,11 @@
                           x_1 & 1   & t   & -1  \\
                           x_2 & t   & 1   & 2   \\
                           x_3 & -1  & 2   & 5
-        \end{NiceArray}$，所以 $f$ 的矩阵 $\vb*{A}_1=\begin{pmatrix}
+        \end{NiceArray}$, 所以 $f$ 的矩阵 $\vb*{A}_1=\begin{pmatrix}
                       1  & t & -1 \\
                       t  & 1 & 2  \\
                       -1 & 2 & 5
-                  \end{pmatrix}$，故 $\vb*{A}$ 的顺序主子式分别为
+                  \end{pmatrix}$, 故 $\vb*{A}$ 的顺序主子式分别为
               $$|1|=1>0,~\begin{vmatrix}
                       1 & t \\
                       t & 1
@@ -85,12 +85,12 @@
                       t  & 1 & 2  \\
                       -1 & 2 & 5
                   \end{vmatrix}=-t(5t+4)>0$$
-              所以当 $-\dfrac{4}{5}<t<0$ 时，$f(x_1,x_2,x_3)$ 是正定的.
+              所以当 $-\dfrac{4}{5}<t<0$ 时, $f(x_1,x_2,x_3)$ 是正定的.
         \item $f$ 的矩阵 $\vb*{A}_2=\begin{pmatrix}
                       1 & t & 5 \\
                       t & 4 & 3 \\
                       5 & 3 & 1
-                  \end{pmatrix}$，那么 $\vb*{A}$ 的顺序主子式分别为
+                  \end{pmatrix}$, 那么 $\vb*{A}$ 的顺序主子式分别为
               $$|1|=1>0,~\begin{vmatrix}
                       1 & t \\
                       t & 4
@@ -99,7 +99,7 @@
                       t & 4 & 3 \\
                       5 & 3 & 1
                   \end{vmatrix}=-t^2+30t-105>0$$
-              因为 $4-t^2$ 与 $-t^2+30t-105$ 不能同时大于零，所以无论 $t$ 取什么值，这个二次型都不能是正定的.
+              因为 $4-t^2$ 与 $-t^2+30t-105$ 不能同时大于零, 所以无论 $t$ 取什么值, 这个二次型都不能是正定的.
     \end{enumerate}
 \end{solution}
 
@@ -112,11 +112,11 @@
             x & -5 & 2  & 2  \\
             y & 2  & -6 & 0  \\
             z & 2  & 0  & -4
-    \end{NiceArray}$，所以 $f$ 的矩阵 $\vb*{A}=\begin{pmatrix}
+    \end{NiceArray}$, 所以 $f$ 的矩阵 $\vb*{A}=\begin{pmatrix}
             -5 & 2  & 2  \\
             2  & -6 & 0  \\
             2  & 0  & -4
-        \end{pmatrix}$，故 $\vb*{A}$ 的顺序主子式分别为
+        \end{pmatrix}$, 故 $\vb*{A}$ 的顺序主子式分别为
     $$|-5|=-5<0,~\begin{vmatrix}
             -5 & 2  \\
             2  & -6
@@ -129,13 +129,13 @@
 \end{solution}
 
 \begin{theorem}[特征值与正定性]
-    若一矩阵 $\vb*{A}$ 是正定的，则其所有特征值 $\lambda_i>0~ (i=1,2,\cdots,n).$
+    若一矩阵 $\vb*{A}$ 是正定的, 则其所有特征值 $\lambda_i>0~ (i=1,2,\cdots,n).$
 \end{theorem}
 \begin{example}
-    设 $\vb*{A}$ 是 3 阶正定矩阵，证明 $|\vb*{A}+2\vb*{E}|>8.$
+    设 $\vb*{A}$ 是 3 阶正定矩阵, 证明 $|\vb*{A}+2\vb*{E}|>8.$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    由 $\vb*{A}$ 是正定的，则 $\lambda_{1,2,3}>0$，那么 $|\vb*{A}+2\vb*{E}|=(\lambda_1+2)(\lambda_2+2)(\lambda_3+2)\geqslant 8.$
+    由 $\vb*{A}$ 是正定的, 则 $\lambda_{1,2,3}>0$, 那么 $|\vb*{A}+2\vb*{E}|=(\lambda_1+2)(\lambda_2+2)(\lambda_3+2)\geqslant 8.$
 \end{proof}
 
 \begin{example}[2000 清华大学]
@@ -145,10 +145,10 @@
             3      & 1      & b      & \ddots & \vdots \\
             \vdots & \vdots & \ddots & \ddots & 1      \\
             3      & 1      & \cdots & 1      & b
-        \end{pmatrix}$$ 试求 $b$ 的取值范围，使 $\vb*{A}$ 为正定矩阵.
+        \end{pmatrix}$$ 试求 $b$ 的取值范围, 使 $\vb*{A}$ 为正定矩阵.
 \end{example}
 \begin{solution}
-    设 $k$ 维列向量 $\vb*{\alpha}=(3,1,\cdots,1)^{\top}$，则 $\vb*{A}$ 的 $k$ 阶顺序主子式为
+    设 $k$ 维列向量 $\vb*{\alpha}=(3,1,\cdots,1)^{\top}$, 则 $\vb*{A}$ 的 $k$ 阶顺序主子式为
     \begin{flalign*}
         |\vb*{A}_k|&=\begin{vmatrix}
             \begin{pmatrix}
@@ -166,30 +166,30 @@
         &=(b-1)^{k-1}|(b-1)\vb*{E}_1+\vb*{\alpha}^{\top}\vb*{\alpha}|=(b-1)^{k-1}(b+k+7)
     \end{flalign*}
     因为 $\vb*{A}$ 的正定的充分必要条件是 $$|\vb*{A}_k|>0\Leftrightarrow b>1\text{ 且 } b>-(k+7),~k=1,2,\cdots,n$$
-    所以，当 $b>1$ 时 $\vb*{A}$ 是正定矩阵.
+    所以, 当 $b>1$ 时 $\vb*{A}$ 是正定矩阵.
 \end{solution}
 
 \begin{example}[2019 数一]
-    已知 $\vb*{A}=\mqty(a&1&-1\\1&a&-1\\-1&-1&a)$，
+    已知 $\vb*{A}=\mqty(a&1&-1\\1&a&-1\\-1&-1&a)$, 
     \begin{enumerate}[label=(\arabic{*})]
-        \item 求正交矩阵 $\vb*{P}$，使得 $\vb*{P}^\top\vb*{AP}$ 为对角矩阵;
-        \item 求正定矩阵 $\vb*{C}$，使得 $\vb*{C}^2=(a+3)\vb*{E}-\vb*{A}.$
+        \item 求正交矩阵 $\vb*{P}$, 使得 $\vb*{P}^\top\vb*{AP}$ 为对角矩阵;
+        \item 求正定矩阵 $\vb*{C}$, 使得 $\vb*{C}^2=(a+3)\vb*{E}-\vb*{A}.$
     \end{enumerate}
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item \textbf{法一: }$|\lambda\vb*{E}-\vb*{A}|=\mqty|\lambda-a&-1&1\\-1&\lambda-a&1\\1&1&\lambda-a|\xlongequal[r_2+r_3]{r_1+r_3}\mqty|\lambda-a+1&0&\lambda-a+1\\0&\lambda-a+1&\lambda-a+1\\1&1&\lambda-a|=(\lambda-a+1)^2(\lambda-a-2)=0$，
-        因此特征值为 $\lambda_1=a+2$，$\lambda_{2,3}=a-1$ (二重)，则 $\lambda_1$ 对应的特征向量为 $\vb*{\xi}_1=(-1,-1,1)^\top$，$\lambda_{2,3}$ 对应的特征向量分别为 $\vb*{\xi}_2=(-1,1,0)^\top,~\vb*{\xi}_3=(1,0,1)^\top$，下作特征向量的正交单位化，
+        \item \textbf{法一: }$|\lambda\vb*{E}-\vb*{A}|=\mqty|\lambda-a&-1&1\\-1&\lambda-a&1\\1&1&\lambda-a|\xlongequal[r_2+r_3]{r_1+r_3}\mqty|\lambda-a+1&0&\lambda-a+1\\0&\lambda-a+1&\lambda-a+1\\1&1&\lambda-a|=(\lambda-a+1)^2(\lambda-a-2)=0$, 
+        因此特征值为 $\lambda_1=a+2$, $\lambda_{2,3}=a-1$ (二重), 则 $\lambda_1$ 对应的特征向量为 $\vb*{\xi}_1=(-1,-1,1)^\top$, $\lambda_{2,3}$ 对应的特征向量分别为 $\vb*{\xi}_2=(-1,1,0)^\top,~\vb*{\xi}_3=(1,0,1)^\top$, 下作特征向量的正交单位化, 
         $$\vb*{\alpha}_1=\vb*{\xi}_1,~\vb*{\alpha}_2=\vb*{\xi}_2-\dfrac{\qty[\vb*{\alpha}_1,\vb*{\xi}_2]}{\qty[\vb*{\alpha}_1,\vb*{\alpha}_1]}\vb*{\alpha}_1=\vb*{\xi}_2,~\vb*{\alpha}_3=\vb*{\xi}_3-\dfrac{\qty[\vb*{\alpha}_1,\vb*{\xi}_3]}{\qty[\vb*{\alpha}_1,\vb*{\alpha}_1]}\vb*{\alpha}_1-\dfrac{\qty[\vb*{\alpha}_2,\vb*{\xi}_3]}{\qty[\vb*{\alpha}_2,\vb*{\alpha}_2]}\vb*{\alpha}_2=(1,1,2)^\top$$
         单位化 $$\vb*{e}_1=\dfrac{1}{||\vb*{\alpha}_1||}\vb*{\alpha}_1=\dfrac{1}{\sqrt{3}}\mqty(-1\\-1\\1),~\vb*{e}_2=\dfrac{1}{||\vb*{\alpha}_2||}\vb*{\alpha}_2=\dfrac{1}{\sqrt{2}}\mqty(-1\\1\\0),~\vb*{e}_3=\dfrac{1}{||\vb*{\alpha}_3||}\vb*{\alpha}_3=\dfrac{1}{\sqrt{6}}\mqty(1\\1\\2)$$
-        得正交矩阵 $\vb*{P}=\mqty(-\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]-\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}})$，使得 $\vb*{P}^\top\vb*{AP}=\mqty(a+2\\&a-1\\&&a-1).$\\
-        \textbf{法二: }因为 $\vb*{A}=\mqty(a&1&-1\\1&a&-1\\-1&-1&a)$，于是 
+        得正交矩阵 $\vb*{P}=\mqty(-\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]-\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}})$, 使得 $\vb*{P}^\top\vb*{AP}=\mqty(a+2\\&a-1\\&&a-1).$\\
+        \textbf{法二: }因为 $\vb*{A}=\mqty(a&1&-1\\1&a&-1\\-1&-1&a)$, 于是 
         $$f(\lambda)=\lambda^3-\tr\vb*{A}\lambda^2+\sum_{1\leqslant j_1<j_2\leqslant 3}A\mqty|a_{j_1j_1}&a_{j_1j_2}\\a_{j_2j_1}&a_{j_2j_2}|-\det\vb*{A}=\lambda^3-3a\lambda^2+3\qty(a^2-1)\lambda-(a-1)^2(a+2)=0$$
-        即得特征值 $\lambda_1=a+2,~\lambda_{2,3}=a-1$ (二重)，当 $\lambda=\lambda_1$ 时，$\lambda_1\vb*{E}-\vb*{A}=\mqty(2&-1&1\\-1&2&1\\1&1&2)\xrightarrow{r_3-r_1-r_2}\mqty(2&-1&1\\-1&2&1\\0&0&0)$，那么 $r_1$ 可由 $r_2$ 与 $(3,-3,0)$ 线性表示，则
+        即得特征值 $\lambda_1=a+2,~\lambda_{2,3}=a-1$ (二重), 当 $\lambda=\lambda_1$ 时, $\lambda_1\vb*{E}-\vb*{A}=\mqty(2&-1&1\\-1&2&1\\1&1&2)\xrightarrow{r_3-r_1-r_2}\mqty(2&-1&1\\-1&2&1\\0&0&0)$, 那么 $r_1$ 可由 $r_2$ 与 $(3,-3,0)$ 线性表示, 则
         $$(2,-1,1)\times(3,-3,0)=(3,3,-3)\Rightarrow (1,1,-1)\Rightarrow \vb*{\xi}_1=(1,1,-1)^\top$$
-        当 $\lambda=\lambda_{2,3}$ 时，$\lambda_{2,3}\vb*{E}-\vb*{A}=\mqty(-1&-1&1\\-1&-1&1\\1&1&-1)\xrightarrow[r_1\leftrightarrow r_3]{\substack{r_1+r_3\\r_2+r_3}}\mqty(1&1&-1\\0&0&0\\0&0&0)$，那么 $$r_1\cdot (1,1,2)=0,~r_1\times(1,1,2)=(-3,3,0)\Rightarrow(-1,1,0)$$
-        则取 $\vb*{\xi}_2=(-1,1,0)^\top,~\vb*{\xi}_3=(1,1,2)^\top$，因此 $\vb*{\xi}_{1,2,3}$ 已经两两相互正交，则正交矩阵 $\vb*{P}=\mqty(-\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]-\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}})$，使得 $\vb*{P}^\top\vb*{AP}=\mqty(a+2\\&a-1\\&&a-1).$
-        \item 因为 $\vb*{P}^\top\vb*{AP}=\mqty(a+2\\&a-1\\&&a-1)$，所以 $\vb*{P}^\top\qty[(a+3)\vb*{E}-\vb*{A}]\vb*{P}=\mqty(1\\&4\\&&4)$，即 
+        当 $\lambda=\lambda_{2,3}$ 时, $\lambda_{2,3}\vb*{E}-\vb*{A}=\mqty(-1&-1&1\\-1&-1&1\\1&1&-1)\xrightarrow[r_1\leftrightarrow r_3]{\substack{r_1+r_3\\r_2+r_3}}\mqty(1&1&-1\\0&0&0\\0&0&0)$, 那么 $$r_1\cdot (1,1,2)=0,~r_1\times(1,1,2)=(-3,3,0)\Rightarrow(-1,1,0)$$
+        则取 $\vb*{\xi}_2=(-1,1,0)^\top,~\vb*{\xi}_3=(1,1,2)^\top$, 因此 $\vb*{\xi}_{1,2,3}$ 已经两两相互正交, 则正交矩阵 $\vb*{P}=\mqty(-\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]-\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}})$, 使得 $\vb*{P}^\top\vb*{AP}=\mqty(a+2\\&a-1\\&&a-1).$
+        \item 因为 $\vb*{P}^\top\vb*{AP}=\mqty(a+2\\&a-1\\&&a-1)$, 所以 $\vb*{P}^\top\qty[(a+3)\vb*{E}-\vb*{A}]\vb*{P}=\mqty(1\\&4\\&&4)$, 即 
         $$(a+3)\vb*{E}-\vb*{A}=\vb*{P}\mqty(1\\&4\\&&4)\vb*{P}^\top=\vb*{P}\mqty(1\\&2\\&&2)\vb*{P}^\top\cdot\vb*{P}\mqty(1\\&2\\&&2)\vb*{P}^\top$$
         $\vb*{C}=\vb*{P}\mqty(1\\&2\\&&2)\vb*{P}^\top\Rightarrow\mqty(-\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]-\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}})\mqty(1\\&2\\&&2)\mqty(-\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]-\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}})^\top=\dfrac{1}{3}\mqty(5&-1&1\\-1&5&1\\1&1&5).$
     \end{enumerate}
@@ -198,23 +198,23 @@
 \subsection{半正定性}
 
 \begin{theorem}[对称方阵的等价命题]
-    设 $\vb*{S}$ 是 $n$ 阶对称方阵，则下述命题等价:
+    设 $\vb*{S}$ 是 $n$ 阶对称方阵, 则下述命题等价:
     \begin{enumerate}[label=(\arabic{*})]
         \item 方阵 $\vb*{S}$ 是半正定的;
         \item 方阵 $\vb*{S}$ 的所有特征值均为非负的;
-        \item 存在 $n$ 阶半正定对称方阵 $\vb*{S}_1,~\rank\vb*{S}_1=\rank\vb*{S}$，使得 $\vb*{S}=\vb*{S}_1^2$;
-        \item 存在 $n$ 阶方阵 $\vb*{P},~\rank\vb*{P}=\rank\vb*{S}$，使得 $\vb*{S}=\vb*{P}^\top\vb*{P}$;
+        \item 存在 $n$ 阶半正定对称方阵 $\vb*{S}_1,~\rank\vb*{S}_1=\rank\vb*{S}$, 使得 $\vb*{S}=\vb*{S}_1^2$;
+        \item 存在 $n$ 阶方阵 $\vb*{P},~\rank\vb*{P}=\rank\vb*{S}$, 使得 $\vb*{S}=\vb*{P}^\top\vb*{P}$;
         \item 方阵 $\vb*{S}$ 的所有主子式均为非负的;
-        \item 方阵 $\vb*{S}$ 的所有 $k$ 阶主子式之和均为非负的，$k=1,2,\cdots,n.$
+        \item 方阵 $\vb*{S}$ 的所有 $k$ 阶主子式之和均为非负的, $k=1,2,\cdots,n.$
     \end{enumerate}
 \end{theorem}
 
 \begin{theorem}
-    若 $\vb*{A}$  是 $n$ 阶正定矩阵，$\vb*{B}$ 是 $n$ 阶非零半正定矩阵，则 $\vb*{A}+\vb*{B}$ 是正定矩阵，且 $$\det(\vb*{A}+\vb*{B})>\det\vb*{A}+\det\vb*{B}.$$
+    若 $\vb*{A}$  是 $n$ 阶正定矩阵, $\vb*{B}$ 是 $n$ 阶非零半正定矩阵, 则 $\vb*{A}+\vb*{B}$ 是正定矩阵, 且 $$\det(\vb*{A}+\vb*{B})>\det\vb*{A}+\det\vb*{B}.$$
 \end{theorem}
 
 \begin{example}[2005 武汉大学]
-    已知实二次型 $f=x_1^2+x_2^2+x_3^2+9x_4^2+2a(x_1x_2+x_2x_3+x_3x_1)$，问当 $a$ 取何值时，$f$ 是正定的、半正定的以及不定的二次型?
+    已知实二次型 $f=x_1^2+x_2^2+x_3^2+9x_4^2+2a(x_1x_2+x_2x_3+x_3x_1)$, 问当 $a$ 取何值时, $f$ 是正定的、半正定的以及不定的二次型?
 \end{example}
 \begin{solution}
     二次型 $f$ 的矩阵为 $\vb*{A}=\begin{pmatrix}
@@ -222,37 +222,37 @@
             a & 1 & a & 0 \\
             a & a & 1 & 0 \\
             0 & 0 & 0 & 9
-        \end{pmatrix}$，得 $\vb*{A}$ 的顺序主子式分别为
+        \end{pmatrix}$, 得 $\vb*{A}$ 的顺序主子式分别为
     $$\varDelta_1=1,~\varDelta_2=(1-a)(1+a),~\varDelta_3=(1-a)^2(1+2a),~\varDelta_4=9\varDelta_3$$
-    由此可见，\begin{enumerate}[label=(\arabic{*})]
-        \item 当 $-\dfrac{1}{2}<a<1$ 时，$f$ 为正定二次型;
-        \item 当 $a=-\dfrac{1}{2}$ 或 $a=1$，$f$ 为半正定二次型;
-        \item 当 $a<-\dfrac{1}{2}$ 或 $a>1$ 时，$f$ 为不定二次型.
+    由此可见, \begin{enumerate}[label=(\arabic{*})]
+        \item 当 $-\dfrac{1}{2}<a<1$ 时, $f$ 为正定二次型;
+        \item 当 $a=-\dfrac{1}{2}$ 或 $a=1$, $f$ 为半正定二次型;
+        \item 当 $a<-\dfrac{1}{2}$ 或 $a>1$ 时, $f$ 为不定二次型.
     \end{enumerate}
 \end{solution}
 
 \begin{example}[2014 南京大学]
-    设 $\vb*{A},~\vb*{B}$ 均为 $n$ 阶实对称矩阵，$\vb*{B}$ 正定，且 $\vb*{A}-\vb*{B}$ 半正定，证明:
+    设 $\vb*{A},~\vb*{B}$ 均为 $n$ 阶实对称矩阵, $\vb*{B}$ 正定, 且 $\vb*{A}-\vb*{B}$ 半正定, 证明:
     \begin{enumerate}[label=(\arabic{*})]
-        \item 若 $\lambda$ 是 $|\vb*{A}-\lambda\vb*{B}|=0$ 的根，则 $\lambda\geqslant 1$;
+        \item 若 $\lambda$ 是 $|\vb*{A}-\lambda\vb*{B}|=0$ 的根, 则 $\lambda\geqslant 1$;
         \item $\det\vb*{A}\geqslant \det\vb*{B}.$
     \end{enumerate}
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
     \begin{enumerate}[label=(\arabic{*})]
-        \item 因为 $\vb*{A},~\vb*{B}$ 均为 $n$ 阶实对称矩阵，所以存在可逆实矩阵 $\vb*{P}$，使得 $\vb*{P}^\top\vb*{BP}=\vb*{E}$，$\vb*{P}^\top\vb*{AP}$ 仍为实对称矩阵，故又存在正交矩阵 $\vb*{Q}$ 使得，
+        \item 因为 $\vb*{A},~\vb*{B}$ 均为 $n$ 阶实对称矩阵, 所以存在可逆实矩阵 $\vb*{P}$, 使得 $\vb*{P}^\top\vb*{BP}=\vb*{E}$, $\vb*{P}^\top\vb*{AP}$ 仍为实对称矩阵, 故又存在正交矩阵 $\vb*{Q}$ 使得, 
               $$\vb*{Q}^\top\qty(\vb*{P}^\top\vb*{AP})\vb*{Q}=\diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$$
-              其中 $\lambda_k,~(k=1,2,\cdots,n)$ 为 $\vb*{P}^\top\vb*{AP}$ 的特征值，又因为
+              其中 $\lambda_k,~(k=1,2,\cdots,n)$ 为 $\vb*{P}^\top\vb*{AP}$ 的特征值, 又因为
               $$\qty|\lambda\vb*{E}-\vb*{P}^\top\vb*{AP}|=\qty|\lambda \vb*{P}^\top\vb*{BP}-\vb*{P}^\top\vb*{AP}|=\qty|\vb*{P}^2|~\qty|\lambda\vb*{B}-\vb*{A}|=|\vb*{B}|~\qty|\vb*{P}^2|~\qty|\lambda\vb*{E}-\vb*{AB}^{-1}|=0$$
-              因为 $\vb*{B}$ 是正定的，$\det\vb*{P}^2>0$，所以 $|\vb*{B}|~\qty|\vb*{P}^2|>0$，所以 $\lambda_1,\cdots,\lambda_n$ 是 $\vb*{AB}^{-1}$ 的全部特征值，也是 $|\vb*{A}-\lambda\vb*{B}|$ 的所有根，
-              又因为 $\vb*{P}^\top(\vb*{A}-\vb*{B})\vb*{P}$ 是实对称矩阵，其特征值为 $\lambda_1-1,\lambda_2-1,\cdots,\lambda_n-1$，
-              所以 $\vb*{A}-\vb*{B}$ 半正定当且仅当 $\vb*{P}^\top(\vb*{A}-\vb*{B})\vb*{P}$ 半正定，这又等价为 $\lambda_k-1\geqslant 0,~(k=1,2,\cdots,n)$，即 $|\vb*{A}-\lambda\vb*{B}|=0$ 的任一根 $\lambda\geqslant 1.$
-        \item 由 (1) 可知 $\det\qty(\vb*{AB}^{-1})=\displaystyle\prod_{i=1}^{r}\lambda_k\geqslant 1$，所以 $\det\vb*{A}\geqslant \det\vb*{B}.$
+              因为 $\vb*{B}$ 是正定的, $\det\vb*{P}^2>0$, 所以 $|\vb*{B}|~\qty|\vb*{P}^2|>0$, 所以 $\lambda_1,\cdots,\lambda_n$ 是 $\vb*{AB}^{-1}$ 的全部特征值, 也是 $|\vb*{A}-\lambda\vb*{B}|$ 的所有根, 
+              又因为 $\vb*{P}^\top(\vb*{A}-\vb*{B})\vb*{P}$ 是实对称矩阵, 其特征值为 $\lambda_1-1,\lambda_2-1,\cdots,\lambda_n-1$, 
+              所以 $\vb*{A}-\vb*{B}$ 半正定当且仅当 $\vb*{P}^\top(\vb*{A}-\vb*{B})\vb*{P}$ 半正定, 这又等价为 $\lambda_k-1\geqslant 0,~(k=1,2,\cdots,n)$, 即 $|\vb*{A}-\lambda\vb*{B}|=0$ 的任一根 $\lambda\geqslant 1.$
+        \item 由 (1) 可知 $\det\qty(\vb*{AB}^{-1})=\displaystyle\prod_{i=1}^{r}\lambda_k\geqslant 1$, 所以 $\det\vb*{A}\geqslant \det\vb*{B}.$
     \end{enumerate}
 \end{proof}
 
 \begin{example}[1994 华中师范大学]
-    设 $\vb*{A}_{m\times n},~\vb*{B}_{s\times n}$ 均为行满秩实矩阵，$\vb*{Q}=\vb*{AB}^\top\qty(\vb*{BB}^\top)^{-1}\vb*{BA}^\top$，证明:
+    设 $\vb*{A}_{m\times n},~\vb*{B}_{s\times n}$ 均为行满秩实矩阵, $\vb*{Q}=\vb*{AB}^\top\qty(\vb*{BB}^\top)^{-1}\vb*{BA}^\top$, 证明:
     \begin{enumerate}[label=(\arabic{*})]
         \item $\vb*{AA}^\top-\vb*{Q}$ 是半正定的;
         \item $0\leqslant \det\vb*{Q}\leqslant \det\qty(\vb*{AA}^\top).$
@@ -260,15 +260,15 @@
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
     \begin{enumerate}[label=(\arabic{*})]
-        \item 由题意知: $\rank\vb*{A}=m,~\rank\vb*{B}=s$，且 $\rank\qty(\vb*{AA}^\top)=m,~\rank\qty(\vb*{BB}^\top)=s$，
-              所以 $\vb*{AA}^\top,~\vb*{BB}^\top$ 均为可逆矩阵，并且分块矩阵 $\mqty(\vb*{AA}^\top&\vb*{AB}^\top\\\vb*{BA}^\top&\vb*{BB}^\top)=\mqty(\vb*{A}\\\vb*{B})\mqty(\vb*{A}\\\vb*{B})^\top$ 是半正定的，且与 $\mqty(\vb*{AA}^\top-\vb*{Q}&\vb*{O}\\\vb*{O}&\vb*{BB}^\top)$ 合同，
+        \item 由题意知: $\rank\vb*{A}=m,~\rank\vb*{B}=s$, 且 $\rank\qty(\vb*{AA}^\top)=m,~\rank\qty(\vb*{BB}^\top)=s$, 
+              所以 $\vb*{AA}^\top,~\vb*{BB}^\top$ 均为可逆矩阵, 并且分块矩阵 $\mqty(\vb*{AA}^\top&\vb*{AB}^\top\\\vb*{BA}^\top&\vb*{BB}^\top)=\mqty(\vb*{A}\\\vb*{B})\mqty(\vb*{A}\\\vb*{B})^\top$ 是半正定的, 且与 $\mqty(\vb*{AA}^\top-\vb*{Q}&\vb*{O}\\\vb*{O}&\vb*{BB}^\top)$ 合同, 
               因此 $\vb*{AA}^\top-\vb*{Q}$ 是半正定的.
-        \item 易知 $\vb*{AA}^\top$ 是正定的，$\vb*{Q}$ 是半正定的，所以存在可逆实矩阵 $P$，使得 $$\vb*{P}^\top\qty(\vb*{AA}^\top)\vb*{P}=\vb*{E},~\vb*{P}^\top\vb*{QP}=\diag(\lambda_1,\lambda_2,\cdots,\lambda_n),~(\lambda_k\geqslant 0)$$
-              又因为 $\vb*{AA}^\top-\vb*{Q}$ 是半正定的，所以 $1-\lambda_k\geqslant 0$ 即 $0\leqslant \lambda_k\leqslant 1$，其中 $k=1,2,\cdots,n$，
+        \item 易知 $\vb*{AA}^\top$ 是正定的, $\vb*{Q}$ 是半正定的, 所以存在可逆实矩阵 $P$, 使得 $$\vb*{P}^\top\qty(\vb*{AA}^\top)\vb*{P}=\vb*{E},~\vb*{P}^\top\vb*{QP}=\diag(\lambda_1,\lambda_2,\cdots,\lambda_n),~(\lambda_k\geqslant 0)$$
+              又因为 $\vb*{AA}^\top-\vb*{Q}$ 是半正定的, 所以 $1-\lambda_k\geqslant 0$ 即 $0\leqslant \lambda_k\leqslant 1$, 其中 $k=1,2,\cdots,n$, 
               $$\det\qty(\vb*{P}^\top\vb*{QP})=\qty|\vb*{P}^2|~\qty|\vb*{Q}|=\prod_{i=1}^{r}\lambda_i\leqslant 1=\qty|\vb*{P}^2|\qty|\vb*{AA}^\top|\Rightarrow 0\leqslant \det\vb*{Q}\leqslant \det\qty(\vb*{AA}^\top).$$
     \end{enumerate}
 \end{proof}
 
 \begin{inference}[实对称半正定矩阵的单调性]
-    设 $\vb*{A},~\vb*{B},~\vb*{A}-\vb*{B}$ 均为 $n$ 阶实对称半正定矩阵，即 $\vb*{A}\geqslant \vb*{B}\geqslant 0$，则 $\det\vb*{A}\geqslant \det\vb*{B}\geqslant 0.$
+    设 $\vb*{A},~\vb*{B},~\vb*{A}-\vb*{B}$ 均为 $n$ 阶实对称半正定矩阵, 即 $\vb*{A}\geqslant \vb*{B}\geqslant 0$, 则 $\det\vb*{A}\geqslant \det\vb*{B}\geqslant 0.$
 \end{inference}

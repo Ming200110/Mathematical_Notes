@@ -4,12 +4,12 @@
 
 \begin{lemma}[Dirichlet 核]
     \label{Dirichlethe}
-    在区间 $(0,\pi)$ 上定义 $D_n=\dfrac{\sin\dfrac{(2n+1)x}{2}}{2\sin\dfrac{x}{2}},~n\in\mathbb{N}_+$，则有 $$\int_{0}^{\pi}D_n(x)\dd x=\dfrac{\pi}{2}.$$
+    在区间 $(0,\pi)$ 上定义 $D_n=\dfrac{\sin\dfrac{(2n+1)x}{2}}{2\sin\dfrac{x}{2}},~n\in\mathbb{N}_+$, 则有 $$\int_{0}^{\pi}D_n(x)\dd x=\dfrac{\pi}{2}.$$
 \end{lemma}
 \begin{proof}[{\songti \textbf{证}}]
-    显然，$D_n$ 在 $x=0$ 处无定义，但是 $\displaystyle\lim_{x\to0^+}D_n(x)=\dfrac{2n+1}{2}$，因此 $D_n$ 在 $[0,\pi]$ 可积，因为有三角恒等式
+    显然, $D_n$ 在 $x=0$ 处无定义, 但是 $\displaystyle\lim_{x\to0^+}D_n(x)=\dfrac{2n+1}{2}$, 因此 $D_n$ 在 $[0,\pi]$ 可积, 因为有三角恒等式
     $$2\sin\dfrac{x}{2}\qty(\dfrac{1}{2}+\sum_{k=1}^{n}\cos kx\dd x)=\sin\dfrac{(2n+1)x}{2}$$
-    于是，$\displaystyle D_n=\dfrac{1}{2}+\sum_{k=1}^{n}\cos kx$，所以，不难得到
+    于是, $\displaystyle D_n=\dfrac{1}{2}+\sum_{k=1}^{n}\cos kx$, 所以, 不难得到
     $$\int_{0}^{\pi}D_n(x)\dd x=\int_{0}^{\pi}\qty(\dfrac{1}{2}+\sum_{k=1}^{n}\cos kx)\dd x=\dfrac{\pi}{2}.$$
 \end{proof}
 
@@ -17,20 +17,20 @@
     $\displaystyle\int_{0}^{+\infty}\dfrac{\sin x}{x}\dd x=\dfrac{\pi}{2}.$
 \end{theorem}
 \begin{proof}[{\songti \textbf{证}}]
-    易知该反常积分条件收敛，根据引理 \ref{Dirichlethe} 有，$\displaystyle\int_{0}^{\pi}\dfrac{\sin\dfrac{(2n+1)\pi}{2}}{2\sin\dfrac{x}{2}}\dd x=\dfrac{\pi}{2}$，考虑将其分母换为 $x$ 所产生的影响，
-    由 L'Hospital 法则，有 $$f(x)=\dfrac{1}{x}-\dfrac{1}{2\sin\dfrac{x}{2}}=O(x)~~ (x\to0)$$
-    因此 $f$ 在 $[0,\pi]$ 上常义可积，由 Riemann-Lebesgue 定理，有
+    易知该反常积分条件收敛, 根据引理 \ref{Dirichlethe} 有, $\displaystyle\int_{0}^{\pi}\dfrac{\sin\dfrac{(2n+1)\pi}{2}}{2\sin\dfrac{x}{2}}\dd x=\dfrac{\pi}{2}$, 考虑将其分母换为 $x$ 所产生的影响, 
+    由 L'Hospital 法则, 有 $$f(x)=\dfrac{1}{x}-\dfrac{1}{2\sin\dfrac{x}{2}}=O(x)~~ (x\to0)$$
+    因此 $f$ 在 $[0,\pi]$ 上常义可积, 由 Riemann-Lebesgue 定理, 有
     $$\lim_{n\to\infty}f(x)\sin\qty(n+\dfrac{1}{2})x\dd x=0$$
     即 $$\lim_{n\to\infty}\int_{0}^{\pi}\dfrac{\sin\qty(n+\dfrac{1}{2})x}{x}\dd x=\lim_{n\to\infty}\int_{0}^{\pi}\dfrac{\sin\qty(n+\dfrac{1}{2})x}{2\sin\dfrac{x}{2}}\dd x=\dfrac{\pi}{2}$$
-    最后，作代换 $t=\qty(n+\dfrac{1}{2})x$，即得 $$\int_{0}^{\pi}\dfrac{\sin\qty(n+\dfrac{1}{2})x}{x}\dd x=\int_{0}^{\qty(n+\frac{1}{2})\pi}\dfrac{\sin t}{t}\dd t=\dfrac{\pi}{2}.$$
+    最后, 作代换 $t=\qty(n+\dfrac{1}{2})x$, 即得 $$\int_{0}^{\pi}\dfrac{\sin\qty(n+\dfrac{1}{2})x}{x}\dd x=\int_{0}^{\qty(n+\frac{1}{2})\pi}\dfrac{\sin t}{t}\dd t=\dfrac{\pi}{2}.$$
 \end{proof}
 
 \subsection{Lobachevsky 积分法}
 
 \begin{theorem}[Lobachevsky 积分法]
-    若 $f(x)$ 在 $x\in[0,+\infty)$ 范围内满足 $f(x+\pi)=f(x)$ 及 $f(\pi-x)=f(x)$，则
+    若 $f(x)$ 在 $x\in[0,+\infty)$ 范围内满足 $f(x+\pi)=f(x)$ 及 $f(\pi-x)=f(x)$, 则
     $$\int_{0}^{+\infty}f(x)\dfrac{\sin x}{x}\dd x=\int_{0}^{\frac{\pi}{2}}f(x)\dd x.$$
-    当 $f(x)=1$ 时，便是 Dirichlet 积分.
+    当 $f(x)=1$ 时, 便是 Dirichlet 积分.
 \end{theorem}
 
 \subsection{Fresnel 积分与 Fej\texorpdfstring{$\acute{\text{e}}$}.r 积分}
@@ -40,7 +40,7 @@
 \end{theorem}
 
 \begin{theorem}[Fej$\acute{\text{e}}$r 积分]
-    假设 $k\in\mathbb{N}^+$，则有以下四种形式的 Fej$\acute{\text{e}}$r 积分:
+    假设 $k\in\mathbb{N}^+$, 则有以下四种形式的 Fej$\acute{\text{e}}$r 积分:
     \begin{enumerate}[label=(\arabic{*})]
         \item $\displaystyle \int_{0}^{\pi}\dfrac{\sin nx}{\sin x}\dd x=\begin{cases}
                       0,   & n=2k    \\
@@ -61,7 +61,7 @@
     $\displaystyle \int_{0}^{+\infty}\dfrac{\cos bx}{a^2+x^2}\dd x=\dfrac{\pi}{2a}\e^{-ab},~\int_{0}^{+\infty}\dfrac{x\sin bx}{a^2+x^2}\dd x=\dfrac{\pi}{2}\e^{-ab}~~(a,b>0).$
 \end{theorem}
 \begin{inference}
-    当 $4q>p^2$ 时，有
+    当 $4q>p^2$ 时, 有
     \begin{flalign*}
         \int_{-\infty}^{+\infty}\dfrac{\cos x}{x^2+px+q}\dd x & =\dfrac{2\pi}{\sqrt{4q-p^2}}\e^{-\frac{\sqrt{4q-p^2}}{2}}\cos\dfrac{p}{2}   \\
         \int_{-\infty}^{+\infty}\dfrac{\sin x}{x^2+px+q}\dd x & =-\dfrac{2\pi}{\sqrt{4q-p^2}}\e^{-\frac{\sqrt{4q-p^2}}{2}}\sin\dfrac{p}{2}.

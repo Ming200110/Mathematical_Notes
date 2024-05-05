@@ -7,7 +7,7 @@
 % %         \dfrac{\theta ^2}{x^3}\mathrm{e}^{-\frac{\theta }{x} }&,x>0  \\
 % %        0&,\text{其他}
 % %        \end{cases}$$
-% %        其中 $\theta$ 为未知参数且大于零，$X_1,X_2,\cdots,X_n$ 为来自总体 $X$ 的简单随机样本，
+% %        其中 $\theta$ 为未知参数且大于零, $X_1,X_2,\cdots,X_n$ 为来自总体 $X$ 的简单随机样本, 
 % %        求 $\theta$ 的矩估计量.
 % % \end{example}
 
@@ -17,27 +17,27 @@
 %             \dfrac{6x}{\theta^3}(\theta-x) & ,0<x<\theta  \\
 %             0                              & ,\text{其他}
 %         \end{cases}$$
-%     $X_1,X_2,\cdots,X_n$ 为来自总体 $X$ 的简单随机样本，求 $\theta$ 的矩估计量 $\hat{\theta} $ 以及求 $\hat{\theta} $ 的方差 $D\qty(\hat{\theta} ).$
+%     $X_1,X_2,\cdots,X_n$ 为来自总体 $X$ 的简单随机样本, 求 $\theta$ 的矩估计量 $\hat{\theta} $ 以及求 $\hat{\theta} $ 的方差 $D\qty(\hat{\theta} ).$
 % \end{example}
 % \begin{solution}
-%     由 $\displaystyle E(X)=\int_{0}^{\theta}xf(x)\dd x$ 得，
+%     由 $\displaystyle E(X)=\int_{0}^{\theta}xf(x)\dd x$ 得, 
 %     $$E(X)=\int_{0}^{\theta}\dfrac{6x^2}{\theta^3}(\theta-x)\dd x=\dfrac{\theta}{2}$$
-%     记 $\displaystyle\bar{X}=\dfrac{1}{n}\sum_{i=1}^{n}X_i$，令 $\dfrac{\theta}{2}=\bar{X}$，得 $\theta$ 的矩估计量为 $\hat{\theta}=2\bar{X}$;
+%     记 $\displaystyle\bar{X}=\dfrac{1}{n}\sum_{i=1}^{n}X_i$, 令 $\dfrac{\theta}{2}=\bar{X}$, 得 $\theta$ 的矩估计量为 $\hat{\theta}=2\bar{X}$;
 %     根据方差与期望的关系 $$D(X)=E(X^2)-E^2(X)$$
-%     且 $\displaystyle E(X^2)=\int_{0}^{\theta}x^2f(x)\dd x=\int_{0}^{\theta}\dfrac{6x^3}{\theta^3}(\theta-x)\dd x=\dfrac{3\theta^2}{10}$，
-%     那么 $D(X)=\dfrac{\theta^2}{20}$，所以 $\hat{\theta}=2\bar{X}$ 的方差为
+%     且 $\displaystyle E(X^2)=\int_{0}^{\theta}x^2f(x)\dd x=\int_{0}^{\theta}\dfrac{6x^3}{\theta^3}(\theta-x)\dd x=\dfrac{3\theta^2}{10}$, 
+%     那么 $D(X)=\dfrac{\theta^2}{20}$, 所以 $\hat{\theta}=2\bar{X}$ 的方差为
 %     $$D\qty(\hat{\theta})=D\qty(2\bar{X})=4D(\bar{X})=\dfrac{4}{n}D(X)=\dfrac{\theta^2}{5n}.$$
 % \end{solution}
 
 % \subsection{置信区间}
 
 % \begin{theorem}[单个正态总体均值和方差的置信区间]
-%     设总体 $X\sim N(\mu,\sigma^2)$，常见的置信区间有: 
+%     设总体 $X\sim N(\mu,\sigma^2)$, 常见的置信区间有: 
 %     \begin{enumerate}[label=(\arabic{*})]
-%         \item 当 $\sigma^2$ 已知时，$\mu$ 的置信度为 $1-\alpha$ 的置信区间为 $\qty(\bar{X}-U_{\frac{\alpha}{2}}\dfrac{\sigma}{\sqrt{n}},\bar{X}+U_{\frac{\alpha}{2}}\dfrac{\sigma}{\sqrt{n}})$.
-%         \item 当 $\sigma^2$ 未知时，$\mu$ 的置信度为 $1-\alpha$ 的置信区间为 $\qty(\bar{X}-t_{\frac{\alpha}{2}}(n-1)\dfrac{S}{\sqrt{n}},\bar{X}+t_{\frac{\alpha}{2}}(n-1)\dfrac{S}{\sqrt{n}})$.
-%         \item 当 $\mu$ 已知时，$\sigma^2$ 的置信度为 $1-\alpha$ 的置信区间为 $\qty(\dfrac{\sum_{i=1}^{n}(X_i-n)^2}{\chi^2_{\frac{\alpha}{2}}(n)},\dfrac{\sum_{i=1}^{n}(X_i-n)^2}{\chi^2_{1-\frac{\alpha}{2}}(n)}).$
-%         \item 当 $\mu$ 未知时，$\sigma^2$ 的置信度为 $1-\alpha$ 的置信区间为 $\qty(\dfrac{(n-1)S^2}{\chi^2_{\frac{\alpha}{2}}(n)},\dfrac{(n-1)S^2}{\chi^2_{1-\frac{\alpha}{2}}(n)})$，$\sigma$ 的置信区间为 $\qty(\sqrt{\dfrac{(n-1)S^2}{\chi^2_{\frac{\alpha}{2}}(n)}},\sqrt{\dfrac{(n-1)S^2}{\chi^2_{1-\frac{\alpha}{2}}(n)}})$.
+%         \item 当 $\sigma^2$ 已知时, $\mu$ 的置信度为 $1-\alpha$ 的置信区间为 $\qty(\bar{X}-U_{\frac{\alpha}{2}}\dfrac{\sigma}{\sqrt{n}},\bar{X}+U_{\frac{\alpha}{2}}\dfrac{\sigma}{\sqrt{n}})$.
+%         \item 当 $\sigma^2$ 未知时, $\mu$ 的置信度为 $1-\alpha$ 的置信区间为 $\qty(\bar{X}-t_{\frac{\alpha}{2}}(n-1)\dfrac{S}{\sqrt{n}},\bar{X}+t_{\frac{\alpha}{2}}(n-1)\dfrac{S}{\sqrt{n}})$.
+%         \item 当 $\mu$ 已知时, $\sigma^2$ 的置信度为 $1-\alpha$ 的置信区间为 $\qty(\dfrac{\sum_{i=1}^{n}(X_i-n)^2}{\chi^2_{\frac{\alpha}{2}}(n)},\dfrac{\sum_{i=1}^{n}(X_i-n)^2}{\chi^2_{1-\frac{\alpha}{2}}(n)}).$
+%         \item 当 $\mu$ 未知时, $\sigma^2$ 的置信度为 $1-\alpha$ 的置信区间为 $\qty(\dfrac{(n-1)S^2}{\chi^2_{\frac{\alpha}{2}}(n)},\dfrac{(n-1)S^2}{\chi^2_{1-\frac{\alpha}{2}}(n)})$, $\sigma$ 的置信区间为 $\qty(\sqrt{\dfrac{(n-1)S^2}{\chi^2_{\frac{\alpha}{2}}(n)}},\sqrt{\dfrac{(n-1)S^2}{\chi^2_{1-\frac{\alpha}{2}}(n)}})$.
 %     \end{enumerate}
 % \end{theorem}
 
@@ -47,23 +47,23 @@
 
 \section{极大似然估计}
 
-极大似然估计法是参数估计使用的最广泛的方法，最早由德国数学家 Gauss 在 1821 年提出，
-但是此法一般归功于英国统计学家 Fisher，因为 Fisher 于 1922 年再次提出了这个思想，并且证明了这种方法的一些性质，
+极大似然估计法是参数估计使用的最广泛的方法, 最早由德国数学家 Gauss 在 1821 年提出, 
+但是此法一般归功于英国统计学家 Fisher, 因为 Fisher 于 1922 年再次提出了这个思想, 并且证明了这种方法的一些性质, 
 从而使得极大似然法得到更普遍的应用.
 
 \begin{example}
-    设 $X_i,~i=1,2,\cdots,n$ 为来自总体 $X\sim B(N,p)~~(0<p<1)$ 的简单随机样本，求 $p$ 的极大似然估计量.
+    设 $X_i,~i=1,2,\cdots,n$ 为来自总体 $X\sim B(N,p)~~(0<p<1)$ 的简单随机样本, 求 $p$ 的极大似然估计量.
 \end{example}
 \begin{solution}
-    似然函数为 $\displaystyle L(p)=\prod_{i=1}^{n} \mathrm{C}_{N}^{x_{i}} \cdot p^{x_{i}} \cdot(1-p)^{N-x_{i}} $，两边取对数，得
+    似然函数为 $\displaystyle L(p)=\prod_{i=1}^{n} \mathrm{C}_{N}^{x_{i}} \cdot p^{x_{i}} \cdot(1-p)^{N-x_{i}} $, 两边取对数, 得
     $$\ln L(p)=\sum_{i=1}^{n} \ln C_{N}^{x_{i}}+\sum_{i=1}^{n} x_{i} \ln p+\sum_{i=1}^{n}\left(N-X_{i}\right) \ln (1-p)$$
     令 $$\frac{\mathrm{d}}{\mathrm{d} p} \ln L(p)=\frac{1}{p} \sum_{i=1}^{n} x_{i}-\frac{1}{1-p}\left(n N-\sum_{i=1}^{n} x_{i}\right)=0$$
-    解得 $\displaystyle p=\frac{\displaystyle \sum_{i=1}^{n} x_{i}}{n N}=\frac{\bar{X}}{N} $，故 $ p $ 的最大似然估计量为 $ \hat{p}=\dfrac{\bar{X}}{N} $，
+    解得 $\displaystyle p=\frac{\displaystyle \sum_{i=1}^{n} x_{i}}{n N}=\frac{\bar{X}}{N} $, 故 $ p $ 的最大似然估计量为 $ \hat{p}=\dfrac{\bar{X}}{N} $, 
     其中 $ \displaystyle\bar{X}=\dfrac{1}{n} \sum_{i=1}^{n} X_{i} .$
 \end{solution}
 
 \begin{example}
-    设总体概率函数如下，$x_1,x_2,\cdots,x_n$ 是样本，试求未知参数的极大似然估计:
+    设总体概率函数如下, $x_1,x_2,\cdots,x_n$ 是样本, 试求未知参数的极大似然估计:
     \begin{enumerate}[label=(\arabic{*})]
         \item $\displaystyle p(x;\theta)=\sqrt{\theta}x^{\sqrt{\theta}-1},0<x<1,\theta>0;$
         \item $\displaystyle p(x;\theta)=\theta c^\theta x^{-(\theta+1)},x>c>0,\theta>1.$
@@ -71,19 +71,19 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 似然函数 $\displaystyle L(\theta)=\left( \sqrt{\theta }\right) ^{n}\left( \prod ^{n}_{i=1}x_{i}\right) ^{\sqrt{\theta }-1}$，取对数得
+        \item 似然函数 $\displaystyle L(\theta)=\left( \sqrt{\theta }\right) ^{n}\left( \prod ^{n}_{i=1}x_{i}\right) ^{\sqrt{\theta }-1}$, 取对数得
               $$\ln L\left( \theta \right) =\dfrac{n}{2}\ln \theta +\left( \sqrt{\theta }-1\right) \sum ^{n}_{i=1}\ln x_{i}$$
-              将 $\ln L(\theta)$ 关于 $\theta$ 求导，并令其值为 $0$ 即得到似然函数
+              将 $\ln L(\theta)$ 关于 $\theta$ 求导, 并令其值为 $0$ 即得到似然函数
               $$\dfrac{\partial \ln L\left( \theta \right) }{\partial \theta }=\dfrac{n}{2\theta }+\dfrac{1}{2\sqrt{\theta }}\sum ^{n}_{i=1}x_{i}=0$$
-              解得 $\displaystyle\widehat{\theta }=\left( \dfrac{1}{n}\sum ^{n}_{i=1}\ln x_{i}\right) ^{-2}$，并且
+              解得 $\displaystyle\widehat{\theta }=\left( \dfrac{1}{n}\sum ^{n}_{i=1}\ln x_{i}\right) ^{-2}$, 并且
               $$ \dfrac{\partial ^{2}\ln L\left( \theta \right) }{\partial \theta ^{2}}\bigg | _{\theta=\widehat{\theta }}= \left( -\dfrac{n}{2\theta ^{2}}-\dfrac{1}{4\theta ^{3/2}}\sum ^{n}_{i=1}\ln x_{i}\right) \bigg | _{\theta=\widehat{\theta }}=-\dfrac{3}{4n^{3}}\left( \sum ^{n}_{i=1}\ln x_{i}\right) ^{4}<0$$
               所以 $\widehat{\theta}$ 是 $\theta$ 的极大似然估计.
-        \item 似然函数 $\displaystyle L(\theta)=\theta ^{n}c^{n\theta }\left( \prod ^{n}_{i=1}x_{i}\right) ^{-\left( \theta +1\right) }$，取对数得
+        \item 似然函数 $\displaystyle L(\theta)=\theta ^{n}c^{n\theta }\left( \prod ^{n}_{i=1}x_{i}\right) ^{-\left( \theta +1\right) }$, 取对数得
               $$\ln L\left( \theta \right) =n\ln \theta +n\theta \ln c-\left( \theta +1\right) \sum ^{n}_{i=1}\ln x_{i}$$
-              将 $\ln L(\theta)$ 关于 $\theta$ 求导，并令其值为 $0$ 即得到似然函数
+              将 $\ln L(\theta)$ 关于 $\theta$ 求导, 并令其值为 $0$ 即得到似然函数
               $$\dfrac{\partial \ln L\left( \theta \right) }{\partial \theta }=\dfrac{n}{\theta }+n\ln c-\sum ^{n}_{i=1}\ln x_{i}=0$$
-              解得 $\displaystyle \widehat{\theta }=\left[ \dfrac{1}{n}\sum ^{n}_{i=1}\left( \ln x_{i}-\ln c\right) \right] ^{-1}$，
-              并且 $\displaystyle \dfrac{\partial ^{2}\ln L\left( \theta \right) }{\partial \theta ^{2}}=\dfrac{-n}{\theta ^{2}} <0$，所以 $\widehat{\theta}$ 是 $\theta$ 的极大似然估计.
+              解得 $\displaystyle \widehat{\theta }=\left[ \dfrac{1}{n}\sum ^{n}_{i=1}\left( \ln x_{i}-\ln c\right) \right] ^{-1}$, 
+              并且 $\displaystyle \dfrac{\partial ^{2}\ln L\left( \theta \right) }{\partial \theta ^{2}}=\dfrac{-n}{\theta ^{2}} <0$, 所以 $\widehat{\theta}$ 是 $\theta$ 的极大似然估计.
     \end{enumerate}
 \end{solution}
 
@@ -92,15 +92,15 @@
             1-\mathrm{e}^{-\qty(\frac{t}{\theta})^m} & ,t\geqslant 0 \\
             0                                        & ,\text{其他}
         \end{cases}$$
-    其中 $m,~\theta$ 为参数且大于 0，
+    其中 $m,~\theta$ 为参数且大于 0, 
     \begin{enumerate}[label=(\arabic{*})]
-        \item 求概率 $P\qty{T>t}$ 与 $P\qty{T>s+t~|~T>s}$，其中 $s,t>0$;
-        \item 任取 $n$ 个这种元件做寿命试验，测得它们的寿命分别为 $t_1,t_2,\cdots,t_n$，若 $m$ 已知，求 $\theta$ 的极大似然估计值 $\hat\theta.$
+        \item 求概率 $P\qty{T>t}$ 与 $P\qty{T>s+t~|~T>s}$, 其中 $s,t>0$;
+        \item 任取 $n$ 个这种元件做寿命试验, 测得它们的寿命分别为 $t_1,t_2,\cdots,t_n$, 若 $m$ 已知, 求 $\theta$ 的极大似然估计值 $\hat\theta.$
     \end{enumerate}
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 由 $P\qty{T>t}=1-P\qty{T\leqslant t}$，所以 $P\qty{T>t}=1-F(t)=\mathrm{e}^{-\qty(\frac{t}{\theta})^m}$，
+        \item 由 $P\qty{T>t}=1-P\qty{T\leqslant t}$, 所以 $P\qty{T>t}=1-F(t)=\mathrm{e}^{-\qty(\frac{t}{\theta})^m}$, 
               并且 $$P\qty{T>s+t~|~T>s}=\dfrac{P\qty{T>s+t,T>s}}{P\qty{T>s}}=\dfrac{P\qty{T>s+t}}{P\qty{T>s}}$$
               所以 $P\qty{T>s+t~|~T>s}=\mathrm{e}^{-\qty(\frac{s+t}{\theta})^m+\qty(\frac{s}{\theta})^m},~s,t>0$;
         \item 由 $f(t)=F'(t)$ 可得概率密度函数 $$f(t)=\begin{cases}
@@ -112,7 +112,7 @@
                   \ln\qty[L(\theta)] & =\ln\qty[\prod_{i=1}^{n}f(t_i;\theta)]=\ln\qty[\prod_{i=1}^{n}\dfrac{mt_i^{m-1}}{\theta^m}\mathrm{e}^{-\qty(\frac{t_i}{\theta})^m}]=\ln\qty[\dfrac{m^n(t_1t_2\cdots t_n)^{m-1}}{\theta^{mn}}\cdot\mathrm{e}^{-\frac{1}{\theta^m}\sum\limits_{i=1}^{n}t_i^m}] \\
                                      & =n\ln m+(m-1)\ln\prod_{i=1}^{n}t_i-mn\ln\theta-\dfrac{1}{\theta^m}\sum_{i=1}^{n}t_i^m
               \end{flalign*}
-              求导得 $\displaystyle\dv{\ln\qty[L(\theta)]}{\theta}=-\dfrac{mn}{\theta}+m\dfrac{1}{\theta^{m+1}}\sum_{i=1}^{n}t_i^m=0$，解得 $\displaystyle\dfrac{1}{\theta^m}\sum_{i=1}^{n}t_i^m=n$，
+              求导得 $\displaystyle\dv{\ln\qty[L(\theta)]}{\theta}=-\dfrac{mn}{\theta}+m\dfrac{1}{\theta^{m+1}}\sum_{i=1}^{n}t_i^m=0$, 解得 $\displaystyle\dfrac{1}{\theta^m}\sum_{i=1}^{n}t_i^m=n$, 
               那么 $\theta$ 的极大似然估计值为 $\hat\theta=\sqrt[m]{\dfrac{1}{n}\displaystyle\sum_{i=1}^{n}t_i^m}.$
     \end{enumerate}
 \end{solution}
