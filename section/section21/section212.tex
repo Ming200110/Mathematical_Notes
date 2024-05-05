@@ -88,3 +88,25 @@
 
 \subsection{双正态总体均值差与方差比的置信区间}
 
+% TODO
+
+\newpage
+\begin{sidewaystable}[thp]
+    \captionsetup{justification=raggedright}  % Left: using raggedleft; right: using raggedright
+    \caption{正态总体参数区间估计表}
+    \label{normalPopulationParameterIntervalEstimationTable}
+    \centering
+    \resizebox{.99\textwidth}{!}{
+        \begin{tabular}{cccccc}
+            \textbf{总体} & \textbf{参数} & \textbf{统计量} & \textbf{双侧置信区间} & \multicolumn{2}{c}{\textbf{单侧置信区间}} \\
+            \toprule
+            \makecell[c]{$X\sim N\qty(\mu,\sigma_0^2)$                                                                          \\ $\sigma^2$ 已知} & $\mu$ & $Z=\dfrac{\bar{X}-\mu}{\sigma/\sqrt{n}}\sim N(0,1)$ & $\qty(\bar{X}\pm \dfrac{\sigma}{\sqrt{n}}z_{\alpha/2})$ & $\qty(-\infty,\bar{X}+\dfrac{\sigma}{\sqrt{n}}z_{\alpha})$ & $\qty(\bar{X}-\dfrac{\sigma}{\sqrt{n}}z_\alpha,+\infty)$\\
+            \makecell[c]{$X\sim N\qty(\mu,\sigma^2)$                                                                            \\ $\sigma^2$ 未知} & $\mu$ & $t=\dfrac{\bar{X}-\mu}{S/\sqrt{n}}\sim t(n-1)$ & $\qty(\bar{X}\pm t_{\alpha/2}(n-1)\dfrac{S}{\sqrt{n}})$ & $\qty(-\infty,\bar{X}+t_{\alpha}(n-1)\dfrac{S}{\sqrt{n}})$ & $\qty(\bar{X}-t_{\alpha}(n-1)\dfrac{S}{\sqrt{n}},+\infty)$\\
+            \makecell[c]{$X\sim N\qty(\mu,\sigma^2)$                                                                            \\ $\mu$ 未知} & $\sigma^2$ & \makecell[l]{$\chi^2=\dfrac{(n-1)S^2}{\sigma^2}$\\$\sim \chi^2(n-1)$} & $\qty(\dfrac{(n-1)S^2}{\chi^2_{\alpha/2}(n-1)},\dfrac{(n-1)S^2}{\chi^2_{1-\alpha/2}(n-1)})$ & $\qty(0,\dfrac{(n-1)S^2}{\chi^2_{1-\alpha}(n-1)})$ & $\qty(\dfrac{(n-1)S^2}{\chi^2_{\alpha}(n-1)},+\infty)$ \\
+            \midrule
+            \makecell[c]{$X\sim N\qty(\mu_1,\sigma_1^2)$                                                                        \\ $Y\sim N\qty(\mu_2,\sigma_2^2)$\\ $\sigma_1^2,\sigma_2^2$ 已知} & $\mu_1-\mu_2$ & \makecell[l]{$Z=\dfrac{\bar{X}-\bar{Y}-(\mu_1-\mu_2)}{\sqrt{\dfrac{\sigma_1^2}{n_1}+\dfrac{\sigma_2^2}{n_2}}}$\\$\sim N(0,1)$} & $\qty(X-Y\pm z_{\alpha/2}\sqrt{\dfrac{\sigma_1^2}{n_1}+\dfrac{\sigma_2^2}{n_2}})$ & \makecell[l]{$\left (-\infty, \bar{X}-\bar{Y}\right .$\\$\left .+z_{\alpha}\sqrt{\dfrac{\sigma_1^2}{n_1}+\dfrac{\sigma_2^2}{n_2}}\right )$} & \makecell[l]{$\left (\bar{X}-\bar{Y}\right .$\\$\left .-z_{\alpha}\sqrt{\dfrac{\sigma_1^2}{n_1}+\dfrac{\sigma_2^2}{n_2}},+\infty\right )$}\\
+            \makecell[c]{$X\sim N\qty(\mu_1,\sigma^2)$                                                                          \\ $Y\sim N\qty(\mu_2,\sigma^2)$\\ $\sigma^2$ 未知} & $\mu_1-\mu_2$ & \makecell[l]{$t=\dfrac{\bar{X}-\bar{Y}-(\mu_1-\mu_2)}{S_w\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}}}$\\ $\sim t(n_1+n_2-2)$} & \makecell[l]{$\left ( \bar{X}-\bar{Y}+\pm t_{\alpha/2}\left (n_1+n_2\right .\right .$\\ $-2)\cdot \left .S_w\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}}\right )$} & \makecell[l]{$\left (-\infty,\bar{X}-\bar{Y}+t_{\alpha}\left (n_1+n_2\right .\right .$\\ $\left .-2)\cdot S_w\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}}\right )$} & \makecell[l]{$\left (\bar{X}-\bar{Y}-t_{\alpha}\left (n_1+n_2\right .\right .$\\ $\left .-2)\cdot S_w\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}},+\infty\right )$}\\
+            \makecell[c]{$X\sim N\qty(\mu_1,\sigma_1^2)$                                                                        \\ $Y\sim N\qty(\mu_2,\sigma_2^2)$\\ $\mu_1,\mu_2$ 未知} & $\dfrac{\sigma_1^2}{\sigma_2^2}$ & \makecell[l]{$F=\dfrac{S_1^2/S_2^2}{\sigma_1^2/\sigma_2^2}$\\ $\sim F(n_1-1,n_2-1)$} & \makecell[l]{$\left (\dfrac{S_1^2}{S_2^2}\cdot F_{\alpha/2}^{-1}(n_1-1,n_2-1)\right .$\\ $\left .\dfrac{S_1^2}{S_2^2}\cdot F_{1-\alpha/2}^{-1}(n_1-1,n_2-1)\right )$} & $\qty(0,\dfrac{S_1^2}{S_2^2}\cdot F_{1-\alpha}^{-1}(n_1-1,n_2-1))$ & $\qty(\dfrac{S_1^2}{S_2^2}\cdot F_{\alpha}^{-1}(n_1-1,n_2-1),+\infty)$
+        \end{tabular}
+    }
+\end{sidewaystable}
