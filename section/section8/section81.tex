@@ -72,7 +72,7 @@ $f(x,y)$ 是关于 $x$ 和 $y$ 的函数.
 
 \subsection{齐次微分方程}
 
-\begin{definition}[齐次微分方程的定义]
+\begin{definition}[齐次微分方程]
     形如 $\dfrac{\dd y}{\dd x}=F\left(\dfrac{y}{x}\right)$ 的方程称为\textit{齐次微分方程}.
 \end{definition}
 
@@ -114,7 +114,7 @@ $\begin{cases}
 a_{2} h+b_{2} k+c_{2}=0
 \end{cases}$ 解出 $ h $ 与 $ k $, 可将原方程化为齐次方程
 $$\dfrac{\dd Y}{\dd X}=f\left(\dfrac{a_{1} X+b_{1} Y}{a_{2} X+b_{2} Y}\right)=f\left(\dfrac{a_{1}+b_{1} \dfrac{Y}{X}}{a_{2}+b_{2} \dfrac{Y}{X}}\right)=g\left(\dfrac{Y}{X}\right)$$
-当 $ \left|\begin{array}{ll}a_{1} & b_{1} \\ a_{2} & b_{2}\end{array}\right|=0 $ 时, 即 $ \dfrac{a_{1}}{a_{2}}=\dfrac{b_{1}}{b_{2}}=k $, 可设 $ u=a_{2} x+b_{2} y $, 代人原方程后可化为可分离变量的微分方程, 即有
+当 $ \mqty|a_{1} & b_{1} \\ a_{2} & b_{2}|=0 $ 时, 即 $ \dfrac{a_{1}}{a_{2}}=\dfrac{b_{1}}{b_{2}}=k $, 可设 $ u=a_{2} x+b_{2} y $, 代人原方程后可化为可分离变量的微分方程, 即有
 $$\dfrac{\dd y}{\dd x}=f\left(\dfrac{k u+c_{1}}{u+c_{2}}\right)=g(u), \quad \dfrac{\dd u}{\dd x}=a_{2}+b_{2} g(u).$$
 
 \subsection{线性微分方程}
@@ -140,7 +140,7 @@ $$\dfrac{\dd y}{\dd x}=f\left(\dfrac{k u+c_{1}}{u+c_{2}}\right)=g(u), \quad \dfr
 
 \subsection{Bernoulli 微分方程}
 
-\begin{definition}
+\begin{definition}[Bernoulli 微分方程]
     形如 $\dfrac{\dd y}{\dd x}+p(x)y=q(x)y^n,~n\not=0,1$ 的方程称为 \textit{Bernoulli 微分方程}.
 \end{definition}
 
@@ -189,7 +189,7 @@ $$\dfrac{\dd y}{\dd x}=f\left(\dfrac{k u+c_{1}}{u+c_{2}}\right)=g(u), \quad \dfr
 
 \subsubsection{恰当方程}
 
-\begin{definition}
+\begin{definition}[全微分方程]
     对于微分方程 $$P(x,y)\dd x+Q(x,y)\dd y=0$$
     若 $\displaystyle\pdv{P}{y}=\pdv{Q}{x}$, 则该方程称为\textit{恰当方程}或\textit{全微分方程}.
 \end{definition}

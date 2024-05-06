@@ -118,9 +118,11 @@
 $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
 其中 $a_n$ 称为级数的一般项.
 
-令 $S_n=a_1+a_2+\cdots+a_n$, 则称 $S_n$ 为级数的部分和, 而称 $\qty{S_n}$ 为级数的部分和数列.
-若 $S_n\to S(n\to\infty)$, 则称级数收敛, 并称其收敛于和 $S$, 而称 $r_n=S-S_n$ 为级数的余项, 
-否则就称级数发散.
+\begin{definition}[级数的敛散性]
+    令 $S_n=a_1+a_2+\cdots+a_n$, 则称 $S_n$ 为级数的部分和, 而称 $\qty{S_n}$ 为级数的部分和数列.
+    若 $S_n\to S(n\to\infty)$, 则称级数收敛, 并称其收敛于和 $S$, 而称 $r_n=S-S_n$ 为级数的余项,
+    否则就称级数发散.
+\end{definition}
 
 研究一个级数是收敛还是发散, 称为级数的审敛.
 \begin{theorem}[级数收敛的必要条件]
@@ -130,32 +132,32 @@ $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
 
 为了迅速而又准确地判断一个级数的敛散性, 掌握以下几个已知其敛散性的级数往往是有益的.
 
-\begin{theorem}[几何级数]
+\begin{definition}[几何级数]
     若有几何级数 $\displaystyle\sum_{n=1}^{\infty}ar^n$, 那么当 $|r|<1$ 时收敛, 且其和为 $\dfrac{a}{1-r}$; 当 $|r|\geqslant 1$ 时发散.
     \index{几何级数}
-\end{theorem}
+\end{definition}
 
-\begin{theorem}[调和级数]
+\begin{definition}[调和级数]
     称 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n}$ 为调和级数, 并且该级数是发散的.
     \index{调和级数}
-\end{theorem}
+\end{definition}
 
-\begin{theorem}[p-级数]
+\begin{definition}[p-级数]
     若有 p-级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^p}$, 那么当 $p>1$ 时收敛, 当 $p\leqslant 1$ 时发散.
     \index{p-级数}
-\end{theorem}
+\end{definition}
 
 \begin{example}
-    级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^{1+\frac{1}{n}}}$ 的敛散性的下列结论中, 正确的是 
+    级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^{1+\frac{1}{n}}}$ 的敛散性的下列结论中, 正确的是
     \begin{tasks}(2)
         \task 因 $1+\dfrac{1}{n}>1$ 故级数收敛
         \task 因 $\displaystyle\lim_{n\to\infty}\dfrac{1}{n^{1+\frac{1}{n}}}=0$ 故级数收敛
         \task 因 $\dfrac{1}{n^{1+\frac{1}{n}}}<\dfrac{1}{n}$ 故级数收敛
         \task 级数发散
-        \end{tasks}
+    \end{tasks}
 \end{example}
 \begin{solution}
-    p-级数 中的 $p$ 表示为常数, 与 $n$ 无关, 所以选项 A 错误, 事实上, $\displaystyle \lim_{n\to\infty}\dfrac{\dfrac{1}{n^{1+\frac{1}{n}}}}{\dfrac{1}{n}}=\lim_{n\to\infty}\dfrac{1}{n^{\frac{1}{n}}}=1$, 其中 $\displaystyle\lim_{n\to\infty}n^{\frac{1}{n}}=1$ (重要极限), 
+    p-级数 中的 $p$ 表示为常数, 与 $n$ 无关, 所以选项 A 错误, 事实上, $\displaystyle \lim_{n\to\infty}\dfrac{\dfrac{1}{n^{1+\frac{1}{n}}}}{\dfrac{1}{n}}=\lim_{n\to\infty}\dfrac{1}{n^{\frac{1}{n}}}=1$, 其中 $\displaystyle\lim_{n\to\infty}n^{\frac{1}{n}}=1$ (重要极限),
     则原级数的敛散性与 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n}$ 同敛散, 又 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n}$ 发散, 故级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^{1+\frac{1}{n}}}$ 发散, 选 D.
 \end{solution}
 
@@ -187,7 +189,7 @@ $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
 \end{theorem}
 
 \begin{theorem}[比较审敛法]
-    设 $\displaystyle  \sum_{n=1}^{\infty} u_{n}, \sum_{n=1}^{\infty} v_{n} $ 是两个正项级数, 且 $ u_{n} \leqslant v_{n}(n=1,2, \cdots) $, 
+    设 $\displaystyle  \sum_{n=1}^{\infty} u_{n}, \sum_{n=1}^{\infty} v_{n} $ 是两个正项级数, 且 $ u_{n} \leqslant v_{n}(n=1,2, \cdots) $,
     若 $\displaystyle  \sum_{n=1}^{\infty} v_{n} $ 收敛, 则 $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 收敛; 若 $\displaystyle  \sum_{n=1}^{\infty} u_{n}  $发散, 则 $\displaystyle \sum_{n=1}^{\infty} v_{n} $ 发散 (“大收敛, 小发散”).\\
     特别地, 条件 $ u_{n} \leqslant v_{n}(n=1,2, \cdots) $ 可改为 $ u_{n} \leqslant c v_{n}(n \geqslant k, c>0)$, 结论仍然成立.
     \index{比较审敛法}
@@ -213,10 +215,10 @@ $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
     \end{tasks}
 \end{example}
 \begin{solution}
-    若令 $ a_{n}=b_{n}=\dfrac{(-1)^{n}}{\sqrt{n}}$, 则 $\displaystyle \lim _{n \rightarrow \infty} a_{n}=0, \sum_{n=1}^{\infty} b_{n} $ 收敛, 
-    却有 $\displaystyle  \sum_{n=1}^{\infty} a_{n} b_{n}=\sum_{n=1}^{\infty} \frac{1}{n} $ 发散 $\displaystyle \sum_{n=1}^{\infty} a_{n}^{2} b_{n}^{2}=\sum_{n=1}^{\infty} \frac{1}{n^{2}} $ 收敛, 
+    若令 $ a_{n}=b_{n}=\dfrac{(-1)^{n}}{\sqrt{n}}$, 则 $\displaystyle \lim _{n \rightarrow \infty} a_{n}=0, \sum_{n=1}^{\infty} b_{n} $ 收敛,
+    却有 $\displaystyle  \sum_{n=1}^{\infty} a_{n} b_{n}=\sum_{n=1}^{\infty} \frac{1}{n} $ 发散 $\displaystyle \sum_{n=1}^{\infty} a_{n}^{2} b_{n}^{2}=\sum_{n=1}^{\infty} \frac{1}{n^{2}} $ 收敛,
     故排除 A, D;
-    若取 $ a_{n}=b_{n}=\dfrac{1}{n} $, 则 $\displaystyle  \lim _{n \rightarrow \infty} a_{n}=0, \sum_{n=1}^{\infty}\left|b_{n}\right| $ 发散, 
+    若取 $ a_{n}=b_{n}=\dfrac{1}{n} $, 则 $\displaystyle  \lim _{n \rightarrow \infty} a_{n}=0, \sum_{n=1}^{\infty}\left|b_{n}\right| $ 发散,
     却有 $\displaystyle \sum_{n=1}^{\infty} a_{n} b_{n}=\sum_{n=1}^{\infty} \frac{1}{n^{2}} $ 收敛, 故排除 B;
     又 $\displaystyle \sum_{n=1}^{\infty}\left|b_{n}\right| $ 与 $\displaystyle \sum_{n=1}^{\infty} a_{n}^{2} b_{n}^{2} $ 均为正项级数, 且
     $$\displaystyle\lim _{n \rightarrow \infty} a_{n}=0, \lim _{n \rightarrow \infty}\left|b_{n}\right|=0 ,~\lim_{n\to\infty}\dfrac{a_n^2b_n^2}{|b_n|}=\lim_{n\to\infty}an^2\cdot\lim_{n\to\infty}|b_n|=0$$
@@ -224,14 +226,14 @@ $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
 \end{solution}
 
 \begin{theorem}[比值审敛法]
-    设 $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 为正项级数, 若 $\displaystyle  \lim _{n \rightarrow \infty} \frac{u_{n+1}}{u_{n}}=\rho $, 则当 $ \rho<1 $ 时, 级数收敛; 
+    设 $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 为正项级数, 若 $\displaystyle  \lim _{n \rightarrow \infty} \frac{u_{n+1}}{u_{n}}=\rho $, 则当 $ \rho<1 $ 时, 级数收敛;
     当 $ \rho>1 $ 时, 级数发散; 当 $ \rho=1 $ 时, 级数可能收敛, 也可能发散.\\
     特别地, 当 $ \dfrac{u_{n+1}}{u_{n}}>1 $ 时, 级数 $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 一定发散; 当 $ \dfrac{u_{n+1}}{u_{n}}<1 $ 时, 级数可能收敛, 也可能发散.
     \index{比值审敛法}
 \end{theorem}
 
 \begin{theorem}[根值审敛法]
-    设 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 为正项级数, 若 $\displaystyle \lim _{n \rightarrow \infty} \sqrt[n]{u_{n}}=\rho $, 则当 $ \rho<1 $ 时, 级数收敛; 
+    设 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 为正项级数, 若 $\displaystyle \lim _{n \rightarrow \infty} \sqrt[n]{u_{n}}=\rho $, 则当 $ \rho<1 $ 时, 级数收敛;
     当 $ \rho>1 $ 时, 级数发散; 当 $ \rho=1 $ 时, 级数可能收敛, 也可能发散.
     \index{根值审敛法}
 \end{theorem}
@@ -249,7 +251,7 @@ $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
 \end{theorem}
 
 \begin{example}
-    设 $a_n=\displaystyle\int_{0}^{1}x^n\sqrt{1-x^2}\dd x,~b_n=\displaystyle\int_{0}^{\frac{\pi}{2}}\sin^nt\dd t~~(n=1,2,\cdots)$, 
+    设 $a_n=\displaystyle\int_{0}^{1}x^n\sqrt{1-x^2}\dd x,~b_n=\displaystyle\int_{0}^{\frac{\pi}{2}}\sin^nt\dd t~~(n=1,2,\cdots)$,
     \begin{enumerate}[label=(\arabic{*})]
         \item 求极限 $\displaystyle\lim_{n\to\infty}\dfrac{a_n}{b_n}$;
         \item 证明: 级数 $\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{a_n}{b_n}$ 收敛, 并求其和.
@@ -263,18 +265,18 @@ $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
                   \end{cases}$, 并且
               \begin{flalign*}
                   a_n\xlongequal{x=\cos t}\int_{0}^{\frac{\pi}{2}}\cos^nt\cdot\sin^2t\dd t=\begin{cases}
-                    \dfrac{(n-1)!!}{(n+2)!!}\cdot\dfrac{\pi}{2},&n\text{ 为正偶数}      \\[6pt]
-                    \dfrac{(n-1)!!}{(n+2)!!},& n\text{ 大于 1 的奇数}
-                  \end{cases}
+                                                                                               \dfrac{(n-1)!!}{(n+2)!!}\cdot\dfrac{\pi}{2}, & n\text{ 为正偶数}      \\[6pt]
+                                                                                               \dfrac{(n-1)!!}{(n+2)!!},                    & n\text{ 大于 1 的奇数}
+                                                                                           \end{cases}
               \end{flalign*}
               因此 $$\displaystyle\lim_{n\to\infty}\dfrac{a_n}{b_n}=\begin{cases}
-                \dfrac{(n-1)!!}{(n+2)!!}\cdot\dfrac{\pi}{2}\cdot\dfrac{n!!}{(n-1)!!}\cdot\dfrac{2}{\pi}=\dfrac{1}{n+2}\to0,&n\text{ 为正偶数}\\[6pt]
-                \dfrac{(n-1)!!}{(n+2)!!}\cdot\dfrac{n!!}{(n-1)!!}=\dfrac{1}{n+2}\to0,& n\text{ 大于 1 的奇数}
-              \end{cases}$$
+                      \dfrac{(n-1)!!}{(n+2)!!}\cdot\dfrac{\pi}{2}\cdot\dfrac{n!!}{(n-1)!!}\cdot\dfrac{2}{\pi}=\dfrac{1}{n+2}\to0, & n\text{ 为正偶数}      \\[6pt]
+                      \dfrac{(n-1)!!}{(n+2)!!}\cdot\dfrac{n!!}{(n-1)!!}=\dfrac{1}{n+2}\to0,                                       & n\text{ 大于 1 的奇数}
+                  \end{cases}$$
               故 $\displaystyle\lim_{n\to\infty}\dfrac{a_n}{b_n}=0.$
         \item 由 (1) 可知 $\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{1}{n+2}$ 为交错级数, 由 Leibniz 定理, 知级数收敛, 并令 $S(x)=\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{x^{n+2}}{n+2}$, 则
               $$S'(x)=\sum_{n=1}^{\infty}(-1)^{n-1}x^{n+1}=\sum_{n=0}^{\infty}(-1)^nx^{n+2}=\dfrac{x^2}{1+x}~~(-1<x<1)$$
-              即 $S(x)=S(0)+\displaystyle\int_{0}^{x}S'(t)\dd t=\int_{0}^{x}\dfrac{t^2}{1+t}\dd t=\eval{\dfrac{1}{2}t^2-t+\ln|1+t|}_{0}^{x}=\dfrac{1}{2}x^2-x+\ln(1+x),x\in(-1,1]$, 
+              即 $S(x)=S(0)+\displaystyle\int_{0}^{x}S'(t)\dd t=\int_{0}^{x}\dfrac{t^2}{1+t}\dd t=\eval{\dfrac{1}{2}t^2-t+\ln|1+t|}_{0}^{x}=\dfrac{1}{2}x^2-x+\ln(1+x),x\in(-1,1]$,
               故 $$\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{a_n}{b_n}=\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{1}{n+2}=S(1)=\ln 2-\dfrac{1}{2}.$$
     \end{enumerate}
 \end{solution}
@@ -282,7 +284,7 @@ $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
 \subsection{一般数项级数的判别法}
 
 \begin{definition}[绝对收敛与条件收敛]
-    若级数 $\displaystyle \sum_{n=1}^{\infty}\left|u_{n}\right| $ 收敛, 则称级数 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 绝对收敛, 
+    若级数 $\displaystyle \sum_{n=1}^{\infty}\left|u_{n}\right| $ 收敛, 则称级数 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 绝对收敛,
     若级数 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 收敛, 而级数 $\displaystyle  \sum_{n=1}^{\infty}\left|u_{n}\right| $ 发散, 则称级数 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 条件收敛.
 \end{definition}
 
@@ -301,9 +303,9 @@ $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
 \end{enumerate}
 
 \begin{theorem}
-    设 $\displaystyle\sum_{n=1}^{\infty}u_n$ 是任意项级数, 其中 $\sum$ 的上标都是 $\infty$, 下标并非总是 $1$, 
+    设 $\displaystyle\sum_{n=1}^{\infty}u_n$ 是任意项级数, 其中 $\sum$ 的上标都是 $\infty$, 下标并非总是 $1$,
     \begin{enumerate}[label=(\arabic{*})]
-        \item 若 $\displaystyle \sum_{n=1}^{\infty}|u_n|$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛; 
+        \item 若 $\displaystyle \sum_{n=1}^{\infty}|u_n|$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛;
         \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 发散, 则 $\displaystyle\sum_{n=1}^{\infty}|u_n|$ 发散;
         \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}|u_n|$ 不一定收敛;
         \item 若 $\displaystyle\sum_{n=1}^{\infty}u^2_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}\dfrac{u_n}{n}$ 绝对收敛;

@@ -309,12 +309,12 @@
 \end{solution}
 
 \begin{example}
-    求函数 $$f(x)=\arctan\qty(\dfrac{2x}{2-x^2})+\dfrac{1}{4}\ln\qty|x^2-2x+2|-\dfrac{1}{4}\ln\qty|x^2+2x+2|-\dfrac{1}{2}\arctan(x-1)-\dfrac{1}{2}\arctan(x-1)$$
+    求函数 $$f(x)=\arctan\qty(\dfrac{2x}{2-x^2})+\dfrac{1}{4}\ln\qty|x^2-2x+2|-\dfrac{1}{4}\ln\qty|x^2+2x+2|-\dfrac{1}{2}\arctan(x+1)-\dfrac{1}{2}\arctan(x-1)$$
     关于 $x$ 的幂级数展开式和收敛半径.
 \end{example}
 \begin{solution}
     显然 $x^2\pm 2x+2>0$, 故
-    $$f(x)=\arctan\qty(\dfrac{2x}{2-x^2})+\dfrac{1}{4}\ln\qty(x^2-2x+2)-\dfrac{1}{4}\ln\qty(x^2+2x+2)-\dfrac{1}{2}\arctan(x-1)-\dfrac{1}{2}\arctan(x-1)$$
+    $$f(x)=\arctan\qty(\dfrac{2x}{2-x^2})+\dfrac{1}{4}\ln\qty(x^2-2x+2)-\dfrac{1}{4}\ln\qty(x^2+2x+2)-\dfrac{1}{2}\arctan(x-1)-\dfrac{1}{2}\arctan(x+1)$$
     对 $f(x)$ 求导, 整理可得 $f'(x)=\dfrac{2x^2}{x^4+4}$, 由于
     $$\dfrac{1}{4+x^4}=\dfrac{1}{4}\cdot\dfrac{1}{1+\dfrac{x^4}{4}}=\dfrac{1}{4}\sum_{n=0}^{\infty}(-1)^n\dfrac{x^{4n}}{4^n}$$
     其中 $\dfrac{x^4}{4}<1$, 故得其收敛半径为 $R=\sqrt{2}$, 
@@ -396,9 +396,9 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     \end{tasks}
 \end{example}
 \begin{solution}
-    因为幂级数 $\displaystyle\sum_{n=1}^{\infty}na_n(x-2)^n$ 收敛区间为 $(-2,6)$, 所以幂级数 $\displaystyle\sum_{n=1}^{\infty}na_n(x-2)^n$ 的收敛半径为 4, 令 $t=x-2$, 则
+    因为幂级数 $\displaystyle\sum_{n=1}^{\infty}na_n(x-2)^n$ 收敛区间为 $(-2,6)$, 所以幂级数 $\displaystyle\sum_{n=1}^{\infty}na_n(x-2)^n$ 的收敛半径为 $4$, 令 $t=x-2$, 则
     $$\sum_{n=1}^{\infty}na_n(x-2)^n=(x-2)\sum_{n=1}^{\infty}na_n(x-2)^{n-1}=t\sum_{n=1}^{\infty}na_nt^{n-1}=t\sum_{n=1}^{\infty}\qty(a_nt^n)'$$
-    因而幂级数 $\displaystyle\sum_{n=1}^{\infty}a_nt^n$ 的收敛半径为 4, 又因为 $$\sum_{n=1}^{\infty}a_n(x+1)^{2n}=\sum_{n=1}^{\infty}a_n\qty[(x+1)^2]^n$$
+    因而幂级数 $\displaystyle\sum_{n=1}^{\infty}a_nt^n$ 的收敛半径为 $4$, 又因为 $$\sum_{n=1}^{\infty}a_n(x+1)^{2n}=\sum_{n=1}^{\infty}a_n\qty[(x+1)^2]^n$$
     则 $(x+1)^2<4$, 解得 $-3<x<1$, 故选 B.
 \end{solution}
 
@@ -701,22 +701,6 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
 %     (南开大学) 求和: $\displaystyle\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}(n-2)}{n(n+1)}.$
 % \end{example}
 
-\begin{example}\scriptsize\linespread{0.8}
-    证明: $\displaystyle\lim_{m,n\to+\infty}\sum_{i=1}^m\sum_{j=1}^n\frac{(-1)^{i+j}}{i+j}$ 存在, 并求之.
-\end{example}
-\begin{solution}\scriptsize\linespread{0.8}
-    因为$$\int_{-1}^0x^{i+j-1}\mathrm{d}x=\frac{1}{i+j}x^{i+j}\Big |_{-1}^0=-\frac{(-1)^{i+j}}{i+j}$$
-    所以
-    \begin{flalign*}
-        S_{m,n} & =\sum_{i=1}^m\sum_{j=1}^n\frac{(-1)^{i+j}}{i+j}=-\sum_{i=1}^m\sum_{j=1}^n\int_{-1}^0x^{i+j-1}\mathrm{d}x
-        =-\sum_{i=1}^m\int_{-1}^0\left(\sum_{j=1}^nx^{i+j-1}\right)\mathrm{d}x                                                                                   \\
-                & =-\sum_{i=1}^m\int_{-1}^0\frac{x^i\left(1-x^n\right)}{1-x}\mathrm{d}x=-\int_{-1}^0\frac{1}{1-x}\sum_{i=1}^m\left(x^i-x^{n+i}\right)\mathrm{d}x \\
-                & =-\int_{-1}^0\frac{x-x^{m+1}}{(1-x)^2}\mathrm{d}x+\int_{-1}^0\frac{x^{n+1}-x^{n+m+1}}{(1-x)^2}\mathrm{d}x
-    \end{flalign*}
-    而 $x\in[-1,0],~(1-x)^2\ge1$, 所以 $\displaystyle\int_{-1}^0\frac{x^i}{(1-x)^2}\mathrm{d}x\leqslant \int_{-1}^0x^i\mathrm{d}x$, 又 $\displaystyle\lim_{i\to+\infty}\int_{-1}^0x^i\mathrm{d}x=0$, 
-    所以 $\displaystyle \lim_{i\to+\infty}\int_{-1}^0\frac{x^i}{(1-x)^2}\mathrm{d}x=0$, 所以 $\displaystyle\lim_{m,n\to+\infty}S_{m,n}=-\int_{-1}^0\frac{x}{(1-x)^2}\mathrm{d}x=\ln2-\frac{1}{2}.$
-\end{solution}
-
 \begin{example}
     求级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{3n-1}$ 与 $\displaystyle\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{(3n-1)(2n-1)}$ 的和.
 \end{example}
@@ -773,6 +757,22 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
                          & \Rightarrow S_1(x)=\dfrac{1+x}{(1-x)^3}\Rightarrow S(x)=\dfrac{x^2+x}{(1-x)^3}\Rightarrow S\qty(\dfrac{1}{2})=6.
               \end{flalign*}
     \end{enumerate}
+\end{solution}
+
+\begin{example}\scriptsize\linespread{0.8}
+    证明: $\displaystyle\lim_{m,n\to+\infty}\sum_{i=1}^m\sum_{j=1}^n\frac{(-1)^{i+j}}{i+j}$ 存在, 并求之.
+\end{example}
+\begin{solution}\scriptsize\linespread{0.8}
+    因为$$\int_{-1}^0x^{i+j-1}\mathrm{d}x=\frac{1}{i+j}x^{i+j}\Big |_{-1}^0=-\frac{(-1)^{i+j}}{i+j}$$
+    所以
+    \begin{flalign*}
+        S_{m,n} & =\sum_{i=1}^m\sum_{j=1}^n\frac{(-1)^{i+j}}{i+j}=-\sum_{i=1}^m\sum_{j=1}^n\int_{-1}^0x^{i+j-1}\mathrm{d}x
+        =-\sum_{i=1}^m\int_{-1}^0\left(\sum_{j=1}^nx^{i+j-1}\right)\mathrm{d}x                                                                                   \\
+                & =-\sum_{i=1}^m\int_{-1}^0\frac{x^i\left(1-x^n\right)}{1-x}\mathrm{d}x=-\int_{-1}^0\frac{1}{1-x}\sum_{i=1}^m\left(x^i-x^{n+i}\right)\mathrm{d}x \\
+                & =-\int_{-1}^0\frac{x-x^{m+1}}{(1-x)^2}\mathrm{d}x+\int_{-1}^0\frac{x^{n+1}-x^{n+m+1}}{(1-x)^2}\mathrm{d}x
+    \end{flalign*}
+    而 $x\in[-1,0],~(1-x)^2\ge1$, 所以 $\displaystyle\int_{-1}^0\frac{x^i}{(1-x)^2}\mathrm{d}x\leqslant \int_{-1}^0x^i\mathrm{d}x$, 又 $\displaystyle\lim_{i\to+\infty}\int_{-1}^0x^i\mathrm{d}x=0$, 
+    所以 $\displaystyle \lim_{i\to+\infty}\int_{-1}^0\frac{x^i}{(1-x)^2}\mathrm{d}x=0$, 所以 $\displaystyle\lim_{m,n\to+\infty}S_{m,n}=-\int_{-1}^0\frac{x}{(1-x)^2}\mathrm{d}x=\ln2-\frac{1}{2}.$
 \end{solution}
 
 \subsubsection{计算积分}
