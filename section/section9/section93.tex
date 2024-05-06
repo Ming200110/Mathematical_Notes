@@ -1,0 +1,913 @@
+\section{行列式的计算}
+
+\subsection{具象行列式的计算}
+
+\subsubsection{化为三角形矩阵}
+
+\begin{example}[2016 复旦大学]
+    设 $\boldsymbol A=(a_{ij})_{n\times n}$, 其中 $a_{ij}=\max\{i,j\}$, 求行列式 $\det \boldsymbol{A}.$
+\end{example}
+\begin{solution}
+    对于 $i=2,\cdots,n$, 依次将第 $i$ 行的 $-1$ 倍加到第 $i-1$ 行, 得
+    \begin{flalign*}
+        \det\boldsymbol{A} & =
+        \begin{vmatrix}
+            1      & 2      & 3      & \cdots & n      \\
+            2      & 2      & 3      & \cdots & n      \\
+            3      & 3      & 3      & \cdots & n      \\
+            \vdots & \vdots & \vdots &        & \vdots \\
+            n      & n      & n      & n      & n
+        \end{vmatrix}
+        \xlongequal[i=2,\cdots,n]{r_{i-1}-r_i}
+        \begin{vmatrix}
+            -1     & 0      & 0      & \cdots & 0      & 0      \\
+            -1     & -1     & 0      & \cdots & 0      & 0      \\
+            -1     & -1     & -1     & \cdots & 0      & 0      \\
+            \vdots & \vdots & \vdots &        & \vdots & \vdots \\
+            -1     & -1     & -1     & \cdots & -1     & 0      \\
+            n      & n      & n      & \cdots & n      & n
+        \end{vmatrix} =(-1)^{n-1}n.
+    \end{flalign*}
+\end{solution}
+
+\begin{example}
+    设 $n\geqslant 2$, 计算 $n$ 阶行列式 $D_n=\det (a_{ij})$, 其中 $a_{ij}=|i-j|$, $i,j=1,2,\cdots,n.$
+\end{example}
+\begin{solution}
+    从最后一行起, 依次将后一行减去前一行, 再将所得行列式的最后一行加到其他行, 得
+    \begin{flalign*}
+        D_n & =\begin{vmatrix}
+                   0      & 1      & 2      & \cdots & n-2    & n-1    \\
+                   1      & 0      & 1      & \cdots & n-3    & n-2    \\
+                   2      & 1      & 0      & \cdots & n-4    & n-3    \\
+                   \vdots & \vdots & \vdots &        & \vdots & \vdots \\
+                   n-2    & n-3    & n-4    & \cdots & 0      & 1      \\
+                   n-1    & n-2    & n-3    & \cdots & 1      & 0
+               \end{vmatrix}
+        \xlongequal[i=2,\cdots,n]{r_i-r_{i-1}}
+        \begin{vmatrix}
+            0      & 1      & 2      & \cdots & n-2    & n-1    \\
+            1      & -1     & -1     & \cdots & -1     & -1     \\
+            1      & 1      & -1     & \cdots & -1     & -1     \\
+            \vdots & \vdots & \vdots &        & \vdots & \vdots \\
+            1      & 1      & 1      & \cdots & -1     & -1     \\
+            1      & 1      & 1      & \cdots & 1      & -1
+        \end{vmatrix}        \\
+            & \xlongequal[j=1,\cdots,n-1]{c_j+c_n}
+        \begin{vmatrix}
+            n-1    & n      & n+1    & \cdots & 2n-3   & n-1    \\
+            0      & -2     & -2     & \cdots & -2     & -1     \\
+            0      & 0      & -2     & \cdots & -2     & -1     \\
+            \vdots & \vdots & \vdots &        & \vdots & \vdots \\
+            0      & 0      & 0      & \cdots & -2     & -1     \\
+            0      & 0      & 0      & \cdots & 0      & -1
+        \end{vmatrix}
+        =(-1)^{n-1}2^{n-2}(n-1).
+    \end{flalign*}
+\end{solution}
+
+\begin{example}
+    计算行列式 $\displaystyle D_n=\begin{vmatrix}
+            1      & 2      & 3      & \cdots & n      \\
+            2      & 3      & 4      & \cdots & 1      \\
+            \vdots & \vdots & \vdots &        & \vdots \\
+            n-1    & n      & 1      & \cdots & n-2    \\
+            n      & 1      & 2      & \cdots & n-1
+        \end{vmatrix}.$
+\end{example}
+\begin{solution}
+    依次将第 $n$ 行减去第 $n-1$ 行, 第 $n-1$ 行减去第 $n-2$ 行, $\cdots$, 第 $2$ 行减去第 $1$ 行, 再将各列加到第 $1$ 列, 得
+    \begin{flalign*}
+        D_n &
+        \xlongequal[i=n,\cdots,1]{r_i-r_{i-1}}
+        \begin{vmatrix}
+            1      & 2      & 3      & \cdots & n      \\
+            1      & 1      & 1      & \cdots & 1-n    \\
+            \vdots & \vdots & \vdots &        & \vdots \\
+            1      & 1      & 1-n    & \cdots & 1      \\
+            1      & 1-n    & 1      & \cdots & 1
+        \end{vmatrix}
+        \xlongequal[j=2,\cdots,n]{c_1+c_j}
+        \begin{vNiceArray}{c:cccc}
+            \dfrac{n(n+1)}{2} & 2      & 3      & \cdots & n      \\ \hdottedline
+            0                 & 1      & 1      & \cdots & 1-n    \\
+            \vdots            & \vdots & \vdots &        & \vdots \\
+            0                 & 1      & 1-n    & \cdots & 1      \\
+            0                 & 1-n    & 1      & \cdots & 1
+        \end{vNiceArray} \\
+            & =\dfrac{n(n+1)}{2}\begin{vmatrix}
+                                    1      & 1      & \cdots & 1-n    \\[6pt]
+                                    \vdots & \vdots &        & \vdots \\
+                                    1      & 1-n    & \cdots & 1      \\
+                                    1-n    & 1      & \cdots & 1
+                                \end{vmatrix}_{n-1}
+        \xlongequal[j=2,\cdots,n-1]{c_1+c_j}
+        \dfrac{n(n+1)}{2}\begin{vmatrix}
+                             -1     & 1      & \cdots & 1-n    \\[6pt]
+                             \vdots & \vdots &        & \vdots \\
+                             -1     & 1-n    & \cdots & 1      \\
+                             -1     & 1      & \cdots & 1
+                         \end{vmatrix}_{n-1}            \\
+            & \xlongequal[j=2,\cdots,n-1]{c_j+c_1}
+        \dfrac{n(n+1)}{2}\begin{vmatrix}
+                             -1     & 0      & \cdots & -n     \\[6pt]
+                             \vdots & \vdots &        & \vdots \\
+                             -1     & -n     & \cdots & 0      \\
+                             -1     & 0      & \cdots & 0
+                         \end{vmatrix}_{n-1}=(-1)^{\frac{n(n-1)}{2}}\dfrac{n^{n-1}(n+1)}{2}.
+    \end{flalign*}
+\end{solution}
+
+\begin{example}[2008 山西师范大学]
+    计算 $f(x+1)-f(x)$, 其中
+    $$f(x)=\begin{vmatrix}
+            1      & 0      & 0                  & 0                  & \cdots & 0                      & x       \\
+            1      & 2      & 0                  & 0                  & \cdots & 0                      & x^2     \\
+            1      & 3      & 3                  & 0                  & \cdots & 0                      & x^3     \\
+            \vdots & \vdots & \vdots             & \vdots             &        & \vdots                 & \vdots  \\
+            1      & n      & \mathrm{C}_n^2     & \mathrm{C}_n^3     & \cdots & \mathrm{C}_n^{n-1}     & x^n     \\
+            1      & n+1    & \mathrm{C}_{n+1}^2 & \mathrm{C}_{n+1}^3 & \cdots & \mathrm{C}_{n+1}^{n-1} & x^{n+1}
+        \end{vmatrix}.$$
+\end{example}
+\begin{solution}由二项式定理 $\displaystyle (a+b)^n=\sum_{k=0}^{n}\mathrm{C}_n^k a^{n-k}b^n$, 
+    \begin{flalign*}
+        f(x+1)-f(x)=
+        \begin{vmatrix}
+            1      & 0      & 0                  & 0                  & \cdots & 0                      & 1                                             \\
+            1      & 2      & 0                  & 0                  & \cdots & 0                      & 2x+1                                          \\
+            1      & 3      & 3                  & 0                  & \cdots & 0                      & 3x^2+3x+1                                     \\
+            \vdots & \vdots & \vdots             & \vdots             &        & \vdots                 & \vdots                                        \\
+            1      & n      & \mathrm{C}_n^2     & \mathrm{C}_n^3     & \cdots & \mathrm{C}_n^{n-1}     & nx^{n-1}+\mathrm{C}_n^2x^{n-2}+\cdots+1       \\
+            1      & n+1    & \mathrm{C}_{n+1}^2 & \mathrm{C}_{n+1}^3 & \cdots & \mathrm{C}_{n+1}^{n-1} & (n+1)x^{n}+\mathrm{C}_{n+1}^2x^{n-1}+\cdots+1
+        \end{vmatrix}
+    \end{flalign*}
+    将第一列乘 $-1$, 第二列乘 $-x$, 第二列乘 $-x^2$, $\cdots$, 第 $n$ 列乘 $-x^{n-1}$, 都加到最后一列, 得
+    \begin{flalign*}
+        f(x+1)-f(x)\xlongequal[j=1,\cdots,n]{c_{n+1}-x^{j-1}c_j}
+        \left|\begin{array}{ccccccc}
+                  1      & 0      & 0                    & 0                    & \cdots & 0                      & 0           \\
+                  1      & 2      & 0                    & 0                    & \cdots & 0                      & 0           \\
+                  1      & 3      & 3                    & 0                    & \cdots & 0                      & 0           \\
+                  \vdots & \vdots & \vdots               & \vdots               &        & \vdots                 & \vdots      \\
+                  1      & n      & \mathrm{C}_{n}^{2}   & \mathrm{C}_{n}^{3}   & \cdots & \mathrm{C}_{n}^{n-1}   & 0           \\
+                  1      & n+1    & \mathrm{C}_{n+1}^{2} & \mathrm{C}_{n+1}^{3} & \cdots & \mathrm{C}_{n+1}^{n-1} & (n+1) x^{n}
+              \end{array}\right| =(n+1) ! x^{n} .
+    \end{flalign*}
+\end{solution}
+
+\subsubsection{化为对角型矩阵}
+
+\begin{example}[2004 大连理工大学]
+    计算 $n$ 阶行列式 $\displaystyle D_n=\begin{vmatrix}
+            1      & 1      & \cdots & 1      & 2-n    \\
+            1      & 1      & \cdots & 2-n    & 1      \\
+            \vdots & \vdots &        & \vdots & \vdots \\
+            1      & 2-n    & \cdots & 1      & 1      \\
+            2-n    & 1      & \cdots & 1      & 1
+        \end{vmatrix}.$
+\end{example}
+\begin{solution}
+    第二列至第 $n$ 列都加到第一列, 再将第一列的 $-1$ 倍加到其他各列, 得
+    \begin{flalign*}
+        D_n & \xlongequal[j=2,\cdots,n]{c_1+c_j}
+        \begin{vmatrix}
+            1      & 1      & \cdots & 1      & 2-n    \\
+            1      & 1      & \cdots & 2-n    & 1      \\
+            \vdots & \vdots &        & \vdots & \vdots \\
+            1      & 2-n    & \cdots & 1      & 1      \\
+            1      & 1      & \cdots & 1      & 1
+        \end{vmatrix}
+        \xlongequal[j=2,\cdots,n]{c_j-c_1}
+        \begin{vmatrix}
+            1      & 0      & \cdots & 0      & 1-n    \\
+            1      & 0      & \cdots & 1-n    & 0      \\
+            \vdots & \vdots &        & \vdots & \vdots \\
+            1      & 1-n    & \cdots & 0      & 0      \\
+            1      & 0      & \cdots & 0      & 0
+        \end{vmatrix}  \\
+            & =(-1)^{\frac{n^2+n-2}{2}}(n-1)^{n-1}.
+    \end{flalign*}
+\end{solution}
+
+\begin{example}[2008 北京科技大学]
+    计算行列式 $|\boldsymbol{A}|$, 
+    其中 $$\boldsymbol{A}=\begin{pmatrix}
+            1      & 2      & \cdots & n-1     & n+x    \\
+            1      & 2      & \cdots & (n-1)+x & n      \\
+            \vdots & \vdots &        & \vdots  & \vdots \\
+            1      & 2+x    & \cdots & n-1     & n      \\
+            1+x    & 2      & \cdots & n-1     & n
+        \end{pmatrix}.$$
+\end{example}
+\begin{solution}
+    从第二行至第 $n$ 行都减去第一行, 再把所有列都加到最后一列, 得对角型行列式
+    \begin{flalign*}
+        |\boldsymbol{A}| & \xlongequal[i=2,\cdots,n]{r_i-r_1}
+        \begin{vmatrix}
+            1      & 2      & \cdots & n-1    & n+x    \\
+            0      & 0      & \cdots & x      & -x     \\
+            \vdots & \vdots &        & \vdots & \vdots \\
+            0      & x      & \cdots & 0      & -x     \\
+            x      & 0      & \cdots & 0      & -x
+        \end{vmatrix}
+        \xlongequal[j=1,\cdots,n-1]{c_n+c_j}
+        \begin{vmatrix}
+            1      & 2      & \cdots & n-1    & \displaystyle x+\frac{n(n+1)}{2} \\[6pt]
+            0      & 0      & \cdots & x      & 0                                \\
+            \vdots & \vdots &        & \vdots & \vdots                           \\
+            0      & x      & \cdots & 0      & 0                                \\
+            x      & 0      & \cdots & 0      & 0
+        \end{vmatrix}       \\
+                         & =(-1)^{\frac{n(n-1)}{2}}\left(x+\frac{n^2+n}{2}\right)x^{n-1}.
+    \end{flalign*}
+\end{solution}
+
+\begin{example}[2002 华东师范大学]
+    计算 $n$ 阶行列式
+    $\displaystyle D_n=\begin{vmatrix}
+            x      & 4      & 4      & \cdots & 4      \\
+            1      & x      & 2      & \cdots & 2      \\
+            1      & 2      & x      & \cdots & 2      \\
+            \vdots & \vdots & \vdots &        & \vdots \\
+            1      & 2      & 2      & \cdots & x
+        \end{vmatrix}.$
+\end{example}
+\begin{solution}
+    先把第一列乘二, 再把第一行除以二, 得
+    \begin{flalign*}
+        D_n & \xlongequal[r_1/2]{c_1\times2}
+        \begin{vmatrix}
+            x      & 2      & 2      & \cdots & 2      \\
+            2      & x      & 2      & \cdots & 2      \\
+            2      & 2      & x      & \cdots & 2      \\
+            \vdots & \vdots & \vdots &        & \vdots \\
+            2      & 2      & 2      & \cdots & x
+        \end{vmatrix}
+        \xlongequal[i=2,\cdots,n]{r_i-r_1}
+        \begin{vmatrix}
+            x      & 2      & 2      & \cdots & 2      \\
+            2-x    & x-2    & 0      & \cdots & 0      \\
+            2-x    & 0      & x-2    & \cdots & 0      \\
+            \vdots & \vdots & \vdots &        & \vdots \\
+            2-x    & 0      & 0      & \cdots & x-2
+        \end{vmatrix} \\
+            & \xlongequal[j=2,\cdots,n]{c_1+c_j}
+        \begin{vmatrix}
+            x+2(n-1) & 2      & 2      & \cdots & 2      \\
+            0        & x-2    & 0      & \cdots & 0      \\
+            0        & 0      & x-2    & \cdots & 0      \\
+            \vdots   & \vdots & \vdots & \ddots & \vdots \\
+            0        & 0      & 0      & \cdots & x-2
+        \end{vmatrix}
+        =(x+2n-2)(x-2)^{n-1}
+    \end{flalign*}
+\end{solution}
+
+\begin{example}[2005 北京工业大学]
+    计算 $n$ 阶行列式
+    $$\begin{vmatrix}
+            a+1    & a+2    & a+3    & \cdots & a+n    \\
+            a+2    & a+3    & a+4    & \cdots & a+1    \\
+            a+3    & a+4    & a+5    & \cdots & a+2    \\
+            \vdots & \vdots & \vdots &        & \vdots \\
+            a+n    & a+1    & a+2    & \cdots & a+n-1  \\
+        \end{vmatrix}.$$
+\end{example}
+\begin{solution}
+    从最后一行开始, 每行都减去其前一行, 然后各列都加到第一列, 并按第一列展开, 得
+    \begin{flalign*}
+        D & \xlongequal[i=n,\cdots,2]{r_i-r_{i-1}}
+        \begin{vmatrix}
+            a+1    & a+2    & a+3    & \cdots & a+n-1  & a+n    \\
+            1      & 1      & 1      & \cdots & 1      & 1-n    \\
+            1      & 1      & 1      & \cdots & 1-n    & 1      \\
+            \vdots & \vdots & \vdots &        & \vdots & \vdots \\
+            1      & 1-n    & 1      & \cdots & 1      & 1      \\
+        \end{vmatrix}                       \\
+          & \xlongequal[j=2,\cdots,n]{c_1+c_j}
+        \begin{vmatrix}
+            \dfrac{1}{2}n(2a+n+1) & a+2    & a+3    & \cdots & a+n-1  & a+n    \\[6pt]
+            0                     & 1      & 1      & \cdots & 1      & 1-n    \\
+            0                     & 1      & 1      & \cdots & 1-n    & 1      \\
+            \vdots                & \vdots & \vdots &        & \vdots & \vdots \\
+            0                     & 1-n    & 1      & \cdots & 1      & 1      \\
+        \end{vmatrix} \\
+          & =\dfrac{1}{2}n(2a+n+1)\begin{vmatrix}
+                                      1      & 1      & \cdots & 1      & 1-n    \\
+                                      1      & 1      & \cdots & 1-n    & 1      \\
+                                      \vdots & \vdots &        & \vdots & \vdots \\
+                                      1-n    & 1      & \cdots & 1      & 1      \\
+                                  \end{vmatrix}_{n-1}
+        =(-1)^{\frac{n(n-1)}{2}}\qty[a+\dfrac{n(n+1)}{2}]n^{n-1}.
+    \end{flalign*}
+\end{solution}
+
+% \begin{example}
+%     计算行列式 $\displaystyle D=\begin{vmatrix}
+%             (a+b)^2 & c^2     & c^2     \\
+%             a^2     & (b+c)^2 & a^2     \\
+%             b^2     & b^2     & (c+a)^2
+%         \end{vmatrix}$.
+% \end{example}
+% \begin{solution}
+%     第一列与第二列都减去第三列, 并提取前两列的公因子 $(a+b+c)$, 再将第三列加上第一列的 $c$ 倍, 最后利用对角线法则展开, 得
+%     \begin{flalign*}
+%         D & \xlongequal[j=1,2]{c_j-c_3}
+%         \begin{vmatrix}
+%             (a+b)^2-c^2 & 0           & c^2     \\
+%             0           & (b+c)^2-a^2 & a^2     \\
+%             b^2-(c+a)^2 & b^2-(c+a)^2 & (c+a)^2
+%         \end{vmatrix}
+%         =(a+b+c)^2\begin{vmatrix}
+%                       a+b-c & 0     & c^2     \\
+%                       0     & b+c-a & a^2     \\
+%                       b-a-c & b-a-c & (c+a)^2
+%                   \end{vmatrix}            \\
+%           & \xlongequal[c_3+c\cdot c_1]{r_3-r_1-r_2}
+%         (a+b+c)^2\begin{vmatrix}
+%                      a+b+c & 0     & ac+bc \\
+%                      0     & b+c-a & a^2   \\
+%                      -2a   & -2c   & 0
+%                  \end{vmatrix}
+%         =2abc(a+b+c)^3.
+%     \end{flalign*}
+% \end{solution}
+
+\subsubsection{建立递推公式}
+
+\begin{example}
+    求下列 $n$ 阶行列式
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l || l}
+            (\rownumber{}) $\displaystyle
+                D_n=\begin{vmatrix}
+                        2a & a^2    &        &        &     \\
+                        1  & 2a     & a^2    &        &     \\
+                           & \ddots & \ddots & \ddots &     \\
+                           &        & 1      & 2a     & a^2 \\
+                           &        &        & 1      & 2a
+                    \end{vmatrix}.$
+             & (\rownumber{}) $\displaystyle
+                D_n=\begin{vmatrix}
+                        a+b & ab     &        &        &     \\
+                        1   & a+b    & ab     &        &     \\
+                            & \ddots & \ddots & \ddots &     \\
+                            &        & 1      & a+b    & ab  \\
+                            &        &        & 1      & a+b
+                    \end{vmatrix}.$
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 把 $D_n$ 第 $1$ 列乘 $\displaystyle-\frac{1}{2}a$ 加到第 $2$ 列, 再把第 $2$ 列乘 $\displaystyle-\frac{2}{3}a$ 加到第 $3$ 列, 
+              如此下去, 直至把第 $n-1$ 列乘 $\displaystyle-\frac{n-1}{n}a$ 加到第 $n$ 列, 得
+              \begin{flalign*}
+                  D_n\xlongequal[j=1,\cdots,n-1]{c_{j+1}-c_j\times\frac{j}{j+1}a}
+                  \begin{vmatrix}
+                      2a & 0                          &                            &        &                              \\[6pt]
+                      1  & \displaystyle \frac{3}{2}a & 0                          &        &                              \\[6pt]
+                         & 1                          & \displaystyle \frac{4}{3}a & \ddots &                              \\
+                         &                            & \ddots                     & \ddots & 0                            \\[6pt]
+                         &                            &                            & 1      & \displaystyle \frac{n+1}{n}a
+                  \end{vmatrix}
+                  =(n+1)a^n.
+              \end{flalign*}
+        \item 把 $D_n$ 按第一行展开, 得
+              \begin{flalign*}
+                  D_n=(a+b)D_{n-1}-ab\begin{vmatrix}
+                                         1 & ab  &        &        &     \\
+                                         0 & a+b & ab     &        &     \\
+                                           & 1   & a+b    & \ddots &     \\
+                                           &     & \ddots & \ddots & ab  \\
+                                           &     &        & 1      & a+b
+                                     \end{vmatrix}_{n-1}=(a+b)D_{n-1}-abD_{n-2}.
+              \end{flalign*}
+              所以有递推公式 $$D_n-aD_{n-1}=b(D_{n-1}-aD_{n-2})$$
+              由此逐次递推, 得 $$D_n-aD_{n-1}=b^2(D_{n-2}-aD_{n-3})=\cdots=b^{n-2}(D_2-aD_1)$$
+              注意到 $$D_1=a+b,~D_2=\begin{vmatrix}
+                      a+b & ab  \\
+                      1   & a+b
+                  \end{vmatrix}=a^2+ab+b^2$$
+              所以 $$D_n-aD_{n-1}=b^n$$
+              根据对称性, 有 $$D_n-bD_{n-1}=a^n$$
+              若 $a=b$ (可见上题), 则 $D_n=a^n+aD_{n-1}$, 由此递推, 得 $$D_n=(n+1)a^n$$
+              若 $a\not=b$, 可得 $\displaystyle D_n=\frac{b^{n+1}-a^{n+1}}{b-a}.$
+    \end{enumerate}
+\end{solution}
+
+\begin{example}[1994 华中师范大学]
+    计算 $n+1$ 阶行列式
+    $$D_{n+1}=\begin{vmatrix}
+            a        & -1       &          &        &        &    \\
+            ax       & a        & -1       &        &        &    \\
+            ax^2     & ax       & a        & -1     &        &    \\
+            \vdots   & \vdots   & \vdots   & \ddots & \ddots &    \\
+            ax^{n-1} & ax^{n-2} & ax^{n-3} & \cdots & a      & -1 \\
+            ax^n     & ax^{n-1} & ax^{n-2} & \cdots & ax     & a
+        \end{vmatrix}.$$
+\end{example}
+\begin{solution}
+    \textbf{法一: }将第二列的 $-x$ 倍加到第一列, 第三列的 $-x$ 倍加到第二列, 以此类推, 
+    $$D_{n+2}\xlongequal[j=1,\cdots,n]{c_j-xc_{j+1}}\begin{vmatrix}
+            a+x    & -1     &        &        &        &    \\
+            0      & a+x    & -1     &        &        &    \\
+            0      & 0      & a+x    & -1     &        &    \\
+            \vdots & \vdots & \vdots & \ddots & \ddots &    \\
+            0      & 0      & 0      & \cdots & a+x    & -1 \\
+            0      & 0      & 0      & \cdots & 0      & a
+        \end{vmatrix}=a(a+x)^n.$$
+    \textbf{法二: }先把第二列乘 $a$ 加到第一列, 并提出第一列的公因子 $x+a$, 再按第一行展开, 得
+    \begin{flalign*}
+        D_{n+1}=(x+a)D_n=(x+a)^2D_{n-1}=\cdots=(x+a)^{n-1}D_2=(x+a)^{n-1}
+        \begin{vmatrix}
+            a  & -1 \\
+            ax & a
+        \end{vmatrix}=a(x+a)^n.
+    \end{flalign*}
+\end{solution}
+
+\begin{example}[2006 中国科学院]
+    已知 $\alpha,\beta,\gamma$ 为实数, 求
+    $\det\boldsymbol{A}=\begin{pmatrix}
+            \alpha & \beta  &        &        &        \\
+            \gamma & \alpha & \beta  &        &        \\
+                   & \ddots & \ddots & \ddots &        \\
+                   &        & \gamma & \alpha & \beta  \\
+                   &        &        & \gamma & \alpha
+        \end{pmatrix}\in \mathbb{R}^{n\times n}$ 的值.
+\end{example}
+\begin{solution}
+    显然, 若 $\beta=0$ 或 $\gamma=0$, 则 $\det\boldsymbol{A}=\alpha^n$. 因此, 下设 $\beta\gamma\not=0$
+    把 $D_n=\det\boldsymbol{A}$ 按第一行展开, 得 $$D_a=\alpha D_{n-1}-\beta\gamma D_{n-2}$$
+    令 $p+q=\alpha,pq=\beta\gamma$, 则 $p,q$ 是二次方程 $x^2-\alpha x+\beta\gamma=0$ 的根. 故有如下递推公式
+    $$D_n-pD_{n-1}=q(D_{n-1}-pD_{n-2})$$
+    由此逐次递推, 得 $$D_n-pD_{n-1}=q^2(D_{n-2}-pD_{n-3})=\cdots=q^{n-2}(D_2-pD_1)$$
+    注意到 $$D_1=\alpha=p+q,~D_2=\begin{vmatrix}
+            \alpha & \beta  \\
+            \gamma & \alpha
+        \end{vmatrix}=\alpha^2-\beta\gamma=p^2+pq+q^2$$
+    所以 $$D_n-pD_{n-1}=q^{n-2}[p^2+pq+q^2-p(p+q)]=q^n$$
+    根据对称性 $$D_n-qD_{n-1}=p^n$$
+    若 $\alpha^2=4\beta\gamma$, 则 $p=q$, 所以 $D_n=p^p+pD_{n-1}$. 由此递推, 得
+    $$D_n=(n+1)p^n=(n+1)\left(\frac{\alpha}{2}\right)^n$$
+    若 $\alpha^2\not=4\beta\gamma$, 则 $p\not=q$, 则有
+    $$D_n=\frac{p^{n+1}-q^{n+1}}{p-q}=\frac{\left(\alpha+\sqrt{\alpha^2-4\beta\gamma}\right)^{n+1}-\left(\alpha-\sqrt{\alpha^2-4\beta\gamma}\right)^{n+1}}{2^{n+1}\sqrt{\alpha^2-4\beta\gamma}}.$$
+\end{solution}
+
+\subsubsection{升阶法}
+
+\begin{example}
+    计算下列行列式 $|\boldsymbol{A}|$, $a_i\neq0~~(i=1,2,\cdots,n)$, 
+    \label{ascendingMethod}
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l || l}
+            (\rownumber) $\displaystyle
+                \boldsymbol{A}=
+            \begin{pmatrix}
+                    1+a_1^2 & a_1a_2  & \cdots & a_1a_n  \\
+                    a_2a_1  & 1+a_2^2 & \cdots & a_2a_n  \\
+                    \vdots  & \vdots  &        & \vdots  \\
+                    a_na_1  & a_na_2  & \cdots & 1+a_n^2
+                \end{pmatrix}.$ & (\rownumber) $\displaystyle
+                \boldsymbol{A}=
+                \begin{pmatrix}
+                    1+a_1  & 1      & \cdots & 1      \\
+                    1      & 1+a_2  & \cdots & 1      \\
+                    \vdots & \vdots &        & \vdots \\
+                    1      & 1      & \cdots & 1+a_n  \\
+                \end{pmatrix}.$
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 把 $|\boldsymbol{A}|$ 添加一行、一列且保持值不变, 
+              \begin{flalign*}
+                  |\boldsymbol{A}| & =
+                  \begin{vNiceArray}{c:cccc}
+                      1      & a_1     & a_2     & \cdots & a_n     \\ \hdottedline
+                      0      & 1+a_1^2 & a_1a_2  & \cdots & a_1a_n  \\
+                      0      & a_2a_1  & 1+a_2^2 & \cdots & a_2a_n  \\
+                      \vdots & \vdots  & \vdots  &        & \vdots  \\
+                      0      & a_na_1  & a_na_2  & \cdots & 1+a_n^2
+                  \end{vNiceArray}_{n+1}
+                  \xlongequal[i=1,\cdots,n]{r_{i+1}-a_ir_1}
+                  \begin{vmatrix}
+                      1      & a_1    & a_2    & \cdots & a_n    \\
+                      -a_1   & 1      & 0      & \cdots & 0      \\
+                      -a_2   & 0      & 1      & \cdots & 0      \\
+                      \vdots & \vdots & \vdots &        & \vdots \\
+                      -a_n   & 0      & 0      & \cdots & 1
+                  \end{vmatrix}                   \\
+                                   & \xlongequal[j=1,\cdots,n]{c_1+a_jc_{j+1}}
+                  \begin{vmatrix}
+                      \displaystyle 1+\sum_{k=1}^{n}a_k^2 & a_1    & a_2    & \cdots & a_n    \\
+                      0                                   & 1      & 0      & \cdots & 0      \\
+                      0                                   & 0      & 1      & \cdots & 0      \\
+                      \vdots                              & \vdots & \vdots &        & \vdots \\
+                      0                                   & 0      & 0      & \cdots & 1
+                  \end{vmatrix}
+                  =1+\sum_{k=1}^{n}a_k^2.
+              \end{flalign*}
+        \item 同样地, 把 $|\boldsymbol{A}|$ 添加一行、一列且保持值不变, 
+              \begin{flalign*}
+                  |\boldsymbol{A}| & =
+                  \begin{vNiceArray}{c:cccc}
+                      1      & 1      & 1      & \cdots & 1      \\ \hdottedline
+                      0      & 1+a_1  & 1      & \cdots & 1      \\
+                      0      & 1      & 1+a_2  & \cdots & 1      \\
+                      \vdots & \vdots & \vdots &        & \vdots \\
+                      0      & 1      & 1      & \cdots & 1+a_n
+                  \end{vNiceArray}_{n+1}
+                  \xlongequal[i=1,\cdots,n]{r_{i+1}-r_1}
+                  \begin{vmatrix}
+                      1      & 1      & 1      & \cdots & 1      \\
+                      -1     & a_1    & 0      & \cdots & 0      \\
+                      -1     & 0      & a_2    & \cdots & 0      \\
+                      \vdots & \vdots & \vdots &        & \vdots \\
+                      -1     & 0      & 0      & \cdots & a_n    \\
+                  \end{vmatrix}                             \\
+                                   & \xlongequal[j=1,\cdots,n]{c_1+\frac{1}{a_j}c_{j+1}}
+                  \begin{vmatrix}
+                      \displaystyle 1+\sum_{k=1}^{n}\frac{1}{a_k} & 1      & 1      & \cdots & 1      \\
+                      0                                           & a_1    & 0      & \cdots & 0      \\
+                      0                                           & 0      & a_2    & \cdots & 0      \\
+                      \vdots                                      & \vdots & \vdots &        & \vdots \\
+                      0                                           & 0      & 0      & \cdots & a_n    \\
+                  \end{vmatrix}
+                  =\prod_{k=1}^{n}a_k\left(1+\sum_{k=1}^{n}\frac{1}{a_k}\right).
+              \end{flalign*}
+    \end{enumerate}
+\end{solution}
+
+\begin{example}[2003 南开大学]
+    计算下列行列式的值:
+    $$D=
+        \begin{vmatrix}
+            a_1+b_1c_1 & a_2+b_1c_2 & \cdots & a_n+b_1c_n \\
+            a_1+b_2c_1 & a_2+b_2c_2 & \cdots & a_n+b_2c_n \\
+            \vdots     & \vdots     &        & \vdots     \\
+            a_1+b_nc_1 & a_2+b_nc_2 & \cdots & a_n+b_nc_n \\
+        \end{vmatrix}$$
+    其中 $n\geqslant3.$
+\end{example}
+\begin{solution}
+    \textbf{法一: }利用升阶法, 
+    \begin{flalign*}
+        D & =
+        \begin{vNiceArray}{c:cccc}
+            1      & c_1        & c_2        & \cdots & c_n        \\ \hdottedline
+            0      & a_1+b_1c_1 & a_2+b_1c_2 & \cdots & a_n+b_1c_n \\
+            0      & a_1+b_2c_1 & a_2+b_2c_2 & \cdots & a_n+b_2c_n \\
+            \vdots & \vdots     & \vdots     &        & \vdots     \\
+            0      & a_1+b_nc_1 & a_2+b_nc_2 & \cdots & a_n+b_nc_n \\
+        \end{vNiceArray}_{n+1}
+        \xlongequal[i=1,...,n]{r_{i+1}-b_ir_1}
+        \begin{vmatrix}
+            1      & c_1    & c_2    & \cdots & c_n    \\
+            -b_1   & a_1    & a_2    & \cdots & a_n    \\
+            -b_2   & a_1    & a_2    & \cdots & a_n    \\
+            \vdots & \vdots & \vdots &        & \vdots \\
+            -b_n   & a_1    & a_2    & \cdots & a_n    \\
+        \end{vmatrix} \\
+          & =
+        \begin{vNiceArray}{c:ccccc}
+            1      & 0      & 0      & 0      & \cdots & 0      \\ \hdottedline
+            0      & 1      & c_1    & c_2    & \cdots & c_n    \\
+            -1     & -b_1   & a_1    & a_2    & \cdots & a_n    \\
+            -1     & -b_2   & a_1    & a_2    & \cdots & a_n    \\
+            \vdots & \vdots & \vdots & \vdots &        & \vdots \\
+            -1     & -b_n   & a_1    & a_2    & \cdots & a_n
+        \end{vNiceArray}_{n+2}
+        \xlongequal[j=1,\cdots,n]{c_{j+2}+a_jc_1}
+        \begin{vNiceArray}{cc:cccc}
+            1      & 0      & a_1    & a_2    & \cdots & a_n    \\
+            0      & 1      & c_1    & c_2    & \cdots & c_n    \\ \hdottedline
+            -1     & -b_1   & 0      & 0      & \cdots & 0      \\
+            -1     & -b_2   & 0      & 0      & \cdots & 0      \\
+            \vdots & \vdots & \vdots & \vdots &        & \vdots \\
+            -1     & -b_n   & 0      & 0      & \cdots & 0
+        \end{vNiceArray}\xlongequal[n\geqslant3]{\text{Laplace}}0.
+    \end{flalign*}
+    \textbf{法二: }由行列式的乘法规则, 并注意到 $n\geqslant3$, 得
+    $$D=
+        \begin{vmatrix}
+            1      & b_1    & 0      & \cdots & 0      \\
+            1      & b_2    & 0      & \cdots & 0      \\
+            \vdots & \vdots & \vdots &        & \vdots \\
+            1      & b_n    & 0      & \cdots & 0      \\
+        \end{vmatrix}\cdot
+        \begin{vmatrix}
+            a_1    & a_2    & \cdots & a_n    \\
+            c_1    & c_2    & \cdots & c_n    \\
+            0      & 0      & \cdots & 0      \\
+            \vdots & \vdots &        & \vdots \\
+            0      & 0      & \cdots & 0      \\
+        \end{vmatrix}=0.$$
+\end{solution}
+
+\begin{example}[2017 中国科学院大学]
+    计算行列式
+    $$D=\begin{vmatrix}
+            1-a_1 & a_2    &        &           &       \\
+            -1    & 1-a_2  & a_3    &           &       \\
+                  & \ddots & \ddots & \ddots    &       \\
+                  &        & -1     & 1-a_{n-1} & a_n   \\
+                  &        &        & -1        & 1-a_n
+        \end{vmatrix}.$$
+\end{example}
+\begin{solution}
+    利用升阶法, 考虑 $n+1$ 阶行列式
+    $$\Delta=\begin{vNiceArray}{c:ccccc}
+            1  & a_1   &        &        &           &       \\ \hdottedline
+            -1 & 1-a_1 & a_2    &        &           &       \\
+            & -1    & 1-a_2  & a_3    &           &       \\
+            &       & \ddots & \ddots & \ddots    &       \\
+            &       &        & -1     & 1-a_{n-1} & a_n   \\
+            &       &        &        & -1        & 1-a_n
+        \end{vNiceArray}_{n+1}\xlongequal[i=1,\cdots,n]{r_{i+1}+r_i}1$$
+    另一方面, 将 $\Delta$ 按第一行展开, 得 $\Delta =D+a_1D'$, 即 $D=1-a_1D'$, 其中 $D'$ 是 $\Delta$ 右下角的 $n-1$ 阶子式, 由此递推, 可得
+    $$D=1-a_1+a_1a_2-a_1a_2a_3+\cdots+(-1)^na_1a_2\cdots a_n.$$
+\end{solution}
+
+% \subsubsection{降阶法}
+
+\subsection{抽象行列式的计算}
+
+\begin{theorem}[行列式的乘法公式]
+    $|k\boldsymbol{A}|=k^n|\boldsymbol{A}|.$
+\end{theorem}
+
+\begin{example}[2006 数一]
+    设矩阵 $\boldsymbol{A}=\begin{pmatrix}
+            2  & 1 \\
+            -1 & 2
+        \end{pmatrix}$, $\boldsymbol{E}$ 为 $2$ 阶单位矩阵, 矩阵 $\boldsymbol{B}$ 满足 $\boldsymbol{BA}=\boldsymbol{B}+2\boldsymbol{E}$, 求 $|\boldsymbol{B}|$.
+\end{example}
+\begin{solution}
+    由 $\boldsymbol{BA}=\boldsymbol{B}+2\boldsymbol{E}$ 得 $\boldsymbol{B}(\boldsymbol{A}-\boldsymbol{E})=2\boldsymbol{E}$, 两边取行列式, 有
+    $$|\boldsymbol{B}|\cdot|\boldsymbol{A}-\boldsymbol{E}|=|2\boldsymbol{E}|=4$$
+    因为 $|\boldsymbol{A}-\boldsymbol{E}|=\begin{vmatrix}
+            1  & 1 \\
+            -1 & 1
+        \end{vmatrix}=2$, 所以 $|\boldsymbol{B}|=2.$
+\end{solution}
+
+\begin{example}
+    已知 $\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\beta},\vb*{\gamma}$ 均为 4 维列向量, 又 $\vb*{A}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\beta}),~\vb*{B}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\gamma})$, 
+    若 $|\vb*{A}|=3,|\vb*{B}|=2$, 求 $|\vb*{A}+2\vb*{B}|.$
+\end{example}
+\begin{solution}
+    $|\vb*{A}+2\vb*{B}|=|3\vb*{\alpha}_1,3\vb*{\alpha}_2,3\vb*{\alpha}_3,\vb*{\beta}+2\vb*{\gamma}|=3^3|\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\beta}+2\vb*{\gamma}|=3^3\qty(|\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\beta}|+2|\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\gamma}|)=27\times 7=187.$
+\end{solution}
+
+\subsection{Vandermonde 行列式计算}
+
+\begin{theorem}[Vandermonde 行列式]
+    $n$ 阶 Vandermonde 行列式为
+    $$D_n=
+        \begin{vmatrix}
+            1         & 1         & \cdots & 1         \\
+            x_1       & x_2       & \cdots & x_n       \\
+            x_1^2     & x_2^2     & \cdots & x_n^2     \\
+            \vdots    & \vdots    &        & \vdots    \\
+            x_1^{n-1} & x_2^{n-1} & \cdots & x_n^{n-1}
+        \end{vmatrix}
+        =\prod_{1\leqslant j<i\leqslant n}(x_i-x_j).$$
+\end{theorem}
+% \begin{proof}[{\songti \textbf{证法一}}]
+%     将行列式第 $2$ 列至第 $n$ 列都减去第 $1$ 列, 然后再将其按第 $1$ 行展开, 
+%     \begin{flalign*}
+%         D_n & \xlongequal[j=2,\cdots,n]{c_j-c_1}
+%         \begin{vmatrix}
+%             1         & 0                   & \cdots & 0                       & 0                   \\
+%             x_1       & x_2-x_1             & \cdots & x_{n-1}-x_1             & x_n-x_1             \\
+%             x_1^2     & x_2^2-x_1^2         & \cdots & x_{n-1}^2-x_1^2         & x_n^2-x_1^2         \\
+%             \vdots    & \vdots              &        & \vdots                  & \vdots              \\
+%             x_1^{n-1} & x_2^{n-1}-x_1^{n-1} & \cdots & x_{n-1}^{n-1}-x_1^{n-1} & x_n^{n-1}-x_1^{n-1} \\
+%         \end{vmatrix} \\
+%             & =\begin{vmatrix}
+%                    x_2-x_1             & \cdots & x_{n-1}-x_1             & x_n-x_1             \\
+%                    x_2^2-x_1^2         & \cdots & x_{n-1}^2-x_1^2         & x_n^2-x_1^2         \\
+%                    \vdots              &        & \vdots                  & \vdots              \\
+%                    x_2^{n-1}-x_1^{n-1} & \cdots & x_{n-1}^{n-1}-x_1^{n-1} & x_n^{n-1}-x_1^{n-1} \\
+%                \end{vmatrix}
+%     \end{flalign*}
+% \end{proof}
+
+\begin{example}
+    计算下列行列式:
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \resizebox{.99\textwidth}{!}{
+            \begin{tabular}{l || l}
+                (\rownumber{}) $\displaystyle
+                    D_{n+1}=
+                    \begin{vmatrix}
+                        a^n     & (a-1)^n     & \cdots & (a-n)^n     \\
+                        a^{n-1} & (a-1)^{n-1} & \cdots & (a-n)^{n-1} \\
+                        \vdots  & \vdots      &        & \vdots      \\
+                        a       & a-1         & \cdots & a-n         \\
+                        1       & 1           & \cdots & 1
+                    \end{vmatrix}.$
+                 & (\rownumber{}) $\displaystyle
+                    D_{n-1}=
+                    \begin{vmatrix}
+                        2^n-2  & 2^{n-1}-2 & \cdots & 2^3-2  & 2      \\
+                        3^n-3  & 3^{n-1}-3 & \cdots & 3^3-3  & 6      \\
+                        \vdots & \vdots    &        & \vdots & \vdots \\
+                        n^n-n  & n^{n-1}-n & \cdots & n^3-n  & n^2-n  \\
+                    \end{vmatrix}.$
+            \end{tabular}}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 将 $D_{n+1}$ 的第 $n+1$ 行依次与第 $n,n-1,\cdots,1$ 行互换, 再将新的行列式的第 $n+1$ 行依次与第 $n,n-1,\dots,2$ 行互换, 
+              如此下去, 总共经过 $n+(n+1)+\cdots+2+1=\dfrac{n(n+1)}{2}$ 次行与行的互换, 最后得 Vandermonde 行列式
+              \begin{flalign*}
+                  D_{n+1} & =(-1)^{\frac{n(n+1)}{2}}
+                  \begin{vmatrix}
+                      1       & 1           & \dots & 1           \\
+                      a       & a-1         & ...   & a-n         \\
+                      \vdots  & \vdots      &       & \vdots      \\
+                      a^{n-1} & (a-1)^{n-1} & \dots & (a-n)^{n-1} \\
+                      a^n     & (a-1)^n     & ...   & (a-n)^n
+                  \end{vmatrix}
+                  =(-1)^{\frac{n(n+1)}{2}}\prod_{0\leqslant j<i\leqslant n}[(a-i)-(a-j)] \\
+                          & =\prod_{0\leqslant j<i\leqslant n}(i-j)=\prod_{k=1}^{n}k!.
+              \end{flalign*}
+        \item 利用升阶法, 将 $D$ 添上一行一列, 然后将第一行的 $i$ 倍加到后面各行, 再将第 $j$ 列与后面的 $n-j$ 列逐次交换, $j=2,3,\cdots,n-1$, 化为 Vandermonde 行列式, 
+              \begin{flalign*}
+                  D & =
+                  \begin{vNiceArray}{c:ccccc}
+                    1      & 1      & 1         & \cdots & 1      & 1      \\ \hdottedline
+                    0      & 2^n-2  & 2^{n-1}-2 & \cdots & 2^3-2  & 2      \\
+                    0      & 3^n-3  & 3^{n-1}-3 & \cdots & 3^3-3  & 6      \\
+                    \vdots & \vdots & \vdots    &        & \vdots & \vdots \\
+                    0      & n^n-n  & n^{n-1}-n & \cdots & n^3    & n^2-n
+                \end{vNiceArray}_{n}
+                  \xlongequal[i=2,\cdots,n]{r_i+ir_1}
+                  \begin{vmatrix}
+                      1      & 1      & 1       & \cdots & 1      & 1      \\
+                      2      & 2^n    & 2^{n-1} & \cdots & 2^3    & 2^2    \\
+                      3      & 3^n    & 3^{n-1} & \cdots & 3^3    & 3^2    \\
+                      \vdots & \vdots & \vdots  &        & \vdots & \vdots \\
+                      n      & n^n    & n^{n-1} & \cdots & n^3    & n^2
+                  \end{vmatrix}                            \\
+                    & =n!\begin{vmatrix}
+                             1 & 1       & 1       & \cdots & 1      & 1      \\
+                             1 & 2^{n-1} & 2^{n-2} & \cdots & 2^2    & 2^1    \\
+                             1 & 3^{n-1} & 3^{n-2} & \cdots & 3^2    & 3^1    \\
+                             1 & \vdots  & \vdots  &        & \vdots & \vdots \\
+                             1 & n^{n-1} & n^{n-2} & \cdots & n^2    & n^1    \\
+                         \end{vmatrix}
+                  =n! (-1)^{\frac{(n-2)(n-1)}{2}}\begin{vmatrix}
+                                                     1 & 1      & 1      & \cdots & 1       & 1       \\
+                                                     1 & 2      & 2^2    & \cdots & 2^{n-2} & 2^{n-1} \\
+                                                     1 & 3      & 3^2    & \cdots & 3^{n-2} & 3^{n-1} \\
+                                                     1 & \vdots & \vdots &        & \vdots  & \vdots  \\
+                                                     1 & n      & n^2    & \cdots & n^{n-2} & n^{n-1} \\
+                                                 \end{vmatrix} \\
+                    & =(-1)^{\frac{n^2+n+2}{2}}\prod_{1\leqslant j<i\leqslant n+1}(i-j).
+              \end{flalign*}
+    \end{enumerate}
+\end{solution}
+
+\begin{example}
+    计算下列行列式:
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l || l}
+            (\rownumber{}) $\displaystyle
+                D_n=\begin{vmatrix}
+                        1      & a_1    & a_1^2  & \cdots & a_1^{n-2} & a_1^{n-1}+S/a_1 \\
+                        1      & a_2    & a_2^2  & \cdots & a_2^{n-2} & a_2^{n-1}+S/a_2 \\
+                        \vdots & \vdots & \vdots &        & \vdots    & \vdots          \\
+                        1      & a_n    & a_n^2  & \cdots & a_n^{n-2} & a_n^{n-1}+S/a_n
+                    \end{vmatrix}.$
+             & (\rownumber{}) $\displaystyle
+                D=\begin{vmatrix}
+                      1      & x_1    & x_1^2  & \cdots & x_1^n  \\
+                      1      & x_2    & x_2^2  & \cdots & x_2^n  \\
+                      \vdots & \vdots & \vdots &        & \vdots \\
+                      1      & x_n    & x_n^2  & \cdots & x_n^n  \\
+                      0      & -2     & -2     & \cdots & -2
+                  \end{vmatrix}.$
+        \end{tabular}
+    \end{table}
+    其中 $\displaystyle S=\sum_{i=1}^{n}a_i$, 且 $a_i\neq0.$
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 先拆项, 再利用 Vandermonde 行列式计算, 
+              \begin{flalign*}
+                  D_n & =
+                  \begin{vmatrix}
+                      1      & a_1    & a_1^2  & \cdots & a_1^{n-2} & a_1^{n-1} \\
+                      1      & a_2    & a_2^2  & \cdots & a_2^{n-2} & a_2^{n-1} \\
+                      \vdots & \vdots & \vdots &        & \vdots    & \vdots    \\
+                      1      & a_n    & a_n^2  & \cdots & a_n^{n-2} & a_n^{n-1}
+                  \end{vmatrix}+
+                  \begin{vmatrix}
+                      1      & a_1    & a_1^2  & \cdots & a_1^{n-2} & S/a_1  \\
+                      1      & a_2    & a_2^2  & \cdots & a_2^{n-2} & S/a_2  \\
+                      \vdots & \vdots & \vdots &        & \vdots    & \vdots \\
+                      1      & a_n    & a_n^2  & \cdots & a_n^{n-2} & S/a_n
+                  \end{vmatrix}                                                               \\
+                      & =\prod_{1\leqslant j<i\leqslant n}(a_i-a_j)
+                  +\dfrac{S}{\displaystyle \prod_{i=1}^na_i}
+                  \begin{vmatrix}
+                      a_1    & a_1^2  & \cdots & a_1^{n-2} & a_1^{n-1} & 1      \\
+                      a_2    & a_2^2  & \cdots & a_2^{n-2} & a_2^{n-1} & 1      \\
+                      \vdots & \vdots &        & \vdots    & \vdots    & \vdots \\
+                      a_n    & a_n^2  & \cdots & a_n^{n-2} & a_n^{n-1} & 1
+                  \end{vmatrix}                                                            \\
+                      & =\prod_{1\leqslant j<i\leqslant n}(a_i-a_j)
+                  +(-1)^{n-1}\dfrac{S}{\displaystyle \prod_{i=1}^na_i}
+                  \begin{vmatrix}
+                      1      & a_1    & a_1^2  & \cdots & a_1^{n-2} & a_1^{n-1} \\
+                      1      & a_2    & a_2^2  & \cdots & a_2^{n-2} & a_2^{n-1} \\
+                      \vdots & \vdots & \vdots &        & \vdots    & \vdots    \\
+                      1      & a_n    & a_n^2  & \cdots & a_n^{n-2} & a_n^{n-1}
+                  \end{vmatrix}                                                            \\
+                      & =\left[1+(-1)^{n-1}\dfrac{S}{\displaystyle \prod_{i=1}^na_i}\right]\prod_{1\leqslant j<i\leqslant n}(x_i-x_j).
+              \end{flalign*}
+        \item 先拆项, 再利用 Vandermonde 行列式计算, 
+              \begin{flalign*}
+                  D & =
+                  \begin{vmatrix}
+                      1      & x_1    & x_1^2  & \cdots & x_1^n  \\
+                      1      & x_2    & x_2^2  & \cdots & x_2^n  \\
+                      \vdots & \vdots & \vdots &        & \vdots \\
+                      1      & x_n    & x_n^2  & \cdots & x_n^n  \\
+                      -2     & -2     & -2     & \cdots & -2
+                  \end{vmatrix}+
+                  \begin{vmatrix}
+                      0      & x_1    & x_1^2  & \cdots & x_1^n  \\
+                      0      & x_2    & x_2^2  & \cdots & x_2^n  \\
+                      \vdots & \vdots & \vdots &        & \vdots \\
+                      0      & x_n    & x_n^2  & \cdots & x_n^n  \\
+                      2      & -2     & -2     & \cdots & -2
+                  \end{vmatrix}                                                                                                  \\
+                    & =-2
+                  \begin{vmatrix}
+                      1      & x_1    & x_1^2  & \cdots & x_1^n  \\
+                      1      & x_2    & x_2^2  & \cdots & x_2^n  \\
+                      \vdots & \vdots & \vdots &        & \vdots \\
+                      1      & x_n    & x_n^2  & \cdots & x_n^n  \\
+                      1      & 1      & 1      & \cdots & 1
+                  \end{vmatrix}
+                  +(-1)^n2\prod_{i=1}^n
+                  \begin{vmatrix}
+                      1      & x_1     & x_1^2     & \cdots & x_1^{n-1}     \\
+                      1      & x_2     & x_2^2     & \cdots & x_2^{n-1}     \\
+                      \vdots & \vdots  & \vdots    &        & \vdots        \\
+                      1      & x_{n-1} & x_{n-1}^2 & \cdots & x_{n-1}^{n-1} \\
+                      1      & x_n     & x_n^2     & \cdots & x_n^{n-1}
+                  \end{vmatrix}                                                                                       \\
+                    & =-2\prod_{i=1}^{n}(1-x_i)\prod_{1\leqslant j<i\leqslant n}(x_i-x_j)+(-1)^n2\prod_{i=1}^{n}x_i\prod_{1\leqslant j<i\leqslant n}(x_i-x_j) \\
+                    & =2\left[-\prod_{i=1}^{n}(1-x_i)+(-1)^n\prod_{i=1}^{n}x_i\right]\prod_{1\leqslant j<i\leqslant n}(x_i-x_j).
+              \end{flalign*}
+    \end{enumerate}
+\end{solution}
+
+\begin{example}[2006 山东大学]
+    计算 $n$ 阶行列式\label{fmty}
+    $$D=\begin{vmatrix}
+            1         & 1         & \cdots & 1         \\
+            x_1       & x_2       & \cdots & x_n       \\
+            x_1^2     & x_2^2     & \cdots & x_n^2     \\
+            \vdots    & \vdots    &        & \vdots    \\
+            x_1^{n-2} & x_2^{n-2} & \cdots & x_n^{n-2} \\
+            x_1^n     & x_2^n     & \cdots & x_n^n
+        \end{vmatrix}.$$
+\end{example}
+\begin{solution}
+    在 $D$ 中增加一行一列, 凑成 $n+1$ 阶 Vandermonde 行列式:
+    $$D_{n+1}=\begin{vmatrix}
+            \begin{array}{cccc|c|}
+                1         & 1         & \cdots & 1         & 1       \\
+                x_1       & x_2       & \cdots & x_n       & y       \\
+                x_1^2     & x_2^2     & \cdots & x_n^2     & y^2     \\
+                \vdots    & \vdots    &        & \vdots    & \vdots  \\
+                x_1^{n-2} & x_2^{n-2} & \cdots & x_n^{n-2} & y^{n-2} \\ \hline
+                x_1^{n-1} & x_2^{n-1} & \cdots & x_n^{n-1} & y^{n-1} \\ \hline
+                x_1^n     & x_2^n     & \cdots & x_n^n     & y^n
+            \end{array}
+        \end{vmatrix}=\prod_{k=1}^{n}(y-x_k)\prod_{1\leqslant j<i\leqslant n}(x_i-x_j)$$
+        这是关于变量 $y$ 的恒等式, 一方面, 将上式左边 $D_{n+1}$ 按第 $D_{n+1}$ 列展开, 得 $y$ 的 $n$ 次多项式:
+        $$D_{n+1}=A_{1,n+1}+yA_{2,n+1}+\cdots+y^{n-1}A_{n,n+1}+y^nA_{n+1,n+1}$$
+        其中 $A_{k,n+1}$ 是 $D_{n+1}$ 的 $(k,n+1)$ 元的代数余子式 $(1\leqslant k\leqslant n+1)$, 且 $y^{n-1}$ 的系数为
+        $$A_{n,n+1}=(-1)^{n+n+1}D=-D$$
+        另一方面, 对于 $D_{n+1}$ 的右边, 因为 $$\prod_{k=1}^{n}(y-x_k)=y^n-\sum_{k=1}^{n}x_ky^{n-1}+\cdots+(-1)^n\prod_{k=1}^{n}x_k$$
+        所以, $y^{n-1}$ 的系数为 $\displaystyle-\sum_{k=1}^{n}x_k\prod_{1\leqslant j<i\leqslant n}(x_i-x_j)$, 因此, 有
+        $$D=\sum_{k=1}^{n}x_k\prod_{1\leqslant j<i\leqslant n}(x_i-x_j).$$
+\end{solution}

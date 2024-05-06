@@ -1,1 +1,339 @@
-\section{双线性函数}
+\section{二次型的规范形与标准形}
+
+\subsection{二次型的基本概念}
+
+\begin{definition}[$n$ 元二次型]
+    含有 $ n $ 个变量 $ x_{1}, x_{2}, \cdots, x_{n} $ 的二次齐次函数
+    $$\begin{aligned}
+            f\left(x_{1}, x_{2}, \cdots, x_{n}\right)= & a_{11} x_{1}^{2}+a_{22} x_{2}^{2}+\cdots+a_{n n} x_{n}^{2}+2 a_{12} x_{1} x_{2}+2 a_{13} x_{1} x_{3}+\cdots+ \\
+                                                       & 2 a_{1 n} x_{1} x_{n}+2 a_{23} x_{2} x_{3}+\cdots+2 a_{2 n} x_{2} x_{n}+\cdots+                              \\
+                                                       & 2 a_{n-1, n} x_{n-1} x_{n}
+        \end{aligned}$$
+    称为 $ n $ \textit{元二次型}.
+\end{definition}
+
+常见的三元二次型:
+$$f\left(x_{1}, x_{2}, x_{3}\right)= a x_{1}^{2}+b x_{2}^{2}+c x_{3}^{2}+d x_{1} x_{2}+e x_{3} x_{2}+f x_{1} x_{3}$$
+几何意义: 三元二次型的几何图形是空间曲面.
+
+二次型有矩阵表示.
+
+\begin{definition}[二次型的矩阵表达]
+    在二次型表达式中取 $ a_{i j}=a_{j i} $, 则
+    $$2 a_{i j} x_{i} x_{j}=a_{i j} x_{i} x_{j}+a_{j i} x_{j} x_{i}$$
+    于是上述二次型可以写为
+    $$f\left(x_{1}, x_{2}, \cdots, x_{n}\right)=\sum_{i=1}^{n} \sum_{j=1}^{n} a_{i j} x_{i} x_{j}=
+        \left(x_{1}, x_{2}, \cdots, x_{n}\right)
+        \mqty(a_{11} & a_{12} & \cdots & a_{1 n} \\
+        a_{21} & a_{22} & \cdots & a_{2 n} \\
+        \vdots & \vdots & & \vdots \\
+        a_{n 1} & a_{n 2} & \cdots & a_{n n})
+        \mqty(x_{1} \\    x_{2} \\    \vdots \\    x_{n})
+        =\vb*{x}^\top \vb*{A} \vb*{x} $$
+    或
+    $$f(x_1,x_2,\cdots,x_n)=a\sum_{i=1}^{n}x_i^2+2b\sum_{1\leqslant j<k\leqslant n}x_jx_k=
+        \left(x_{1}, x_{2}, \cdots, x_{n}\right)
+        \mqty(a & b & \cdots & b \\
+        b & a & \cdots & b \\
+        \vdots & \vdots & & \vdots \\
+        b & b & \cdots & a)
+        \mqty(x_{1} \\    x_{2} \\    \vdots \\    x_{n})
+        =\vb*{x}^\top \vb*{A} \vb*{x}$$
+    其中 $ \vb*{A} $ 是对称矩阵, 称为\textit{二次型} $ f $ \textit{的矩阵},
+    矩阵 $ \vb*{A} $ 的秩称为\textit{二次型} $ f $ \textit{的秩}.
+\end{definition}
+
+\begin{example}
+    二次型 $$f(x_1,x_2,x_3)=x_1^2+ax_2^2+x_3^2+2x_1x_2+2ax_1x_3+2x_2x_3$$ 的秩为 $2$, 求 $a.$
+\end{example}
+\begin{solution}
+    二次型 $f$ 矩阵为 $\vb*{A}=\mqty(1&1&a\\1&a&1\\a&1&1)$, 由题意 $\rank\vb*{A}=2\Rightarrow \det\vb*{A}=0\Rightarrow a=-2.$
+\end{solution}
+
+\begin{definition}[二次型的标准形]
+    如果二次型中只含有变量的平方项, 所有混合项 $ x_{i} x_{j}(i \neq j) $ 的系数全是零, 即
+    $$\vb*{x}^{\top} A \vb*{x}=d_{1} x_{1}^{2}+d_{2} x_{2}^{2}+\cdots+d_{n} x_{n}^{2}$$
+    这样的二次型称为\textit{标准形}.
+\end{definition}
+
+\begin{definition}[二次型的规范形]
+    在标准形中, 如平方项的系数 $ d_{j} $ 为 $ 1,-1 $ 或 $0$,
+    $$\vb*{x}^{\top} \vb*{A} \vb*{x}=x_{1}^{2}+x_{2}^{2}+\cdots+x_{p}^{2}-x_{p+1}^{2}-\cdots-x_{p+q}^{2}$$
+    则称其为二次型的\textit{规范形}.
+\end{definition}
+
+\begin{example}
+    化二次型 $f=2x_2^2+2x_1x_3$ 为标准形, 并写出所用坐标变换.
+\end{example}
+\begin{solution}
+    $f=2x_2^2+\dfrac{1}{2}(x_1+x_3)^2-\dfrac{1}{2}(x_1-x_3)^2$, 令
+    $\begin{cases}
+            z_1=\sqrt2x_2                  \\
+            z_2=\dfrac{1}{\sqrt2}(x_1+x_3) \\[6pt]
+            z_3=\dfrac{1}{\sqrt2}(x_1-x_3)
+        \end{cases}$ 则 $\vb*{x}=\vb*{Cz}$, 
+    其中 $\vb*{C}=\mqty(0&\dfrac{1}{\sqrt2}&\dfrac{1}{\sqrt2}\\[6pt]\dfrac{1}{\sqrt2}&0&0\\[6pt]0&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{2}}).$
+\end{solution}
+
+\begin{example}
+    将二次型 $$f(x_1,x_2,x_3)=x_1^2+3x_2^2+3x_3^2+2x_1x_2-4x_1x_3$$ 化为标准形, 并写出所用坐标变换.
+\end{example}
+\begin{solution}
+    $f$ 的标准形为 $$f(x_1,x_2,x_3)=(x_1+x_2-2x_3)^2+2(x_2+x_3)^2-3x_3^2$$
+    故令 $\left\{\begin{matrix}
+            z_1 & = & x_1 & + & x_2 & - & 2x_3 \\
+            z_2 & = &     &   & x_2 & + & x_3  \\
+            z_3 & = &     &   &     &   & x_3
+        \end{matrix}\right.$ 即坐标变换 $\left\{\begin{matrix}
+            x_1 & = & z_1 & - & z_2 & + & 3z_3 \\
+            x_2 & = &     &   & z_2 & - & z_3  \\
+            x_3 & = &     &   &     &   & z_3
+        \end{matrix}\right.$, 或 $\vb*{x}=\mqty(1&-1&3\\0&1&-1\\0&0&1)\vb*{z}$, 则有 $f=z_1^2+2z_2^2-3z_3^2.$
+\end{solution}
+
+\begin{example}
+    已知二次型 \label{fx1x2x3gy1y2y3}$$f(x_1,x_2,x_3)=x_1^2+2x_2^2+2x_3^2+2x_1x_2-2x_1x_3,~g(y_1,y_2,y_3)=y_1^2+y_2^2+y_3^2+2y_2y_3$$
+    求可逆变换 $\vb*{x}=\vb*{Py}$ 将 $f$ 化为 $g.$
+\end{example}
+\begin{solution}
+    $f$ 的标准形为 $$f(x_1,x_2,x_3)=(x_1+x_2-x_3)^2+(x_2+x_3)^2$$
+    故令 $\left\{\begin{matrix}
+            z_1 & = & x_1 & + & x_2 & - & x_3 \\
+            z_2 & = &     &   & x_2 & + & x_3 \\
+            z_3 & = &     &   &     &   & x_3
+        \end{matrix}\right.\Rightarrow \left\{\begin{matrix}
+            x_1 & = & z_1 & - & z_2 & + & 2z_3 \\
+            x_2 & = &     &   & z_2 & - & z_3  \\
+            x_3 & = &     &   &     &   & z_3
+        \end{matrix}\right.$, 则 $\vb*{x}=\vb*{P}_1\vb*{z}$, 其中 $\vb*{P}_1=\mqty(1&-1&2\\0&1&-1\\0&0&1)$
+    同理 $g(x_1,x_2,x_3)=y_1^2+(y_2+y_3)^2$, 令 $\left\{\begin{matrix}
+            z_1 & = & y_1                 \\
+            z_2 & = &     & y_2 & + & y_3 \\
+            z_3 & = &     &     &   & y_3
+        \end{matrix}\right.$ 即 $\vb*{z}=\vb*{P}_2\vb*{y}$, 其中 $\vb*{P}_2=\mqty(1&0&0\\0&1&1\\0&0&1)$
+    于是 $$\vb*{x}=\vb*{P}_1\vb*{P}_2\vb*{y}=\mqty(1&-1&1\\0&1&0\\0&0&1)\vb*{y}$$
+    故 $\vb*{P}=\mqty(1&-1&1\\0&1&0\\0&0&1).$
+\end{solution}
+
+\begin{definition}[正负惯性指数]
+    在二次型 $ \vb*{x}^{\top} \vb*{A} \vb*{x} $ 的规范形中, 正的平方项的个数 $ p $ 称为\textit{二次型的正惯性指数}, 负的平方项的个数 $ q $ 称为\textit{二次型的负惯性指数}.
+\end{definition}
+
+\begin{definition}[符号差]
+    正惯性指数 $p$ 与负惯性指数 $q$ 的差称为符号差 $s$, 即 $s=p-q.$
+\end{definition}
+\begin{example}
+    设 $f(x_1,x_2,x_3)=ax_1^2+(a-1)x_2^2+(a+2)x_3^2$ 的标准形是 $y_1^2-y_2^2-y_3^2$, 求 $a$ 的取值范围.
+\end{example}
+\begin{solution}
+    由题意可知 $p=1,q=2$, 于是 $a-1<a<0<a+2\Rightarrow -2<a<0.$
+\end{solution}
+
+\begin{example}
+    设 $\vb*{A}$ 是 $n$ 阶实对称矩阵, 秩为 $r$, 符号差为 $s$, 则必有
+    \begin{tasks}(2)
+        \task $r$ 是奇数, $s$ 是偶数
+        \task $s$ 是奇数, $r$ 是偶数
+        \task $r,s$ 均为偶数
+        \task $r,s$ 或均为奇数或均为偶数
+    \end{tasks}
+\end{example}
+\begin{solution}
+    $r=p+q,s=p-q$, 那么 $r+s=2p$, 从而 $r,s$ 或均为奇数或均为偶数.
+\end{solution}
+
+\begin{example}
+    求二次型 $$\displaystyle f(x_1,x_2,\cdots,x_n)=(n-1)\sum_{i=1}^{n}x_i^2-2\sum_{1\leqslant j<k\leqslant n}x_jx_k$$
+    的符号差.
+\end{example}
+\begin{solution}
+    设此二次型的矩阵为 $\vb*{A}$, 则 $$A=\mqty(n-1&-1&-1&\cdots&-1\\-1&n-1&-1&\cdots&-1\\\vdots& \vdots& \vdots& \ddots & \vdots\\-1&-1&-1&\cdots&n-1)$$
+    且 $|\lambda\vb*{E}-\vb*{A}|=\lambda(\lambda-n)^{n-1}$ (参考例题 \ref{ascendingMethod}(2) 的解法), 所以 $\vb*{A}$ 的特征值为 $\lambda_1=\lambda_2=\cdots=\lambda_{n-1}=n,\lambda_n=0$, 故符号差 $s=n-1.$
+\end{solution}
+
+\begin{definition}[非线性替换]
+    如果
+    \begin{equation}
+        \left\{\begin{array}{l}
+            x_{1}=c_{11} y_{1}+c_{12} y_{2}+\cdots+c_{1 n} y_{n}, \\
+            x_{2}=c_{21} y_{1}+c_{22} y_{2}+\cdots+c_{2 n} y_{n}  \\
+            \cdots                                                \\
+            x_{n}=c_{n 1} y_{1}+c_{n 2} y_{2}+\cdots \cdots+c_{n n} y_{n}
+        \end{array}\right.
+        \tag{*}
+    \end{equation}
+    满足 $$|\vb*{C}|=\mqty|c_{11}  & c_{12}  & \cdots & c_{1 n} \\
+            c_{21}  & c_{22}  & \cdots & c_{2 n} \\
+            \vdots  & \vdots  &        & \vdots  \\
+            c_{n 1} & c_{n 2} & \cdots & c_{n n}| \neq 0$$
+    称 (*) 为由 $ \vb*{x}=\left(x_{1}, x_{2}, \cdots, x_{n}\right)^{\top} $ 到 $ \vb*{y}=\left(y_{1}, y_{2}, \cdots, y_{n}\right)^{\top} $ 的\textit{非退化线性替换}, 且 (*) 可用矩阵描述, 即
+    $$\mqty( x_{1}  \\
+                x_{2}  \\
+                \vdots \\
+                x_{n})=\mqty(c_{11}  & c_{12}  & \cdots & c_{1 n} \\
+                c_{21}  & c_{22}  & \cdots & c_{2 n} \\
+                \vdots  & \vdots  &        & \vdots  \\
+                c_{n 1} & c_{n 2} & \cdots & c_{n n})
+                \mqty(y_{1}  \\
+                y_{2}  \\
+                \vdots \\
+                y_{n})$$
+    或 $ \vb*{x}=\vb*{C y} $, 其中 $ \vb*{C} $ 是可逆矩阵.
+\end{definition}
+
+如果没有特别说明, 本章所涉及的二次型均为实二次型, 即二次型中变量的系数均为实数, 所涉及的矩阵和向量都是实的.
+
+\subsection{二次型的常用结论}
+
+\begin{enumerate}[label=(\arabic{*})]
+    \item 二次型与对称矩阵一一对应.
+    \item 变量 $ \vb*{x}=\left(x_{1}, x_{2}, \cdots, x_{n}\right)^{\top} $ 的 $ n $ 元二次型 $ \vb*{x}^{\top} \vb*{A} \vb*{x} $ 经过非退化线性替换 $ \vb*{x}=\vb*{C} \vb*{y} $ 后, 成为变量 $ \vb*{y}=\left(y_{1}, y_{2}, \cdots, y_{n}\right)^{\top} $ 的 $ n $ 元二次型 $ \vb*{y}^{\top} \vb*{B} \vb*{y} $, 其中 $ \vb*{B}=\vb*{C}^{\top} \vb*{A} \vb*{C} $.
+    \item 任意的 $ n $ 元二次型 $ \vb*{x}^{\top} \vb*{A} \vb*{x} $ 都可以通过非退化线性替换化成标准形 $ d_{1} y_{1}^{2}+   d_{2} y_{2}^{2}+\cdots+d_{n} y_{n}^{2} $, 其中 $ d_{i}(i=1,2, \cdots, n) $ 是实数.
+    \item 任意 $ n $ 元二次型 $ \vb*{x}^{\top} \vb*{A} \vb*{x} $, 由于 $ \vb*{A} $ 是实对称矩阵, 故必存在正交变换 $ \vb*{x}=\vb*{Q} \vb*{y}$ ($\vb*{Q} $ 为正交矩阵), 使得二次型化为标准形 $ \lambda_{1} y_{1}^{2}+\lambda_{2} y_{2}^{2}+\cdots+\lambda_{n} y_{n}^{2} $, 且 $ \lambda_{1}, \lambda_{2}, \cdots, \lambda_{n} $ 是 $ A $ 的 $ n $ 个特征值.
+    \item 非退化线性替换保持二次型的正负惯性指数、秩、正定性等.
+\end{enumerate}
+
+\begin{theorem}[惯性定理]
+    任意 $n$ 元二次型 $\vb*{x}^\top\vb*{Ax}$ 都可通过非退化线性替换化为规范形
+    $$z_1^2+z_2^2+\cdots+z_p^2-z_{p+1}^2-\cdots-z_{p+q}^2$$
+    其中 $p$ 为正惯性指数, $q$ 为负惯性指数, $p+q$ 为二次型的秩, 且 $p$, $q$ 由二次型唯一确定, 即规范形是唯一的.
+\end{theorem}
+
+\begin{example}
+    二次型 $f(x_1,x_2,x_3)=\vb*{x}^\top\vb*{Ax}$, 其中 $\vb*{A}=\mqty(1&2&2\\0&2&\dfrac{1}{2}\\[6pt]0&\dfrac{7}{2}&1)$, 求 $f$ 的正惯性系数.
+\end{example}
+\begin{solution}
+    实对称矩阵 $\vb*{A}_0=\dfrac{1}{2}\qty(\vb*{A}+\vb*{A}^\top)=\dfrac{1}{2}\qty(\mqty(1&2&2\\0&2&\dfrac{1}{2}\\[6pt]0&\dfrac{7}{2}&1)+\mqty(1&0&0\\2&2&\dfrac{7}{2}\\[6pt]2&\dfrac{1}{2}&1))=\mqty(1&1&1\\1&2&2\\1&2&1)$, 
+    设 $\vb*{A}_0$ 的特征值为 $\lambda_1,~\lambda_2,~\lambda_3$ 则 $\begin{cases}
+            \lambda_1+\lambda_2+\lambda_3=\tr\vb*{A}_0=4 \\
+            \lambda_1\cdot \lambda_2\cdot \lambda_3=\det\vb*{A}_0=-1
+        \end{cases}$ 由 $\lambda_1\cdot \lambda_2\cdot \lambda_3<0$ 知, 三个特征值中有且仅有一个特征值为负, 则 $f$ 的正惯性系数为 2.
+\end{solution}
+
+\begin{example}
+    \label{fx1x2x3p}求二次型 $$f(x_1,x_2,x_3)=(x_1+x_2)^2+(x_2-x_3)^2+(x_1+x_3)^2$$ 的正惯性指数 $p.$
+\end{example}
+\begin{solution}
+    二次型 $f$ 的矩阵为 $\mqty(2&1&1\\1&2&-1\\1&-1&2)$, 那么特征方程为 $$\mqty|\lambda\vb*{E}-\vb*{A}|=\mqty|\lambda-2&-1&-1\\-1&\lambda-2&1\\-1&1&\lambda-2|=\lambda(\lambda-3)^2$$
+    故特征值为 $3,3,0$, 因此正惯性指数 $p=2.$
+\end{solution}
+
+\begin{theorem}
+    若 $f(x_1,x_2,x_3)=(a_1x_1+a_2x_2+a_3x_3)^2+(b_1x_1+b_2x_2+b_3x_3)^2+(c_1x_1+c_2x_2+c_3x_3)^2$, 令
+    $$\vb*{\alpha}=(a_1,a_2,a_3)^\top,~\vb*{\beta}=(b_1,b_2,b_3)^\top,~\vb*{\gamma}=(c_1,c_2,c_3)^\top$$
+    则 $f$ 的正惯性指数 $p=\rank(\vb*{\alpha},\vb*{\beta},\vb*{\gamma})$, 负惯性指数 $q=0.$
+\end{theorem}
+
+\begin{example}
+    二次型 $f(x_1,x_2,x_3)=(x_1+x_2+x_3)^2+(x_2-x_3)^2+(x_1+2x_3)^2$ 的正惯性指数与负惯性指数依次为
+    \begin{tasks}(4)
+        \task $1,0$
+        \task $2,0$
+        \task $3,0$
+        \task $2,1$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    令 $\vb*{\alpha}=(1,1,1)^\top,~\vb*{\beta}=(0,1,-1)^\top,~\vb*{\gamma}=(1,0,2)^\top$, 易知 $\rank(\vb*{\alpha},\vb*{\beta},\vb*{\gamma})=2$, 则正惯性指数 $p=2$, 负惯性指数 $q=0$, 选 B.
+\end{solution}
+
+\begin{example}
+    (2012 数一) 二次型 $f(x_1,x_2,x_3)=x_1^2+3x_2^2+x_3^2+2x_1x_2+2x_1x_3+2x_2x_3$, 求 $f$ 的正惯性指数.
+\end{example}
+\begin{solution}
+    二次型的矩阵 $\vb*{A}=\mqty(1&1&1\\1&3&1\\1&1&1)$, 于是
+    $$|\lambda\vb*{E}-\vb*{A}|\xlongequal[r_2-r_3]{r_1-r_3}\mqty|\lambda&0&-\lambda\\0&\lambda-2&-\lambda\\-1&-1&\lambda-1|=\lambda(\lambda-1)(\lambda-4)$$
+    故 $\vb*{A}$ 的特征值为: 0,1,4, 所以正惯性指数为 2.
+\end{solution}
+
+\begin{example}
+    (2016 数二) 设二次型 $f(x_1,x_2,x_3)=a\qty(x_1^2+x_2^2+x_3^2)+2x_1x_2+2x_2x_3+2x_1x_3$ 的正、负惯性指数分别为 1, 2, 求 $a$ 的取值范围.
+\end{example}
+\begin{solution}
+    二次型的矩阵 $\vb*{A}=\mqty(a&1&1\\1&a&1\\1&1&a)$, 则 $|\lambda\vb*{E}-\vb*{A}|=(\lambda-a-2)(\lambda-a+1)^2=0$, 得特征值 $a+2$, $a-1$ (二重), 
+    则 $a+2>0,a-1<0$, 故得 $-2<a<1.$
+\end{solution}
+
+\subsection{运用偏导函数求标准形}
+
+运用偏导函数的思想将二次型化为标准形有以下两种情况:
+\begin{enumerate}[label=(\arabic{*})]
+    \item 如果 $ f(x_1,x_2,\cdots,x_n) $ 中含有某变量的平方项, 即 $ a_{i i}~ (i=1, \cdots, n) $ 中至少有一个不为零, 
+          不妨设 $ a_{11} \neq 0 $, 记 $ \displaystyle f_{1}=\frac{1}{2} \frac{\partial f}{\partial x_{1}}$, 
+          令 $$f(x_1,x_2,\cdots,x_n)=\frac{1}{a_{11}}f_1^2+g$$
+          求得 $ g $, 此时 $ g $ 中已不含 $ x_{1}$, 再记 $ \displaystyle g_{1}=\frac{1}{2} \frac{\partial g}{\partial x_{2}} $, 并令
+          $$f(x_1,x_2,\cdots,x_n)=\frac{1}{a_{11}}f_1^2+\frac{1}{a_{22}}g_1^2+h$$
+          此时 $h$ 中已不含 $x_1$ 与 $x_2$, 按这种方法继续运算, 可将二次型化为标准形;
+    \item 如果 $f(x_1,x_2,\cdots,x_n)$ 中不含有任一变量的平方项, 即 $a_{ii}=0~ (i=1,\cdots,n)$, 但至少有一个 $a_{1j}\neq 0~ (j>1)$ 不为零 ($a_{ij}$ 是 $x_{ij}$ 项的系数), 
+          不妨设 $a_{12}\neq 0$, 记 $f_1=\dfrac{1}{2}\displaystyle\pdv{f}{x_1},f_2=\dfrac{1}{2}\displaystyle\pdv{f}{x_2}$, 令
+          $$f(x_1,x_2,\cdots,x_n)=\dfrac{1}{a_{12}}\qty[(f_1+f_2)^2-(f_1-f_2)^2]+\varphi$$
+          求得 $\varphi$, 此时 $\varphi$ 中已不含 $x_1$ 与 $x_2$, 观察 $\varphi$ 的结构, 如果 $\varphi$ 中含有变量的平方项, 则按情况一中的方法进行, 否则按情况二中的方法进行, 直至二次型化为标准形.
+\end{enumerate}
+
+\begin{example}
+    将二次型 $f(x_1,x_2,x_3)=x_1^2+2x_2^2-4x_3^2+2x_1x_2-2x_2x_3$ 化为标准形.
+\end{example}
+\begin{solution}
+    记 $f_1=\dfrac{1}{2}\displaystyle\pdv{f}{x_1}=x_1+x_2$, 令 $$f=\dfrac{1}{a_{11}}f_1^2+g=(x_1+x_2)^2+g$$
+    求得 $g=x_2^2-4x_3^2-2x_2x_3$, 记 $g_1=\dfrac{1}{2}\displaystyle\pdv{g}{x_2}=x_2-x_3$, 令 $$g=\dfrac{1}{a_{22}}g_1^2+h$$
+    求得 $h=-5x_3^2$, 那么 $$f(x_1,x_2,x_3)=(x_1+x_2)^2+(x_2-x_3)^2-5x_3^2$$
+    作可逆线性变换 $$\left\{\begin{matrix}
+            y_1 & = & x_1 & + & x_2           \\
+            y_2 & = &     &   & x_2 & - & x_3 \\
+            y_3 & = &     &   &     &   & x_3
+        \end{matrix}\right.$$
+    则有 $f(y_1,y_2,y_3)=y_1^2+y_2^2-5y_3^2.$
+\end{solution}
+
+\begin{example}
+    将二次型 $f(x_1,x_2,x_3)=-4x_1x_2+2x_1x_3+2x_2x_3$ 化为标准形.
+\end{example}
+\begin{solution}
+    二次型中不含有任一变量的平方项, 记 $f_1=\dfrac{1}{2}\displaystyle\pdv{f}{x_1},~f_2=\dfrac{1}{2}\displaystyle\pdv{f}{x_2}$, 则有
+    $$f_1=\dfrac{1}{2}(-4x_2+2x_3)=-2x_2+x_3,~f_2=\dfrac{1}{2}(-4x_1+2x_3)=-2x_1+x_3$$
+    令
+    \begin{flalign*}
+        f & =\dfrac{1}{a_{12}}\qty[(f_1+f_2)^2-(f_1-f_2)^2]+\varphi=-\dfrac{1}{4}\qty[(-2x_1-2x_2+2x_3)^2-(2x_1-2x_2)^2]+\varphi \\
+          & =(x_1-x_2)^2-(x_1+x_2-x_3)^2+\varphi=(2x_1-x_3)(-2x_2+x_3)+\varphi=-4x_1x_2+2x_1x_3+2x_2x_3-x_3^2+\varphi
+    \end{flalign*}
+    即 $\varphi=x_3^2$, 所以
+    $$f(x_1,x_2,x_3)=-(x_1+x_2-x_3)^2+(x_1-x_2)^2+x_3^2$$
+    作可逆线性变换 $\left\{\begin{matrix}
+            y_1 & = & x_1 & + & x_2 & - & x_3 \\
+            y_2 & = & x_1 & - & x_2 &         \\
+            y_3 & = &     &   &     &   & x_3
+        \end{matrix}\right.$, 则有 $f(y_1,y_2,y_3)=-y_1^2+y_2^2+y_3^2.$
+\end{solution}
+
+\begin{example}
+    二次型 $$f(x_1,x_2,x_3)=(x_1+x_2)^2+(x_1+x_3)^2-4(x_2-x_3)^2$$ 的标准形为
+    \begin{tasks}(4)
+        \task $y_1^2+y_2^2$
+        \task $y_1^2-y_2^2$
+        \task $y_1^2+y_2^2-4y_3^2$
+        \task $y_1^2+y_2^2-y_3^2$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    将 $f$ 完全展开, 得 $$f=2x_1^2-3x_2^2-3x_3^2+2x_1x_2+2x_1x_3+8x_2x_3$$
+    那么 $$f_1=\dfrac{1}{2}\pdv{f}{x_1}=\dfrac{1}{2}(4x_1+2x_2+2x_3)=2x_1+x_2+x_3$$
+    则 $$f=\dfrac{1}{a_{11}}f_1^2+g=2x_1^2+\dfrac{1}{2}x_2^2+\dfrac{1}{2}x_3^2+2x_1x_2+2x_1x_3+x_2x_3+g$$
+    对比可得 $g=-\dfrac{7}{2}x_2^2-\dfrac{7}{2}x_3^2+7x_2x_3$, 
+    再令 $$g_1=\dfrac{1}{2}\pdv{g}{x_2}=\dfrac{1}{2}(-7x_2+7x_3)=-\dfrac{7}{2}x_2+\dfrac{7}{2}x_3$$
+    又 $g=\dfrac{1}{a_{22}}g_1^2+h$, 可解出 $h=0$, 因此可排除 C, D 选项, 
+    $$f=\dfrac{1}{\sqrt{2}^2}(2x_1+x_2+x_3)^2-\sqrt{\dfrac{7}{2}}^2(x_2-x_3)^2$$
+    作可逆线性变换 $\begin{cases}
+            y_1=\dfrac{1}{\sqrt{2}} (2x_1+x_2+x_3) \\[6pt]
+            y_2=\sqrt{\dfrac{7}{2} } (x_2-x_3)     \\[6pt]
+            y_3=x_3
+        \end{cases}$, 因此 $f(y_1,y_2,y_3)=y_1^2-y_2^2$ 选 B.
+\end{solution}
+
+\begin{example}
+    运用标准形求例题 \ref{fx1x2x3p} 的惯性指数 $p$ 和 $q$.
+\end{example}
+\begin{solution}
+    $f(x_1,x_2,x_3)=2x_1^2+2x_2^2+2x_3^2+2x_1x_2+2x_1x_3-2x_2x_3$, 令 $f_1=\dfrac{1}{2}\displaystyle\pdv{f}{x_1}$, 则 $$f_1=\dfrac{1}{2}\pdv{f}{x_1}=\dfrac{1}{2}(4x_1+2x_2+2x_3)=2x_1+x_2+x_3$$
+    记 $f=\dfrac{1}{a_{11}}f_1^2+g$, 对比可得 $g=\dfrac{3}{2}x_2^2+\dfrac{3}{2}x_3^2-3x_2x_3=\dfrac{3}{2}(x_2-x_3)^2$, 于是 $$f=\dfrac{1}{2}(2x_1+x_2+x_3)^2+\dfrac{3}{2}(x_2-x_3)^2$$
+    于是正惯性指数 $p=2$, 负惯性指数 $q=0.$
+\end{solution}

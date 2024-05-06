@@ -2,6 +2,15 @@
 
 \subsection{初等变换}
 
+\begin{definition}[矩阵的初等变换]
+    矩阵的初等行变换与初等列变换统称为\textit{初等变换}. 下列三种关于矩阵的变换称为矩阵的\textit{初等行 (列) 变换}:
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 互换矩阵中两行 (列) 的位置 $ \left(r_{i} \leftrightarrow r_{j}, c_{i} \leftrightarrow c_{j}\right)$ ;
+        \item 以一非零常数乘矩阵的某一行 (列) $ \left(k r_{i}, k c_{j}\right) $;
+        \item 将矩阵的某一行 (列) 的 $ k $ 倍加到另一行 (列) 上去 $ \left(r_{i}+k r_{j}, c_{i}+k c_{j}\right) $.
+    \end{enumerate}
+\end{definition}
+
 \begin{example}
     设 $\vb*{A}=\mqty(\xmat*{a}{3}{3}),~\vb*{B}=\mqty(a_{21}&a_{22}&a_{23}\\a_{11}&a_{12}&a_{13}\\a_{31}+a_{11}&a_{32}+a_{12}&a_{33}+a_{13})$, 
     $$\vb*{P}_1=\mqty(0&1&0\\1&0&0\\0&0&1),~\vb*{P}_2=\mqty(1&0&0\\0&1&0\\1&0&1)$$
@@ -67,6 +76,92 @@
     故选 A.
 \end{solution}
 
+\begin{example}
+    (2021 数二) 已知矩阵 $\vb*{A}=\begin{pmatrix}
+            1  & 0  & -1 \\
+            2  & -1 & 1  \\
+            -1 & 2  & -5
+        \end{pmatrix}$, 若存在下三角可逆矩阵 $\vb*{P}$ 和上三角可逆矩阵 $\vb*{Q}$,
+    使 $\vb*{PAQ}$ 为对角矩阵, 求 $\vb*{P}$ 和 $\vb*{Q}$.
+\end{example}
+\begin{solution}
+    对 $\vb*{A}$ 做初等行变换, 化为上三角矩阵 $\vb*{B}$,
+    \begin{flalign*}
+        \begin{pNiceArray}{c:c}
+            \vb*{A} & \vb*{E}
+        \end{pNiceArray} & =\begin{pNiceArray}{ccc:ccc}
+                                1  & 0  & -1 & 1 & 0 & 0 \\
+                                2  & -1 & 1  & 0 & 1 & 0 \\
+                                -1 & 2  & -5 & 0 & 0 & 1 \\
+                            \end{pNiceArray}\xrightarrow[r_3+r_1]{r_2-2r_1}
+        \begin{pNiceArray}{ccc:ccc}
+            1 & 0  & -1 & 1  & 0 & 0 \\
+            0 & -1 & 3  & -2 & 1 & 0 \\
+            0 & 2  & -6 & 1  & 0 & 1 \\
+        \end{pNiceArray}                                                   \\
+                                & \xrightarrow[]{r_3+2r_2}\begin{pNiceArray}{ccc:ccc}
+                                                              1 & 0  & -1 & 1  & 0 & 0 \\
+                                                              0 & -1 & 3  & -2 & 1 & 0 \\
+                                                              0 & 0  & 0  & -3 & 2 & 1 \\
+                                                          \end{pNiceArray}
+        \xrightarrow[]{}\begin{pNiceArray}{ccc:ccc}
+                            1 & 0 & -1 & 1  & 0  & 0 \\
+                            0 & 1 & -3 & 2  & -1 & 0 \\
+                            0 & 0 & 0  & -3 & 2  & 1 \\
+                        \end{pNiceArray}=\begin{pNiceArray}{c:c}
+                                             \vb*{B} & \vb*{P}
+                                         \end{pNiceArray}
+    \end{flalign*}
+    所以 $\vb*{P}=\begin{pmatrix}
+            1  & 0  & 0 \\
+            2  & -1 & 0 \\
+            -3 & 2  & 1
+        \end{pmatrix}$, 再对 $\vb*{B}$ 作列变换 (或 $\vb*{B}^{\top}$ 作行变换) 化为对角矩阵, 可求得 $\vb*{Q}$ (或 $\vb*{Q}^{\top}$)
+    $$\begin{pNiceArray}{c}
+            \vb*{B} \\
+            \hdottedline
+            \vb*{E}
+        \end{pNiceArray}=\begin{pNiceArray}{ccc}
+            1 & 0 & -1 \\
+            0 & 1 & -3 \\
+            0 & 0 & 0  \\
+            \hdottedline
+            1 & 0 & 0  \\
+            0 & 1 & 0  \\
+            0 & 0 & 1
+        \end{pNiceArray}\xrightarrow[c_3+3c_1]{c_3+c_1}\begin{pNiceArray}{ccc}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 0 \\
+            \hdottedline
+            1 & 0 & 1 \\
+            0 & 1 & 3 \\
+            0 & 0 & 1
+        \end{pNiceArray}$$
+    可得 $\vb*{Q}=\begin{pmatrix}
+            1 & 0 & 1 \\
+            0 & 1 & 3 \\
+            0 & 0 & 1
+        \end{pmatrix}.$
+    或 $$\begin{pNiceArray}{c:c}
+            \vb*{B}^{\top} & \vb*{E}
+        \end{pNiceArray}=\begin{pNiceArray}{ccc:ccc}
+            1  & 0  & 0 & 1 & 0 & 0 \\
+            0  & 1  & 0 & 0 & 1 & 0 \\
+            -1 & -3 & 0 & 0 & 0 & 1 \\
+        \end{pNiceArray}\xrightarrow[r_3+r_1]{r_3+3r_2}
+        \begin{pNiceArray}{ccc:ccc}
+            1 & 0 & 0 & 1 & 0 & 0 \\
+            0 & 1 & 0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1 & 3 & 1 \\
+        \end{pNiceArray}$$
+    得 $\vb*{Q}^{\top}=\begin{pmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            1 & 3 & 1
+        \end{pmatrix}.$
+\end{solution}
+
 \subsection{初等矩阵}
 
 \begin{definition}[初等矩阵]
@@ -84,6 +179,11 @@
         \item $\vb*{E}_i^{-1}(k)=\vb*{E}_i\qty(\dfrac{1}{k})$;
         \item $\vb*{E}_{ij}^{-1}(k)=\vb*{E}_{ij}(-k)$.
     \end{enumerate*}
+\end{theorem}
+
+\begin{theorem}[初等变换与初等矩阵的联系]
+    设 $\vb*{A}$ 是 $m\times n$ 矩阵, 对 $\vb*{A}$ 施行一次初等行变换, 相当于在 $\vb*{A}$ 的左边乘以相应的 $m$ 阶初等矩阵;
+    对 $\vb*{A}$ 施行一次初等列变换, 相当于在 $\vb*{A}$ 的右边乘以相应的 $n$ 阶初等矩阵.
 \end{theorem}
 
 \begin{example}

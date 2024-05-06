@@ -1,218 +1,44 @@
-\section{向量组的线性相关性}
+\section{向量的运算}
 
-\subsection{向量的概念}
+\subsection{向量的定义}
 
-\subsection{向量的线性组合}
-
-\begin{definition}[线性组合]
-    由 $ m $ 个 $ n $ 维向量 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 和 $ m $ 个常数 $ k_{1}, k_{2}, \cdots, k_{m} $ 所构成的向量
-    $$k_{1} \vb*{\alpha}_{1}+k_{2} \vb*{\alpha}_{2}+\cdots+k_{m} \vb*{\alpha}_{m}$$
-    称为向量组 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 的一个线性组合.
-\end{definition}
-\begin{definition}[线性表示]
-    对于向量组 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 和向量 $ \vb*{\beta}$, 若存在 $ m $ 个常数 $ k_{1}, k_{2}, \cdots, k_{m} $, 使得
-    $$\vb*{\beta}=k_{1} \vb*{\alpha}_{1}+k_{2} \vb*{\alpha}_{2}+\cdots+k_{m} \vb*{\alpha}_{m}$$
-    则称向量 $ \vb*{\beta} $ 是向量组 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 的线性组合, 或者说向量 $ \vb*{\beta} $
-    可以由向量组 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 线性表出, $k_{1}, k_{2}, \cdots, k_{m} $ 称为这个线性组合的系数.
-\end{definition}
-\begin{definition}[向量组间的线性表示]
-    设有两个 $ n $ 维向量组
-    $\vb*{A}: \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{s} \text { 和 } \vb*{B}: \vb*{\beta}_{1}, \vb*{\beta}_{2}, \cdots, \vb*{\beta}_{t}$, 
-    若 $ \vb*{B} $ 组中的每个向量 $ \vb*{\beta}_{i}~~(i=1,2, \cdots, t) $ 都能由
-    向量组 $ \vb*{A} $ 中的向量 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{s} $ 线性表示, 则称
-    向量组 $ \vb*{B} $ 能由向量组 $ \vb*{A} $ 线性表示, 对应矩阵方程 $\vb*{AX}=\vb*{B}$,
-    其中, $\vb*{A}=\left(\vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{s}\right),~\vb*{B}=\left(\vb*{\beta}_{1}, \vb*{\beta}_{2}, \cdots, \vb*{\beta}_{t}\right).$
-\end{definition}
-\begin{definition}[线性相关、线性无关]
-    设 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 是 $m$ 个向量, 对于方程
-    $$\lambda_1\vb*{\alpha}_{1}+\lambda_2\vb*{\alpha}_{2}+\cdots+\lambda_m\vb*{\alpha}_{m}=\vb*{0}$$
-    若有其非零解 $(\lambda_1,\lambda_2,\cdots,\lambda_m)\neq\vb*{0}$, 则称 $\vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m}$ 线性相关；
-    若其只有唯一解 $(\lambda_1,\lambda_2,\cdots,\lambda_m)$ $=\vb*{0}$, 则称 $\vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m}$ 线性无关.
+\begin{definition}[向量的定义]
+    由 $ n $ 个数 $ a_{1}, a_{2}, \cdots, a_{n} $ 组成的有序数组称为 $ n $ 维向量, 简称\textit{向量}.
+    $$\vb*{\alpha}=\left(a_{1}, a_{2}, \cdots, a_{n}\right)$$
+    称为 $ n $ 维行向量, $ a_{i} $ 称为 $ \vb*{\alpha} $ 的第 $ i $ 个分量.
+    $$\vb*{\beta}=\mqty(b_{1} \\
+        b_{2} \\
+        \vdots \\
+        b_{n})=\left(b_{1}, b_{2}, \cdots, b_{n}\right)^{\mathrm{T}}$$
+    称为 $ n $ 维列向量.
+    由定义可以看出, $ n $ 维行 (列) 向量就是 $ 1 \times n(n \times 1) $ 矩阵.
 \end{definition}
 
-\begin{theorem}[向量组线性相关的若干结论]
-    \begin{enumerate}[label=(\arabic{*})]
-        \item 向量组 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m}(m \geqslant 2) $ 线性相关的充分必要条件是 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 中至少有一 个向量可由其余 $ m-1 $ 个向量线性表示;
-        \item 若向量组 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 线性无关, 而向量组 $ \vb*{\beta}, \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 线性相关, 则 $ \vb*{\beta} $ 可由 \\$ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 线性表示, 且表示式是唯一的;
-        \item 对于 $ m $ 个 $ n $ 维向量 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m}$,  若 $ m>n $, 则这 $ m $ 个向量必线性相关;
-        \item 若 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{r} $ 线性相关, 则 $ \vb*{\alpha}_{1}, \cdots, \vb*{\alpha}_{r}, \vb*{\alpha}_{r+1}, \cdots, \vb*{\alpha}_{m} $ 也线性相关; (部分相关, 整体必相关.)
-        \item 若 $ r $ 维向量组线性无关, 则将它的每个向量添加 $ n-r $ 个分量所成的 $ n $ 维向量组也线性无关. (整体无关, 部分必无关.)
-    \end{enumerate}
-\end{theorem}
-
-\begin{example}[2014 数一]
-    设 $\vb*{\alpha}_1,~\vb*{\alpha}_2,~\vb*{\alpha}_3$ 均为 3 维向量, 则对任意常数 $k,~l$, 向量组 $\vb*{\alpha}_1+k\vb*{\alpha}_3,~\vb*{\alpha}_2+l\vb*{\alpha}_3$ 线性无关是向量组 $\vb*{\alpha}_1,~\vb*{\alpha}_2,~\vb*{\alpha}_3$ 线性无关的
-    \begin{tasks}(2)
-        \task 必要非充分条件
-        \task 充分非必要条件
-        \task 充分必要条件
-        \task 既非充分也非必要条件
-    \end{tasks}
-\end{example}
-\begin{solution}
-    \textbf{整体无关, 部分必无关; 部分相关, 整体必相关. }
-    设 $\lambda_1(\vb*{\alpha}_1+k\vb*{\alpha}_3)+\lambda_2(\vb*{\alpha}_2+l\vb*{\alpha}_3)=\vb*{0}$ 则 $$\lambda_1\vb*{\alpha}_1+\lambda_2\vb*{\alpha}_2+(k\lambda_1+l\lambda_2)\vb*{\alpha}_3=\vb*{0}$$
-    若 $\vb*{\alpha}_1,~\vb*{\alpha}_2,~\vb*{\alpha}_3$ 线性无关, 则 $\lambda_1=\lambda_2=0$, 所以 $\vb*{\alpha}_1+k\vb*{\alpha}_3,~\vb*{\alpha}_2+l\vb*{\alpha}_3$ 线性无关;
-    反之, 若 $\vb*{\alpha}_1+k\vb*{\alpha}_3,~\vb*{\alpha}_2+l\vb*{\alpha}_3$ 线性无关, 则不一定有 $\vb*{\alpha}_1,~\vb*{\alpha}_2,~\vb*{\alpha}_3$ 线性无关, 例如: 设
-    $$\vb*{\alpha}_1=(1,0,0)^\top,~\vb*{\alpha}_2=(0,1,0)^\top,~\vb*{\alpha}_3=(0,0,0)$$
-    显然, 对任意常数 $k,~l$, 向量组 $\vb*{\alpha}_1+k\vb*{\alpha}_3,~\vb*{\alpha}_2+l\vb*{\alpha}_3$ 线性无关, 但 $\vb*{\alpha}_1,~\vb*{\alpha}_2,~\vb*{\alpha}_3$ 线性相关, 因此是必要非充分条件, 选 A.
-\end{solution}
-
-\begin{example}
-    设 $\vb*{A}_{n\times n}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_n)$ 的前 $n-1$ 个向量线性相关, 后 $n-1$ 个向量线性无关, 且 $\vb*{\beta}=\vb*{\alpha}_1+\vb*{\alpha}_2+\cdots+\vb*{\alpha}_n$, 证明: $\vb*{Ax}=\vb*{\beta}$ 有无穷多解.
-\end{example}
-\begin{proof}[{\songti \textbf{证法一}}]
-    要证 $\vb*{Ax}=\vb*{\beta}$ 有无穷多解, 即证 $\rank\vb*{A}=\rank(\vb*{A},\vb*{\beta})<n$, 因为 $\vb*{\alpha}_2,\cdots,\vb*{\alpha}_n$ 线性无关, 所以 $\rank\vb*{A}\geqslant n-1$, 又因为 $\vb*{\alpha}_1,\cdots,\vb*{\alpha}_{n-1}$ 线性相关, 所以 $\rank\vb*{A}<n$, 
-    于是 $$n-1\leqslant \rank\vb*{A}<n\Rightarrow \rank\vb*{A}=n-1$$
-    又因为 $\vb*{\beta}=\vb*{\alpha}_1+\vb*{\alpha}_2+\cdots+\vb*{\alpha}_n$, 所以
-    $$\rank(\vb*{A},\vb*{\beta})=\rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_n,\vb*{\alpha}_1+\vb*{\alpha}_2+\cdots+\vb*{\alpha}_n)\to\rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_n,\vb*{0})=\rank\vb*{A}=n-1$$
-    故得证 $\rank\vb*{A}=\rank(\vb*{A},\vb*{\beta})<n$, 因此 $\vb*{Ax}=\vb*{\beta}$ 有无穷多解成立.
-\end{proof}
-\begin{proof}[{\songti \textbf{证法二}}]
-    因为 $\rlap{$\underbrace{\phantom{\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_{n-1}}}_{\text{线性相关}}$} \vb*{\alpha}_1,\overbrace{\vb*{\alpha}_2,\cdots,\vb*{\alpha}_{n-1},\vb*{\alpha}_n}^{\text{线性无关}}$, 
-    所以 $\vb*{\alpha}_2,\cdots,\vb*{\alpha}_{n-1}$ 线性无关, 因此 $\vb*{\alpha}_1$ 可由 $\vb*{\alpha}_2,\cdots,\vb*{\alpha}_{n-1}$ 线性表示, 即 $\vb*{\alpha}_1=l_2\vb*{\alpha}_2+l_3\vb*{\alpha}_3+\cdots+l_{n-1}\vb*{\alpha}_{n-1}+0\cdot\vb*{\alpha}_n$, 将其代入 $\vb*{\beta}$ 得
-    $$\vb*{\beta}=l_2\vb*{\alpha}_2+l_3\vb*{\alpha}_3+\cdots+l_{n-1}\vb*{\alpha}_{n-1}+0\cdot\vb*{\alpha}_n+(\vb*{\alpha}_2+\cdots+\vb*{\alpha}_n)=(l_2+1)\vb*{\alpha}_2+(l_3+1)\vb*{\alpha}_3+\cdots+(l_{n-1}+1)\vb*{\alpha}_{n-1}+\vb*{\alpha}_n$$
-    那么 $\vb*{Ax}=\vb*{\beta}$ 的一个解为 $(0,l_2+1,l_3+1,\cdots,l_{n-1}+1,1)^\top$, 又因为 $\vb*{\beta}=\vb*{\alpha}_1+\vb*{\alpha}_2+\cdots+\vb*{\alpha}_n$, 所以 $\vb*{Ax}=\vb*{\beta}$ 的另一解为 $(1,1,\cdots,1)^\top$, 而这两个解不相关, 则 $\vb*{Ax}=\vb*{\beta}$ 有无穷多解.
-\end{proof}
-
-\subsection{向量组的极大无关组}
-
-\begin{definition}[极大线性无关组]
-    设 $\vb*{A}$ 是一个 $n$ 维向量组 (它可以包含无限多个向量), 如果在 $\vb*{A}$ 中取出 $r$ 个向量 $\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_r$ 满足条件：
-    \begin{enumerate}[label=(\arabic{*})]
-        \item 向量组 $\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_r$ 线性无关；
-        \item 对于 $\vb*{A}$ 中任意的向量 $\vb*{\beta}$, 向量组 $\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_r,\vb*{\beta}$ 线性相关.
-    \end{enumerate}
-    则称向量组 $\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_r$ 为向量组 $\vb*{A}$ 的一个极大线性无关组, 简称极大无关组.
+\begin{definition}[零向量与负向量]
+    分量全为 $0$ 的向量称为\textit{零向量}; 设 $ \vb*{\alpha}=\left(a_{1}, a_{2}, \cdots, a_{n}\right)$, 称 $ -\vb*{\alpha}=\left(-a_{1},-a_{2}, \cdots,-a_{n}\right)$ 为 $ \alpha $ 的\textit{负向量}.
 \end{definition}
 
-\begin{example}
-    求向量组 $$\vb*{\beta}_1=(1,2,1,3)^\top,~
-        \vb*{\beta}_2=(1,1,-1,1)^\top,~
-        \vb*{\beta}_3=(1,3,3,5)^\top,~$$
-    $$\vb*{\beta}_4=(4,5,-3,6)^\top,~
-        \vb*{\beta}_5=(-3,-5,-2,-7)^\top$$
-    的秩、极大线性无关组, 并将其余的向量用极大线性无关组表示出.
-\end{example}
-\begin{solution}
-    令 $\vb*{B}=\qty(\vb*{\beta}_1,\vb*{\beta}_2,\vb*{\beta}_3,\vb*{\beta}_4,\vb*{\beta}_5)$ 对列向量组作初等行变换, 有
-    \begin{flalign*}
-        \vb*{B}\xrightarrow[r_4-3r_1]{\substack{r_2-2r_1 \\r_3-r_1}}\mqty(1&1&1&4&-3\\0&-1&1&-3&1\\0&-2&2&-7&1\\0&-2&2&-6&2)\xrightarrow[\substack{r_3+2r_2\\r_4+2r_2}]{\substack{r_1+r_2\\r_2\times(-1)\\r_3\times(-1)}}
-        \begin{pNiceMatrix}
-            \Block[borders={bottom,tikz=dashed}]{1-1}{}        1 & 0                                                 & 2  & 1                                                 & -2 \\
-            0                                                    & 1\Block[borders={bottom,left,tikz=dashed}]{1-2}{} & -1 & 3                                                 & -1 \\
-            0                                                    & 0                                                 & 0  & 1\Block[borders={bottom,left,tikz=dashed}]{1-2}{} & 1  \\
-            0                                                    & 0                                                 & 0  & 0                                                 & 0
-        \end{pNiceMatrix}=\mqty(\vb*{\beta}_1',\vb*{\beta}_2',\vb*{\beta}_3',\vb*{\beta}_4',\vb*{\beta}_5')
-    \end{flalign*}
-    于是 $\rank(\vb*{B})=3$, 那么 $\vb*{\beta}_1',\vb*{\beta}_2',\vb*{\beta}_4'$ 为 $\vb*{B}$ 的一个极大无关组, 且
-    \begin{flalign*}
-        \vb*{\beta}_3' & =2\vb*{\beta}_1'-\vb*{\beta}_2'                  \\
-        \vb*{\beta}_5' & =-3\vb*{\beta}_1'-4\vb*{\beta}_2'+\vb*{\beta}_4'
-    \end{flalign*}
-\end{solution}
+\subsection{向量的运算}
 
-\begin{example}[2006 数三]
-    设 4 维向量组
-    \begin{flalign*}
-        \vb*{\alpha}_1 & =(1+a,1,1,1)^\top,~\vb*{\alpha}_2=(2,2+a,2,2)^\top,~ \\
-        \vb*{\alpha}_3 & =(3,3,3+a,3)^\top,~\vb*{\alpha}_4=(4,4,4,4+a)^\top
-    \end{flalign*}
-    问 $a$ 为何值时, $\vb*{\alpha}_i~ (i=1,2,3,4)$ 线性相关? 当 $\vb*{\alpha}_i~ (i=1,2,3,4)$ 时, 求出一个极大线性无关组, 并将其余的向量用极大线性无关组表示出.
-\end{example}
-\begin{solution}
-    记 $\vb*{A}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\alpha}_4)$, 那么其行列式
-    $$\mqty|1+a&2&3&4\\1&2+a&3&4\\1&2&3+a&4\\1&2&3&4+a| \xlongequal[j=2,3,4]{c_1+c_j}\mqty|10+a &2 &3 &4\\10+a &2+a &3 &4\\10+a &2 &3+a &4\\10+a &2 &3 &4+a|\xlongequal[i=2,3,4]{r_i-r_1}(10+a)\mqty|1&2&3&4\\0&a&0&0\\0&0&a&0\\0&0&0&a|=(10+a)a^3$$
-    于是当 $a=0\text{ 或 }-10$ 时, $\vb*{\alpha}_i~ (i=1,2,3,4)$ 线性相关, 
-    当 $a=0$ 时, $\vb*{\alpha}_1$ 为 $\vb*{\alpha}_i~ (i=1,2,3,4)$ 的一个极大线性无关组, 且 $\vb*{\alpha}_2=2\vb*{\alpha}_1,\vb*{\alpha}_3=3\vb*{\alpha}_1,\vb*{\alpha}_4=4\vb*{\alpha}_1$;
-    当 $a=-10$ 时, 对 $\vb*{A}$ 实施初等行变换, 有
-    \begin{flalign*}
-        \mqty(-9 & 2 & 3 & 4 \\1&-8&3&4\\1&2&-7&4\\1&2&3&-6)\xrightarrow[i=2,3,4]{r_i-r_1}\mqty(-9&2&3&4\\10&-10&0&0\\10&0&-10&0\\10&0&0&-10)\xrightarrow[r_1+2r_2+3r_3+4r_4]{r_i\times\frac{1}{10}~~i=2,3,4}\mqty(0&0&0&0\\1&-1&0&0\\1&0&-1&0\\1&0&0&-1)=(\vb*{\beta}_1,\vb*{\beta}_2,\vb*{\beta}_3,\vb*{\beta}_4)
-    \end{flalign*}
-    由于 $\vb*{\beta}_i~ (i=2,3,4)$ 是 $\vb*{\beta}_i~ (i=1,2,3,4)$ 的一个极大线性无关组, 且 $\vb*{\beta}_1=-\vb*{\beta}_2-\vb*{\beta}_3-\vb*{\beta}_4$, 
-    故 $\vb*{\alpha}_i~ (i=2,3,4)$ 是 $\vb*{\alpha}_i~ (i=1,2,3,4)$ 的一个极大线性无关组, 且 $\vb*{\alpha}_1=-\vb*{\alpha}_2-\vb*{\alpha}_3-\vb*{\alpha}_4$.
-\end{solution}
+\begin{definition}[向量的相等]
+    设 $ \vb*{\alpha}=\left(a_{1}, a_{2}, \cdots, a_{n}\right), \vb*{\beta}=\left(b_{1}, b_{2}, \cdots, b_{n}\right) $, 如果 $ a_{i}=b_{i}(i=1,2, \cdots, n) $, 则称向量 $ \vb*{\alpha} $ 与 $ \vb*{\beta} $ \textit{相等}.
+\end{definition}
 
-\begin{example}
-    已知向量组 $ \vb*{\alpha}_{1}=(1,4,0,2)^\top, \vb*{\alpha}_{2}=(2,7,1,3)^\top ,\vb*{\alpha}_{3}=(0,1,-1, a)^\top, \vb*{\alpha}_{4}=(3,10, b, 4)^\top $ 线性相关.
-    \begin{enumerate}[label=(\arabic{*})]
-        % \item 求 $ a, b $ 的值;
-        \item 判断 $ \vb*{\alpha}_{4} $ 能否由 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \vb*{\alpha}_{3} $ 线性表示? 如能就写出表达式;
-        \item 求向量组 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \vb*{\alpha}_{3}, \vb*{\alpha}_{4} $ 的一个极大线性无关组.
-    \end{enumerate}
-\end{example}
-\begin{solution}
-    \begin{enumerate}[label=(\arabic{*})]
-        \item $\mqty|\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\alpha}_4|=\mqty|1&2&0&3\\4&7&1&10\\0&1&-1&b\\2&3&a&4| \xlongequal[\substack{r_2+r_3\\r_4+r_3}]{\substack{r_2-4r_1\\r_4-2r_1}}\mqty|1&2&0&3\\0&0&0&b-2\\0&1&-1&b\\0&0&a-1&b-2|=\mqty|0&0&b-2\\1&-1&b\\0&a-1&b-2|=(a-1)(b-2)=0$, 
-              所以当 $a=1$ 或 $b=2$ 时, 向量组 $\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\alpha}_4$ 线性相关.\\
-              当 $a=1$ 时, $\begin{pNiceArray}{c|c}
-                      \vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3&\vb*{\alpha}_4
-                  \end{pNiceArray}=\begin{pNiceArray}{ccc|c}
-                      1&2&0&3\\
-                      4&7&1&10\\
-                      0&1&-1&b\\
-                      2&3&1&4
-                  \end{pNiceArray}\xlongequal[\substack{r_4-r_2\\r_3+r_2\\r_2\times (-1)}]{\substack{r_2-4r_1\\r_4-2r_1}}
-                  \begin{pNiceArray}{cccc}
-                      1\Block[borders={bottom,tikz=dashed}]{1-1}{}&2&0&3\\
-                      0&1\Block[borders={bottom,left,tikz=dashed}]{1-2}{}&-1&2\\
-                      0&0&0&b-2\Block[borders={bottom,left,tikz=dashed}]{1-1}{}\\
-                      0&0&0&0
-                  \end{pNiceArray}$, 当 $b\neq2$ 时, 增广矩阵秩为 3, 系数矩阵秩为 2, 因此 $\vb*{\alpha}_4$ 不能由 $\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3$ 线性表示;
-              当 $a=1~,b=2$ 时, $\vb*{\alpha}_4$ 可以由$\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3$ 线性表示, $$\vb*{\alpha}_4=(-1-2t)\vb*{\alpha}_1+(2+t)\vb*{\alpha}_2+t\vb*{\alpha}_3$$
-              当 $b=2$ 时, $\begin{pNiceArray}{c|c}
-                      \vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3&\vb*{\alpha}_4
-                  \end{pNiceArray}=\begin{pNiceArray}{ccc|c}
-                      1&2&0&3\\
-                      4&7&1&10\\
-                      0&1&-1&2\\
-                      2&3&a&4
-                  \end{pNiceArray}\xlongequal[\substack{r_3+r_2\\r_4-r_2\\r_2\times(-1)\\r_3\leftrightarrow r_4}]{\substack{r_2-4r_1\\r_4-2r_1\\r_1+2r_2}}
-                  \begin{pNiceArray}{cccc}
-                      1\Block[borders={bottom,tikz=dashed}]{1-1}{}&  2&  0&3\\
-                      0&  1\Block[borders={bottom,left,tikz=dashed}]{1-1}{}&  -1&2\\
-                      0&  0&  a-1\Block[borders={bottom,left,tikz=dashed}]{1-2}{}&0\\
-                      0&  0&  0&0
-                  \end{pNiceArray}$, 当 $a\neq1,~b=2$ 时, 有 $\vb*{\alpha}_4=-\vb*{\alpha}_1+2\vb*{\alpha_2}$, 当 $a=1,~b=2$, 有
-              $\vb*{\alpha}_4=(-1-2t)\vb*{\alpha}_1+(2+t)\vb*{\alpha}_2+t\vb*{\alpha}_3$, 其中 $t$ 为任意常数.
-        \item 当 $a=1,~b=2$ 时, $\rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\alpha}_4)=\rank\mqty(1&2&0&3\\4&7&1&10\\0&1&-1&2\\2&3&1&4)=\rank\mqty(1&2&0&3\\0&-1&1&-2\\0&0&0&0\\0&0&0&0)=2$, 
-              极大无关组为 $\vb*{\alpha}_1,\vb*{\alpha}_2$;
-              当 $a=1,~b\neq 2$ 时, $\rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\alpha}_4)=3$, 极大无关组为 $\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_4$;
-              当 $a\neq 1,~b=2$ 时, $\rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\alpha}_4)=3$, 极大无关组为 $\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3$.
-    \end{enumerate}
-\end{solution}
+\begin{definition}[向量的加减]
+    设 $ \vb*{\alpha}=\left(a_{1}, a_{2}, \cdots, a_{n}\right), \vb*{\beta}=\left(b_{1}, b_{2}, \cdots, b_{n}\right) $, 则 $$ \vb*{\alpha} \pm \vb*{\beta}=\left(a_{1} \pm b_{1}, a_{2} \pm b_{2}, \cdots, a_{n} \pm b_{n}\right) .$$
+\end{definition}
 
-\subsection{Cramer 法则的应用}
+\begin{definition}[向量的数乘]
+    设 $ \vb*{\alpha}=\left(a_{1}, a_{2}, \cdots, a_{n}\right)$, $k $ 为常数, 则 $ k \vb*{\alpha}=\left(k a_{1}, k a_{2}, \cdots, k a_{n}\right) $.
+\end{definition}
 
-\begin{theorem}[Cramer 法则]
-    如果数域 $ K $ 上的含有 $ n $ 个末知量 $ n $ 个方程的线性方程组
-    $$\begin{cases}
-            a_{11} x_{1}+a_{12} x_{2}+\cdots+a_{1 n} x_{n}=b_{1} \\
-            a_{21} x_{1}+a_{22} x_{2}+\cdots+a_{2 n} x_{n}=b_{2} \\
-            \cdots \cdots \cdots \cdots                          \\
-            a_{n 1} x_{1}+a_{n 2} x_{2}+\cdots+a_{n n} x_{n}=b_{n}
-        \end{cases}$$
-    的系数行列式 $ D \neq 0$, 那么此方程组有唯一解 $ \left(\dfrac{D_{1}}{D}, \dfrac{D_{2}}{D}, \cdots, \dfrac{D_{n}}{D}\right)$, 
-    其中 $ D_{j} $ 是把 $ D $ 中第 $ j $ 列的元素换成方程组的常数项 $ b_{1}, b_{2}, \cdots, b_{n} $ 而成的行列式 $ (j=1,2, \cdots, n)$, 即
-    $$\mqty|a_{11}  & \cdots & a_{1, j-1} & b_{1}  & a_{1, j+1} & \cdots & a_{1 n} \\
-        a_{21}  & \cdots & a_{2, j-1} & b_{2}  & a_{2, j+1} & \cdots & a_{2 n} \\
-        \vdots  &        & \vdots     & \vdots & \vdots     &        & \vdots  \\
-        a_{n 1} & \cdots & a_{n, j-1} & b_{n}  & a_{n, j+1} & \cdots & a_{n n}|$$
-    特别地, 当 $ b_{i}=0(i=1,2, \cdots, n) $ 时, 如果系数行列式 $ D \neq 0 $, 那么方程组只有零解;
-    反之, 如果方程组有非零解,那么必有 $ D=0 .$
-\end{theorem}
+设 $ \vb*{\alpha}, \vb*{\beta}, \vb*{\gamma} $ 均为 $ n $ 维向量, $ \lambda, \mu $ 为实数, 则
+\setcounter{magicrownumbers}{0}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l l}
+        (\rownumber) $\vb*{\alpha}+\vb*{\beta}=\vb*{\beta}+\vb*{\alpha}. $ & (\rownumber) $(\vb*{\alpha}+\vb*{\beta})+\vb*{\gamma}=\vb*{\alpha}+(\vb*{\beta}+\vb*{\gamma}). $ \\  (\rownumber) $\vb*{\alpha}+\vb*{0}=\vb*{\alpha}.$                                           & (\rownumber) $\vb*{\alpha}+(-\vb*{\alpha})=\mathbf{0}. $                          \\
+        (\rownumber) $1 \vb*{\alpha}=\vb*{\alpha}. $                       & (\rownumber) $\lambda(\mu \vb*{\alpha})=(\lambda \mu) \vb*{\alpha}. $                            \\  (\rownumber) $\lambda(\vb*{\alpha}+\vb*{\beta})=\lambda \vb*{\alpha}+\lambda \vb*{\beta}. $ & (\rownumber) $(\lambda+\mu) \vb*{\alpha}=\lambda \vb*{\alpha}+\mu \vb*{\alpha} .$
+    \end{tabular}
+\end{table}
 
-\begin{example}[2005 华中科技大学]
-    解线性方程组 $\begin{cases}
-            x_1+ax_2+a^2x_3=a^3 \\
-            x_1+bx_2+b^2x_3=b^3 \\
-            x_1+cx_2+c^2x_3=c^3 \\
-        \end{cases}$
-    其中 $a,b,c$ 是互不相等的常数.
-\end{example}
-\begin{solution}
-    利用 Cramer 法则求解, 因为系数行列式 $$D=\mqty|1&a&a^2\\1&b&b^2\\1&c&c^2|=(c-b)(c-a)(b-a)\neq0$$
-    所以方程组有唯一解, 又因为
-    $$D_1=\mqty|a^3&a&a^2\\b^3&b&b^2\\b^3&b&b^2|=abcD,~D_2=\mqty|1&a^3&a^2\\1&b^3&b^2\\1&c^3&c^2|=-(ab+ac+bc)D,~D_3=\mqty|1&a&a^3\\1&b&b^3\\1&c&c^3|=(a+b+c)D$$
-    因此 $x_1=\dfrac{D_1}{D}=abc,~x_2=\dfrac{D_2}{D}=-ab-ac-bc,~x_3=\dfrac{D_3}{D}=a+b+c.$
-\end{solution}

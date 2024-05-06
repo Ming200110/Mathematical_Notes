@@ -1,270 +1,21 @@
-\section{Vandermonde 行列式与代数余子式}
+\section{行列式按行 (列) 展开定理}
 
-\subsection{Vandermonde 行列式计算}
+\subsection{行列式展开定理}
 
-\begin{theorem}
-    $n$ 阶 Vandermonde 行列式为
-    $$D_n=
-        \begin{vmatrix}
-            1         & 1         & \cdots & 1         \\
-            x_1       & x_2       & \cdots & x_n       \\
-            x_1^2     & x_2^2     & \cdots & x_n^2     \\
-            \vdots    & \vdots    &        & \vdots    \\
-            x_1^{n-1} & x_2^{n-1} & \cdots & x_n^{n-1}
-        \end{vmatrix}
-        =\prod_{1\leqslant j<i\leqslant n}(x_i-x_j).$$
-\end{theorem}
-% \begin{proof}[{\songti \textbf{证法一}}]
-%     将行列式第 $2$ 列至第 $n$ 列都减去第 $1$ 列, 然后再将其按第 $1$ 行展开, 
-%     \begin{flalign*}
-%         D_n & \xlongequal[j=2,\cdots,n]{c_j-c_1}
-%         \begin{vmatrix}
-%             1         & 0                   & \cdots & 0                       & 0                   \\
-%             x_1       & x_2-x_1             & \cdots & x_{n-1}-x_1             & x_n-x_1             \\
-%             x_1^2     & x_2^2-x_1^2         & \cdots & x_{n-1}^2-x_1^2         & x_n^2-x_1^2         \\
-%             \vdots    & \vdots              &        & \vdots                  & \vdots              \\
-%             x_1^{n-1} & x_2^{n-1}-x_1^{n-1} & \cdots & x_{n-1}^{n-1}-x_1^{n-1} & x_n^{n-1}-x_1^{n-1} \\
-%         \end{vmatrix} \\
-%             & =\begin{vmatrix}
-%                    x_2-x_1             & \cdots & x_{n-1}-x_1             & x_n-x_1             \\
-%                    x_2^2-x_1^2         & \cdots & x_{n-1}^2-x_1^2         & x_n^2-x_1^2         \\
-%                    \vdots              &        & \vdots                  & \vdots              \\
-%                    x_2^{n-1}-x_1^{n-1} & \cdots & x_{n-1}^{n-1}-x_1^{n-1} & x_n^{n-1}-x_1^{n-1} \\
-%                \end{vmatrix}
-%     \end{flalign*}
-% \end{proof}
-
-\begin{example}
-    计算下列行列式:
-    \setcounter{magicrownumbers}{0}
-    \begin{table}[H]
-        \centering
-        \resizebox{.99\textwidth}{!}{
-            \begin{tabular}{l || l}
-                (\rownumber{}) $\displaystyle
-                    D_{n+1}=
-                    \begin{vmatrix}
-                        a^n     & (a-1)^n     & \cdots & (a-n)^n     \\
-                        a^{n-1} & (a-1)^{n-1} & \cdots & (a-n)^{n-1} \\
-                        \vdots  & \vdots      &        & \vdots      \\
-                        a       & a-1         & \cdots & a-n         \\
-                        1       & 1           & \cdots & 1
-                    \end{vmatrix}.$
-                 & (\rownumber{}) $\displaystyle
-                    D_{n-1}=
-                    \begin{vmatrix}
-                        2^n-2  & 2^{n-1}-2 & \cdots & 2^3-2  & 2      \\
-                        3^n-3  & 3^{n-1}-3 & \cdots & 3^3-3  & 6      \\
-                        \vdots & \vdots    &        & \vdots & \vdots \\
-                        n^n-n  & n^{n-1}-n & \cdots & n^3-n  & n^2-n  \\
-                    \end{vmatrix}.$
-            \end{tabular}}
-    \end{table}
-\end{example}
-\begin{solution}
-    \begin{enumerate}[label=(\arabic{*})]
-        \item 将 $D_{n+1}$ 的第 $n+1$ 行依次与第 $n,n-1,\cdots,1$ 行互换, 再将新的行列式的第 $n+1$ 行依次与第 $n,n-1,\dots,2$ 行互换, 
-              如此下去, 总共经过 $n+(n+1)+\cdots+2+1=\dfrac{n(n+1)}{2}$ 次行与行的互换, 最后得 Vandermonde 行列式
-              \begin{flalign*}
-                  D_{n+1} & =(-1)^{\frac{n(n+1)}{2}}
-                  \begin{vmatrix}
-                      1       & 1           & \dots & 1           \\
-                      a       & a-1         & ...   & a-n         \\
-                      \vdots  & \vdots      &       & \vdots      \\
-                      a^{n-1} & (a-1)^{n-1} & \dots & (a-n)^{n-1} \\
-                      a^n     & (a-1)^n     & ...   & (a-n)^n
-                  \end{vmatrix}
-                  =(-1)^{\frac{n(n+1)}{2}}\prod_{0\leqslant j<i\leqslant n}[(a-i)-(a-j)] \\
-                          & =\prod_{0\leqslant j<i\leqslant n}(i-j)=\prod_{k=1}^{n}k!.
-              \end{flalign*}
-        \item 利用升阶法, 将 $D$ 添上一行一列, 然后将第一行的 $i$ 倍加到后面各行, 再将第 $j$ 列与后面的 $n-j$ 列逐次交换, $j=2,3,\cdots,n-1$, 化为 Vandermonde 行列式, 
-              \begin{flalign*}
-                  D & =
-                  \begin{vNiceArray}{c:ccccc}
-                    1      & 1      & 1         & \cdots & 1      & 1      \\ \hdottedline
-                    0      & 2^n-2  & 2^{n-1}-2 & \cdots & 2^3-2  & 2      \\
-                    0      & 3^n-3  & 3^{n-1}-3 & \cdots & 3^3-3  & 6      \\
-                    \vdots & \vdots & \vdots    &        & \vdots & \vdots \\
-                    0      & n^n-n  & n^{n-1}-n & \cdots & n^3    & n^2-n
-                \end{vNiceArray}_{n}
-                  \xlongequal[i=2,\cdots,n]{r_i+ir_1}
-                  \begin{vmatrix}
-                      1      & 1      & 1       & \cdots & 1      & 1      \\
-                      2      & 2^n    & 2^{n-1} & \cdots & 2^3    & 2^2    \\
-                      3      & 3^n    & 3^{n-1} & \cdots & 3^3    & 3^2    \\
-                      \vdots & \vdots & \vdots  &        & \vdots & \vdots \\
-                      n      & n^n    & n^{n-1} & \cdots & n^3    & n^2
-                  \end{vmatrix}                            \\
-                    & =n!\begin{vmatrix}
-                             1 & 1       & 1       & \cdots & 1      & 1      \\
-                             1 & 2^{n-1} & 2^{n-2} & \cdots & 2^2    & 2^1    \\
-                             1 & 3^{n-1} & 3^{n-2} & \cdots & 3^2    & 3^1    \\
-                             1 & \vdots  & \vdots  &        & \vdots & \vdots \\
-                             1 & n^{n-1} & n^{n-2} & \cdots & n^2    & n^1    \\
-                         \end{vmatrix}
-                  =n! (-1)^{\frac{(n-2)(n-1)}{2}}\begin{vmatrix}
-                                                     1 & 1      & 1      & \cdots & 1       & 1       \\
-                                                     1 & 2      & 2^2    & \cdots & 2^{n-2} & 2^{n-1} \\
-                                                     1 & 3      & 3^2    & \cdots & 3^{n-2} & 3^{n-1} \\
-                                                     1 & \vdots & \vdots &        & \vdots  & \vdots  \\
-                                                     1 & n      & n^2    & \cdots & n^{n-2} & n^{n-1} \\
-                                                 \end{vmatrix} \\
-                    & =(-1)^{\frac{n^2+n+2}{2}}\prod_{1\leqslant j<i\leqslant n+1}(i-j).
-              \end{flalign*}
-    \end{enumerate}
-\end{solution}
-
-\begin{example}
-    计算下列行列式:
-    \setcounter{magicrownumbers}{0}
-    \begin{table}[H]
-        \centering
-        \begin{tabular}{l || l}
-            (\rownumber{}) $\displaystyle
-                D_n=\begin{vmatrix}
-                        1      & a_1    & a_1^2  & \cdots & a_1^{n-2} & a_1^{n-1}+S/a_1 \\
-                        1      & a_2    & a_2^2  & \cdots & a_2^{n-2} & a_2^{n-1}+S/a_2 \\
-                        \vdots & \vdots & \vdots &        & \vdots    & \vdots          \\
-                        1      & a_n    & a_n^2  & \cdots & a_n^{n-2} & a_n^{n-1}+S/a_n
-                    \end{vmatrix}.$
-             & (\rownumber{}) $\displaystyle
-                D=\begin{vmatrix}
-                      1      & x_1    & x_1^2  & \cdots & x_1^n  \\
-                      1      & x_2    & x_2^2  & \cdots & x_2^n  \\
-                      \vdots & \vdots & \vdots &        & \vdots \\
-                      1      & x_n    & x_n^2  & \cdots & x_n^n  \\
-                      0      & -2     & -2     & \cdots & -2
-                  \end{vmatrix}.$
-        \end{tabular}
-    \end{table}
-    其中 $\displaystyle S=\sum_{i=1}^{n}a_i$, 且 $a_i\neq0.$
-\end{example}
-\begin{solution}
-    \begin{enumerate}[label=(\arabic{*})]
-        \item 先拆项, 再利用 Vandermonde 行列式计算, 
-              \begin{flalign*}
-                  D_n & =
-                  \begin{vmatrix}
-                      1      & a_1    & a_1^2  & \cdots & a_1^{n-2} & a_1^{n-1} \\
-                      1      & a_2    & a_2^2  & \cdots & a_2^{n-2} & a_2^{n-1} \\
-                      \vdots & \vdots & \vdots &        & \vdots    & \vdots    \\
-                      1      & a_n    & a_n^2  & \cdots & a_n^{n-2} & a_n^{n-1}
-                  \end{vmatrix}+
-                  \begin{vmatrix}
-                      1      & a_1    & a_1^2  & \cdots & a_1^{n-2} & S/a_1  \\
-                      1      & a_2    & a_2^2  & \cdots & a_2^{n-2} & S/a_2  \\
-                      \vdots & \vdots & \vdots &        & \vdots    & \vdots \\
-                      1      & a_n    & a_n^2  & \cdots & a_n^{n-2} & S/a_n
-                  \end{vmatrix}                                                               \\
-                      & =\prod_{1\leqslant j<i\leqslant n}(a_i-a_j)
-                  +\dfrac{S}{\displaystyle \prod_{i=1}^na_i}
-                  \begin{vmatrix}
-                      a_1    & a_1^2  & \cdots & a_1^{n-2} & a_1^{n-1} & 1      \\
-                      a_2    & a_2^2  & \cdots & a_2^{n-2} & a_2^{n-1} & 1      \\
-                      \vdots & \vdots &        & \vdots    & \vdots    & \vdots \\
-                      a_n    & a_n^2  & \cdots & a_n^{n-2} & a_n^{n-1} & 1
-                  \end{vmatrix}                                                            \\
-                      & =\prod_{1\leqslant j<i\leqslant n}(a_i-a_j)
-                  +(-1)^{n-1}\dfrac{S}{\displaystyle \prod_{i=1}^na_i}
-                  \begin{vmatrix}
-                      1      & a_1    & a_1^2  & \cdots & a_1^{n-2} & a_1^{n-1} \\
-                      1      & a_2    & a_2^2  & \cdots & a_2^{n-2} & a_2^{n-1} \\
-                      \vdots & \vdots & \vdots &        & \vdots    & \vdots    \\
-                      1      & a_n    & a_n^2  & \cdots & a_n^{n-2} & a_n^{n-1}
-                  \end{vmatrix}                                                            \\
-                      & =\left[1+(-1)^{n-1}\dfrac{S}{\displaystyle \prod_{i=1}^na_i}\right]\prod_{1\leqslant j<i\leqslant n}(x_i-x_j).
-              \end{flalign*}
-        \item 先拆项, 再利用 Vandermonde 行列式计算, 
-              \begin{flalign*}
-                  D & =
-                  \begin{vmatrix}
-                      1      & x_1    & x_1^2  & \cdots & x_1^n  \\
-                      1      & x_2    & x_2^2  & \cdots & x_2^n  \\
-                      \vdots & \vdots & \vdots &        & \vdots \\
-                      1      & x_n    & x_n^2  & \cdots & x_n^n  \\
-                      -2     & -2     & -2     & \cdots & -2
-                  \end{vmatrix}+
-                  \begin{vmatrix}
-                      0      & x_1    & x_1^2  & \cdots & x_1^n  \\
-                      0      & x_2    & x_2^2  & \cdots & x_2^n  \\
-                      \vdots & \vdots & \vdots &        & \vdots \\
-                      0      & x_n    & x_n^2  & \cdots & x_n^n  \\
-                      2      & -2     & -2     & \cdots & -2
-                  \end{vmatrix}                                                                                                  \\
-                    & =-2
-                  \begin{vmatrix}
-                      1      & x_1    & x_1^2  & \cdots & x_1^n  \\
-                      1      & x_2    & x_2^2  & \cdots & x_2^n  \\
-                      \vdots & \vdots & \vdots &        & \vdots \\
-                      1      & x_n    & x_n^2  & \cdots & x_n^n  \\
-                      1      & 1      & 1      & \cdots & 1
-                  \end{vmatrix}
-                  +(-1)^n2\prod_{i=1}^n
-                  \begin{vmatrix}
-                      1      & x_1     & x_1^2     & \cdots & x_1^{n-1}     \\
-                      1      & x_2     & x_2^2     & \cdots & x_2^{n-1}     \\
-                      \vdots & \vdots  & \vdots    &        & \vdots        \\
-                      1      & x_{n-1} & x_{n-1}^2 & \cdots & x_{n-1}^{n-1} \\
-                      1      & x_n     & x_n^2     & \cdots & x_n^{n-1}
-                  \end{vmatrix}                                                                                       \\
-                    & =-2\prod_{i=1}^{n}(1-x_i)\prod_{1\leqslant j<i\leqslant n}(x_i-x_j)+(-1)^n2\prod_{i=1}^{n}x_i\prod_{1\leqslant j<i\leqslant n}(x_i-x_j) \\
-                    & =2\left[-\prod_{i=1}^{n}(1-x_i)+(-1)^n\prod_{i=1}^{n}x_i\right]\prod_{1\leqslant j<i\leqslant n}(x_i-x_j).
-              \end{flalign*}
-    \end{enumerate}
-\end{solution}
-
-\subsection{方幂指数跳跃}
-
-\begin{example}[2006 山东大学]
-    计算 $n$ 阶行列式\label{fmty}
-    $$D=\begin{vmatrix}
-            1         & 1         & \cdots & 1         \\
-            x_1       & x_2       & \cdots & x_n       \\
-            x_1^2     & x_2^2     & \cdots & x_n^2     \\
-            \vdots    & \vdots    &        & \vdots    \\
-            x_1^{n-2} & x_2^{n-2} & \cdots & x_n^{n-2} \\
-            x_1^n     & x_2^n     & \cdots & x_n^n
-        \end{vmatrix}.$$
-\end{example}
-\begin{solution}
-    在 $D$ 中增加一行一列, 凑成 $n+1$ 阶 Vandermonde 行列式:
-    $$D_{n+1}=\begin{vmatrix}
-            \begin{array}{cccc|c|}
-                1         & 1         & \cdots & 1         & 1       \\
-                x_1       & x_2       & \cdots & x_n       & y       \\
-                x_1^2     & x_2^2     & \cdots & x_n^2     & y^2     \\
-                \vdots    & \vdots    &        & \vdots    & \vdots  \\
-                x_1^{n-2} & x_2^{n-2} & \cdots & x_n^{n-2} & y^{n-2} \\ \hline
-                x_1^{n-1} & x_2^{n-1} & \cdots & x_n^{n-1} & y^{n-1} \\ \hline
-                x_1^n     & x_2^n     & \cdots & x_n^n     & y^n
-            \end{array}
-        \end{vmatrix}=\prod_{k=1}^{n}(y-x_k)\prod_{1\leqslant j<i\leqslant n}(x_i-x_j)$$
-        这是关于变量 $y$ 的恒等式, 一方面, 将上式左边 $D_{n+1}$ 按第 $D_{n+1}$ 列展开, 得 $y$ 的 $n$ 次多项式:
-        $$D_{n+1}=A_{1,n+1}+yA_{2,n+1}+\cdots+y^{n-1}A_{n,n+1}+y^nA_{n+1,n+1}$$
-        其中 $A_{k,n+1}$ 是 $D_{n+1}$ 的 $(k,n+1)$ 元的代数余子式 $(1\leqslant k\leqslant n+1)$, 且 $y^{n-1}$ 的系数为
-        $$A_{n,n+1}=(-1)^{n+n+1}D=-D$$
-        另一方面, 对于 $D_{n+1}$ 的右边, 因为 $$\prod_{k=1}^{n}(y-x_k)=y^n-\sum_{k=1}^{n}x_ky^{n-1}+\cdots+(-1)^n\prod_{k=1}^{n}x_k$$
-        所以, $y^{n-1}$ 的系数为 $\displaystyle-\sum_{k=1}^{n}x_k\prod_{1\leqslant j<i\leqslant n}(x_i-x_j)$, 因此, 有
-        $$D=\sum_{k=1}^{n}x_k\prod_{1\leqslant j<i\leqslant n}(x_i-x_j).$$
-\end{solution}
-
-\subsection{代数余子式问题}
-
-\begin{definition}
-    在 $ n $ 阶行列式 $ D=\left|a_{i j}\right| $ 中, 去掉元素 $ a_{i j} $ 所在的第 $ i $ 行和第 $ j $ 列后, 余下的 $ n-1 $ 阶行列式, 称为 $ a_{i j} $ 的余子式, 记为 $ M_{i j} .$
+\begin{definition}[余子式]
+    在 $ n $ 阶行列式 $ D=\left|a_{i j}\right| $ 中, 去掉元素 $ a_{i j} $ 所在的第 $ i $ 行和第 $ j $ 列后, 余下的 $ n-1 $ 阶行列式, 称为 $ a_{i j} $ 的\textit{余子式}, 记为 $ M_{i j} .$
 \end{definition}
-\begin{definition}
-    称 $ A_{i j}=(-1)^{i+j} M_{i j} $ 为 $ a_{i j} $ 的代数余子式.
+\begin{definition}[代数余子式]
+    称 $ A_{i j}=(-1)^{i+j} M_{i j} $ 为 $ a_{i j} $ 的\textit{代数余子式}.
 \end{definition}
-\begin{definition}
+\begin{definition}[$ k $ 阶子式]
     在 $ n $ 阶行列式 $ D=\left|a_{i j}\right| $ 中, 任意选定 $ k $ 行 $ k $ 列 $ (1 \leqslant k \leqslant n) $, 
-    位于这些行列交叉处的 $ k^{2} $ 个元素, 按原来顺序构成一个 $ k $ 阶行列式, 称为 $ D $ 的一个 $ k $ 阶子式.
+    位于这些行列交叉处的 $ k^{2} $ 个元素, 按原来顺序构成一个 $ k $ 阶行列式, 称为 $ D $ 的一个 $ k $ \textit{阶子式}.
 \end{definition}
-\begin{theorem}
+\begin{theorem}[按行 (列) 展开]
     行列式等于它的任一行 (列) 的各元素与其对应的代数余子式乘积之和, 即按第 $ i $ 行展开, $D=a_{i 1} A_{i 1}+a_{i 2} A_{i 2}+\cdots+a_{i n} A_{i n}(i=1,2, \cdots, n) $;
     按第 $ j $ 列展开, $D=a_{1 j} A_{1 j}+a_{2 j} A_{2 j}+\cdots+a_{n j} A_{n j}(j=1,2, \cdots, n) .$
-\end{theorem}
-\begin{theorem}
+
     行列式某一行 (列) 的元素与另一行 (列) 的对应元素的代数余子式乘积之和等于零, 即
     $$a_{i 1} A_{j 1}+a_{i 2} A_{j 2}+\cdots+a_{i n} A_{j n}=0, i \neq j$$
     或
@@ -333,4 +84,60 @@
     对 $\vb*{A}^\top=k\vb*{A}^*$ 两边取行列式, 则 $$\det\qty(\vb*{A}^\top)=\det\qty(k\vb*{A}^*)\Rightarrow \det\vb*{A}=k^n(\det\vb*{A})^{n-1}=k^3(\det\vb*{A})^2\Rightarrow \det\vb*{A}=\dfrac{1}{k^3}$$
     又因为 $\vb*{A}^\top=k\vb*{A}^*$, 所以 $a_{ij}=kA_{ij}$, 其中 $A_{ij}$ 是 $a_{ij}$ 对应的代数余子式, 那么 $$\det\vb*{A}=a_{11}A_{11}+a_{12}A_{12}+a_{13}A_{13}=\dfrac{1}{k}\sum_{i=1}^{3}a_{1i}^2=\dfrac{3c^2}{k}$$
     于是 $\dfrac{1}{k^3}=\dfrac{3c^2}{k}\Rightarrow c=\dfrac{\sqrt{3}}{3k}.$
+\end{solution}
+
+\subsection{Laplace 展开定理}
+
+\begin{theorem}[Laplace 展开定理]
+    取定行指标 $i_1,i_2,\cdots,i_p,1\leqslant i_1<i_2<\cdots<i_p\leqslant n$, 遍取行列式 $\det\vb*{A}$ 中第 $i_1,i_2,\cdots,i_p$ 行上的 $p$ 阶子式, 
+    并分别乘以相应的代数余子式, 其和即为 $\det\vb*{A}$, 具体地说, 有
+    $$\det\vb*{A} =\sum_{1\leqslant j_1<j_2<\cdots<j_p\leqslant n}\vb*{A}
+        \mqty(i_1i_2\cdots i_p\\j_1j_2\cdots j_p)
+        \qty[(-1)^{\sum\limits_{k=1}^pi_k+\sum\limits_{k=1}^pj_k}\vb*{A}
+            \mqty(i_{p+1}i_{p+2}\cdots i_n\\
+            j_{p+1}j_{p+2}\cdots j_n)]$$
+    其中 $i_1i_2\cdots i_pi_{p+1}\cdots i_n$ 和 $j_1j_2\cdots j_pj_{p+1}\cdots j_n$ 都是 $1,2,\cdots,n$ 的排列, 
+    并且 $1\leqslant i_{p+1}<i_{p+2}<\cdots\leqslant i_n,1\leqslant j_{p+1}<j_{p+2}<\cdots\leqslant j_n$.
+\end{theorem}
+
+\begin{example}
+    利用 Laplace 展开定理计算下列行列式:
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l || l}
+            (\rownumber{}) $D=\begin{vmatrix}
+                                      -4 & 1  & 2 & -2 & 1  \\
+                                      0  & 3  & 0 & 1  & -5 \\
+                                      2  & -3 & 1 & -3 & 1  \\
+                                      -1 & -1 & 3 & -1 & 0  \\
+                                      0  & 4  & 0 & 2  & 5
+                                  \end{vmatrix}.$
+             & (\rownumber{}) $\displaystyle
+                D=\begin{vmatrix}
+                      1     & 1     & 0     & 0     & 0     & 1     \\
+                      x_1   & x_2   & 0     & 0     & 0     & x_3   \\
+                      a_1   & b_1   & 1     & 1     & 1     & c_1   \\
+                      a_2   & b_2   & x_1   & x_2   & x_3   & c_2   \\
+                      a_3   & b_3   & x_1^2 & x_2^2 & x_3^2 & c_3   \\
+                      x_1^2 & x_2^2 & 0     & 0     & 0     & x_3^2
+                  \end{vmatrix}.$
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 将行列式 $D$ 按第 1 列、第 3 列作 Laplace 展开, 得到
+              \begin{flalign*}
+                  D & =\sum_{1\leqslant i_1<i_2\leqslant 5}\vb*{A} \mqty(i_1 & i_2 \\1&3)\qty[(-1)^{i_1+i_2+1+3}\vb*{A}\mqty(i_3&i_4&i_5\\2&4&5)]\\
+                    & =(-1)^{1+3+1+3}\mqty|-4                                & 2   \\2&1|\mqty|3&1&-5\\-1&-1&0\\4&2&5|+(-1)^{1+4+1+3}\mqty|-4&2\\-1&3|\mqty|3&1&-5\\-3&-3&1\\4&2&5|\\
+                    & ~  +(-1)^{3+4+1+3}\mqty|2                              & 1   \\-1&3|\mqty|1&-2&1\\3&1&-5\\4&2&5|\\
+                    & =-8\times(-20)-(-10)\times(-62)-7\times87=-1069.
+              \end{flalign*}
+        \item 将行列式 $D$ 按第 3 列、第 4 列和第 5 列作 Laplace 展开, 得到
+              \begin{flalign*}
+                  D & =\sum_{1\leqslant i_1<i_2<i_3\leqslant 6}\vb*{A}\mqty(i_1 & i_2 & i_3 \\3&4&5)\qty[(-1)^{i_1+i_2+i_3+3+4+5}\vb*{A}\mqty(i_4&i_5&i_6\\1&2&6)]\\
+                    & =(-1)^{3+4+5+3+4+5}\mqty|1                                & 1   & 1   \\x_1&x_2&x_3\\x_1^2&x_2^2&x_3^2|\cdot\mqty|1&1&1\\x_1&x_2&x_3\\x_1^2&x_2^2&x_3^2|=\prod_{1\leqslant j<i\leqslant 3}(x_i-x_j)^2.
+              \end{flalign*}
+    \end{enumerate}
 \end{solution}

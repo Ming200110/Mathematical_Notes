@@ -1,8 +1,8 @@
-\section{伴随矩阵与逆矩阵}
+\section{伴随矩阵、逆矩阵与矩阵方程}
 
 \subsection{伴随矩阵}
 
-\begin{definition}[伴随矩阵]
+\begin{definition}[伴随矩阵的定义]
     设 $ \boldsymbol{A}=\left(a_{i j}\right) $ 是 $ n $ 阶方阵 $ (n \geqslant 2)$, $A $ 的伴随矩阵 $\vb*{A}^*$ (或 $\adj\vb*{A}$) 定义为
     $$\boldsymbol{A}^{*}=\begin{pmatrix}
             A_{11}  & A_{21}  & \cdots & A_{n 1} \\
@@ -12,6 +12,7 @@
         \end{pmatrix},$$
     其中 $ A_{i j} $ 为 $ \boldsymbol{A} $ 的元素 $ a_{i j}~ (i, j=1,2, \cdots, n) $ 的代数余子式.
 \end{definition}
+
 伴随矩阵具有如下性质:
 \setcounter{magicrownumbers}{0}
 \begin{table}[H]
@@ -31,7 +32,7 @@
     设矩阵 $\vb*{A}=\mqty(2&1&0\\1&2&0\\0&0&1)$, 矩阵 $\vb*{B}$ 满足 $\vb*{ABA}^*=2\vb*{BA}^*+\vb*{E}$, 求 $\qty|2\vb*{B}^\top|.$
 \end{example}
 \begin{solution}
-    注意到 $\det\vb*{A}=3$, 且 $\vb*{A}^*\vb*{A}=|\vb*{A}|\vb*{E}$, 对 $\vb*{ABA}^*=2\vb*{BA}^*+\vb*{E}$, 右乘矩阵 $\vb*{A}$, 得 
+    注意到 $\det\vb*{A}=3$, 且 $\vb*{A}^*\vb*{A}=|\vb*{A}|\vb*{E}$, 对 $\vb*{ABA}^*=2\vb*{BA}^*+\vb*{E}$, 右乘矩阵 $\vb*{A}$, 得
     $$3\vb*{AB}=6\vb*{B}+\vb*{A}\Rightarrow 3(\vb*{A}-2\vb*{E})\vb*{B}=\vb*{A}\Rightarrow |3(\vb*{A}-2\vb*{E})\vb*{B}|=3\Rightarrow |\vb*{B}|=\dfrac{1}{9|\vb*{A}-2\vb*{E}|}$$
     其中 $|\vb*{A}-2\vb*{E}|=\mqty|0&1&0\\1&0&0\\0&0&-1|=1$, 于是 $\vb*{B}=\dfrac{1}{9}\Rightarrow \qty|2\vb*{B}^\top|=\dfrac{8}{9}.$
 \end{solution}
@@ -45,7 +46,27 @@
     因此矩阵 $\vb*{A}$ 的所有代数余子式之和为 $5-5+5-5+5+2-3+1+1=6.$
 \end{solution}
 
+\begin{example}
+    设实矩阵 $\vb*{A}=(a_{ij})$, $A_{ij}$ 是 $a_{ij}$ 的代数余子式, $|a_{ij}|$ 与 $|A_{ij}|$ 分别表示两个表达式的绝对值, 则下列结论不正确的是
+    \begin{tasks}
+        \task 若 $\det\vb*{A}=1$ 且对任意 $i,j$ 均有 $a_{ij}=A_{ij}$, 则 $\vb*{A}$ 为正交矩阵
+        \task 若 $\det\vb*{A}=1$ 且对任意 $i,j$ 均有 $a_{ij}=-A_{ij}$, 则 $\vb*{A}$ 为正交矩阵
+        \task 若 $\vb*{A}$ 为正交矩阵且 $\det\vb*{A}=1$, 则对任意 $i,j$, 有 $|a_{ij}|=|A_{ij}|$
+        \task 若 $\vb*{A}$ 为正交矩阵且 $\det\vb*{A}=-1$, 则对任意 $i,j$, 有 $|a_{ij}|=|A_{ij}|$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    由 $a_{ij}=A_{ij}$, 可知, 对于 A 选项
+    $$\vb*{AA}^\top=\vb*{AA}^*=\det\vb*{A}\cdot\vb*{E}=\vb*{E}\Rightarrow \vb*{A}\text{ 是正交矩阵}$$
+    因此 A 正确; 那么 B 选项错误, 因为
+    $$a_{ij}=-A_{ij}\Rightarrow \vb*{A}^*=-\vb*{A}^\top\not\Rightarrow \vb*{AA}^\top=\vb*{E}$$
+    对于 C、D 选项, 有
+    $$\vb*{AA}^\top=\vb*{E}=\vb*{A}^\top\vb*{A}\Rightarrow \vb*{A}^*\vb*{A}=\det\vb*{A}\cdot\vb*{E}=\pm\vb*{E}=\pm\vb*{A}^\top\vb*{A}\Rightarrow \vb*{A}^*=\pm\vb*{A}^\top\Rightarrow |a_{ij}|=|A_{ij}|$$
+    因此 C,D 正确, 故选 B.
+\end{solution}
+
 \subsection{可逆矩阵}
+
 可逆矩阵具有如下性质:
 \begin{enumerate}[label=(\arabic{*})]
     \item 方阵 $ \boldsymbol{A} $ 可逆的充分必要条件是 $ |\boldsymbol{A}| \neq 0 $;
@@ -64,7 +85,29 @@
     $\qty|\vb*{A}^{-1}+\vb*{B}^{-1}|=\qty|\vb*{EA}^{-1}+\vb*{B}^{-1}\vb*{E}|=\qty|\vb*{B}^{-1}\vb*{BA}^{-1}+\vb*{B}^{-1}\vb*{AA}^{-1}|=\qty|\vb*{B}^{-1}(\vb*{B}+\vb*{A})\vb*{A}^{-1}|=\dfrac{|\vb*{A}+\vb*{B}|}{|\vb*{A}|\cdot|\vb*{B}|}.$
 \end{proof}
 
-\begin{theorem}[分块矩阵的逆]
+\begin{theorem}[分块矩阵的逆 A]
+    设 $ \vb*{A}=\left(\begin{array}{llll}\vb*{A}_{1} & & & \\ & \vb*{A}_{2} & & \\ & & \ddots & \\ & & & \vb*{A}_{m}\end{array}\right) $, 其中 $ \vb*{A}_{i}(i=1,2, \cdots, m) $ 均为可逆矩阵, 则
+    $$\vb*{A}^{-1}=\left(\begin{array}{llll}
+                \vb*{A}_{1}^{-1} &                  &        &                  \\
+                                 & \vb*{A}_{2}^{-1} &        &                  \\
+                                 &                  & \ddots &                  \\
+                                 &                  &        & \vb*{A}_{m}^{-1}
+            \end{array}\right).$$
+    设 $\vb*{A}=\mqty(
+        &                                        &           & \vb*{A}_{1}         \\
+        &                                        & \vb*{A}_{2} &                \\
+        & \begin{sideways}$\ddots$\end{sideways} &           &                \\
+        \vb*{A}_{m}         &                                        &           &
+        )$, 其中 $\vb*{A}_i(i=1,2,\cdots,m)$ 均为可逆矩阵, 则
+    $$\vb*{A}^{-1}=\mqty(
+        &                                        &           & \vb*{A}_{m}^{-1}         \\
+        &                                        & \begin{sideways}$\ddots$\end{sideways} &                \\
+        & \vb*{A}_{2}^{-1} &           &                \\
+        \vb*{A}_{1}^{-1}         &                                        &           &
+        ).$$
+\end{theorem}
+
+\begin{theorem}[分块矩阵的逆 B]
     设 $\vb*{A}$ 是 $m\times m$ 可逆矩阵, $\vb*{B}$ 是 $m\times n$ 矩阵, $\vb*{C}$ 是 $n\times m$ 矩阵, $\vb*{D}$ 是 $n\times n$ 可逆矩阵, 则有以下分块矩阵的求逆公式:
     $$\mqty(\vb*{A}&\vb*{B}\\\vb*{C}&\vb*{D})^{-1}=\mqty(\vb*{A}^{-1}+\vb*{A}^{-1}\vb*{BWCA}^{-1}&-\vb*{A}^{-1}\vb*{BW}\\-\vb*{WCA}^{-1}&\vb*{W})$$
     其中 $\vb*{W}=\qty(\vb*{D}-\vb*{CA}^{-1}\vb*{B})^{-1}.$
@@ -103,7 +146,7 @@
         \vb*{U}_{22} & =-\qty(\vb*{B}-\vb*{AC}^{-1}\vb*{D})^{-1}\vb*{AC}^{-1}=-\qty(\vb*{B}-\vb*{AC}^{-1}\vb*{D})^{-1}\qty(\vb*{CA}^{-1})^{-1}=-\qty(\qty(\vb*{CA}^{-1})\qty(\vb*{B}-\vb*{AC}^{-1}\vb*{D}))^{-1} \\
                      & =-\qty(\vb*{CA}^{-1}\vb*{B}-\vb*{CA}^{-1}\vb*{AC}^{-1}\vb*{D})^{-1}=-\qty(\vb*{CA}^{-1}\vb*{B}-\vb*{D})^{-1}=\qty(\vb*{D}-\vb*{CA}^{-1}\vb*{B})=\vb*{W}
     \end{flalign*}
-    由 (2) 可得: $\vb*{U}_{12}=-\vb*{A}^{-1}\vb*{BU}_{22}$ 将 $\vb*{U}_{22}=\vb*{W}$ 代入其中可得: $\vb*{U}_{12}=-\vb*{A}^{-1}\vb*{BW}$, 由 (3) 可得: 
+    由 (2) 可得: $\vb*{U}_{12}=-\vb*{A}^{-1}\vb*{BU}_{22}$ 将 $\vb*{U}_{22}=\vb*{W}$ 代入其中可得: $\vb*{U}_{12}=-\vb*{A}^{-1}\vb*{BW}$, 由 (3) 可得:
     $\vb*{U}_{11}=\vb*{A}^{-1}(\vb*{E}_{11}-\vb*{BU}_{21})$, 将 $\vb*{U}_{21}=-\vb*{WCA}^{-1}$ 代入其中可得:
     $$\vb*{U}_{11}=\vb*{A}^{-1}\qty(\vb*{E}_{11}+\vb*{BWCA}^{-1})=\vb*{A}^{-1}+\vb*{A}^{-1}\vb*{BWCA}^{-1}$$
     综上所述, 即得证.
@@ -196,56 +239,37 @@
     \begin{flalign*}
         \mqty(\vb*{A} & \vb*{E}                                  \\-\vb*{E}&\vb*{O})&=\begin{vNiceArray}{ccc:c}
             2 & 3        & 5 &         \\
-                    1 & 2        & 7 & \vb*{E} \\
-                    3 & 4        & 4           \\ \hdottedline
-                      & -\vb*{E} &   & \vb*{O}
+            1 & 2        & 7 & \vb*{E} \\
+            3 & 4        & 4           \\ \hdottedline
+            & -\vb*{E} &   & \vb*{O}
         \end{vNiceArray}\xrightarrow[r_3-3r_1]{\substack{r_1\leftrightarrow r_2\\r_2-2r_1}}\begin{pNiceArray}{ccc:ccc}
             1 & 2        & 7   & 0 & 1       & 0 \\
-                    0 & -1       & -9  & 1 & -2      & 0 \\
-                    0 & -2       & -17 & 0 & -3      & 1 \\ \hdottedline
-                      & -\vb*{E} &     &   & \vb*{O}
+            0 & -1       & -9  & 1 & -2      & 0 \\
+            0 & -2       & -17 & 0 & -3      & 1 \\ \hdottedline
+            & -\vb*{E} &     &   & \vb*{O}
         \end{pNiceArray}\\
                       & \xrightarrow[r_3+2r_2]{\substack{r_1+r_3 \\r_2\times(-1)}}\begin{pNiceArray}{ccc:ccc}
-                        1 & 0        & -10 & 0  & -2      & 1 \\
-                                0 & 1        & 9   & -1 & 2       & 0 \\
-                                0 & 0        & 1   & -2 & 1       & 1 \\ \hdottedline
-                                  & -\vb*{E} &     &    & \vb*{O}
-                    \end{pNiceArray}\xrightarrow[r_2-9r_3]{r_1+10r_3}\begin{pNiceArray}{ccc:ccc}
-                        1 & 0        & 0 & -20 & 8       & 11 \\
-                                0 & 1        & 0 & 17  & -7      & -9 \\
-                                0 & 0        & 1 & -2  & 1       & 1  \\ \hdottedline
-                                  & -\vb*{E} &   &     & \vb*{O}
-                    \end{pNiceArray}
+            1 & 0        & -10 & 0  & -2      & 1 \\
+            0 & 1        & 9   & -1 & 2       & 0 \\
+            0 & 0        & 1   & -2 & 1       & 1 \\ \hdottedline
+            & -\vb*{E} &     &    & \vb*{O}
+        \end{pNiceArray}\xrightarrow[r_2-9r_3]{r_1+10r_3}\begin{pNiceArray}{ccc:ccc}
+            1 & 0        & 0 & -20 & 8       & 11 \\
+            0 & 1        & 0 & 17  & -7      & -9 \\
+            0 & 0        & 1 & -2  & 1       & 1  \\ \hdottedline
+            & -\vb*{E} &   &     & \vb*{O}
+        \end{pNiceArray}
     \end{flalign*}
     故得 $\vb*{A}^{-1}=\mqty(-20  & 8  & 11 \\17  & -7 & -9 \\-2 & 1  & 1 \\).$\\
-    \textbf{法四: (该方法仅对三阶矩阵有效) }第一步, 将矩阵前两列复制一份在原矩阵的右侧, 将矩阵前两行复制一份再矩阵的下侧, 再将子矩阵 $\mqty(a_{11}&a_{12}\\a_{21}&a_{22})$ 复制到原矩阵的右下角, 即 
-    $$\mqty({\color{red} 2}&{\color{red} 3}&{\color{red} 5}\\{\color{orange} 1}&{\color{orange} 2}&{\color{orange} 7}\\3&4&4)\Rightarrow 
-    \mqty({\color{red} 2}&{\color{red} 3}&{\color{red} 5}&{\color{red} 2}&{\color{red} 3}\\{\color{orange} 1}&{\color{orange} 2}&{\color{orange} 7}& {\color{orange} 1}&{\color{orange} 2}\\3&4&4&3&4)\Rightarrow
-    \mqty({\color{red} 2}&{\color{red} 3}&{\color{red} 5}&{\color{red} 2}&{\color{red} 3}\\{\color{orange} 1}&{\color{orange} 2}&{\color{orange} 7}& {\color{orange} 1}&{\color{orange} 2}\\3&4&4&3&4\\{\color{red} 2}&{\color{red} 3}&{\color{red} 5}\\{\color{orange} 1}&{\color{orange} 2}&{\color{orange} 7})\Rightarrow 
-    \mqty({\color{red} 2}&{\color{red} 3}&{\color{red} 5}&{\color{red} 2}&{\color{red} 3}\\{\color{orange} 1}&{\color{orange} 2}&{\color{orange} 7}& {\color{orange} 1}&{\color{orange} 2}\\3&4&4&3&4\\{\color{red} 2}&{\color{red} 3}&{\color{red} 5}&{\color{red} 2}&{\color{red} 3}\\{\color{orange} 1}&{\color{orange} 2}&{\color{orange} 7}&{\color{orange} 1}&{\color{orange} 2}):=\vb*{B}$$
+    \textbf{法四: (该方法仅对三阶矩阵有效) }第一步, 将矩阵前两列复制一份在原矩阵的右侧, 将矩阵前两行复制一份再矩阵的下侧, 再将子矩阵 $\mqty(a_{11}&a_{12}\\a_{21}&a_{22})$ 复制到原矩阵的右下角, 即
+    $$\mqty({\color{red} 2}&{\color{red} 3}&{\color{red} 5}\\{\color{orange} 1}&{\color{orange} 2}&{\color{orange} 7}\\3&4&4)\Rightarrow
+        \mqty({\color{red} 2}&{\color{red} 3}&{\color{red} 5}&{\color{red} 2}&{\color{red} 3}\\{\color{orange} 1}&{\color{orange} 2}&{\color{orange} 7}& {\color{orange} 1}&{\color{orange} 2}\\3&4&4&3&4)\Rightarrow
+        \mqty({\color{red} 2}&{\color{red} 3}&{\color{red} 5}&{\color{red} 2}&{\color{red} 3}\\{\color{orange} 1}&{\color{orange} 2}&{\color{orange} 7}& {\color{orange} 1}&{\color{orange} 2}\\3&4&4&3&4\\{\color{red} 2}&{\color{red} 3}&{\color{red} 5}\\{\color{orange} 1}&{\color{orange} 2}&{\color{orange} 7})\Rightarrow
+        \mqty({\color{red} 2}&{\color{red} 3}&{\color{red} 5}&{\color{red} 2}&{\color{red} 3}\\{\color{orange} 1}&{\color{orange} 2}&{\color{orange} 7}& {\color{orange} 1}&{\color{orange} 2}\\3&4&4&3&4\\{\color{red} 2}&{\color{red} 3}&{\color{red} 5}&{\color{red} 2}&{\color{red} 3}\\{\color{orange} 1}&{\color{orange} 2}&{\color{orange} 7}&{\color{orange} 1}&{\color{orange} 2}):=\vb*{B}$$
     第二步, 删去 $\vb*{B}$ 矩阵的第一行、第一列, 得到 $4\times 4$ 大小的 $\vb*{C}$ 矩阵, 即 $\vb*{C}=\mqty(2&7&1&2\\4&4&3&4\\3&5&2&3\\2&7&1&2)$；
-    第三步, 计算 $\vb*{C}$ 的二阶子式, 得到矩阵 $\vb*{A}$ 的伴随矩阵 $\vb*{A}^*$, 即 
+    第三步, 计算 $\vb*{C}$ 的二阶子式, 得到矩阵 $\vb*{A}$ 的伴随矩阵 $\vb*{A}^*$, 即
     $$\vb*{A}^*=\mqty(2\times4-7\times4& 4\times5-4\times3& 3\times7-5\times2\\7\times3-1\times4& 4\times2-3\times5& 5\times1-2\times7\\1\times4-2\times3& 3\times3-4\times2& 2\times2-3\times1)=\mqty(-20  & 8  & 11 \\17  & -7 & -9 \\-2 & 1  & 1)$$
     最后一步, 选择 $\vb*{A}^*$ 的第 $i$ 行 (或列) 与 $\vb*{A}$ 的第 $i$ 列 (或行) 相乘, 即为 $|\vb*{A}|$, 此题 $|\vb*{A}|=1$, 故 $\vb*{A}^{-1}=\mqty(-20  & 8  & 11 \\17  & -7 & -9 \\-2 & 1  & 1).$
-\end{solution}
-
-\begin{example}
-    设实矩阵 $\vb*{A}=(a_{ij})$, $A_{ij}$ 是 $a_{ij}$ 的代数余子式, $|a_{ij}|$ 与 $|A_{ij}|$ 分别表示两个表达式的绝对值, 则下列结论不正确的是
-    \begin{tasks}
-        \task 若 $\det\vb*{A}=1$ 且对任意 $i,j$ 均有 $a_{ij}=A_{ij}$, 则 $\vb*{A}$ 为正交矩阵
-        \task 若 $\det\vb*{A}=1$ 且对任意 $i,j$ 均有 $a_{ij}=-A_{ij}$, 则 $\vb*{A}$ 为正交矩阵
-        \task 若 $\vb*{A}$ 为正交矩阵且 $\det\vb*{A}=1$, 则对任意 $i,j$, 有 $|a_{ij}|=|A_{ij}|$
-        \task 若 $\vb*{A}$ 为正交矩阵且 $\det\vb*{A}=-1$, 则对任意 $i,j$, 有 $|a_{ij}|=|A_{ij}|$
-    \end{tasks}
-\end{example}
-\begin{solution}
-    由 $a_{ij}=A_{ij}$, 可知, 对于 A 选项
-    $$\vb*{AA}^\top=\vb*{AA}^*=\det\vb*{A}\cdot\vb*{E}=\vb*{E}\Rightarrow \vb*{A}\text{ 是正交矩阵}$$
-    因此 A 正确; 那么 B 选项错误, 因为
-    $$a_{ij}=-A_{ij}\Rightarrow \vb*{A}^*=-\vb*{A}^\top\not\Rightarrow \vb*{AA}^\top=\vb*{E}$$
-    对于 C、D 选项, 有
-    $$\vb*{AA}^\top=\vb*{E}=\vb*{A}^\top\vb*{A}\Rightarrow \vb*{A}^*\vb*{A}=\det\vb*{A}\cdot\vb*{E}=\pm\vb*{E}=\pm\vb*{A}^\top\vb*{A}\Rightarrow \vb*{A}^*=\pm\vb*{A}^\top\Rightarrow |a_{ij}|=|A_{ij}|$$
-    因此 C,D 正确, 故选 B.
 \end{solution}
 
 \begin{example}
@@ -255,8 +279,8 @@
     由 $\vb*{B}=(2\vb*{A}+\vb*{E})(\vb*{A}+2\vb*{E})^{-1}$, 可知
     \begin{flalign*}
         \qty(\vb*{B}-2\vb*{E})^{-1} & =\qty((2\vb*{A}+\vb*{E})(\vb*{A}+2\vb*{E})^{-1}-2\vb*{E})^{-1}=\qty((2\vb*{A}+\vb*{E})(\vb*{A}+2\vb*{E})^{-1}-2(\vb*{A}+2\vb*{E})(\vb*{A}+2\vb*{E})^{-1})^{-1}             \\
-                                    & =\qty((-3\vb*{E})(\vb*{A}+2\vb*{E})^{-1})^{-1}=\qty(-3(\vb*{A}+2\vb*{E})^{-1})^{-1}=-\dfrac{1}{3}(\vb*{A}+2\vb*{E})                                              \\
-                                    & =-\dfrac{1}{3}\mqty(3                                                                                                                                & 3 & 0 & 0 \\0&6&6&0\\0&0&9&9\\0&0&0&12)=\mqty(-1&-1&0&0\\0&-2&-2&0\\0&0&-3&-3\\0&0&0&-4)
+                                    & =\qty((-3\vb*{E})(\vb*{A}+2\vb*{E})^{-1})^{-1}=\qty(-3(\vb*{A}+2\vb*{E})^{-1})^{-1}=-\dfrac{1}{3}(\vb*{A}+2\vb*{E})                                                        \\
+                                    & =-\dfrac{1}{3}\mqty(3                                                                                                                                          & 3 & 0 & 0 \\0&6&6&0\\0&0&9&9\\0&0&0&12)=\mqty(-1&-1&0&0\\0&-2&-2&0\\0&0&-3&-3\\0&0&0&-4)
     \end{flalign*}
     因为所有代数余子式之和等于这个伴随矩阵所有元素之和, 故先求出它的伴随矩阵, 再计算伴随矩阵各个元素相加, 
     $|\vb*{B}-2\vb*{E}|=\dfrac{1}{24}$, 于是
@@ -366,5 +390,309 @@
                                                                                                                  4 & 6  & 6  \\
                                                                                                                  6 & 10 & 12
                                                                                                              \end{pmatrix}
+    \end{flalign*}
+\end{solution}
+
+\subsection{矩阵方程}
+
+\begin{example}
+    设矩阵 $\vb*{A}=\mqty(1&1&-1\\-1&1&1\\1&-1&1)$, 其伴随矩阵记作 $\vb*{A}^*$, 求满足
+    $$\vb*{A}^*\vb*{X}\qty(\dfrac{1}{2}\vb*{A}^*)^*=8\vb*{A}^{-1}\vb*{X}+4\vb*{E}$$ 的矩阵 $\vb*{X}.$
+\end{example}
+\begin{solution}
+    $\det \vb*{A}=\mqty|1&1&-1\\-1&1&1\\1&-1&1|=4$, 且 $\vb*{A}\vb*{A}^*=|\vb*{A}|\vb*{E}=4\vb*{E}$, 于是给矩阵方程同时左乘 $\vb*{A}$, 得
+    \begin{flalign*}
+        \vb*{A}\vb*{A}^*\vb*{X}\qty(\dfrac{1}{2}\vb*{A}^*)^* =8\vb*{A}\vb*{A}^{-1}\vb*{X}+4\vb*{A}\vb*{E} \Rightarrow4\vb*{E}\vb*{X}\qty(\dfrac{1}{2}\vb*{A}^*)^*=8\vb*{E}\vb*{X}+4\vb*{A}\vb*{E} \Rightarrow\vb*{X}\qty(\dfrac{1}{2}\vb*{A}^*)^*                 =2\vb*{X}+\vb*{A}
+    \end{flalign*}
+    并且 $\qty(\dfrac{1}{2}\vb*{A}^*)^*=\qty(\dfrac{1}{2})^{3-1}\qty(\vb*{A}^*)^*=\dfrac{1}{4}\qty|\vb*{A}^*|^*=\dfrac{1}{4}|\vb*{A}|^{3-2}\vb*{A}=\vb*{A}$, 以及 $\det(\vb*{A}-2\vb*{E})= -4\neq0$, 于是 $\vb*{A}-2\vb*{E}$ 可逆,
+    而 $(\vb*{A}-2\vb*{E})^{-1}=\mqty(-1&1&-1\\-1&-1&1\\1&-1&-1)^{-1}=-\dfrac{1}{2}\mqty(1&1&0\\0&1&1\\1&0&1)$, 那么
+    $$\vb*{X}=-\dfrac{1}{2}\mqty(1&1&-1\\-1&1&1\\1&-1&1)\mqty(1&1&0\\0&1&1\\1&0&1)=\mqty(0&-1&0\\0&0&-1\\-1&0&0).$$
+\end{solution}
+
+\begin{example}
+    $\vb*{A},~\vb*{B}$ 是数域 $K$ 上的 $n$ 阶已知方阵, $\det \vb*{A}=\dfrac{1}{2},~\det\vb*{B}=\dfrac{1}{3}$, 求解关于 $\vb*{X}$ 的矩阵方程
+    $$\vb*{X}+\qty(\qty(\vb*{A}^\top\vb*{B})^*\vb*{A}^\top)^{-1}+\vb*{BA}^{-1}\vb*{B}=\vb*{X}\qty(\vb*{B}^\top\qty(\vb*{AB}^\top)^{-1}\vb*{A}^2)^{-1}(\vb*{A}+2\vb*{B}).$$
+\end{example}
+\begin{solution}
+    注意到 $\qty(\vb*{A}^\top\vb*{B})^*=\qty|\vb*{A}^\top\vb*{B}|\qty(\vb*{A}^\top\vb*{B})^{-1}=\qty|\vb*{A}^\top\vb*{B}|\vb*{B}^{-1}\qty(\vb*{A}^\top)^{-1}$,
+    那么 $$\qty(\qty(\vb*{A}^\top\vb*{B})^*\vb*{A}^\top)^{-1}=\qty(\qty|\vb*{A}^\top\vb*{B}|\vb*{B}^{-1}\vb*{E})^{-1}=\dfrac{1}{\qty|\vb*{A}^\top\vb*{B}|}\vb*{B}=6\vb*{B}$$
+    并且 $\qty(\vb*{B}^\top\qty(\vb*{AB}^\top)^{-1}\vb*{A}^2)^{-1}=\qty(\vb*{B}^\top\qty(\vb*{B}^\top)^{-1}\vb*{A}^{-1}\vb*{A}^2)^{-1}=\vb*{A}^{-1}$, 于是
+    $$\vb*{X}\qty(\vb*{B}^\top\qty(\vb*{AB}^\top)^{-1}\vb*{A}^2)^{-1}(\vb*{A}+2\vb*{B})=\vb*{X}\vb*{A}^{-1}\qty(\vb*{A}+2\vb*{B})=\vb*{X}+2\vb*{XA}^{-1}\vb*{B}$$
+    那么 \begin{flalign*}
+        \vb*{X}=\dfrac{1}{2}\qty(6\vb*{B}+\vb*{BA}^{-1}\vb*{B})\qty(\vb*{A}^{-1}\vb*{B})^{-1}=\dfrac{1}{2}\qty(6\vb*{B}+\vb*{BA}^{-1}\vb*{B})\qty(\vb*{B}^{-1}\vb*{A})=3\vb*{A}+\dfrac{1}{2}\vb*{B}
+    \end{flalign*}
+\end{solution}
+
+\begin{example}[2016 浙江大学]
+    设矩阵 $\vb*{A}=\begin{pmatrix}
+            a & b & c \\
+            d & e & f \\
+            h & x & y
+        \end{pmatrix}$ 的逆矩阵 $\vb*{A}^{-1}=\begin{pmatrix}
+            -1 & -2 & -1 \\
+            -2 & 1  & 0  \\
+            0  & -3 & 1
+        \end{pmatrix}$, 矩阵 $\vb*{B}=\begin{pmatrix}
+            a-2b & b-3  & -c \\
+            d-2e & e-3f & -f \\
+            h-2x & x-3y & -y
+        \end{pmatrix}$, 求矩阵 $\vb*{X}$ 使之满足
+    $$\vb*{X}+\qty(\vb*{B}\qty(\vb*{A}^{\top}\vb*{B}^2)^{-1}\vb*{A}^{\top})^{-1}=\vb*{X}\qty(\vb*{A}^2\qty(\vb*{B}^{\top}\vb*{A})^{-1}\vb*{B}^{\top})^{-1}(\vb*{A}+\vb*{B}).$$
+\end{example}
+\begin{solution}
+    先证 $\vb*{B}$ 是可逆矩阵, 为此, 对行列式 $|\vb*{B}|$ 依次将第 2 列减去第 3 列的 3 倍, 第 1 列加上第 2 列的 2 倍, 再按第 1 行拆项, 得
+    \begin{flalign*}
+        |\vb*{B}| & =\begin{vmatrix}
+                         a-2b & b-3  & -c \\
+                         d-2e & e-3f & -f \\
+                         h-2x & x-3y & -y
+                     \end{vmatrix}\xlongequal[c_1+2c_2]{c_2-3c_3}\begin{vmatrix}
+                                                                     a+6c-6 & b+3c-3 & -c \\
+                                                                     d      & e      & -f \\
+                                                                     h      & x      & -y
+                                                                 \end{vmatrix}=-|\vb*{A}|+3(c-1)\begin{vmatrix}
+                                                                                                    2 & 1 & 0  \\
+                                                                                                    d & e & -f \\
+                                                                                                    h & x & -y
+                                                                                                \end{vmatrix} \\
+                  & =1-3(c-1)(2A_{11}-A_{12})
+    \end{flalign*}
+    其中 $A_{11},~A_{12}$ 是矩阵 $\vb*{A}$ 的第 1 行的前两个元素的代数余子式, 另一方面, 易知 $|\vb*{A}^{-1}|=-1$, 所以 $|\vb*{A}|=-1$, 于是, 有
+    $\vb*{A}^*=|\vb*{A}|\vb*{A}^{-1}=\mqty(1&2&1\\2&-1&0\\0&3&1)$, 由此可知 $A_{11}=1,~A_{12}=2$, 于是 $|\vb*{B}|=1$, 表明 $\vb*{B}$ 是可逆矩阵, 因此
+    $$\qty(\vb*{B}\qty(\vb*{A}^{\top}\vb*{B}^2)^{-1}\vb*{A}^{\top})^{-1}=\vb*{B},~\vb*{X}\qty(\vb*{A}^2\qty(\vb*{B}^{\top}\vb*{A})^{-1}\vb*{B}^{\top})^{-1}=\vb*{A}^{-1}$$
+    故原方程可化简为 $\vb*{X}+\vb*{B}=\vb*{XA}^{-1}(\vb*{A}+\vb*{B})\Rightarrow \vb*{X}(\vb*{A}^{-1}\vb*{B})=\vb*{B}$, 所以
+    $$\vb*{X}=\vb*{B}(\vb*{A}^{-1}\vb*{B})^{-1}=\vb*{A}.$$
+\end{solution}
+
+\begin{example}
+    设矩阵 $\vb*{A}=\begin{pmatrix}
+            1 & -1 & 0  & 0  \\
+            0 & 1  & -1 & 0  \\
+            0 & 0  & 1  & -1 \\
+            0 & 0  & 0  & 1
+        \end{pmatrix}$, $\vb*{B}=\begin{pmatrix}
+            2 & 1 & 3 & 4 \\
+            0 & 2 & 1 & 3 \\
+            0 & 0 & 2 & 1 \\
+            0 & 0 & 0 & 2
+        \end{pmatrix}$, 求解方程
+    $$\vb*{X}\qty(\vb*{E}_n-\vb*{B}^{-1}\vb*{A})^{\top}\vb*{B}^{\top}=\vb*{E}_n.$$
+\end{example}
+\begin{solution}
+    $\vb*{E}_n=\vb*{X}\qty(\vb*{B}\qty(\vb*{E}_n-\vb*{B}^{-1}\vb*{A}))^{\top}=\vb*{X}\qty(\vb*{BE}_n-\vb*{BB}^{-1}\vb*{A})^{\top}=\vb*{X}\qty(\vb*{B}-\vb*{A})^{\top}\Rightarrow \vb*{X}=\qty(\qty(\vb*{B}-\vb*{A})^{\top})^{-1}$,
+    \begin{flalign*}
+        \vb*{X} & =\qty(\qty(\begin{pmatrix}
+                                 2 & 1 & 3 & 4 \\
+                                 0 & 2 & 1 & 3 \\
+                                 0 & 0 & 2 & 1 \\
+                                 0 & 0 & 0 & 2
+                             \end{pmatrix}-\begin{pmatrix}
+                                               1 & -1 & 0  & 0  \\
+                                               0 & 1  & -1 & 0  \\
+                                               0 & 0  & 1  & -1 \\
+                                               0 & 0  & 0  & 1
+                                           \end{pmatrix})^{\top})^{-1}
+        =\begin{pNiceArray}{cc:cc}
+             1 & 0 & 0 & 0 \\
+             2 & 1 & 0 & 0 \\ \hdottedline
+             3 & 2 & 1 & 0 \\
+             4 & 3 & 2 & 1
+         \end{pNiceArray}^{-1}                                                                                                         \\
+                & =\begin{pNiceArray}{c:c}
+                       \begin{pmatrix}
+                1 & 0 \\
+                2 & 1
+            \end{pmatrix}^{-1}                & O                                   \\ \hdottedline
+                       -\begin{pmatrix}
+                1 & 0 \\
+                2 & 1
+            \end{pmatrix}^{-1}\begin{pmatrix}
+                3 & 2 \\
+                4 & 3
+            \end{pmatrix}\begin{pmatrix}
+                1 & 0 \\
+                2 & 1
+            \end{pmatrix}^{-1} & \begin{pmatrix}
+                1 & 0 \\
+                2 & 1
+            \end{pmatrix}^{-1}
+                   \end{pNiceArray}=\begin{pmatrix}
+                                        1  & 0  & 0  & 0 \\
+                                        -2 & 1  & 0  & 0 \\
+                                        1  & -2 & 1  & 0 \\
+                                        0  & 1  & -2 & 1
+                                    \end{pmatrix}.
+    \end{flalign*}
+\end{solution}
+
+\begin{example}
+    设 $\vb*{A}=\mqty(1& 2& 2\\ 2& 5& 4\\ 2& 4& 5),~\vb*{B}=\mqty(1&1\\1&0),~\vb*{C}=\begin{pmatrix}
+            1 & 1 &   &   &   \\
+              & 1 & 1 &   &   \\
+              &   & 1 & 1 &   \\
+              &   &   & 1 & 1 \\
+              &   &   &   & 1
+        \end{pmatrix}$, 求 $\vb*{X}$ 使 $\vb*{X}\mqty(\vb*{O}&\vb*{B}\\\vb*{A}&\vb*{O})=\vb*{C}.$
+\end{example}
+\begin{solution}
+    易得 $\vb*{A},~\vb*{B}$ 都可逆, 且 $\mqty(\vb*{O}&\vb*{B}\\\vb*{A}&\vb*{O})^{-1}=\mqty(\vb*{O}&\vb*{A}^{-1}\\\vb*{B}^{-1}&\vb*{O})$, 所以 $\vb*{X}=\vb*{C}\mqty(\vb*{O}&\vb*{A}^{-1}\\\vb*{B}^{-1}&\vb*{O})$, 且
+    $$\vb*{C}=\begin{pNiceArray}{ccc:cc}
+            1 & 1 &   &   &   \\
+            & 1 & 1 &   &   \\
+            &   & 1 & 1 &   \\ \hdottedline
+            &   &   & 1 & 1 \\
+            &   &   &   & 1
+        \end{pNiceArray}=\begin{pNiceArray}{ccc:cc}
+            1 & 1 & 0 & 0 & 0 \\
+            0 & 1 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 1 & 0 \\ \hdottedline
+            0 & 0 & 0 & 1 & 1 \\
+            0 & 0 & 0 & 0 & 1
+        \end{pNiceArray}=\mqty(\vb*{C}_1&\vb*{C}_2\\\vb*{O}&\vb*{C}_3)$$
+    并且 $\vb*{A}^{-1}=\mqty(9& -2& -2 \\-2& 1& 0 \\-2& 0& 1),~\vb*{B}^{-1}=\mqty(1& -1\\0& 1)$, 那么
+    $$\vb*{X}=\mqty(\vb*{C}_2\vb*{B}^{-1}& \vb*{C}_1\vb*{A}^{-1}\\\vb*{C}_3\vb*{B}^{-1}&\vb*{O})=\begin{pNiceArray}{cc:ccc}
+            0 & 0  & 7  & -1 & -2 \\
+            0 & 0  & -4 & 1  & 1  \\
+            1 & -1 & -2 & 0  & 1  \\ \hdottedline
+            1 & 0  & 0  & 0  & 0  \\
+            0 & 1  & 0  & 0  & 0
+        \end{pNiceArray}.$$
+\end{solution}
+
+\begin{example}
+    设 4 阶矩阵 $\vb*{A}$ 的伴随矩阵 $\vb*{A}^*=\begin{pmatrix}
+            1 & 0  & 0 & 0 \\
+            0 & 1  & 0 & 0 \\
+            1 & 0  & 1 & 0 \\
+            0 & -3 & 0 & 8
+        \end{pmatrix}$, 求解矩阵方程 $\vb*{AXA}^{-1}=\vb*{XA}^{-1}+3\vb*{E}_4$, 并计算 $\vb*{X}^*\vb*{A}.$
+\end{example}
+\begin{solution}
+    同例题 \ref{ABA} 的解法, 解得 $\vb*{X}=\begin{pmatrix}
+            6 & 0 & 0 & 0  \\
+            0 & 6 & 0 & 0  \\
+            6 & 0 & 6 & 0  \\
+            0 & 3 & 0 & -1
+        \end{pmatrix}$, 由于 $$\vb*{X}^*\vb*{A}=\vb*{X}^*\dfrac{1}{|\vb*{A}|^{4-2}}\qty(\vb*{A}^*)^*=\dfrac{1}{4}\vb*{X}^*\qty(\vb*{A}^*)^*=\dfrac{1}{4}\qty(\vb*{A}^*\vb*{X})^*$$
+    \begin{flalign*}
+        \vb*{X}^*\vb*{A} & =\dfrac{1}{4}\qty(\begin{pmatrix}
+                                                     1 & 0  & 0 & 0 \\
+                                                     0 & 1  & 0 & 0 \\
+                                                     1 & 0  & 1 & 0 \\
+                                                     0 & -3 & 0 & 8
+                                                 \end{pmatrix}\begin{pmatrix}
+                                                                  6 & 0 & 0 & 0  \\
+                                                                  0 & 6 & 0 & 0  \\
+                                                                  6 & 0 & 6 & 0  \\
+                                                                  0 & 3 & 0 & -1
+                                                              \end{pmatrix})^*=\dfrac{1}{4}\begin{pNiceArray}{cc:cc}
+                                                                                           6  & 0 & 0 & 0  \\
+                                                                                           0  & 6 & 0 & 0  \\ \hdottedline
+                                                                                           12 & 0 & 6 & 0  \\
+                                                                                           0  & 6 & 0 & -8 \\
+                                                                                       \end{pNiceArray}^*            \\
+                         & =\begin{pNiceArray}{c:c}
+                                \begin{vmatrix}
+                6 & 0  \\
+                0 & -8
+            \end{vmatrix}\begin{pmatrix}
+                6 & 0 \\
+                0 & 6
+            \end{pmatrix}^* & O                            \\ \hdottedline
+                                -\begin{pmatrix}
+                6 & 0  \\
+                0 & -8
+            \end{pmatrix}^*\begin{pmatrix}
+                12 & 0 \\
+                0  & 6
+            \end{pmatrix}\begin{pmatrix}
+                6 & 0 \\
+                0 & 6
+            \end{pmatrix}^*
+                                & \begin{vmatrix}
+                6 & 0 \\
+                0 & 6
+            \end{vmatrix}\begin{pmatrix}
+                6 & 0  \\
+                0 & -8
+            \end{pmatrix}^*
+                            \end{pNiceArray}=\begin{pmatrix}
+                                                 -72 & 0   & 0   & 0  \\
+                                                 0   & -72 & 0   & 0  \\
+                                                 144 & 0   & -72 & 0  \\
+                                                 0   & -54 & 0   & 54
+                                             \end{pmatrix}.
+    \end{flalign*}
+\end{solution}
+
+\begin{example}
+    设 $4$ 阶矩阵 $\vb*{A}=\begin{pmatrix}
+            1 & 2 & 0  & 0 \\
+            1 & 3 & 0  & 0 \\
+            0 & 0 & 0  & 2 \\
+            0 & 0 & -1 & 0
+        \end{pmatrix}$, 求解 $\qty[\qty(\dfrac{1}{2}\vb*{A})^*]^{-1}\vb*{XA}^{-1}=2\vb*{AX}+12\vb*{E}_4.$
+\end{example}
+\begin{solution}
+    因为 $|\vb*{A}|=\begin{vmatrix}
+            1 & 2 \\
+            1 & 3
+        \end{vmatrix}
+        \begin{vmatrix}
+            0  & 2 \\
+            -1 & 0
+        \end{vmatrix}=2$, $\qty[\qty(\dfrac{1}{2}\vb*{A})^*]^{-1}=\qty[\qty|\dfrac{1}{2}\vb*{A}|\qty(\dfrac{1}{2}\vb*{A})^{-1}]^{-1}=8\cdot \dfrac{1}{2}\vb*{A}=4\vb*{A}$,
+    因此原方程变成 $$4\vb*{AXA}^{-1}=2\vb*{AX}+12\vb*{E}_4\Rightarrow 2\vb*{AXA}^{-1}=\vb*{AX}+6\vb*{E}_4\Rightarrow \vb*{X}=6\vb*{A}^{-1}\qty(2\vb*{A}^{-1}-\vb*{E}_4)^{-1}=6\qty(2\vb*{E}_4-\vb*{A})^{-1}$$
+    \begin{flalign*}
+        \vb*{X} & =6\qty(\begin{pmatrix}
+                             2 &   &   &   \\
+                               & 2 &   &   \\
+                               &   & 2 &   \\
+                               &   &   & 2
+                         \end{pmatrix}-\begin{pmatrix}
+                                           1 & 2 & 0  & 0 \\
+                                           1 & 3 & 0  & 0 \\
+                                           0 & 0 & 0  & 2 \\
+                                           0 & 0 & -1 & 0
+                                       \end{pmatrix})^{-1}=6\begin{pNiceArray}{cc:cc}
+                                                                1  & -2 & 0 & 0  \\
+                                                                -1 & -1 & 0 & 0  \\ \hdottedline
+                                                                0  & 0  & 2 & -2 \\
+                                                                0  & 0  & 1 & 2
+                                                            \end{pNiceArray}^{-1}                                    \\
+                & =6\begin{pNiceArray}{c:c}
+                        \begin{pmatrix}
+                1  & -2 \\
+                -1 & -1
+            \end{pmatrix}^{-1} & O                  \\ \hdottedline
+                        O                  & \begin{pmatrix}
+                2 & -2 \\
+                1 & 2
+            \end{pmatrix}^{-1}
+                    \end{pNiceArray}=6\begin{pNiceArray}{c:c}
+                                          -\dfrac{1}{3} \begin{pmatrix}
+                -1 & 2 \\
+                1  & 1
+            \end{pmatrix} & O                             \\ \hdottedline
+                                          O                             & \dfrac{1}{6} \begin{pmatrix}
+                2  & 2 \\
+                -1 & 2
+            \end{pmatrix}
+                                      \end{pNiceArray} \\
+                & =\begin{pNiceArray}{c:c}
+                       -2 \begin{pmatrix}
+                -1 & 2 \\
+                1  & 1
+            \end{pmatrix} & O                \\ \hdottedline
+                       O                  & \begin{pmatrix}
+                2  & 2 \\
+                -1 & 2
+            \end{pmatrix}
+                   \end{pNiceArray}=\begin{pmatrix}
+                                        2  & -4 & 0  & 0 \\
+                                        -2 & -2 & 0  & 0 \\
+                                        0  & 0  & 2  & 2 \\
+                                        0  & 0  & -1 & 2
+                                    \end{pmatrix}.
     \end{flalign*}
 \end{solution}

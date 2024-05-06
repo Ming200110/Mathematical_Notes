@@ -1,5 +1,12 @@
 \section{正定性与半正定性}
 
+正定矩阵是正实数概念的延伸——它定义了何为“正”的矩阵, 一种方法是全部元素为正数, 但这显然不是一个好的定义, 
+因为它完全不涉及矩阵的具体结构。因此尝试借助正实数的概念推广至矩阵的正定性。
+
+一个正实数 $\alpha$ 满足: 对任意一个矢量\footnote{当强调方向时, 采用矢量的说法} $\vb*{v}$, 矢量 $\alpha\vb*{v}$ 会和 $\vb*{v}$ 在同一方向上\footnote{仅描述新矢量在原矢量的分量方向上的投影是正的情況, 不要求两个矢量之间的夹角为零角即完全重合.}, 即内积为正 $\vb*{v}^\top\alpha\vb*{v}>0.$
+
+借助这个准则, 一个正的矩阵 $\vb*{A}$ 需要满足: 对任意一个矢量 $\vb*{v}$, $\vb*{A}v$ 和 $\vb*{v}$ 在同一方向上, 即内积为正: $\vb*{v}^\top\vb*{A}\vb*{v}>0.$
+
 \subsection{正定性}
 
 \begin{theorem}[Hurwitz 定理]
@@ -126,6 +133,44 @@
             2  & 0  & -4
         \end{vmatrix}=-80<0$$
     即 $f$ 是负定的.
+\end{solution}
+
+\begin{example}
+    判断二次型 $\displaystyle f=\sum_{i=1}^{n}x_i^2+\sum_{i=1}^{n-1}x_ix_{i+1}$ 的正定性.
+\end{example}
+\begin{solution}
+    $f$ 的矩阵为 $\vb*{A}=\mqty(
+        1&\dfrac{1}{2}&0&\cdots& 0&0\\
+        \dfrac{1}{2}& 1& \dfrac{1}{2} &\cdots &0&0 \\
+        0&\dfrac{1}{2}&1&\cdots&0&0\\
+        \vdots& \vdots&\vdots&\ddots&\vdots&\vdots \\
+        0&0&0&\cdots & 1&\dfrac{1}{2} \\
+        0&0&0&\cdots&\dfrac{1}{2}&1
+        )$, 任取 $\vb*{A}$ 的一个 $k$ 阶顺序主子式, 有
+    \begin{flalign*}
+        |\vb*{A}_k|&=\mqty|
+        1            & \dfrac{1}{2} & 0            & \cdots & 0              & 0                                                                           \\
+        \dfrac{1}{2} & 1            & \dfrac{1}{2} & \cdots & 0              & 0                                                                           \\
+        0            & \dfrac{1}{2} & 1            & \cdots & 0              & 0                                                                           \\
+        \vdots       & \vdots       & \vdots       & \ddots & \vdots         & \vdots                                                                      \\
+        0            & 0            & 0            & \cdots & 1              & \dfrac{1}{2}                                                                \\
+        0            & 0            & 0            & \cdots & \dfrac{1}{2}   & 1
+        |=\dfrac{1}{2^k} \mqty|
+        2            & 1            & 0            & \cdots & 0              & 0                                                                           \\
+        1            & 2            & 1            & \cdots & 0              & 0                                                                           \\
+        0            & 1            & 2            & \cdots & 0              & 0                                                                           \\
+        \vdots       & \vdots       & \vdots       & \ddots & \vdots         & \vdots                                                                      \\
+        0            & 0            & 0            & \cdots & 2              & 1                                                                           \\
+        0            & 0            & 0            & \cdots & 1              & 2|\xlongequal[i=1,\cdots,k-1]{r_{i+1}-\frac{i}{i+1}r_i}\dfrac{1}{2^k}\mqty|
+        2            & 1            & 0            & \cdots & 0              & 0                                                                           \\
+        0            & \dfrac{3}{2} & 1            & \cdots & 0              & 0                                                                           \\
+        0            & 0            & \dfrac{4}{3} & \cdots & 0              & 0                                                                           \\
+        \vdots       & \vdots       & \vdots       &        & \vdots         & \vdots                                                                      \\
+        0            & 0            & 0            & \cdots & \dfrac{k}{k-1} & 1                                                                           \\
+        0            & 0            & 0            & \cdots & 0              & \dfrac{k+1}{k}|\\ 
+        &= \dfrac{k+1}{k}>0,~k=1,2,\cdots, n
+    \end{flalign*}
+    所以 $\vb*{A}$ 正定, 从而二次型正定.
 \end{solution}
 
 \begin{theorem}[特征值与正定性]
