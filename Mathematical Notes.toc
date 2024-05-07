@@ -527,6 +527,7 @@
 \contentsline {subsection}{\numberline {22.3.1}无偏性}{531}{subsection.22.3.1}%
 \contentsline {subsection}{\numberline {22.3.2}有效性}{532}{subsection.22.3.2}%
 \contentsline {subsection}{\numberline {22.3.3}一致性}{532}{subsection.22.3.3}%
+\vspace \bigskipamount 
 \contentsline {chapter}{\numberline {附录 A\hspace {.3em}}积分表推导}{533}{appendix.A}%
 \contentsline {section}{\numberline {A.1}含有 $ax+b$ 的积分}{533}{section.A.1}%
 \contentsline {section}{\numberline {A.2}含有 $\sqrt {ax+b}$ 的积分}{534}{section.A.2}%

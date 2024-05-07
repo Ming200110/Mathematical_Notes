@@ -1,17 +1,16 @@
 # Fdb version 3
-["makeindex Mathematical Notes.idx"] 1715001129 "Mathematical Notes.idx" "Mathematical Notes.ind" "Mathematical Notes" 1715001738
-  "Mathematical Notes.idx" 1715001734 7092 c7bac65e7789457dec0358a2eb11260b "pdflatex"
+["makeindex Mathematical Notes.idx"] 1715049897 "Mathematical Notes.idx" "Mathematical Notes.ind" "Mathematical Notes" 1715050724
+  "Mathematical Notes.idx" 1715050721 7092 c7bac65e7789457dec0358a2eb11260b "pdflatex"
   (generated)
   "Mathematical Notes.ilg"
   "Mathematical Notes.ind"
-["pdflatex"] 1715001694 "Mathematical Notes.tex" "Mathematical Notes.pdf" "Mathematical Notes" 1715001738
+["pdflatex"] 1715050680 "Mathematical Notes.tex" "Mathematical Notes.pdf" "Mathematical Notes" 1715050724
   "Frontmatter.tex" 1714620256 173 d5fa1dfe605feb8ee2a63e038f19bb00 ""
-  "Mathematical Notes.aux" 1715001734 278493 a894bfc91e191f6baf3dda397d9bcfe0 "pdflatex"
-  "Mathematical Notes.ind" 1715001130 7000 d95054aa97fcb126f9a109e9b88bfd8f "makeindex Mathematical Notes.idx"
-  "Mathematical Notes.out" 1715001734 39878 daa43ecd1f808163fccf8d6fda3f5b4f "pdflatex"
+  "Mathematical Notes.aux" 1715050721 347064 335ef55649cf24369bdd9bd1ade75951 "pdflatex"
+  "Mathematical Notes.ind" 1715049898 7000 d95054aa97fcb126f9a109e9b88bfd8f "makeindex Mathematical Notes.idx"
   "Mathematical Notes.tex" 1714987992 2106 0dec46791597994ef109465125a90ccb ""
-  "Mathematical Notes.toc" 1715001734 46486 c4089d239eed027b31456788818c3f97 "pdflatex"
-  "appendix/appendix1.tex" 1714879680 7513 fc5bc0d9e7f288dd140eade63e3ff699 ""
+  "Mathematical Notes.toc" 1715050721 46510 b79eaddacebacb44b681b85684f45cc5 "pdflatex"
+  "appendix/appendix1.tex" 1715050634 7573 94542bc7cf80eadae04ee1d1f3e8ad87 ""
   "appendix/appendix2.tex" 1714746049 68 812d672093a73bab8e43bfa7418648e1 ""
   "c:/Windows/Fonts/msyh.ttc" 1688022991 19701556 07c864a5b15e68fa47639738197fae38 ""
   "c:/Windows/Fonts/simhei.ttf" 1651842600 9753388 6abc0fcfbaa40600f9cecca3afeb3aa7 ""
@@ -574,6 +573,8 @@
   "d:/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty" 1655898883 5049 969aec05d5f39c43f8005910498fcf90 ""
   "d:/texlive/2022/texmf-dist/tex/latex/base/makeidx.sty" 1655898883 1939 e44505a18ba4edebb8b70993e32c6350 ""
   "d:/texlive/2022/texmf-dist/tex/latex/base/ts1enc.def" 1655898883 8044 fa8875fa7360fa4a5757411aa07dae10 ""
+  "d:/texlive/2022/texmf-dist/tex/latex/bookmark/bkm-pdftex.def" 1655898134 8609 8ac7db65d9617618cf703bd16c1bd0b8 ""
+  "d:/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty" 1655898134 18237 5cbdfe9ef383a557f780a0a1f45cdb1c ""
   "d:/texlive/2022/texmf-dist/tex/latex/booktabs/booktabs.sty" 1655898135 6078 f1cb470c9199e7110a27851508ed7a5c ""
   "d:/texlive/2022/texmf-dist/tex/latex/caption/caption.sty" 1655898161 54291 b8e5c600d4aa37b48a740dd2a6c26163 ""
   "d:/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty" 1655898161 71241 d2cd3a1c5acef9cb31f945b93c0bb6e3 ""
@@ -684,7 +685,7 @@
   "d:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1655900095 4448422 15354be9acfb30b1b7485a9cb19efaa9 ""
   "d:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1655900205 2826459 413d6a765b214cfe407b3cefbf6c424d ""
   "d:/texlive/2022/texmf.cnf" 1655900078 713 e69b156964470283e0530f5060668171 ""
-  "environment.tex" 1714836693 5863 858f7b510812e9b1058b4c1cbc58024a ""
+  "environment.tex" 1715050634 5886 5f446e0357e71c72177b123cede13386 ""
   "figures/ArchimedesSpiral.pdf" 1693135969 48746 5c6d90f7692cf8c02dc83cae4642dace ""
   "figures/CardioidLine.pdf" 1693135724 44821 31f53a7e07d92b322fcf6a92e18f9842 ""
   "figures/Cycloid.pdf" 1693135364 49352 7db58f8e2097fb37dbbb316a779ecf8e ""
@@ -787,7 +788,7 @@
   "section/section5/section53.tex" 1714895459 20110 cb10226a50f571d2aacc6eaa6937c889 ""
   "section/section5/section54.tex" 1714895459 7484 3927324504106c319df69f290b6b309c ""
   "section/section5/section5Intr.tex" 1715001086 1894 143c359755f53721529928281a04d537 ""
-  "section/section6/section61.tex" 1714895459 103781 aa21da5130db95e360304447ecdd8b9c ""
+  "section/section6/section61.tex" 1715049852 103781 aa21da5130db95e360304447ecdd8b9c ""
   "section/section6/section62.tex" 1714895459 52794 bc344444e0af4880fb4821e1236e5656 ""
   "section/section6/section63.tex" 1714895459 76988 573b106ff0a23136f9b75a509589c68d ""
   "section/section6/section64.tex" 1714895459 23966 589c72c0e1855a6b3c7d54a1ce822e42 ""
@@ -808,6 +809,5 @@
   "Mathematical Notes.aux"
   "Mathematical Notes.idx"
   "Mathematical Notes.log"
-  "Mathematical Notes.out"
   "Mathematical Notes.pdf"
   "Mathematical Notes.toc"

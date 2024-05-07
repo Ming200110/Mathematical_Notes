@@ -1506,6 +1506,22 @@ INPUT d:/texlive/2022/texmf-dist/tex/latex/base/makeidx.sty
 INPUT d:/texlive/2022/texmf-dist/tex/latex/base/makeidx.sty
 INPUT d:/texlive/2022/texmf-dist/tex/latex/base/makeidx.sty
 INPUT d:/texlive/2022/texmf-dist/tex/latex/base/makeidx.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 OUTPUT Mathematical Notes.idx
 INPUT d:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex
 INPUT d:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex
@@ -1605,18 +1621,7 @@ INPUT d:/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT d:/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT d:/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 INPUT d:/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-INPUT ./Mathematical Notes.out
-INPUT Mathematical Notes.out
-INPUT ./Mathematical Notes.out
-INPUT Mathematical Notes.out
-INPUT ./Mathematical Notes.out
-INPUT Mathematical Notes.out
-INPUT ./Mathematical Notes.out
-INPUT Mathematical Notes.out
 OUTPUT Mathematical Notes.pdf
-INPUT ./Mathematical Notes.out
-INPUT ./Mathematical Notes.out
-OUTPUT Mathematical Notes.out
 INPUT ./Mathematical Notes.toc
 INPUT Mathematical Notes.toc
 INPUT Mathematical Notes.toc
@@ -3258,8 +3263,6 @@ INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl7d.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei80.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong04.tfm
 INPUT Mathematical Notes.aux
-INPUT ./Mathematical Notes.out
-INPUT ./Mathematical Notes.out
 INPUT c:/Windows/Fonts/simsun.ttc
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simkai.ttf
