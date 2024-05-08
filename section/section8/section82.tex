@@ -10,7 +10,7 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
 \subsubsection{二阶常系数线性齐次微分方程的通解}
 
 \begin{theorem}[二阶常系数线性齐次微分方程的通解结构]
-    设
+    设\index{二阶常系数线性齐次微分方程的通解结构}
     \begin{equation*}
         y^{\prime \prime}+p y^{\prime}+q y=0
         \tag{1}
@@ -21,7 +21,6 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
         \item 特征方程有一对共轭复根 $ r_{1,2}=\alpha \pm \mathrm{i} \beta $, 则方程 (1) 的通解为
               $$Y=\e^{\alpha x}\left(C_{1} \cos \beta x+\right.   \left.C_{2} \sin \beta x\right) $$
     \end{enumerate}
-    \index{二阶常系数线性齐次微分方程的通解结构}
 \end{theorem}
 
 \begin{example}[第十三届数学竞赛决赛]
@@ -44,6 +43,7 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
 \subsubsection{$n$ 阶常系数线性齐次微分方程}
 
 \begin{theorem}[$n$ 阶常系数线性齐次微分方程通解结构]
+    \index{高阶常系数线性齐次微分方程通解结构}
     设 $ n $ 阶常系数线性齐次微分方程是
     \begin{equation*}
         y^{(n)}+p_{1} y^{(n-1)}+p_{2} y^{(n-2)}+\cdots+p_{n-1} y^{\prime}+p_{n} y=0
@@ -66,36 +66,64 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
               $$y=\e^{\alpha x}\left[\left(C_{1}+C_{2} x+\cdots+C_{k} x^{k-1}\right) \cos \beta x+\left(D_{1}+D_{2} x+\cdots+D_{k} x^{k-1}\right) \sin \beta x\right]$$
               是微分方程 (2) 的解.
     \end{enumerate}
-    \index{高阶常系数线性齐次微分方程通解结构}
 \end{theorem}
 
 \subsection{常系数非齐次线性微分方程}
 
 \subsubsection{二阶常系数非齐次线性微分方程的通解结构}
 
-% \begin{theorem}
-%     一般地, 设线性无关的函数 $y_1,~y_2,~y_3$ 都是以下二阶非齐次线性微分方程的解, 则
-%     $$y''(x)+p(x)y'+q(x)y=f(x)$$
-%     \begin{enumerate}[label=(\arabic{*})]
-%         \item $y_1-y_2,~y_1-y_3,~y_2-y_3$ 都是 $y''+p(x)y'+q(x)y=0$ 的解, 
-%               且 $y_1-y_3$ 与 $y_2-y_3$ 线性无关;
-%         \item 非齐次线性微分方程的通解为 $$y=C_1(y_1-y_3)+C_2(y_2-y_3)+y_3=C_1y_1+C_2y_2+(1-C_1-C_2)y_3.$$
-%     \end{enumerate}
-% \end{theorem}
+\begin{example}
+    设 $y=\e^x(C_1\sin x+C_2\cos x)$ ($C_1,C_2$ 为任意常数) 为某二阶常系数齐次线性微分方程的通解, 求该微分方程.
+\end{example}
+\begin{solution}
+    \textbf{法一: }由二阶常系数齐次线性微分方程的通解公式, 可知特征方程的根应为 $ \lambda_{1,2}=1 \pm i $, 从而特征方程为 $ \left(\lambda-\lambda_{1}\right)\left(\lambda-\lambda_{2}\right)=(\lambda-1-i) \cdot(\lambda-1+i)=0 $, 即 $ \lambda^{2}-2 \lambda+2=0 $. 故所求微分方程为 $ y^{\prime \prime}-2 y^{\prime}+2 y=0 $.\\
+    \textbf{法二: }设所求微分方程为 $ y^{\prime \prime}+p y^{\prime}+q y=0 $, 其中 $ p, q $ 为常数. 将已知解 $ y=\mathrm{e}^{x}\left(C_{1} \sin x+C_{2} \cos x\right) $ 代人上述方程, 得
+    $$\mathrm{e}^{x} \sin x\left[p\left(C_{1}-C_{2}\right)+q C_{1}-2 C_{2}\right]+\mathrm{e}^{x} \cos x\left[p\left(C_{1}+C_{2}\right)+q C_{2}+2 C_{1}\right]=0$$
+    因为 $ \mathrm{e}^{x} \sin x $ 与 $ \mathrm{e}^{x} \cos x $ 线性无关, 所以 $$ p\left(C_{1}-C_{2}\right)+q C_{1}-2 C_{2}=0, p\left(C_{1}+\right.   \left.C_{2}\right)+q C_{2}+2 C_{1}=0 $$
+    解得 $ p=-2, q=2 $, 故所求微分方程为 $ y^{\prime \prime}-2 y^{\prime}+2 y=0 $.\\
+    \textbf{法三: }设所求微分方程为 $ y^{\prime \prime}+p y^{\prime}+q y=0 $, 其中 $ p, q $ 为常数.
+    因为 $ y=\mathrm{e}^{x}\left(C_{1} \sin x+C_{2} \cos x\right) $ 为上述方程的通解, 所以 $ y_{1}=\mathrm{e}^{x} \sin x $ 和 $ y_{2}=   \mathrm{e}^{x} \cos x $ 为 $ y^{\prime \prime}+p y^{\prime}+q y=0 $ 的特解, 代人方程, 得
+    $$\left\{\begin{array}{l}
+            p(\cos x+\sin x)+q \sin x+2 \cos x=0 \\
+            p(\cos x-\sin x)+q \cos x-2 \sin x=0
+        \end{array}\right.$$
+    改写为矩阵形式, 有 $ \mqty(\cos x+\sin x & \sin x \\ \cos x-\sin x & \cos x)\mqty(p\\ q)=\mqty(-2\cos x\\ 2\sin x) $, 而
+    $$\mqty(\cos x+\sin x & \sin x \\
+            \cos x-\sin x & \cos x)^{-1}=\mqty(\cos x        & -\sin x       \\
+                \sin x-\cos x & \cos x+\sin x)$$
+    且 $\mqty|\cos x+\sin x & \sin x \\
+            \cos x-\sin x & \cos x|=1$, 所以
+    $$\mqty(p\\ q)=\mqty(\cos x        & -\sin x       \\
+                \sin x-\cos x & \cos x+\sin x)\mqty(-2\cos x\\ 2\sin x)=\mqty(-2\\ 2)$$
+    故所求微分方程为 $ y^{\prime \prime}-2 y^{\prime}+2 y=0 .$\\
+    \textbf{法四: }由通解 $ y=\mathrm{e}^{x}\left(C_{1} \sin x+C_{2} \cos x\right) $, 求出 $ y^{\prime}, y^{\prime \prime} $:
+    $$y^{\prime}=\mathrm{e}^{x}\left[\left(C_{1}-C_{2}\right) \sin x+\left(C_{1}+C_{2}\right) \cos x\right], \quad y^{\prime \prime}=\mathrm{e}^{x}\left(-2 C_{2} \sin x+2 C_{1} \cos x\right)$$
+    消去 $ C_{1} $ 与 $ C_{2} $, 得 $ y^{\prime \prime}-2 y^{\prime}+2 y=0 $, 此即为所求微分方程.
+\end{solution}
 
-% \begin{example}
-%     已知 $y_1=x,~y_2=x+\sin x,~y_3=\e ^x+x$ 为某二阶非齐次线性微分方程的三个特解, 求该微分方程, 并求其通解.
-% \end{example}
-% \begin{solution}
-%     因为 $\dfrac{y_2-y_1}{y_3-y_1}=\dfrac{\sin x}{\e ^x}\neq C$, 所以 $y_2-y_1$ 与 $y_3-y_2$ 线性无关, 从而得所求微分方程的通解为 $y=C_1\sin x+C_2\e ^x+x$, 
-%     分别求一、二阶导数, 并解出 $C_1,~C_2$, 
-%     $$\left\{\begin{matrix}
-%             y'  & = & C_1\cos x  & + & 7C_2\e ^x & + & 1 \\
-%             y'' & = & -C_1\sin x & + & C_2\e ^x
-%         \end{matrix}\right.$$
-%     即得所求的微分方程为
-%     $$(\cos x-\sin x)y''+2\sin x\cdot y'-(\sin x+\cos x)y=2\sin x-x(\sin x+\cos x).$$
-% \end{solution}
+\begin{example}
+    已知 $y_1=x,~y_2=x+\sin x,~y_3=\e ^x+x$ 为某二阶非齐次线性微分方程的三个特解, 求该微分方程, 并求其通解.
+\end{example}
+\begin{solution}
+    因为 $\dfrac{y_2-y_1}{y_3-y_1}=\dfrac{\sin x}{\e ^x}\neq C$, 所以 $y_2-y_1$ 与 $y_3-y_2$ 线性无关, 从而得所求微分方程的通解为 $y=C_1\sin x+C_2\e ^x+x$,
+    分别求一、二阶导数, 并解出 $C_1,~C_2$,
+    $$\left\{\begin{matrix}
+            y'  & = & C_1\cos x  & + & 7C_2\e ^x & + & 1 \\
+            y'' & = & -C_1\sin x & + & C_2\e ^x
+        \end{matrix}\right.$$
+    即得所求的微分方程为
+    $$(\cos x-\sin x)y''+2\sin x\cdot y'-(\sin x+\cos x)y=2\sin x-x(\sin x+\cos x).$$
+\end{solution}
+
+\begin{theorem}
+    一般地, 设线性无关的函数 $y_1,~y_2,~y_3$ 都是以下二阶非齐次线性微分方程的解, 则
+    $$y''(x)+p(x)y'+q(x)y=f(x)$$
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $y_1-y_2,~y_1-y_3,~y_2-y_3$ 都是 $y''+p(x)y'+q(x)y=0$ 的解,
+              且 $y_1-y_3$ 与 $y_2-y_3$ 线性无关;
+        \item 非齐次线性微分方程的通解为 $$y=C_1(y_1-y_3)+C_2(y_2-y_3)+y_3=C_1y_1+C_2y_2+(1-C_1-C_2)y_3.$$
+    \end{enumerate}
+\end{theorem}
 
 % \begin{example}
 %     设二阶线性微分方程 $y''+p(x)y'+q(x)y=f(x)$ 有三个特解 $y_1=\e ^x,~y_2=\e ^x+\e ^{\frac{x}{2}},~y_3=\e ^x+\e ^{-x}$, 
@@ -148,6 +176,7 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
 \end{theorem}
 
 \begin{theorem}[算子特性]
+    \index{算子特性}
     \begin{enumerate}[label=(\arabic{*})]
         \item $F(\mathrm{D})=\mathrm{D}^m,~\dfrac{1}{F(\mathrm{D})}f^{(m)}(x)=f(x)$;
         \item $F(\mathrm{D})=\mathrm{D}-k$ 时, $\dfrac{1}{F(\mathrm{D})}\e^{bx}=\dfrac{e^{bx}}{b-k},~b\neq k$;
@@ -157,7 +186,6 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
         \item $\dfrac{1}{F(\mathrm{D})}\qty[f_1(x)+f_2(x)]=\dfrac{1}{F(\mathrm{D})}f_1(x)+\dfrac{1}{F(\mathrm{D})}f_2(x)$;
         \item $F(\mathrm{D})=\mathrm{D}-k,~\dfrac{1}{F(\mathrm{D})}x^{\alpha}=\qty(-\displaystyle\sum_{n=0}^{\alpha}\dfrac{\mathrm{D}^n}{k^{n+1}})x^{\alpha}$.
     \end{enumerate}
-    \index{算子特性}
 \end{theorem}
 
 \begin{example}[2010 数学 (一)]

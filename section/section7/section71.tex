@@ -114,21 +114,66 @@
 
 \subsection{常数项级数的敛散性及其判别法}
 
-在高等数学中, 常数项级数是指由实数列 $\qty{a_n}$ 所构成的表达式:
-$$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
-其中 $a_n$ 称为级数的一般项.
-
-\begin{definition}[级数的敛散性]
-    令 $S_n=a_1+a_2+\cdots+a_n$, 则称 $S_n$ 为级数的部分和, 而称 $\qty{S_n}$ 为级数的部分和数列.
-    若 $S_n\to S(n\to\infty)$, 则称级数收敛, 并称其收敛于和 $S$, 而称 $r_n=S-S_n$ 为级数的余项,
-    否则就称级数发散.
+\begin{definition}[常数项级数]
+    设有数列 $ \left\{u_{n}\right\}: u_{1}, u_{2}, \cdots, u_{n}, \cdots $, 将其各项依次累加所得的式子 $ u_{1}+u_{2}+\cdots+u_{n}+\cdots$ 称为 \textit{(常数项) 无穷级数}, 简称 \textit{(常数项) 级数}, 记作 $\displaystyle \sum_{n=1}^{\infty} u_{n} $, 即 $\displaystyle \sum_{n=1}^{\infty} u_{n}=u_{1}+u_{2}+\cdots+   u_{n}+\cdots .$
+    \index{常数项级数}
 \end{definition}
 
-研究一个级数是收敛还是发散, 称为级数的审敛.
-\begin{theorem}[级数收敛的必要条件]
-    若级数 $\displaystyle\sum_{n=1}^{\infty}a_n$ 收敛, 则 $\displaystyle\lim_{n\to\infty}a_n=0$.
-    \index{级数收敛的必要条件}
-\end{theorem}
+\begin{definition}[常数项级数收敛]
+    设给定常数项级数
+    \begin{equation}
+        \sum_{n=1}^{\infty} u_{n}=u_{1}+u_{2}+\cdots+u_{n}+\cdots
+        \tag{1}
+    \end{equation}
+    称 $\displaystyle S_{n}=\sum_{i=1}^{n} u_{i}=u_{1}+u_{2}+\cdots+u_{n} $ 为级数 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 的前 $ n $ 项部分和, 若 $\displaystyle \lim _{n \rightarrow \infty} S_{n}=S $ (有限值), 则称级数 (1) \textit{收敛}; 若 $\displaystyle \lim _{n \rightarrow \infty} S_{n} $ 不存在, 则称级数 (1) \textit{发散}.
+    \index{常数项级数收敛}
+\end{definition}
+
+常数项级数的基本性质:
+\begin{enumerate}[label=(\arabic{*})]
+    \item 级数 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 与 $\displaystyle \sum_{n=1}^{\infty} k u_{n} $ 有相同的敛散性 ($k $ 是不为零的常数).
+    \item 若级数 $\displaystyle \sum_{n=1}^{\infty} u_{n}, \sum_{n=1}^{\infty} v_{n} $ 均收敛, 则级数 $\displaystyle \sum_{n=1}^{\infty}\left(u_{n} \pm v_{n}\right) $ 亦收敛, 且有
+          $$\sum_{n=1}^{\infty}\left(u_{n} \pm v_{n}\right)=\sum_{n=1}^{\infty} u_{n} \pm \sum_{n=1}^{\infty} v_{n} .$$
+    \item 在级数中去掉或添加有限项, 不影响级数的敛散性 (但收敛时, 级数和一般会改变).
+    \item 收敛级数任意加括号后所成的级数仍收敛. 如果正项级数加括号后所成的级数收敛, 则原级数收敛.
+    \item 级数收敛的必要条件: 若 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 收敛, 则 $\displaystyle \lim _{n \rightarrow \infty} u_{n}=0 $.
+\end{enumerate}
+
+\begin{example}
+    级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^{1+\frac{1}{n}}}$ 的敛散性的下列结论中, 正确的是
+    \begin{tasks}(2)
+        \task 因 $1+\dfrac{1}{n}>1$ 故级数收敛
+        \task 因 $\displaystyle\lim_{n\to\infty}\dfrac{1}{n^{1+\frac{1}{n}}}=0$ 故级数收敛
+        \task 因 $\dfrac{1}{n^{1+\frac{1}{n}}}<\dfrac{1}{n}$ 故级数收敛
+        \task 级数发散
+    \end{tasks}
+\end{example}
+\begin{solution}
+    p-级数 中的 $p$ 表示为常数, 与 $n$ 无关, 所以选项 A 错误, 事实上, $\displaystyle \lim_{n\to\infty}\dfrac{\dfrac{1}{n^{1+\frac{1}{n}}}}{\dfrac{1}{n}}=\lim_{n\to\infty}\dfrac{1}{n^{\frac{1}{n}}}=1$, 其中 $\displaystyle\lim_{n\to\infty}n^{\frac{1}{n}}=1$ (重要极限),
+    则原级数的敛散性与 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n}$ 同敛散, 又 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n}$ 发散, 故级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^{1+\frac{1}{n}}}$ 发散, 选 D.
+\end{solution}
+
+% 此外, 级数还有 4 个基本性质:
+% \begin{enumerate}[label=(\arabic{*})]
+%     \item 去掉级数前面有限项或者在级数前面添加有限项, 不影响级数的敛散性;
+%     \item 对于任意非零常数 $c$, 级数 $\displaystyle\sum_{n=1}^{\infty}a_n\text{ 与 }\sum_{n=1}^{\infty}ca_n$ 具有相同的敛散性;
+%     \item 若级数 $\displaystyle\sum_{n=1}^{\infty}a_n\text{ 与 }\sum_{n=1}^{\infty}b_n$ 都收敛, 它们的和分别为 $s\text{ 与 }t$, 则 $\displaystyle\sum_{n=1}^{\infty}(a_n\pm b_n)$ 收敛且和为 $s\pm t$;
+%     \item 收敛级数任意加括号后所成的级数仍然收敛, 且其和不变.
+% \end{enumerate}
+
+\begin{example}
+    判别级数的敛散性 $\displaystyle\sum_{n=1}^{\infty}\ln\qty(1+2^n)\ln\dfrac{n+1}{n}.$
+\end{example}
+\begin{solution}
+    将所给级数的一般项作适当变形, 有
+    \begin{flalign*}
+        a_n & =\ln\qty[2^n\qty(\dfrac{1}{2^n}+1)]\ln\qty(1+\dfrac{1}{n})=\qty[n\ln 2+\ln\qty(\dfrac{1}{2^n}+1)]\ln\qty(1+\dfrac{1}{n}) \\
+            & =\ln 2\ln\qty(1+\dfrac{1}{n})^n+\ln\qty(\dfrac{1}{2^n}+1)\ln\qty(1+\dfrac{1}{n})
+    \end{flalign*}
+    可见, $\displaystyle\lim_{n\to\infty}a_n=\ln 2$, 即 $\displaystyle a_n\lim_{n\to\infty}\not\to0$, 不满足级数收敛的必要条件, 故级数发散.
+\end{solution}
+
+\subsection{正项级数的审敛法}
 
 为了迅速而又准确地判断一个级数的敛散性, 掌握以下几个已知其敛散性的级数往往是有益的.
 
@@ -146,42 +191,6 @@ $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
     若有 p-级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^p}$, 那么当 $p>1$ 时收敛, 当 $p\leqslant 1$ 时发散.
     \index{p-级数}
 \end{definition}
-
-\begin{example}
-    级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^{1+\frac{1}{n}}}$ 的敛散性的下列结论中, 正确的是
-    \begin{tasks}(2)
-        \task 因 $1+\dfrac{1}{n}>1$ 故级数收敛
-        \task 因 $\displaystyle\lim_{n\to\infty}\dfrac{1}{n^{1+\frac{1}{n}}}=0$ 故级数收敛
-        \task 因 $\dfrac{1}{n^{1+\frac{1}{n}}}<\dfrac{1}{n}$ 故级数收敛
-        \task 级数发散
-    \end{tasks}
-\end{example}
-\begin{solution}
-    p-级数 中的 $p$ 表示为常数, 与 $n$ 无关, 所以选项 A 错误, 事实上, $\displaystyle \lim_{n\to\infty}\dfrac{\dfrac{1}{n^{1+\frac{1}{n}}}}{\dfrac{1}{n}}=\lim_{n\to\infty}\dfrac{1}{n^{\frac{1}{n}}}=1$, 其中 $\displaystyle\lim_{n\to\infty}n^{\frac{1}{n}}=1$ (重要极限),
-    则原级数的敛散性与 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n}$ 同敛散, 又 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n}$ 发散, 故级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{1}{n^{1+\frac{1}{n}}}$ 发散, 选 D.
-\end{solution}
-
-此外, 级数还有 4 个基本性质:
-\begin{enumerate}[label=(\arabic{*})]
-    \item 去掉级数前面有限项或者在级数前面添加有限项, 不影响级数的敛散性;
-    \item 对于任意非零常数 $c$, 级数 $\displaystyle\sum_{n=1}^{\infty}a_n\text{ 与 }\sum_{n=1}^{\infty}ca_n$ 具有相同的敛散性;
-    \item 若级数 $\displaystyle\sum_{n=1}^{\infty}a_n\text{ 与 }\sum_{n=1}^{\infty}b_n$ 都收敛, 它们的和分别为 $s\text{ 与 }t$, 则 $\displaystyle\sum_{n=1}^{\infty}(a_n\pm b_n)$ 收敛且和为 $s\pm t$;
-    \item 收敛级数任意加括号后所成的级数仍然收敛, 且其和不变.
-\end{enumerate}
-
-\begin{example}
-    判别级数的敛散性 $\displaystyle\sum_{n=1}^{\infty}\ln\qty(1+2^n)\ln\dfrac{n+1}{n}.$
-\end{example}
-\begin{solution}
-    将所给级数的一般项作适当变形, 有
-    \begin{flalign*}
-        a_n & =\ln\qty[2^n\qty(\dfrac{1}{2^n}+1)]\ln\qty(1+\dfrac{1}{n})=\qty[n\ln 2+\ln\qty(\dfrac{1}{2^n}+1)]\ln\qty(1+\dfrac{1}{n}) \\
-            & =\ln 2\ln\qty(1+\dfrac{1}{n})^n+\ln\qty(\dfrac{1}{2^n}+1)\ln\qty(1+\dfrac{1}{n})
-    \end{flalign*}
-    可见, $\displaystyle\lim_{n\to\infty}a_n=\ln 2$, 即 $\displaystyle\lim_{n\to\infty}\not\to0$, 不满足级数收敛的必要条件, 故级数发散.
-\end{solution}
-
-\subsection{正项级数的审敛法}
 
 \begin{theorem}[正项级数收敛的充要条件]
     正项级数 $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 收敛的充要条件是其部分和数列 $ \left\{s_{n}\right\} $ 有上界.
@@ -242,6 +251,102 @@ $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
     设 $ f(x) $ 为 $ [1,+\infty) $ 上的非负递减函数, 则正项级数 $\displaystyle  \sum_{n=1}^{\infty} f(n) $ 与反常积分 $\displaystyle \int_{1}^{+\infty} f(x) \dd x $ 同时收敛或同时发散.
     \index{积分判别法}
 \end{theorem}
+
+\begin{example}
+    判别级数 $\displaystyle \sum_{n=1}^{\infty} \frac{7^{n}}{8^{n}-5^{n}} $ 的敛散性.
+\end{example}
+\begin{solution}
+    \textbf{法一: }利用比值判别法, 记 $\displaystyle u_{n}=\frac{7^{n}}{8^{n}-5^{n}} $, 则 $$\displaystyle \lim _{n \rightarrow \infty} \frac{u_{n+1}}{u_{n}}=\lim _{n \rightarrow \infty} \dfrac{7^{n+1}}{8^{n+1}-5^{n+1}} \cdot \dfrac{8^{n}-5^{n}}{7^{n}}=7 \lim _{n \rightarrow \infty} \frac{1-\left(\dfrac{5}{8}\right)^{n}}{8-5\left(\dfrac{5}{8}\right)^{n}}=\frac{7}{8}<1 $$
+    故由比值判别法知原级数收敛.\\
+    \textbf{法二: }利用根值判别法, 记 $\displaystyle u_{n}=\frac{7^{n}}{8^{n}-5^{n}} $, 则
+    $$\lim _{n \rightarrow \infty} \sqrt[n]{u_{n}}=\lim _{n \rightarrow \infty} \sqrt[n]{\frac{7^{n}}{8^{n}-5^{n}}}=\frac{7}{8} \lim _{n \rightarrow \infty} \frac{1}{\sqrt{1-\left(\dfrac{5}{8}\right)^{n}}}=\frac{7}{8}<1$$
+    故由根值判别法知原级数收敛.\\
+    \textbf{法三: }利用比较判别法的极限形式, 记 $\displaystyle u_{n}=\frac{7^{n}}{8^{n}-5^{n}} $, 则 $\displaystyle u_{n} \sim \frac{7^{n}}{8^{n}}=\left(\frac{7}{8}\right)^{n}(n \rightarrow \infty) $, 而 $\displaystyle \sum_{n=1}^{\infty}\left(\frac{7}{8}\right)^{n} $ 收敛, 故由比较判别法的极限形式知原级数收敛.
+\end{solution}
+
+% \begin{example}
+%     判断级数 $\displaystyle \sum_{n=1}^\infty\dfrac{1}{\sqrt{n(n+1)}\qty(\sqrt{n+1}+\sqrt{n})}$ 的敛散性.
+% \end{example}
+% \begin{solution}
+%     记 $u_n=\dfrac{1}{\sqrt{n(n+1)}\qty(\sqrt{n+1}+\sqrt{n})}$, 则有 
+%     $$\frac{1}{\sqrt{n(n+1)}\qty(\sqrt{n+1}+\sqrt{n})}=\frac{1}{\sqrt{n(n+1)}} \cdot \frac{1}{\sqrt{n+1}+\sqrt{n}}=\frac{\sqrt{n+1}-\sqrt{n}}{\sqrt{n(n+1)}}=\frac{1}{\sqrt{n}}-\frac{1}{\sqrt{n+1}}$$
+%     于是通项的部分和 $$S_{n}=\sum_{k=1}^{n}u_{k}=\sum_{k=1}^{n}\qty(\frac{1}{\sqrt{k}}-\frac{1}{\sqrt{k+1}})=1-\frac{1}{\sqrt{n+1}}\rightarrow1~(n\rightarrow\infty)$$
+%     故原级数收敛.
+% \end{solution}
+
+\begin{example}
+    判别级数 $\displaystyle \sum_{n=1}^{\infty}\qty(\sqrt{n+2}-2 \sqrt{n+1}+\sqrt{n}) $ 的敛散性.
+\end{example}
+\begin{solution}
+    \textbf{法一: }利用级数敛散的定义, 分别记 $ u_{n}, S_{n} $ 为级数 $ \displaystyle\sum_{n=1}^{\infty}\qty(\sqrt{n+2}-2 \sqrt{n+1}+\sqrt{n}) $ 的通项和部分和, 则
+    $$u_{n}=\sqrt{n+2}-2 \sqrt{n+1}+\sqrt{n}=\qty(\sqrt{n+2}-\sqrt{n+1})-\qty(\sqrt{n+1}-\sqrt{n}) $$
+    于是
+    \begin{flalign*}
+        S_{n} & =\sum_{k=1}^{n} u_{k}=\sum_{k=1}^{n}\qty[\qty(\sqrt{k+2}-\sqrt{k+1})-\qty(\sqrt{k+1}-\sqrt{k})]=\sqrt{n+2}-\sqrt{n+1}-\sqrt{2}+1 \\
+              & =\frac{1}{\sqrt{n+2}+\sqrt{n+1}}-\sqrt{2}+1 \rightarrow-\sqrt{2}+1 \quad(n \rightarrow \infty)
+    \end{flalign*}
+    故原级数收敛.\\
+    \textbf{法二: }令 $ f(x)=\sqrt{x}, u_{n} $ 为原级数的通项, 将 $ f(x) $ 分别在 $ [n, n+1] $ 和 $ [n+1, n+2] $ 上用 Lagrange 中值定理, 有 $$\sqrt{n+1}-\sqrt{n}=\frac{1}{2 \sqrt{\xi_{1}}}, \quad \sqrt{n+2}-\sqrt{n+1}=\frac{1}{2 \sqrt{\xi_{2}}}$$
+    其中 $ n<\xi_{1}<n+1, n+1<\xi_{2}<n+2 $, 于是
+    \begin{flalign*}
+        0<-u_{n} & =\qty(\sqrt{n+1}-\sqrt{n})-\qty(\sqrt{n+2}-\sqrt{n+1})=\frac{1}{2 \sqrt{\xi_{1}}}-\frac{1}{2 \sqrt{\xi_{2}}}=\frac{\sqrt{\xi_{2}}-\sqrt{\xi_{1}}}{2 \sqrt{\xi_{1}} \sqrt{\xi_{2}}}                                               \\
+                 & =\frac{1}{2} \cdot \frac{\xi_{2}-\xi_{1}}{\sqrt{\xi_{1}} \sqrt{\xi_{2}}\left(\sqrt{\xi_{1}}+\sqrt{\xi_{2}}\right)}<\frac{2}{2 \xi_{1} \cdot 2 \sqrt{\xi_{1}}}=\frac{1}{2 \xi_{1}{ }^{\frac{3}{2}}}<\frac{1}{2 n^{\frac{3}{2}}} .
+    \end{flalign*}
+    又 $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n^{\frac{3}{2}}} $ 收敛, 故由比较判别法知级数 $\displaystyle \sum_{n=1}^{\infty}\left(-u_{n}\right) $ 收敛, 从而原级数 $\displaystyle \sum_{k=1}^{n} u_{n} $ 收敛.\\
+    \textbf{法三: }利用比较判别法的极限形式, 记 $ u_{n} $ 为原级数的通项, 则
+    \begin{flalign*}
+        u_{n} & =\sqrt{n+2}-2 \sqrt{n+1}+\sqrt{n}=\qty(\sqrt{n+2}-\sqrt{n+1})-(\sqrt{n+1}-\sqrt{n})                                                                             \\
+              & =\frac{1}{\sqrt{n+2}+\sqrt{n+1}}-\frac{1}{\sqrt{n+1}+\sqrt{n}}=\frac{\sqrt{n}-\sqrt{n+2}}{\qty(\sqrt{n+2}+\sqrt{n+1}) \cdot\qty(\sqrt{n+1}+\sqrt{n})}           \\
+              & =-\frac{2}{\qty(\sqrt{n+2}+\sqrt{n+1}) \cdot\qty(\sqrt{n+1}+\sqrt{n})\qty(\sqrt{n+2}+\sqrt{n})} \sim-\frac{1}{4\qty(\sqrt{n})^{3}} \quad(n \rightarrow \infty),
+    \end{flalign*}
+    所以 $ 0<-u_{n} \sim \frac{1}{4 n^{\frac{3}{2}}} $, 又 $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n^{\frac{3}{2}}} $ 收敛, 故由比较判别法的极限形式知, 级数 $\displaystyle \sum_{n=1}^{\infty}\left(-u_{n}\right)$ 收敛, 从而原级数 $\displaystyle \sum_{k=1}^{n} u_{n} $ 收敛.
+\end{solution}
+
+\begin{example}
+    判别级数 $\displaystyle \sum_{n=1}^{\infty} \dfrac{n \cos ^2 \dfrac{n \pi}{2}}{2^n}$ 的敛散性.
+\end{example}
+\begin{solution}
+    \textbf{法一: }因为 $0 \leqslant \dfrac{n \cos ^2 \dfrac{n \pi}{2}}{2^n}<\dfrac{n}{2^n}$, 所以转而考虑级数 $\displaystyle \sum_{n=1}^{\infty} \dfrac{n}{2^n}$ 的收敛珄, 记 $u_n=\dfrac{n}{2^n}$, 则
+    $$\lim _{n \rightarrow \infty} \dfrac{u_{n+1}}{u_n}=\lim _{n \rightarrow \infty} \dfrac{n+1}{2^{n+1}} \cdot \dfrac{2^n}{n}=\dfrac{1}{2}<1$$
+    于是由比值判别法知级数 $\displaystyle \sum_{n=1}^{\infty} \dfrac{n}{2^n}$ 收敛, 从而由比较判别法知级数 $\displaystyle \sum_{n=1}^{\infty} \dfrac{n \cdot \cos ^2 \dfrac{n \pi}{2}}{2^n}$ 收敛.\\
+    \textbf{法二: }同法一, 先考虑级数 $\displaystyle \sum_{n=1}^{\infty} \dfrac{n}{2^n}$ 的敛散性, 因为
+    $$\lim _{n \rightarrow \infty} \sqrt[n]{u_n}=\lim _{n \rightarrow \infty} \sqrt[n]{\dfrac{n}{2^n}}=\lim _{n \rightarrow \infty} \dfrac{\sqrt[n]{n}}{2}=\dfrac{1}{2}<1$$
+    所以由根值判别法知级数 $\displaystyle \sum_{n=1}^{\infty} \dfrac{n}{2^2}$ 收敛, 进而由比较判别法知级数 $\displaystyle \sum_{n=1}^{\infty} \dfrac{n \cdot \cos ^2 \dfrac{n \pi}{2}}{2^n}$ 收敛.\\
+    \textbf{法三: }因为 $\cos ^2 \dfrac{n \pi}{2}=\dfrac{1+\cos n \pi}{2}=\dfrac{1+(-1)^n}{2}$, 所以
+    $$
+        \lim _{n \rightarrow \infty} \dfrac{n \cos ^2 \dfrac{n \pi}{2}}{2^n}=\sum_{n=1}^{\infty} \dfrac{n}{2^n} \cdot \dfrac{1+(-1)^n}{2}=\sum_{k=1}^{\infty} \dfrac{2 k}{2^{2 k}} \text {. }
+    $$
+    记 $u_k=\dfrac{2 k}{2^{2 k}}$, 则 $\displaystyle \lim _{k \rightarrow \infty} \sqrt[k]{u_k}=\lim _{k \rightarrow \infty} \sqrt[k]{\dfrac{2 k}{2^{2 k}}}=\lim _{k \rightarrow \infty} \dfrac{\sqrt[k]{2 k}}{4}=\dfrac{1}{4}<1$, 故级数 $\displaystyle \sum_{k=1}^{\infty} \dfrac{2 k}{2^{2 k}}$ 收敛, 从而 $\displaystyle \sum_{n=1}^\infty \dfrac{n\cos^2\dfrac{n\pi}{2}}{2^n}$ 收敛.
+\end{solution}
+
+\begin{example}
+    判别级数 $\displaystyle  \sum_{n=1}^{\infty} \ln \left(1+\frac{1}{n}\right) $ 的敛散性.
+\end{example}
+\begin{solution}
+    \textbf{法一: }因为 $\displaystyle  \lim _{x \rightarrow 0} \dfrac{\ln (1+x)}{x}=1 $, 所以 $\displaystyle  \lim _{n \rightarrow \infty} \dfrac{\ln \left(1+\dfrac{1}{n}\right)}{\dfrac{1}{n}}=1 $, 而级数 $\displaystyle  \sum_{n=1}^{\infty} \dfrac{1}{n} $ 发散, 故由比较判别法的极限形式知, 级数 $\displaystyle  \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.\\ 
+    \textbf{法二: }利用微分中值定理, 因为 $ \ln x $ 在 $ [1,+\infty) $ 上满足 Lagrange 定理的条件, 所以由 Lagrange 中值定理知, 存在 $ \xi_{n} \in(n, n+1)(n \geqslant 1) $, 有 $ \ln \left(1+\dfrac{1}{n}\right)=\ln (n+1)-\ln n=\dfrac{1}{\xi_{n}} $, 从而有 $ \dfrac{1}{n+1}<   \ln \left(1+\dfrac{1}{n}\right)<\dfrac{1}{n} $, 又级数 $\displaystyle  \sum_{n=1}^{\infty} \dfrac{1}{n+1} $ 发散, 故由比较判别法知, 原级数 $\displaystyle  \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.\\ 
+    \textbf{法三: }由 Taylor 公式, 有 $ \ln \left(1+\dfrac{1}{n}\right)=\dfrac{1}{n}-\dfrac{1}{2 n^{2}}+o\left(\dfrac{1}{n^{2}}\right) $, 
+    又 $ \dfrac{1}{2 n^{2}}-o\left(\dfrac{1}{n^{2}}\right) \sim \dfrac{1}{2 n^{2}}(n \rightarrow \infty) $, 所以 $ \displaystyle \sum_{n=1}^{\infty}\left(\dfrac{1}{2 n^{2}}-o\left(\dfrac{1}{n^{2}}\right)\right) $ 收敛. 而级数 $ \displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n} $ 发散, 故由级数的性质, 得原级数 $ \displaystyle \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.\\ 
+    \textbf{法四: }利用级数敛散的定义, 记原级数的部分和为 $\displaystyle  S_{n}=\sum_{k=1}^{n} \ln \left(1+\dfrac{1}{k}\right) $, 则
+    $$S_{n}=\sum_{k=1}^{n}\left[\ln \left(1+\dfrac{1}{k}\right)-\ln k\right]=\ln (1+n) \rightarrow+\infty \quad(n \rightarrow \infty)$$
+    故级数 $\displaystyle  \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.\\ 
+    \textbf{法五: }利用广义积分与级数的联系
+    $$ \int_{1}^{+\infty} \dfrac{1}{x} \dd x=\sum_{n=1}^{\infty} \int_{n}^{n+1} \dfrac{1}{x} \dd x=\sum_{n=1}^{\infty}[\ln (n+1)-\ln n]=\sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $$
+    因为 $\displaystyle  \int_{1}^{+\infty} \dfrac{1}{x} \dd x=\lim _{b \rightarrow+\infty} \int_{1}^{b} \dfrac{1}{x} \dd x=\lim _{b \rightarrow+\infty} \ln b=+\infty $, 所以级数 $\displaystyle  \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.
+\end{solution}
+
+\begin{example}
+    设级数 $\displaystyle \sum_{n=1}^{\infty}\dfrac{a_n}{n}$ 收敛, 证明 $\displaystyle \lim_{n \to \infty}\dfrac{a_1+a_2+\cdots+a_n}{n}=0.$
+\end{example}
+\begin{proof}[{\songti \textbf{证}}]
+    记 $\displaystyle S_n=\sum_{k=1}^{n}\dfrac{a_k}{k},~S_0=0,~S=\sum_{n=1}^{\infty}\dfrac{a_n}{n}$, 则 $S_n-S_{n-1}=\dfrac{a_n}{n}$, 且 $$\lim_{n \to \infty}S_n=S\Rightarrow S_n=S+\varepsilon _n,~(n\geqslant 1,~\varepsilon_n\to 0,~n\to \infty )$$
+    令 $b_n=\dfrac{a_1+a_2+\cdots+a_n}{n}$, 则 $\forall n\in \mathbb{N}$, 有
+    \begin{flalign*}
+        b_n&=\dfrac{S_1+(S_2-S_1)+\cdots+(S_n-s_{n-1})}{n}=\dfrac{\displaystyle \sum_{k=1}^{n}k(S_k-S_{k-1})}{n}=\dfrac{\displaystyle S+\varepsilon_1+\sum_{k=2}^{n}k(\varepsilon_k-\varepsilon_{k-1})}{n}\\ 
+        &=\dfrac{S}{n}+\dfrac{\varepsilon_1}{n}+\dfrac{1}{n}\sum_{k=2}^{n}k(\varepsilon_k-\varepsilon_{k-1})=\dfrac{S}{n}+\varepsilon_n-\dfrac{1}{n}\sum_{k=1}^{n-1}\varepsilon_k
+    \end{flalign*}
+    而因为 $\varepsilon_k \to 0(k\to \infty)$, 所以 $\displaystyle \lim_{n \to \infty}\dfrac{1}{n}\sum_{k=1}^{n-1}\varepsilon_k=\lim_{n \to \infty}\dfrac{\displaystyle \sum_{k=1}^{n-1}}{n-1}\cdot\dfrac{n-1}{n}=0$, 故 $\displaystyle \lim_{n \to \infty}b_n=0.$
+\end{proof}
 
 \subsection{交错级数}
 
@@ -304,16 +409,48 @@ $$a_1+a_2+\cdots+a_n+\cdots=\sum_{n=1}^{\infty}a_n$$
 
 \begin{theorem}
     设 $\displaystyle\sum_{n=1}^{\infty}u_n$ 是任意项级数, 其中 $\sum$ 的上标都是 $\infty$, 下标并非总是 $1$,
-    \begin{enumerate}[label=(\arabic{*})]
-        \item 若 $\displaystyle \sum_{n=1}^{\infty}|u_n|$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛;
-        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 发散, 则 $\displaystyle\sum_{n=1}^{\infty}|u_n|$ 发散;
-        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}|u_n|$ 不一定收敛;
-        \item 若 $\displaystyle\sum_{n=1}^{\infty}u^2_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}\dfrac{u_n}{n}$ 绝对收敛;
-        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u^2_n$ 不一定收敛;
-        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u_{2n},~\displaystyle\sum_{n=1}^{\infty}u_{2n-1}$ 不一定收敛;
-        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}(u_{2n-1}+u_{2n})$ 收敛;
-        \item 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}(u_{n}\pm u_{n+1})$ 收敛.
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l l}
+            (\rownumber{}) 若 $\displaystyle \sum_{n=1}^{\infty}|u_n|$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛. & (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 发散, 则 $\displaystyle\sum_{n=1}^{\infty}|u_n|$ 发散. \\ 
+            (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}|u_n|$ 不一定收敛. & (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u^2_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}\dfrac{u_n}{n}$ 绝对收敛.\\ 
+            (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u^2_n$ 不一定收敛. & (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u_{2n}$ 不一定收敛. \\ 
+            (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}(u_{2n-1}+u_{2n})$ 收敛. & (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}(u_{n}\pm u_{n+1})$ 收敛.
+        \end{tabular}
+    \end{table}
+\end{theorem}
+
+\subsection{其他判别法}
+
+\begin{theorem}[Kummer 判别法]\index{Kummer 判别法}
+    设 $a_n>0,~b_n>0~(n=1,2, \cdots )$\begin{enumerate}[label=(\arabic{*})]
+        \item 若存在常数 $\alpha>0$, 使得 $\dfrac{b_n}{b_{n+1}}a_n-a_{n+1}\geqslant \alpha~(n=1,2, \cdots )$, 则级数 $\displaystyle \sum_{n=1}^{\infty}b_n$ 收敛; 
+        \item 若 $\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{a_n}$ 发散, 且 $\dfrac{b_n}{b_{n+1}}a_n-a_{n+1}\leqslant 0~(n=1,2, \cdots )$, 则级数 $\displaystyle \sum_{n=1}^{\infty}b_n$ 发散.
     \end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Raabe 判别法]\index{Raabe 判别法}
+    设 $a_n>0,~n=1,2, \cdots $\begin{enumerate}[label=(\arabic{*})]
+        \item 若存在 $r>1$, 使得当 $n>N$ 时, 有 $n\qty(\dfrac{a_n}{a_{n+1}}-1)\geqslant r$, 则 级数 $\displaystyle \sum_{n=1}^{\infty}a_n$ 收敛; 
+        \item 若对充分大的 $n$ 都有 $n\qty(\dfrac{a_n}{a_{n+1}}-1)\leqslant 1$, 则级数 $\displaystyle \sum_{n=1}^{\infty}a_n$ 发散.
+    \end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Raabe 判别法的极限形式]\index{Raabe 判别法的极限形式}
+    设 $a_n>0,~n=1,2, \cdots $, 且 $$\dfrac{a_n}{a_{n+1}}=1+\dfrac{l}{n}+o\qty(\dfrac{1}{n}) ~(n\to \infty)$$, 则当 $l>1$ 时级数 $\displaystyle \sum_{n=1}^{\infty} a_n$ 收敛; 当 $l<1$ 时, $\displaystyle \sum_{n=1}^{\infty} a_n$ 发散.
+\end{theorem}
+
+\begin{theorem}[Gauss 判别法]\index{Gauss 判别法}
+    设 $a_n>0,~n=1,2, \cdots $, 且 $$
+    \dfrac{a_n}{a_{n+1}}=1+\dfrac{1}{n}+\dfrac{\beta}{n\ln n}+o\qty(\dfrac{1}{n\ln n})~(n\to \infty)
+    $$
+    则当 $\beta>1$ 时, 级数 $\displaystyle \sum_{n=1}^{\infty} a_n$ 收敛; 当 $\beta<1$ 时, 级数 $\displaystyle \sum_{n=1}^{\infty} a_n$ 发散.
+\end{theorem}
+
+\begin{theorem}[Frink 判别法]\index{Frink 判别法}
+    设 $\displaystyle \sum_{n=1}^{\infty} a_n$ 为正项级数, $\displaystyle \lim_{n \to \infty}\qty(\dfrac{a_n}{a_{n+1}})^{n}=\rho$,
+    则当 $\rho<\dfrac{1}{\e}$ 时, 级数 $\displaystyle \sum_{n=1}^{\infty} a_n$ 收敛; 当 $\rho>\dfrac{1}{\e}$ 时, 级数 $\displaystyle \sum_{n=1}^{\infty} a_n$ 发散.
 \end{theorem}
 
 % \subsubsection{Cauchy 准则及应用}

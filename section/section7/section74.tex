@@ -37,7 +37,7 @@ Fourier 级数是函数项级数的一种特殊形式. 它是研究和表示周�
     $$f(x) \sim \frac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n} \cos n x+b_{n} \sin n x\right)$$
     \begin{enumerate}[label=(\arabic{*})]
         \item 当 $ f(x) $ 为奇函数时
-              $$a_{0}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \mathrm{d} x=0,~ a_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos n x \dd  x=0$$
+              $$a_{0}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \dd  x=0,~ a_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos n x \dd  x=0$$
               此时 $ f(x) $ 的 Fourier 级数表达式为 $\displaystyle \sum_{n=1}^{\infty} b_{n} \sin n x $ 仅含正弦项, 称为正弦级数;
         \item 当 $ f(x) $ 为偶函数时
               $$b_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin n x \dd  x=0$$
@@ -51,7 +51,7 @@ Fourier 级数是函数项级数的一种特殊形式. 它是研究和表示周�
     $$f(x) \sim \frac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n} \cos \frac{n \pi}{l} x+b_{n} \sin \frac{n \pi}{l} x\right) $$
     其中 Fourier 系数 $ a_{0},~ a_{n},~ b_{n}~~(n=1,2,3, \cdots) $ 取值为:
     \begin{flalign*}
-        a_{0} & =\frac{1}{l} \int_{-l}^{l} f(x) \mathrm{d} x,~a_{n}=\frac{1}{l} \int_{-l}^{l} f(x) \cos \frac{n \pi x}{l} \dd  x \\
+        a_{0} & =\frac{1}{l} \int_{-l}^{l} f(x) \dd  x,~a_{n}=\frac{1}{l} \int_{-l}^{l} f(x) \cos \frac{n \pi x}{l} \dd  x \\
         b_{n} & =\frac{1}{l} \int_{-l}^{l} f(x) \sin \frac{n \pi x}{l} \dd  x
     \end{flalign*}
     特别地, 进行变量代换 $ z=\dfrac{\pi}{l} x$, 于是区间 $ -l \leqslant x<l$ 变换为 $ -\pi \leqslant z<\pi $, 存在周期为 $ 2 \pi $ 的函数 $F(z) $ 使得 $ f(x)=f\left(\dfrac{l x}{\pi}\right)=F(z) $, 
@@ -114,12 +114,34 @@ Fourier 级数是函数项级数的一种特殊形式. 它是研究和表示周�
     将函数 $f(x)=1-x^2~~(0\leqslant x\leqslant \pi)$ 展开为余弦级数, 并求级数 $\displaystyle\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{n^2}$ 的和.
 \end{example}
 \begin{solution}
-    由题意 $l=\pi,~b_n=0~~(n=1,2,\cdots)$, 那么 $a_0=\dfrac{2}{\pi}\int_{0}^{\pi}\qty(1-x^2)\dd x=2-\dfrac{2\pi^2}{3}$, 
+    由题意 $l=\pi,~b_n=0~~(n=1,2,\cdots)$, 那么 $\displaystyle a_0=\dfrac{2}{\pi}\int_{0}^{\pi}\qty(1-x^2)\dd x=2-\dfrac{2\pi^2}{3}$, 
     \begin{flalign*}
         a_n & =\dfrac{1}{l}\displaystyle\int_{-l}^{l}f(x)\cos nx\dd x=\dfrac{2}{\pi}\int_{0}^{\pi}f(x)\cos nx\dd x=\dfrac{2}{\pi}\int_{0}^{\pi}\qty(1-x^2)\cos nx\dd x \\
             & =\eval{\dfrac{2}{\pi}\qty(\dfrac{1-x^2}{n}\sin nx-\dfrac{2x}{n^2}\cos nx+\dfrac{2}{n^3}\sin nx)}_{0}^{\pi}=-\dfrac{4}{n^2}(-1)^n
     \end{flalign*}
     于是 $\displaystyle f(x)=1-\dfrac{\pi^2}{3}+4\sum_{n=1}^{\infty}\dfrac{(-1)^{n+1}}{n^2}$, 将 $x=0$ 代入可得 $f(0)=1-\dfrac{\pi^2}{3}+4\displaystyle\sum_{n=1}^{\infty}\dfrac{(-1)^{n+1}}{n^2}$ 又由 $f(x)=1-x^2$ 知 $f(0)=1$, 则 $\displaystyle\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{n^2}=\dfrac{\pi^2}{12}.$
+\end{solution}
+
+\begin{example}
+    求级数 $\displaystyle \sum_{n=1}^{\infty}\frac{1}{n^2}.$ 的和.
+\end{example}
+\begin{solution}
+    \textbf{法一: }由 $(1+x)^{\alpha}$ 的二项展开式, 取 $\alpha=-\dfrac{1}{2},~x=-t^2$, 则有 
+    $$\frac{1}{\sqrt{1-t^{2}}}=1+\sum_{n=1}^{\infty} \frac{(2 n-1)!!}{(2 n)!!} t^{2 n}, \quad-1<t<1 $$
+    $\forall x \in(-1,1) $, 上式两边分别在 $ (0, x) $ 或 $ (x, 0) $ 上积分, 有
+    $$\arcsin x=x+\sum_{n=1}^{\infty} \frac{(2 n-1)!!}{(2 n)!!} \cdot \frac{1}{2 n+1} x^{2 n+1}$$
+    又因为 $\displaystyle  \forall k \geqslant 1, \frac{2 k-1}{2 k}<\frac{2 k}{2 k+1} $, 所以有 $\displaystyle  \frac{(2 n-1)!!}{(2 n)!!}<\frac{1}{\sqrt{2 n+1}} $, 于是 $$\displaystyle  \frac{(2 n-1)!!}{(2 n)!!} \cdot \frac{1}{2 n+1}<\frac{1}{(2 n+1)^{\frac{3}{2}}} $$ 从而 $\displaystyle  \sum_{n=1}^{\infty} \frac{(2 n-1)!!}{(2 n)!!} \cdot \frac{1}{2 n+1} $ 收敛, 故当 $ x= \pm 1 $ 时, 上述关于 $ \arcsin x$ 的等式也成立, 即有 $$ \forall x \in[-1,1] ,  \arcsin x=x+\sum_{n=1}^{\infty} \frac{(2 n-1)!!}{(2 n)!!} \cdot \frac{1}{2 n+1} x^{2 n+1} $$
+    令 $ x=\sin u $, 则上式化为
+    $$u=\sin u+\sum_{n=1}^{\infty} \frac{(2 n-1)!!}{(2 n+1) \cdot(2 n)!!} \sin ^{2 n+1} u, \quad-\frac{\pi}{2}<u \leqslant \frac{\pi}{2}$$
+    再将上式两端从 $0$ 到 $\displaystyle  \frac{\pi}{2} $ 积分, 得
+    \begin{flalign*}
+    \frac{\pi^{2}}{8} & =1+\sum_{n=1}^{\infty} \frac{(2 n-1)!!}{(2 n+1) \cdot(2 n)!!} \cdot \int_{0}^{\frac{\pi}{2}} \sin ^{2 n+1} u \mathrm{~d} u=1+\sum_{n=1}^{\infty} \frac{(2 n-1)!!}{(2 n+1) \cdot(2 n)!!} \cdot \frac{(2 n)!!}{(2 n+1)!!} \\
+    & =1+\sum_{n=1}^{\infty} \frac{1}{(2 n+1)^{2}}=\sum_{n=1}^{\infty} \frac{1}{(2 n-1)^{2}},
+    \end{flalign*}
+    于是 $\displaystyle  \sum_{n=1}^{\infty} \frac{1}{n^{2}}=\sum_{n=1}^{\infty} \frac{1}{(2 n-1)^{2}}+\sum_{n=1}^{\infty} \frac{1}{(2 n)^{2}}=\frac{\pi^{2}}{8}+\frac{1}{4} \sum_{n=1}^{\infty} \frac{1}{n^{2}} $, 故得 $\displaystyle  \sum_{n=1}^{\infty} \frac{1}{n^{2}}=\frac{\pi^{2}}{6} $.\\ 
+    \textbf{法二: }将函数 $f(x)=x^2$ 在 $(-\pi,\pi]$ 上展开成 Fourier 级数, 因为 $f(x)$ 在 $(-\pi,\pi)$ 上为偶函数, 所以其 Fourier 系数为
+    $$b_{0}=0,~a_0=\frac{2}{\pi}\int_{0}^{\pi}x^2\dd x=\frac{2\pi^2}{3},~a_n=\frac{2}{\pi}\int_{0}^{\pi} x^2\cos nx \dd x=\dfrac{4\cdot}{n^2},~(n=1,2,\cdots)$$
+    于是由收敛定理有 $$\displaystyle x^2=\frac{\pi^2}{3}+\sum_{n=1}^{\infty}\dfrac{4(-1)^n}{n^2}\cdot\cos nx~(-\pi< x\leqslant \pi)$$ 当 $x=\pi$ 时, 有 $\displaystyle \pi^{2}=\frac{\pi^2}{3}+4\sum_{n=1}^{\infty}\frac{1}{n^2}$, 即得 $\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n^2}=\dfrac{\pi^2}{6}.$
 \end{solution}
 
 \subsection{Fourier 级数综合性问题}
@@ -157,9 +179,8 @@ Fourier 级数是函数项级数的一种特殊形式. 它是研究和表示周�
 \end{lemma}
 
 \begin{theorem}[均方逼近]
-    若 $f(x)$ 以 $2\pi$ 为周期, 在 $[-\pi,\pi]$ 上平方可积, 则在所有 $n$ 阶多项式 $\displaystyle T_n(x)=\dfrac{a_0}{2}+\sum_{k=1}^{n}(\alpha_k\cos kx+\beta_k\sin kx)$ 中, 
+    \index{均方逼近}若 $f(x)$ 以 $2\pi$ 为周期, 在 $[-\pi,\pi]$ 上平方可积, 则在所有 $n$ 阶多项式 $\displaystyle T_n(x)=\dfrac{a_0}{2}+\sum_{k=1}^{n}(\alpha_k\cos kx+\beta_k\sin kx)$ 中, 
     当 $T_n(x)$ 取 $f(x)$ 的 Fourier 级数的 $n$ 阶部分和 $\displaystyle S_n(x)=\dfrac{a_0}{2}+\sum_{k=1}^{n}(a_k\cos kx+b_k\sin kx)$ 时, 
     $f(x)$ 与 $T_n(x)$ 的均方误差最小, 即 
     $$\min\norm*{f(x)-T_n(x)}=\norm*{f(x)-S_n(x)}.$$
-    \index{均方逼近}
 \end{theorem}

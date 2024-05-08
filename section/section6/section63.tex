@@ -15,6 +15,7 @@
     当 $ f(x, y, z) $ 在 $ \varSigma $ 上连续时, $f $ 在 $ \varSigma $ 上的第一型曲面积分存在, 即可积.
 \end{definition}
 \begin{theorem}[偶倍奇零性]
+    \index{偶倍奇零性}
     \begin{enumerate}[label=(\arabic{*})]
         \item 若曲面 $ \varSigma $ 的点关于 $ x=0 $ 对称, $f $ 在 $ \varSigma $ 上可积, 则
               $$\iint\limits_{\varSigma} f(x, y, z) \mathrm{d} S=\left\{\begin{array}{ll}
@@ -35,10 +36,10 @@
                   \end{array}\right.$$
               这里 $ \varSigma_{3} $ 是 $ \varSigma $ 的 $ z \geqslant 0 $ 的部分曲面.
     \end{enumerate}
-    \index{偶倍奇零性}
 \end{theorem}
 
 \begin{theorem}[第一型曲面积分化为二重积分]
+    \index{第一型曲面积分化为二重积分}
     假设曲面 $ \varSigma \subset \mathbb{R}^{3} $ 为有界的光滑曲面, 其参数方程为
     $$\boldsymbol{r}=(x, y, z)=(x(u, v), y(u, v), z(u, v)), ~ (u, v) \in D$$
     $D \subset \mathbb{R}^{2} $ 为有界闭域, $\varSigma $ 与 $ D $ 的点一一对应, 其中函数 $ x, y, z \in \mathscr{C}^{(1)}(D) $. 令
@@ -55,7 +56,6 @@
         \item 若曲面 $ \varSigma $ 的方程为 $ y=y(z, x),(z, x) \in D_{2}$, $D_{2} $ 为 $ z O x $ 平面上的有界闭域, 函数 $ y(z, x) $ 在 $ D_{2} $ 上连续可微, 函数 $ f(x, y, z) $ 在 $ \varSigma $ 上连续, 则
               $$\iint\limits_{\varSigma} f(x, y, z) \mathrm{d} S=\iint\limits_{D_{2}} f(x, y(z, x), z) \sqrt{1+\left(y_{z}^{\prime}\right)^{2}+\left(y_{x}^{\prime}\right)^{2}} \mathrm{d} z \mathrm{d} x$$
     \end{enumerate}
-    \index{第一型曲面积分化为二重积分}
 \end{theorem}
 
 \begin{example}
@@ -306,13 +306,12 @@ $\varSigma_1$ 和 $\varSigma_2$ 的表达式 $z=z(x,y)$ 都是单值函数.
 \subsubsection{三重积分分部积分}
 
 \begin{theorem}[三重积分分部积分公式]
-    该定理是定理 \ref{iintlimitsduvxxy} 推广到三维的形式, 设 $\Omega$ 是由一张或几张分片光滑的双侧封闭曲面围成的空间有界闭区域, 若 $u,v$ 在闭区域 $\Omega$ 上有连续的一阶偏导数, 则
+    \index{三重积分分部积分公式}该定理是定理 \ref{iintlimitsduvxxy} 推广到三维的形式, 设 $\Omega$ 是由一张或几张分片光滑的双侧封闭曲面围成的空间有界闭区域, 若 $u,v$ 在闭区域 $\Omega$ 上有连续的一阶偏导数, 则
     $$\begin{cases}
             \displaystyle\iiint\limits_\Omega u\frac{\partial v}{\partial x}\dd x\dd y\dd z=\oiint\limits_{\partial \Omega}uv\dd y\dd z-\iiint\limits_\Omega v\frac{\partial u}{\partial x}\dd x\dd y\dd z, \\[6pt]
             \displaystyle\iiint\limits_\Omega u\frac{\partial v}{\partial y}\dd x\dd y\dd z=\oiint\limits_{\partial \Omega}uv\dd z\dd x-\iiint\limits_\Omega v\frac{\partial u}{\partial y}\dd x\dd y\dd z, \\[6pt]
             \displaystyle\iiint\limits_\Omega u\frac{\partial v}{\partial z}\dd x\dd y\dd z=\oiint\limits_{\partial \Omega}uv\dd x\dd y-\iiint\limits_\Omega v\frac{\partial u}{\partial z}\dd x\dd y\dd z.
         \end{cases}$$
-        \index{三重积分分部积分公式}
 \end{theorem}
 
 \begin{example}[第八届数学竞赛决赛]
@@ -355,7 +354,7 @@ $\varSigma_1$ 和 $\varSigma_2$ 的表达式 $z=z(x,y)$ 都是单值函数.
 \subsubsection{第二型曲面积分的分部积分公式}
 
 \begin{theorem}[第二型曲面积分的分部积分公式]
-    设光滑曲面 $\varSigma$ 的边界曲线 $\Gamma$ 按段光滑, 函数 $P_i(x,y,z),\\Q_i(x,y,z),~R_i(x,y,z)~~(i=1,2)$ 在 $\varSigma$ (连同 $\Gamma$) 上有连续的一阶偏导数, 则
+    \index{第二型曲面积分的分部积分公式}设光滑曲面 $\varSigma$ 的边界曲线 $\Gamma$ 按段光滑, 函数 $P_i(x,y,z),\\Q_i(x,y,z),~R_i(x,y,z)~~(i=1,2)$ 在 $\varSigma$ (连同 $\Gamma$) 上有连续的一阶偏导数, 则
     \begin{flalign*}
          & \iint\limits_{\varSigma}
         \qty(R_1\pdv{R_2}{y}-Q_1\pdv{Q_2}{z})\dd y\dd z+
@@ -368,7 +367,6 @@ $\varSigma_1$ 和 $\varSigma_2$ 的表达式 $z=z(x,y)$ 都是单值函数.
         \qty(Q_2\pdv{Q_1}{x}-P_2\pdv{P_1}{y})\dd x\dd y
     \end{flalign*}
     其中 $\varSigma$ 的方向与 $\Gamma$ 的方向满足右手定则.
-    \index{第二型曲面积分的分部积分公式}
 \end{theorem}
 \begin{proof}[{\songti \textbf{证}}]
     由 Stokes 公式
@@ -820,7 +818,7 @@ Gauss 公式与 Stokes 公式, 它们都是重要的数学定理, 用于描述�
 \subsubsection{Stokes 公式}
 
 \begin{theorem}[Stokes 积分法]
-    设 $ \varSigma $ 是逐段光滑的单闭曲线 $ \Gamma $ 所包围的非封闭光滑双侧曲面, 取某定侧 $ \varSigma^{+} $, 按右手规则确定 $ \Gamma $ 的正向 $ \Gamma^{+}$, $\Omega $
+    \index{Stokes 积分法}设 $ \varSigma $ 是逐段光滑的单闭曲线 $ \Gamma $ 所包围的非封闭光滑双侧曲面, 取某定侧 $ \varSigma^{+} $, 按右手规则确定 $ \Gamma $ 的正向 $ \Gamma^{+}$, $\Omega $
     是空间的立体区域, 使得 $ \varSigma \subset \Omega $, 函数 $P,~  Q,~ R$ 在 $ \Omega $ 上连续可微, 则有 Stokes 公式:
     \begin{flalign*}
           & \oint_{\Gamma^{+}} P(x, y, z) \dd  x+Q(x, y, z) \dd  y+R(x, y, z) \dd  z                                                                                                                                                                                                                         \\
@@ -836,7 +834,6 @@ Gauss 公式与 Stokes 公式, 它们都是重要的数学定理, 用于描述�
                                          P                     & Q                     & R
                                      \end{vmatrix}\dd S
     \end{flalign*}
-    \index{Stokes 积分法}
 \end{theorem}
 
 \begin{theorem}

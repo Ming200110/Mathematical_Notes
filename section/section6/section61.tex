@@ -653,6 +653,7 @@
 \subsubsection{分区积分及对称性的应用}
 
 \begin{theorem}[重积分的对称性]
+    \index{重积分的对称性}
     \begin{enumerate}[label=(\arabic{*})]
         \item 二重积分情形:
               \begin{enumerate}[label=(\roman{*})]
@@ -693,7 +694,6 @@
                             \end{cases}$$
               \end{enumerate}
     \end{enumerate}
-    \index{重积分的对称性}
 \end{theorem}
 
 \begin{example}
@@ -1003,11 +1003,10 @@
 含参变量积分是指在积分运算中, 被积函数中包含一个或多个参数的情况. 这种情况下, 参数被视为常数, 而不是变量, 因此在积分时需要将参数视为常数处理.
 
 \begin{theorem}[含参变量积分求导公式]
-    设 $f(t,x),f_x(t,x)$ 在 $R=[a,b]\times[p,q]$ 上连续, $\alpha(x),\beta(x)$ 为定义在 $[a,b]$ 上其值含于 $[p,q]$ 内的可微函数, 则函数
+    \index{含参变量积分求导公式}设 $f(t,x),f_x(t,x)$ 在 $R=[a,b]\times[p,q]$ 上连续, $\alpha(x),\beta(x)$ 为定义在 $[a,b]$ 上其值含于 $[p,q]$ 内的可微函数, 则函数
     $$F(t,x)=\int_{\alpha(x)}^{\beta(x)}f(t,x)\dd t$$
     在 $[a,b]$ 上可微, 且
     $$F'(t,x)=\dv{x}\int_{\alpha(x)}^{\beta(x)}f(t,x)\dd t=\int_{\alpha(x)}^{\beta(x)}f_x(t,x)\dd t+f[\beta(x),x]\beta'(x)-f[\alpha(x),x]\alpha'(x).$$
-    \index{含参变量积分求导公式}
 \end{theorem}
 
 \begin{example}
@@ -1080,8 +1079,7 @@
 \subsection{重积分的积分中值定理}
 
 \begin{theorem}[二重积分中值定理]
-    若函数 $f(x,y)$ 在有界闭区域 $D$ 上连续, 函数 $g(x,y)$ 在 $D$ 上可积且不变号, 则 $\exists(\xi,\eta)\in D$, 使得 $$\iint\limits_D f(x,y)g(x,y)\dd x\dd y=f(\xi,\eta)\iint\limits_D g(x,y)\dd x\dd y.$$
-    \index{二重积分中值定理}
+    \index{二重积分中值定理}若函数 $f(x,y)$ 在有界闭区域 $D$ 上连续, 函数 $g(x,y)$ 在 $D$ 上可积且不变号, 则 $\exists(\xi,\eta)\in D$, 使得 $$\iint\limits_D f(x,y)g(x,y)\dd x\dd y=f(\xi,\eta)\iint\limits_D g(x,y)\dd x\dd y.$$
 \end{theorem}
 
 \begin{example}

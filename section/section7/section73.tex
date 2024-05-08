@@ -151,17 +151,17 @@
 \end{theorem}
 
 \begin{theorem}[幂级数的运算性质]
-    若幂级数 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 与 $\displaystyle \sum_{n=0}^{\infty} b_{n} x^{n} $ 的收敛半径分别为 $ R_{1} $ 和 $ R_{2} $, 
+    \index{幂级数的运算性质}若幂级数 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 与 $\displaystyle \sum_{n=0}^{\infty} b_{n} x^{n} $ 的收敛半径分别为 $ R_{1} $ 和 $ R_{2} $, 
     当 $ R_{1} \neq R_{2} $ 时, 令 $ R   =\min \left\{R_{1},R_{2}\right\} $, 则有
     \begin{enumerate}[label=(\arabic{*})]
         \item $\displaystyle k \sum_{n=1}^{\infty} a_{n} x^{n}=\sum_{n=1}^{\infty} k a_{n} x^{n},|x|<R_{1} $, 其中 $ k $ 为常数;
         \item $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} \pm \sum_{n=0}^{\infty} b_{n} x^{n}=\sum_{n=0}^{\infty}\left(a_{n} \pm b_{n}\right) x^{n},|x|<R $;
         \item $\displaystyle \left(\sum_{n=0}^{\infty} a_{n} x^{n}\right)\left(\sum_{n=0}^{\infty} b_{n} x^{n}\right)=\sum_{n=0}^{\infty} c_{n} x^{n},|x|<R $, 其中 $\displaystyle c_{n}=\sum_{k=0}^{n} a_{k} b_{n-k} .$
     \end{enumerate}
-    \index{幂级数的运算性质}
 \end{theorem}
 
 \begin{theorem}[幂级数的性质]
+    \index{幂级数的性质}
     设 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 的收敛半径为 $ R(R>0) $, 则有
     \begin{enumerate}[label=(\arabic{*})]
         \item 和函数 $\displaystyle s(x)=\sum_{n=0}^{\infty} a_{n} x^{n} $ 在收敛域上连续, 若 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n} $ 在端点 $ x=R $ (或 $ x=-R$)  处收敛, 
@@ -171,7 +171,6 @@
         \item 和函数 $\displaystyle s(x)=\sum_{n=0}^{\infty} a_{n} x^{n} $ 在收敛域上可积, 且有逐项求积公式
               $$\int_{0}^{x}s(t)\dd t=\sum_{n=0}^{\infty}\int_{0}^{x}a_nt^n\dd t=\sum_{n=0}^{\infty}\dfrac{a_n}{n+1}x^{n+1}.$$
     \end{enumerate}
-    \index{幂级数的性质}
 \end{theorem}
 
 \subsection{函数展开为幂级数}
@@ -190,14 +189,15 @@
                                                                                                                                                                                                                                                                                                                                                                                      & (\rownumber{}) $\displaystyle\ln\frac{1+x}{1-x}=2\sum_{n=0}^{\infty}\frac{x^{2n+1}}{2n+1},~|x|<1$                                                                                                                                                                                                                                                                  \\
             \midrule
             (\rownumber{}) $\displaystyle\sin x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!},~|x|<+\infty$                                                                                                                                                                                                                                                                      & (\rownumber{}) $\displaystyle\cos x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!},~|x|<+\infty$                                                                                                                                                                                                                                                                    \\
-            (\rownumber{}) \tablefootnote{$\displaystyle \arctan x=\int _{0}^{x}\dfrac{\mathrm{d}t}{1+t^{2}}=\int _{0}^{x}\sum ^{\infty }_{n=0}\left( -t^{2}\right) ^{n}\mathrm{d}t=\sum ^{\infty }_{n=0}(-1)^{n}\int _{0}^{x}t^{2n}\mathrm{d}t=\sum ^{\infty }_{n=0}(-1)^{n}\dfrac{x^{2n+1}}{2n+1}$}$\displaystyle\arctan x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{2n+1},~|x|<1.$ & (\rownumber{}) \tablefootnote{由 $\displaystyle \left( \arcsin x\right) '=\left( 1-x^{2}\right) ^{-\frac{1}{2}}=1+\sum ^{\infty }_{n=0}\dfrac{\left( -\dfrac{1}{2}\right) \left( -\dfrac{1}{2}-1\right) \ldots \left( -\dfrac{1}{2}+n-1\right) }{n!}\left( -x^{2}\right) ^{n}=1+\sum ^{\infty }_{n=1}\dfrac{\left( 2n\right) !}{4^{n}\left( n!\right) ^{2}}x^{2n}$ \\
-            则 $\displaystyle\arcsin x=\int _{0}^{x}\left[ 1+\sum ^{\infty }_{n=1}\dfrac{\left( 2n\right) !}{4^{n}\left( n!\right) ^{2}}t^{2n}\right] \mathrm{d}t=x+\sum ^{\infty }_{n=1}\dfrac{\left( 2n\right) !}{4^{n}\left( n!\right) ^{2}}\int _{0}^{x}t^{2n}\mathrm{d}t=\sum_{n=0}^{\infty}\frac{(2n)!}{4^n(n!)^2(2n+1)}x^{2n+1}$}$\displaystyle\arcsin x=\sum_{n=0}^{\infty}\frac{(2n)!}{4^n(n!)^2}\dfrac{x^{2n+1}}{(2n+1)},~|x|<1$                                                                                                                                                                                                                                                                                                                \\
+            (\rownumber{}) \tablefootnote{$\displaystyle \arctan x=\int _{0}^{x}\dfrac{\dd t}{1+t^{2}}=\int _{0}^{x}\sum ^{\infty }_{n=0}\left( -t^{2}\right) ^{n}\dd t=\sum ^{\infty }_{n=0}(-1)^{n}\int _{0}^{x}t^{2n}\dd t=\sum ^{\infty }_{n=0}(-1)^{n}\dfrac{x^{2n+1}}{2n+1}$}$\displaystyle\arctan x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{2n+1},~|x|<1.$ & (\rownumber{}) \tablefootnote{由 $\displaystyle \left( \arcsin x\right) '=\left( 1-x^{2}\right) ^{-\frac{1}{2}}=1+\sum ^{\infty }_{n=0}\dfrac{\left( -\dfrac{1}{2}\right) \left( -\dfrac{1}{2}-1\right) \ldots \left( -\dfrac{1}{2}+n-1\right) }{n!}\left( -x^{2}\right) ^{n}=1+\sum ^{\infty }_{n=1}\dfrac{\left( 2n\right) !}{4^{n}\left( n!\right) ^{2}}x^{2n}$ \\
+            则 $\displaystyle\arcsin x=\int _{0}^{x}\left[ 1+\sum ^{\infty }_{n=1}\dfrac{\left( 2n\right) !}{4^{n}\left( n!\right) ^{2}}t^{2n}\right] \dd t=x+\sum ^{\infty }_{n=1}\dfrac{\left( 2n\right) !}{4^{n}\left( n!\right) ^{2}}\int _{0}^{x}t^{2n}\dd t=\sum_{n=0}^{\infty}\frac{(2n)!}{4^n(n!)^2(2n+1)}x^{2n+1}$}$\displaystyle\arcsin x=\sum_{n=0}^{\infty}\frac{(2n)!}{4^n(n!)^2}\dfrac{x^{2n+1}}{(2n+1)},~|x|<1$                                                                                                                                                                                                                                                                                                                \\
             \midrule
             (\rownumber{}) $\displaystyle\frac{1}{1-x}=\sum_{n=0}^{\infty}x^n,~|x|<1$                                                                                                                                                                                                                                                                                                & (\rownumber{}) $\displaystyle\frac{1}{(1-x)^2}=\sum_{n=1}^{\infty}(n+1)x^n,~|x|<1$                                                                                                                                                                                                                                                                                 \\
             (\rownumber{}) $\displaystyle\dfrac{2}{(1-x)^3}=\sum_{n=0}^{\infty}(n+2)(n+1)x^n,~|x|<1$                                                                                                                                                                                                                                                                                 & (\rownumber{}) $\displaystyle\dfrac{m}{(1-x)^{m+1}}=\sum_{n=0}^{\infty}(n+m)^{\underline{m}}x^n,~|x|<1$                                                                                                                                                                                                                                                            \\
             (\rownumber{}) $\displaystyle \dfrac{1}{1+x}=\sum_{n=0}^{\infty}(-1)^nx^n,~|x|<1$                                                                                                                                                                                                                                                                                        & (\rownumber{}) $\displaystyle\dfrac{x^q}{1+x^p}=\sum_{n=0}^{\infty}(-1)^nx^{np+q},~|x|<1$                                                                                                                                                                                                                                                                          \\
             \midrule
-            \multicolumn{2}{l}{(\rownumber{}) $\displaystyle(1+x)^\alpha=1+\sum_{n=1}^{\infty}\dfrac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!} x^n=\sum_{n=0}^{\infty}\binom{\alpha}{n}x^n=\sum_{n=0}^{\infty}\dfrac{\alpha^{\underline{n}}}{n!}x^n,~|x|<1$}
+            \multicolumn{2}{l}{(\rownumber{}) $\displaystyle(1+x)^\alpha=1+\sum_{n=1}^{\infty}\dfrac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!} x^n=\sum_{n=0}^{\infty}\binom{\alpha}{n}x^n=\sum_{n=0}^{\infty}\dfrac{\alpha^{\underline{n}}}{n!}x^n,~|x|<1$}\\ 
+            \multicolumn{2}{l}{(\rownumber{}) $\displaystyle \frac{1}{\sqrt{1-x^2}}=1+\sum_{n=1}^\infty\dfrac{(2n-1)!!}{(2n)!!}x^{2n},~|x|<1$}
         \end{tabular}
     \end{minipage}
 \end{table}
@@ -502,11 +502,11 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     发散, 故原级数的收敛域为 $(-1,1)$.
     设和函数为 $S(x)$, 即 $$\displaystyle S(x)=\sum_{n=1}^\infty\frac{n+1}{n}x^n,~x\in(-1,1)$$
     两边在 $(0,x)$ 上积分, 得
-    $$\int_0^xS(t)\mathrm{d}t=\int_0^x\left(\sum_{n=1}^\infty\frac{n+1}{n}t^n\right)\mathrm{d}t=\sum_{n=1}^\infty\int_0^x\frac{n+1}{n}t^n\mathrm{d}t=\sum_{n=1}^\infty\frac{x^{n+1}}{n}$$
-    即 $\displaystyle\frac{1}{x}\int_0^xS(t)\mathrm{d}t=\sum_{n=1}^\infty\frac{x^n}{n}$, 然后两边分别对 $x$ 求导, 得
-    $$\left(\frac{1}{x}\int_0^xS(t)\mathrm{d}t\right)'=\left(\sum_{n=1}^\infty\frac{x^n}{n}\right)'=\sum_{n=1}^\infty x^{n-1}=\frac{1}{1-x}$$
-    于是$$\frac{1}{x}\int_0^xS(t)\mathrm{d}t=\int_0^x\frac{\mathrm{d}x}{1-x}=-\ln(1-x)+C$$
-    即 $\displaystyle\int_0^xS(t)\mathrm{d}t=-x\ln(1-x)+Cx$, 两边再次求导, 得
+    $$\int_0^xS(t)\dd t=\int_0^x\left(\sum_{n=1}^\infty\frac{n+1}{n}t^n\right)\dd t=\sum_{n=1}^\infty\int_0^x\frac{n+1}{n}t^n\dd t=\sum_{n=1}^\infty\frac{x^{n+1}}{n}$$
+    即 $\displaystyle\frac{1}{x}\int_0^xS(t)\dd t=\sum_{n=1}^\infty\frac{x^n}{n}$, 然后两边分别对 $x$ 求导, 得
+    $$\left(\frac{1}{x}\int_0^xS(t)\dd t\right)'=\left(\sum_{n=1}^\infty\frac{x^n}{n}\right)'=\sum_{n=1}^\infty x^{n-1}=\frac{1}{1-x}$$
+    于是$$\frac{1}{x}\int_0^xS(t)\dd t=\int_0^x\frac{\dd x}{1-x}=-\ln(1-x)+C$$
+    即 $\displaystyle\int_0^xS(t)\dd t=-x\ln(1-x)+Cx$, 两边再次求导, 得
     $$S(x)=\frac{x}{1-x}-\ln(1-x)+C$$
     因为 $S(x)$ 在 $(-1,1)$ 内连续, 且 $S(0)=0$, 所以 $C=0$, 所以原级数的和函数为
     $$S(x)=\frac{x}{1-x}-\ln(1-x),~x\in(-1,1).$$
@@ -519,8 +519,8 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     记 $u_n=n+1$, 则由 $\displaystyle\lim_{n\to\infty}\left|\frac{u_{n+1}}{u_n}\right|=\lim_{n\to\infty}\frac{n+2}{n+1}=1$ 知, 收敛半径 $R=1$.
     又当 $x=\pm 1$ 时, $$\displaystyle\sum_{n=0}^\infty(n+1)(\pm 1)^n=\sum_{n=0}^\infty(\pm 1)^n+\sum_{n=0}^\infty n(\pm 1)^n$$
     发散, 故原级数的收敛域为 $(-1,1)$. 设和函数为 $S(x)$, 即 $\displaystyle S(x)=\sum_{n=0}^\infty(n+1)x^n,~x\in(-1,1)$.两边在 $(0,x)$ 上积分, 得
-    $$\int_0^xS(t)\mathrm{d}t=\int_0^x\left(\sum_{n=0}^\infty(n+1)t^n\right)\mathrm{d}t=\sum_{n=0}^\infty\int_0^x(n+1)t^n\mathrm{d}t=\sum_{n=0}^\infty x^{n+1}$$
-    即 $\displaystyle\frac{1}{x}\int_0^xS(t)\mathrm{d}t=\sum_{n=0}^\infty x^n=\frac{1}{1-x}\Rightarrow \int_0^xS(t)\mathrm{d}t=\frac{x}{1-x}\overset{\text{求导}}{\Rightarrow}S(x)=\frac{1}{(1-x)^2},~x\in(-1,1)$.
+    $$\int_0^xS(t)\dd t=\int_0^x\left(\sum_{n=0}^\infty(n+1)t^n\right)\dd t=\sum_{n=0}^\infty\int_0^x(n+1)t^n\dd t=\sum_{n=0}^\infty x^{n+1}$$
+    即 $\displaystyle\frac{1}{x}\int_0^xS(t)\dd t=\sum_{n=0}^\infty x^n=\frac{1}{1-x}\Rightarrow \int_0^xS(t)\dd t=\frac{x}{1-x}\overset{\text{求导}}{\Rightarrow}S(x)=\frac{1}{(1-x)^2},~x\in(-1,1)$.
     所以 $$\displaystyle\sum_{n=1}^\infty\frac{n}{2^n}=\frac{1}{2}\sum_{n=1}^\infty n \frac{1}{2^{n-1}}=x\sum_{n=0}^\infty(n+1)x^n\Biggl |_{x=\frac{1}{2}}=\frac{x}{(1-x)^2}\Biggl |_{x=\frac{1}{2}}=2$$.
 \end{solution}
 
@@ -532,8 +532,8 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     又当 $x=\pm 1$ 时, $\displaystyle\sum_{n=0}^\infty(n+1)(n+3)(\pm 1)^n$ 发散, 故原级数的收敛域为 $(-1,1)$.\\
     设和函数为 $S(x)$, 即 $\displaystyle S(x)=\sum_{n=0}^\infty(n+1)(n+3)x^n,~x\in(-1,1)$.两边在 $(0,x)$ 上积分, 得
     \begin{flalign*}
-        \int_0^xS(t)\mathrm{d}t & =\int_0^x\left(\sum_{n=0}^\infty(n+1)(n+3)t^n\right)\mathrm{d}t=\sum_{n=0}^\infty\int_0^x(n+1)(n+3)t^n\mathrm{d}t=\sum_{n=0}^\infty(n+3)x^{n+1} \\
-                                & =\sum_{n=0}^\infty(n+2)x^{n+1}+\sum_{n=0}^\infty x^{n+1}=\left(\sum_{n=0}^\infty\int_0^x (n+2)t^{n+1}\mathrm{d}t\right)'+\frac{x}{1-x}          \\
+        \int_0^xS(t)\dd t & =\int_0^x\left(\sum_{n=0}^\infty(n+1)(n+3)t^n\right)\dd t=\sum_{n=0}^\infty\int_0^x(n+1)(n+3)t^n\dd t=\sum_{n=0}^\infty(n+3)x^{n+1} \\
+                                & =\sum_{n=0}^\infty(n+2)x^{n+1}+\sum_{n=0}^\infty x^{n+1}=\left(\sum_{n=0}^\infty\int_0^x (n+2)t^{n+1}\dd t\right)'+\frac{x}{1-x}          \\
                                 & =\left(\frac{x^2}{1-x}\right)'+\frac{x}{1-x}=\frac{3x-2x^2}{(1-x)^2}
     \end{flalign*}
     于是 $\displaystyle S(x)=\left[\frac{3x-2x^2}{(1-x)^2}\right]'=\frac{x+3}{(1-x)^3},~x\in(-1,1)$.
@@ -542,7 +542,7 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     已知 $u_n(x)$ 满足 $u_n'(x)=u_n(x)+x^{n-1}\mathrm{e}^x$ ($n$ 为正整数), 且 $\displaystyle u_n(1)=\frac{\mathrm{e}}{n}$, 求函数项级数 $\displaystyle\sum_{n=1}^\infty u_n(x)$ 之和.
 \end{example}
 \begin{solution}
-    由 $u_n'(x)-u_n(x)=x^{n-1}\mathrm{e}^x$ 得, $\displaystyle u_n(x)=\mathrm{e}^{\int\mathrm{d}x}\left[\int x^{n-1}\mathrm{e}^x\cdot\mathrm{e}^{-\int\mathrm{d}x}\mathrm{d}x+C\right]=\frac{x^n}{n}\mathrm{e}^x+C\mathrm{e}^x$, 
+    由 $u_n'(x)-u_n(x)=x^{n-1}\mathrm{e}^x$ 得, $\displaystyle u_n(x)=\mathrm{e}^{\int\dd x}\left[\int x^{n-1}\mathrm{e}^x\cdot\mathrm{e}^{-\int\dd x}\dd x+C\right]=\frac{x^n}{n}\mathrm{e}^x+C\mathrm{e}^x$, 
     又因为 $\displaystyle u_n(1)=\frac{\mathrm{e}}{n}$, 所以 $C=0$, 所以 $\displaystyle\sum_{n=1}^\infty u_n(x)=\sum_{n=1}^\infty\frac{x^n}{n}\mathrm{e}^x=\mathrm{e}^x\sum_{n=1}^\infty\frac{x^n}{n}=-\mathrm{e}^x\ln(1-x),~x\in(-1,1)$.
 \end{solution}
 
@@ -583,13 +583,13 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     其中, $\displaystyle \lim_{n\to\infty}\frac{1}{2x}\sum_{k=1}^n\left(\frac{x}{2}\right)^{3k}=\frac{x^2}{2(8-x^3)}$, 现求第二项的和.\\
     当 $x\in (0,2)$ 时, 令 $\displaystyle\frac{x}{2}=t^{\frac{2}{3}}$, 则
     \begin{flalign*}
-        \frac{1}{2}\sum_{n=1}^\infty\frac{x^{3n-1}}{8^n(2n-1)} & =\frac{t}{2x}\sum_{n=1}^\infty\frac{t^{2n-1}}{2n-1}=\frac{t}{2x}\left(\sum_{n=1}^\infty\int_0^t\frac{t^{2n-1}}{2n-1}\mathrm{d}t\right)'                                                                                                                    \\
-                                                               & =\frac{t}{2x}\int_0^t\sum_{n=1}^\infty\frac{\left(t^{2n-1}\right)'}{2n-1}\mathrm{d}t=\frac{t}{2x}\int_0^t\frac{\mathrm{d}t}{1-t^2}=\frac{t}{4x}\ln\frac{1+t}{1-t}=\frac{\sqrt{x}}{8\sqrt{2}}\ln\frac{2\sqrt{2}+x^{\frac{3}{2}}}{2\sqrt{2}-x^{\frac{3}{2}}}
+        \frac{1}{2}\sum_{n=1}^\infty\frac{x^{3n-1}}{8^n(2n-1)} & =\frac{t}{2x}\sum_{n=1}^\infty\frac{t^{2n-1}}{2n-1}=\frac{t}{2x}\left(\sum_{n=1}^\infty\int_0^t\frac{t^{2n-1}}{2n-1}\dd t\right)'                                                                                                                    \\
+                                                               & =\frac{t}{2x}\int_0^t\sum_{n=1}^\infty\frac{\left(t^{2n-1}\right)'}{2n-1}\dd t=\frac{t}{2x}\int_0^t\frac{\dd t}{1-t^2}=\frac{t}{4x}\ln\frac{1+t}{1-t}=\frac{\sqrt{x}}{8\sqrt{2}}\ln\frac{2\sqrt{2}+x^{\frac{3}{2}}}{2\sqrt{2}-x^{\frac{3}{2}}}
     \end{flalign*}
     当 $x\in(-2,0)$ 时, 令 $\displaystyle \frac{x}{2}=-t^{\frac{3}{2}}~~(t>0)$, 则
     \begin{flalign*}
-        \frac{1}{2}\sum_{n=1}^\infty\frac{x^{3n-1}}{8^n(2n-1)} & =\frac{t}{2x}\sum_{n=1}^\infty\frac{(-1)^n}{2n-1}t^{2n-1}=\frac{t}{2x}\int_0^t\sum_{n=1}^\infty\frac{(-1)^n}{2n-1}\left(t^{2n-1}\right)'\mathrm{d}t \\
-                                                               & =-\frac{t}{2x}\int_0^t\frac{\mathrm{d}t}{1+t^2}=\frac{t}{2x}\arctan t=-\frac{\sqrt{-x}}{4\sqrt{2}}\arctan\frac{x\sqrt{-x}}{2\sqrt{2}}
+        \frac{1}{2}\sum_{n=1}^\infty\frac{x^{3n-1}}{8^n(2n-1)} & =\frac{t}{2x}\sum_{n=1}^\infty\frac{(-1)^n}{2n-1}t^{2n-1}=\frac{t}{2x}\int_0^t\sum_{n=1}^\infty\frac{(-1)^n}{2n-1}\left(t^{2n-1}\right)'\dd t \\
+                                                               & =-\frac{t}{2x}\int_0^t\frac{\dd t}{1+t^2}=\frac{t}{2x}\arctan t=-\frac{\sqrt{-x}}{4\sqrt{2}}\arctan\frac{x\sqrt{-x}}{2\sqrt{2}}
     \end{flalign*}
     综上, 所求和函数为
     $$S(x)=\left\{\begin{matrix}
@@ -763,16 +763,16 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     证明: $\displaystyle\lim_{m,n\to+\infty}\sum_{i=1}^m\sum_{j=1}^n\frac{(-1)^{i+j}}{i+j}$ 存在, 并求之.
 \end{example}
 \begin{solution}\scriptsize\linespread{0.8}
-    因为$$\int_{-1}^0x^{i+j-1}\mathrm{d}x=\frac{1}{i+j}x^{i+j}\Big |_{-1}^0=-\frac{(-1)^{i+j}}{i+j}$$
+    因为$$\int_{-1}^0x^{i+j-1}\dd x=\frac{1}{i+j}x^{i+j}\Big |_{-1}^0=-\frac{(-1)^{i+j}}{i+j}$$
     所以
     \begin{flalign*}
-        S_{m,n} & =\sum_{i=1}^m\sum_{j=1}^n\frac{(-1)^{i+j}}{i+j}=-\sum_{i=1}^m\sum_{j=1}^n\int_{-1}^0x^{i+j-1}\mathrm{d}x
-        =-\sum_{i=1}^m\int_{-1}^0\left(\sum_{j=1}^nx^{i+j-1}\right)\mathrm{d}x                                                                                   \\
-                & =-\sum_{i=1}^m\int_{-1}^0\frac{x^i\left(1-x^n\right)}{1-x}\mathrm{d}x=-\int_{-1}^0\frac{1}{1-x}\sum_{i=1}^m\left(x^i-x^{n+i}\right)\mathrm{d}x \\
-                & =-\int_{-1}^0\frac{x-x^{m+1}}{(1-x)^2}\mathrm{d}x+\int_{-1}^0\frac{x^{n+1}-x^{n+m+1}}{(1-x)^2}\mathrm{d}x
+        S_{m,n} & =\sum_{i=1}^m\sum_{j=1}^n\frac{(-1)^{i+j}}{i+j}=-\sum_{i=1}^m\sum_{j=1}^n\int_{-1}^0x^{i+j-1}\dd x
+        =-\sum_{i=1}^m\int_{-1}^0\left(\sum_{j=1}^nx^{i+j-1}\right)\dd x                                                                                   \\
+                & =-\sum_{i=1}^m\int_{-1}^0\frac{x^i\left(1-x^n\right)}{1-x}\dd x=-\int_{-1}^0\frac{1}{1-x}\sum_{i=1}^m\left(x^i-x^{n+i}\right)\dd x \\
+                & =-\int_{-1}^0\frac{x-x^{m+1}}{(1-x)^2}\dd x+\int_{-1}^0\frac{x^{n+1}-x^{n+m+1}}{(1-x)^2}\dd x
     \end{flalign*}
-    而 $x\in[-1,0],~(1-x)^2\ge1$, 所以 $\displaystyle\int_{-1}^0\frac{x^i}{(1-x)^2}\mathrm{d}x\leqslant \int_{-1}^0x^i\mathrm{d}x$, 又 $\displaystyle\lim_{i\to+\infty}\int_{-1}^0x^i\mathrm{d}x=0$, 
-    所以 $\displaystyle \lim_{i\to+\infty}\int_{-1}^0\frac{x^i}{(1-x)^2}\mathrm{d}x=0$, 所以 $\displaystyle\lim_{m,n\to+\infty}S_{m,n}=-\int_{-1}^0\frac{x}{(1-x)^2}\mathrm{d}x=\ln2-\frac{1}{2}.$
+    而 $x\in[-1,0],~(1-x)^2\ge1$, 所以 $\displaystyle\int_{-1}^0\frac{x^i}{(1-x)^2}\dd x\leqslant \int_{-1}^0x^i\dd x$, 又 $\displaystyle\lim_{i\to+\infty}\int_{-1}^0x^i\dd x=0$, 
+    所以 $\displaystyle \lim_{i\to+\infty}\int_{-1}^0\frac{x^i}{(1-x)^2}\dd x=0$, 所以 $\displaystyle\lim_{m,n\to+\infty}S_{m,n}=-\int_{-1}^0\frac{x}{(1-x)^2}\dd x=\ln2-\frac{1}{2}.$
 \end{solution}
 
 \subsubsection{计算积分}

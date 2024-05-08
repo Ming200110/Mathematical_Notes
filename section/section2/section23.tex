@@ -28,9 +28,8 @@
 \end{proof}
 
 \begin{theorem}[Lagrange 定理]
-    若 $f(x)$ 在 $[a,b]$ 上连续, 在 $(a,b)$ 内可导, 则 $\forall x_1,x_2\in[a,b],~\exists\xi\in(x_1,x_2)$, 使得
+    \index{Lagrange 定理}若 $f(x)$ 在 $[a,b]$ 上连续, 在 $(a,b)$ 内可导, 则 $\forall x_1,x_2\in[a,b],~\exists\xi\in(x_1,x_2)$, 使得
     $$\dfrac{f(x_2)-f(x_1)}{x_2-x_1}=f'(\xi).$$
-    \index{Lagrange 定理}
 \end{theorem}
 
 \begin{example}
@@ -45,9 +44,8 @@
 \end{solution}
 
 \begin{theorem}[Cauchy 定理]
-    若 $F(x),G(x)$ 在 $[a,b]$ 上连续, 在 $(a,b)$ 内可导, $G'(x)\neq0$, 则 $\exists\xi\in(a,b)$, 使得
+    \index{Cauchy 定理}若 $F(x),G(x)$ 在 $[a,b]$ 上连续, 在 $(a,b)$ 内可导, $G'(x)\neq0$, 则 $\exists\xi\in(a,b)$, 使得
     $$\dfrac{F(b)-F(a)}{G(b)-G(a)}=\dfrac{F'(\xi)}{G'(\xi)}.$$
-    \index{Cauchy 定理}
 \end{theorem}
 
 \begin{example}
@@ -148,7 +146,7 @@
 \end{inference}
 
 \begin{example}
-    设 $f(x)\in C\qty[0,\dfrac{\pi}{2}]\cap D\qty(0,\dfrac{\pi}{2}),~f(0)=f\qty(\dfrac{\pi}{2})=\dfrac{1}{2}$, 证明: $\exists\xi\in\qty(0,\dfrac{\pi}{2})$, 使得 $f'(\xi)+f(\xi)=\cos\xi.$
+    设 $f(x)\in C\qty[0,\dfrac{\pi}{2}]\cap D\qty(0,\dfrac{\pi}{2}),~f(0)=f\qty(\dfrac{\pi}{2})=\dfrac{1}{2}$, 证明: $\exists\xi\in\qty(0,\dfrac{\pi}{2})$, 使得 $$f'(\xi)+f(\xi)=\cos\xi.$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
     构造辅助函数\footnote{
@@ -327,7 +325,7 @@
 \subsubsection{区间无需划分}
 
 \begin{example}
-    设函数 $f(x)\in C[0,1]\cap D(0,1)$, 且 $f(a)=f(b)=1$, 证明存在 $\xi,\eta\in(a,b)$, 使得 $\e ^{\eta-\xi}[f(\eta)-f'(\eta)]=1.$
+    设函数 $f(x)\in C[0,1]\cap D(0,1)$, 且 $f(a)=f(b)=1$, 证明存在 $\xi,\eta\in(a,b)$, 使得 $$\e ^{\eta-\xi}[f(\eta)-f'(\eta)]=1.$$
 \end{example}
 \begin{proof}[{\songti \textbf{证法一}}]
     将要证明的等式中含 $\xi$ 和 $\eta$ 的项分别放到等式的两侧, 化为
@@ -364,7 +362,7 @@
 \end{proof}
 
 \begin{example}
-    设 $0<a<b,~f(x)\in C[a,b]\cap D(a,b),~f'(x)\neq0$, 证明 $\exists\xi,\eta\in(a,b)$, 使得 $ab\xi f'(\xi)\ln\dfrac{b}{a}=(b-a)\eta^2f'(\eta).$
+    设 $0<a<b,~f(x)\in C[a,b]\cap D(a,b),~f'(x)\neq0$, 证明 $\exists\xi,\eta\in(a,b)$, 使得 $$ab\xi f'(\xi)\ln\dfrac{b}{a}=(b-a)\eta^2f'(\eta).$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
     令 $g(x)=-\dfrac{1}{x},~h(x)=\ln x$, 那么 $f,g,h$ 均在 $[a,b]$ 上连续, 在 $(a,b)$ 内可导, 且满足 Cauchy 中值定理的条件, 于是

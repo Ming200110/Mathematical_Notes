@@ -123,9 +123,8 @@ $$\dfrac{\dd y}{\dd x}=f\left(\dfrac{k u+c_{1}}{u+c_{2}}\right)=g(u), \quad \dfr
     形如 $\dfrac{\dd y}{\dd x}+p(x)y=q(x)$ 的方程称为\textit{一阶线性微分方程}.
 \end{definition}
 \begin{theorem}[通解公式]
-    对于一阶线性微分方程, 则有通解公式为
+    对于一阶线性微分方程, 则有通解公式为\index{通解公式}
     $$y=\mathrm{e}^{-\int p(x)\dd x}\left[\int q(x)\cdot\mathrm{e}^{\int p(x)\dd x}\dd x+C\right].$$
-    \index{通解公式}
 \end{theorem}
 
 \begin{example}
@@ -252,6 +251,7 @@ $$\dfrac{\dd y}{\dd x}=f\left(\dfrac{k u+c_{1}}{u+c_{2}}\right)=g(u), \quad \dfr
 \subsubsection{积分因子}
 
 \begin{theorem}[积分因子]
+    \index{积分因子}
     若微分方程 $P(x,y)\dd x+Q(x,y)\dd y=0$ 不满足 $\displaystyle\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x}$, 
     令 $\Delta _\partial=\displaystyle\pdv{P}{y}-\pdv{Q}{x}$, 那么对于以下特殊情况, 可确定积分因子.
     \begin{enumerate}[label=(\arabic{*})]

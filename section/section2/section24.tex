@@ -300,24 +300,25 @@
 \subsection{差商与导数}
 
 \begin{definition}[一阶差商]
-    设 $x_0,x_1,\cdots,x_n$ 为 $[a,b]$ 上的节点, 若 $x_i\neq x_j$, 
+    设 $x_0,x_1,\cdots,x_n$ 为 $[a,b]$ 上的节点, 若 $x_i\neq x_j$, \index{一阶差商}
     则函数 $f(x)$ 关于节点 $x_i,x_j$ 的\textit{一阶差商}定义为
     $$f[x_i,x_j]=\dfrac{f(x_j)-f(x_i)}{x_j-x_i}.$$
 \end{definition}
 
 \begin{definition}[重节点差商]
-    若 $x_i=x_j$, 则定义\textit{重节点差商}
+    若 $x_i=x_j$, 则定义\textit{重节点差商}\index{重节点差商}
     $$f[x_i,x]=\lim_{x\to x_i}f[x_i,x]=\lim_{x\to x_i}\dfrac{f(x)-f(x_i)}{x-x_i}=f'(x_i).$$
+    
 \end{definition}
 
 \begin{definition}[二阶差商]
     若 $x_i,x_j,x_k$ 互异, 则定义\textit{二阶差商} $$f[x_i,x_j,x_k]=\dfrac{f[x_j,x_k]-f[x_i,x_j]}{x_k-x_i}.$$
-    若 $x_i=x_j\neq x_k$ 或 $x_i=x_j=x_k$, 则分别定义
+    若 $x_i=x_j\neq x_k$ 或 $x_i=x_j=x_k$, 则分别定义\index{二阶差商}
     $$f[x_i,x_i,x_k]=\dfrac{f[x_i,x_k]-f[x_i,x_i]}{x_k-x_i},~f[x_i,x_i,x_i]=\lim_{\substack{x_i\to x_i\\x_k\to x_i}}f[x_i,x_j,x_k]=\dfrac{1}{2}f''(x_i).$$
 \end{definition}
 
 \begin{definition}[$n$ 阶差商]
-    一般地, 定义 $n$ 阶差商及 $n$ \textit{阶重节点差商}分别为
+    一般地, 定义 $n$ 阶差商及 $n$ \textit{阶重节点差商}分别为\index{$n$ 阶差商}
     \begin{flalign*}
         f[x_{i0},x_{i1},\cdots,x_{in}] & =\dfrac{f[x_{i1},\cdots,x_{in}]-f[x_{i0},x_{i1},\cdots,x_{i(n-1)}]}{x_{in}-x_{i0}}   \\
         f[x_{i0},x_{i0},\cdots,x_{i0}] & =\lim_{x_{ij}\to x_{i0}}f[x_{i0},x_{i1},\cdots,x_{in}]=\dfrac{1}{n!}f^{(n)}(x_{i0}).

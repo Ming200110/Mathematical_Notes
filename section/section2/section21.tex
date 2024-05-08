@@ -1,14 +1,14 @@
 \section{导数与微分}
 
-导数和微分都是描述函数变化率的概念, 但是它们有一些不同之处. 
+导数和微分都是描述函数变化率的概念, 但是它们有一些不同之处.
 
-导数是函数在某一点的变化率, 表示函数在该点的斜率. 
-导数可以用极限的概念来定义, 即函数在某一点的导数等于该点的函数值的极限与该点的自变量取值的极限的比值. 
-导数可以用符号表示为 $f'(x)$, 表示函数 $f$ 在点 $x$ 处的导数. 
+导数是函数在某一点的变化率, 表示函数在该点的斜率.
+导数可以用极限的概念来定义, 即函数在某一点的导数等于该点的函数值的极限与该点的自变量取值的极限的比值.
+导数可以用符号表示为 $f'(x)$, 表示函数 $f$ 在点 $x$ 处的导数.
 
-微分是函数在某一点的线性近似, 表示函数在该点的局部变化率. 
-微分可以用导数来计算, 即函数在某一点的微分等于函数在该点的导数与自变量的微小增量的乘积. 
-微分可以用符号表示为 $\dd f(x)$, 表示函数 $f$ 在点 $x$ 处的微分. 
+微分是函数在某一点的线性近似, 表示函数在该点的局部变化率.
+微分可以用导数来计算, 即函数在某一点的微分等于函数在该点的导数与自变量的微小增量的乘积.
+微分可以用符号表示为 $\dd f(x)$, 表示函数 $f$ 在点 $x$ 处的微分.
 
 \subsection{导数的定义与可微性质}
 
@@ -18,12 +18,13 @@
     设函数 $y=f(x)$ 在点 $x_0$ 的某邻域内有定义, 当自变量 $x$ 在点 $x_0$ 处取得增量 $\Delta x~(\Delta x\neq 0)$ 时, 相应地, 函数 $y$ 取得增量 $\Delta y=f(x_0+\Delta x)-f(x_0)$, 如果极限
     \label{theDefinitionOfTheDerivationFunction}
     $$\lim_{\Delta x\to0}\dfrac{\Delta y}{\Delta x}=\lim_{\Delta x\to0}\dfrac{f(x_0+\Delta x)-f(x_0)}{\Delta x}$$
-    存在, 则称函数 $y=f(x)$ 在点 $x_0$ 处\textit{可导}, 并称整个极限值为\textit{函数} $y=f(x)$ \textit{在点} $x_0$ \textit{处的导数}, 记作 $f'(x_0),~y'(x_0),~\eval{\dfrac{\dd y}{\dd x}}_{x=x_0}$, 
+    存在, 则称函数 $y=f(x)$ 在点 $x_0$ 处\textit{可导}, 并称整个极限值为\textit{函数} $y=f(x)$ \textit{在点} $x_0$ \textit{处的导数}, 记作 $f'(x_0),~y'(x_0),~\eval{\dfrac{\dd y}{\dd x}}_{x=x_0}$,
     如果记 $x=x_0+\Delta x$, 则导数又可表示为 $f'(x_0)=\displaystyle\lim_{x\to x_0}\dfrac{f(x)-f(x_0)}{x-x_0}.$
+    \index{导数}
 \end{definition}
 
 \begin{example}[2004 数一]
-    设函数 $f(x)$ 连续, 且 $f'(0)>0$, 则存在 $\delta>0$, 使得 
+    设函数 $f(x)$ 连续, 且 $f'(0)>0$, 则存在 $\delta>0$, 使得
     \begin{tasks}(2)
         \task $f(x)$ 在 $(0,\delta)$ 内单调递增
         \task $f(x)$ 在 $(-\delta,0)$ 内单调递增
@@ -32,7 +33,7 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    由于 $f'(0)=\displaystyle\lim_{x\to0}\dfrac{f(x)-f(0)}{x}>0$, 所以由函数极限的局部保号性知, 存在 $\delta>0$, 使得当 $0<|x|<\delta$ 时, $\dfrac{f(x)-f(0)}{x}>0$, 
+    由于 $f'(0)=\displaystyle\lim_{x\to0}\dfrac{f(x)-f(0)}{x}>0$, 所以由函数极限的局部保号性知, 存在 $\delta>0$, 使得当 $0<|x|<\delta$ 时, $\dfrac{f(x)-f(0)}{x}>0$,
     则当 $x\in(-\delta,0)$ 时, $f(x)-f(0)<0$, 即有 $f(x)<f(0)$; 当 $x\in(0,\delta)$ 时, $f(x)-f(0)>0$, 即有 $f(x)>f(0)$, 因此选 C.
 \end{solution}
 \begin{inference}
@@ -49,7 +50,7 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    按照定义 \ref{theDefinitionOfTheDerivationFunction}, 不但要求 $f$ 在 $x_0$ 的某个邻域有定义, 而且 $f$ 在 $x_0$ 处的导数 $f'(x_0)$ 是否存在以及 $f'(x_0)$ 的值的大小都与 $f$ 在 $x_0$ 处的值 $f(x_0)$ 有关, 由此可知 A 不能作为 $f$ 在 $x_0$ 处导数的定义, 
+    按照定义 \ref{theDefinitionOfTheDerivationFunction}, 不但要求 $f$ 在 $x_0$ 的某个邻域有定义, 而且 $f$ 在 $x_0$ 处的导数 $f'(x_0)$ 是否存在以及 $f'(x_0)$ 的值的大小都与 $f$ 在 $x_0$ 处的值 $f(x_0)$ 有关, 由此可知 A 不能作为 $f$ 在 $x_0$ 处导数的定义,
     实际上, 从 A 的分子结构易见, 该极限存在与否同 $f$ 在 $x_0$ 处的值无关, 即使 $f$ 在点 $x_0$ 处没有定义, 或者有定义但不连续, A 极限也可能存在, 例如, $$f(x)=\begin{cases}
             \dfrac{1}{x^2}, & x\neq0 \\[6pt]
             0,              & x=0
@@ -82,9 +83,9 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    \textbf{法一: }凑导数定义, 
+    \textbf{法一: }凑导数定义,
     $$\text{原式}=\lim_{x\to0}\dfrac{x^2f(x)-x^2f(0)+2f(0)-2f\qty(x^3)}{x^3}=\lim_{x\to0}\qty(\dfrac{f(x)-f(0)}{x}-2\dfrac{f\qty(x^3)-f(0)}{x^3})=f'(0)-2f'(0)=-f'(0)$$
-    \textbf{法二: }由于 $f(x)$ 在 $x=0$ 处可导, 则 
+    \textbf{法二: }由于 $f(x)$ 在 $x=0$ 处可导, 则
     $$f(x)=f(0)+f'(0)x+o(x)=f'(0)x+o(x),~f\qty(x^3)=f'(0)x^3+o\qty(x^3)$$
     于是 $$\text{原式}=\lim_{x\to0}\dfrac{x^2(f'(0)x+o(x))-2\qty(f'(0)x^3+o\qty(x))}{x^3}=f'(0)-2f'(0)=-f'(0).$$
 \end{solution}
@@ -182,7 +183,7 @@
     取极限有 $\displaystyle\lim_{n\to\infty}\sum_{k=1}^{n}f\left(\frac{k}{n^2}\right)=\frac{A}{2}.$
 \end{solution}
 \begin{example}
-    设 $f(x)$ 在 $x=x_0$ 处可微, $\alpha_n<x_0<\beta_n~  (n=1,2,\cdots),~\lim\limits_{n\to\infty}\alpha_n=\lim\limits_{n\to\infty}\beta_n=x_0$, 
+    设 $f(x)$ 在 $x=x_0$ 处可微, $\alpha_n<x_0<\beta_n~  (n=1,2,\cdots),~\lim\limits_{n\to\infty}\alpha_n=\lim\limits_{n\to\infty}\beta_n=x_0$,
     证明: $$\lim\limits_{n\to\infty}\dfrac{f(\beta_n)-f(\alpha_n)}{\beta_n-\alpha_n}=f'(x_0).$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
@@ -193,7 +194,7 @@
     \end{flalign*}
     若记 $\lambda _{n}=\dfrac{\beta _{n}-x_{0}}{\beta _{n}-\alpha _{n}}$, 那么 $\dfrac{x_{0}-\alpha _{n}}{\beta _{n}-\alpha _{n}}=1-\lambda _{n}$, 且 $0<\lambda_n<1,~0<1-\lambda_n<1$, 故上式可改写为
     $$\dfrac{f\left( \beta _{n}\right) -f\left( \alpha _{n}\right) }{\beta _{n}-\alpha _{n}}=\lambda _{n}\dfrac{f\left( \beta _{n}\right) -f\left( x_{0}\right) }{\beta _{n}-x_{0}}+\left( 1-\lambda _{n}\right) \dfrac{f\left( \alpha _{n}\right) -f\left( x_{0}\right) }{\alpha _{n}-x_{0}}$$
-    即 $f'\left( x_{0}\right) =\lambda _{n}f'\left( x_{0}\right) +\left( 1-\lambda _{n}\right) f'\left( x_{0}\right) $, 故有 $\forall\varepsilon>0,\exists N>0$, 当 $n>N$ 时, 
+    即 $f'\left( x_{0}\right) =\lambda _{n}f'\left( x_{0}\right) +\left( 1-\lambda _{n}\right) f'\left( x_{0}\right) $, 故有 $\forall\varepsilon>0,\exists N>0$, 当 $n>N$ 时,
     \begin{flalign*}
         \left| \dfrac{f\left( \beta _{n}\right) -f\left( \alpha _{n}\right) }{\beta _{n}-\alpha _{n}}-f'\left( x_{0}\right) \right| & \leqslant \lambda _{n}\left| \dfrac{f\left( \beta _{n}\right) -f\left( x_{0}\right) }{\beta _{n}-x_{0}}-f'\left( x_{0}\right) \right| +\left( 1-\lambda _{n}\right) \left| \dfrac{f\left( \alpha _{n}\right) -f\left( x_{0}\right) }{\alpha _{n}-x_{0}}-f'\left( x_{0}\right) \right| \\
                                                                                                                                     & <\lambda _{n}\varepsilon +\left( 1-\lambda _{n}\right) \varepsilon =\varepsilon
@@ -223,10 +224,11 @@
 \begin{definition}[左右导数]
     若极限 $\displaystyle\lim_{\Delta x\to 0^-}\dfrac{\Delta y}{\Delta x}=\lim_{\Delta x\to0^-}\dfrac{f(x_0+\Delta x)-f(x_0)}{\Delta x}$ 存在, 则该极限值称为 $f(x)$ \textit{在点} $x_0$ \textit{处的左导数}, 记作 $f'_(x_0)$.
     同理可得\textit{右导数}的定义.
-\end{definition}
 
-$f_-'(x_0)~(f_+'(x_0))$ 表示函数在点 $x_0$ 处的左 (右) 导数, 而 $\displaystyle\lim_{x\to x_0^-}~(\lim_{x\to x_0^+})$ 表示导函数在 $x_0$ 处的左 (右) 极限, 
-一般情况下 $f_{\pm}'(x_0)\neq \displaystyle\lim_{x\to x_0^{\pm}}f'(x).$
+    $f_-'(x_0)~(f_+'(x_0))$ 表示函数在点 $x_0$ 处的左 (右) 导数, 而 $\displaystyle\lim_{x\to x_0^-}~(\lim_{x\to x_0^+})$ 表示导函数在 $x_0$ 处的左 (右) 极限,
+    一般情况下 $f_{\pm}'(x_0)\neq \displaystyle\lim_{x\to x_0^{\pm}}f'(x).$
+    \index{左右导数}
+\end{definition}
 
 \begin{theorem}[函数的可导性与连续性]
     若函数 $y=f(x)$ 在点 $x_0$ 可导, 则 $y=f(x)$ 在点 $x_0$ 必连续, 但连续不一定可导.
@@ -247,11 +249,11 @@ $f_-'(x_0)~(f_+'(x_0))$ 表示函数在点 $x_0$ 处的左 (右) 导数, 而 $\d
 
 \begin{example}
     设函数 $f(x)=\begin{cases}
-        \dfrac{x}{1+\e ^{\frac{1}{x}}},&x<0\\0,&x=0\\ \dfrac{2x}{1+\e^x},&x>0
-    \end{cases}$ 求函数在点 $x=0$ 处的导数.
+            \dfrac{x}{1+\e ^{\frac{1}{x}}}, & x<0 \\0,&x=0\\ \dfrac{2x}{1+\e^x},&x>0
+        \end{cases}$ 求函数在点 $x=0$ 处的导数.
 \end{example}
 \begin{solution}
-    $f(x)$ 是分段函数, 按定义分别求 $f(x)$ 在 $x=0$ 处的左、右导数, 
+    $f(x)$ 是分段函数, 按定义分别求 $f(x)$ 在 $x=0$ 处的左、右导数,
     $$f'_(0)=\lim_{x\to0^-}\dfrac{\dfrac{x}{1+\e ^{\frac{1}{x}}}-0}{x}=\lim_{x\to0 ^-}\dfrac{1}{1+\e ^{\frac{1}{x}}}=1,~f'_+(0)=\lim_{x\to0^+}\dfrac{\dfrac{2x}{1+\e^x}-0}{x}=\lim_{x\to0^+}\dfrac{2}{1+\e^x}=1$$
     因为左右导数相等, 所以 $f'(0)=1$.
 \end{solution}
@@ -274,7 +276,7 @@ $f_-'(x_0)~(f_+'(x_0))$ 表示函数在点 $x_0$ 处的左 (右) 导数, 而 $\d
 \subsection{反函数、用参数方程确定的函数、隐函数的导数}
 
 \begin{theorem}[反函数的导数]
-    导数 $f'(x)\neq0$ 的可微函数 $y=f(x)~  (a<x<b)$ 具有单值连续的反函数 $x=f^{-1}(y)$, 
+    导数 $f'(x)\neq0$ 的可微函数 $y=f(x)~  (a<x<b)$ 具有单值连续的反函数 $x=f^{-1}(y)$,
     此反函数可微, 那么 $$x'_y=\dfrac{1}{y_x'}$$ 反函数的导数等于原函数的导数的倒数.
     \index{反函数的导数}
 \end{theorem}
@@ -297,7 +299,7 @@ $f_-'(x_0)~(f_+'(x_0))$ 表示函数在点 $x_0$ 处的左 (右) 导数, 而 $\d
     $\begin{cases}
             x=\varphi(t) \\
             y=\psi (t)
-        \end{cases}(\alpha<t<\beta)$, 其中 $\varphi(t)$ 和 $\psi(t)$ 为可微函数, 且 $\varphi'(t)\neq0$, 
+        \end{cases}(\alpha<t<\beta)$, 其中 $\varphi(t)$ 和 $\psi(t)$ 为可微函数, 且 $\varphi'(t)\neq0$,
     在某区域内确定 $y$ 为 $x$ 的单值连续函数: $y=\psi\left(\varphi^{-1}(x)\right)$, 则此函数的导数为
     $$y'_x=\dfrac{y'_t}{x'_t}.$$
     \index{用参数方程确定的函数的导数}
@@ -305,19 +307,18 @@ $f_-'(x_0)~(f_+'(x_0))$ 表示函数在点 $x_0$ 处的左 (右) 导数, 而 $\d
 
 \begin{example}[2017 数二]
     设函数 $y=y(x)$ 由参数方程 $\begin{cases}
-        x=t+\e^t\\y=\sin t
-    \end{cases}$ 确定, 求 $\displaystyle\eval{\dv[2]{y}{x}}_{x=0}$
+            x=t+\e^t \\y=\sin t
+        \end{cases}$ 确定, 求 $\displaystyle\eval{\dv[2]{y}{x}}_{x=0}$
 \end{example}
 \begin{solution}
-    $\displaystyle\dv{y}{x}=\dv{y}{t}\cdot\qty(\dv{x}{t})^{-1}=\dfrac{\cos t}{1+\e^t}$, 那么 
+    $\displaystyle\dv{y}{x}=\dv{y}{t}\cdot\qty(\dv{x}{t})^{-1}=\dfrac{\cos t}{1+\e^t}$, 那么
     $$\dv[2]{y}{x}=\dv{x}\qty(\dv{y}{x})=\dv{t}\qty(\dv{y}{x})\cdot\qty(\dv{x}{t})^{-1}=\dfrac{-\sin t\qty(1+\e^t)-\e^t\cos t}{\qty(1+\e^t)^3}$$
     因此 $\displaystyle\eval{\dv[2]{y}{x}}_{x=0}=-\dfrac{1}{8}.$
 \end{solution}
 
 \begin{theorem}[隐函数的导数]
-    若可微函数 $y=y(x)$ 满足方程 $F(x,y)=0$, 则此隐函数的导数为
+    \index{隐函数的导数}若可微函数 $y=y(x)$ 满足方程 $F(x,y)=0$, 则此隐函数的导数为
     $$\dfrac{\dd }{\dd x}[F(x,y)]=0.$$
-    \index{隐函数的导数}
 \end{theorem}
 
 \begin{example}
@@ -334,7 +335,7 @@ $f_-'(x_0)~(f_+'(x_0))$ 表示函数在点 $x_0$ 处的左 (右) 导数, 而 $\d
     设 $y=y(x)$ 由方程 $x^3+y^3+xy=1$ 确定, 求 $\displaystyle\lim_{x\to0}\dfrac{3y+x-3}{x^2}.$
 \end{example}
 \begin{solution}
-    当 $x=0$ 时, $y(0)=1$, 
+    当 $x=0$ 时, $y(0)=1$,
     方程 $x^3+y^3+xy=1$ 两边同时对 $x$ 求导, 得 $$3x^2+3y^2\cdot y'+y+xy'=0\Rightarrow y'(0)=-\dfrac{1}{3}$$
     继续对 $x$ 求导, 得 $$6x+6y\cdot\qty(y')^2+3y^2\cdot y''+2y'+xy''=0\Rightarrow y''(0)=0$$
     将 $y(x)$ 在 $x=0$ 处 Taylor 展开, 得
@@ -354,16 +355,16 @@ $f_-'(x_0)~(f_+'(x_0))$ 表示函数在点 $x_0$ 处的左 (右) 导数, 而 $\d
 
 \begin{example}
     设函数 $y=y(x)$ 由方程组 $\begin{cases}
-        x=3t^2+2t+3\\ \e^y\sin t-y+1=0
-    \end{cases}$ 所确定, 试求 $\displaystyle\eval{\dv[2]{y}{x}}_{t=0}.$
+            x=3t^2+2t+3 \\ \e^y\sin t-y+1=0
+        \end{cases}$ 所确定, 试求 $\displaystyle\eval{\dv[2]{y}{x}}_{t=0}.$
 \end{example}
 \begin{solution}
     对方程组每个方程两边分别取微分, 得 $\begin{cases}
-        \dd x=6t\dd t+2\dd t\\ \e^y\sin t\dd y+\e^y\cos t\dd t-\dd y=0
-    \end{cases}$ 则 $\displaystyle\dv{x}{t}=6t+2,~\dv{y}{t}=\dfrac{\e^y\cos t}{1-\e^y\sin t}$, 那么 
+            \dd x=6t\dd t+2\dd t \\ \e^y\sin t\dd y+\e^y\cos t\dd t-\dd y=0
+        \end{cases}$ 则 $\displaystyle\dv{x}{t}=6t+2,~\dv{y}{t}=\dfrac{\e^y\cos t}{1-\e^y\sin t}$, 那么
     \begin{flalign*}
-        \dv{y}{x}&=\dv{y}{t}\cdot\qty(\dv{x}{t})^{-1}=\dfrac{\e^y\cos t}{\qty(1-\e^y\sin t)(6t+2)}=\dfrac{\e^y\cos t}{\qty(2-y)(6t+2)}\\
-        \dv[2]{y}{x}&=\dv{t}\qty[\dfrac{\e^y\cos t}{(2-y)(6t+2)}]\qty(\dv{t}{x})=\dfrac{\qty(\e^yy'_t\cos t-\e^y\sin t)(2-y)(6t+2)-\qty[\qty(-y'_t)(6t+2)+6(2-y)]\e^y\cos t}{(2-y)^2(6t+2)^3}
+        \dv{y}{x}    & =\dv{y}{t}\cdot\qty(\dv{x}{t})^{-1}=\dfrac{\e^y\cos t}{\qty(1-\e^y\sin t)(6t+2)}=\dfrac{\e^y\cos t}{\qty(2-y)(6t+2)}                                                     \\
+        \dv[2]{y}{x} & =\dv{t}\qty[\dfrac{\e^y\cos t}{(2-y)(6t+2)}]\qty(\dv{t}{x})=\dfrac{\qty(\e^yy'_t\cos t-\e^y\sin t)(2-y)(6t+2)-\qty[\qty(-y'_t)(6t+2)+6(2-y)]\e^y\cos t}{(2-y)^2(6t+2)^3}
     \end{flalign*}
     由 $\displaystyle\eval{\dv{y}{t}}_{t=0},~\eval{y}_{t=0}=1$, 代入上式, 得 $\displaystyle\eval{\dv[2]{y}{x}}_{t=0}=\dfrac{\e(2\e-3)}{4}.$
 \end{solution}
@@ -393,7 +394,7 @@ $f_-'(x_0)~(f_+'(x_0))$ 表示函数在点 $x_0$ 处的左 (右) 导数, 而 $\d
                   \dfrac{\dd y}{\dd x}=\dfrac{\dfrac{\dd y}{\dd \varphi }}{\dfrac{\dd x}{\dd \varphi }}=\dfrac{\dfrac{\dd r}{\dd \varphi }\sin \varphi +r\cos \varphi }{\dfrac{\dd r}{\dd \varphi }\cos \varphi -r\sin \varphi }\tag{*}
               \end{equation}
               所以 $\dfrac{\dd y}{\dd x}=\dfrac{\arcsin \varphi +a\varphi \cos \varphi }{\arccos \varphi -a\varphi \sin \varphi }=\tan \left( \varphi +\arctan \varphi \right) .$
-        \item $\dfrac{\dd r}{\dd \varphi}=-a\sin\varphi$, 代入 (*) 式, 且 $(\varphi\neq0,\pm\dfrac{2\pi}{3})$, 
+        \item $\dfrac{\dd r}{\dd \varphi}=-a\sin\varphi$, 代入 (*) 式, 且 $(\varphi\neq0,\pm\dfrac{2\pi}{3})$,
               $$\dfrac{\dd y}{\dd x}=\dfrac{-a\sin ^{2}\varphi +a\left( 1+\cos \varphi \right) \cos \varphi }{-a\sin \varphi \cos \varphi -a\left( 1+\cos \varphi \right) \sin \varphi }=-\dfrac{\cos 2\varphi +\cos \varphi }{\sin 2\varphi +\sin \varphi }=-\dfrac{\cos \dfrac{3\varphi }{2}\cos \dfrac{\varphi }{2}}{2\sin \dfrac{3\varphi }{2}\cos \dfrac{\varphi }{2}}=-\cot\dfrac{3\varphi}{2}.$$
         \item $\dfrac{\dd r}{\dd \varphi }=ma\e ^{m\varphi }$, 代入 (*) 式得
               $$\dfrac{\dd y}{\dd x}=\dfrac{ma\e ^{m\varphi }\sin \varphi +a\e ^{m\varphi }\cos \varphi }{ma\e ^{m\varphi }\cos \varphi -a\e ^{m\varphi }\sin \varphi }=\dfrac{m\sin \varphi +\cos \varphi }{m\cos \varphi -\sin \varphi }=\tan \left( \varphi +\arctan \dfrac{1}{m}\right) .$$
@@ -448,7 +449,7 @@ $f_-'(x_0)~(f_+'(x_0))$ 表示函数在点 $x_0$ 处的左 (右) 导数, 而 $\d
         \item $\displaystyle y^{(n)}=\left(-\frac{1}{2}\right)\left(-\frac{3}{2}\right)\cdots\left(-\frac{2n-1}{2}\right)\cdot(-2)^n\cdot(1-2x)^{-\frac{2n+1}{2}}=\frac{(2n-1)!!}{(1-2x)^{n+\frac{1}{2}}}.$
         \item $y^{(n)} =\left( -\dfrac{1}{2}\right) \left( -\dfrac{3}{2}\right) \ldots \left( -\dfrac{2n-1}{2}\right) \cdot 3^{n}\cdot \left( 3x+2\right) ^{-\frac{2n+1}{2}}=\left( -\dfrac{3}{2}\right) ^{n}\cdot\dfrac{\left( 2n-1\right) !!}{\left( 3x+2\right) ^{\frac{2}{n+1}}}.$
         \item 因为 $\displaystyle y=\frac{1}{\sqrt{1-x}}-\sqrt{1-x}$, 所以 $\displaystyle y^{(n)}=\frac{(2n-1)!!}{2^n}(1-x)^{-\frac{2n+1}{2}}+\frac{(2n-3)!!}{2^n}(1-x)^{-\frac{2n-1}{2}}.$
-        \item 因为 $\displaystyle y=\frac{(x+1)-1}{\sqrt[3]{1+x}}=(1+x)^{\frac{2}{3}}-(1+x)^{-\frac{1}{3}}$, 所以当 $n\geqslant 2,x\not=-1$ 时, 
+        \item 因为 $\displaystyle y=\frac{(x+1)-1}{\sqrt[3]{1+x}}=(1+x)^{\frac{2}{3}}-(1+x)^{-\frac{1}{3}}$, 所以当 $n\geqslant 2,x\not=-1$ 时,
               \begin{flalign*}
                   y^{(n)} & =\frac{2}{3}\left(-\frac{1}{3}\right)\left(-\frac{4}{3}\right)\cdots\left(-\frac{3n-5}{3}\right)(1+x)^{-\frac{3n-2}{3}}+\frac{1}{3}\left(-\frac{4}{3}\right)\cdots\left(-\frac{3n-2}{3}\right)(1+x)^{-\frac{3n+1}{3}} \\
                           & =\frac{(-1)^{n+1}\cdot1\cdot4\cdots(3n-5)}{3^n(1+x)^{n+\frac{1}{3}}}[2(1+x)+(3n-2)]=\frac{(-1)^{n+1}1\cdot4\cdot7\cdots(3n-5)(3n+2x)}{3^n(1+x)^{n+\frac{1}{3}}}.
@@ -522,7 +523,7 @@ $$(u\cdot v)^{(n)}=\sum_{k=0}^{n}\mathrm{C}_n^ku^{(k)}v^{(n-k)}.$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
     当 $n=1$ 时, 由于 $\left(\e ^{\frac{1}{x}}\right)'=-\dfrac{1}{x^2}\e ^{\frac{1}{x}}$, 故等式成立, \\
-    设当 $n=k$ 时等式成立, 即有 $\left(x^{k-1}\e ^{\frac{1}{x}}\right)^{(k)}=\dfrac{(-1)^k}{x^{k+1}}\e ^{\frac{1}{x}}$, 要证等式对 $n=k+1$ 时也成立, 
+    设当 $n=k$ 时等式成立, 即有 $\left(x^{k-1}\e ^{\frac{1}{x}}\right)^{(k)}=\dfrac{(-1)^k}{x^{k+1}}\e ^{\frac{1}{x}}$, 要证等式对 $n=k+1$ 时也成立,
     \begin{flalign*}
         \left(x^k\e ^{\frac{1}{x}}\right)^{(k+1)} & =\left[\left(x\cdot x^{k-1}\e ^{\frac{1}{x}}\right)^{(k)}\right]'=\left[x\left(x^{k-1}\e ^{\frac{1}{x}}\right)^{(k)}+k\left(x^{k-1}\e ^{\frac{1}{x}}\right)^{(k-1)}\right]'                  \\
                                                   & =x\left(x^{k-1} \e ^{\frac{1}{x}}\right)^{(k+1)}+\left(x^{k-1} \e ^{\frac{1}{x}}\right)^{(k)}+k\left(x^{k-1} \e ^{\frac{1}{x}}\right)^{(k)}                                                  \\
@@ -649,7 +650,7 @@ $$(u\cdot v)^{(n)}=\sum_{k=0}^{n}\mathrm{C}_n^ku^{(k)}v^{(n-k)}.$$
                    & =\dfrac{(-1) ^{n}n!}{2\mathrm{i}\left( 1+x^{2}\right) ^{n+1}}\cdot \left[ \left( x+\mathrm{i}\right) ^{n+1}-\left( x-\mathrm{i}\right) ^{n+1}\right] =\dfrac{(-1) ^{n}n!}{2\mathrm{i}\left( 1+x^{2}\right) ^{n+1}}\cdot \left[ r^{n+1}\e ^{\mathrm{i}(n+1) \theta }-r^{n+1}\e ^{-\mathrm{i}(n+1) \theta }\right]             \\
                    & =\dfrac{(-1) ^{n}n!}{\left( 1+x^{2}\right) ^{n+1}}r^{n+1}\sin (n+1) \theta =\dfrac{(-1) ^{n}n!}{\left( 1+x^{2}\right) ^{\frac{n+1}{2}}}\sin \left[ (n+1) \cdot \arccot x\right]
     \end{flalign*}
-    于是 $y'(0) =1,~y(n+1) (0) =(-1) ^{n}n!\sin \dfrac{(n+1) }{2}\pi ,~n=1,2,\ldots $, 故当 $n=2m$ 时, 
+    于是 $y'(0) =1,~y(n+1) (0) =(-1) ^{n}n!\sin \dfrac{(n+1) }{2}\pi ,~n=1,2,\ldots $, 故当 $n=2m$ 时,
     $$y^{\left( 2m+1\right) }(0) =(-1) ^{2m}\left( 2m\right) !\sin \dfrac{2m+1}{2}\pi =(-1) ^{m}\left( 2m\right) !$$
     当 $n=2m-1$ 时, $y^{(2m)}(0)=0.$
 \end{solution}
@@ -658,18 +659,18 @@ $$(u\cdot v)^{(n)}=\sum_{k=0}^{n}\mathrm{C}_n^ku^{(k)}v^{(n-k)}.$$
     设 $f(x)=x^{2021}\e ^{2020x}\sin x$, 求 $f^{(2023)}(0)$.
 \end{example}
 \begin{solution}
-    \textbf{法一: }令 $h(x)=x^{2021},~g(x)=\e ^{2020x}\sin x$, 根据 Leibniz 求导公式, 
+    \textbf{法一: }令 $h(x)=x^{2021},~g(x)=\e ^{2020x}\sin x$, 根据 Leibniz 求导公式,
     \begin{flalign*}
         f^{(2023)}(x) & =\sum_{k=0}^{2023}\mathrm{C}_{2023}^kh^{(2023-k)}(x)g^{(k)}(x)=\sum_{k=0}^{2023}\mathrm{C}_{2023}^k\qty(x^{2021})^{(2023-k)}\qty(\e ^{2020x}\sin x)^{(k)} \\
                       & =\sum_{k=0}^{2023}\mathrm{C}_{2023}^k\qty(x^{2021})^{(2023-k)}\qty[\sum_{m=0}^{k}\mathrm{C}_k^m\qty(\e ^{2020x})^{(m-k)}\sin^{(m)}x]                      \\
                       & =\sum_{k=0}^{2023}\mathrm{C}_{2023}^k\dfrac{2021!}{(k-2)!}x^{k-2}\qty[\sum_{m=0}^{k}\mathrm{C}_k^m (2020)^{k-m}\e ^{2020x}\sin\qty(x+\dfrac{m\pi}{2})]
     \end{flalign*}
-    当 $x=0$ 时, 
+    当 $x=0$ 时,
     \begin{flalign*}
         f^{(2023)}(0)=\mathrm{C}_{2023}^2\dfrac{2021!}{(2-2)!}\qty[\sum_{m=0}^{2}\mathrm{C}_2^m(2020)^{2-m}\sin\qty(\dfrac{m\pi}{2})]=\dfrac{2023!}{2!\cdot2021!}2021!\cdot2!\cdot2020=2020\cdot2023!.
     \end{flalign*}
     \textbf{法二: }
-    利用 Taylor 公式的唯一性, 
+    利用 Taylor 公式的唯一性,
     \begin{flalign*}
         f(x)  =x^{2021}\e ^{2020x}\sin x=x^{2021}\qty(1+2020x+1010x^2+o(x^2))\qty(x-\dfrac{x^3}{6}+o(x^3))
         =x^{2022}+2020x^{2023}+o(x^{2023})

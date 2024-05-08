@@ -318,18 +318,16 @@
 $\displaystyle f(t)=\sum_{n=0}^{\infty}a_nt^n$, 即只通过一个参数 $t$ 表示整个数列。
 
 \begin{theorem}[加法性质]
-    若 $f(t)$ 是 $\{a_n\}_0^{\infty}$ 的生成函数, $g(t)$ 是 $\{b_n\}_0^{\infty}$ 的生成函数, 
+    \index{加法性质}若 $f(t)$ 是 $\{a_n\}_0^{\infty}$ 的生成函数, $g(t)$ 是 $\{b_n\}_0^{\infty}$ 的生成函数, 
     则 $\alpha f(t)+\beta g(t)$ 是 $\{\alpha a_n+\beta b_n\}_0^{\infty}$ 的生成函数.
     $$\alpha\sum_{n=0}^{\infty}a_nt^n+\beta\sum_{n=0}^{\infty}b_nt^n=\sum_{n=0}^{\infty}(\alpha a_n+\beta b_n)t^n.$$
-    \index{加法性质}
 \end{theorem}
 \begin{theorem}[移位性质]
-    若 $f(t)$ 是 $\{a_n\}_0^{\infty}$ 的生成函数, 则 $t^mf(t)$ 是 $\{a_{n-m}\}_m^{\infty}$ 的生成函数.
+    \index{移位性质}若 $f(t)$ 是 $\{a_n\}_0^{\infty}$ 的生成函数, 则 $t^mf(t)$ 是 $\{a_{n-m}\}_m^{\infty}$ 的生成函数.
     $$t^m\sum_{n=0}^{\infty}a_nt^n=\sum_{n=m}^{\infty}a_{n-m}t^n.$$
-    \index{移位性质}
 \end{theorem}
 \begin{theorem}[变换性质]
-    显然 $f(ct)$ 是序列 $a_0,ca_1,c^2a_2,\cdots$ 的生成函数, 特别地 $1,c,c^2,c^3,\cdots$ 的生成函数是 $\dfrac{1}{1-ct}$, 
+    \index{变换性质}显然 $f(ct)$ 是序列 $a_0,ca_1,c^2a_2,\cdots$ 的生成函数, 特别地 $1,c,c^2,c^3,\cdots$ 的生成函数是 $\dfrac{1}{1-ct}$, 
     在数列里每隔一项取项时, 有以下常用的技巧:
     $$\begin{matrix}
             \dfrac{f(t)+f(-t)}{2} & = & a_0 & +    & a_2t^2 & +      & a_4t^4 & +      & \cdots &        \\
@@ -337,7 +335,6 @@ $\displaystyle f(t)=\sum_{n=0}^{\infty}a_nt^n$, 即只通过一个参数 $t$ 表
         \end{matrix}$$
     利用单位复根, 可以推广到每隔 $m-1$ 取第 $m$ 项: 令 $\omega=\e ^{2\pi\mathrm{i}/m}=\cos\left(\dfrac{2\pi}{m}\right)+\mathrm{i}\sin\left(\dfrac{2\pi}{m}\right)$, 有
     $$\sum_{n\leqslant 0,n\bmod m=r}a_nt^n=\dfrac{1}{m}\sum_{0\leqslant k\leqslant m}\omega^{-kr}f\left(\omega^kt\right)~  (0\leqslant r<m).$$
-    \index{变换性质}
 \end{theorem}
 
 \begin{example}

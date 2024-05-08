@@ -6,9 +6,8 @@
 \subsection{反常积分的计算}
 
 \begin{theorem}[反常积分的区间再现公式]
-    若 $\displaystyle\int_{0}^{+\infty}f(x)\dd x$ 收敛, 则对任意的正整数 $k$, 都有
+    \index{反常积分的区间再现公式}若 $\displaystyle\int_{0}^{+\infty}f(x)\dd x$ 收敛, 则对任意的正整数 $k$, 都有
     $$\int_{0}^{+\infty}f(x)\dd x=\int_{0}^{+\infty}\dfrac{k}{x^2}f\left(\dfrac{k}{x}\right)\dd x=\dfrac{1}{2}\int_{0}^{+\infty}\left[f(x)+\dfrac{k}{x^2}f\left(\dfrac{k}{x}\right)\right]\dd x.$$
-    \index{反常积分的区间再现公式}
 \end{theorem}
 
 \begin{example}
@@ -357,11 +356,10 @@
 \end{proof}
 
 \begin{theorem}[Frullani 积分定理]
-    形如 $\displaystyle\int_{0}^{+\infty}\dfrac{f(ax)-f(bx)}{x}\dd x~ (a>0,b>0)$, 其中 $f(x)$ 在 $(0,+\infty)$ 内连续, 且 $f(0^+),f(+\infty)\in\mathbb{R} $, 则有
+    \index{Frullani 积分定理}形如 $\displaystyle\int_{0}^{+\infty}\dfrac{f(ax)-f(bx)}{x}\dd x~ (a>0,b>0)$, 其中 $f(x)$ 在 $(0,+\infty)$ 内连续, 且 $f(0^+),f(+\infty)\in\mathbb{R} $, 则有
     $$\int_{0}^{+\infty}\dfrac{f(ax)-f(bx)}{x}\dd x=(f(+\infty)-f(0^+))\ln\dfrac{a}{b}.$$
     若 $\displaystyle\lim_{x\to+\infty}f(x)$ 不存在, 但积分 $\displaystyle\int_{0}^{+\infty}\dfrac{f(x)}{x}\dd x$ 存在, 则
     $$\int_{0}^{+\infty}\dfrac{f(ax)-f(bx)}{x}\dd x=-f(0)\ln\dfrac{a}{b}.$$
-    \index{Frullani 积分定理}
 \end{theorem}
 
 \begin{example}

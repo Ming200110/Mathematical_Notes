@@ -12,7 +12,7 @@
 \end{example}
 \begin{solution}
     \textbf{法一: }设所求向量为 $ \vec{c}=(x, y, z)$, 则由题设有 $ \vec{c} \perp \vec{a} \times \vec{b},~ \vec{c} \perp \vec{a},~|\vec{c}|=\sqrt{93}$, 
-    而 $ \vec{a} \times \vec{b}=\left|\begin{array}{ccc}\vec{i} & \vec{j} & \vec{k} \\ 2 & 1 & -1 \\ 1 & -3 & 1\end{array}\right|=-2 \vec{i}-3 \vec{j}-7 \vec{k}$, 于是有
+    而 $ \vec{a} \times \vec{b}=\mqty|\vec{i} & \vec{j} & \vec{k} \\ 2 & 1 & -1 \\ 1 & -3 & 1|=-2 \vec{i}-3 \vec{j}-7 \vec{k}$, 于是有
     $\left\{\begin{array}{llll}
             -2x & -3y  & -7z  & =0  \\
             2x  & +y   & -z   & =0  \\
@@ -85,20 +85,14 @@
     即 $ \vb*{c}=\vb*{a} \times \vb*{b}$; $\vb*{c} $ 的模等于 $ |\vb*{a}||\vb*{b}| \sin (\widehat{\vb*{a}, \vb*{b}})$, $\vb*{c} $ 的方向垂直于 $ \vb*{a} $ 与 $ \vb*{b} $ 所决定的平面,且 $ \vb*{a}, \vb*{b}, \vb*{c} $ 顺次构成右手系.
     若向量 $ \vb*{a} $ 或 $ \vb*{b} $ 为零向量时, 则定义 $ \vb*{a} \times \vb*{b}=\mathbf{0} $, 向量积 $ \vb*{a} \times \vb*{b} $ 坐标表示式为
     $$
-        \vb*{a} \times \vb*{b}=\left|\begin{array}{ccc}
-            \vb*{i} & \vb*{j} & \vb*{k} \\
+        \vb*{a} \times \vb*{b}=\mqty|\vb*{i} & \vb*{j} & \vb*{k} \\
             a_{1}   & a_{2}   & a_{3}   \\
-            b_{1}   & b_{2}   & b_{3}
-        \end{array}\right|=\left\{\left|\begin{array}{ll}
-            a_{2} & a_{3} \\
-            b_{2} & b_{3}
-        \end{array}\right|,-\left|\begin{array}{ll}
-            a_{1} & a_{3} \\
-            b_{1} & b_{3}
-        \end{array}\right|,\left|\begin{array}{ll}
-            a_{1} & a_{2} \\
-            b_{1} & b_{2}
-        \end{array}\right|\right\} .
+            b_{1}   & b_{2}   & b_{3}|=\qty{
+                \mqty|a_{2} & a_{3} \\
+            b_{2} & b_{3}|,\mqty|a_{1} & a_{3} \\
+            b_{1} & b_{3}|,\mqty|a_{1} & a_{2} \\
+            b_{1} & b_{2}|
+            }.
     $$
 \end{definition}
 
@@ -143,11 +137,10 @@
 \end{solution}
 
 \begin{theorem}[Lagrange 恒等式]
-    对于任意两个向量 $\vb*{a}$ 和 $\vb*{b}$, 满足以下恒等关系式:
+    \index{Lagrange 恒等式}对于任意两个向量 $\vb*{a}$ 和 $\vb*{b}$, 满足以下恒等关系式:
     $$|\vb*{a} \times \vb*{b}|^{2}=|\vb*{a}|^{2}|\vb*{b}|^{2}-(\vb*{a} \cdot \vb*{b})^{2}
         =\mqty|\vb*{a} \cdot \vb*{a} & \vb*{a} \cdot \vb*{b} \\
         \vb*{a} \cdot \vb*{b} & \vb*{b} \cdot \vb*{b}|.$$
-    \index{Lagrange 恒等式}
 \end{theorem}
 
 % \begin{example}

@@ -192,12 +192,11 @@
 \subsubsection{周期函数的定积分}
 
 \begin{theorem}[周期函数的定积分公式]
-    设 $f(x)$ 是连续的周期函数, 最小正周期为 $T$, 则有
+    \index{周期函数的定积分公式} 设 $f(x)$ 是连续的周期函数, 最小正周期为 $T$, 则有
     \begin{enumerate}[label=(\arabic{*})]
         \item $\displaystyle \int_{a}^{a+T}f(x)\dd x=\int_{0}^{T}f(x)\dd x$;
         \item $\displaystyle \int_{a}^{a+nT}f(x)\dd x=n\int_{0}^{T}f(x)\dd x.$
     \end{enumerate}
-    \index{周期函数的定积分公式}
 \end{theorem}
 
 \begin{example}
@@ -409,9 +408,8 @@
 %     \end{flalign*}
 % \end{theorem}
 \begin{theorem}[第一积分中值定理]
-    设 $ f(x) $ 在 $ [a, b] $ 上连续, $g(x) $ 在 $ [a, b] $ 上可积, 且不变号, 则 $ \exists \xi \in(a, b) $ 使得
+    \index{第一积分中值定理}设 $ f(x) $ 在 $ [a, b] $ 上连续, $g(x) $ 在 $ [a, b] $ 上可积, 且不变号, 则 $ \exists \xi \in(a, b) $ 使得
     $$\int_{a}^{b} f(x) g(x) \dd x=f(\xi) \int_{a}^{b} g(x) \dd x .$$
-    \index{第一积分中值定理}
 \end{theorem}
 
 \begin{example}
@@ -495,9 +493,8 @@
 \subsubsection{第二积分中值定理}
 
 \begin{theorem}[第二积分中值定理 A]
-    在 $ [a, b] $ 上, 若 $ f(x) $ 非负单调递减, $g(x) $ 可积, 则 $ \exists \xi \in[a, b] $ 使得
+    \index{第二积分中值定理}在 $ [a, b] $ 上, 若 $ f(x) $ 非负单调递减, $g(x) $ 可积, 则 $ \exists \xi \in[a, b] $ 使得
     $$I=\int_{a}^{b} f(x) g(x) \dd  x=f(a) \int_{a}^{\xi} g(x) \dd  x.$$
-    \index{第二积分中值定理}
 \end{theorem}
 \begin{theorem}[第二积分中值定理 B]
     在 $ [a, b] $ 上, 若 $ f(x) $ 非负单调递增, $g(x) $ 可积, 则 $ \exists \xi \in[a, b] $ 使得
@@ -549,9 +546,8 @@
 \begin{theorem}[平面图形面积公式]
     平面图形由曲线 $y_1=f_1(x),~y_2=f_2(x)$ 和直线 $x=a,~x=b~ (a<b)$ 所围成, 那么围成的面积计算公式为:
     $$A=\int_{a}^{b}\qty|f_1(x)-f_2(x)|\dd x.$$
-    若由曲线 $r=r(\theta)~ (\alpha\leqslant \theta\leqslant \beta)$ 围成, 则其面积为:
+    若由曲线 $r=r(\theta)~ (\alpha\leqslant \theta\leqslant \beta)$ 围成, 则其面积为:\index{平面图形面积公式}
     $$A=\dfrac{1}{2}\int_{\alpha}^{\beta}r^2(\theta)\dd \theta.$$
-    \index{平面图形面积公式}
 \end{theorem}
 
 \begin{example}
@@ -573,9 +569,8 @@
 \subsubsection{旋转体的侧面积和体积}
 
 \begin{theorem}[旋转体的侧面积公式]
-    由 $xOy$ 平面上的曲线 $y=f(x)~ (a\leqslant x\leqslant b)$ 绕 $x$ 轴旋转而成的旋转曲面的面积为:
+    \index{旋转体的侧面积公式}由 $xOy$ 平面上的曲线 $y=f(x)~ (a\leqslant x\leqslant b)$ 绕 $x$ 轴旋转而成的旋转曲面的面积为:
     $$A=2\pi\int_{a}^{b}f(x)\sqrt{1+\qty[f'(x)]^2 }\dd x.$$
-    \index{旋转体的侧面积公式}
 \end{theorem}
 
 \begin{example}
@@ -590,11 +585,10 @@
 \end{solution}
 
 \begin{theorem}[旋转体的体积公式]
-    由 $xOy$ 平面上的曲线 $y=f(x)$ 与直线 $x=a,~x=b$ 以及 $x$ 轴所围成的曲边梯形绕 $x$ 轴旋转而成的旋转体体积为:
+    \index{旋转体的体积公式}由 $xOy$ 平面上的曲线 $y=f(x)$ 与直线 $x=a,~x=b$ 以及 $x$ 轴所围成的曲边梯形绕 $x$ 轴旋转而成的旋转体体积为:
     $$V_x=\pi\int_{a}^{b}f^2(x)\dd x.$$
     绕 $y$ 轴旋转而成的旋转体体积为:
     $$V_y=2\pi\int_{a}^{b}xf(x)\dd x.$$
-    \index{旋转体的体积公式}
 \end{theorem}
 
 \begin{example}
@@ -654,13 +648,12 @@
 \subsubsection{平面曲线的弧长}
 
 \begin{theorem}[平面曲线弧长公式]
-    若平面曲线的方程为 $y=f(x)~ (a\leqslant x\leqslant b)$, 则 $x$ 介于 $a$ 与 $b$ 之间的曲线弧长为:
+    \index{平面曲线弧长公式}若平面曲线的方程为 $y=f(x)~ (a\leqslant x\leqslant b)$, 则 $x$ 介于 $a$ 与 $b$ 之间的曲线弧长为:
     $$s=\int_{a}^{b}\sqrt{1+\qty(y')^2}\dd x=\int_{a}^{b}\sqrt{1+\qty[f'(x)]^2 }\dd x.$$
     若方程由极坐标给出: $r=r(\theta)~ (\alpha\leqslant \theta\leqslant \beta)$, 则 $\theta$ 介于 $\alpha$ 与 $\beta$ 之间的曲线弧长为:
     $$s=\int_{\alpha}^{\beta}\sqrt{r^2(\theta)+\qty[r'(\theta)]^2}\dd \theta.$$
     若方程由参数方程给出: $x=\varphi(t),~y=\psi(t)~ (\alpha\leqslant t\leqslant \beta)$, 则 $t$ 介于 $\alpha$ 与 $\beta$ 之间的曲线弧长为:
     $$s=\int_{\alpha}^{\beta}\sqrt{\qty[\varphi'(t)]^2+\qty[\psi'(t)]^2}\dd t.$$
-    \index{平面曲线弧长公式}
 \end{theorem}
 
 \begin{example}
@@ -879,7 +872,7 @@
 \end{proof}
 
 \begin{example}
-    设 $f(x)\in D(0,1),~f(0)=f(1)=-2,~\displaystyle\int_{0}^{1}f(x)\dd x=0$, 证明: $\exists\xi\in(0,1)$, 使得 $f'(\xi)-f(\xi)=\xi.$
+    设 $f(x)\in D(0,1),~f(0)=f(1)=-2,~\displaystyle\int_{0}^{1}f(x)\dd x=0$, 证明: $\exists\xi\in(0,1)$, 使得 $$f'(\xi)-f(\xi)=\xi.$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
     令 $F(x)=\e^{-x}(f(x)+x+1)$, 有 $F(0)=-1,~F(1)=0$, 因为 $\displaystyle\int_{0}^{1}f(x)\dd x=0$, 由积分中值定理知, $\exists\eta\in(0,1)$, 使得
@@ -1601,7 +1594,7 @@
     其中 $D=\{(x,y)|a\leqslant x,y\leqslant b\}$, 故得 $\displaystyle \left(\int_{a}^{b} f(x) g(x) \dd  x\right)^{2} \leqslant \int_{a}^{b} f^{2}(x) \dd  x \cdot \int_{a}^{b} g^{2}(x) \dd  x.$
 \end{proof}
 \begin{proof}[{\songti \textbf{证法三}}]
-    因为 $f(x),g(x)$ 在 $[a,b]$ 上连续, 所以 $f(x),g(x),f(x)g(x)$ 在 $[a,b]$ 上可积, 将 $[a,b]~n$ 等分, 取 $ \displaystyle\Delta x=\frac{b-a}{n}, \xi_{i}=x_{i}=a+\frac{i}{n}(b-a)$, 
+    因为 $f(x),g(x)$ 在 $[a,b]$ 上连续, 所以 $f(x),g(x),f(x)g(x)$ 在 $[a,b]$ 上可积, 将 $[a,b]~n$ 等分, 取 $$ \displaystyle\Delta x=\frac{b-a}{n}, \xi_{i}=x_{i}=a+\frac{i}{n}(b-a)$$ 
     则由离散情形 的 Cauchy-Schwarz 不等式, 有
     $$\left(\sum_{i=1}^{n} f\left(x_{i}\right) g\left(x_{i}\right)\right)^{2} \leqslant\left(\sum_{i=1}^{n} f^{2}\left(x_{i}\right)\right)\left(\sum_{i=1}^{n} g^{2}\left(x_{i}\right)\right)$$
     于是得 $ \displaystyle\left(\frac{b-a}{n} \sum_{i=1}^{n} f\left(x_{i}\right) g\left(x_{i}\right)\right)^{2} \leqslant\left(\frac{b-a}{n} \sum_{i=1}^{n} f^{2}\left(x_{i}\right)\right)\left(\frac{b-a}{n} \sum_{i=1}^{n} g^{2}\left(x_{i}\right)\right)$, 
@@ -1628,7 +1621,7 @@
 % \end{proof}
 
 \begin{example}
-    已知 $f(x)$ 在闭区间 $[0,1]$ 上的连续函数, 且满足 $\displaystyle\int_{0}^{1} f(x)\dd x=1$, 求函数 $f(x)$, 使得 $\displaystyle I=\int_{0}^{1}(1+x^2)f^2(x)\dd x$ 取得最小值.
+    已知 $f(x)$ 在闭区间 $[0,1]$ 上的连续函数, 且满足 $\displaystyle\int_{0}^{1} f(x)\dd x=1$, 求函数 $f(x)$, 使得 $$\displaystyle I=\int_{0}^{1}(1+x^2)f^2(x)\dd x$$ 取得最小值.
 \end{example}
 \begin{solution}
     由 Cauchy-Schwarz 不等式, 
