@@ -72,6 +72,26 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
 
 \subsubsection{二阶常系数非齐次线性微分方程的通解结构}
 
+\begin{example}[1993 数三]
+    设二阶常系数非齐次线性微分方程 $ y^{\prime \prime}+a y^{\prime}+b y=k \mathrm{e}^{x} $ 的一个特解为 $ y=\mathrm{e}^{2 x}+(1+x) \mathrm{e}^{x} $, 试确定 $ a, b, k $, 并求该方程的通解. 
+\end{example}
+\begin{solution}
+    \textbf{法一: }
+    将特解 $ y=\mathrm{e}^{2 x}+(1+x) \mathrm{e}^{x} $ 代人原方程, 得
+    $$(4+2 a+b) \mathrm{e}^{2 x}+(3+2 a+b) \mathrm{e}^{x}+(1+a+b) x \mathrm{e}^{x}=k \mathrm{e}^{x} $$
+    比较两边同类项的系数, 得 $ 2 a+b=-4,2 a+b-k=-3, a+b=-1 $, 解得 $ a=-3 , b=2, k=-1 $ 故原方程为
+    $$y^{\prime \prime}-3 y^{\prime}+2 y=-\mathrm{e}^{x} $$
+    又对应的齐次线性方程的特征方程为 $ r^{2}-3 r+2=0 $, 解得特征根为 $ r_{1}=1, r_{2}=2 $, 于是可设原方程的特解形式为 $ y^{*}=c x \mathrm{e}^{x} $, 把它代人原方程中得 $ c=1 $, 故由通解结构知原方程的通解为 $$ y=C_{1} \mathrm{e}^{x}+C_{2} \mathrm{e}^{2 x}+x \mathrm{e}^{x}$$ 其中 $ C_{1}, C_{2} $ 为任意常数.\\ 
+    \textbf{法二: }
+    由已知及通解的结构与特解形式, 得 $ \mathrm{e}^{2 x} $ 与 $ \mathrm{e}^{x} $ 应是对应齐次线性方程的特解, $ x \mathrm{e}^{x} $ 是非齐次线性方程的一个特解. 于是特征方程为 $$ r^{2}+a r+b=(r-1)(r-2)=r^{2}-3 r+2$$ 
+    即得 $ a=-3, b=2$, 又将 $ y^{*}=x \mathrm{e}^{x} $ 代人原方程 $ y^{\prime \prime}-3 y^{\prime}+2 y=k \mathrm{e}^{x} $ 中得 $ k=-1$, 故原方程为 $ y^{\prime \prime}-3 y^{\prime}+2 y=-\mathrm{e}^{x} $, 其通解为 $ y=C_{1} \mathrm{e}^{x}+C_{2} \mathrm{e}^{2 x}+x \mathrm{e}^{x} $, 其中 $ C_{1}, C_{2} $ 为任意常数.\\ 
+    \textbf{法三: }由已知及通解的结构与特解形式, 得 $ \mathrm{e}^{2 x}, \mathrm{e}^{x} $ 是对应齐次线性方程的特解, $ x \mathrm{e}^{x} $ 是非齐次线性方程的一个特解, 分别代人对应的方程, 得 
+    $$ \begin{cases}
+        4+2 a+b=0, \\ 1+a+b=0, \\ (2+x)+a(1+x)+b x=k
+    \end{cases}$$
+    解得 $ a=-3, b=2, k=-1 $, 故原方程为 $ y^{\prime \prime}-3 y^{\prime}+   2 y=-\mathrm{e}^{x} $, 其通解为 $ y=C_{1} \mathrm{e}^{x}+C_{2} \mathrm{e}^{2 x}+x \mathrm{e}^{x} $ 其中 $ C_{1}, C_{2} $ 为任意常数.
+\end{solution}
+
 \begin{example}
     设 $y=\e^x(C_1\sin x+C_2\cos x)$ ($C_1,C_2$ 为任意常数) 为某二阶常系数齐次线性微分方程的通解, 求该微分方程.
 \end{example}
@@ -115,15 +135,15 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
     $$(\cos x-\sin x)y''+2\sin x\cdot y'-(\sin x+\cos x)y=2\sin x-x(\sin x+\cos x).$$
 \end{solution}
 
-\begin{theorem}
-    一般地, 设线性无关的函数 $y_1,~y_2,~y_3$ 都是以下二阶非齐次线性微分方程的解, 则
-    $$y''(x)+p(x)y'+q(x)y=f(x)$$
-    \begin{enumerate}[label=(\arabic{*})]
-        \item $y_1-y_2,~y_1-y_3,~y_2-y_3$ 都是 $y''+p(x)y'+q(x)y=0$ 的解,
-              且 $y_1-y_3$ 与 $y_2-y_3$ 线性无关;
-        \item 非齐次线性微分方程的通解为 $$y=C_1(y_1-y_3)+C_2(y_2-y_3)+y_3=C_1y_1+C_2y_2+(1-C_1-C_2)y_3.$$
-    \end{enumerate}
-\end{theorem}
+% \begin{theorem}
+%     一般地, 设线性无关的函数 $y_1,~y_2,~y_3$ 都是以下二阶非齐次线性微分方程的解, 则
+%     $$y''(x)+p(x)y'+q(x)y=f(x)$$
+%     \begin{enumerate}[label=(\arabic{*})]
+%         \item $y_1-y_2,~y_1-y_3,~y_2-y_3$ 都是 $y''+p(x)y'+q(x)y=0$ 的解,
+%               且 $y_1-y_3$ 与 $y_2-y_3$ 线性无关;
+%         \item 非齐次线性微分方程的通解为 $$y=C_1(y_1-y_3)+C_2(y_2-y_3)+y_3=C_1y_1+C_2y_2+(1-C_1-C_2)y_3.$$
+%     \end{enumerate}
+% \end{theorem}
 
 % \begin{example}
 %     设二阶线性微分方程 $y''+p(x)y'+q(x)y=f(x)$ 有三个特解 $y_1=\e ^x,~y_2=\e ^x+\e ^{\frac{x}{2}},~y_3=\e ^x+\e ^{-x}$, 
@@ -301,15 +321,34 @@ $$\int \dfrac{\dd y}{\varphi(y,C_1)}=x+C_2.$$
 \end{definition}
 
 \begin{theorem}
-    若采用记号 $\mathrm{D}$ 表示对 $x$ 求导的运算 $\displaystyle\dv{x}$, 那么有
-    $$x^ky^{(k)}=\mathrm{D}(\mathrm{D}-1)\cdots(\mathrm{D}-k+1)=\mathrm{D}^{\underline{k}}.$$
+    若采用记号 $\mathrm{D}$ 表示对 $t~(t=\ln x)$ 求导的运算 $\displaystyle\dv{t}$, 那么有
+    $$x^ky_{x}^{(k)}=\mathrm{D}(\mathrm{D}-1)\cdots(\mathrm{D}-k+1)y_{t}=\mathrm{D}^{\underline{k}}y_{t}~(k\in \mathbb{N}).$$
 \end{theorem}
 
 \begin{example}
     \label{x2y2xy2y0}求微分方程 $x^2y''-2xy'+2y=0$ 的通解.
 \end{example}
 \begin{solution}
-    令 $x=\e ^t,~\mathrm{D}=\displaystyle\dv{t}$, 那么原方程化为 $\qty(\mathrm{D}^2-\mathrm{D})y=0$, 易得 $y=C_1x^2+C_2x.$
+    令 $x=\e ^t,~\mathrm{D}=\displaystyle\dv{t}$, 那么原方程化为 $(\mathrm{D}-1)(\mathrm{D}-2)y=0$, 易得 $y=C_1x^2+C_2x.$
+\end{solution}
+
+\begin{example}
+    求 Euler 方程 $\displaystyle x^2\dv[2]{y}{x}+4x\dv{y}{x}+2y=0~(x>0)$ 的通解.
+\end{example}
+\begin{solution}
+    令 $x=\e ^t,~\mathrm{D}=\displaystyle\dv{t}$, 那么原方程化为 $(\mathrm{D}+1)(\mathrm{D}+2)y=0$, 易得 $y=\dfrac{C_1}{x}+\dfrac{C_2}{x^2}.$
+\end{solution}
+
+\begin{example}
+    求方程 $\displaystyle x^3\dv[3]{y}{x}+x\dv{y}{x}-y=0$ 的通解.
+\end{example}
+\begin{solution}
+    令 $x=\e ^t,~\mathrm{D}=\displaystyle\dv{t}$, 那么原方程化为 $(\mathrm{D}-1)^3y=0$, 令 $z_1=(\mathrm{D}-1)^2y$, 则有
+    $$
+    (\mathrm{D}-1)z=0\Rightarrow z_1=(\mathrm{D}-1)^2y=C_1\e ^{t}
+    $$
+    再令 $z_2=(\mathrm{D}-1)y$，有 $$(\mathrm{D}-1)z_{2}=C_1\e ^{t}\Rightarrow z_2=(\mathrm{D}-1)y=C_1t\e ^{t}+C_2\e ^{t}$$
+    进而得到 $$y=\e ^{\int \dd t}\qty[\int\qty(C_1t \e ^{t}+C_2\e ^{t})\cdot \e ^{-\int \dd  t}\dd  t+C_3]=\qty(C_1t^2+C_2t+C_3)\e ^{t}$$ 回代 $t=\ln x$, 得 $y=x\qty(C_1\ln^2x+C_2\ln x+C_3).$
 \end{solution}
 
 \subsubsection{非齐次 Euler 微分方程}

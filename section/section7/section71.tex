@@ -253,6 +253,20 @@
 \end{theorem}
 
 \begin{example}
+    判别级数 $\displaystyle  \sum_{n=1}^{\infty} \frac{n^{n}}{n!} $ 的敛散性.
+\end{example}
+\begin{solution}
+    \textbf{法一: }利用级数收敛的必要条件, 因为 $\displaystyle  \frac{n^{n}}{n!}=\frac{n \cdot n \cdots n}{1 \cdot 2 \cdots n}>1(n>1) $, 所以 $\displaystyle  \lim _{n \rightarrow \infty} \frac{n^{n}}{n!} \neq 0 $, 故由级数收敛的必要条件知, 级数 $\displaystyle  \sum_{n=1}^{\infty} \frac{n^{n}}{n!} $ 发散.\\ 
+    \textbf{法二: }利用比较判别法, 因为当 $ n>2 $ 时, 有 $\displaystyle  \frac{n^{n}}{n!}=\frac{n \cdot n \cdot n \cdots n}{1 \cdot 2 \cdot 3 \cdots n}>n $, 且级数 $\displaystyle  \sum_{n=1}^{\infty} n $ 发散, 所以由比较判别法知, 级数 $\displaystyle  \sum_{n=1}^{\infty} \frac{n^{n}}{n!} $ 发散.\\ 
+    \textbf{法三: }利用比值判别法, 记 $\displaystyle  u_{n}=\frac{n^{n}}{n!} $, 则 $\displaystyle  \lim _{n \rightarrow \infty} \frac{u_{n+1}}{u_{n}}=\lim _{n \rightarrow \infty} \frac{(n+1)^{n+1}}{(n+1)!} \cdot \frac{n!}{n^{n}}=\lim _{n \rightarrow \infty}\left(1+\frac{1}{n}\right)^{n}=\mathrm{e}>1 $, 由比值判别法知, 级数 $\displaystyle  \sum_{n=1}^{\infty} \frac{n^{n}}{n!} $ 发散.\\ 
+    \textbf{法四: }利用根值判别法, 由 Stirling 公式: $\displaystyle  n!\sim \sqrt{2 n \pi} \cdot\left(\frac{n}{\mathrm{e}}\right)^{n}(n \rightarrow \infty) $, 有
+    $$
+    \lim _{n \rightarrow \infty} \sqrt[n]{u_{n}}=\lim _{n \rightarrow \infty} \sqrt[n]{\frac{n^{n}}{n!}}=\lim _{n \rightarrow \infty} \frac{\mathrm{e}}{\sqrt[n]{\sqrt{2 n \pi}}}=\mathrm{e}>1 
+    $$
+    故由根值判别法知, 级数 $\displaystyle  \sum_{n=1}^{\infty} \frac{n^{n}}{n!} $ 发散.
+\end{solution}
+
+\begin{example}
     判别级数 $\displaystyle \sum_{n=1}^{\infty} \frac{7^{n}}{8^{n}-5^{n}} $ 的敛散性.
 \end{example}
 \begin{solution}
@@ -323,13 +337,13 @@
     判别级数 $\displaystyle  \sum_{n=1}^{\infty} \ln \left(1+\frac{1}{n}\right) $ 的敛散性.
 \end{example}
 \begin{solution}
-    \textbf{法一: }因为 $\displaystyle  \lim _{x \rightarrow 0} \dfrac{\ln (1+x)}{x}=1 $, 所以 $\displaystyle  \lim _{n \rightarrow \infty} \dfrac{\ln \left(1+\dfrac{1}{n}\right)}{\dfrac{1}{n}}=1 $, 而级数 $\displaystyle  \sum_{n=1}^{\infty} \dfrac{1}{n} $ 发散, 故由比较判别法的极限形式知, 级数 $\displaystyle  \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.\\ 
-    \textbf{法二: }利用微分中值定理, 因为 $ \ln x $ 在 $ [1,+\infty) $ 上满足 Lagrange 定理的条件, 所以由 Lagrange 中值定理知, 存在 $ \xi_{n} \in(n, n+1)(n \geqslant 1) $, 有 $ \ln \left(1+\dfrac{1}{n}\right)=\ln (n+1)-\ln n=\dfrac{1}{\xi_{n}} $, 从而有 $ \dfrac{1}{n+1}<   \ln \left(1+\dfrac{1}{n}\right)<\dfrac{1}{n} $, 又级数 $\displaystyle  \sum_{n=1}^{\infty} \dfrac{1}{n+1} $ 发散, 故由比较判别法知, 原级数 $\displaystyle  \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.\\ 
-    \textbf{法三: }由 Taylor 公式, 有 $ \ln \left(1+\dfrac{1}{n}\right)=\dfrac{1}{n}-\dfrac{1}{2 n^{2}}+o\left(\dfrac{1}{n^{2}}\right) $, 
-    又 $ \dfrac{1}{2 n^{2}}-o\left(\dfrac{1}{n^{2}}\right) \sim \dfrac{1}{2 n^{2}}(n \rightarrow \infty) $, 所以 $ \displaystyle \sum_{n=1}^{\infty}\left(\dfrac{1}{2 n^{2}}-o\left(\dfrac{1}{n^{2}}\right)\right) $ 收敛. 而级数 $ \displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n} $ 发散, 故由级数的性质, 得原级数 $ \displaystyle \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.\\ 
+    \textbf{法一: }因为 $\displaystyle  \lim _{x \rightarrow 0} \dfrac{\ln (1+x)}{x}=1 $, 所以 $\displaystyle  \lim _{n \rightarrow \infty} \dfrac{\ln \left(1+\dfrac{1}{n}\right)}{\dfrac{1}{n}}=1 $, 而级数 $\displaystyle  \sum_{n=1}^{\infty} \dfrac{1}{n} $ 发散, 故由比较判别法的极限形式知, 级数 $\displaystyle  \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.\\
+    \textbf{法二: }利用微分中值定理, 因为 $ \ln x $ 在 $ [1,+\infty) $ 上满足 Lagrange 定理的条件, 所以由 Lagrange 中值定理知, 存在 $ \xi_{n} \in(n, n+1)(n \geqslant 1) $, 有 $ \ln \left(1+\dfrac{1}{n}\right)=\ln (n+1)-\ln n=\dfrac{1}{\xi_{n}} $, 从而有 $ \dfrac{1}{n+1}<   \ln \left(1+\dfrac{1}{n}\right)<\dfrac{1}{n} $, 又级数 $\displaystyle  \sum_{n=1}^{\infty} \dfrac{1}{n+1} $ 发散, 故由比较判别法知, 原级数 $\displaystyle  \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.\\
+    \textbf{法三: }由 Taylor 公式, 有 $ \ln \left(1+\dfrac{1}{n}\right)=\dfrac{1}{n}-\dfrac{1}{2 n^{2}}+o\left(\dfrac{1}{n^{2}}\right) $,
+    又 $ \dfrac{1}{2 n^{2}}-o\left(\dfrac{1}{n^{2}}\right) \sim \dfrac{1}{2 n^{2}}(n \rightarrow \infty) $, 所以 $ \displaystyle \sum_{n=1}^{\infty}\left(\dfrac{1}{2 n^{2}}-o\left(\dfrac{1}{n^{2}}\right)\right) $ 收敛. 而级数 $ \displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n} $ 发散, 故由级数的性质, 得原级数 $ \displaystyle \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.\\
     \textbf{法四: }利用级数敛散的定义, 记原级数的部分和为 $\displaystyle  S_{n}=\sum_{k=1}^{n} \ln \left(1+\dfrac{1}{k}\right) $, 则
     $$S_{n}=\sum_{k=1}^{n}\left[\ln \left(1+\dfrac{1}{k}\right)-\ln k\right]=\ln (1+n) \rightarrow+\infty \quad(n \rightarrow \infty)$$
-    故级数 $\displaystyle  \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.\\ 
+    故级数 $\displaystyle  \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.\\
     \textbf{法五: }利用广义积分与级数的联系
     $$ \int_{1}^{+\infty} \dfrac{1}{x} \dd x=\sum_{n=1}^{\infty} \int_{n}^{n+1} \dfrac{1}{x} \dd x=\sum_{n=1}^{\infty}[\ln (n+1)-\ln n]=\sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $$
     因为 $\displaystyle  \int_{1}^{+\infty} \dfrac{1}{x} \dd x=\lim _{b \rightarrow+\infty} \int_{1}^{b} \dfrac{1}{x} \dd x=\lim _{b \rightarrow+\infty} \ln b=+\infty $, 所以级数 $\displaystyle  \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.
@@ -342,10 +356,37 @@
     记 $\displaystyle S_n=\sum_{k=1}^{n}\dfrac{a_k}{k},~S_0=0,~S=\sum_{n=1}^{\infty}\dfrac{a_n}{n}$, 则 $S_n-S_{n-1}=\dfrac{a_n}{n}$, 且 $$\lim_{n \to \infty}S_n=S\Rightarrow S_n=S+\varepsilon _n,~(n\geqslant 1,~\varepsilon_n\to 0,~n\to \infty )$$
     令 $b_n=\dfrac{a_1+a_2+\cdots+a_n}{n}$, 则 $\forall n\in \mathbb{N}$, 有
     \begin{flalign*}
-        b_n&=\dfrac{S_1+(S_2-S_1)+\cdots+(S_n-s_{n-1})}{n}=\dfrac{\displaystyle \sum_{k=1}^{n}k(S_k-S_{k-1})}{n}=\dfrac{\displaystyle S+\varepsilon_1+\sum_{k=2}^{n}k(\varepsilon_k-\varepsilon_{k-1})}{n}\\ 
-        &=\dfrac{S}{n}+\dfrac{\varepsilon_1}{n}+\dfrac{1}{n}\sum_{k=2}^{n}k(\varepsilon_k-\varepsilon_{k-1})=\dfrac{S}{n}+\varepsilon_n-\dfrac{1}{n}\sum_{k=1}^{n-1}\varepsilon_k
+        b_n & =\dfrac{S_1+(S_2-S_1)+\cdots+(S_n-s_{n-1})}{n}=\dfrac{\displaystyle \sum_{k=1}^{n}k(S_k-S_{k-1})}{n}=\dfrac{\displaystyle S+\varepsilon_1+\sum_{k=2}^{n}k(\varepsilon_k-\varepsilon_{k-1})}{n} \\
+            & =\dfrac{S}{n}+\dfrac{\varepsilon_1}{n}+\dfrac{1}{n}\sum_{k=2}^{n}k(\varepsilon_k-\varepsilon_{k-1})=\dfrac{S}{n}+\varepsilon_n-\dfrac{1}{n}\sum_{k=1}^{n-1}\varepsilon_k
     \end{flalign*}
-    而因为 $\varepsilon_k \to 0(k\to \infty)$, 所以 $\displaystyle \lim_{n \to \infty}\dfrac{1}{n}\sum_{k=1}^{n-1}\varepsilon_k=\lim_{n \to \infty}\dfrac{\displaystyle \sum_{k=1}^{n-1}}{n-1}\cdot\dfrac{n-1}{n}=0$, 故 $\displaystyle \lim_{n \to \infty}b_n=0.$
+    而因为 $\varepsilon_k \to 0~(k\to \infty)$, 所以 $\displaystyle \lim_{n \to \infty}\dfrac{1}{n}\sum_{k=1}^{n-1}\varepsilon_k=\lim_{n \to \infty}\dfrac{\displaystyle \sum_{k=1}^{n-1}}{n-1}\cdot\dfrac{n-1}{n}=0$, 故 $\displaystyle \lim_{n \to \infty}b_n=0.$
+\end{proof}
+
+\begin{example}
+    设数列 $\qty{u_n}$ 满足 $u_1=3,~u_2=5$, 当 $n\geqslant 3$ 时, $u_n=u_{n-1}+u_{n-2}$, 证明级数 $\displaystyle \sum_{n=1}^{\infty} \dfrac{1}{u_n}$ 收敛.
+\end{example}
+\begin{proof}[{\songti \textbf{证法一}}]
+    由已知得 $ u_{n}>0 $, 且 $ \left\{u_{n}\right\} $ 是单调增加的, 所以 $ u_{n}=u_{n-2}+u_{n-1}<   2 u_{n-1} $, 于是得 $$\displaystyle  u_{n}=u_{n-2}+u_{n-1}>\frac{1}{2} u_{n-1}+u_{n-1}=\frac{3}{2} u_{n-1} $$ 从而得 $$\displaystyle  u_{n}>\frac{3}{2} u_{n-1}>   \left(\frac{3}{2}\right)^{2} u_{n-2}>\cdots>\left(\frac{3}{2}\right)^{n-1} u_{1}=3 \cdot\left(\frac{3}{2}\right)^{n-1} $$ 即 $\displaystyle  \frac{1}{u_{n}}<\frac{1}{3} \cdot\left(\frac{2}{3}\right)^{n-1} $, 而级数 $\displaystyle  \sum_{n=1}^{\infty}\left(\frac{2}{3}\right)^{n-1} $ 收敛, 故由比较判别法知级数 $\displaystyle  \sum_{n=1}^{\infty} \frac{1}{u_{n}} $ 收敛.
+\end{proof}
+\begin{proof}[{\songti \textbf{证法二}}]
+    由已知得 $ u_{n}>0 $, 且 $ \left\{u_{n}\right\} $ 是单调增加的, 所以 $ u_{n}=u_{n-2}+u_{n-1}<   2 u_{n-1} $, 于是得 $$\displaystyle  u_{n}=u_{n-2}+u_{n-1}>\frac{1}{2} u_{n-1}+u_{n-1}=\frac{3}{2} u_{n-1} $$ 从而得 $\displaystyle  \frac{u_{n}^{-1}}{u_{n-1}{ }^{-1}}=\frac{u_{n-1}}{u_{n}}<\frac{2}{3}<1$, 故由达朗贝尔判别法知级数 $\displaystyle  \sum_{n=1}^{\infty} \frac{1}{u_{n}} $ 收敛.
+\end{proof}
+\begin{proof}[{\songti \textbf{证法三}}]
+    将递推关系式改写成矩阵形式:
+    $$\begin{pmatrix} u_n \\ u_{n-1} \\\end{pmatrix}=\begin{pmatrix} 1 & 1 \\ 1 & 0 \\\end{pmatrix}\begin{pmatrix} u_{n-1} \\ u_{n-2} \\\end{pmatrix}=\cdots=\begin{pmatrix} 1 & 1 \\ 1 & 0 \\\end{pmatrix}^{n-2}\begin{pmatrix} u_2 \\ u_1 \\\end{pmatrix}$$
+    记 $\vb*{A}=\begin{pmatrix} 1 & 1 \\ 1 & 0 \\\end{pmatrix}$, 由 $\left\vert \lambda\vb*{E}-\vb*{A} \right\vert =0$, 求得 $\vb*{A}$ 的特征值为 $\lambda_1=\dfrac{1+\sqrt{5}}{2},~\lambda_2=\dfrac{1-\sqrt{5}}{2}$, 其对应的特征向量为 $\vb*{X}=\begin{pmatrix} \lambda_1 \\ 1 \\\end{pmatrix},~\vb*{X}_2=\begin{pmatrix} \lambda_2 \\ 1 \\\end{pmatrix}$, 取 $\vb*{X}=\mqty(\vb*{X}_1,\vb*{X}_2)=\begin{pmatrix} \lambda_1 & \lambda_2 \\ 1 & 1 \\\end{pmatrix}$, 则有 $\vb*{X}^{-1}=\dfrac{1}{\sqrt{5}}\begin{pmatrix} 1 & -\lambda_2 \\ -1 & \lambda_1 \\\end{pmatrix},~\vb*{A}=\vb*{X}\begin{pmatrix} \lambda_1 &  \\  & \lambda_2 \\\end{pmatrix}\vb*{X}^{-1}$,
+    $$
+        \vb*{A}^{n-2}=\vb*{X}\begin{pmatrix} \lambda_1 &  \\  & \lambda_2 \\\end{pmatrix}^{n-2}\vb*{X}^{-1}=\dfrac{1}{\sqrt{5}}\begin{pmatrix} \lambda_1^{n-1}-\lambda_2^{n-1} & -\lambda_2\lambda_1^{n-1}+\lambda_1\lambda_2^{n-1} \\ \lambda_1^{n-2}-\lambda_2^{n-2} & -\lambda_2\lambda_1^{n-2}+\lambda_1\lambda_2^{n-2} \\\end{pmatrix}
+    $$
+    于是由 $\begin{pmatrix} u_n\\ u_{n-1} \\\end{pmatrix}=\vb*{A}^{n-2}\begin{pmatrix} u_2 \\ u_1 \\\end{pmatrix}$ 得 
+    $$
+    u_n=\dfrac{1}{\sqrt{5}}\qty[\qty(\lambda_1^{n-1}-\lambda_2^{n-1})u_2+\qty(-\lambda_2\lambda_1^{n-1}+\lambda_1\lambda_2^{n-1})u_1]
+    $$
+    从而 
+    \begin{flalign*}
+    \dfrac{u_n}{u_{n+1}}=\dfrac{u_2\qty[\dfrac{1}{\lambda_1}-\qty(\dfrac{\lambda_2}{\lambda_1})^{n-1}]+u_1\qty[-\dfrac{\lambda_2}{\lambda_1}+\qty(\dfrac{\lambda_2}{\lambda_1})^{n-1}]}{u_2\qty[1-\qty(\dfrac{\lambda_2}{\lambda_1})^{n}]+u_1\qty[-\lambda_2+\lambda_1\qty(\dfrac{\lambda_2}{\lambda_1})^{n}]} 
+    \end{flalign*}
+    因为 $\left\vert \dfrac{\lambda_2}{\lambda_1} \right\vert <1$, 所以 $ \displaystyle \lim_{n \to \infty}\dfrac{u_n}{u_{n+1}}=\dfrac{2}{\sqrt{5}} $, 即 $\displaystyle \lim_{n \to \infty}\dfrac{\dfrac{1}{u_{n+1}}}{\dfrac{1}{u_n}}=\dfrac{2}{\sqrt{5}}<1$, 故由正项级数的比值判别法，级数 $ \displaystyle \sum_{n=1}^{\infty} \dfrac{1}{u_n} $ 收敛.
 \end{proof}
 
 \subsection{交错级数}
@@ -354,6 +395,30 @@
     若 $\qty{u_n}$ 单调递减, 且 $\displaystyle\lim_{n\to\infty}u_n=0$, 则 $\displaystyle\sum_{n=0}^{\infty}(-1)^nu_n$ 收敛.
     \index{Leibniz 定理}
 \end{theorem}
+
+\begin{example}
+    判别级数 $\displaystyle  \sum_{n=2}^{\infty} \frac{(-1)^{n}}{\sqrt{n}+(-1)^{n}} $ 的敛散性.
+\end{example}
+\begin{solution}
+    \textbf{法一: }将通项化简为
+    $$\frac{(-1)^{n}}{\sqrt{n}+(-1)^{n}}=\frac{(-1)^{n} \sqrt{n}}{\sqrt{n} \cdot\left(\sqrt{n}+(-1)^{n}\right)}=\frac{(-1)^{n}}{\sqrt{n}}-\frac{1}{\sqrt{n}\left(\sqrt{n}+(-1)^{n}\right)}$$
+    于是 $$\displaystyle  \sum_{n=2}^{\infty} \frac{(-1)^{n}}{\sqrt{n}+(-1)^{n}}=\sum_{n=2}^{\infty} \frac{(-1)^{n}}{\sqrt{n}}-\sum_{n=2}^{\infty} \frac{1}{\sqrt{n}\left(\sqrt{n}+(-1)^{n}\right)} $$
+    对于 $\displaystyle  \sum_{n=2}^{\infty} \frac{(-1)^{n}}{\sqrt{n}} $, 由 Leibniz 判别法知收敛, 对于 $\displaystyle  \sum_{n=2}^{\infty} \frac{1}{\sqrt{n}\left(\sqrt{n}+(-1)^{n}\right)} $, 该级数为正项级数, 且 $\displaystyle  \frac{1}{\sqrt{n}\left(\sqrt{n}+(-1)^{n}\right)} \sim \frac{1}{n}(n \rightarrow \infty) $, 而 $\displaystyle  \sum_{n=2}^{\infty} \frac{1}{n} $ 发散, 所以 $\displaystyle  \sum_{n=2}^{\infty} \frac{1}{\sqrt{n}\left(\sqrt{n}+(-1)^{n}\right)} $ 发散, 从而知原级数发散.\\ 
+    \textbf{法二: }将通项的分母有理化, 原级数可化为
+    $$
+    \sum_{n=2}^{\infty} \frac{(-1)^{n}}{\sqrt{n}+(-1)^{n}}=\sum_{n=2}^{\infty} \frac{(-1)^{n} \sqrt{n}}{n-1}-\sum_{n=2}^{\infty} \frac{1}{n} 
+    $$
+    而 $\displaystyle  \sum_{n=2}^{\infty} \frac{1}{n} $ 发散, 由 Leibniz 判别法知 $\displaystyle  \sum_{n=2}^{\infty} \frac{(-1)^{n} \sqrt{n}}{n-1} $ 收敛, 从而得原级数发散.\\ 
+    \textbf{法三: }对原级数重新分组, 依次每两项加括号, 得到一个新级数 $\displaystyle  \sum_{k=1}^{\infty} u_{k} $:
+    $$\left(\frac{1}{\sqrt{2}+1}-\frac{1}{\sqrt{3}-1}\right)+\cdots+\left(\frac{1}{\sqrt{2 k}+1}-\frac{1}{\sqrt{2 k+1}-1}\right)+\cdots$$
+    其通项 $\displaystyle  u_{k}=\frac{1}{\sqrt{2 k}+1}-\frac{1}{\sqrt{2 k+1}-1}=\frac{\sqrt{2 k+1}-\sqrt{2 k}-2}{(\sqrt{2 k}+1)(\sqrt{2 k+1}-1)}<0 $, 所以新级数 $\displaystyle  \sum_{k=1}^{\infty} u_{k} $ 是负项级数, 又由
+    $$
+    u_{k}=\frac{\sqrt{2 k+1}-\sqrt{2 k}-2}{2 k}=\frac{\frac{1}{\sqrt{2 k+1}+\sqrt{2 k}}-2}{2 k} \sim-\frac{1}{k}(k \rightarrow \infty) 
+    $$
+    知 $\displaystyle  \left(-u_{k}\right) \sim \frac{1}{k}   (k \rightarrow \infty) $, 所以级数 $\displaystyle  \sum_{k=1}^{\infty} u_{k} $ 发散, 故由级数收敛的性质得原级数发散.
+\end{solution}
+
+原级数通项 $\displaystyle  \frac{(-1)^{n}}{\sqrt{n}+(-1)^{n}} \sim \frac{(-1)^{n}}{\sqrt{n}}(n \rightarrow \infty) $, 但原级数发散, 级数 $\displaystyle  \sum_{n=2}^{\infty} \frac{(-1)^{n}}{\sqrt{n}} $ 却是收敛的. 由此可见: 对于变号级数不能用比较判别法的极限形式判别.
 
 \begin{example}
     设 $a_n=\displaystyle\int_{0}^{1}x^n\sqrt{1-x^2}\dd x,~b_n=\displaystyle\int_{0}^{\frac{\pi}{2}}\sin^nt\dd t~~(n=1,2,\cdots)$,
@@ -413,9 +478,9 @@
     \begin{table}[H]
         \centering
         \begin{tabular}{l l}
-            (\rownumber{}) 若 $\displaystyle \sum_{n=1}^{\infty}|u_n|$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛. & (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 发散, 则 $\displaystyle\sum_{n=1}^{\infty}|u_n|$ 发散. \\ 
-            (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}|u_n|$ 不一定收敛. & (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u^2_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}\dfrac{u_n}{n}$ 绝对收敛.\\ 
-            (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u^2_n$ 不一定收敛. & (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u_{2n}$ 不一定收敛. \\ 
+            (\rownumber{}) 若 $\displaystyle \sum_{n=1}^{\infty}|u_n|$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛.            & (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 发散, 则 $\displaystyle\sum_{n=1}^{\infty}|u_n|$ 发散.                \\
+            (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}|u_n|$ 不一定收敛.       & (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u^2_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}\dfrac{u_n}{n}$ 绝对收敛. \\
+            (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u^2_n$ 不一定收敛.       & (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}u_{2n}$ 不一定收敛.         \\
             (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}(u_{2n-1}+u_{2n})$ 收敛. & (\rownumber{}) 若 $\displaystyle\sum_{n=1}^{\infty}u_n$ 收敛, 则 $\displaystyle\sum_{n=1}^{\infty}(u_{n}\pm u_{n+1})$ 收敛.
         \end{tabular}
     \end{table}
@@ -425,14 +490,14 @@
 
 \begin{theorem}[Kummer 判别法]\index{Kummer 判别法}
     设 $a_n>0,~b_n>0~(n=1,2, \cdots )$\begin{enumerate}[label=(\arabic{*})]
-        \item 若存在常数 $\alpha>0$, 使得 $\dfrac{b_n}{b_{n+1}}a_n-a_{n+1}\geqslant \alpha~(n=1,2, \cdots )$, 则级数 $\displaystyle \sum_{n=1}^{\infty}b_n$ 收敛; 
+        \item 若存在常数 $\alpha>0$, 使得 $\dfrac{b_n}{b_{n+1}}a_n-a_{n+1}\geqslant \alpha~(n=1,2, \cdots )$, 则级数 $\displaystyle \sum_{n=1}^{\infty}b_n$ 收敛;
         \item 若 $\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{a_n}$ 发散, 且 $\dfrac{b_n}{b_{n+1}}a_n-a_{n+1}\leqslant 0~(n=1,2, \cdots )$, 则级数 $\displaystyle \sum_{n=1}^{\infty}b_n$ 发散.
     \end{enumerate}
 \end{theorem}
 
 \begin{theorem}[Raabe 判别法]\index{Raabe 判别法}
     设 $a_n>0,~n=1,2, \cdots $\begin{enumerate}[label=(\arabic{*})]
-        \item 若存在 $r>1$, 使得当 $n>N$ 时, 有 $n\qty(\dfrac{a_n}{a_{n+1}}-1)\geqslant r$, 则 级数 $\displaystyle \sum_{n=1}^{\infty}a_n$ 收敛; 
+        \item 若存在 $r>1$, 使得当 $n>N$ 时, 有 $n\qty(\dfrac{a_n}{a_{n+1}}-1)\geqslant r$, 则 级数 $\displaystyle \sum_{n=1}^{\infty}a_n$ 收敛;
         \item 若对充分大的 $n$ 都有 $n\qty(\dfrac{a_n}{a_{n+1}}-1)\leqslant 1$, 则级数 $\displaystyle \sum_{n=1}^{\infty}a_n$ 发散.
     \end{enumerate}
 \end{theorem}
@@ -443,7 +508,7 @@
 
 \begin{theorem}[Gauss 判别法]\index{Gauss 判别法}
     设 $a_n>0,~n=1,2, \cdots $, 且 $$
-    \dfrac{a_n}{a_{n+1}}=1+\dfrac{1}{n}+\dfrac{\beta}{n\ln n}+o\qty(\dfrac{1}{n\ln n})~(n\to \infty)
+        \dfrac{a_n}{a_{n+1}}=1+\dfrac{1}{n}+\dfrac{\beta}{n\ln n}+o\qty(\dfrac{1}{n\ln n})~(n\to \infty)
     $$
     则当 $\beta>1$ 时, 级数 $\displaystyle \sum_{n=1}^{\infty} a_n$ 收敛; 当 $\beta<1$ 时, 级数 $\displaystyle \sum_{n=1}^{\infty} a_n$ 发散.
 \end{theorem}
