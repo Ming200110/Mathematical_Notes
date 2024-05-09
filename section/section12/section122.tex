@@ -4,16 +4,16 @@
 
 \begin{example}
     已知线性方程组 $\left\{\begin{matrix}
-        ax_1&+&&&x_3&=&1\\
-        x_1&+&ax_2&+&x_3&=&0\\
-        x_1&+&2x_2&+&ax_3&=&0\\
-        ax_1&+&bx_2&&&=&2
+            ax_1 & + &      &   & x_3  & = & 1 \\
+            x_1  & + & ax_2 & + & x_3  & = & 0 \\
+            x_1  & + & 2x_2 & + & ax_3 & = & 0 \\
+            ax_1 & + & bx_2 &   &      & = & 2
         \end{matrix}\right.$ 有解, 其中 $a,b$ 为常数, 若 $\mqty|a&0&1\\1&a&1\\1&2&a|=4$, 求 $\mqty|1&a&1\\1&2&a\\a&b&0|.$
 \end{example}
 \begin{solution}
-    设 $\vb*{x}$ 的系数矩阵为 $\vb*{A}$, $(1,0,0,2)^\top=\vb*{b}$, 因为方程组有解, 则 $\rank(\vb*{A},\vb*{b})=\rank(\vb*{A})$, 由于 $\mqty|a&0&1\\1&a&1\\1&2&a|=4\neq0$, 所以 $\rank\vb*{A}\geqslant 3$, 
+    设 $\vb*{x}$ 的系数矩阵为 $\vb*{A}$, $(1,0,0,2)^\top=\vb*{b}$, 因为方程组有解, 则 $\rank(\vb*{A},\vb*{b})=\rank(\vb*{A})$, 由于 $\mqty|a&0&1\\1&a&1\\1&2&a|=4\neq0$, 所以 $\rank\vb*{A}\geqslant 3$,
     又因为 $\vb*{A}_{4\times3}$, 所以 $\rank\vb*{A}\leqslant 3$, 于是 $$\rank\vb*{A}=3\Rightarrow \rank(\vb*{A},\vb*{b})=3\Rightarrow\det(\vb*{A},\vb*{b})=0$$
-    对行列式 $\det(\vb*{A},\vb*{b})$ 按最后一列展开, 得 
+    对行列式 $\det(\vb*{A},\vb*{b})$ 按最后一列展开, 得
     $$\det(\vb*{A},\vb*{b})=-\mqty|1&a&1\\1&2&a\\a&b&0|+2\mqty|a&0&1\\1&a&1\\1&2&a|\Rightarrow\mqty|1&a&1\\1&2&a\\a&b&0|=8. $$
 \end{solution}
 
@@ -22,7 +22,7 @@
 \subsubsection{线性无关}
 
 \begin{example}[2009 数一]
-    设 $\vb*{A}=\mqty(1&-1&-1\\-1&1&1\\0&-4&-2),~\vb*{\xi}_1=\mqty(-1\\1\\-2)$, 
+    设 $\vb*{A}=\mqty(1&-1&-1\\-1&1&1\\0&-4&-2),~\vb*{\xi}_1=\mqty(-1\\1\\-2)$,
     \begin{enumerate}[label=(\arabic{*})]
         \item 求满足 $\vb*{A\xi}_2=\vb*{\xi}_1,~\vb*{A}^2\vb*{\xi}_3=\vb*{\xi}_1$ 的所有向量 $\vb*{\xi}_2,~\vb*{\xi}_3$;
         \item 对 (1) 中的任意向量 $\vb*{\xi}_2,~\vb*{\xi}_3$, 证明: $\vb*{\xi}_1,\vb*{\xi}_2,\vb*{\xi}_3$ 线性无关.
@@ -40,7 +40,7 @@
                       0 & 1 & \dfrac{1}{2}  & \dfrac{1}{2}  \\[6pt]
                       0 & 0 & 0             & 0
                   \end{pNiceArray}$$
-              由此可解得 $\vb*{\xi}_2=\mqty(-\dfrac{1}{2}+\dfrac{k}{2},\dfrac{1}{2}-\dfrac{k}{2},k)^\top$, 其中 $k$ 为任意常数, 
+              由此可解得 $\vb*{\xi}_2=\mqty(-\dfrac{1}{2}+\dfrac{k}{2},\dfrac{1}{2}-\dfrac{k}{2},k)^\top$, 其中 $k$ 为任意常数,
               再对矩阵 $(\vb*{A}^2,\vb*{\xi}_1)$ 施行初等行变换, 得
               $$(\vb*{A}^2,\vb*{\xi}_1)=\begin{pNiceArray}{ccc:c}
                       2  & 2  & 0 & -1 \\

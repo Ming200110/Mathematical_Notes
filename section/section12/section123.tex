@@ -2,6 +2,30 @@
 
 \subsection{方程组的同解}
 
+线性方程组的同解性 
+\begin{definition}[线性方程组的同解性]
+    线性方程组有下列三种变换, 称为\textit{线性方程组的初等变换}:
+    \begin{enumerate}[label=(\arabic{*})]
+        \item \textit{换法变换}, 交换某两个方程的位置;
+        \item \textit{倍法变换}, 某个方程的两端同乘以一个非零常数;
+        \item \textit{消法变换}, 把一个方程的若干倍加到另一个方程上去.
+    \end{enumerate}
+    在线性方程组的三种初等变换之下,线性方程组的同解性不变.
+\end{definition}
+
+常见的同解方程组形式:
+\begin{enumerate}[label=(\arabic{*})]
+    \item 设 $ \vb*{A} $ 为 $ m \times n $ 矩阵, $ \vb*{P} $ 为 $ m $ 阶可逆矩阵, 则 $ \vb*{A x}=\mathbf{0} $ 与 $ \vb*{P A x}=\mathbf{0} $ 为同解方程组, $ \vb*{A x}=\vb*{b} $ 与 $ \vb*{P A x}=\vb*{P b} $ 为同解方程组.
+    \item 设 $ \vb*{A} $ 为 $ n $ 阶实矩阵, $ \vb*{A}^{\top} $ 为矩阵 $ \vb*{A} $ 的转置, 则 $ \vb*{A x}=\vb*{0} $ 与 $ \vb*{A}^{\top} \vb*{A x}=\vb*{0} $ 为同解方程组.
+    \item 设 $ \vb*{A} $ 为 $ n $ 阶实对称矩阵, 则 $ \vb*{A x}=\vb*{0} $ 与 $ \vb*{A}^{2} \vb*{x}=\mathbf{0} $ 为同解方程组.
+\end{enumerate}
+
+有关两个方程组的公共解:
+\begin{enumerate}[label=(\arabic{*})]
+    \item 由通解表达式相等求公共解 此类题目一般所给条件为方程组 (I) 的基础解系及方程组 (II) 的一般表示式. 这时一般只需把方程组 (I) 的通解代人方程组 (II) 即可求得两个方程组的公共解.
+    \item 由两个方程组合并为一个新的方程组求公共解 此类题目一般所给条件为方程组 (I)、(II) 的一般表示式. 这时只须把两个方程组合并为方程组 (III), 则方程组 (III) 的通解即为方程组 (I)、(II) 的公共解. 
+\end{enumerate}
+
 \begin{theorem}[同解与秩的等价形式]
     若 $\vb*{Ax}=\vb*{0}$ 与 $\vb*{Bx}=\vb*{0}$ 同解, 它的充要条件为 $$\rank\vb*{A}=\rank\vb*{B}=\rank\mqty(\vb*{A}\\\vb*{B}).$$
 \end{theorem}
@@ -9,6 +33,35 @@
 \begin{theorem}
     若 $\vb*{Ax}=\vb*{0}$ 的解都是 $\vb*{Bx}=\vb*{0}$ 的解, 且 $\rank\vb*{A}=\rank\vb*{B}$, 则 $\vb*{Ax}=\vb*{0}$ 与 $\vb*{Bx}=\vb*{0}$ 同解.
 \end{theorem}
+
+\begin{example}
+    今有物不知数, 三三数之剩一, 五五数之剩二, 七七数之剩三, 问: 物几何?
+\end{example}
+\begin{solution}
+    设此物体个数为 $z$, 三三数的次数为 $x_1$, 五五数的次数为 $x_2$, 七七数的次数为 $x_3$, 由题意可得
+    $$\begin{cases}
+            z-3x_1=1 \\ z-5x_2=2\\ z-7x_3=3
+        \end{cases}\Rightarrow \bar{\vb*{A}} =
+        \begin{pmatrix} 1 & -3 & 0 & 0 & 1 \\ 1 & 0 & -5 & 0 & 2 \\ 1 & 0 & 0 & -7 & 3\end{pmatrix}$$
+    对增广矩阵 $\bar{\vb*{A}}$ 做初等行变换, 有
+    \begin{flalign*}
+        \bar{\vb*{A}}\xrightarrow[r_3-r_1]{r_2-r_1}
+        \begin{pmatrix} 1 & -3 & 0 & 0 & 1 \\ 0 & 3 & -5 & 0 & 1 \\ 0 & 3 & 0 & -7 & 2\end{pmatrix}
+        \xrightarrow[r_3-r_2]{r_1+r_2}
+        \begin{pmatrix} 1 & 0 & -5 & 0 & 2 \\ 0 & 3 & -5 & 0 & 1 \\ 0 & 0 & 5 & -7 & 1\end{pmatrix}
+        \xrightarrow[r_3\times \frac{1}{5}]{r_2\times \frac{1}{3}}
+        \begin{pmatrix} 1 & 0 & -5 & 0 & 2 \\ 0 & 1 & -\dfrac{5}{3} & 0 & \dfrac{1}{3} \\[6pt] 0 & 0 & 1 & -\dfrac{7}{5} & \dfrac{1}{5}\end{pmatrix}
+    \end{flalign*}
+    方程组的同解方程组为 $\begin{cases}
+        z=7x_3+3, \\ x_1=\dfrac{7}{3}x_3+\dfrac{2}{3}\\[6pt] x_2=\dfrac{7}{5}x_3+\dfrac{1}{5}
+    \end{cases}$ 因为 $z,x_1,x_2,x_3$ 必须为非负整数, 则所有解为 
+    $$
+    \begin{cases}
+        z=157+105c\\ x_1=52+35c \\ x_2=31+21c\\ x_3=22+15c
+    \end{cases}c=0, 1, 2\cdots,
+    $$
+    故此物的个数为 $157+105c~(c=0, 1, 2, \cdots ).$
+\end{solution}
 
 \begin{example}[2015 华南理工大学]
     已知齐次线性方程组

@@ -37,11 +37,49 @@
 
 \subsection{齐次方程组的一般解}
 
-\begin{theorem}
-    齐次方程组 $\vb*{Ax}=\vb*{0}$ 有非零解的充分必要条件为 $\rank\vb*{A}<n$, 此时它的通解为
-    $$\vb*{x}=k_1\vb*{\xi}_1+k_2\vb*{\xi}_2+\cdots+k_{n-r}\vb*{\xi}_{n-r}$$
-    其中 $r=\rank\vb*{A}$, $k_i\in K\text{ 为任意常数 }(i=1,2,\cdots,n-1)$, $\vb*{\xi}_1,\vb*{\xi}_2,\cdots,\vb*{\xi}_{n-r}$ 为方程组的一个基础解系.
+\begin{theorem}[齐次解的线性组合]
+    如果 $ \vb*{\xi}_{1}, \vb*{\xi}_{2} $ 是齐次线性方程组 $ \vb*{Ax}=\vb*{0} $ 的解, $ k $ 为任意数, 那么 $ \vb*{\xi}_{1}+\vb*{\xi}_{2}, k \vb*{\xi}_{1} $ 都是该齐次线性方程组的解. 因此 $ A x=0 $ 的解向量的线性组合仍是它的解向量.
 \end{theorem}
+
+\begin{theorem}[零解与非零解的充要条件]
+    设齐次线性方程组 $ \vb*{Ax}=\vb*{0} $ 含有 $ n $ 个未知数和 $ m $ 个方程, 即系数矩阵 $ \vb*{A}  为  m \times n$ 矩阵, 则 $ \vb*{A x}=\vb*{0} $ 有非零解的充要条件是:
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\rank(\vb*{A})<n $;
+        \item $A $ 的列向量组线性相关;
+        \item $\vb*{A B}=0 $ 且 $ \vb*{B} \neq 0$ ;
+        \item 当 $ m=n $ 时, $ |\vb*{A}|=0 $;
+    \end{enumerate}
+    亦即 $ \vb*{A x}=\vb*{0} $ 只有零解的充要条件是:
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\rank(\vb*{A})=n$;
+        \item $\vb*{A} $ 的列向量组线性无关;
+        \item 当 $ m=n $ 时, $ |\vb*{A}| \neq 0 $.
+    \end{enumerate}
+\end{theorem}
+
+\begin{definition}[齐次线性方程组的基础解系]
+    设 $ \vb*{\xi}_1, \vb*{\xi}_2, \cdots ,\vb*{\xi}_s$, 是齐次线性方程组 $ \vb*{A x}=\vb*{0} $ 的解向量, 如果
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\vb*{\xi}_{1}, \vb*{\xi}_{2}, \cdots, \vb*{\xi}_s $,线性无关;
+        \item 方程组 $ \vb*{A x}=\vb*{0} $ 的任意一个解向量都可由 $ \vb*{\xi}_{1}, \vb*{\xi}_{2}, \cdots, \vb*{\xi}_s $, 线性表示, 则称 $ \vb*{\xi}_{1}, \vb*{\xi}_{2}, \cdots, \vb*{\xi}_{s}$, 是齐次线性方程组 $\vb*{ A }\vb*{x}=\vb*{0} $ 的\textit{一个基础解系}.
+    \end{enumerate}
+\end{definition}
+
+\begin{theorem}[基础解系的个数]
+    设 $ \vb*{A x}=\vb*{0} $ 含有 $ \vb*{n} $ 个未知数, 则基础解系所含解向量的个数为 $ n-\rank(\vb*{A}) $, 即自由未知量的个数.
+\end{theorem}
+
+\begin{definition}[齐次方程组的通解]
+    若 $ \vb*{\xi}_{1}, \vb*{\xi}_{2}, \cdots, \vb*{\xi}_{s} $ 为齐次线性方程组 $ \vb*{A x}=\vb*{0} $ 的一个基础解系, 则 $ \vb*{A x}=\vb*{0} $ 的任意一个解向量都可由它们线性表示:
+    $$k_{1} \vb*{\xi}_{1}+k_{2} \vb*{\xi}_{2}+\cdots+k_{s} \vb*{\xi}_s$$
+    称为齐次线性方程组 $ \vb*{A x}=\vb*{0} $ 的\textit{通解} (\textit{一般解}或\textit{全部解}), 其中 $ k_{1}, k_{2}, \cdots, k_s $ 为任意常数.
+\end{definition}
+
+\begin{definition}[齐次线性方程组的解空间]
+    齐次线性方程组 $ \vb*{A x}=\vb*{0} $ 的解向量的全体构成的向量空间, 称为齐次线性方程组 $ \vb*{A x}=\vb*{0} $ 的\textit{解空间}. 设 $ \vb*{A} \vb*{x}=\vb*{0} $ 含有 $ n $ 个未知数, 则解空间的维数为 $ n-\rank(\vb*{A}) $.
+\end{definition}
+
+如无特别说明, 我们总假设齐次线性方程组 $ \vb*{A x}=\vb*{0} $ 含有 $ n $ 个未知数和 $ m $ 个方程, 即系数矩阵 $ \vb*{A }$ 为 $ m \times n $ 矩阵.
 
 \begin{example}
     讨论当 $a,~b$ 取何值时, 线性方程组 $$\left\{\begin{matrix}

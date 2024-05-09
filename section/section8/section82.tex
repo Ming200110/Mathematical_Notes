@@ -23,6 +23,31 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
     \end{enumerate}
 \end{theorem}
 
+\begin{example}
+    求解下列微分方程的通解.
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l | l | l}
+            (\rownumber{}) $ y''-12y'+35y=0 $             & (\rownumber{}) $ y''+2y'+3y=0 $  & (\rownumber{}) $y'''-6y''+3y'+10y=0$ \\
+            (\rownumber{}) $ y^{(4)}-2y'''+2y''-2y'+y=0 $ & (\rownumber{}) $y'''-2y''+5y'=0$ & (\rownumber{}) $ y'''-2y''+y'-2y=0 $
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 特征方程 $r^2-12r+35=0\Rightarrow r_1=5, r_2=7$, 因此微分方程的通解为 $y=C_1\e ^{5x}+C_2\e ^{7x}.$
+        \item 特征方程 $r^2+2r+3=0\Rightarrow r_{1, 2}=-1\pm \sqrt{2}\mathrm{i}$, 因此微分方程的通解为 $y=\e ^{-x}\qty(C_1\cos\sqrt{2}x+C_2\sin\sqrt{2}x)$.
+        \item 特征方程 $r^3-6r^2+3r+10=0\Rightarrow r_1=-1, r_2=2, r_3=5$, 因此微分方程的通解为 $y=C_1\e ^{-x}C_2 \e ^{2x}+C_3 \e ^{5x}$.
+        \item 特征方程 $r^4-2r^3+2r^2-2r+1=0\Rightarrow (r-1)^2\qty(r^2+1)=0$ 得二重实根 $1$, 单重共轭复根 $\pm \i$, 因此微分方程的通解为
+              $$
+                  y=(C_1+C_2x)\e ^{x}+C_3\cos x+C_4\sin x
+              $$
+        \item 特征方程 $r^3-2r^2+5r=0\Rightarrow r_1=0, r_{2, 3}=1\pm 2\i$, 因此微分方程的通解为 $y=C_1+\e ^{x}(C_2\cos 2x+C_3\sin 2x).$
+        \item 特征方程 $r^3-2r^2+r-2=0\Rightarrow r_1=2, r_2=-1, r_3=1$, 因此微分方程的通解为 $y=C_1\e ^{2x}+C_2\e ^{-x}+C_3 \e ^{x}.$
+    \end{enumerate}
+\end{solution}
+
 \begin{example}[第十三届数学竞赛决赛]
     求区间 $[0,1]$ 上的连续函数 $f(x)$, 使之满足 $$f(x)=1+(1-x)\int_{0}^{x}yf(y)\dd y+x\int_{x}^{1}(1-y)f(y)\dd y.$$
 \end{example}
@@ -73,7 +98,7 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
 \subsubsection{二阶常系数非齐次线性微分方程的通解结构}
 
 \begin{example}[1993 数三]
-    设二阶常系数非齐次线性微分方程 $ y^{\prime \prime}+a y^{\prime}+b y=k \mathrm{e}^{x} $ 的一个特解为 $ y=\mathrm{e}^{2 x}+(1+x) \mathrm{e}^{x} $, 试确定 $ a, b, k $, 并求该方程的通解. 
+    设二阶常系数非齐次线性微分方程 $ y^{\prime \prime}+a y^{\prime}+b y=k \mathrm{e}^{x} $ 的一个特解为 $ y=\mathrm{e}^{2 x}+(1+x) \mathrm{e}^{x} $, 试确定 $ a, b, k $, 并求该方程的通解.
 \end{example}
 \begin{solution}
     \textbf{法一: }
@@ -81,14 +106,14 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
     $$(4+2 a+b) \mathrm{e}^{2 x}+(3+2 a+b) \mathrm{e}^{x}+(1+a+b) x \mathrm{e}^{x}=k \mathrm{e}^{x} $$
     比较两边同类项的系数, 得 $ 2 a+b=-4,2 a+b-k=-3, a+b=-1 $, 解得 $ a=-3 , b=2, k=-1 $ 故原方程为
     $$y^{\prime \prime}-3 y^{\prime}+2 y=-\mathrm{e}^{x} $$
-    又对应的齐次线性方程的特征方程为 $ r^{2}-3 r+2=0 $, 解得特征根为 $ r_{1}=1, r_{2}=2 $, 于是可设原方程的特解形式为 $ y^{*}=c x \mathrm{e}^{x} $, 把它代人原方程中得 $ c=1 $, 故由通解结构知原方程的通解为 $$ y=C_{1} \mathrm{e}^{x}+C_{2} \mathrm{e}^{2 x}+x \mathrm{e}^{x}$$ 其中 $ C_{1}, C_{2} $ 为任意常数.\\ 
+    又对应的齐次线性方程的特征方程为 $ r^{2}-3 r+2=0 $, 解得特征根为 $ r_{1}=1, r_{2}=2 $, 于是可设原方程的特解形式为 $ y^{*}=c x \mathrm{e}^{x} $, 把它代人原方程中得 $ c=1 $, 故由通解结构知原方程的通解为 $$ y=C_{1} \mathrm{e}^{x}+C_{2} \mathrm{e}^{2 x}+x \mathrm{e}^{x}$$ 其中 $ C_{1}, C_{2} $ 为任意常数.\\
     \textbf{法二: }
-    由已知及通解的结构与特解形式, 得 $ \mathrm{e}^{2 x} $ 与 $ \mathrm{e}^{x} $ 应是对应齐次线性方程的特解, $ x \mathrm{e}^{x} $ 是非齐次线性方程的一个特解. 于是特征方程为 $$ r^{2}+a r+b=(r-1)(r-2)=r^{2}-3 r+2$$ 
-    即得 $ a=-3, b=2$, 又将 $ y^{*}=x \mathrm{e}^{x} $ 代人原方程 $ y^{\prime \prime}-3 y^{\prime}+2 y=k \mathrm{e}^{x} $ 中得 $ k=-1$, 故原方程为 $ y^{\prime \prime}-3 y^{\prime}+2 y=-\mathrm{e}^{x} $, 其通解为 $ y=C_{1} \mathrm{e}^{x}+C_{2} \mathrm{e}^{2 x}+x \mathrm{e}^{x} $, 其中 $ C_{1}, C_{2} $ 为任意常数.\\ 
-    \textbf{法三: }由已知及通解的结构与特解形式, 得 $ \mathrm{e}^{2 x}, \mathrm{e}^{x} $ 是对应齐次线性方程的特解, $ x \mathrm{e}^{x} $ 是非齐次线性方程的一个特解, 分别代人对应的方程, 得 
+    由已知及通解的结构与特解形式, 得 $ \mathrm{e}^{2 x} $ 与 $ \mathrm{e}^{x} $ 应是对应齐次线性方程的特解, $ x \mathrm{e}^{x} $ 是非齐次线性方程的一个特解. 于是特征方程为 $$ r^{2}+a r+b=(r-1)(r-2)=r^{2}-3 r+2$$
+    即得 $ a=-3, b=2$, 又将 $ y^{*}=x \mathrm{e}^{x} $ 代人原方程 $ y^{\prime \prime}-3 y^{\prime}+2 y=k \mathrm{e}^{x} $ 中得 $ k=-1$, 故原方程为 $ y^{\prime \prime}-3 y^{\prime}+2 y=-\mathrm{e}^{x} $, 其通解为 $ y=C_{1} \mathrm{e}^{x}+C_{2} \mathrm{e}^{2 x}+x \mathrm{e}^{x} $, 其中 $ C_{1}, C_{2} $ 为任意常数.\\
+    \textbf{法三: }由已知及通解的结构与特解形式, 得 $ \mathrm{e}^{2 x}, \mathrm{e}^{x} $ 是对应齐次线性方程的特解, $ x \mathrm{e}^{x} $ 是非齐次线性方程的一个特解, 分别代人对应的方程, 得
     $$ \begin{cases}
-        4+2 a+b=0, \\ 1+a+b=0, \\ (2+x)+a(1+x)+b x=k
-    \end{cases}$$
+            4+2 a+b=0, \\ 1+a+b=0, \\ (2+x)+a(1+x)+b x=k
+        \end{cases}$$
     解得 $ a=-3, b=2, k=-1 $, 故原方程为 $ y^{\prime \prime}-3 y^{\prime}+   2 y=-\mathrm{e}^{x} $, 其通解为 $ y=C_{1} \mathrm{e}^{x}+C_{2} \mathrm{e}^{2 x}+x \mathrm{e}^{x} $ 其中 $ C_{1}, C_{2} $ 为任意常数.
 \end{solution}
 
@@ -109,12 +134,12 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
         \end{array}\right.$$
     改写为矩阵形式, 有 $ \mqty(\cos x+\sin x & \sin x \\ \cos x-\sin x & \cos x)\mqty(p\\ q)=\mqty(-2\cos x\\ 2\sin x) $, 而
     $$\mqty(\cos x+\sin x & \sin x \\
-            \cos x-\sin x & \cos x)^{-1}=\mqty(\cos x        & -\sin x       \\
-                \sin x-\cos x & \cos x+\sin x)$$
+        \cos x-\sin x & \cos x)^{-1}=\mqty(\cos x        & -\sin x       \\
+        \sin x-\cos x & \cos x+\sin x)$$
     且 $\mqty|\cos x+\sin x & \sin x \\
-            \cos x-\sin x & \cos x|=1$, 所以
+        \cos x-\sin x & \cos x|=1$, 所以
     $$\mqty(p\\ q)=\mqty(\cos x        & -\sin x       \\
-                \sin x-\cos x & \cos x+\sin x)\mqty(-2\cos x\\ 2\sin x)=\mqty(-2\\ 2)$$
+        \sin x-\cos x & \cos x+\sin x)\mqty(-2\cos x\\ 2\sin x)=\mqty(-2\\ 2)$$
     故所求微分方程为 $ y^{\prime \prime}-2 y^{\prime}+2 y=0 .$\\
     \textbf{法四: }由通解 $ y=\mathrm{e}^{x}\left(C_{1} \sin x+C_{2} \cos x\right) $, 求出 $ y^{\prime}, y^{\prime \prime} $:
     $$y^{\prime}=\mathrm{e}^{x}\left[\left(C_{1}-C_{2}\right) \sin x+\left(C_{1}+C_{2}\right) \cos x\right], \quad y^{\prime \prime}=\mathrm{e}^{x}\left(-2 C_{2} \sin x+2 C_{1} \cos x\right)$$
@@ -345,9 +370,9 @@ $$\int \dfrac{\dd y}{\varphi(y,C_1)}=x+C_2.$$
 \begin{solution}
     令 $x=\e ^t,~\mathrm{D}=\displaystyle\dv{t}$, 那么原方程化为 $(\mathrm{D}-1)^3y=0$, 令 $z_1=(\mathrm{D}-1)^2y$, 则有
     $$
-    (\mathrm{D}-1)z=0\Rightarrow z_1=(\mathrm{D}-1)^2y=C_1\e ^{t}
+        (\mathrm{D}-1)z=0\Rightarrow z_1=(\mathrm{D}-1)^2y=C_1\e ^{t}
     $$
-    再令 $z_2=(\mathrm{D}-1)y$，有 $$(\mathrm{D}-1)z_{2}=C_1\e ^{t}\Rightarrow z_2=(\mathrm{D}-1)y=C_1t\e ^{t}+C_2\e ^{t}$$
+    再令 $z_2=(\mathrm{D}-1)y$, 有 $$(\mathrm{D}-1)z_{2}=C_1\e ^{t}\Rightarrow z_2=(\mathrm{D}-1)y=C_1t\e ^{t}+C_2\e ^{t}$$
     进而得到 $$y=\e ^{\int \dd t}\qty[\int\qty(C_1t \e ^{t}+C_2\e ^{t})\cdot \e ^{-\int \dd  t}\dd  t+C_3]=\qty(C_1t^2+C_2t+C_3)\e ^{t}$$ 回代 $t=\ln x$, 得 $y=x\qty(C_1\ln^2x+C_2\ln x+C_3).$
 \end{solution}
 

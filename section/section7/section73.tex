@@ -567,6 +567,27 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     故 $S(x)=1-2x+\dfrac{7}{2}x^2-\dfrac{7}{6}\dfrac{4x^3+3x^4}{(1+x)^2}.$
 \end{solution}
 
+\begin{example}
+    求幂级数 $\displaystyle \sum_{n=0}^{\infty} \dfrac{n^3+2}{(n+1)!}(x-1)^{n}$ 的收敛域及和函数.
+\end{example}
+\begin{solution}
+    因为 $\displaystyle \lim_{n \to \infty}\dfrac{a_{n+1}}{a_n}=\lim_{n \to \infty}\dfrac{(n+1)^2+2}{(n+2)\qty(n^3+2)}=0$, 所以 $R=+\infty$, 收敛域为 $(-\infty,+\infty)$, 又 
+    $$
+    \dfrac{n^3+2}{(n+1)!}=\dfrac{(n-1)n(n+1)}{(n+1)!}+\dfrac{n+1}{(n+1)!}+\dfrac{1}{(n+1)!}=\dfrac{1}{(n-2)!}+\dfrac{1}{n!}+\dfrac{1}{(n+1)!}~(n\geqslant 2)
+    $$
+    及级数 $\displaystyle \sum_{n=2}^{\infty} \dfrac{(x-1)^n}{(n-2)!},\sum_{n=0}^{\infty} \dfrac{(x-1)^n}{n!}, \sum_{n=0}^{\infty} \dfrac{(x-1)!}{(n+1)!}$ 的收敛域都为 $(-\infty,+\infty)$, 因此 
+    $$
+    \sum_{n=0}^{\infty} \dfrac{n^3+2}{(n+1)!}(x-1)^{n}=\sum_{n=2}^{\infty} \dfrac{(x-1)^n}{(n-2)!}+\sum_{n=0}^{\infty} \dfrac{(x-1)^n}{n!}+\sum_{n=0}^{\infty} \dfrac{(x-1)!}{(n+1)!}:=S_1(x)+S_2(x)+S_3(x)
+    $$
+    其中
+    \begin{flalign*}
+        S_1(x)&=\sum_{n=0}^{\infty} \dfrac{1}{n!}(x-1)^{n+2}=(x-1)^2\sum_{n=0}^{\infty} \dfrac{(x-1)^n}{n!}=(x-1)^2\e ^{x-1}\\ 
+        S_3(x)&=\dfrac{1}{x-1}\sum_{n=0}^{\infty}\dfrac{(x-1)^{n+1}}{(n+1)!}=\dfrac{1}{x-1}\sum_{n=1}^{\infty}\dfrac{(x-1)^n}{n!}=\dfrac{\e ^{x-1}-1}{x-1}
+    \end{flalign*}
+    $S_2(x)=\e ^{x-1}$, 因此幂级数的和函数为 
+    $$S(x)=\begin{cases} \qty(x^2-2x+2)\e ^{x-1}+\dfrac{\e ^{x-1}-1}{x-1}, & x\neq 1 \\ 2, & x=1 \end{cases}.$$
+\end{solution}
+
 \begin{example}[2019 江苏年竞赛题]
     求幂级数 $\displaystyle \sum_{n=1}^\infty\frac{n}{8^n(2n-1)}x^{3n-1}$ 的收敛域与和函数.
 \end{example}
