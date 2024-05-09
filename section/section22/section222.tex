@@ -47,8 +47,8 @@
 
 \section{极大似然估计}
 
-极大似然估计法是参数估计使用的最广泛的方法, 最早由德国数学家 Gauss 在 1821 年提出, 
-但是此法一般归功于英国统计学家 Fisher, 因为 Fisher 于 1922 年再次提出了这个思想, 并且证明了这种方法的一些性质, 
+极大似然估计法是参数估计使用的最广泛的方法, 最早由德国数学家 Gauss 在 1821 年提出,
+但是此法一般归功于英国统计学家 Fisher, 因为 Fisher 于 1922 年再次提出了这个思想, 并且证明了这种方法的一些性质,
 从而使得极大似然法得到更普遍的应用.
 
 \begin{example}
@@ -58,7 +58,7 @@
     似然函数为 $\displaystyle L(p)=\prod_{i=1}^{n} \mathrm{C}_{N}^{x_{i}} \cdot p^{x_{i}} \cdot(1-p)^{N-x_{i}} $, 两边取对数, 得
     $$\ln L(p)=\sum_{i=1}^{n} \ln C_{N}^{x_{i}}+\sum_{i=1}^{n} x_{i} \ln p+\sum_{i=1}^{n}\left(N-X_{i}\right) \ln (1-p)$$
     令 $$\frac{\mathrm{d}}{\mathrm{d} p} \ln L(p)=\frac{1}{p} \sum_{i=1}^{n} x_{i}-\frac{1}{1-p}\left(n N-\sum_{i=1}^{n} x_{i}\right)=0$$
-    解得 $\displaystyle p=\frac{\displaystyle \sum_{i=1}^{n} x_{i}}{n N}=\frac{\bar{X}}{N} $, 故 $ p $ 的最大似然估计量为 $ \hat{p}=\dfrac{\bar{X}}{N} $, 
+    解得 $\displaystyle p=\frac{\displaystyle \sum_{i=1}^{n} x_{i}}{n N}=\frac{\bar{X}}{N} $, 故 $ p $ 的最大似然估计量为 $ \hat{p}=\dfrac{\bar{X}}{N} $,
     其中 $ \displaystyle\bar{X}=\dfrac{1}{n} \sum_{i=1}^{n} X_{i} .$
 \end{solution}
 
@@ -82,7 +82,7 @@
               $$\ln L\left( \theta \right) =n\ln \theta +n\theta \ln c-\left( \theta +1\right) \sum ^{n}_{i=1}\ln x_{i}$$
               将 $\ln L(\theta)$ 关于 $\theta$ 求导, 并令其值为 $0$ 即得到似然函数
               $$\dfrac{\partial \ln L\left( \theta \right) }{\partial \theta }=\dfrac{n}{\theta }+n\ln c-\sum ^{n}_{i=1}\ln x_{i}=0$$
-              解得 $\displaystyle \widehat{\theta }=\left[ \dfrac{1}{n}\sum ^{n}_{i=1}\left( \ln x_{i}-\ln c\right) \right] ^{-1}$, 
+              解得 $\displaystyle \widehat{\theta }=\left[ \dfrac{1}{n}\sum ^{n}_{i=1}\left( \ln x_{i}-\ln c\right) \right] ^{-1}$,
               并且 $\displaystyle \dfrac{\partial ^{2}\ln L\left( \theta \right) }{\partial \theta ^{2}}=\dfrac{-n}{\theta ^{2}} <0$, 所以 $\widehat{\theta}$ 是 $\theta$ 的极大似然估计.
     \end{enumerate}
 \end{solution}
@@ -92,7 +92,7 @@
             1-\mathrm{e}^{-\qty(\frac{t}{\theta})^m} & ,t\geqslant 0 \\
             0                                        & ,\text{其他}
         \end{cases}$$
-    其中 $m,~\theta$ 为参数且大于 0, 
+    其中 $m,~\theta$ 为参数且大于 0,
     \begin{enumerate}[label=(\arabic{*})]
         \item 求概率 $P\qty{T>t}$ 与 $P\qty{T>s+t~|~T>s}$, 其中 $s,t>0$;
         \item 任取 $n$ 个这种元件做寿命试验, 测得它们的寿命分别为 $t_1,t_2,\cdots,t_n$, 若 $m$ 已知, 求 $\theta$ 的极大似然估计值 $\hat\theta.$
@@ -100,7 +100,7 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 由 $P\qty{T>t}=1-P\qty{T\leqslant t}$, 所以 $P\qty{T>t}=1-F(t)=\mathrm{e}^{-\qty(\frac{t}{\theta})^m}$, 
+        \item 由 $P\qty{T>t}=1-P\qty{T\leqslant t}$, 所以 $P\qty{T>t}=1-F(t)=\mathrm{e}^{-\qty(\frac{t}{\theta})^m}$,
               并且 $$P\qty{T>s+t~|~T>s}=\dfrac{P\qty{T>s+t,T>s}}{P\qty{T>s}}=\dfrac{P\qty{T>s+t}}{P\qty{T>s}}$$
               所以 $P\qty{T>s+t~|~T>s}=\mathrm{e}^{-\qty(\frac{s+t}{\theta})^m+\qty(\frac{s}{\theta})^m},~s,t>0$;
         \item 由 $f(t)=F'(t)$ 可得概率密度函数 $$f(t)=\begin{cases}
@@ -112,8 +112,44 @@
                   \ln\qty[L(\theta)] & =\ln\qty[\prod_{i=1}^{n}f(t_i;\theta)]=\ln\qty[\prod_{i=1}^{n}\dfrac{mt_i^{m-1}}{\theta^m}\mathrm{e}^{-\qty(\frac{t_i}{\theta})^m}]=\ln\qty[\dfrac{m^n(t_1t_2\cdots t_n)^{m-1}}{\theta^{mn}}\cdot\mathrm{e}^{-\frac{1}{\theta^m}\sum\limits_{i=1}^{n}t_i^m}] \\
                                      & =n\ln m+(m-1)\ln\prod_{i=1}^{n}t_i-mn\ln\theta-\dfrac{1}{\theta^m}\sum_{i=1}^{n}t_i^m
               \end{flalign*}
-              求导得 $\displaystyle\dv{\ln\qty[L(\theta)]}{\theta}=-\dfrac{mn}{\theta}+m\dfrac{1}{\theta^{m+1}}\sum_{i=1}^{n}t_i^m=0$, 解得 $\displaystyle\dfrac{1}{\theta^m}\sum_{i=1}^{n}t_i^m=n$, 
+              求导得 $\displaystyle\dv{\ln\qty[L(\theta)]}{\theta}=-\dfrac{mn}{\theta}+m\dfrac{1}{\theta^{m+1}}\sum_{i=1}^{n}t_i^m=0$, 解得 $\displaystyle\dfrac{1}{\theta^m}\sum_{i=1}^{n}t_i^m=n$,
               那么 $\theta$ 的极大似然估计值为 $\hat\theta=\sqrt[m]{\dfrac{1}{n}\displaystyle\sum_{i=1}^{n}t_i^m}.$
     \end{enumerate}
 \end{solution}
 
+\begin{example}
+    设随机变量 $X$ 与 $Y$ 相互独立, $X$ 的概率密度 $f(x)$ 满足 $f'(x)+\dfrac{x}{\sigma^2}f(x)=0~(\sigma>0)$, $Y$ 的分布律为 $P\qty{Y=-1}=P\qty{Y=1}=\dfrac{1}{2}$, $Z=XY$.
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求 $Z$ 的概率密度 $f(z)$;
+        \item $X$ 与 $Y$ 是否相关，说明理由;
+        \item $Z_1,Z_2,\cdots,Z_n$, 为总体 $Z$ 的简单随机样本，求 $\sigma^2$ 的极大似然估计量 $\hat{\sigma^2}$.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 由微分方程 $f'(x)+\dfrac{x}{\sigma^2}f(x)=0~(\sigma>0)$ 知 $f(x)=C\e ^{-\frac{x^2}{2\sigma^2}}$, 又因为
+              $$\int_{-\infty}^{+\infty} f(x) \dd x=1\Rightarrow C=\qty(2\int_{0}^{+\infty} \e ^{-\frac{x^2}{2\sigma^2}} \dd x)^{-1}=\qty[\sqrt{2}\sigma\Gamma\qty(\dfrac{1}{2})]^{-1}=\dfrac{1}{\sqrt{2\pi}\sigma}$$
+              于是 $X$ 的概率密度 $f(x)=\dfrac{1}{\sqrt{2\pi}\sigma}\e ^{-\frac{x^2}{2\sigma^2}}$, 即 $X\sim N(0,1)$，那么 $Z$ 的分布函数为
+              \begin{flalign*}
+                F_Z(z) & =P\qty{Z\leqslant z}=P\qty{XY\leqslant z}                                                                                                                                                      \\
+                             & =P\qty{XY\leqslant z, Y=-1}+P\qty{XY\leqslant z, Y=1}=P\qty{Y=-1}P\qty{X\geqslant -z}+P\qty{Y=1}P\qty{X\leqslant z}                                                                            \\
+                             & =\dfrac{1}{2}\qty(1-P\qty{X<-z})+\dfrac{1}{2}P\qty{X\leqslant z}=\dfrac{1}{2}\qty[1-\varPhi\qty(-\dfrac{z}{\sigma})]+\dfrac{1}{2}\varPhi\qty(\dfrac{z}{\sigma})=\varPhi\qty(\dfrac{z}{\sigma})
+              \end{flalign*}
+              其中 $\varPhi(x)$ 为 $N(0,1)$ 的分布函数, 故
+              $$f_Z(z)=F_Z'(z)=\dfrac{1}{\sqrt{2\pi}\sigma}\e ^{-\frac{z^2}{2\sigma^2}}.$$
+        \item $EX=0$，又因为 $E\qty(X^2Y)=E\qty(X^2)EY$，且 $EY=-1\times \frac{1}{2}+1\times \frac{1}{2}=0$，所以
+              $$
+                \cov(X,Z)=E(XZ)-EX\cdot EZ=E\qty(X^2Y)-EX\cdot E\qty(XY)=EX^2 EY-EX\cdot EX\cdot EY=0
+              $$
+              故 $X$ 与 $Y$ 不相关.
+        \item 似然函数为
+              $$
+                  L\qty(\sigma^2)=\prod_{i=1}^{n} f_Z(z_i)=(2\pi)^{-\frac{n}{2}}\cdot \qty(\sigma^2)^{-\frac{n}{2}}\cdot\exp\qty(-\dfrac{1}{2\sigma^2}\sum_{i=1}^{n} z_i^2)
+              $$
+              两边取对数，得
+              $$
+                  \ln L\qty(\sigma^2)=-\dfrac{n}{2}\ln (2\pi) -\dfrac{n}{2}\ln\qty(\sigma^2) -\dfrac{1}{2\sigma^2}\sum_{i=1}^{n} z_i^2
+              $$
+              令 $\displaystyle \dv{\sigma^2}\ln\qty(\sigma^2)=0$, 解得 $\sigma^2=\dfrac{1}{n}\displaystyle \sum_{i=1}^{n} z_i^2$, 故 $\sigma^2$ 的极大似然估计量为 $\hat{\sigma^2}=\dfrac{1}{n}\displaystyle \sum_{i=1}^{n} Z_i^2.$
+    \end{enumerate}
+\end{solution}

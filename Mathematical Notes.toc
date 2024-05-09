@@ -262,30 +262,30 @@
 \contentsline {subsection}{\numberline {6.1.5}重积分的应用}{263}{subsection.6.1.5}%
 \contentsline {subsubsection}{重积分在几何上的应用}{263}{subsection.6.1.5}%
 \contentsline {subsubsection}{重积分在力学上的应用}{264}{example.6.1.53}%
-\contentsline {subsubsection}{与重积分有关的不等式证明}{265}{theorem.6.1.6}%
+\contentsline {subsubsection}{与重积分有关的不等式证明}{266}{theorem.6.1.6}%
 \contentsline {section}{\numberline {6.2}曲线积分}{269}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}两类曲线积分}{269}{subsection.6.2.1}%
-\contentsline {subsubsection}{第一类曲线积分的计算}{269}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.1}两类曲线积分}{270}{subsection.6.2.1}%
+\contentsline {subsubsection}{第一类曲线积分的计算}{270}{subsection.6.2.1}%
 \contentsline {subsubsection}{第二类曲线积分的计算}{272}{example.6.2.5}%
 \contentsline {subsubsection}{方向导数与两类曲线积分的联系}{274}{figure.caption.130}%
-\contentsline {subsection}{\numberline {6.2.2}Green 公式}{274}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.2}Green 公式}{275}{subsection.6.2.2}%
 \contentsline {subsubsection}{计算封闭曲线上的线积分}{275}{theorem.6.2.7}%
 \contentsline {subsubsection}{含有奇点形式}{276}{example.6.2.11}%
 \contentsline {subsubsection}{外法向量形式}{277}{example.6.2.14}%
-\contentsline {subsubsection}{积分与路径无关问题}{277}{example.6.2.16}%
+\contentsline {subsubsection}{积分与路径无关问题}{278}{example.6.2.16}%
 \contentsline {subsubsection}{二重积分分部积分}{279}{example.6.2.18}%
-\contentsline {section}{\numberline {6.3}曲面积分}{283}{section.6.3}%
+\contentsline {section}{\numberline {6.3}曲面积分}{284}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}两类曲面积分}{284}{subsection.6.3.1}%
 \contentsline {subsubsection}{第一型曲面积分的计算}{284}{subsection.6.3.1}%
 \contentsline {subsubsection}{第二型曲面积分的计算}{288}{example.6.3.6}%
 \contentsline {subsubsection}{三重积分分部积分}{290}{example.6.3.10}%
-\contentsline {subsubsection}{第二型曲面积分的分部积分公式}{291}{example.6.3.12}%
+\contentsline {subsubsection}{第二型曲面积分的分部积分公式}{292}{example.6.3.12}%
 \contentsline {subsection}{\numberline {6.3.2}Gauss 公式、Stokes 公式}{292}{subsection.6.3.2}%
-\contentsline {subsubsection}{Gauss 公式}{292}{Item.465}%
+\contentsline {subsubsection}{Gauss 公式}{293}{Item.465}%
 \contentsline {subsubsection}{Stokes 公式}{299}{example.6.3.29}%
-\contentsline {section}{\numberline {6.4}多元积分学的应用与场论概述}{302}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}多元积分学的应用}{302}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}梯度、散度和旋度}{304}{subsection.6.4.2}%
+\contentsline {section}{\numberline {6.4}多元积分学的应用与场论概述}{303}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}多元积分学的应用}{303}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}梯度、散度和旋度}{305}{subsection.6.4.2}%
 \contentsline {subsection}{\numberline {6.4.3}梯度、散度、旋度的基本公式及其应用}{306}{subsection.6.4.3}%
 \contentsline {chapter}{\numberline {第七章\hspace {.3em}}无穷级数}{308}{chapter.7}%
 \contentsline {section}{\numberline {7.1}常数项级数}{308}{section.7.1}%
@@ -517,16 +517,16 @@
 \contentsline {chapter}{\numberline {第二十二章\hspace {.3em}}参数的点估计及其优良性}{536}{chapter.22}%
 \contentsline {section}{\numberline {22.1}矩估计法}{536}{section.22.1}%
 \contentsline {section}{\numberline {22.2}极大似然估计}{538}{section.22.2}%
-\contentsline {section}{\numberline {22.3}估计量优良性的判定标准}{540}{section.22.3}%
-\contentsline {subsection}{\numberline {22.3.1}无偏性}{540}{subsection.22.3.1}%
+\contentsline {section}{\numberline {22.3}估计量优良性的判定标准}{541}{section.22.3}%
+\contentsline {subsection}{\numberline {22.3.1}无偏性}{541}{subsection.22.3.1}%
 \contentsline {subsection}{\numberline {22.3.2}有效性}{541}{subsection.22.3.2}%
-\contentsline {subsection}{\numberline {22.3.3}一致性}{541}{subsection.22.3.3}%
+\contentsline {subsection}{\numberline {22.3.3}一致性}{542}{subsection.22.3.3}%
 \vspace \bigskipamount 
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}积分表推导}{542}{appendix.A}%
-\contentsline {section}{\numberline {A.1}含有 $ax+b$ 的积分}{542}{section.A.1}%
-\contentsline {section}{\numberline {A.2}含有 $\sqrt {ax+b}$ 的积分}{543}{section.A.2}%
-\contentsline {section}{\numberline {A.3}含有 $x^2\pm a^2$ 的积分}{543}{section.A.3}%
-\contentsline {section}{\numberline {A.4}含有 $ax^2+b\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces (a>0)$ 的积分}{543}{section.A.4}%
-\contentsline {section}{\numberline {A.5}含有 $ax^2+b+c\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces (a>0)$ 的积分}{544}{section.A.5}%
-\contentsline {chapter}{索引}{548}{section.A.5}%
-\contentsline {chapter}{参考文献}{548}{appendix*.197}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}积分表推导}{543}{appendix.A}%
+\contentsline {section}{\numberline {A.1}含有 $ax+b$ 的积分}{543}{section.A.1}%
+\contentsline {section}{\numberline {A.2}含有 $\sqrt {ax+b}$ 的积分}{544}{section.A.2}%
+\contentsline {section}{\numberline {A.3}含有 $x^2\pm a^2$ 的积分}{544}{section.A.3}%
+\contentsline {section}{\numberline {A.4}含有 $ax^2+b\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces (a>0)$ 的积分}{544}{section.A.4}%
+\contentsline {section}{\numberline {A.5}含有 $ax^2+b+c\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces (a>0)$ 的积分}{545}{section.A.5}%
+\contentsline {chapter}{索引}{549}{section.A.5}%
+\contentsline {chapter}{参考文献}{549}{appendix*.197}%

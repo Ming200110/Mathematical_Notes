@@ -32,9 +32,9 @@
 
   \indexspace
 
-  \item Gauss 公式, \hyperpage{292}
+  \item Gauss 公式, \hyperpage{293}
   \item Gauss 判别法, \hyperpage{317}
-  \item Green 公式, \hyperpage{274}
+  \item Green 公式, \hyperpage{275}
 
   \indexspace
 
@@ -185,7 +185,7 @@
   \item 数列的夹逼准则, \hyperpage{13}
   \item 数列的极限, \hyperpage{10}
   \item 斜渐近线, \hyperpage{7}
-  \item 方向导数与 Hamilton 算符, \hyperpage{305}
+  \item 方向导数与 Hamilton 算符, \hyperpage{306}
   \item 方向导数与梯度的关系, \hyperpage{241}
   \item 方向导数的计算, \hyperpage{240}
   \item 旋转体的体积公式, \hyperpage{154}
@@ -210,7 +210,7 @@
 
   \indexspace
 
-  \item 物体的质心, \hyperpage{264}
+  \item 物体的质心, \hyperpage{265}
   \item 物体的质量, \hyperpage{264}
   \item 用参数方程确定的函数的导数, \hyperpage{74}
   \item 留数定理, \hyperpage{194}
@@ -220,16 +220,16 @@
   \item 移位性质, \hyperpage{66}
   \item 空间曲线绕直线旋转的曲面方程, \hyperpage{210}
   \item 第一型余元公式, \hyperpage{191}
-  \item 第一型曲面积分化为二重积分, \hyperpage{284}
+  \item 第一型曲面积分化为二重积分, \hyperpage{285}
   \item 第一型递推性质, \hyperpage{191}
   \item 第一积分中值定理, \hyperpage{151}
-  \item 第一类曲线积分化为定积分, \hyperpage{270}
+  \item 第一类曲线积分化为定积分, \hyperpage{271}
   \item 第二型余元公式, \hyperpage{190}
   \item 第二型倍元公式, \hyperpage{191}
-  \item 第二型曲面积分的分部积分公式, \hyperpage{291}
+  \item 第二型曲面积分的分部积分公式, \hyperpage{292}
   \item 第二型递推性质, \hyperpage{190}
   \item 第二积分中值定理, \hyperpage{153}
-  \item 第二类曲线积分化为定积分, \hyperpage{272}
+  \item 第二类曲线积分化为定积分, \hyperpage{273}
   \item 等价无穷小的充要条件, \hyperpage{30}
   \item 等价积分, \hyperpage{45}
   \item 算子特性, \hyperpage{352}
@@ -243,7 +243,7 @@
   \item 调和级数, \hyperpage{310}
   \item 路径无关, \hyperpage{278}
   \item 跳跃间断点, \hyperpage{6}
-  \item 转动惯量, \hyperpage{265}
+  \item 转动惯量, \hyperpage{266}
   \item 轮换对称性, \hyperpage{270}
   \item 轴对称性, \hyperpage{270}
   \item 连续, \hyperpage{6}

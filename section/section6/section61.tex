@@ -7,9 +7,9 @@
 \subsubsection{二重积分}
 
 \begin{definition}[二重积分]
-    设 $f(x,y)$ 是有界闭区域 $D$ 上的有界函数, 将闭区域 $D$ 任意分成 $n$ 个小闭区域 $\Delta\sigma_1,\Delta\sigma_2,\cdots,\Delta\sigma_n$, 
-    其中 $\Delta\sigma_i$ 表示第 $i$ 个小闭区域, 也表示它的面积, 在每个 $\Delta\sigma_i$ 上取一点 $(\xi_i,\eta_i)$, 
-    作乘积 $f(\xi_i,\eta_i)\Delta\sigma_i~~(i=1,2,\cdots,n)$, 并作和 $\displaystyle\sum_{i=1}^{n}f(\xi_i,\eta_i)\Delta\sigma_i$, 
+    设 $f(x,y)$ 是有界闭区域 $D$ 上的有界函数, 将闭区域 $D$ 任意分成 $n$ 个小闭区域 $\Delta\sigma_1,\Delta\sigma_2,\cdots,\Delta\sigma_n$,
+    其中 $\Delta\sigma_i$ 表示第 $i$ 个小闭区域, 也表示它的面积, 在每个 $\Delta\sigma_i$ 上取一点 $(\xi_i,\eta_i)$,
+    作乘积 $f(\xi_i,\eta_i)\Delta\sigma_i~~(i=1,2,\cdots,n)$, 并作和 $\displaystyle\sum_{i=1}^{n}f(\xi_i,\eta_i)\Delta\sigma_i$,
     如果当各小闭区域的直径中的最大值 $\lambda$ 趋近于零时, 这和式极限存在, 则称此极限为函数 $f(x,y)$ 在闭区间 $D$ 上的\textit{二重积分}, 记作
     $\displaystyle\iint\limits_D f(x,y)\dd \sigma$, 即 $$ \iint\limits_Df(x,y)\dd\sigma=\lim_{\lambda\to0}\sum_{i=1}^{n}f(\xi_i,\eta_i)\Delta\sigma_i $$
     其中 $\dd \sigma$ 称为面积元.
@@ -47,9 +47,9 @@
 \subsubsection{三重积分}
 
 \begin{definition}[三重积分]
-    设 $ f(x,y,z) $ 是空间闭区域 $\Omega$ 上的有界函数, 将 $ \Omega $ 任意分成 $n$ 个小区域 $\Delta v_1,\Delta v_2,\cdots,\Delta v_n$, 
-    其中 $\Delta v_i$ 表示第 $i$ 个小区域, 也表示它的体积, 在每个 $\Delta v_i$ 上取一点 $(\xi_i,\eta_i,\zeta _i)$, 
-    作乘积 $f(\xi_i,\eta_i,\zeta _i)\Delta v_i~~(i=1,2,\cdots,n)$, 并作和 $\displaystyle\sum_{i=1}^{n}f(\xi_i,\eta_i,\zeta _i)\Delta v_i$, 
+    设 $ f(x,y,z) $ 是空间闭区域 $\Omega$ 上的有界函数, 将 $ \Omega $ 任意分成 $n$ 个小区域 $\Delta v_1,\Delta v_2,\cdots,\Delta v_n$,
+    其中 $\Delta v_i$ 表示第 $i$ 个小区域, 也表示它的体积, 在每个 $\Delta v_i$ 上取一点 $(\xi_i,\eta_i,\zeta _i)$,
+    作乘积 $f(\xi_i,\eta_i,\zeta _i)\Delta v_i~~(i=1,2,\cdots,n)$, 并作和 $\displaystyle\sum_{i=1}^{n}f(\xi_i,\eta_i,\zeta _i)\Delta v_i$,
     如果当各小区域的直径中的最大值 $\lambda$ 趋近于零时, 这和式极限存在, 则称此极限为函数 $f(x,y,z)$ 在闭区间 $\Omega$ 上的\textit{三重积分}, 记作
     $\displaystyle\iiint\limits_\Omega f(x,y,z)\dd v$, 即 $$ \iiint\limits_\Omega f(x,y,z)\dd v=\lim_{\lambda\to0}\sum_{i=1}^{n}f(\xi_i,\eta_i,\zeta _i)\Delta v_i $$
     其中 $\dd v$ 称为体积元.
@@ -119,7 +119,7 @@
 \end{solution}
 
 \begin{example}
-    设 $\displaystyle I_1=\iint\limits_D\dfrac{x+y}{4}\dd x\dd y,~I_2=\iint\limits_D\sqrt{\dfrac{x+y}{4}}\dd x\dd y,~I_3=\iint\limits_D\sqrt[3]{\dfrac{x+y}{4}}\dd x\dd y$, 
+    设 $\displaystyle I_1=\iint\limits_D\dfrac{x+y}{4}\dd x\dd y,~I_2=\iint\limits_D\sqrt{\dfrac{x+y}{4}}\dd x\dd y,~I_3=\iint\limits_D\sqrt[3]{\dfrac{x+y}{4}}\dd x\dd y$,
     且 $$D=\qty{(x,y)\big| (x-1)^2+(y-1)^2\leqslant 2}$$
     则有
     \begin{tasks}(4)
@@ -223,7 +223,7 @@
     计算 $\displaystyle\int_{0}^{1}\dd y\int_{1}^{\sqrt{y}}\sqrt{\dfrac{1}{x^2}+1}\dd x.$
 \end{example}
 \begin{solution}
-    由分部积分公式, 
+    由分部积分公式,
     $$I=\int_{0}^{1}\qty[\int_{1}^{\sqrt{y}}\sqrt{\dfrac{1}{x^2}+1}\dd x]\dd y=\eval{y\int_{1}^{\sqrt{y}}\sqrt{\dfrac{1}{x^2}+1}\dd x}_{y=0}^{y=1}-\int_{0}^{1}y\dd \qty[\int_{1}^{\sqrt{y}}\sqrt{\dfrac{1}{x^2}+1}\dd x]=0-\dfrac{1}{2}\int_{0}^{1}\sqrt{1+y}\dd y=1-2\sqrt{2}.$$
 \end{solution}
 
@@ -261,7 +261,7 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    交换积分次序, $\displaystyle F(t)=\int_{1}^{t}\dd x\int_{1}^{x}f(x)\dd y=\int_{1}^{t}(x-1)f(x)\dd x$, 
+    交换积分次序, $\displaystyle F(t)=\int_{1}^{t}\dd x\int_{1}^{x}f(x)\dd y=\int_{1}^{t}(x-1)f(x)\dd x$,
     于是 $F'(2)=(2-1)f(2)=f(2)$, 故选 B.
 \end{solution}
 
@@ -375,7 +375,7 @@
     计算 $\displaystyle\int_{0}^{1}\dd x\int_{0}^{x}\sqrt{1+y^2}\dd y+3\int_{0}^{1}\dd y\int_{1}^{\sqrt{2-y^2}}\sqrt{x^2+y^2}\dd x.$
 \end{example}
 \begin{solution}
-    对前部分交换积分次序, 后部分采用极坐标换元, 
+    对前部分交换积分次序, 后部分采用极坐标换元,
     \begin{flalign*}
         \int_{0}^{1}\dd x\int_{0}^{x}\sqrt{1+y^2}\dd y=\int_{0}^{1}\dd y\int_{y}^{1}\sqrt{1+y^2}\dd x=\int_{0}^{1}\sqrt{1+y^2}\dd y-\dfrac{1}{3}\qty(2\sqrt{2}-1)
     \end{flalign*}
@@ -390,7 +390,7 @@
     计算 $\displaystyle\int_{0}^{1}\dd y\int_{0}^{1}\sqrt{\e^{2x}-y^2}\dd x+\int_{1}^{\e}\dd y\int_{\ln y}^{1}\sqrt{\e^{2x}-y^2}\dd x.$
 \end{example}
 \begin{solution}
-    交换积分次序先 $x$ 后 $y$ 有, 
+    交换积分次序先 $x$ 后 $y$ 有,
     \begin{flalign*}
         I=\int_{0}^{1}\dd x\int_{0}^{\e^{x}}\sqrt{\e^{2x}-y^2}\dd y=\int_{0}^{1}\e^{2x}\dd x\int_{0}^{\e^x}\sqrt{1-\qty(\dfrac{y}{\e^x})^2}\dd \qty(\dfrac{y}{\e^x})
     \end{flalign*}
@@ -404,14 +404,14 @@
     设平面区域 $D$ 由直线 $y=x$, 圆 $x^2+y^2=2y$ 及 $y$ 轴所围成, 计算 $\displaystyle\iint\limits_D xy\dd \sigma$.
 \end{example}
 \begin{solution}
-    圆的极坐标为 $r=2\sin\theta$, 于是 
+    圆的极坐标为 $r=2\sin\theta$, 于是
     \begin{flalign*}
         I=\iint\limits_D xy\dd \sigma=\int_{\frac{\pi}{4}}^{\frac{\pi}{2}}\dd \theta\int_{0}^{2\sin\theta}r^2\cos\theta\sin\theta r\dd r=4\int_{\frac{\pi}{4}}^{\frac{\pi}{2}}\sin^5\theta\dd \sin\theta=\dfrac{7}{12}.
     \end{flalign*}
 \end{solution}
 
 \begin{example}[2015 数一]
-    设 $D$ 是第一象限中由曲线 $2xy=1,4xy=1$ 与直线 $y=x,y=\sqrt{3}x$ 围成的平面区域, 
+    设 $D$ 是第一象限中由曲线 $2xy=1,4xy=1$ 与直线 $y=x,y=\sqrt{3}x$ 围成的平面区域,
     函数 $f(x,y)$ 在 $D$ 上连续, 则 $\displaystyle\iint\limits_D f(x,y)\dd x\dd y$.
     \begin{tasks}(2)
         \task $\displaystyle \int_{\frac{\pi}{4}}^{\frac{\pi}{3}}\dd \theta \int_{\frac{1}{2\sin2\theta}}^{\frac{1}{\sin2\theta}}f(r\cos\theta,r\sin\theta)r\dd r.$
@@ -421,7 +421,7 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    积分区域可用极坐标表示为 $D=\qty{(r,\theta)~\biggl |~\dfrac{\pi}{4}\leqslant \theta\leqslant \dfrac{\pi}{3},\dfrac{1}{\sqrt{2\sin 2\theta}}\leqslant r\leqslant \dfrac{1}{\sqrt{\sin 2\theta}}}$, 
+    积分区域可用极坐标表示为 $D=\qty{(r,\theta)~\biggl |~\dfrac{\pi}{4}\leqslant \theta\leqslant \dfrac{\pi}{3},\dfrac{1}{\sqrt{2\sin 2\theta}}\leqslant r\leqslant \dfrac{1}{\sqrt{\sin 2\theta}}}$,
     于是有 $$\iint\limits_D f(x,y)\dd x\dd y=\int_{\frac{\pi}{4}}^{\frac{\pi}{3}}\dd \theta \int_{\frac{1}{\sqrt{2\sin 2\theta}}}^{\frac{1}{\sqrt{\sin2\theta}}}f(r\cos\theta,r\sin\theta)r\dd r.$$
     故选 B.
 \end{solution}
@@ -589,7 +589,7 @@
 % \end{solution}
 
 \begin{example}
-    设 $\Omega$ 是由曲面 $z=y^2,z=4y^2~~(y>0)$, 平面 $z=x,z=2x$ 及 $z=2$ 所围区域, 
+    设 $\Omega$ 是由曲面 $z=y^2,z=4y^2~~(y>0)$, 平面 $z=x,z=2x$ 及 $z=2$ 所围区域,
     求积分 $$\iiint\limits_\Omega \frac{z\sqrt{z}}{y^3}\cos\frac{z}{y^2}\dd x\dd y\dd z.$$
 \end{example}
 \begin{solution}
@@ -723,13 +723,13 @@
                       1  , & x^2-y^2+3>0 \\
                       0  , & x^2-y^2+3=0 \\
                       -1 , & x^2-y^2+3<0
-                  \end{cases}$, 
+                  \end{cases}$,
               如图 (b) 所示, 被积函数和积分区域都关于坐标轴对称, 因此只要计算第一象限的部分, 再乘 $4$ 即为原积分值, 故
               \begin{flalign*}
                   \text{原式} & =4\iint\limits_{\substack{x^2+y^2\leqslant5                                                                                                    \\x,y\geqslant 0}}\mathrm{sgn}\qty(x^2-y^2+3)\dd x\dd y=4\int_{0}^{1}\dd x\int_{0}^{\sqrt{x^2+3}}\dd y-4\int_{0}^{1}\dd x\int_{\sqrt{x^2+5}}^{\sqrt{5-x^2}}\dd y+4\int_{1}^{\sqrt{5}}\dd x\int_{0}^{\sqrt{5-x^2}}\dd y \\
                               & =8\int_{0}^{1}\sqrt{x^2+3}\dd x-4\int_{0}^{1}\sqrt{5-x^2}\dd x+4\int_{0}^{\sqrt{5}}\sqrt{5-x^2}\dd x=6\ln 3+5\pi-20\arcsin\dfrac{1}{\sqrt{5}}.
               \end{flalign*}
-        \item 如图 (c) 所示, 
+        \item 如图 (c) 所示,
               \begin{flalign*}
                   I & =\iint\limits_{|x|\leqslant 1,0\leqslant y\leqslant 2}\sqrt{\qty|y-x^2|}\dd x\dd y=\iint\limits_{|x|\leqslant 1,x^2\leqslant y\leqslant 2}\sqrt{y-x^2}\dd x\dd y+\iint\limits_{|x|\leqslant 1,0\leqslant y\leqslant x^2}\sqrt{x^2-y}\dd x\dd y \\
                     & =\int_{-1}^{1}\dd x\int_{x^2}^{2}\sqrt{y-x^2}\dd y+\int_{-1}^{1}\dd x\int_{0}^{x^2}\sqrt{x^2-y}\dd y=\dfrac{\pi}{2}+\dfrac{5}{3}.
@@ -842,12 +842,12 @@
     其中 $D$ 是以 $(-1,-1),~(1,-1),~(1,1)$ 为顶点的三角形, 且 $f(1)=0$, 求 $\displaystyle\int_{0}^{1}f(x)\dd x.$
 \end{example}
 \begin{solution}
-    令 $\displaystyle\iint\limits_D f(xy)\dd x\dd y=A$, 那么 $\displaystyle f(x)=x^2+x\int_{0}^{x^2}f\qty(x^2-t)\dd t+A$, 
+    令 $\displaystyle\iint\limits_D f(xy)\dd x\dd y=A$, 那么 $\displaystyle f(x)=x^2+x\int_{0}^{x^2}f\qty(x^2-t)\dd t+A$,
     将 $x$ 替换为 $xy$ 得 $$f(xy)=x^2y^2+xy\int_{0}^{x^2y^2}f\qty(x^2y^2-t)\dd t+A\Rightarrow f(xy)=x^2y^2+xy\int_{0}^{x^2y^2}f(u)\dd u+A$$
     % 并令 $u=x^2y^2-t$, 那么 $\displaystyle\int_{0}^{x^2y^2}f\qty(x^2y^2-t)\dd t=\int_{0}^{x^2y^2}f(u)\dd u$, 故上式转为
     % $$f(xy)=x^2y^2+xy\int_{0}^{x^2y^2}f(u)\dd u+A$$
     对等式两边二重积分得 $$A=\iint\limits_D x^2y^2\dd x\dd y+\iint\limits_D\qty[xy\int_{0}^{x^2y^2}f(u)\dd u]\dd x\dd y+A\iint\limits_D \dd x\dd y$$
-    其中 $\displaystyle\iint\limits_D x^2y^2\dd x\dd y=\int_{-1}^{1}x^2\dd x\int_{-1}^{x}y^2\dd y=\dfrac{2}{9},~\iint\limits_D \dd x\dd y=2$, 
+    其中 $\displaystyle\iint\limits_D x^2y^2\dd x\dd y=\int_{-1}^{1}x^2\dd x\int_{-1}^{x}y^2\dd y=\dfrac{2}{9},~\iint\limits_D \dd x\dd y=2$,
     作 $y=-x$, 将 $D$ 划分为关于 $x$ 轴对称的 $D_1$ 和关于 $y$ 轴对称的 $D_2$, 并令函数 $\displaystyle g(x,y)=\int_{0}^{x^2y^2}f(u)\dd u$, 关于 $x$ 和 $y$ 都是奇函数, 利用二重积分的对称性知
     $$\iint\limits_D g(x,y)\dd x\dd y=\iint\limits_{D_1}g(x,y)\dd x\dd y+\iint\limits_{D_2}g(x,y)\dd x\dd y=0$$
     故 $A=-\dfrac{2}{9}$, 又由已知条件 $f(0)=1$, 那么
@@ -868,7 +868,7 @@
           & =\int_{0}^{2\pi}\dd \theta\int_{0}^{\pi}\sin\varphi\dd \varphi\int_{0}^{1}\dfrac{r^2}{r^4+1}\dd r+3\int_{0}^{2\pi}\dd \theta\int_{0}^{\pi}\sin\varphi\cos^2\varphi\dd\varphi\int_{0}^{1}\dfrac{r^4}{r^4+1}\dd r        \\
           & =4\pi\int_{0}^{1}\dfrac{r^4+r^2}{r^4+1}\dd r=4\pi+\sqrt{2}\pi\ln\qty(3-2\sqrt{2})
     \end{flalign*}
-    其中 $\displaystyle\int_{0}^{1}\dfrac{r^4+r^2}{r^4+1}\dd r=\int_{0}^{1}\dfrac{r^4+1+r^2-1}{r^4+1}\dd r=\int_{0}^{1}\dd r+\int_{0}^{1}\dfrac{r^2-1}{r^4+1}\dd r$, 
+    其中 $\displaystyle\int_{0}^{1}\dfrac{r^4+r^2}{r^4+1}\dd r=\int_{0}^{1}\dfrac{r^4+1+r^2-1}{r^4+1}\dd r=\int_{0}^{1}\dd r+\int_{0}^{1}\dfrac{r^2-1}{r^4+1}\dd r$,
     \begin{flalign*}
         \int\dfrac{r^2-1}{r^4+1}\dd r =\int\dfrac{1-\dfrac{1}{r^2}}{\qty(r+\dfrac{1}{r})^2-2}\dd r\xlongequal{r+\frac{1}{r}=t}\int\dfrac{\dd t}{\qty(t-\sqrt{2})\qty(t+\sqrt{2})} =\dfrac{1}{2\sqrt{2}}\ln\qty|\dfrac{t-\sqrt{2}}{t+\sqrt{2}}|+C=\dfrac{1}{2\sqrt{2}}\ln\qty|\dfrac{r+\dfrac{1}{r}-\sqrt{2}}{r+\dfrac{1}{r}+\sqrt{2}}|+C.
     \end{flalign*}
@@ -913,7 +913,7 @@
 \end{example}
 \begin{solution}
     注意到 $\displaystyle\frac{\sin(5x)-\sin(3x)}{x}=\int_3^5\cos(xy)\dd y$, $\displaystyle\text{所以原式=}\int_0^{+\infty}\dd x\int_3^5\mathrm{e}^{-2x}\cos(xy)\dd y$, \\
-    由于 $|\mathrm{e}^{-2x}\cos(xy)|\leqslant \mathrm{e}^{-2x}$, 且 $\displaystyle\int_0^{+\infty}\mathrm{e}^{-2x}\dd x$ 收敛, 
+    由于 $|\mathrm{e}^{-2x}\cos(xy)|\leqslant \mathrm{e}^{-2x}$, 且 $\displaystyle\int_0^{+\infty}\mathrm{e}^{-2x}\dd x$ 收敛,
     所以 $\displaystyle \int_3^5\cos(xy)\dd x$ 关于 $y\in[3,5]$ 一致收敛, 再结合 $\mathrm{e}^{-2x}\cos(xy)$ 为 $[0,+\infty)\times[3,5]$ 上的连续函数, 所以
     \begin{flalign*}
         I & =\int_0^{+\infty}\dd x\int_3^5\mathrm{e}^{-2x}\cos(xy)\dd y=\int_3^5\dd y\int_0^{+\infty}\mathrm{e}^{-2x}\cos(xy)\dd x \\
@@ -926,12 +926,12 @@
     计算 $\displaystyle I=\iint\limits_D\mathrm{e}^{-\left(x^2+y^2\right)}\cos\left(x^2+y^2\right)\dd x\dd y$, 其中 $D$ 是全平面.
 \end{example}
 \begin{solution}
-    用极坐标, 化为先 $\theta$ 后 $\rho$ 次序的二次积分, 
+    用极坐标, 化为先 $\theta$ 后 $\rho$ 次序的二次积分,
     \begin{flalign*}
         I=\int_0^{+\infty}\dd \rho\int_0^{2\pi}\rho\mathrm{e}^{-\rho^2}\cos\rho^2\dd \theta
         =2\pi\int_0^{+\infty}\rho\mathrm{e}^{-\rho^2}\cos\rho^2\dd \rho.
     \end{flalign*}
-    其中, 
+    其中,
     \begin{flalign*}
         \int\rho\mathrm{e}^{-\rho^2}\cos\rho^2\dd \rho
          & =\int\frac{4\rho\cos\rho^2}{4\mathrm{e}^{\rho^2}}\dd \rho
@@ -949,7 +949,7 @@
     计算 $\displaystyle\iint\limits_D\dfrac{x^2+y^2-2}{\qty(x^2+y^2)^{\frac{5}{2}}}\dd x\dd y$, 其中 $D:x^2+y^2\geqslant 2,x\leqslant 1.$
 \end{example}
 \begin{solution}
-    注意到 $ D $ 关于 $ x $ 轴对称, 且被积函数关于 $ y $ 变量为偶函数, 记 $ x $ 轴上方部分积分区域为 $ D_{1}$, 
+    注意到 $ D $ 关于 $ x $ 轴对称, 且被积函数关于 $ y $ 变量为偶函数, 记 $ x $ 轴上方部分积分区域为 $ D_{1}$,
     令 $ x=r \cos \theta, y=r \sin \theta $, 则在极坐标下, $ D_{1} $ 可以描述为两部分, 如图 \ref{dd1d2} 所示, 记作
     $$D_{1}^{\prime}:\frac{\pi}{4} \leqslant \theta \leqslant \frac{\pi}{2}, \sqrt{2} \leqslant r \leqslant \sec \theta,~D_{2}^{\prime}:\frac{\pi}{2} \leqslant \theta \leqslant \pi, \sqrt{2} \leqslant r \leqslant+\infty$$
     \begin{minipage}{.38\linewidth}
@@ -1018,7 +1018,7 @@
         I & =\dv{x}\int_{\sin x}^{\cos x}\mathrm{e}^{\qty(xt+x^2)}\dd t=\qty[\int_{\sin x}^{\cos x}(t+2x)\mathrm{e}^{\qty(xt+x^2)}\dd t-\sin x\mathrm{e}^{\qty(x\cos x+x^2)}-\cos x\mathrm{e}^{\qty(x\sin x+x^2)}]_{x=0} \\
           & =\int_{0}^{1}t\dd t-1=-\dfrac{1}{2}
     \end{flalign*}
-    \textbf{法二: }由题意, 
+    \textbf{法二: }由题意,
     \begin{flalign*}
         F(x)=\int_{\sin x}^{\cos x}\mathrm{e}^{\qty(xt+x^2)}\dd t=\mathrm{e}^{x^2}\int_{\sin x}^{\cos x}\mathrm{e}^{xt}\dd t\xlongequal[]{xt=u}\dfrac{\mathrm{e}^{x^2}}{x}\int_{x\sin x}^{x\cos x}\mathrm{e}^u\dd u=\dfrac{\mathrm{e}^{x^2}}{x}\qty(\mathrm{e}^{x\cos x}-\mathrm{e}^{x\sin x})
     \end{flalign*}
@@ -1045,10 +1045,10 @@
             x=r\cos\theta \\ y=r\sin\theta\\ z=z
         \end{cases}$, 则由 $\begin{cases}
             z=x^2+y^2 \\ x^2+y^2+z^2=t^2
-        \end{cases}$ 联立得 $z^2=z+t^2$, 解得 $z=\dfrac{\sqrt{1+4t^2}-1}{2}:=b^2(t)$, 
+        \end{cases}$ 联立得 $z^2=z+t^2$, 解得 $z=\dfrac{\sqrt{1+4t^2}-1}{2}:=b^2(t)$,
     于是区域 $\Omega$ 在 $xOy$ 平面上的投影区域为 $D_{xy}:x^2+y^2\leqslant b^2(t)$, 从而
     $$F(t)=\int_{0}^{2\pi}\dd \theta\int_{0}^{b(t)}r\dd r\int_{r^2}^{\sqrt{t^2-r^2}}f\qty(r^2+z^2)\dd z=2\pi\int_{0}^{b(t)}r\qty[\int_{r^2}^{\sqrt{t^2-r^2}}f\qty(r^2+z^2)\dd z]\dd r$$
-    记 $\displaystyle g(t,r)=r\qty[\int_{r^2}^{\sqrt{t^2-r^2}}f\qty(r^2+z^2)\dd z]$, 则由 $f(x)$ 的连续知,  $g(t,r)$ 及 $\displaystyle\pdv{g(t,r)}{r}$ 连续, 
+    记 $\displaystyle g(t,r)=r\qty[\int_{r^2}^{\sqrt{t^2-r^2}}f\qty(r^2+z^2)\dd z]$, 则由 $f(x)$ 的连续知,  $g(t,r)$ 及 $\displaystyle\pdv{g(t,r)}{r}$ 连续,
     于是由含参变量积分的求导公式, 得
     \begin{flalign*}
         F'(t) & =2\pi\qty[\int_{0}^{b(t)}\pdv{g}{t}\dd r+g(t,b(t))\cdot b'(t)]                                                                             \\
@@ -1086,7 +1086,7 @@
     已知 $\displaystyle\lim_{x\to0^+}\dfrac{\displaystyle\int_{0}^{x}\dd v\int_{\ln(1+v)}^{v}\sin\qty(u^2)\dd u}{x^k}=c\neq0$, 求 $c.$
 \end{example}
 \begin{errorSolution}
-    记积分区域为 $D$, 则由二重积分中值定理知, $\exists(\xi,\eta)\in D$, 使得 $\displaystyle\iint\limits_D \sin\qty(u^2)\dd u\dd v=\sin\qty(\eta^2)\iint\limits_D \dd u\dd v$, 下求 $D$ 的面积 $S$, 
+    记积分区域为 $D$, 则由二重积分中值定理知, $\exists(\xi,\eta)\in D$, 使得 $\displaystyle\iint\limits_D \sin\qty(u^2)\dd u\dd v=\sin\qty(\eta^2)\iint\limits_D \dd u\dd v$, 下求 $D$ 的面积 $S$,
     记 $I_1=\dfrac{1}{2}x^2,~\displaystyle I_2=\int_{0}^{x}\ln(1+t)\dd t$, 于是 $$I_2=\int_{0}^{x}\ln(1+t)\dd t=x\ln(1+x)-x+\ln(1+x)$$
     因此 $S=I_1-I_2=\dfrac{1}{2}x^2-x\ln(1+x)+x-\ln(1+x)$, 故极限式化为
     $$\lim_{x\to0^+}\dfrac{x^2\qty[\dfrac{1}{2}x^2-x\ln(1+x)+x-\ln(1+x)]}{x^k}=\lim_{x\to0^+}\dfrac{x^2\qty[\dfrac{1}{2}x^2-x^2+\dfrac{1}{2}x^3+x-x+\dfrac{1}{2}x^2-\dfrac{1}{3}x^3+o\qty(x^3)]}{x^k}=\lim_{x\to0^+}\dfrac{\dfrac{x^5}{6}}{x^k}$$
@@ -1133,10 +1133,10 @@
 \end{solution}
 
 \begin{example}[第十届 “景润杯”]
-    计算极限 $\displaystyle\lim_{R\to+\infty}\iint\limits_{D_R}\mathrm{e}^{-x}\arctan\dfrac{y}{x}\dd x\dd y$, 其中 $D_R$ 是由 $x=R,y=0,y=\dfrac{2}{R}x-1$ 所围成.
+    计算极限 $\displaystyle\lim_{R\to+\infty}\iint\limits_{D_R}\mathrm{e}^{-x}\arctan\dfrac{y}{x}\dd x\dd y$, 其中 $D_R$ 是由 $$x=R,y=0,y=\dfrac{2}{R}x-1$$ 所围成.
 \end{example}
 \begin{solution}
-    由二重积分的积分中值定理知, $\exists(\xi,\eta)\in D_R$, 
+    由二重积分的积分中值定理知, $\exists(\xi,\eta)\in D_R$,
     使得 $$\iint\limits_{D_R}\mathrm{e}^{-x}\arctan\dfrac{y}{x}\dd x\dd y=\mathrm{e}^{-\xi}\arctan\dfrac{\eta}{\xi}\iint\limits_{D_R}\dd x\dd y=\dfrac{R}{4}\mathrm{e}^{-\xi}\arctan\dfrac{\eta}{\xi}$$
     其中 $R\in\qty(\dfrac{R}{2},R),~\eta\in(0,1)$, 故 \begin{flalign*}
         \qty|\iint\limits_{D_R}\mathrm{e}^{-x}\arctan\dfrac{y}{x}\dd x\dd y|=\mathrm{e}^{-\xi}\arctan\dfrac{\eta}{\xi}\iint\limits_{D_R}\dd x\dd y\leqslant \dfrac{R}{4}\mathrm{e}^{-\frac{R}{2}}\arctan \dfrac{\eta}{\xi}\to0~ (R\to+\infty)
@@ -1229,11 +1229,27 @@
 \end{theorem}
 
 \begin{example}
+    设立体 $\Omega=\qty{(x, y, z)|x^2+y^2+z^2\leqslant t^2,t>0,z\geqslant 0}$, 其密度为 $zf\qty(\sqrt{x^2+y^2+z^2})$, $f$ 为非负可微函数，且 $f(0)=1$, $m(t)$ 为立体 $\Omega$ 的质量，求 $\displaystyle \lim_{t \to 0^+}\dfrac{m(t)}{t^4}.$
+\end{example}
+\begin{solution}
+    由球坐标公式 $\begin{cases}
+            x=r\cos\theta\sin\varphi \\ y=r\sin\theta\cos\varphi\\ z= r\cos\varphi
+        \end{cases}$ 那么
+    \begin{flalign*}
+        m(t) & =\iiint\limits_\Omega zf\qty(\sqrt{x^2+y^2+z^2})\dd v=\int_{0}^{2\pi}\dd \theta \int_{0}^{\frac{\pi}{2}} \sin\varphi \dd \varphi \int_{0}^{t} r\cos\varphi f(r)r^2 \dd r \\
+             & =2\pi \int_{0}^{\frac{\pi}{2}} \sin\varphi\cos\varphi \dd \varphi \int_{0}^{t} r^3f(r) \dd r =\pi \int_{0}^{t} r^3f(r) \dd r
+    \end{flalign*}
+    所以 $$
+        \lim_{t \to 0^+}\dfrac{m(t)}{t^4}=\pi \lim_{t \to 0^+}\dfrac{\displaystyle \int_{0}^{t} r^3f(r) \dd r}{t^4}\xlongequal{L'}\pi\lim_{t \to 0^+}\dfrac{t^3(t)}{4t^3}=\frac{\pi}{4} f(0) =\dfrac{\pi}{4}.
+    $$
+\end{solution}
+
+\begin{example}
     设某物体所在的空间区域为 $\Omega:x^2+y^2+2z^2\leqslant x+y+2z$, 密度函数为 $x^2+y^2+z^2$, 求质量 $\displaystyle M=\iiint\limits_\Omega\qty(x^2+y^2+z^2)\dd x\dd y\dd z.$
 \end{example}
 \begin{solution}
     将 $x^2+y^2+2z^2\leqslant x+y+2z$ 化为 $$\qty(x-\dfrac{1}{2})^2+\qty(y-\dfrac{1}{2})^2+\qty[\sqrt{2}\qty(z-\dfrac{1}{2})]^2\leqslant 1$$
-    于是 $\Omega$ 为一椭球, 令 $u=x-\dfrac{1}{2},~v=y-\dfrac{1}{2},~w=\sqrt{2}\qty(z-\dfrac{1}{2})$, 则区域 $\Omega\to\Omega':u^2+v^2+w^2\leqslant 1$, 
+    于是 $\Omega$ 为一椭球, 令 $u=x-\dfrac{1}{2},~v=y-\dfrac{1}{2},~w=\sqrt{2}\qty(z-\dfrac{1}{2})$, 则区域 $\Omega\to\Omega':u^2+v^2+w^2\leqslant 1$,
     且 Jacobian 行列式 $\displaystyle J=\pdv{(x,y,z)}{(u,v,w)}=\dfrac{1}{\displaystyle \pdv{(u,v,w)}{(x,y,z)}}=\dfrac{1}{\begin{vmatrix}
                 1 & 0 & 0        \\
                 0 & 1 & 0        \\
@@ -1246,7 +1262,7 @@
     \end{flalign*}
     记 $\displaystyle I=\iiint\limits_{\Omega'}\qty(u^2+v^2+\dfrac{w^2}{2})\dd u\dd v\dd w$, 则
     $$I=\int_{0}^{2\pi}\dd \theta\int_{0}^{\pi}\sin\varphi\dd \varphi\int_{0}^{1}\rho^4\dd \rho=\dfrac{4\pi}{5}$$
-    由对称性知, $\displaystyle\iiint\limits_{\Omega'}u^2\dd u\dd v\dd w=\iiint\limits_{\Omega'}v^2\dd u\dd v\dd w=\iiint\limits_{\Omega'}w^2\dd u\dd v\dd w=\dfrac{I}{3}=\dfrac{4\pi}{15}$, 
+    由对称性知, $\displaystyle\iiint\limits_{\Omega'}u^2\dd u\dd v\dd w=\iiint\limits_{\Omega'}v^2\dd u\dd v\dd w=\iiint\limits_{\Omega'}w^2\dd u\dd v\dd w=\dfrac{I}{3}=\dfrac{4\pi}{15}$,
     故 $$M=\dfrac{1}{\sqrt{2}}\qty(\dfrac{4\pi}{15}+\dfrac{4\pi}{15}+\dfrac{1}{2}\cdot\dfrac{4\pi}{15})+\dfrac{\pi}{\sqrt{2}}=\dfrac{5}{6}\sqrt{2}\pi.$$
 \end{solution}
 
@@ -1355,12 +1371,12 @@
         I & =\int_{0}^{1}f^2(x)\dd x\cdot\int_{0}^{1}xf(x)\dd x-\int_{0}^{1}xf^2(x)\dd x\cdot\int_{0}^{1}f(x)\dd x                                          \\
           & =\int_{0}^{1}f^2(x)\dd x\int_{0}^{1}yf(y)\dd y-\int_{0}^{1}xf^2(x)\dd x\int_{0}^{1}f(y)\dd y =\int_{0}^{1}\int_{0}^{1}f^2(x)f(y)(y-x)\dd x\dd y
     \end{flalign*}
-    又因为 $\displaystyle I=\int_{0}^{1}xf(x)\dd x\int_{0}^{1}f^2(y)\dd y-\int_{0}^{1}f(x)\dd x\int_{0}^{1}yf^2(y)\dd y=\int_{0}^{1}\int_{0}^{1}f^2(y)f(x)(x-y)\dd x\dd y$, 
+    又因为 $\displaystyle I=\int_{0}^{1}xf(x)\dd x\int_{0}^{1}f^2(y)\dd y-\int_{0}^{1}f(x)\dd x\int_{0}^{1}yf^2(y)\dd y=\int_{0}^{1}\int_{0}^{1}f^2(y)f(x)(x-y)\dd x\dd y$,
     则有 $$\displaystyle 2I=\int_{0}^{1}\int_{0}^{1}f(x)f(y)(x-y)[f(y)-f(x)]\dd x\dd y$$
     因为 $f(x)$ 单调递减, 所以当 $y\geqslant x$ 时, $f(y)\leqslant f(x)$, 从而 $2I\geqslant 0$, 故得证.
 \end{proof}
 \begin{proof}[{\songti \textbf{证法二}}]
-    $\displaystyle\frac{\displaystyle\int_{0}^{1} x f^{2}(x) \dd  x}{\displaystyle\int_{0}^{1} x f(x) \dd  x}-\frac{\displaystyle\int_{0}^{1} f^{2}(x) \dd  x}{\displaystyle\int_{0}^{1} f(x) \dd  x}=\frac{\displaystyle\int_{0}^{1} x f^{2}(x) \dd  x \int_{0}^{1} f(x) \dd  x-\int_{0}^{1} f^{2}(x) \dd  x \int_{0}^{1} x f(x) \dd  x}{\displaystyle\int_{0}^{1} x f(x) \dd  x \int_{0}^{1} f(x) \dd  x}$, 
+    $\displaystyle\frac{\displaystyle\int_{0}^{1} x f^{2}(x) \dd  x}{\displaystyle\int_{0}^{1} x f(x) \dd  x}-\frac{\displaystyle\int_{0}^{1} f^{2}(x) \dd  x}{\displaystyle\int_{0}^{1} f(x) \dd  x}=\frac{\displaystyle\int_{0}^{1} x f^{2}(x) \dd  x \int_{0}^{1} f(x) \dd  x-\int_{0}^{1} f^{2}(x) \dd  x \int_{0}^{1} x f(x) \dd  x}{\displaystyle\int_{0}^{1} x f(x) \dd  x \int_{0}^{1} f(x) \dd  x}$,
     上式右边分母显然为正, 上式右边分子令为
     $\displaystyle F(x)=\int_{0}^{x} t f^{2}(t) \dd  t \int_{0}^{x} f(t) \dd  t-\int_{0}^{x} f^{2}(t) \dd  t \int_{0}^{x} t f(t) \dd  t$, 则
     \begin{flalign*}
@@ -1368,7 +1384,7 @@
                       & =f^{2}(x)\left[\int_{0}^{x}(x-t) f(t) \dd  t\right]+f(x)\left[\int_{0}^{x}(t-x) f^{2}(t) \dd  t\right] =f(x)\left[\int_{0}^{x}(x-t) f(t) f(x) \dd  t-\int_{0}^{x}(x-t) f^{2}(t) \dd  t\right] \\
                       & =f(x)\left[\int_{0}^{x}(x-t) f(t)[f(x)-f(t)] \dd  t\right] .
     \end{flalign*}
-    因 $ f(x) $ 单调减少, 所以当 $ x>t $ 时, $f(x)-f(t)<0$, 因此 $ F^{\prime}(x)<0$, 所以 $ F(x) $ 单调减少, 所以 $ F(x) \leqslant F(0)   =0$, 
+    因 $ f(x) $ 单调减少, 所以当 $ x>t $ 时, $f(x)-f(t)<0$, 因此 $ F^{\prime}(x)<0$, 所以 $ F(x) $ 单调减少, 所以 $ F(x) \leqslant F(0)   =0$,
     当 $ 0 \leqslant x \leqslant 1$ 时, 命题得证.
 \end{proof}
 
@@ -1387,8 +1403,8 @@
 \end{proof}
 
 \begin{example}[广东省 1991 年竞赛题]
-    设二元函数 $f(x,y)$ 在区域 $D=\left\{0\leqslant x\leqslant 1,0\leqslant y\leqslant 1\right\}$ 上具有连续的四阶偏导数, 并且 $f(x,y)$ 在区域 $D$ 的边界上恒为 0, 
-    又已知 $\displaystyle\left |\frac{\partial ^4f}{\partial x^2\partial y^2}\right |\leqslant 3$, 
+    设二元函数 $f(x,y)$ 在区域 $D=\left\{0\leqslant x\leqslant 1,0\leqslant y\leqslant 1\right\}$ 上具有连续的四阶偏导数, 并且 $f(x,y)$ 在区域 $D$ 的边界上恒为 0,
+    又已知 $\displaystyle\left |\frac{\partial ^4f}{\partial x^2\partial y^2}\right |\leqslant 3$,
     试证明: $$\left |\iint\limits_Df(x,y)\dd x\dd y\right |\leqslant \frac{1}{48}.$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
@@ -1408,7 +1424,7 @@
 \end{proof}
 
 \begin{example}\scriptsize\linespread{0.8}
-    设 $f(x,y,z)$ 在 $\Omega=\qty{(x,y,z)|0\leqslant x,y,z\leqslant 1}$ 上有六阶连续偏导数, $f$ 在边界上恒为零, 且 $\qty|\dfrac{\partial^6f(x,y,z)}{\partial x^2\partial y^2\partial z^2}|\leqslant M$, 
+    设 $f(x,y,z)$ 在 $\Omega=\qty{(x,y,z)|0\leqslant x,y,z\leqslant 1}$ 上有六阶连续偏导数, $f$ 在边界上恒为零, 且 $\qty|\dfrac{\partial^6f(x,y,z)}{\partial x^2\partial y^2\partial z^2}|\leqslant M$,
     证明: $\displaystyle\qty|\iiint\limits_{\Omega}f(x,y,z)\dd x\dd y\dd z|\leqslant \dfrac{1}{8}\cdot\dfrac{M}{6^3}.$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]\scriptsize\linespread{0.8}
