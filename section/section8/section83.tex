@@ -58,6 +58,24 @@
 
 \subsubsection{微分方程与定积分}
 
+\begin{example}
+    设 $y=y(x)$ 是 $y''+4y'+4y=\e ^{-2x}$ 满足 $y(0)=y'(0)=0$ 的解,
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求 $y=y(x)$ 的单调区间与极值;
+        \item 当 $x\in[0,+\infty)$ 时, 求 $y=y(x)$ 与 $x$ 之间无界区域的面积.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 令 $\mathrm{D}=\dfrac{\dd}{\dd x}$, 那么 $y''+4y'+4y=\e ^{-2x}\Rightarrow(\mathrm{D}+2)^2y=\e ^{-2x}$, 令 $z=(\mathrm{D}+2)y$, 由一阶线性微分方程通解公式得 $$z=\e ^{-2\int \dd x}\qty[\int \e ^{-2x}\cdot \e ^{2\int \dd x}\dd x+C_1]=\e ^{-2x}\qty(x+C_1)$$
+        及 $y'+2y=\e ^{-2x}\qty(x+C_1)\Rightarrow y=\e ^{-2x}\qty(\dfrac{1}{2}x^2+C_1 x+C_2)$, 由 $y(0)=y'(0)=0$ 解得 $C_1=c_2=0$, 故 $y(x)=\dfrac{x^2}{2}\e ^{-2x}$, 那么令 $y'(x)=x\e ^{-2x}(1-x)=0$, 解得 $y$ 在 $(-\infty,0),(1,+\infty)$ 上单调递减, 在 $(0,1)$ 上单调递增, 且极大值为 $y(1)=\dfrac{1}{2\e ^{2}}$, 极小值为 $y(0)=0.$
+        \item 因为 $ \displaystyle \lim_{x \to +\infty} y(x)=0^+$, 所以 
+        $$
+        S(x)=\int_{0}^{+\infty} y(x) \dd x=\int_{0}^{+\infty} \dfrac{x^2}{2}\e ^{-2x} \dd x=\eval{-\dfrac{1}{4}x^2 \e ^{-2x}-\dfrac{1}{4}x \e ^{-2x}-\dfrac{1}{8}\e ^{-2x}}_{0}^{+\infty}=\dfrac{1}{8}.
+        $$
+    \end{enumerate}
+\end{solution}
+
 \begin{example}[2023 四川大学]
     设函数 $f(x)$ 满足 $\displaystyle\int_{0}^{x}f^2(t)\dd t=\e ^xf(x)+1$, 求 $f(x).$
 \end{example}

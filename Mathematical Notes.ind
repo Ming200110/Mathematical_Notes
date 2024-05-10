@@ -1,14 +1,14 @@
 \begin{theindex}
 
-  \item $n$ 阶差商, \hyperpage{102}
+  \item $n$ 阶差商, \hyperpage{103}
 
   \indexspace
 
-  \item Abel 定理, \hyperpage{320}
+  \item Abel 定理, \hyperpage{322}
 
   \indexspace
 
-  \item Cauchy 不等式, \hyperpage{111}
+  \item Cauchy 不等式, \hyperpage{112}
   \item Cauchy 定理, \hyperpage{84}
   \item Cauchy-Schwarz 不等式, \hyperpage{173}
 
@@ -16,7 +16,7 @@
 
   \item Darboux 定理, \hyperpage{85}
   \item Dirichlet 定理, \hyperpage{191}
-  \item Dirichlet 收敛定理, \hyperpage{336}
+  \item Dirichlet 收敛定理, \hyperpage{338}
   \item Dirichlet 积分等式, \hyperpage{192}
 
   \indexspace
@@ -25,16 +25,16 @@
 
   \indexspace
 
-  \item Fourier 展开, \hyperpage{336}
+  \item Fourier 展开, \hyperpage{338}
   \item Fresnel 积分等式, \hyperpage{192}
-  \item Frink 判别法, \hyperpage{317}
+  \item Frink 判别法, \hyperpage{319}
   \item Frullani 积分定理, \hyperpage{188}
 
   \indexspace
 
-  \item Gauss 公式, \hyperpage{293}
-  \item Gauss 判别法, \hyperpage{317}
-  \item Green 公式, \hyperpage{275}
+  \item Gauss 公式, \hyperpage{294}
+  \item Gauss 判别法, \hyperpage{319}
+  \item Green 公式, \hyperpage{276}
 
   \indexspace
 
@@ -47,7 +47,7 @@
 
   \indexspace
 
-  \item Kummer 判别法, \hyperpage{317}
+  \item Kummer 判别法, \hyperpage{319}
 
   \indexspace
 
@@ -55,24 +55,24 @@
   \item Lagrange 中值定理, \hyperpage{40}
   \item Lagrange 定理, \hyperpage{84}
   \item Lagrange 恒等式, \hyperpage{204}
-  \item Lagrange 插值多项式, \hyperpage{104}
+  \item Lagrange 插值多项式, \hyperpage{105}
   \item Laplace 积分等式, \hyperpage{193}
-  \item Leibniz 定理, \hyperpage{314}
+  \item Leibniz 定理, \hyperpage{316}
   \item Lobachevsky 积分法, \hyperpage{192}
 
   \indexspace
 
-  \item p-级数, \hyperpage{310}
+  \item p-级数, \hyperpage{312}
 
   \indexspace
 
-  \item Raabe 判别法, \hyperpage{317}
-  \item Raabe 判别法的极限形式, \hyperpage{317}
+  \item Raabe 判别法, \hyperpage{319}
+  \item Raabe 判别法的极限形式, \hyperpage{319}
   \item Rolle 定理, \hyperpage{84}
 
   \indexspace
 
-  \item Stokes 积分法, \hyperpage{299}
+  \item Stokes 积分法, \hyperpage{301}
 
   \indexspace
 
@@ -81,29 +81,29 @@
   \indexspace
 
   \item 一阶差商, \hyperpage{102}
-  \item 三重积分分部积分公式, \hyperpage{290}
+  \item 三重积分分部积分公式, \hyperpage{292}
   \item 不动点迭代, \hyperpage{60}
   \item 不收敛, \hyperpage{10}
   \item 不等分积分与极限式, \hyperpage{49}
-  \item 两点三次 Hermite 插值, \hyperpage{107}
+  \item 两点三次 Hermite 插值, \hyperpage{108}
   \item 二元函数取极值的充分条件, \hyperpage{235}
-  \item 二元函数取极值的必要条件, \hyperpage{234}
+  \item 二元函数取极值的必要条件, \hyperpage{235}
   \item 二元函数的 Taylor 展开唯一性, \hyperpage{219}
   \item 二重外积公式, \hyperpage{204}
-  \item 二重积分中值定理, \hyperpage{261}
-  \item 二重积分分部积分公式, \hyperpage{279}
-  \item 二阶差商, \hyperpage{102}
+  \item 二重积分中值定理, \hyperpage{262}
+  \item 二重积分分部积分公式, \hyperpage{281}
+  \item 二阶差商, \hyperpage{103}
   \item 二阶常系数线性齐次微分方程的通解结构, 
-		\hyperpage{348}
+		\hyperpage{350}
 
   \indexspace
 
-  \item 偶倍奇零性, \hyperpage{284}
+  \item 偶倍奇零性, \hyperpage{286}
   \item 偶函数, \hyperpage{3}
   \item 全微分的形式不变性, \hyperpage{223}
   \item 共面条件, \hyperpage{205}
   \item 减法无穷小代换, \hyperpage{14}
-  \item 几何级数, \hyperpage{310}
+  \item 几何级数, \hyperpage{312}
   \item 函数, \hyperpage{3, 4}
   \item 函数 Stolz 定理, \hyperpage{55}
   \item 函数极限的保号性, \hyperpage{12}
@@ -118,8 +118,8 @@
   \item 函数的极限, \hyperpage{10}
   \item 函数连续的充要条件, \hyperpage{6}
   \item 分式极限的关系, \hyperpage{19}
-  \item 分离性定理, \hyperpage{112}
-  \item 分部和公式, \hyperpage{319}
+  \item 分离性定理, \hyperpage{113}
+  \item 分部和公式, \hyperpage{321}
   \item 切平面方程, \hyperpage{207}
   \item 初等函数, \hyperpage{4}
   \item 割线定理, \hyperpage{9}
@@ -140,16 +140,16 @@
   \item 可去间断点, \hyperpage{6}
   \item 右极限, \hyperpage{11}
   \item 右连续, \hyperpage{6}
-  \item 含参变量积分求导公式, \hyperpage{259}
-  \item 含绝对值函数的可导性, \hyperpage{81}
+  \item 含参变量积分求导公式, \hyperpage{261}
+  \item 含绝对值函数的可导性, \hyperpage{82}
   \item 周期函数, \hyperpage{4}
   \item 周期函数的定积分公式, \hyperpage{147}
   \item 因变量, \hyperpage{3}
-  \item 均值不等式, \hyperpage{110}
-  \item 均方逼近, \hyperpage{339}
+  \item 均值不等式, \hyperpage{111}
+  \item 均方逼近, \hyperpage{341}
   \item 基本初等函数, \hyperpage{4}
   \item 复合函数, \hyperpage{4}
-  \item 奇偶次项幂级数的收敛半径, \hyperpage{320}
+  \item 奇偶次项幂级数的收敛半径, \hyperpage{322}
   \item 奇函数, \hyperpage{3}
   \item 子列极限定理, \hyperpage{11}
   \item 定义域, \hyperpage{3}
@@ -161,20 +161,20 @@
   \item 左右导数, \hyperpage{73}
   \item 左极限, \hyperpage{11}
   \item 左连续, \hyperpage{6}
-  \item 差商与导数的关系, \hyperpage{102}
-  \item 带 Lagrange 余项的 Taylor 展开, \hyperpage{95}
-  \item 常数项级数, \hyperpage{309}
-  \item 常数项级数收敛, \hyperpage{309}
+  \item 差商与导数的关系, \hyperpage{103}
+  \item 带 Lagrange 余项的 Taylor 展开, \hyperpage{96}
+  \item 常数项级数, \hyperpage{311}
+  \item 常数项级数收敛, \hyperpage{311}
   \item 常系数线性齐次递推定理, \hyperpage{67}
-  \item 幂级数的性质, \hyperpage{320}
-  \item 幂级数的运算性质, \hyperpage{320}
+  \item 幂级数的性质, \hyperpage{322}
+  \item 幂级数的运算性质, \hyperpage{322}
   \item 平面图形面积公式, \hyperpage{154}
   \item 平面曲线弧长公式, \hyperpage{155}
 
   \indexspace
 
-  \item 拐点, \hyperpage{113}
-  \item 拐点存在的必要条件, \hyperpage{113}
+  \item 拐点, \hyperpage{114}
+  \item 拐点存在的必要条件, \hyperpage{114}
   \item 振荡间断点, \hyperpage{6}
   \item 收敛, \hyperpage{10}
   \item 数列极限的保号性, \hyperpage{12}
@@ -185,9 +185,9 @@
   \item 数列的夹逼准则, \hyperpage{13}
   \item 数列的极限, \hyperpage{10}
   \item 斜渐近线, \hyperpage{7}
-  \item 方向导数与 Hamilton 算符, \hyperpage{306}
-  \item 方向导数与梯度的关系, \hyperpage{241}
-  \item 方向导数的计算, \hyperpage{240}
+  \item 方向导数与 Hamilton 算符, \hyperpage{307}
+  \item 方向导数与梯度的关系, \hyperpage{242}
+  \item 方向导数的计算, \hyperpage{241}
   \item 旋转体的体积公式, \hyperpage{154}
   \item 旋转体的侧面积公式, \hyperpage{154}
   \item 无界, \hyperpage{3}
@@ -195,44 +195,44 @@
   \item 无穷小量的传递性, \hyperpage{30}
   \item 无穷小量的加法, \hyperpage{30}
   \item 无穷间断点, \hyperpage{6}
-  \item 曲率, \hyperpage{114}
+  \item 曲率, \hyperpage{115}
   \item 曲率的计算公式, \hyperpage{115}
   \item 最小正周期, \hyperpage{4}
   \item 有界, \hyperpage{3}
   \item 极限值与函数式的转换, \hyperpage{19}
-  \item 根值审敛法, \hyperpage{311}
-  \item 正项级数收敛的充要条件, \hyperpage{310}
-  \item 比值审敛法, \hyperpage{311}
-  \item 比较审敛法, \hyperpage{310}
-  \item 比较审敛法的极限形式, \hyperpage{310}
+  \item 根值审敛法, \hyperpage{313}
+  \item 正项级数收敛的充要条件, \hyperpage{312}
+  \item 比值审敛法, \hyperpage{313}
+  \item 比较审敛法, \hyperpage{312}
+  \item 比较审敛法的极限形式, \hyperpage{312}
   \item 水平渐近线, \hyperpage{7}
   \item 法线方程, \hyperpage{207}
 
   \indexspace
 
-  \item 物体的质心, \hyperpage{265}
-  \item 物体的质量, \hyperpage{264}
+  \item 物体的质心, \hyperpage{266}
+  \item 物体的质量, \hyperpage{265}
   \item 用参数方程确定的函数的导数, \hyperpage{74}
   \item 留数定理, \hyperpage{194}
-  \item 积分判别法, \hyperpage{311}
-  \item 积分因子, \hyperpage{345}
-  \item 积分因子的存在性定理, \hyperpage{347}
+  \item 积分判别法, \hyperpage{313}
+  \item 积分因子, \hyperpage{347}
+  \item 积分因子的存在性定理, \hyperpage{349}
   \item 移位性质, \hyperpage{66}
   \item 空间曲线绕直线旋转的曲面方程, \hyperpage{210}
   \item 第一型余元公式, \hyperpage{191}
-  \item 第一型曲面积分化为二重积分, \hyperpage{285}
+  \item 第一型曲面积分化为二重积分, \hyperpage{286}
   \item 第一型递推性质, \hyperpage{191}
   \item 第一积分中值定理, \hyperpage{151}
-  \item 第一类曲线积分化为定积分, \hyperpage{271}
+  \item 第一类曲线积分化为定积分, \hyperpage{272}
   \item 第二型余元公式, \hyperpage{190}
   \item 第二型倍元公式, \hyperpage{191}
-  \item 第二型曲面积分的分部积分公式, \hyperpage{292}
+  \item 第二型曲面积分的分部积分公式, \hyperpage{293}
   \item 第二型递推性质, \hyperpage{190}
   \item 第二积分中值定理, \hyperpage{153}
-  \item 第二类曲线积分化为定积分, \hyperpage{273}
+  \item 第二类曲线积分化为定积分, \hyperpage{274}
   \item 等价无穷小的充要条件, \hyperpage{30}
   \item 等价积分, \hyperpage{45}
-  \item 算子特性, \hyperpage{352}
+  \item 算子特性, \hyperpage{354}
   \item 线轴夹角余弦平方和公式, \hyperpage{205}
   \item 线面夹角余弦平方和公式, \hyperpage{205}
   \item 绝对值函数, \hyperpage{4}
@@ -240,25 +240,25 @@
   \indexspace
 
   \item 自变量, \hyperpage{3}
-  \item 调和级数, \hyperpage{310}
-  \item 路径无关, \hyperpage{278}
+  \item 调和级数, \hyperpage{312}
+  \item 路径无关, \hyperpage{280}
   \item 跳跃间断点, \hyperpage{6}
-  \item 转动惯量, \hyperpage{266}
-  \item 轮换对称性, \hyperpage{270}
-  \item 轴对称性, \hyperpage{270}
+  \item 转动惯量, \hyperpage{267}
+  \item 轮换对称性, \hyperpage{272}
+  \item 轴对称性, \hyperpage{271}
   \item 连续, \hyperpage{6}
 
   \indexspace
 
-  \item 通解公式, \hyperpage{343}
+  \item 通解公式, \hyperpage{345}
   \item 重积分的对称性, \hyperpage{254}
   \item 重节点差商, \hyperpage{102}
   \item 铅直渐近线, \hyperpage{7}
-  \item 阶乘与阶乘幂, \hyperpage{318}
+  \item 阶乘与阶乘幂, \hyperpage{320}
   \item 隐函数存在定理, \hyperpage{222}
   \item 隐函数的导数, \hyperpage{75}
   \item 高阶常系数线性齐次微分方程通解结构, 
-		\hyperpage{349}
+		\hyperpage{351}
   \item 高阶幂展开式, \hyperpage{132}
 
 \end{theindex}

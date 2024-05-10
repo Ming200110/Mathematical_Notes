@@ -68,49 +68,49 @@
 \contentsline {subsection}{\numberline {2.1.2}反函数、用参数方程确定的函数、隐函数的导数}{74}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}高阶导数与 Leibniz 公式}{76}{subsection.2.1.3}%
 \contentsline {subsubsection}{先拆项再求导}{76}{subsection.2.1.3}%
-\contentsline {subsubsection}{Leibniz 公式}{77}{Item.161}%
+\contentsline {subsubsection}{Leibniz 公式}{78}{Item.161}%
 \contentsline {subsubsection}{用数学归纳法求高阶导数}{78}{example.2.1.21}%
 \contentsline {subsubsection}{用递推公式求导}{79}{example.2.1.22}%
 \contentsline {subsubsection}{用 Taylor 展开式求导}{80}{example.2.1.25}%
 \contentsline {section}{\numberline {2.2}函数的可导性}{81}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}含绝对值函数的可导性}{81}{subsection.2.2.1}%
-\contentsline {subsubsection}{$|f(x)|$ 在 $x=x_0$ 点的可导性}{81}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.1}含绝对值函数的可导性}{82}{subsection.2.2.1}%
+\contentsline {subsubsection}{$|f(x)|$ 在 $x=x_0$ 点的可导性}{82}{subsection.2.2.1}%
 \contentsline {subsubsection}{$f(x)|g(x)|$ 在 $x=x_0$ 点的可导性}{82}{example.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.2}分段函数的可导性}{83}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}微分中值定理}{83}{section.2.3}%
+\contentsline {section}{\numberline {2.3}微分中值定理}{84}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}四大基本定理}{84}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}单中值问题}{85}{subsection.2.3.2}%
 \contentsline {subsubsection}{辅助函数的构造}{85}{subsection.2.3.2}%
 \contentsline {subsubsection}{常数 $k$ 值法}{87}{example.2.3.7}%
 \contentsline {subsection}{\numberline {2.3.3}双中值问题}{90}{subsection.2.3.3}%
 \contentsline {subsubsection}{区间无需划分}{90}{Item.190}%
-\contentsline {subsubsection}{区间需要划分}{91}{example.2.3.14}%
+\contentsline {subsubsection}{区间需要划分}{92}{example.2.3.14}%
 \contentsline {subsection}{\numberline {2.3.4}高阶中值问题}{93}{subsection.2.3.4}%
 \contentsline {subsubsection}{层次分析法}{93}{subsection.2.3.4}%
-\contentsline {subsubsection}{特殊函数作差法}{94}{example.2.3.21}%
-\contentsline {subsubsection}{合理分配法}{94}{example.2.3.22}%
+\contentsline {subsubsection}{特殊函数作差法}{95}{example.2.3.21}%
+\contentsline {subsubsection}{合理分配法}{95}{example.2.3.22}%
 \contentsline {subsubsection}{补充导函数法}{95}{example.2.3.23}%
-\contentsline {section}{\numberline {2.4}Taylor 展开与差商}{95}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}证明中值定理}{95}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}中值点的极限}{97}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.4}Taylor 展开与差商}{96}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}证明中值定理}{96}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}中值点的极限}{98}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}无穷远处的极限}{99}{subsection.2.4.3}%
 \contentsline {subsection}{\numberline {2.4.4}关于界的估计}{100}{subsection.2.4.4}%
 \contentsline {subsection}{\numberline {2.4.5}差商与导数}{102}{subsection.2.4.5}%
-\contentsline {section}{\numberline {2.5}Lagrange 插值与 Hermite 插值}{104}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Lagrange 插值}{104}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Hermite 插值}{105}{subsection.2.5.2}%
-\contentsline {section}{\numberline {2.6}导数的综合应用}{108}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}极值问题}{108}{subsection.2.6.1}%
-\contentsline {subsubsection}{极值、最值}{108}{subsection.2.6.1}%
-\contentsline {subsubsection}{极值点偏移}{110}{AMS.57}%
-\contentsline {subsection}{\numberline {2.6.2}不等式与函数凹凸性及拐点}{110}{subsection.2.6.2}%
-\contentsline {subsubsection}{不等式}{110}{subsection.2.6.2}%
-\contentsline {subsubsection}{凸函数的多种定义}{111}{theorem.2.6.3}%
-\contentsline {subsubsection}{拐点}{113}{example.2.6.9}%
+\contentsline {section}{\numberline {2.5}Lagrange 插值与 Hermite 插值}{105}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Lagrange 插值}{105}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Hermite 插值}{106}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}导数的综合应用}{109}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}极值问题}{109}{subsection.2.6.1}%
+\contentsline {subsubsection}{极值、最值}{109}{subsection.2.6.1}%
+\contentsline {subsubsection}{极值点偏移}{110}{AMS.58}%
+\contentsline {subsection}{\numberline {2.6.2}不等式与函数凹凸性及拐点}{111}{subsection.2.6.2}%
+\contentsline {subsubsection}{不等式}{111}{subsection.2.6.2}%
+\contentsline {subsubsection}{凸函数的多种定义}{112}{theorem.2.6.3}%
+\contentsline {subsubsection}{拐点}{114}{example.2.6.9}%
 \contentsline {subsection}{\numberline {2.6.3}导数的几何意义与曲线的曲率}{114}{subsection.2.6.3}%
 \contentsline {subsubsection}{导数的几何意义}{114}{subsection.2.6.3}%
-\contentsline {subsubsection}{曲线的曲率}{114}{example.2.6.15}%
-\contentsline {subsection}{\numberline {2.6.4}导数不等式证明中的应用}{115}{subsection.2.6.4}%
+\contentsline {subsubsection}{曲线的曲率}{115}{example.2.6.15}%
+\contentsline {subsection}{\numberline {2.6.4}导数不等式证明中的应用}{116}{subsection.2.6.4}%
 \contentsline {chapter}{\numberline {第三章\hspace {.3em}}一元函数积分学}{117}{chapter.3}%
 \contentsline {section}{\numberline {3.1}不定积分}{118}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}基础类型}{118}{subsection.3.1.1}%
@@ -118,12 +118,12 @@
 \contentsline {paragraph}{有理分式快速分解}{121}{Item.224}%
 \contentsline {paragraph}{Ostrogradsky 法}{122}{example.3.1.5}%
 \contentsline {subsubsection}{根式型}{123}{example.3.1.8}%
-\contentsline {paragraph}{常见的处理手法}{124}{Item.228}%
-\contentsline {paragraph}{Euler 代换}{124}{Item.228}%
-\contentsline {paragraph}{根式代换}{124}{Item.231}%
-\contentsline {paragraph}{二项微分式的积分}{128}{Item.252}%
-\contentsline {subsubsection}{三角函数型}{129}{Item.259}%
-\contentsline {paragraph}{各三角函数之间的关系图}{130}{table.caption.66}%
+\contentsline {paragraph}{常见的处理手法}{125}{Item.228}%
+\contentsline {paragraph}{Euler 代换}{125}{Item.228}%
+\contentsline {paragraph}{根式代换}{125}{Item.231}%
+\contentsline {paragraph}{二项微分式的积分}{129}{Item.252}%
+\contentsline {subsubsection}{三角函数型}{130}{Item.259}%
+\contentsline {paragraph}{各三角函数之间的关系图}{130}{table.caption.67}%
 \contentsline {paragraph}{三角函数换元及万能公式}{132}{Item.265}%
 \contentsline {subsubsection}{指数型}{136}{Item.279}%
 \contentsline {subsubsection}{对数型}{137}{Item.287}%
@@ -205,42 +205,42 @@
 \contentsline {subsubsection}{空间曲线绕直线旋转的曲面方程}{210}{subsection.4.2.4}%
 \contentsline {subsubsection}{常见的曲线及其对应方程}{210}{theorem.4.2.5}%
 \contentsline {paragraph}{摆线}{210}{theorem.4.2.5}%
-\contentsline {paragraph}{箕舌线}{210}{figure.caption.100}%
-\contentsline {paragraph}{双纽线}{210}{figure.caption.101}%
-\contentsline {paragraph}{对数螺线}{211}{figure.caption.102}%
-\contentsline {paragraph}{星形线}{211}{figure.caption.103}%
-\contentsline {paragraph}{心形线}{212}{figure.caption.104}%
-\contentsline {paragraph}{叶形线}{212}{figure.caption.105}%
-\contentsline {paragraph}{玫瑰线}{213}{figure.caption.106}%
+\contentsline {paragraph}{箕舌线}{210}{figure.caption.101}%
+\contentsline {paragraph}{双纽线}{210}{figure.caption.102}%
+\contentsline {paragraph}{对数螺线}{211}{figure.caption.103}%
+\contentsline {paragraph}{星形线}{211}{figure.caption.104}%
+\contentsline {paragraph}{心形线}{212}{figure.caption.105}%
+\contentsline {paragraph}{叶形线}{212}{figure.caption.106}%
+\contentsline {paragraph}{玫瑰线}{213}{figure.caption.107}%
 \contentsline {chapter}{\numberline {第五章\hspace {.3em}}多元函数微分学}{215}{chapter.5}%
 \contentsline {section}{\numberline {5.1}多元函数的极限与连续}{215}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}多元函数的极限}{215}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}多元函数的连续性与可微性}{217}{subsection.5.1.2}%
 \contentsline {subsubsection}{连续、偏导数存在、可微及偏导数连续之间的关系}{217}{theorem.5.1.2}%
-\contentsline {paragraph}{判断函数在某点处可微性的一般步骤}{217}{figure.caption.109}%
+\contentsline {paragraph}{判断函数在某点处可微性的一般步骤}{217}{figure.caption.110}%
 \contentsline {subsection}{\numberline {5.1.3}二元函数的 Taylor 展开}{219}{subsection.5.1.3}%
 \contentsline {section}{\numberline {5.2}多元函数的偏导数}{220}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}偏导数与隐函数}{220}{subsection.5.2.1}%
 \contentsline {subsubsection}{偏导数}{220}{subsection.5.2.1}%
 \contentsline {subsubsection}{隐函数}{222}{task.36.4}%
 \contentsline {subsection}{\numberline {5.2.2}全微分形式不变性}{223}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}复合函数微分法 (链式法则)}{225}{subsection.5.2.3}%
-\contentsline {subsubsection}{对自变量作变量替换}{225}{subsection.5.2.3}%
-\contentsline {subsubsection}{求变换中的常数}{230}{example.5.2.29}%
-\contentsline {subsection}{\numberline {5.2.4}高阶全微分}{230}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}高阶偏导数}{231}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}偏微分方程}{233}{subsection.5.2.6}%
-\contentsline {section}{\numberline {5.3}极值}{234}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}二元函数的极值}{234}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.2.3}复合函数微分法 (链式法则)}{226}{subsection.5.2.3}%
+\contentsline {subsubsection}{对自变量作变量替换}{226}{subsection.5.2.3}%
+\contentsline {subsubsection}{求变换中的常数}{230}{example.5.2.30}%
+\contentsline {subsection}{\numberline {5.2.4}高阶全微分}{231}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}高阶偏导数}{232}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}偏微分方程}{234}{subsection.5.2.6}%
+\contentsline {section}{\numberline {5.3}极值}{235}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}二元函数的极值}{235}{subsection.5.3.1}%
 \contentsline {subsection}{\numberline {5.3.2}条件极值}{238}{subsection.5.3.2}%
-\contentsline {subsubsection}{单项链等法}{238}{subsection.5.3.2}%
+\contentsline {subsubsection}{单项链等法}{239}{subsection.5.3.2}%
 \contentsline {subsubsection}{齐次构造法}{239}{example.5.3.9}%
-\contentsline {subsubsection}{多约束条件}{239}{example.5.3.10}%
-\contentsline {subsubsection}{三角代换}{239}{example.5.3.11}%
-\contentsline {subsection}{\numberline {5.3.3}多元函数的最值问题}{239}{subsection.5.3.3}%
-\contentsline {section}{\numberline {5.4}方向导数与梯度}{240}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}方向导数的计算}{240}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}梯度的计算}{241}{subsection.5.4.2}%
+\contentsline {subsubsection}{多约束条件}{240}{example.5.3.10}%
+\contentsline {subsubsection}{三角代换}{240}{example.5.3.11}%
+\contentsline {subsection}{\numberline {5.3.3}多元函数的最值问题}{240}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}方向导数与梯度}{241}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}方向导数的计算}{241}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}梯度的计算}{242}{subsection.5.4.2}%
 \contentsline {chapter}{\numberline {第六章\hspace {.3em}}多元函数积分学}{243}{chapter.6}%
 \contentsline {section}{\numberline {6.1}重积分}{244}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}重积分定义}{244}{subsection.6.1.1}%
@@ -253,280 +253,280 @@
 \contentsline {subsubsection}{交换积分顺序}{248}{example.6.1.14}%
 \contentsline {subsubsection}{圆代换与球代换}{249}{example.6.1.21}%
 \contentsline {subsubsection}{Jacobian 行列式}{252}{example.6.1.27}%
-\contentsline {subsubsection}{四重积分换元}{253}{example.6.1.32}%
-\contentsline {subsubsection}{分区积分及对称性的应用}{254}{example.6.1.33}%
-\contentsline {subsection}{\numberline {6.1.3}反常二重积分与含参变量积分}{257}{subsection.6.1.3}%
-\contentsline {subsubsection}{反常二重积分}{257}{subsection.6.1.3}%
-\contentsline {subsubsection}{含参变量积分}{259}{example.6.1.42}%
-\contentsline {subsection}{\numberline {6.1.4}重积分的积分中值定理}{261}{subsection.6.1.4}%
-\contentsline {subsection}{\numberline {6.1.5}重积分的应用}{263}{subsection.6.1.5}%
-\contentsline {subsubsection}{重积分在几何上的应用}{263}{subsection.6.1.5}%
-\contentsline {subsubsection}{重积分在力学上的应用}{264}{example.6.1.53}%
-\contentsline {subsubsection}{与重积分有关的不等式证明}{266}{theorem.6.1.6}%
-\contentsline {section}{\numberline {6.2}曲线积分}{269}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}两类曲线积分}{270}{subsection.6.2.1}%
-\contentsline {subsubsection}{第一类曲线积分的计算}{270}{subsection.6.2.1}%
-\contentsline {subsubsection}{第二类曲线积分的计算}{272}{example.6.2.5}%
-\contentsline {subsubsection}{方向导数与两类曲线积分的联系}{274}{figure.caption.130}%
-\contentsline {subsection}{\numberline {6.2.2}Green 公式}{275}{subsection.6.2.2}%
-\contentsline {subsubsection}{计算封闭曲线上的线积分}{275}{theorem.6.2.7}%
-\contentsline {subsubsection}{含有奇点形式}{276}{example.6.2.11}%
-\contentsline {subsubsection}{外法向量形式}{277}{example.6.2.14}%
-\contentsline {subsubsection}{积分与路径无关问题}{278}{example.6.2.16}%
-\contentsline {subsubsection}{二重积分分部积分}{279}{example.6.2.18}%
-\contentsline {section}{\numberline {6.3}曲面积分}{284}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}两类曲面积分}{284}{subsection.6.3.1}%
-\contentsline {subsubsection}{第一型曲面积分的计算}{284}{subsection.6.3.1}%
-\contentsline {subsubsection}{第二型曲面积分的计算}{288}{example.6.3.6}%
-\contentsline {subsubsection}{三重积分分部积分}{290}{example.6.3.10}%
-\contentsline {subsubsection}{第二型曲面积分的分部积分公式}{292}{example.6.3.12}%
-\contentsline {subsection}{\numberline {6.3.2}Gauss 公式、Stokes 公式}{292}{subsection.6.3.2}%
-\contentsline {subsubsection}{Gauss 公式}{293}{Item.465}%
-\contentsline {subsubsection}{Stokes 公式}{299}{example.6.3.29}%
-\contentsline {section}{\numberline {6.4}多元积分学的应用与场论概述}{303}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}多元积分学的应用}{303}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}梯度、散度和旋度}{305}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}梯度、散度、旋度的基本公式及其应用}{306}{subsection.6.4.3}%
-\contentsline {chapter}{\numberline {第七章\hspace {.3em}}无穷级数}{308}{chapter.7}%
-\contentsline {section}{\numberline {7.1}常数项级数}{308}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}常数项级数的敛散性及其判别法}{308}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}正项级数的审敛法}{310}{subsection.7.1.2}%
-\contentsline {subsection}{\numberline {7.1.3}交错级数}{314}{subsection.7.1.3}%
-\contentsline {subsection}{\numberline {7.1.4}一般数项级数的判别法}{316}{subsection.7.1.4}%
-\contentsline {subsection}{\numberline {7.1.5}其他判别法}{317}{subsection.7.1.5}%
-\contentsline {section}{\numberline {7.2}幂级数}{317}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}下降阶乘幂}{318}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}幂级数的性质}{319}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}函数展开为幂级数}{321}{subsection.7.2.3}%
-\contentsline {subsubsection}{常见函数的幂级数展开式}{321}{subsection.7.2.3}%
-\contentsline {subsection}{\numberline {7.2.4}幂级数的收敛域及和函数}{324}{subsection.7.2.4}%
-\contentsline {subsubsection}{求幂级数的收敛域}{324}{subsection.7.2.4}%
-\contentsline {subsubsection}{求幂级数的和函数}{326}{task.51.4}%
-\contentsline {subsubsection}{综合运用}{328}{example.7.2.16}%
-\contentsline {subsection}{\numberline {7.2.5}幂级数的应用}{332}{subsection.7.2.5}%
-\contentsline {subsubsection}{证明不等式}{332}{subsection.7.2.5}%
-\contentsline {subsubsection}{求和问题}{333}{example.7.2.28}%
-\contentsline {subsubsection}{计算积分}{335}{example.7.2.32}%
-\contentsline {section}{\numberline {7.3}Fourier 级数}{335}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Fourier 系数}{335}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}周期为 $2l$ 的 Fourier 展开}{336}{subsection.7.3.2}%
-\contentsline {subsection}{\numberline {7.3.3}Fourier 级数综合性问题}{339}{subsection.7.3.3}%
-\contentsline {subsubsection}{已知 Fourier 展开求 Fourier 系数}{339}{subsection.7.3.3}%
-\contentsline {chapter}{\numberline {第八章\hspace {.3em}}微分方程}{340}{chapter.8}%
-\contentsline {section}{\numberline {8.1}一阶微分方程}{340}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}变量分离方程}{340}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}齐次微分方程}{341}{subsection.8.1.2}%
-\contentsline {subsubsection}{可化为齐次方程的微分方程形如方程}{342}{example.8.1.7}%
-\contentsline {subsection}{\numberline {8.1.3}线性微分方程}{342}{subsection.8.1.3}%
-\contentsline {subsection}{\numberline {8.1.4}Bernoulli 微分方程}{343}{subsection.8.1.4}%
-\contentsline {subsection}{\numberline {8.1.5}恰当方程与积分因子}{344}{subsection.8.1.5}%
-\contentsline {subsubsection}{恰当方程}{344}{subsection.8.1.5}%
-\contentsline {subsubsection}{积分因子}{345}{table.caption.146}%
-\contentsline {section}{\numberline {8.2}高阶微分方程}{348}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}常系数齐次线性微分方程}{348}{subsection.8.2.1}%
-\contentsline {subsubsection}{二阶常系数线性齐次微分方程的通解}{348}{subsection.8.2.1}%
-\contentsline {subsubsection}{$n$ 阶常系数线性齐次微分方程}{349}{example.8.2.2}%
-\contentsline {subsection}{\numberline {8.2.2}常系数非齐次线性微分方程}{350}{subsection.8.2.2}%
-\contentsline {subsubsection}{二阶常系数非齐次线性微分方程的通解结构}{350}{subsection.8.2.2}%
-\contentsline {subsubsection}{微分算子法}{351}{example.8.2.6}%
-\contentsline {subsubsection}{Laplace 变换法}{353}{example.8.2.8}%
-\contentsline {subsection}{\numberline {8.2.3}可降阶的高阶微分方程}{354}{subsection.8.2.3}%
-\contentsline {subsubsection}{$y^{(n)}=f(x)$}{354}{subsection.8.2.3}%
-\contentsline {subsubsection}{$y''=f\qty (x,y')$}{355}{example.8.2.10}%
-\contentsline {subsubsection}{$y''=f\qty (y,y')$}{355}{example.8.2.10}%
-\contentsline {subsection}{\numberline {8.2.4}Euler 微分方程}{355}{subsection.8.2.4}%
-\contentsline {subsubsection}{齐次 Euler 微分方程}{355}{subsection.8.2.4}%
-\contentsline {subsubsection}{非齐次 Euler 微分方程}{356}{example.8.2.13}%
-\contentsline {subsection}{\numberline {8.2.5}二阶变系数线性微分方程}{357}{subsection.8.2.5}%
-\contentsline {subsubsection}{二阶变系数齐次线性微分方程}{357}{subsection.8.2.5}%
-\contentsline {subsubsection}{二阶变系数非齐次线性微分方程}{359}{example.8.2.23}%
-\contentsline {section}{\numberline {8.3}微分方程综合性问题}{360}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}微分方程与函数性质}{360}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}微分方程与积分}{361}{subsection.8.3.2}%
-\contentsline {subsubsection}{微分方程与定积分}{361}{subsection.8.3.2}%
-\contentsline {subsubsection}{微分方程与重积分}{363}{Item.595}%
-\contentsline {subsubsection}{微分方程与曲面积分}{365}{example.8.3.12}%
-\contentsline {subsection}{\numberline {8.3.3}微分方程与幂级数}{369}{subsection.8.3.3}%
-\contentsline {part}{第二部分\hspace {1em}线性代数}{372}{part.2}%
-\contentsline {chapter}{\numberline {第九章\hspace {.3em}}行列式}{373}{chapter.9}%
-\contentsline {section}{\numberline {9.1}行列式的定义及其性质}{373}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}逆序数}{374}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.1.2}行列式的概念}{374}{subsection.9.1.2}%
-\contentsline {subsection}{\numberline {9.1.3}行列式的基本性质}{375}{subsection.9.1.3}%
-\contentsline {subsection}{\numberline {9.1.4}几种特殊的行列式}{376}{subsection.9.1.4}%
-\contentsline {section}{\numberline {9.2}行列式按行 (列) 展开定理}{377}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}行列式展开定理}{377}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Laplace 展开定理}{379}{subsection.9.2.2}%
-\contentsline {section}{\numberline {9.3}行列式的计算}{379}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}具象行列式的计算}{379}{subsection.9.3.1}%
-\contentsline {subsubsection}{化为三角形矩阵}{379}{subsection.9.3.1}%
-\contentsline {subsubsection}{化为对角型矩阵}{381}{example.9.3.4}%
-\contentsline {subsubsection}{建立递推公式}{383}{example.9.3.8}%
-\contentsline {subsubsection}{升阶法}{385}{example.9.3.11}%
-\contentsline {subsection}{\numberline {9.3.2}抽象行列式的计算}{387}{subsection.9.3.2}%
-\contentsline {subsection}{\numberline {9.3.3}Vandermonde 行列式计算}{387}{subsection.9.3.3}%
-\contentsline {chapter}{\numberline {第十章\hspace {.3em}}矩阵}{390}{chapter.10}%
-\contentsline {section}{\numberline {10.1}矩阵}{391}{section.10.1}%
-\contentsline {subsection}{\numberline {10.1.1}矩阵的定义}{391}{subsection.10.1.1}%
-\contentsline {subsection}{\numberline {10.1.2}矩阵的运算}{393}{subsection.10.1.2}%
-\contentsline {subsection}{\numberline {10.1.3}方阵的幂}{396}{subsection.10.1.3}%
-\contentsline {subsubsection}{利用幂零矩阵求解}{396}{example.10.1.6}%
-\contentsline {subsubsection}{利用方阵的迹求解}{396}{example.10.1.7}%
-\contentsline {subsubsection}{利用二项式展开求解}{397}{example.10.1.9}%
-\contentsline {subsection}{\numberline {10.1.4}分块矩阵}{398}{subsection.10.1.4}%
-\contentsline {subsection}{\numberline {10.1.5}Carlson 不等式及其应用}{399}{subsection.10.1.5}%
-\contentsline {section}{\numberline {10.2}伴随矩阵、逆矩阵与矩阵方程}{401}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}伴随矩阵}{401}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}可逆矩阵}{402}{subsection.10.2.2}%
-\contentsline {subsection}{\numberline {10.2.3}矩阵方程}{406}{subsection.10.2.3}%
-\contentsline {section}{\numberline {10.3}初等变换与初等矩阵}{409}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}初等变换}{409}{subsection.10.3.1}%
-\contentsline {subsection}{\numberline {10.3.2}初等矩阵}{411}{subsection.10.3.2}%
-\contentsline {section}{\numberline {10.4}矩阵的秩}{414}{section.10.4}%
-\contentsline {subsection}{\numberline {10.4.1}秩的相关不等式证明}{414}{subsection.10.4.1}%
-\contentsline {subsection}{\numberline {10.4.2}秩的相关等式证明}{416}{subsection.10.4.2}%
-\contentsline {subsection}{\numberline {10.4.3}秩的应用}{417}{subsection.10.4.3}%
-\contentsline {chapter}{\numberline {第十一章\hspace {.3em}}向量}{420}{chapter.11}%
-\contentsline {section}{\numberline {11.1}向量的运算}{421}{section.11.1}%
-\contentsline {subsection}{\numberline {11.1.1}向量的定义}{421}{subsection.11.1.1}%
-\contentsline {subsection}{\numberline {11.1.2}向量的运算}{421}{subsection.11.1.2}%
-\contentsline {section}{\numberline {11.2}向量间的线性关系}{422}{section.11.2}%
-\contentsline {subsection}{\numberline {11.2.1}基本概念}{422}{subsection.11.2.1}%
-\contentsline {subsection}{\numberline {11.2.2}常用结论}{422}{subsection.11.2.2}%
-\contentsline {section}{\numberline {11.3}向量组的极大线性无关组和秩}{425}{section.11.3}%
-\contentsline {subsection}{\numberline {11.3.1}极大线性无关组}{425}{subsection.11.3.1}%
-\contentsline {subsection}{\numberline {11.3.2}向量组的秩}{425}{subsection.11.3.2}%
-\contentsline {section}{\numberline {11.4}向量的内积与向量空间}{428}{section.11.4}%
-\contentsline {subsection}{\numberline {11.4.1}向量的内积}{428}{subsection.11.4.1}%
-\contentsline {subsection}{\numberline {11.4.2}向量空间}{429}{subsection.11.4.2}%
-\contentsline {chapter}{\numberline {第十二章\hspace {.3em}}线性方程组}{434}{chapter.12}%
-\contentsline {section}{\numberline {12.1}齐次线性方程组}{435}{section.12.1}%
-\contentsline {subsection}{\numberline {12.1.1}Cramer 法则的应用}{435}{subsection.12.1.1}%
-\contentsline {subsection}{\numberline {12.1.2}齐次方程组的一般解}{435}{subsection.12.1.2}%
-\contentsline {subsection}{\numberline {12.1.3}齐次方程组的基础解系}{438}{subsection.12.1.3}%
-\contentsline {section}{\numberline {12.2}非齐次线性方程组}{439}{section.12.2}%
-\contentsline {subsection}{\numberline {12.2.1}方程组与行列式}{439}{subsection.12.2.1}%
-\contentsline {subsection}{\numberline {12.2.2}线性相关与线性无关}{440}{subsection.12.2.2}%
-\contentsline {subsubsection}{线性无关}{440}{subsection.12.2.2}%
-\contentsline {subsection}{\numberline {12.2.3}非齐次线性方程组解的讨论}{440}{subsection.12.2.3}%
-\contentsline {section}{\numberline {12.3}方程组的同解与公共解}{441}{section.12.3}%
-\contentsline {subsection}{\numberline {12.3.1}方程组的同解}{441}{subsection.12.3.1}%
-\contentsline {subsection}{\numberline {12.3.2}方程组的公共解}{443}{subsection.12.3.2}%
-\contentsline {chapter}{\numberline {第十三章\hspace {.3em}}矩阵的特征值与特征向量}{444}{chapter.13}%
-\contentsline {section}{\numberline {13.1}矩阵的特征值与特征向量}{445}{section.13.1}%
-\contentsline {subsection}{\numberline {13.1.1}矩阵的特征值}{445}{subsection.13.1.1}%
-\contentsline {subsubsection}{特征值在求解迭代方程中的应用}{447}{theorem.13.1.8}%
-\contentsline {subsection}{\numberline {13.1.2}矩阵的特征向量}{447}{subsection.13.1.2}%
-\contentsline {section}{\numberline {13.2}矩阵相似与可对角化}{449}{section.13.2}%
-\contentsline {subsection}{\numberline {13.2.1}矩阵的相似}{449}{subsection.13.2.1}%
-\contentsline {subsection}{\numberline {13.2.2}可对角化}{451}{subsection.13.2.2}%
-\contentsline {chapter}{\numberline {第十四章\hspace {.3em}}二次型}{454}{chapter.14}%
-\contentsline {section}{\numberline {14.1}二次型的规范形与标准形}{454}{section.14.1}%
-\contentsline {subsection}{\numberline {14.1.1}二次型的基本概念}{455}{subsection.14.1.1}%
-\contentsline {subsection}{\numberline {14.1.2}二次型的常用结论}{458}{subsection.14.1.2}%
-\contentsline {subsection}{\numberline {14.1.3}运用偏导函数求标准形}{460}{subsection.14.1.3}%
-\contentsline {section}{\numberline {14.2}正定性与矩阵的合同}{461}{section.14.2}%
-\contentsline {subsection}{\numberline {14.2.1}正定性}{462}{subsection.14.2.1}%
-\contentsline {subsection}{\numberline {14.2.2}半正定性}{465}{subsection.14.2.2}%
-\contentsline {subsection}{\numberline {14.2.3}矩阵的合同}{467}{subsection.14.2.3}%
-\contentsline {section}{\numberline {14.3}正交变换与直角坐标变换}{468}{section.14.3}%
-\contentsline {subsection}{\numberline {14.3.1}谱分解}{473}{subsection.14.3.1}%
-\contentsline {subsection}{\numberline {14.3.2}正交变换的应用}{478}{subsection.14.3.2}%
-\contentsline {subsubsection}{几何应用}{478}{subsection.14.3.2}%
-\contentsline {subsubsection}{二次型与曲面方程}{478}{example.14.3.20}%
-\contentsline {subsubsection}{最值问题}{479}{example.14.3.22}%
-\contentsline {subsection}{\numberline {14.3.3}直角坐标变换}{481}{subsection.14.3.3}%
-\contentsline {part}{第三部分\hspace {1em}概率论与数理统计}{484}{part.3}%
-\contentsline {chapter}{\numberline {第十五章\hspace {.3em}}概率论的基本概念}{485}{chapter.15}%
-\contentsline {section}{\numberline {15.1}随机事件及其概率}{485}{section.15.1}%
-\contentsline {subsection}{\numberline {15.1.1}事件的运算}{485}{subsection.15.1.1}%
-\contentsline {subsection}{\numberline {15.1.2}概率的性质}{486}{subsection.15.1.2}%
-\contentsline {subsection}{\numberline {15.1.3}古典概率与几何概率}{487}{subsection.15.1.3}%
-\contentsline {subsubsection}{古典概率}{487}{subsection.15.1.3}%
-\contentsline {subsubsection}{几何概率}{487}{example.15.1.4}%
-\contentsline {subsection}{\numberline {15.1.4}概率基本公式及条件概率}{487}{subsection.15.1.4}%
-\contentsline {subsection}{\numberline {15.1.5}全概率公式和 Bayes 公式}{487}{subsection.15.1.5}%
-\contentsline {section}{\numberline {15.2}事件的独立性}{488}{section.15.2}%
-\contentsline {chapter}{\numberline {第十六章\hspace {.3em}}随机变量及其分布}{489}{chapter.16}%
-\contentsline {section}{\numberline {16.1}离散型随机变量的概率分布}{489}{section.16.1}%
-\contentsline {subsection}{\numberline {16.1.1}离散型随机变量的分布函数}{489}{subsection.16.1.1}%
-\contentsline {subsection}{\numberline {16.1.2}二项分布}{490}{subsection.16.1.2}%
-\contentsline {section}{\numberline {16.2}连续型随机变量的概率分布}{490}{section.16.2}%
-\contentsline {subsection}{\numberline {16.2.1}连续型随机变量概率密度}{490}{subsection.16.2.1}%
-\contentsline {subsection}{\numberline {16.2.2}均匀分布}{491}{subsection.16.2.2}%
-\contentsline {subsection}{\numberline {16.2.3}指数分布}{491}{subsection.16.2.3}%
-\contentsline {subsection}{\numberline {16.2.4}正态分布}{492}{subsection.16.2.4}%
-\contentsline {chapter}{\numberline {第十七章\hspace {.3em}}多维随机变量及其分布}{494}{chapter.17}%
-\contentsline {section}{\numberline {17.1}多维离散型随机变量}{494}{section.17.1}%
-\contentsline {section}{\numberline {17.2}多维连续型随机变量}{494}{section.17.2}%
-\contentsline {subsection}{\numberline {17.2.1}边缘概率密度与边缘分布函数}{494}{subsection.17.2.1}%
-\contentsline {subsection}{\numberline {17.2.2}二维连续型随机变量函数的分布}{495}{subsection.17.2.2}%
-\contentsline {subsection}{\numberline {17.2.3}二维随机变量条件概率密度与条件分布函数}{496}{subsection.17.2.3}%
-\contentsline {subsection}{\numberline {17.2.4}二维正态分布}{497}{subsection.17.2.4}%
-\contentsline {subsection}{\numberline {17.2.5}卷积公式}{498}{subsection.17.2.5}%
-\contentsline {section}{\numberline {17.3}多维混合型随机变量}{499}{section.17.3}%
-\contentsline {subsection}{\numberline {17.3.1}二维混合型随机变量的分布}{499}{subsection.17.3.1}%
-\contentsline {subsection}{\numberline {17.3.2}随机变量与函数性质}{501}{subsection.17.3.2}%
-\contentsline {chapter}{\numberline {第十八章\hspace {.3em}}随机变量的数字特征}{502}{chapter.18}%
-\contentsline {section}{\numberline {18.1}数学期望与方差}{502}{section.18.1}%
-\contentsline {subsection}{\numberline {18.1.1}数学期望}{502}{subsection.18.1.1}%
-\contentsline {subsection}{\numberline {18.1.2}方差}{504}{subsection.18.1.2}%
-\contentsline {subsubsection}{利用第二型 Euler 积分}{506}{example.18.1.8}%
-\contentsline {section}{\numberline {18.2}协方差与相关系数}{506}{section.18.2}%
-\contentsline {subsection}{\numberline {18.2.1}随机变量的独立性与相关性}{506}{subsection.18.2.1}%
-\contentsline {subsection}{\numberline {18.2.2}协方差}{507}{subsection.18.2.2}%
-\contentsline {subsection}{\numberline {18.2.3}相关系数}{508}{subsection.18.2.3}%
-\contentsline {chapter}{\numberline {第十九章\hspace {.3em}}大数定律与中心极限定理}{511}{chapter.19}%
-\contentsline {section}{\numberline {19.1}Chebyshev 不等式}{511}{section.19.1}%
-\contentsline {section}{\numberline {19.2}大数定律}{512}{section.19.2}%
-\contentsline {subsection}{\numberline {19.2.1}Bernoulli 大数定律}{512}{subsection.19.2.1}%
-\contentsline {subsection}{\numberline {19.2.2}Chebyshev 大数定律}{512}{subsection.19.2.2}%
-\contentsline {subsection}{\numberline {19.2.3}Khinchin 大数定律}{513}{subsection.19.2.3}%
-\contentsline {section}{\numberline {19.3}中心极限定理}{513}{section.19.3}%
-\contentsline {subsection}{\numberline {19.3.1}Levy Lindeberg 定理}{513}{subsection.19.3.1}%
-\contentsline {subsection}{\numberline {19.3.2}De Moivre-Laplace 定理}{514}{subsection.19.3.2}%
-\contentsline {chapter}{\numberline {第二十章\hspace {.3em}}数理统计的基本概念}{515}{chapter.20}%
-\contentsline {section}{\numberline {20.1}随机样本}{515}{section.20.1}%
-\contentsline {subsection}{\numberline {20.1.1}常用统计量}{516}{subsection.20.1.1}%
-\contentsline {subsection}{\numberline {20.1.2}样本数字特征的性质}{517}{subsection.20.1.2}%
-\contentsline {section}{\numberline {20.2}三大抽样分布}{517}{section.20.2}%
-\contentsline {subsection}{\numberline {20.2.1}$\chi ^2$ 分布}{517}{subsection.20.2.1}%
-\contentsline {subsection}{\numberline {20.2.2}$t$ 分布}{519}{subsection.20.2.2}%
-\contentsline {subsection}{\numberline {20.2.3}$F$ 分布}{520}{subsection.20.2.3}%
-\contentsline {section}{\numberline {20.3}正态总体的抽样分布}{522}{section.20.3}%
-\contentsline {subsection}{\numberline {20.3.1}单正态总体的抽样分布}{523}{subsection.20.3.1}%
-\contentsline {subsection}{\numberline {20.3.2}双正态总体的抽样分布}{523}{subsection.20.3.2}%
-\contentsline {chapter}{\numberline {第二十一章\hspace {.3em}}正态总体参数的区间估计与假设检验}{524}{chapter.21}%
-\contentsline {section}{\numberline {21.1}区间估计}{525}{section.21.1}%
-\contentsline {subsection}{\numberline {21.1.1}区间估计的定义}{525}{subsection.21.1.1}%
-\contentsline {subsection}{\numberline {21.1.2}区间估计的一般步骤}{526}{subsection.21.1.2}%
-\contentsline {section}{\numberline {21.2}正态总体均值和方差的区间估计}{527}{section.21.2}%
-\contentsline {subsection}{\numberline {21.2.1}单个正态总体参数的置信区间}{527}{subsection.21.2.1}%
-\contentsline {subsection}{\numberline {21.2.2}双正态总体均值差与方差比的置信区间}{528}{subsection.21.2.2}%
-\contentsline {section}{\numberline {21.3}单侧置信区间}{529}{section.21.3}%
-\contentsline {section}{\numberline {21.4}假设检验}{529}{section.21.4}%
-\contentsline {subsection}{\numberline {21.4.1}假设检验的基本思想}{531}{subsection.21.4.1}%
-\contentsline {subsection}{\numberline {21.4.2}假设检验的解题步骤}{532}{subsection.21.4.2}%
-\contentsline {subsection}{\numberline {21.4.3}单个正态总体的假设检验}{532}{subsection.21.4.3}%
-\contentsline {subsubsection}{$\sigma ^2$ 已知, 关于 $\mu $ 的检验 ($Z$ 检验)}{532}{subsection.21.4.3}%
-\contentsline {subsubsection}{$\sigma ^2$ 未知, 关于 $\mu $ 的检验 ($t$ 检验)}{533}{example.21.4.2}%
-\contentsline {subsubsection}{$\mu $ 未知, 关于 $\sigma ^2$ 的检验 ($\chi ^2$ 检验)}{534}{example.21.4.4}%
-\contentsline {subsection}{\numberline {21.4.4}双正态总体的假设检验}{535}{subsection.21.4.4}%
-\contentsline {subsubsection}{双正态总体均值的检验 ($t$ 检验)}{535}{subsection.21.4.4}%
-\contentsline {subsubsection}{双正态总体方差的假设检验}{535}{subsection.21.4.4}%
-\contentsline {chapter}{\numberline {第二十二章\hspace {.3em}}参数的点估计及其优良性}{536}{chapter.22}%
-\contentsline {section}{\numberline {22.1}矩估计法}{536}{section.22.1}%
-\contentsline {section}{\numberline {22.2}极大似然估计}{538}{section.22.2}%
-\contentsline {section}{\numberline {22.3}估计量优良性的判定标准}{541}{section.22.3}%
-\contentsline {subsection}{\numberline {22.3.1}无偏性}{541}{subsection.22.3.1}%
-\contentsline {subsection}{\numberline {22.3.2}有效性}{541}{subsection.22.3.2}%
-\contentsline {subsection}{\numberline {22.3.3}一致性}{542}{subsection.22.3.3}%
+\contentsline {subsubsection}{四重积分换元}{254}{example.6.1.33}%
+\contentsline {subsubsection}{分区积分及对称性的应用}{254}{example.6.1.34}%
+\contentsline {subsection}{\numberline {6.1.3}反常二重积分与含参变量积分}{259}{subsection.6.1.3}%
+\contentsline {subsubsection}{反常二重积分}{259}{subsection.6.1.3}%
+\contentsline {subsubsection}{含参变量积分}{260}{example.6.1.44}%
+\contentsline {subsection}{\numberline {6.1.4}重积分的积分中值定理}{262}{subsection.6.1.4}%
+\contentsline {subsection}{\numberline {6.1.5}重积分的应用}{264}{subsection.6.1.5}%
+\contentsline {subsubsection}{重积分在几何上的应用}{264}{subsection.6.1.5}%
+\contentsline {subsubsection}{重积分在力学上的应用}{265}{example.6.1.55}%
+\contentsline {subsubsection}{与重积分有关的不等式证明}{267}{theorem.6.1.7}%
+\contentsline {section}{\numberline {6.2}曲线积分}{271}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}两类曲线积分}{271}{subsection.6.2.1}%
+\contentsline {subsubsection}{第一类曲线积分的计算}{271}{subsection.6.2.1}%
+\contentsline {subsubsection}{第二类曲线积分的计算}{274}{example.6.2.5}%
+\contentsline {subsubsection}{方向导数与两类曲线积分的联系}{276}{figure.caption.129}%
+\contentsline {subsection}{\numberline {6.2.2}Green 公式}{276}{subsection.6.2.2}%
+\contentsline {subsubsection}{计算封闭曲线上的线积分}{277}{theorem.6.2.7}%
+\contentsline {subsubsection}{含有奇点形式}{278}{example.6.2.11}%
+\contentsline {subsubsection}{外法向量形式}{279}{example.6.2.14}%
+\contentsline {subsubsection}{积分与路径无关问题}{279}{example.6.2.16}%
+\contentsline {subsubsection}{二重积分分部积分}{281}{example.6.2.18}%
+\contentsline {section}{\numberline {6.3}曲面积分}{285}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}两类曲面积分}{286}{subsection.6.3.1}%
+\contentsline {subsubsection}{第一型曲面积分的计算}{286}{subsection.6.3.1}%
+\contentsline {subsubsection}{第二型曲面积分的计算}{290}{example.6.3.6}%
+\contentsline {subsubsection}{三重积分分部积分}{292}{example.6.3.10}%
+\contentsline {subsubsection}{第二型曲面积分的分部积分公式}{293}{example.6.3.12}%
+\contentsline {subsection}{\numberline {6.3.2}Gauss 公式、Stokes 公式}{294}{subsection.6.3.2}%
+\contentsline {subsubsection}{Gauss 公式}{294}{Item.465}%
+\contentsline {subsubsection}{Stokes 公式}{301}{example.6.3.29}%
+\contentsline {section}{\numberline {6.4}多元积分学的应用与场论概述}{304}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}多元积分学的应用}{304}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}梯度、散度和旋度}{306}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}梯度、散度、旋度的基本公式及其应用}{308}{subsection.6.4.3}%
+\contentsline {chapter}{\numberline {第七章\hspace {.3em}}无穷级数}{310}{chapter.7}%
+\contentsline {section}{\numberline {7.1}常数项级数}{310}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}常数项级数的敛散性及其判别法}{310}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}正项级数的审敛法}{312}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}交错级数}{316}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}一般数项级数的判别法}{318}{subsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.1.5}其他判别法}{319}{subsection.7.1.5}%
+\contentsline {section}{\numberline {7.2}幂级数}{319}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}下降阶乘幂}{320}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}幂级数的性质}{321}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}函数展开为幂级数}{323}{subsection.7.2.3}%
+\contentsline {subsubsection}{常见函数的幂级数展开式}{323}{subsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.2.4}幂级数的收敛域及和函数}{326}{subsection.7.2.4}%
+\contentsline {subsubsection}{求幂级数的收敛域}{326}{subsection.7.2.4}%
+\contentsline {subsubsection}{求幂级数的和函数}{328}{task.51.4}%
+\contentsline {subsubsection}{综合运用}{330}{example.7.2.16}%
+\contentsline {subsection}{\numberline {7.2.5}幂级数的应用}{334}{subsection.7.2.5}%
+\contentsline {subsubsection}{证明不等式}{334}{subsection.7.2.5}%
+\contentsline {subsubsection}{求和问题}{335}{example.7.2.28}%
+\contentsline {subsubsection}{计算积分}{337}{example.7.2.32}%
+\contentsline {section}{\numberline {7.3}Fourier 级数}{337}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Fourier 系数}{337}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}周期为 $2l$ 的 Fourier 展开}{338}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Fourier 级数综合性问题}{341}{subsection.7.3.3}%
+\contentsline {subsubsection}{已知 Fourier 展开求 Fourier 系数}{341}{subsection.7.3.3}%
+\contentsline {chapter}{\numberline {第八章\hspace {.3em}}微分方程}{342}{chapter.8}%
+\contentsline {section}{\numberline {8.1}一阶微分方程}{342}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}变量分离方程}{342}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}齐次微分方程}{343}{subsection.8.1.2}%
+\contentsline {subsubsection}{可化为齐次方程的微分方程形如方程}{344}{example.8.1.7}%
+\contentsline {subsection}{\numberline {8.1.3}线性微分方程}{344}{subsection.8.1.3}%
+\contentsline {subsection}{\numberline {8.1.4}Bernoulli 微分方程}{345}{subsection.8.1.4}%
+\contentsline {subsection}{\numberline {8.1.5}恰当方程与积分因子}{346}{subsection.8.1.5}%
+\contentsline {subsubsection}{恰当方程}{346}{subsection.8.1.5}%
+\contentsline {subsubsection}{积分因子}{347}{table.caption.145}%
+\contentsline {section}{\numberline {8.2}高阶微分方程}{350}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}常系数齐次线性微分方程}{350}{subsection.8.2.1}%
+\contentsline {subsubsection}{二阶常系数线性齐次微分方程的通解}{350}{subsection.8.2.1}%
+\contentsline {subsubsection}{$n$ 阶常系数线性齐次微分方程}{351}{example.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.2}常系数非齐次线性微分方程}{352}{subsection.8.2.2}%
+\contentsline {subsubsection}{二阶常系数非齐次线性微分方程的通解结构}{352}{subsection.8.2.2}%
+\contentsline {subsubsection}{微分算子法}{353}{example.8.2.6}%
+\contentsline {subsubsection}{Laplace 变换法}{355}{example.8.2.8}%
+\contentsline {subsection}{\numberline {8.2.3}可降阶的高阶微分方程}{356}{subsection.8.2.3}%
+\contentsline {subsubsection}{$y^{(n)}=f(x)$}{356}{subsection.8.2.3}%
+\contentsline {subsubsection}{$y''=f\qty (x,y')$}{357}{example.8.2.10}%
+\contentsline {subsubsection}{$y''=f\qty (y,y')$}{357}{example.8.2.10}%
+\contentsline {subsection}{\numberline {8.2.4}Euler 微分方程}{357}{subsection.8.2.4}%
+\contentsline {subsubsection}{齐次 Euler 微分方程}{357}{subsection.8.2.4}%
+\contentsline {subsubsection}{非齐次 Euler 微分方程}{358}{example.8.2.13}%
+\contentsline {subsection}{\numberline {8.2.5}二阶变系数线性微分方程}{359}{subsection.8.2.5}%
+\contentsline {subsubsection}{二阶变系数齐次线性微分方程}{359}{subsection.8.2.5}%
+\contentsline {subsubsection}{二阶变系数非齐次线性微分方程}{361}{example.8.2.23}%
+\contentsline {section}{\numberline {8.3}微分方程综合性问题}{362}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}微分方程与函数性质}{362}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}微分方程与积分}{363}{subsection.8.3.2}%
+\contentsline {subsubsection}{微分方程与定积分}{363}{subsection.8.3.2}%
+\contentsline {subsubsection}{微分方程与重积分}{365}{Item.599}%
+\contentsline {subsubsection}{微分方程与曲面积分}{367}{example.8.3.13}%
+\contentsline {subsection}{\numberline {8.3.3}微分方程与幂级数}{371}{subsection.8.3.3}%
+\contentsline {part}{第二部分\hspace {1em}线性代数}{374}{part.2}%
+\contentsline {chapter}{\numberline {第九章\hspace {.3em}}行列式}{375}{chapter.9}%
+\contentsline {section}{\numberline {9.1}行列式的定义及其性质}{375}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}逆序数}{376}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}行列式的概念}{376}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}行列式的基本性质}{377}{subsection.9.1.3}%
+\contentsline {subsection}{\numberline {9.1.4}几种特殊的行列式}{378}{subsection.9.1.4}%
+\contentsline {section}{\numberline {9.2}行列式按行 (列) 展开定理}{379}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}行列式展开定理}{379}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Laplace 展开定理}{381}{subsection.9.2.2}%
+\contentsline {section}{\numberline {9.3}行列式的计算}{381}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}具象行列式的计算}{381}{subsection.9.3.1}%
+\contentsline {subsubsection}{化为三角形矩阵}{381}{subsection.9.3.1}%
+\contentsline {subsubsection}{化为对角型矩阵}{383}{example.9.3.4}%
+\contentsline {subsubsection}{建立递推公式}{385}{example.9.3.8}%
+\contentsline {subsubsection}{升阶法}{387}{example.9.3.11}%
+\contentsline {subsection}{\numberline {9.3.2}抽象行列式的计算}{389}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Vandermonde 行列式计算}{389}{subsection.9.3.3}%
+\contentsline {chapter}{\numberline {第十章\hspace {.3em}}矩阵}{392}{chapter.10}%
+\contentsline {section}{\numberline {10.1}矩阵}{393}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}矩阵的定义}{393}{subsection.10.1.1}%
+\contentsline {subsection}{\numberline {10.1.2}矩阵的运算}{395}{subsection.10.1.2}%
+\contentsline {subsection}{\numberline {10.1.3}方阵的幂}{398}{subsection.10.1.3}%
+\contentsline {subsubsection}{利用幂零矩阵求解}{398}{example.10.1.6}%
+\contentsline {subsubsection}{利用方阵的迹求解}{398}{example.10.1.7}%
+\contentsline {subsubsection}{利用二项式展开求解}{399}{example.10.1.9}%
+\contentsline {subsection}{\numberline {10.1.4}分块矩阵}{400}{subsection.10.1.4}%
+\contentsline {subsection}{\numberline {10.1.5}Carlson 不等式及其应用}{401}{subsection.10.1.5}%
+\contentsline {section}{\numberline {10.2}伴随矩阵、逆矩阵与矩阵方程}{403}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}伴随矩阵}{403}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}可逆矩阵}{405}{subsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.2.3}矩阵方程}{409}{subsection.10.2.3}%
+\contentsline {section}{\numberline {10.3}初等变换与初等矩阵}{411}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}初等变换}{411}{subsection.10.3.1}%
+\contentsline {subsection}{\numberline {10.3.2}初等矩阵}{413}{subsection.10.3.2}%
+\contentsline {section}{\numberline {10.4}矩阵的秩}{416}{section.10.4}%
+\contentsline {subsection}{\numberline {10.4.1}秩的相关不等式证明}{416}{subsection.10.4.1}%
+\contentsline {subsection}{\numberline {10.4.2}秩的相关等式证明}{418}{subsection.10.4.2}%
+\contentsline {subsection}{\numberline {10.4.3}秩的应用}{419}{subsection.10.4.3}%
+\contentsline {chapter}{\numberline {第十一章\hspace {.3em}}向量}{422}{chapter.11}%
+\contentsline {section}{\numberline {11.1}向量的运算}{423}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}向量的定义}{423}{subsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.1.2}向量的运算}{423}{subsection.11.1.2}%
+\contentsline {section}{\numberline {11.2}向量间的线性关系}{424}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}基本概念}{424}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.2.2}常用结论}{424}{subsection.11.2.2}%
+\contentsline {section}{\numberline {11.3}向量组的极大线性无关组和秩}{427}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}极大线性无关组}{427}{subsection.11.3.1}%
+\contentsline {subsection}{\numberline {11.3.2}向量组的秩}{427}{subsection.11.3.2}%
+\contentsline {section}{\numberline {11.4}向量的内积与向量空间}{430}{section.11.4}%
+\contentsline {subsection}{\numberline {11.4.1}向量的内积}{430}{subsection.11.4.1}%
+\contentsline {subsection}{\numberline {11.4.2}向量空间}{431}{subsection.11.4.2}%
+\contentsline {chapter}{\numberline {第十二章\hspace {.3em}}线性方程组}{436}{chapter.12}%
+\contentsline {section}{\numberline {12.1}齐次线性方程组}{437}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}Cramer 法则的应用}{437}{subsection.12.1.1}%
+\contentsline {subsection}{\numberline {12.1.2}齐次方程组的一般解}{437}{subsection.12.1.2}%
+\contentsline {subsection}{\numberline {12.1.3}齐次方程组的基础解系}{440}{subsection.12.1.3}%
+\contentsline {section}{\numberline {12.2}非齐次线性方程组}{441}{section.12.2}%
+\contentsline {subsection}{\numberline {12.2.1}方程组与行列式}{441}{subsection.12.2.1}%
+\contentsline {subsection}{\numberline {12.2.2}线性相关与线性无关}{442}{subsection.12.2.2}%
+\contentsline {subsubsection}{线性无关}{442}{subsection.12.2.2}%
+\contentsline {subsection}{\numberline {12.2.3}非齐次线性方程组解的讨论}{442}{subsection.12.2.3}%
+\contentsline {section}{\numberline {12.3}方程组的同解与公共解}{443}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}方程组的同解}{443}{subsection.12.3.1}%
+\contentsline {subsection}{\numberline {12.3.2}方程组的公共解}{445}{subsection.12.3.2}%
+\contentsline {chapter}{\numberline {第十三章\hspace {.3em}}矩阵的特征值与特征向量}{446}{chapter.13}%
+\contentsline {section}{\numberline {13.1}矩阵的特征值与特征向量}{447}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}矩阵的特征值}{447}{subsection.13.1.1}%
+\contentsline {subsubsection}{特征值在求解迭代方程中的应用}{449}{theorem.13.1.8}%
+\contentsline {subsection}{\numberline {13.1.2}矩阵的特征向量}{449}{subsection.13.1.2}%
+\contentsline {section}{\numberline {13.2}矩阵相似与可对角化}{451}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}矩阵的相似}{451}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {13.2.2}可对角化}{453}{subsection.13.2.2}%
+\contentsline {chapter}{\numberline {第十四章\hspace {.3em}}二次型}{456}{chapter.14}%
+\contentsline {section}{\numberline {14.1}二次型的规范形与标准形}{456}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}二次型的基本概念}{457}{subsection.14.1.1}%
+\contentsline {subsection}{\numberline {14.1.2}二次型的常用结论}{460}{subsection.14.1.2}%
+\contentsline {subsection}{\numberline {14.1.3}运用偏导函数求标准形}{462}{subsection.14.1.3}%
+\contentsline {section}{\numberline {14.2}正定性与矩阵的合同}{463}{section.14.2}%
+\contentsline {subsection}{\numberline {14.2.1}正定性}{464}{subsection.14.2.1}%
+\contentsline {subsection}{\numberline {14.2.2}半正定性}{467}{subsection.14.2.2}%
+\contentsline {subsection}{\numberline {14.2.3}矩阵的合同}{469}{subsection.14.2.3}%
+\contentsline {section}{\numberline {14.3}正交变换与直角坐标变换}{470}{section.14.3}%
+\contentsline {subsection}{\numberline {14.3.1}谱分解}{475}{subsection.14.3.1}%
+\contentsline {subsection}{\numberline {14.3.2}正交变换的应用}{480}{subsection.14.3.2}%
+\contentsline {subsubsection}{几何应用}{480}{subsection.14.3.2}%
+\contentsline {subsubsection}{二次型与曲面方程}{480}{example.14.3.20}%
+\contentsline {subsubsection}{最值问题}{481}{example.14.3.22}%
+\contentsline {subsection}{\numberline {14.3.3}直角坐标变换}{483}{subsection.14.3.3}%
+\contentsline {part}{第三部分\hspace {1em}概率论与数理统计}{486}{part.3}%
+\contentsline {chapter}{\numberline {第十五章\hspace {.3em}}概率论的基本概念}{487}{chapter.15}%
+\contentsline {section}{\numberline {15.1}随机事件及其概率}{487}{section.15.1}%
+\contentsline {subsection}{\numberline {15.1.1}事件的运算}{487}{subsection.15.1.1}%
+\contentsline {subsection}{\numberline {15.1.2}概率的性质}{488}{subsection.15.1.2}%
+\contentsline {subsection}{\numberline {15.1.3}古典概率与几何概率}{489}{subsection.15.1.3}%
+\contentsline {subsubsection}{古典概率}{489}{subsection.15.1.3}%
+\contentsline {subsubsection}{几何概率}{489}{example.15.1.4}%
+\contentsline {subsection}{\numberline {15.1.4}概率基本公式及条件概率}{489}{subsection.15.1.4}%
+\contentsline {subsection}{\numberline {15.1.5}全概率公式和 Bayes 公式}{489}{subsection.15.1.5}%
+\contentsline {section}{\numberline {15.2}事件的独立性}{490}{section.15.2}%
+\contentsline {chapter}{\numberline {第十六章\hspace {.3em}}随机变量及其分布}{491}{chapter.16}%
+\contentsline {section}{\numberline {16.1}离散型随机变量的概率分布}{491}{section.16.1}%
+\contentsline {subsection}{\numberline {16.1.1}离散型随机变量的分布函数}{491}{subsection.16.1.1}%
+\contentsline {subsection}{\numberline {16.1.2}二项分布}{492}{subsection.16.1.2}%
+\contentsline {section}{\numberline {16.2}连续型随机变量的概率分布}{492}{section.16.2}%
+\contentsline {subsection}{\numberline {16.2.1}连续型随机变量概率密度}{492}{subsection.16.2.1}%
+\contentsline {subsection}{\numberline {16.2.2}均匀分布}{493}{subsection.16.2.2}%
+\contentsline {subsection}{\numberline {16.2.3}指数分布}{493}{subsection.16.2.3}%
+\contentsline {subsection}{\numberline {16.2.4}正态分布}{494}{subsection.16.2.4}%
+\contentsline {chapter}{\numberline {第十七章\hspace {.3em}}多维随机变量及其分布}{496}{chapter.17}%
+\contentsline {section}{\numberline {17.1}多维离散型随机变量}{496}{section.17.1}%
+\contentsline {section}{\numberline {17.2}多维连续型随机变量}{496}{section.17.2}%
+\contentsline {subsection}{\numberline {17.2.1}边缘概率密度与边缘分布函数}{496}{subsection.17.2.1}%
+\contentsline {subsection}{\numberline {17.2.2}二维连续型随机变量函数的分布}{497}{subsection.17.2.2}%
+\contentsline {subsection}{\numberline {17.2.3}二维随机变量条件概率密度与条件分布函数}{498}{subsection.17.2.3}%
+\contentsline {subsection}{\numberline {17.2.4}二维正态分布}{499}{subsection.17.2.4}%
+\contentsline {subsection}{\numberline {17.2.5}卷积公式}{500}{subsection.17.2.5}%
+\contentsline {section}{\numberline {17.3}多维混合型随机变量}{501}{section.17.3}%
+\contentsline {subsection}{\numberline {17.3.1}二维混合型随机变量的分布}{501}{subsection.17.3.1}%
+\contentsline {subsection}{\numberline {17.3.2}随机变量与函数性质}{503}{subsection.17.3.2}%
+\contentsline {chapter}{\numberline {第十八章\hspace {.3em}}随机变量的数字特征}{504}{chapter.18}%
+\contentsline {section}{\numberline {18.1}数学期望与方差}{504}{section.18.1}%
+\contentsline {subsection}{\numberline {18.1.1}数学期望}{504}{subsection.18.1.1}%
+\contentsline {subsection}{\numberline {18.1.2}方差}{506}{subsection.18.1.2}%
+\contentsline {subsubsection}{利用第二型 Euler 积分}{508}{example.18.1.8}%
+\contentsline {section}{\numberline {18.2}协方差与相关系数}{508}{section.18.2}%
+\contentsline {subsection}{\numberline {18.2.1}随机变量的独立性与相关性}{508}{subsection.18.2.1}%
+\contentsline {subsection}{\numberline {18.2.2}协方差}{509}{subsection.18.2.2}%
+\contentsline {subsection}{\numberline {18.2.3}相关系数}{510}{subsection.18.2.3}%
+\contentsline {chapter}{\numberline {第十九章\hspace {.3em}}大数定律与中心极限定理}{513}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Chebyshev 不等式}{513}{section.19.1}%
+\contentsline {section}{\numberline {19.2}大数定律}{514}{section.19.2}%
+\contentsline {subsection}{\numberline {19.2.1}Bernoulli 大数定律}{514}{subsection.19.2.1}%
+\contentsline {subsection}{\numberline {19.2.2}Chebyshev 大数定律}{514}{subsection.19.2.2}%
+\contentsline {subsection}{\numberline {19.2.3}Khinchin 大数定律}{515}{subsection.19.2.3}%
+\contentsline {section}{\numberline {19.3}中心极限定理}{515}{section.19.3}%
+\contentsline {subsection}{\numberline {19.3.1}Levy Lindeberg 定理}{515}{subsection.19.3.1}%
+\contentsline {subsection}{\numberline {19.3.2}De Moivre-Laplace 定理}{516}{subsection.19.3.2}%
+\contentsline {chapter}{\numberline {第二十章\hspace {.3em}}数理统计的基本概念}{517}{chapter.20}%
+\contentsline {section}{\numberline {20.1}随机样本}{517}{section.20.1}%
+\contentsline {subsection}{\numberline {20.1.1}常用统计量}{518}{subsection.20.1.1}%
+\contentsline {subsection}{\numberline {20.1.2}样本数字特征的性质}{519}{subsection.20.1.2}%
+\contentsline {section}{\numberline {20.2}三大抽样分布}{519}{section.20.2}%
+\contentsline {subsection}{\numberline {20.2.1}$\chi ^2$ 分布}{519}{subsection.20.2.1}%
+\contentsline {subsection}{\numberline {20.2.2}$t$ 分布}{521}{subsection.20.2.2}%
+\contentsline {subsection}{\numberline {20.2.3}$F$ 分布}{522}{subsection.20.2.3}%
+\contentsline {section}{\numberline {20.3}正态总体的抽样分布}{524}{section.20.3}%
+\contentsline {subsection}{\numberline {20.3.1}单正态总体的抽样分布}{525}{subsection.20.3.1}%
+\contentsline {subsection}{\numberline {20.3.2}双正态总体的抽样分布}{525}{subsection.20.3.2}%
+\contentsline {chapter}{\numberline {第二十一章\hspace {.3em}}正态总体参数的区间估计与假设检验}{526}{chapter.21}%
+\contentsline {section}{\numberline {21.1}区间估计}{527}{section.21.1}%
+\contentsline {subsection}{\numberline {21.1.1}区间估计的定义}{527}{subsection.21.1.1}%
+\contentsline {subsection}{\numberline {21.1.2}区间估计的一般步骤}{528}{subsection.21.1.2}%
+\contentsline {section}{\numberline {21.2}正态总体均值和方差的区间估计}{529}{section.21.2}%
+\contentsline {subsection}{\numberline {21.2.1}单个正态总体参数的置信区间}{529}{subsection.21.2.1}%
+\contentsline {subsection}{\numberline {21.2.2}双正态总体均值差与方差比的置信区间}{530}{subsection.21.2.2}%
+\contentsline {section}{\numberline {21.3}单侧置信区间}{531}{section.21.3}%
+\contentsline {section}{\numberline {21.4}假设检验}{531}{section.21.4}%
+\contentsline {subsection}{\numberline {21.4.1}假设检验的基本思想}{533}{subsection.21.4.1}%
+\contentsline {subsection}{\numberline {21.4.2}假设检验的解题步骤}{534}{subsection.21.4.2}%
+\contentsline {subsection}{\numberline {21.4.3}单个正态总体的假设检验}{534}{subsection.21.4.3}%
+\contentsline {subsubsection}{$\sigma ^2$ 已知, 关于 $\mu $ 的检验 ($Z$ 检验)}{534}{subsection.21.4.3}%
+\contentsline {subsubsection}{$\sigma ^2$ 未知, 关于 $\mu $ 的检验 ($t$ 检验)}{535}{example.21.4.2}%
+\contentsline {subsubsection}{$\mu $ 未知, 关于 $\sigma ^2$ 的检验 ($\chi ^2$ 检验)}{536}{example.21.4.4}%
+\contentsline {subsection}{\numberline {21.4.4}双正态总体的假设检验}{537}{subsection.21.4.4}%
+\contentsline {subsubsection}{双正态总体均值的检验 ($t$ 检验)}{537}{subsection.21.4.4}%
+\contentsline {subsubsection}{双正态总体方差的假设检验}{537}{subsection.21.4.4}%
+\contentsline {chapter}{\numberline {第二十二章\hspace {.3em}}参数的点估计及其优良性}{538}{chapter.22}%
+\contentsline {section}{\numberline {22.1}矩估计法}{538}{section.22.1}%
+\contentsline {section}{\numberline {22.2}极大似然估计}{540}{section.22.2}%
+\contentsline {section}{\numberline {22.3}估计量优良性的判定标准}{543}{section.22.3}%
+\contentsline {subsection}{\numberline {22.3.1}无偏性}{543}{subsection.22.3.1}%
+\contentsline {subsection}{\numberline {22.3.2}有效性}{543}{subsection.22.3.2}%
+\contentsline {subsection}{\numberline {22.3.3}一致性}{544}{subsection.22.3.3}%
 \vspace \bigskipamount 
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}积分表推导}{543}{appendix.A}%
-\contentsline {section}{\numberline {A.1}含有 $ax+b$ 的积分}{543}{section.A.1}%
-\contentsline {section}{\numberline {A.2}含有 $\sqrt {ax+b}$ 的积分}{544}{section.A.2}%
-\contentsline {section}{\numberline {A.3}含有 $x^2\pm a^2$ 的积分}{544}{section.A.3}%
-\contentsline {section}{\numberline {A.4}含有 $ax^2+b\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces (a>0)$ 的积分}{544}{section.A.4}%
-\contentsline {section}{\numberline {A.5}含有 $ax^2+b+c\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces (a>0)$ 的积分}{545}{section.A.5}%
-\contentsline {chapter}{索引}{549}{section.A.5}%
-\contentsline {chapter}{参考文献}{549}{appendix*.197}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}积分表推导}{545}{appendix.A}%
+\contentsline {section}{\numberline {A.1}含有 $ax+b$ 的积分}{545}{section.A.1}%
+\contentsline {section}{\numberline {A.2}含有 $\sqrt {ax+b}$ 的积分}{546}{section.A.2}%
+\contentsline {section}{\numberline {A.3}含有 $x^2\pm a^2$ 的积分}{546}{section.A.3}%
+\contentsline {section}{\numberline {A.4}含有 $ax^2+b\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces (a>0)$ 的积分}{546}{section.A.4}%
+\contentsline {section}{\numberline {A.5}含有 $ax^2+b+c\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces (a>0)$ 的积分}{547}{section.A.5}%
+\contentsline {chapter}{索引}{551}{section.A.5}%
+\contentsline {chapter}{参考文献}{551}{appendix*.196}%

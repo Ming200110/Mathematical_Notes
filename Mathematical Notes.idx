@@ -81,27 +81,27 @@
 \indexentry{用参数方程确定的函数的导数|hyperpage}{74}
 \indexentry{隐函数的导数|hyperpage}{75}
 \indexentry{Taylor 展开式|hyperpage}{80}
-\indexentry{含绝对值函数的可导性|hyperpage}{81}
+\indexentry{含绝对值函数的可导性|hyperpage}{82}
 \indexentry{Rolle 定理|hyperpage}{84}
 \indexentry{Lagrange 定理|hyperpage}{84}
 \indexentry{Cauchy 定理|hyperpage}{84}
 \indexentry{Darboux 定理|hyperpage}{85}
-\indexentry{带 Lagrange 余项的 Taylor 展开|hyperpage}{95}
+\indexentry{带 Lagrange 余项的 Taylor 展开|hyperpage}{96}
 \indexentry{一阶差商|hyperpage}{102}
 \indexentry{重节点差商|hyperpage}{102}
-\indexentry{二阶差商|hyperpage}{102}
-\indexentry{$n$ 阶差商|hyperpage}{102}
-\indexentry{差商与导数的关系|hyperpage}{102}
-\indexentry{Lagrange 插值多项式|hyperpage}{104}
-\indexentry{两点三次 Hermite 插值|hyperpage}{107}
+\indexentry{二阶差商|hyperpage}{103}
+\indexentry{$n$ 阶差商|hyperpage}{103}
+\indexentry{差商与导数的关系|hyperpage}{103}
+\indexentry{Lagrange 插值多项式|hyperpage}{105}
+\indexentry{两点三次 Hermite 插值|hyperpage}{108}
 \indexentry{对数平均不等式 (ALG)|hyperpage}{110}
-\indexentry{均值不等式|hyperpage}{110}
-\indexentry{Cauchy 不等式|hyperpage}{111}
-\indexentry{分离性定理|hyperpage}{112}
+\indexentry{均值不等式|hyperpage}{111}
+\indexentry{Cauchy 不等式|hyperpage}{112}
+\indexentry{分离性定理|hyperpage}{113}
 \indexentry{Jensen 不等式|hyperpage}{113}
-\indexentry{拐点|hyperpage}{113}
-\indexentry{拐点存在的必要条件|hyperpage}{113}
-\indexentry{曲率|hyperpage}{114}
+\indexentry{拐点|hyperpage}{114}
+\indexentry{拐点存在的必要条件|hyperpage}{114}
+\indexentry{曲率|hyperpage}{115}
 \indexentry{曲率的计算公式|hyperpage}{115}
 \indexentry{高阶幂展开式|hyperpage}{132}
 \indexentry{对称区间上的积分公式|hyperpage}{146}
@@ -140,60 +140,60 @@
 \indexentry{二元函数的 Taylor 展开唯一性|hyperpage}{219}
 \indexentry{隐函数存在定理|hyperpage}{222}
 \indexentry{全微分的形式不变性|hyperpage}{223}
-\indexentry{二元函数取极值的必要条件|hyperpage}{234}
+\indexentry{二元函数取极值的必要条件|hyperpage}{235}
 \indexentry{二元函数取极值的充分条件|hyperpage}{235}
 \indexentry{Hesse 矩阵与极值定理|hyperpage}{236}
-\indexentry{方向导数的计算|hyperpage}{240}
-\indexentry{方向导数与梯度的关系|hyperpage}{241}
+\indexentry{方向导数的计算|hyperpage}{241}
+\indexentry{方向导数与梯度的关系|hyperpage}{242}
 \indexentry{重积分的对称性|hyperpage}{254}
-\indexentry{含参变量积分求导公式|hyperpage}{259}
-\indexentry{二重积分中值定理|hyperpage}{261}
-\indexentry{物体的质量|hyperpage}{264}
-\indexentry{物体的质心|hyperpage}{265}
-\indexentry{转动惯量|hyperpage}{266}
-\indexentry{轴对称性|hyperpage}{270}
-\indexentry{轮换对称性|hyperpage}{270}
-\indexentry{第一类曲线积分化为定积分|hyperpage}{271}
-\indexentry{第二类曲线积分化为定积分|hyperpage}{273}
-\indexentry{Green 公式|hyperpage}{275}
-\indexentry{路径无关|hyperpage}{278}
-\indexentry{二重积分分部积分公式|hyperpage}{279}
-\indexentry{偶倍奇零性|hyperpage}{284}
-\indexentry{第一型曲面积分化为二重积分|hyperpage}{285}
-\indexentry{三重积分分部积分公式|hyperpage}{290}
-\indexentry{第二型曲面积分的分部积分公式|hyperpage}{292}
-\indexentry{Gauss 公式|hyperpage}{293}
-\indexentry{Stokes 积分法|hyperpage}{299}
-\indexentry{方向导数与 Hamilton 算符|hyperpage}{306}
-\indexentry{常数项级数|hyperpage}{309}
-\indexentry{常数项级数收敛|hyperpage}{309}
-\indexentry{几何级数|hyperpage}{310}
-\indexentry{调和级数|hyperpage}{310}
-\indexentry{p-级数|hyperpage}{310}
-\indexentry{正项级数收敛的充要条件|hyperpage}{310}
-\indexentry{比较审敛法|hyperpage}{310}
-\indexentry{比较审敛法的极限形式|hyperpage}{310}
-\indexentry{比值审敛法|hyperpage}{311}
-\indexentry{根值审敛法|hyperpage}{311}
-\indexentry{积分判别法|hyperpage}{311}
-\indexentry{Leibniz 定理|hyperpage}{314}
-\indexentry{Kummer 判别法|hyperpage}{317}
-\indexentry{Raabe 判别法|hyperpage}{317}
-\indexentry{Raabe 判别法的极限形式|hyperpage}{317}
-\indexentry{Gauss 判别法|hyperpage}{317}
-\indexentry{Frink 判别法|hyperpage}{317}
-\indexentry{阶乘与阶乘幂|hyperpage}{318}
-\indexentry{分部和公式|hyperpage}{319}
-\indexentry{Abel 定理|hyperpage}{320}
-\indexentry{奇偶次项幂级数的收敛半径|hyperpage}{320}
-\indexentry{幂级数的运算性质|hyperpage}{320}
-\indexentry{幂级数的性质|hyperpage}{320}
-\indexentry{Dirichlet 收敛定理|hyperpage}{336}
-\indexentry{Fourier 展开|hyperpage}{336}
-\indexentry{均方逼近|hyperpage}{339}
-\indexentry{通解公式|hyperpage}{343}
-\indexentry{积分因子|hyperpage}{345}
-\indexentry{积分因子的存在性定理|hyperpage}{347}
-\indexentry{二阶常系数线性齐次微分方程的通解结构|hyperpage}{348}
-\indexentry{高阶常系数线性齐次微分方程通解结构|hyperpage}{349}
-\indexentry{算子特性|hyperpage}{352}
+\indexentry{含参变量积分求导公式|hyperpage}{261}
+\indexentry{二重积分中值定理|hyperpage}{262}
+\indexentry{物体的质量|hyperpage}{265}
+\indexentry{物体的质心|hyperpage}{266}
+\indexentry{转动惯量|hyperpage}{267}
+\indexentry{轴对称性|hyperpage}{271}
+\indexentry{轮换对称性|hyperpage}{272}
+\indexentry{第一类曲线积分化为定积分|hyperpage}{272}
+\indexentry{第二类曲线积分化为定积分|hyperpage}{274}
+\indexentry{Green 公式|hyperpage}{276}
+\indexentry{路径无关|hyperpage}{280}
+\indexentry{二重积分分部积分公式|hyperpage}{281}
+\indexentry{偶倍奇零性|hyperpage}{286}
+\indexentry{第一型曲面积分化为二重积分|hyperpage}{286}
+\indexentry{三重积分分部积分公式|hyperpage}{292}
+\indexentry{第二型曲面积分的分部积分公式|hyperpage}{293}
+\indexentry{Gauss 公式|hyperpage}{294}
+\indexentry{Stokes 积分法|hyperpage}{301}
+\indexentry{方向导数与 Hamilton 算符|hyperpage}{307}
+\indexentry{常数项级数|hyperpage}{311}
+\indexentry{常数项级数收敛|hyperpage}{311}
+\indexentry{几何级数|hyperpage}{312}
+\indexentry{调和级数|hyperpage}{312}
+\indexentry{p-级数|hyperpage}{312}
+\indexentry{正项级数收敛的充要条件|hyperpage}{312}
+\indexentry{比较审敛法|hyperpage}{312}
+\indexentry{比较审敛法的极限形式|hyperpage}{312}
+\indexentry{比值审敛法|hyperpage}{313}
+\indexentry{根值审敛法|hyperpage}{313}
+\indexentry{积分判别法|hyperpage}{313}
+\indexentry{Leibniz 定理|hyperpage}{316}
+\indexentry{Kummer 判别法|hyperpage}{319}
+\indexentry{Raabe 判别法|hyperpage}{319}
+\indexentry{Raabe 判别法的极限形式|hyperpage}{319}
+\indexentry{Gauss 判别法|hyperpage}{319}
+\indexentry{Frink 判别法|hyperpage}{319}
+\indexentry{阶乘与阶乘幂|hyperpage}{320}
+\indexentry{分部和公式|hyperpage}{321}
+\indexentry{Abel 定理|hyperpage}{322}
+\indexentry{奇偶次项幂级数的收敛半径|hyperpage}{322}
+\indexentry{幂级数的运算性质|hyperpage}{322}
+\indexentry{幂级数的性质|hyperpage}{322}
+\indexentry{Dirichlet 收敛定理|hyperpage}{338}
+\indexentry{Fourier 展开|hyperpage}{338}
+\indexentry{均方逼近|hyperpage}{341}
+\indexentry{通解公式|hyperpage}{345}
+\indexentry{积分因子|hyperpage}{347}
+\indexentry{积分因子的存在性定理|hyperpage}{349}
+\indexentry{二阶常系数线性齐次微分方程的通解结构|hyperpage}{350}
+\indexentry{高阶常系数线性齐次微分方程通解结构|hyperpage}{351}
+\indexentry{算子特性|hyperpage}{354}

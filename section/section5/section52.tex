@@ -1,7 +1,7 @@
 \section{多元函数的偏导数}
 
 在多元函数中, 偏导数是描述函数对于各个自变量的变化率的概念.
-对于一个多元函数 $f(\vb*{x})$, 其中 $\vb*{x}=(x_1,x_2,\cdots,x_n)$, 对于第 $i$ 个自变量 $x_i$ 的偏导数记作 $\displaystyle\pdv{f}{x_i}$, 
+对于一个多元函数 $f(\vb*{x})$, 其中 $\vb*{x}=(x_1,x_2,\cdots,x_n)$, 对于第 $i$ 个自变量 $x_i$ 的偏导数记作 $\displaystyle\pdv{f}{x_i}$,
 表示在其他自变量保持不变的情况下, 函数 $f$ 对于 $x_i$ 的变化率.
 
 \subsection{偏导数与隐函数}
@@ -49,10 +49,10 @@
 \end{example}
 \begin{solution}
     \textbf{法一: }令 $u=x+y,~v=\dfrac{y}{x}$, 解得 $\begin{cases}
-        x=\dfrac{u}{1+v}\\[6pt] y=\dfrac{uu}{1+v}
-    \end{cases}$ 那么 $f(u,v)=\dfrac{u^2\qty(1-v^2)}{(1+v)^2}=\dfrac{u^2(1-v)}{1+v}$, 于是 
+            x=\dfrac{u}{1+v} \\[6pt] y=\dfrac{uu}{1+v}
+        \end{cases}$ 那么 $f(u,v)=\dfrac{u^2\qty(1-v^2)}{(1+v)^2}=\dfrac{u^2(1-v)}{1+v}$, 于是
     $$\eval{\pdv{f}{u}}_{\substack{u=1\\v=1}}=\eval{\dfrac{2u(1-v)}{1+v}}_{\substack{u=1\\v=1}}=0,~\eval{\pdv{f}{v}}_{\substack{u=1\\v=1}}=\eval{\dfrac{-2u^2}{(1+v)^2}}_{\substack{u=1\\v=1}}=-\dfrac{1}{2}.$$
-    \textbf{法二: }令 $u=x+y,~v=\dfrac{y}{x}$, 当 $u=v=1$ 时, 解得 $x=y=\dfrac{1}{2}$, 方程 $f\qty(x+y,\dfrac{y}{x})=x^2-y^2$ 两边分别对 $x,~y$ 求偏导数, 得 
+    \textbf{法二: }令 $u=x+y,~v=\dfrac{y}{x}$, 当 $u=v=1$ 时, 解得 $x=y=\dfrac{1}{2}$, 方程 $f\qty(x+y,\dfrac{y}{x})=x^2-y^2$ 两边分别对 $x,~y$ 求偏导数, 得
     $$f'_u+f'_v\qty(-\dfrac{y}{x^2})=2x,~f'_u+f'_v\dfrac{1}{x}=-2y$$
     把 $x=y=\dfrac{1}{2}$ 代入上两式, 最终解得选 D.
 \end{solution}
@@ -61,7 +61,7 @@
     设 $z=\qty(x+\e^y)^x$, 求 $\displaystyle\eval{\pdv{z}{x}}_{(1,0)}.$
 \end{example}
 \begin{solution}
-    由 $z=\qty(x+\e^y)^x$, 得 $z(x,0)=(x+1)^x$, 那么 
+    由 $z=\qty(x+\e^y)^x$, 得 $z(x,0)=(x+1)^x$, 那么
     \begin{flalign*}
         \eval{\pdv{z}{x}}_{(1,0)}=\eval{\dv{x}(x+1)^x}_{x=1}=\eval{\dv{x}\e ^{x\ln(x+1)}}_{x=1}=\eval{\e ^{x\ln(x+1)}\qty[\ln(x+1)+\dfrac{x}{x+1}]}_{x=1}=2\ln 2+1.
     \end{flalign*}
@@ -71,7 +71,7 @@
     设 $u=f(x,y,z)$ 有连续的一阶偏导数, 又函数 $y=y(x)$ 及 $z=z(x)$ 分别由下列两式确定: $\e ^{xy}-xy=2$ 和 $\displaystyle \e ^x=\int_{0}^{x-t}\dfrac{\sin t}{t}\dd t$, 求 $\dfrac{\dd u}{\dd x}.$
 \end{example}
 \begin{solution}
-    $\displaystyle \dv{u}{x}=\pdv{f}{x}+\pdv{f}{y}\cdot\dv{y}{x}+\pdv{f}{z}\cdot\dv{z}{x}$, 由 $\e ^{xy}-xy=2$ 可得 $\displaystyle\dv{y}{x}=-\dfrac{y}{x}$, 方程 $\displaystyle \e ^x=\int_{0}^{x-t}\dfrac{\sin t}{t}\dd t$ 两边对 $x$ 求导, 
+    $\displaystyle \dv{u}{x}=\pdv{f}{x}+\pdv{f}{y}\cdot\dv{y}{x}+\pdv{f}{z}\cdot\dv{z}{x}$, 由 $\e ^{xy}-xy=2$ 可得 $\displaystyle\dv{y}{x}=-\dfrac{y}{x}$, 方程 $\displaystyle \e ^x=\int_{0}^{x-t}\dfrac{\sin t}{t}\dd t$ 两边对 $x$ 求导,
     $$\e^x=\dfrac{\sin(x-z)}{x-z}\cdot\qty(1-\dv{z}{x})\Rightarrow \dv{z}{x}=1-\dfrac{\e^x(x-z)}{\sin(x-z)}$$
     代入 $\dfrac{\dd z}{\dd x}$, 得 $\displaystyle\dv{z}{x}=\pdv{f}{x}-\dfrac{y}{x}\pdv{f}{y}+\qty[1-\dfrac{\e^x(x-z)}{\sin(x-z)}]\pdv{f}{z}.$
 \end{solution}
@@ -103,9 +103,9 @@
 \subsubsection{隐函数}
 
 \begin{theorem}[隐函数存在定理 A]
-    \index{隐函数存在定理}\label{yhansczdl}设函数 $F(x,y,z)$ 在点 $P(x_0,y_0,z_0)$ 的某一邻域内具有连续偏导数, 且 $$F(x_0,y_0,z_0)=0,~F'_z(x_0,y_0,z_0)\neq 0$$
+    \index{隐函数存在定理}\label{yhansczdl}设函数 $F(x,y,z)$ 在点 $P(x_0,y_0,z_0)$ 的某一邻域内具有连续偏导数, 且 $$F(x_0,y_0,z_0)=0,~F_z(x_0,y_0,z_0)\neq 0$$
     则方程 $F(x,y,z)=0$ 在点 $P(x_0,y_0,z_0)$ 的某一邻域内能确定唯一一个连续且具有连续导数的函数 $z=f(x,y)$, 且有
-    $$\pdv{z}{x}=-\dfrac{F'_x}{F'_z},~\pdv{z}{y}=-\dfrac{F'_y}{F'_z}.$$
+    $$\pdv{z}{x}=-\dfrac{F_x}{F_z},~\pdv{z}{y}=-\dfrac{F_y}{F_z}.$$
 \end{theorem}
 
 \begin{theorem}[隐函数存在定理 B]
@@ -114,22 +114,19 @@
         \begin{cases}
             F(x,y,u,v)=0 \\G(x,y,u,v)=0
         \end{cases}
-        \tag*{(1)}
     \end{equation*}
-    两边同时对 $x$ 求偏导可得
-    \begin{equation*}
-        \begin{cases}
-            \displaystyle F'_x+F'_u\pdv{u}{x}+F'_v\pdv{v}{x}=0 \\[6pt]
-            \displaystyle G'_x+G'_u\pdv{u}{x}+G'_v\pdv{v}{x}=0
-        \end{cases}
-        \tag*{(2)}
-    \end{equation*}
-    若 $\mqty|F'_u&F'_v\\G'_u&G'_v|\neq 0$, 则方程组 (1) 确定了两个隐函数 $u=u(x,y),v=v(x,y)$, 且 $\displaystyle\pdv{u}{x},~\pdv{v}{x}$ 可由方程组 (2) 求出, 
-    同理可得 $\displaystyle\pdv{u}{y},~\pdv{v}{y}$.
+    若在 $ P_{0} $ 某邻域内偏导连续, $ F\left(x_{0}, y_{0}, u_{0}, v_{0}\right)=0 $ 且
+    $G\left(x_{0}, y_{0}, u_{0}, v_{0}\right)=0 $, $\displaystyle  J=\frac{\partial(F, G)}{\partial(u, v)}=\mqty|F_{u} & F_{v} \\ G_{u} & G_{v}|$ 在 $ P_{0} $ 处不等于 $0$, 则可确定一个隐函数组 $ \begin{cases}
+        u=u(x, y) \\ v=v(x, y)
+    \end{cases}$, 其唯一、连续、偏导也连续, 且
+    \begin{flalign*}
+        &\frac{\partial u}{\partial x}=-\frac{1}{J}\mqty|F_{x} & F_{v} \\ G_{x} & G_{v}|=-\frac{1}{J} \frac{\partial(F, G)}{\partial(x, v)} \quad \frac{\partial u}{\partial y}=-\frac{1}{J}\mqty|F_{y} & F_{v} \\ G_{y} & G_{v}|=-\frac{1}{J} \frac{\partial(F, G)}{\partial(y, v)} \\
+        &\frac{\partial v}{\partial x}=-\frac{1}{J}\mqty|F_{u} & F_{x} \\ G_{u} & G_{x}|=-\frac{1}{J} \frac{\partial(F, G)}{\partial(u, x)} \quad \frac{\partial v}{\partial y}=-\frac{1}{J}\mqty|F_{u} & F_{y} \\ G_{u} & G_{y}|=-\frac{1}{J} \frac{\partial(F, G)}{\partial(u, y)} 
+    \end{flalign*}
 \end{theorem}
 
 \begin{example}
-    设 $F(x,y,z)$ 连续可偏导, $F'_y\cdot F'_z\neq 0$, 且 $F(1,1,-2)=0$, 则在点 $(1,1,-2)$ 邻域内, 由 $F(x,y,z)=0$
+    设 $F(x,y,z)$ 连续可偏导, $F_y\cdot F_z\neq 0$, 且 $F(1,1,-2)=0$, 则在点 $(1,1,-2)$ 邻域内, 由 $F(x,y,z)=0$
     \begin{tasks}(1)
         \task 既可确定 $x$ 为 $y,z$ 的二元函数, 也可确定 $y$ 为 $x,z$ 的二元函数
         \task 既可确定 $x$ 为 $y,z$ 的二元函数, 也可确定 $z$ 为 $x,y$ 的二元函数
@@ -139,18 +136,18 @@
 \end{example}
 \begin{solution}
     根据定理 \ref{yhansczdl}, $F(x,y,z)=0$ 确定的隐函数 $z=z(x,y)$ 的偏导数为
-    $$\pdv{z}{x}=-\dfrac{F'_x}{F'_z},~\pdv{z}{y}=-\dfrac{F'_y}{F'_z}$$
-    因此确定 $z$ 为 $x,y$ 的二元函数, 需要 $F'_z\neq0$; 确定 $x$ 为 $y,z$ 的二元函数, 需要 $F'_x\neq0$; 确定 $y$ 为 $x,z$ 的二元函数, 需要 $F'_y\neq0$, 
-    而 $F'_y\cdot F'_z\neq 0$ 得 $F'_y\neq0,~F'_z\neq0$, 因此可确定 $y$ 为 $x,z$ 的二元函数, 也可确定 $z$ 为 $x,y$ 的二元函数, 故选 C.
+    $$\pdv{z}{x}=-\dfrac{F_x}{F_z},~\pdv{z}{y}=-\dfrac{F_y}{F_z}$$
+    因此确定 $z$ 为 $x,y$ 的二元函数, 需要 $F_z\neq0$; 确定 $x$ 为 $y,z$ 的二元函数, 需要 $F_x\neq0$; 确定 $y$ 为 $x,z$ 的二元函数, 需要 $F_y\neq0$,
+    而 $F_y\cdot F_z\neq 0$ 得 $F_y\neq0,~F_z\neq0$, 因此可确定 $y$ 为 $x,z$ 的二元函数, 也可确定 $z$ 为 $x,y$ 的二元函数, 故选 C.
 \end{solution}
 
 \begin{example}[2018 数三]
     设函数 $z=z(x,y)$ 由方程 $\ln z+\e ^{z-1}=xy$ 确定, 求 $\displaystyle\eval{\pdv{z}{x}}_{\qty(2,\frac{1}{2})}.$
 \end{example}
 \begin{solution}
-    \textbf{法一: }求偏导, $\displaystyle\dfrac{1}{z}\cdot z'_x+\e^{z-1}\cdot z'_x=y$, 代入 $x=2,y=\dfrac{1}{2},z=1$, 求得 $z'_x\qty(2,\dfrac{1}{2})=\dfrac{1}{4}.$\\ 
-    \textbf{法二: }求全微分: $\dfrac{1}{z}\dd z+\e ^{z-1}\dd z=y\dd x+x\dd y\Rightarrow \dd z=\dfrac{yz}{1+z\e ^{z-1}}\dd x+\dfrac{xz}{1+z\e ^{z-1}}\dd y$, 那么 $\displaystyle\eval{\pdv{z}{x}}_{\qty(2,\frac{1}{2})}=\dfrac{1}{4}.$\\ 
-    \textbf{法三: }公式法: 令 $F(x,y,z)=\ln z+\e ^{z-1}-xy$, 那么 $\displaystyle\eval{\pdv{z}{x}}_{\qty(2,\frac{1}{2})}=-\eval{\dfrac{F'_x}{F'_y}}_{\qty(2,\frac{1}{2})}=\eval{\dfrac{y}{\dfrac{1}{z}+\e ^{z-1}}}_{\qty(2,\frac{1}{2})}=\dfrac{1}{4}.$
+    \textbf{法一: }求偏导, $\displaystyle\dfrac{1}{z}\cdot z'_x+\e^{z-1}\cdot z'_x=y$, 代入 $x=2,y=\dfrac{1}{2},z=1$, 求得 $z'_x\qty(2,\dfrac{1}{2})=\dfrac{1}{4}.$\\
+    \textbf{法二: }求全微分: $\dfrac{1}{z}\dd z+\e ^{z-1}\dd z=y\dd x+x\dd y\Rightarrow \dd z=\dfrac{yz}{1+z\e ^{z-1}}\dd x+\dfrac{xz}{1+z\e ^{z-1}}\dd y$, 那么 $\displaystyle\eval{\pdv{z}{x}}_{\qty(2,\frac{1}{2})}=\dfrac{1}{4}.$\\
+    \textbf{法三: }公式法: 令 $F(x,y,z)=\ln z+\e ^{z-1}-xy$, 那么 $\displaystyle\eval{\pdv{z}{x}}_{\qty(2,\frac{1}{2})}=-\eval{\dfrac{F_x}{F_y}}_{\qty(2,\frac{1}{2})}=\eval{\dfrac{y}{\dfrac{1}{z}+\e ^{z-1}}}_{\qty(2,\frac{1}{2})}=\dfrac{1}{4}.$
 \end{solution}
 
 \subsection{全微分形式不变性}
@@ -174,10 +171,57 @@
 \end{theorem}
 
 \begin{example}
+    设 $xu-yv=0, yu+xv=1$, 求 $\displaystyle \pdv{u}{x},\pdv{u}{y},\pdv{v}{x}, \pdv{v}{y}$.
+\end{example}
+\begin{solution}
+    \textbf{法一: }记 $F(x,y,u,v)=xu-yv, G(x,y,u,v)=yu+xv-1$, 则方程组化为 $\begin{cases}
+            F(x,y,u,v)=0 \\ G(x,y,u,v)=0
+        \end{cases}$ 于是由公式知, 在
+    $$J=\dfrac{\partial (F,G)}{\partial (u,v)}=\mqty|x&-y\\ y& x|=x^2+y^2\neq0$$
+    条件下, 有
+    $$
+        \pdv{u}{x}=-\dfrac{\displaystyle \pdv{(F,G)}{(x,v)}}{\displaystyle \pdv{(F,G)}{(u,v)}}=-\dfrac{\mqty|F_x&F_v\\G_x&G_v|}{\mqty|F_u&F_v\\G_u&G_v|}=-\dfrac{\mqty|u&-y\\v&x|}{\mqty|x&-y\\ y& x|}=-\dfrac{xu+yv}{x^2+y^2}
+    $$
+    同理可得,
+    $$\dfrac{\partial u}{\partial y}=-\dfrac{\dfrac{\partial(F, G)}{\partial(y, v)}}{\dfrac{\partial(F, G)}{\partial(u, v)}}=\dfrac{x v-y u}{x^{2}+y^{2}}, \quad \dfrac{\partial v}{\partial x}=\dfrac{y u-x v}{x^{2}+y^{2}}, \quad \dfrac{\partial v}{\partial y}=-\dfrac{x u+y v}{x^{2}+y^{2}} .$$
+    \textbf{法二: }直接推导法, 由题意 $ u=u(x, y), v=v(x, y) $, 方程组两边对 $ x $ 求导, 得
+    $$
+        \begin{cases}
+            \displaystyle u + x \frac { \partial u } { \partial x } - y \frac { \partial v } { \partial x } = 0 \\[6pt]
+            \displaystyle y \frac { \partial u } { \partial x } + v + x \frac { \partial v } { \partial x } = 0
+        \end{cases}\Rightarrow\begin{cases}
+            \displaystyle x \frac{\partial u}{\partial x}-y \frac{\partial v}{\partial x}=-u \\
+            \displaystyle y \frac{\partial u}{\partial x}+x \frac{\partial v}{\partial x}=-v
+        \end{cases}
+    $$
+    当 $ J=\mqty|x & -y \\ y & x|=x^{2}+y^{2} \neq 0 $ 时, 解得
+    $$\frac{\partial u}{\partial x}=-\frac{x u+y v}{x^{2}+y^{2}}, \quad \frac{\partial v}{\partial x}=\frac{y u-x v}{x^{2}+y^{2}}$$
+    同理, 可得
+    $$
+        \frac{\partial u}{\partial y}=\frac{x v-y u}{x^{2}+y^{2}}, \quad \frac{\partial v}{\partial y}=-\frac{x u+y v}{x^{2}+y^{2}} .
+    $$
+    \textbf{法三: }利用全微分形式不变性, 方程组 $ x u-y v=0, y u+x v=1 $ 两边分别微分, 得
+    $$
+        \begin{cases}
+            u \dd  x+x \dd  u-y \dd  v-v \dd  y=0 \\
+            v \dd  x+y \dd  u+x \dd  v+u \dd  y=0
+        \end{cases}
+    $$
+    第 $1$ 个方程两边乘以 $ x $ 加上第 $2$ 个方程两边乘以 $ y $, 消去 $ \dd v $, 得
+    $$\dd u=-\frac{x u+y v}{x^{2}+y^{2}} \dd  x+\frac{x v-y u}{x^{2}+y^{2}} \dd  y $$
+    于是由全微分形式不变性, 得
+    $$
+        \pdv{u}{x}=-\dfrac{xu+yv}{x^2+y^2},\quad\pdv{u}{y}=\dfrac{xv-yu}{x^2+y^2}
+    $$
+    同理, 消去 $\dd u$, 得
+    $$\pdv{v}{x}=\dfrac{yu-xv}{x^2+y^2},\quad \pdv{v}{y}=-\dfrac{xu+yv}{x^2+y^2}.$$
+\end{solution}
+
+\begin{example}
     设 $\displaystyle f(x,y)=x\cos\frac{x}{y}+(2-y)\ln\arctan\frac{x^2-y^2}{x^2+y^2}$, 求 $f'_x(0,2).$
 \end{example}
 \begin{solution}
-    利用全微分不变性, 
+    利用全微分不变性,
     $$\dd f(x,y)=\cos\frac{x}{y}\dd x-x\sin\frac{x}{y}\cdot\frac{y\dd x-x\dd y}{y^2}-\ln\arctan\frac{x^2-y^2}{x^2+y^2}\dd y$$
     因为 $\dd f(0,2)=\dd x-\ln\arctan(-1)\dd y$, 所以 $f_x(0,2)=1$.
 \end{solution}
@@ -197,7 +241,7 @@
 \begin{solution}
     由方程 $\mathrm{e}^x-xyz=0$ 两边分别求微分, 得
     $$\mathrm{e}^x\dd x-yz\dd x+xz\dd y+xy\dd z=0$$
-    整理得, $\displaystyle\dd z=\frac{yz-\mathrm{e}^x}{xy}\dd x-\frac{z}{y}\dd y$, 由全微分不变性, 得 $\displaystyle\frac{\partial z}{\partial x}=\frac{yz-\mathrm{e}^x}{xy},~\frac{\partial z}{\partial y}=-\frac{z}{y}$, 
+    整理得, $\displaystyle\dd z=\frac{yz-\mathrm{e}^x}{xy}\dd x-\frac{z}{y}\dd y$, 由全微分不变性, 得 $\displaystyle\frac{\partial z}{\partial x}=\frac{yz-\mathrm{e}^x}{xy},~\frac{\partial z}{\partial y}=-\frac{z}{y}$,
     \begin{flalign*}
         \dfrac{\partial^2z}{\partial x^2}=\dfrac{\partial }{\partial x}\left(\dfrac{yz-\mathrm{e}^x}{xy}\right)
         =\dfrac{\dfrac{\partial z}{\partial x}-\mathrm{e}^x}{y}=\dfrac{yz-\mathrm{e}^x(1+xy)}{xy^2}.
@@ -219,7 +263,7 @@
 \begin{solution}
     由方程 $z+\mathrm{e}^z=xy$ 两边分别求微分, 得
     $$\dd z+\mathrm{e}^x\dd x=y\dd x+x\dd y$$
-    整理得, $\dd z=(y-\mathrm{e}^x)\dd x+x\dd y$, 由全微分不变性, 得 $\displaystyle\frac{\partial z}{\partial x}=y-\mathrm{e}^x,~\frac{\partial z}{\partial y}=x$, 
+    整理得, $\dd z=(y-\mathrm{e}^x)\dd x+x\dd y$, 由全微分不变性, 得 $\displaystyle\frac{\partial z}{\partial x}=y-\mathrm{e}^x,~\frac{\partial z}{\partial y}=x$,
     $$\frac{\partial ^2z}{\partial x\partial y}=\frac{\partial }{\partial y}\left(y-\mathrm{e}^x\right)=1.$$
 \end{solution}
 
@@ -229,7 +273,7 @@
 \begin{solution}
     由方程 $z\mathrm{e}^x=xy$ 两边分别求微分, 得
     $$\mathrm{e}^x\dd z+z\mathrm{e}^x\dd x=y\dd x+x\dd y$$
-    整理得, $\displaystyle\dd z=\frac{y-z\mathrm{e}^x}{\mathrm{e}^x}\dd x+\frac{x}{\mathrm{e}^x}\dd y$, 由全微分不变性, 得 $\displaystyle\frac{\partial z}{\partial x}=\frac{y-z\mathrm{e}^x}{\mathrm{e}^x},~\frac{\partial z}{\partial y}=\frac{x}{\mathrm{e}^x}$, 
+    整理得, $\displaystyle\dd z=\frac{y-z\mathrm{e}^x}{\mathrm{e}^x}\dd x+\frac{x}{\mathrm{e}^x}\dd y$, 由全微分不变性, 得 $\displaystyle\frac{\partial z}{\partial x}=\frac{y-z\mathrm{e}^x}{\mathrm{e}^x},~\frac{\partial z}{\partial y}=\frac{x}{\mathrm{e}^x}$,
     $$\frac{\partial^2z}{\partial x\partial y}=\frac{\partial}{\partial y}\left(\frac{y-z\mathrm{e}^x}{\mathrm{e}^x}\right)=\mathrm{e}^{-x}\left(1-\frac{\partial z}{\partial y}\mathrm{e}^x\right)=\frac{1-x}{\mathrm{e}^x}.$$
 \end{solution}
 
@@ -493,11 +537,11 @@
 \end{solution}
 
 \begin{example}
-    $z$ 为 $x,y$ 的可微函数, 试将方程$$x^2\frac{\partial z}{\partial x}+y^2\frac{\partial z}{\partial y}=z^2$$变成 $w=w(u,v)$ 的方程, 
+    $z$ 为 $x,y$ 的可微函数, 试将方程$$x^2\frac{\partial z}{\partial x}+y^2\frac{\partial z}{\partial y}=z^2$$变成 $w=w(u,v)$ 的方程,
     假设$$x=u,~y=\frac{u}{1+uv},~z=\frac{u}{1+uw}.$$
 \end{example}
 \begin{solution}
-    已知 $\displaystyle z=\dfrac{u}{1+uw},~w=w(u,v),~u=x,~v=\dfrac{1}{y}-\dfrac{1}{x}$, 
+    已知 $\displaystyle z=\dfrac{u}{1+uw},~w=w(u,v),~u=x,~v=\dfrac{1}{y}-\dfrac{1}{x}$,
     于是存在关系如图 \ref{xyxyzyz2} 所示, \newline
     \begin{minipage}{.25\linewidth}
         \begin{figure}[H]
@@ -688,7 +732,7 @@
               \end{flalign*}
         \item 当 $f=\varphi,~x=a$ 时
               $$I=\pdv{z}{x}{y}\biggl |_{x=a}=-\dfrac{y}{a^2}f''\qty(\dfrac{y}{a})-\dfrac{2a}{y^2}f''\qty(\dfrac{a}{y})=-by^2$$
-              令 $y=au$ 得 $\displaystyle I=u^3f''(u)+2f''\qty(\dfrac{1}{u})=a^3bu^4$, 用 $\dfrac{1}{u}$ 替换 $u$ 得 $J=\dfrac{1}{u^3}f''\qty(\dfrac{1}{u})+2f''(u)=\dfrac{a^3b}{u^4}$, 
+              令 $y=au$ 得 $\displaystyle I=u^3f''(u)+2f''\qty(\dfrac{1}{u})=a^3bu^4$, 用 $\dfrac{1}{u}$ 替换 $u$ 得 $J=\dfrac{1}{u^3}f''\qty(\dfrac{1}{u})+2f''(u)=\dfrac{a^3b}{u^4}$,
               联立 $I$ 和 $J$, 消去 $f''\qty(\dfrac{1}{u})$ 得 $f''(u)=\dfrac{1}{3}a^3b\qty(\dfrac{2}{u^4}-u)$, 两次积分得
               $$f(u)=\dfrac{1}{9}a^3b\qty(\dfrac{1}{u^2}-\dfrac{1}{2}u^3)+C_1u+C_2$$
               所以 $\displaystyle f(y)=\dfrac{1}{9}a^3b\qty(\dfrac{1}{y^2}-\dfrac{1}{2}y^3)+C_1y+C_2$, 其中 $C_1,~C_2$ 是常数.
@@ -710,11 +754,11 @@
 \begin{proof}[{\songti \textbf{证}}]
     $u$ 是 $x,y$ 的复合函数, 存在依赖关系如图 \ref{uzxyLagrange} 所示, \newline
     \begin{minipage}{0.78\linewidth}
-        由隐函数求导法则, 可得$\displaystyle\frac{\partial z}{\partial y}=\frac{\varphi(z)}{1-y\varphi'(z)},~\frac{\partial z}{\partial x}=\frac{1}{1-y\varphi'(z)}$, 
-        用数学归纳法, 当 $n=1$ 时, 
+        由隐函数求导法则, 可得$\displaystyle\frac{\partial z}{\partial y}=\frac{\varphi(z)}{1-y\varphi'(z)},~\frac{\partial z}{\partial x}=\frac{1}{1-y\varphi'(z)}$,
+        用数学归纳法, 当 $n=1$ 时,
         $$\displaystyle\frac{\partial u}{\partial y}=f'(z)\cdot\frac{\partial z}{\partial y}=\frac{f'(z)\varphi(z)}{1-y\varphi'(z)}$$
-        同理可得, $\displaystyle\frac{\partial u}{\partial x}=\frac{f'(z)}{1-y\varphi'(z)}$, 所以有 $\displaystyle\frac{\partial u}{\partial y}=\varphi(z)\frac{\partial u}{\partial x}$, 
-        这就是待证式当 $n=1$ 时的情况. 现假设当 $n-1$ 时等式成立, 来证明对 $n$ 的情况也成立. 事实上, 
+        同理可得, $\displaystyle\frac{\partial u}{\partial x}=\frac{f'(z)}{1-y\varphi'(z)}$, 所以有 $\displaystyle\frac{\partial u}{\partial y}=\varphi(z)\frac{\partial u}{\partial x}$,
+        这就是待证式当 $n=1$ 时的情况. 现假设当 $n-1$ 时等式成立, 来证明对 $n$ 的情况也成立. 事实上,
         \begin{flalign*}
             I & =\frac{\partial^nu}{\partial y^n}=\frac{\partial }{\partial y}\left(\frac{\partial^{n-1}u}{\partial y^{n-1}}\right)=\frac{\partial }{\partial y}\frac{\partial^{n-2}}{\partial x^{n-2}}\left[\varphi^{n-1}(z)\frac{\partial u}{\partial x}\right]=\frac{\partial^{n-2}}{\partial x^{n-2}}\frac{\partial}{\partial y}\left[\varphi^{n-1}(z)\frac{\partial u}{\partial x}\right] \\
               & =\frac{\partial^{n-2}}{\partial x^{n-2}}\left[(n-1)\varphi^{n-2}(z)\cdot\varphi'(z)\frac{\partial z}{\partial y}\frac{\partial u}{\partial x}+\varphi^{n-1}(z)\frac{\partial^2 u}{\partial x\partial y}\right]
@@ -722,7 +766,7 @@
         \begin{flalign*}
             J=\frac{\partial^{n-1}}{\partial x^{n-1}}\left[\varphi^{n-1}(z)\frac{\partial u}{\partial y}\right]=\frac{\partial^{n-2}}{\partial x^{n-2}}\left[(n-1)\varphi^{n-2}(z)\varphi'(z)\frac{\partial z}{\partial x}\frac{\partial u}{\partial y}+\varphi^{n-1}(z)\frac{\partial^2u}{\partial x\partial y}\right]
         \end{flalign*}
-        由于 $z'_y=\varphi(z)z'_x$ 及 $\displaystyle\frac{\partial u}{\partial y}=\varphi(z)\frac{\partial u}{\partial x}$, 有 $\displaystyle\frac{\partial z}{\partial y}\frac{\partial u}{\partial x}=\frac{\partial z}{\partial x}\frac{\partial u}{\partial y}$, 
+        由于 $z'_y=\varphi(z)z'_x$ 及 $\displaystyle\frac{\partial u}{\partial y}=\varphi(z)\frac{\partial u}{\partial x}$, 有 $\displaystyle\frac{\partial z}{\partial y}\frac{\partial u}{\partial x}=\frac{\partial z}{\partial x}\frac{\partial u}{\partial y}$,
         故 $I=J$, 等式成立.
     \end{minipage}\hfill
     \begin{minipage}{0.18\linewidth}
@@ -760,7 +804,7 @@
 
 \begin{example}
     已知可微函数 $f(u,v)$ 满足 $$\pdv{f(u,v)}{u}-\pdv{f(u,v)}{v}=2(u-v)\mathrm{e}^{-(u+v)}$$
-    且 $f(u,0)=u^2\mathrm{e}^{-u}$, 
+    且 $f(u,0)=u^2\mathrm{e}^{-u}$,
     \begin{enumerate}[label=(\arabic{*})]
         \item 记 $g(x,y)=f(x,y-x)$, 求 $\displaystyle\pdv{g(x,y)}{x}$;
         \item 求 $f(u,v)$ 的表达式.
@@ -788,7 +832,7 @@
               $$\pdv[2]{u}{y}=\pdv[2]{u}{\xi}-2\pdv{u}{\xi}{\eta}+\pdv[2]{u}{\eta}$$
               又 $\displaystyle \pdv[2]{u}{x}-\pdv[2]{u}{y}=0$, 故得证 $\displaystyle\pdv{u}{\xi}{\eta}=0.$
         \item 由 $\displaystyle\pdv{u}{\xi}{\eta}=0$ 两边对 $\eta$ 积分得 $\displaystyle\pdv{y}{\xi}=f(\xi)$, 两边再对 $\xi$ 积分得 $$u(\xi,\eta)=\int f(\xi) \dd \xi+g(\eta)=F(\xi)+g(\eta)$$
-              又 $\xi=x-y,~\eta=x+y$, 于是 $u(x,y)=F(x-y)+g(x+y)$, 则 $u(x,2x)=F(-x)+g(3x)=x$, 
+              又 $\xi=x-y,~\eta=x+y$, 于是 $u(x,y)=F(x-y)+g(x+y)$, 则 $u(x,2x)=F(-x)+g(3x)=x$,
               $$\eval{\pdv{u}{x}}_{(x,2x)}=F'(-x)+g'(3x)=x^2\Rightarrow -F(-x)+\dfrac{1}{3}g(3x)=\dfrac{1}{3}x^3+C$$
               于是 $\left\{\begin{matrix}
                       F(-x)  & + & g(3x)             & = & x                 \\[6pt]

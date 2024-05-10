@@ -1522,6 +1522,28 @@ INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 INPUT d:/texlive/2022/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+INPUT d:/texlive/2022/texmf-dist/tex/latex/epigraph/epigraph.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/epigraph/epigraph.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/epigraph/epigraph.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/epigraph/epigraph.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/epigraph/epigraph.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/epigraph/epigraph.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/epigraph/epigraph.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/epigraph/epigraph.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/epigraph/epigraph.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/epigraph/epigraph.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/epigraph/epigraph.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/nextpage/nextpage.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/nextpage/nextpage.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/nextpage/nextpage.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/nextpage/nextpage.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/nextpage/nextpage.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/nextpage/nextpage.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/nextpage/nextpage.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/nextpage/nextpage.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/nextpage/nextpage.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/nextpage/nextpage.sty
+INPUT d:/texlive/2022/texmf-dist/tex/latex/nextpage/nextpage.sty
 OUTPUT Mathematical Notes.idx
 INPUT d:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex
 INPUT d:/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex
@@ -1830,17 +1852,28 @@ INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong81.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei63.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei7d.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei80.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei88.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei68.tfm
+INPUT ./Mathematical Notes.lot
+INPUT Mathematical Notes.lot
+INPUT Mathematical Notes.lot
+OUTPUT Mathematical Notes.lot
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl88.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl68.tfm
 INPUT ./part/Calculus.tex
 INPUT part/Calculus.tex
 INPUT ./part/Calculus.tex
 INPUT part/Calculus.tex
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei7b.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei4e.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei90.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei52.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss10.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
+INPUT d:/texlive/2022/texmf-dist/tex/latex/zhmetrics/c70zhhei.fd
+INPUT d:/texlive/2022/texmf-dist/tex/latex/zhmetrics/c70zhhei.fd
+INPUT d:/texlive/2022/texmf-dist/tex/latex/zhmetrics/c70zhhei.fd
+INPUT d:/texlive/2022/texmf-dist/tex/latex/zhmetrics/c70zhhei.fd
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei9a.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei7b.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei65.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei5b.tfm
 INPUT ./chapter/chapter1.tex
@@ -2370,11 +2403,11 @@ INPUT ./section/section2/section23.tex
 INPUT section/section2/section23.tex
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei74.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei56.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl4f.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl4f.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai4f.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai4f.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl74.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl4f.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl4f.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai4f.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai4f.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong60.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong7a.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl98.tfm
@@ -2411,10 +2444,10 @@ INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei5d.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei55.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei8b.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei66.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl88.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl5c.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl5d.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl55.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl88.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl30.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl9f.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei4f.tfm
@@ -2554,10 +2587,8 @@ INPUT ./section/section3/section34.tex
 INPUT section/section3/section34.tex
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei72.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei6b.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei88.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl72.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl6b.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl88.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
@@ -2738,8 +2769,6 @@ INPUT section/section5/section54.tex
 INPUT ./section/section5/section54.tex
 INPUT section/section5/section54.tex
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei68.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei68.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl68.tfm
 INPUT ./chapter/chapter6.tex
 INPUT chapter/chapter6.tex
 INPUT ./chapter/chapter6.tex
@@ -2781,9 +2810,9 @@ INPUT section/section6/section63.tex
 INPUT ./section/section6/section63.tex
 INPUT section/section6/section63.tex
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei97.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong82.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong82.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl97.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong82.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong82.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisong97.tfm
 INPUT ./section/section6/section64.tex
 INPUT section/section6/section64.tex
@@ -2854,6 +2883,7 @@ INPUT ./part/Linear Algebra.tex
 INPUT part/Linear Algebra.tex
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei7e.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei60.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei4e.tfm
 INPUT ./chapter/chapter9.tex
 INPUT chapter/chapter9.tex
 INPUT ./chapter/chapter9.tex
@@ -3057,7 +3087,6 @@ INPUT ./section/section15/section151.tex
 INPUT section/section15/section151.tex
 INPUT ./section/section15/section151.tex
 INPUT section/section15/section151.tex
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss10.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
@@ -3243,7 +3272,6 @@ INPUT appendix/appendix1.tex
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
@@ -3301,7 +3329,6 @@ INPUT c:/Windows/Fonts/simsun.ttc
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simsun.ttc
 INPUT c:/Windows/Fonts/simsun.ttc
-INPUT c:/Windows/Fonts/simsun.ttc
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simkai.ttf
 INPUT c:/Windows/Fonts/simsun.ttc
@@ -3314,7 +3341,6 @@ INPUT c:/Windows/Fonts/simkai.ttf
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simkai.ttf
 INPUT c:/Windows/Fonts/simhei.ttf
-INPUT c:/Windows/Fonts/simsun.ttc
 INPUT c:/Windows/Fonts/simsun.ttc
 INPUT c:/Windows/Fonts/simsun.ttc
 INPUT c:/Windows/Fonts/simsun.ttc
@@ -3446,6 +3472,8 @@ INPUT c:/Windows/Fonts/simkai.ttf
 INPUT c:/Windows/Fonts/simkai.ttf
 INPUT c:/Windows/Fonts/simkai.ttf
 INPUT c:/Windows/Fonts/simkai.ttf
+INPUT c:/Windows/Fonts/simsun.ttc
+INPUT c:/Windows/Fonts/simsun.ttc
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simhei.ttf
 INPUT c:/Windows/Fonts/simhei.ttf
@@ -3584,6 +3612,7 @@ INPUT d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb
 INPUT d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
 INPUT d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb
+INPUT d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
 INPUT d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 INPUT d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb

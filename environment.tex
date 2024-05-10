@@ -36,6 +36,7 @@
 \usepackage{titlesec}
 \usepackage{makeidx}
 \usepackage{bookmark}
+\usepackage{epigraph}
 % \usepackage[adobe-utopia]{mathdesign}
 \makeindex
 
@@ -68,6 +69,12 @@
 {\bfseries\centering
 	\etocifnumbered{\etocnumber{} – }{}\etocname\par}
 {}
+
+\titleclass{\part}{top}
+\titleformat{\part}[display]
+    {\normalfont\sffamily\Large\bfseries\color{cyan}}
+    {\filleft\Huge\thepart\enspace }
+    {1ex}{\titlerule[2pt]{\hfill\raisebox{1ex}[0pt]{\rule{60mm}{8pt}}}\vskip1ex\Huge}
 
 \etocsetstyle{chapter}
 {%
@@ -185,7 +192,9 @@
 \newtheorem{example}{\color{cyan}{{\songti 例}}}[section]
 \pgfplotsset{compat=1.18}
 \usetikzlibrary{intersections}
+
 \geometry{paperheight=26cm, paperwidth=18.5cm, scale=0.85, inner=20mm}
+
 \title{{\kaishu \Huge{\textbf{${\text{考}_\text{研}^{\text{数}_\text{学}}}_{\underline{\text{典型问题}}}^{_{\overset{\overline{\text{方}}\text{法}|}{|\text{技}\underline{\text{巧}}}}}$}}}}
 \author{{\kaishu 黄国铭}}
 \date{}

@@ -18,6 +18,7 @@
 \setcounter{magicrownumbers}{0}
 \begin{table}[H]
     \centering
+    \caption{常见的等价代换}
     \begin{tabular}{c l l l}
         \multirow{3}{*}{一阶} & \multicolumn{3}{l}{(\rownumber{}) $\displaystyle x\sim \sin x\sim \tan x\sim \arcsin x\sim \arctan x\sim \e ^x-1\sim \ln(1+x)$}                                                                                                                                                  \\
                               & (\rownumber{}) $\displaystyle \log_a(1+x)\sim\frac{x}{\ln a}$                                                                   & (\rownumber{}) $\displaystyle a^x-1\sim x\ln a$              & (\rownumber{}) $\displaystyle (1+x)^\alpha-1\sim \alpha x$                      \\
@@ -100,6 +101,7 @@
 \setcounter{magicrownumbers}{0}
 \begin{table}[H]
     \centering
+    \caption{常见的裂项公式}
     \resizebox{.99\textwidth}{!}{
         \begin{tabular}{l l}
             (\rownumber{}) $\dfrac{1}{n(n+k)}=\dfrac{1}{k}\qty(\dfrac{1}{n}-\dfrac{1}{n+k})$       & (\rownumber{})  $\dfrac{1}{(n-k)n(n+k)}=\dfrac{1}{2k^2}\qty[\qty(\dfrac{1}{n-k}-\dfrac{1}{n})-\qty(\dfrac{1}{n}-\dfrac{1}{n+k})]$ \\
@@ -433,7 +435,7 @@
 \end{solution}
 \begin{inference}
     设 $\displaystyle a_i,p_i>0,~i=1,2,\cdots,m,~p=\sum_{i=1}^{m}p_i$, 则有
-    $$\displaystyle\lim_{n\to\infty}\sqrt[n]{\frac{1}{m}\sum_{i=1}^{m}a_i^n}=\displaystyle \lim_{n\to\infty}\sqrt[n]{\frac{1}{p}\sum_{i=1}^{m}p_ia_i^n}=\displaystyle \lim_{n\to\infty}\sqrt[n]{\sum_{i=1}^{m}p_ia_i^n}=\displaystyle \lim_{x\to+\infty}\sqrt[x]{\sum_{i=1}^{m}p_ia_i^x}=\max_{1\leqslant i\leqslant m}\{a_i\}$$.
+    $$\displaystyle\lim_{n\to\infty}\sqrt[n]{\frac{1}{m}\sum_{i=1}^{m}a_i^n}=\displaystyle \lim_{n\to\infty}\sqrt[n]{\frac{1}{p}\sum_{i=1}^{m}p_ia_i^n}=\displaystyle \lim_{n\to\infty}\sqrt[n]{\sum_{i=1}^{m}p_ia_i^n}=\displaystyle \lim_{x\to+\infty}\sqrt[x]{\sum_{i=1}^{m}p_ia_i^x}=\max_{1\leqslant i\leqslant m}\{a_i\}.$$
     \label{maxai}
 \end{inference}
 \begin{example}
