@@ -23,7 +23,7 @@
     计算定积分 $\displaystyle\int_{0}^{\frac{\pi}{2}}\dfrac{\sin x}{(\sin x+\cos x)^3}\dd x.$
 \end{example}
 \begin{solution}
-    注意到 $\sin x=\dfrac{\sin x+\cos x}{2}-\dfrac{\cos x-\sin x}{2}$, 于是 $\displaystyle\int\dfrac{\sin x}{(\sin x+\cos x)^3}\dd x=\dfrac{1}{2}\int\dfrac{\dd x}{(\sin x+\cos x)^2}-\dfrac{1}{2}\int\dfrac{\cos x-\sin x}{(\sin x+\cos x)^3}\dd x$, 
+    注意到 $\sin x=\dfrac{\sin x+\cos x}{2}-\dfrac{\cos x-\sin x}{2}$, 于是 $\displaystyle\int\dfrac{\sin x}{(\sin x+\cos x)^3}\dd x=\dfrac{1}{2}\int\dfrac{\dd x}{(\sin x+\cos x)^2}-\dfrac{1}{2}\int\dfrac{\cos x-\sin x}{(\sin x+\cos x)^3}\dd x$,
     其中
     \begin{flalign*}
         \int\dfrac{\dd x}{(\sin x+\cos x)^2}               & =\int\dfrac{\sec ^2x\dd x}{\tan^2x+2\tan x+1}\xlongequal{\tan x=t}\int\dfrac{\dd t}{(t+1)^2}=-(t+1)^{-1}+C=-(\tan x+1)^{-1}+C \\
@@ -38,7 +38,7 @@
     计算定积分 $\displaystyle\int_{-2}^{3}\left |x^2+2|x|-3\right |\dd x$.
 \end{example}
 \begin{solution}
-    由于 $\left |x^2+2|x|-3\right |=\sgn \qty(x^2+2\sgn (x)\cdot x-3)\cdot\qty(x^2+2\sgn (x)\cdot x-3)$, 于是, 
+    由于 $\left |x^2+2|x|-3\right |=\sgn \qty(x^2+2\sgn (x)\cdot x-3)\cdot\qty(x^2+2\sgn (x)\cdot x-3)$, 于是,
     当 $x\in[-2,-1)$ 时, $$\sgn (x)=-1,\sgn \qty(x^2-2x-3)=1$$
     当 $x\in[-1,0)$ 时, $$\sgn (x)=-1,\sgn \qty(x^2-2x-3)=-1$$
     当 $x\in[0,1)$ 时, $$\sgn (x)=1,\sgn \qty(x^2-2x-3)=-1$$
@@ -58,7 +58,7 @@
         I & =\int_{0}^{\frac{\pi}{2}}\sin 2x\cdot\ln\sin x\cdot\ln\cos x\dd x=\dfrac{1}{4}\int_{0}^{1}\ln t\ln(1-t)\dd t                                                         \\
           & =\dfrac{1}{4}t\ln t\ln(1-t)\bigg |_0^1-\dfrac{1}{4}\int_{0}^{1}\qty[\ln(1-t)+\dfrac{t\ln t}{t-1}]\dd t=\dfrac{1}{4}-\dfrac{1}{4}\int_{0}^{1}\dfrac{t\ln t}{t-1}\dd t
     \end{flalign*}
-    其中 $\displaystyle\int_{0}^{1}\dfrac{t\ln t}{t-1}\dd t=\int_{0}^{1}\dfrac{(t-1+1)\ln t}{t-1}\dd t=\int_{0}^{1}\ln t\dd t+\int_{0}^{1}\dfrac{\ln t}{t-1}\dd t=\dfrac{\pi^2}{6}-1$, 
+    其中 $\displaystyle\int_{0}^{1}\dfrac{t\ln t}{t-1}\dd t=\int_{0}^{1}\dfrac{(t-1+1)\ln t}{t-1}\dd t=\int_{0}^{1}\ln t\dd t+\int_{0}^{1}\dfrac{\ln t}{t-1}\dd t=\dfrac{\pi^2}{6}-1$,
     所以原式$ =\dfrac{1}{2}-\dfrac{\pi^2}{24}$ 另解见例题 \ref{jishusin2xlnsinxlncosx}.
 \end{solution}
 
@@ -129,7 +129,7 @@
 \end{inference}
 
 \begin{example}
-    计算下列定积分, 
+    计算下列定积分,
     \setcounter{magicrownumbers}{0}
     \begin{table}[H]
         \centering
@@ -166,7 +166,7 @@
     (2023 合肥工业大学) 计算 $I=\displaystyle\int_{-\pi}^{\pi}x\sin^5x\arctan\e ^x\dd x.$
 \end{example}
 \begin{solution}
-    由推论 \ref{-aafgdx} 可知, 
+    由推论 \ref{-aafgdx} 可知,
     \begin{flalign*}
         I=\int_{0}^{\pi}\qty(\arctan\e ^x+\arctan\e ^{-x})x\sin^5x\dd x=\dfrac{\pi}{2}\int_{0}^{\pi}x\sin^5x\dd x=\dfrac{\pi^2}{4}\int_{0}^{\pi}\sin^5x\dd x=\dfrac{\pi^2}{4}\cdot 2\cdot\dfrac{4!!}{5!!}=\dfrac{4\pi^2}{15}.
     \end{flalign*}
@@ -205,8 +205,8 @@
 \begin{solution}
     由 $\displaystyle\int_{a}^{b}f(x)\dd x=\int_{a}^{\frac{a+b}{2}}[f(x)+f(a+b-x)]\dd x$, 得
     $$\int _{0}^{nx}x\left| \sin x\right| \dd x=\int _{0}^{\frac{n\pi }{2}}\left[ x\left| \sin x\right| +\left( n\pi -x\right) \left| \sin \left( n\pi -x\right) \right| \right] \dd x=n\pi \int _{0}^{\frac{n\pi }{2}}\left| \sin x\right| \dd x$$
-    又因为 $|\sin x|=\sqrt{\sin^2x}=\sqrt{\dfrac{1-\cos2x}{2}}$ 的周期为 $T=\dfrac{2\pi}{2}=\pi$, 且 $\displaystyle\int_{0}^{\frac{\pi}{2}}|\sin x|\dd x=\int_{0}^{\frac{\pi}{2}}\sin x\dd x=1$, 
-    $\displaystyle\int_{\frac{\pi}{2}}^{\pi}|\sin x|\dd x=1$, 所以 $\displaystyle\int_{0}^{\frac{n\pi}{2}}|\sin x|=n$, 
+    又因为 $|\sin x|=\sqrt{\sin^2x}=\sqrt{\dfrac{1-\cos2x}{2}}$ 的周期为 $T=\dfrac{2\pi}{2}=\pi$, 且 $\displaystyle\int_{0}^{\frac{\pi}{2}}|\sin x|\dd x=\int_{0}^{\frac{\pi}{2}}\sin x\dd x=1$,
+    $\displaystyle\int_{\frac{\pi}{2}}^{\pi}|\sin x|\dd x=1$, 所以 $\displaystyle\int_{0}^{\frac{n\pi}{2}}|\sin x|=n$,
     故 $\displaystyle\int_0^{n\pi}x|\sin x|\dd x=n^2\pi.$
 \end{solution}
 
@@ -230,7 +230,7 @@
 
 \begin{theorem}[区间再现公式]
     若 $f(x)$ 在区间 $[a,b]$ 上连续\footnote{
-    事实上 $\displaystyle\int_{a}^{b}f(x)\dd x=\int_{a}^{\frac{a+b}{2}}f(x)\dd x+\int_{\frac{a+b}{2}}^{b}f(x)\dd x$, 
+    事实上 $\displaystyle\int_{a}^{b}f(x)\dd x=\int_{a}^{\frac{a+b}{2}}f(x)\dd x+\int_{\frac{a+b}{2}}^{b}f(x)\dd x$,
     令 $x=a+b-t$, 则
     $$\int_{\frac{a+b}{2}}^{b}f(x)\dd x=\int_{\frac{a+b}{2}}^{a}f(a+b-t)\dd (-t)=\int_{a}^{\frac{a+b}{2}}f(a+b-t)\dd t=\int_{a}^{\frac{a+b}{2}}f(a+b-x)\dd x$$
     所以有 $\displaystyle\int_{a}^{b}f(x)\dd x=\int_{a}^{\frac{a+b}{2}}[f(x)+f(a+b-x)]\dd x.$}, 则\label{qjzaixgs}
@@ -269,7 +269,7 @@
     计算 $\displaystyle I=\int_{0}^{\frac{\pi}{2}}\frac{1}{\sqrt{x}}f(x)\dd x$, 其中 $\displaystyle f(x)=\int_{\sqrt{\frac{\pi}{2}}}^{\sqrt{x}}\frac{\dd u}{1+\tan^{\sqrt{2}}u^2}.$
 \end{example}
 \begin{solution}
-    $\displaystyle f(x)\xlongequal[]{u^2=t}\int_{\frac{\pi}{2}}^{x}\frac{\dd t}{2\sqrt{t}\left(1+\tan^{\sqrt{2}}t\right)}$, 
+    $\displaystyle f(x)\xlongequal[]{u^2=t}\int_{\frac{\pi}{2}}^{x}\frac{\dd t}{2\sqrt{t}\left(1+\tan^{\sqrt{2}}t\right)}$,
     \begin{flalign*}
         I=2\int_{0}^{\frac{\pi}{2}}f(x)\dd \sqrt{x}=2\sqrt{x}f(x)\bigg |_0^{\frac{\pi}{2}}-2\int_{0}^{\frac{\pi}{2}}\sqrt{x}\dd f(x)=-\int_{0}^{\frac{\pi}{2}}\frac{\dd x}{1+\tan^{\sqrt{2}}x}=-\frac{\pi}{4}.
     \end{flalign*}
@@ -279,7 +279,7 @@
     求极限 $\displaystyle\lim_{n\to\infty}\sum_{k=1}^{n}\dfrac{1}{\sqrt[n]{n!}}\qty(\ln\dfrac{2n+k}{2n-k}+\ln\dfrac{n+k}{3n-k}).$
 \end{example}
 \begin{solution}
-    由引理 \ref{nnn1e}, 可知原式 $\displaystyle=\e\lim_{n\to\infty}\dfrac{1}{n}\sum_{k=1}^{n}\qty(\ln\dfrac{2+\dfrac{k}{n}}{2-\dfrac{k}{n}}+\ln\dfrac{1+\dfrac{k}{n}}{3-\dfrac{k}{n}})=\e\int_{0}^{1}\ln\dfrac{(2+x)(1+x)}{(2-x)(3-x)}\dd x$, 
+    由引理 \ref{nnn1e}, 可知原式 $\displaystyle=\e\lim_{n\to\infty}\dfrac{1}{n}\sum_{k=1}^{n}\qty(\ln\dfrac{2+\dfrac{k}{n}}{2-\dfrac{k}{n}}+\ln\dfrac{1+\dfrac{k}{n}}{3-\dfrac{k}{n}})=\e\int_{0}^{1}\ln\dfrac{(2+x)(1+x)}{(2-x)(3-x)}\dd x$,
     若用分部积分法求解则显得复杂, 不妨采用定理 \ref{qjzaixgs}, 则
     $$\int_{0}^{1}\ln\dfrac{(2+x)(1+x)}{(2-x)(3-x)}\dd x \xlongequal{1+0-x=t}\dfrac{1}{2}\int_{0}^{1}\qty[\ln\dfrac{(2+x)(1+x)}{(2-x)(3-x)}+\ln\dfrac{(3-t)(2-t)}{(1+t)(2+t)}]\dd x=\dfrac{1}{2}\int_{0}^{1}\ln 1\dd x=0$$
     故原极限等于 $0$.
@@ -328,7 +328,7 @@
     设 $\displaystyle f(x)=\int_{x}^{x^2}\frac{1}{t}\ln\frac{t}{2}\dd t~ (x\in(1,+\infty))$, 问函数 $f(x)$ 在何处取最小值.
 \end{example}
 \begin{solution}
-    $\displaystyle f'(x)=\frac{1}{x^2}\ln\frac{x^2}{2}\cdot 2x-\frac{1}{x}\ln\frac{x}{2}=\frac{\ln x}{x}$, 令 $f'(x)=0$, 解得 $x=1$, 并且当从左到右穿过 $x=1$ 时, $f'(x)$ 由负变正, 
+    $\displaystyle f'(x)=\frac{1}{x^2}\ln\frac{x^2}{2}\cdot 2x-\frac{1}{x}\ln\frac{x}{2}=\frac{\ln x}{x}$, 令 $f'(x)=0$, 解得 $x=1$, 并且当从左到右穿过 $x=1$ 时, $f'(x)$ 由负变正,
     故 $f(1)$ 是 $f$ 的最小值 $\displaystyle f_{min}=\int_{1}^{1}\frac{1}{t}\ln\frac{t}{2}\dd t=0.$
 \end{solution}
 
@@ -367,7 +367,7 @@
     $$xf( xt) =\int _{1}^{x}f( u) \dd u+xf( t) $$
     由上式可知 $f$ 是 $(0,+\infty)$ 内的可导函数, 两边再对 $x$ 求导, 得
     $$f(xt)+txf'(xt)=f(x)+f(t)$$
-    令 $t=1$, 得 $f(x)+xf'(x)=f(x)+f(1)\Rightarrow f'(x)=\dfrac{5}{2x}\Rightarrow f(x)=\dfrac{5}{2}\ln x+C$, 
+    令 $t=1$, 得 $f(x)+xf'(x)=f(x)+f(1)\Rightarrow f'(x)=\dfrac{5}{2x}\Rightarrow f(x)=\dfrac{5}{2}\ln x+C$,
     又 $f(1)=\dfrac{5}{2}$, 所以 $$f(x)=\dfrac{5}{2}(\ln x+1).$$
 \end{solution}
 
@@ -384,9 +384,9 @@
               $$0\leqslant \int_{a}^{x}g(t)\dd t\leqslant \int_{a}^{x}\dd t=x-a~ (x\in[a,b]).$$
         \item 令 $b=x$, 构造辅助函数
               $$F(x)=\int_{a}^{x}f(t)g(t)\dd t-\int_{a}^{a+\int_{a}^{x}g(t)\dd t}f(t)\dd t$$
-              则 $\displaystyle F(a)=0$, 
+              则 $\displaystyle F(a)=0$,
               $$F'(x)  =f(x)  g(x)  -f\left( a+\int _{a}^{x}g(t)  \dd t\right) g(x)  =g(x)  \left[ f(x)  -f\left( a+\int _{a}^{x}g(t)  \dd t\right) \right] $$
-              因为 $\displaystyle a+\int _{a}^{x}g(t)  \dd t\in \left[ 0,x\right] $, 且 $f(x)\nearrow$, 所以 $\displaystyle f(x)  -f\left( a+\int _{a}^{x}g(t)  \dd t\right) \geqslant 0$, 所以 $F'(x)\geqslant 0$, 
+              因为 $\displaystyle a+\int _{a}^{x}g(t)  \dd t\in \left[ 0,x\right] $, 且 $f(x)\nearrow$, 所以 $\displaystyle f(x)  -f\left( a+\int _{a}^{x}g(t)  \dd t\right) \geqslant 0$, 所以 $F'(x)\geqslant 0$,
               故 $F(x)\nearrow$, 所以 $\displaystyle F(x)\geqslant F(a)=0\Rightarrow F(b)\geqslant 0\Rightarrow\int_{a}^{a+\int_{a}^{b} g(t) \dd t} f(x) \dd x \leqslant \int_{a}^{b} f(x) g(x) \dd x .$
     \end{enumerate}
 \end{proof}
@@ -429,7 +429,7 @@
 \begin{proof}[{\songti \textbf{证}}]
     令 $F(x)=\e^{-x}(f(x)+x+1)$, 有 $F(0)=-1,~F(1)=0$, 因为 $\displaystyle\int_{0}^{1}f(x)\dd x=0$, 由积分中值定理知, $\exists\eta\in(0,1)$, 使得
     $$\displaystyle\int_{0}^{1}f(x)\dd x=f(\eta)\int_{0}^{1}\dd x=f(\eta)=0$$
-    而 $F(\eta)=\e^{-\eta}(f(\eta)+\eta+1)>0$, 因此 $\exists\xi\in(0,1)$, 使得 $F(x)\leqslant F(\xi)$, 即 $F(x)$ 的最大值一定在区间 $(0,1)$ 内取到, 
+    而 $F(\eta)=\e^{-\eta}(f(\eta)+\eta+1)>0$, 因此 $\exists\xi\in(0,1)$, 使得 $F(x)\leqslant F(\xi)$, 即 $F(x)$ 的最大值一定在区间 $(0,1)$ 内取到,
     由 Fermat 引理知, $F'(\xi)=0$, 即 $$\eval{-\e^{-x}(f(x)+x+1)+\e^{-x}(f'(x)+1)}_{x=\xi}=f'(\xi)-f(\xi)=\xi.$$
 \end{proof}
 
@@ -447,7 +447,7 @@
                   1=\int_{0}^{1}f(x)\dd x=F(1)-F(0)=F'(c)(1-0)=f'(c)
               \end{flalign*}
               于是 $f(c)=f(1)=1$, 故由 Rolle 中值定理知, $\exists\xi\in(c,1)\subset(0,1)$, 使得 $f'(\xi)=0$.
-        \item \textbf{法一: 反证法}令 $g(x)=f(x)+x^2$, 则 $g(0)=0,~g(1)=2$, 假设 $\not\exists\eta\in(0,1)$, 使得 $g''(\eta)<0$, 即 $\forall x\in(0,1),~g''(x)\geqslant 0$, 
+        \item \textbf{法一: 反证法}令 $g(x)=f(x)+x^2$, 则 $g(0)=0,~g(1)=2$, 假设 $\not\exists\eta\in(0,1)$, 使得 $g''(\eta)<0$, 即 $\forall x\in(0,1),~g''(x)\geqslant 0$,
               则 $g(x)$ 为下凹函数, 则有
               $$\int_{0}^{1}(f(x)+x^2)\dd x=\int_{0}^{1}g(x)\dd x\leqslant \dfrac{1}{2}\cdot 1\cdot 2=1$$
               但 $\displaystyle \int_{0}^{1}(f(x)+x^2)\dd x=1+\dfrac{1}{3}=\dfrac{4}{3}$, 而 $\dfrac{4}{3}\not\leqslant1$, 矛盾, 故假设不成立, 即 $\exists\eta\in(0,1)$, 使得 $f''(\eta)<-2.$\\
@@ -472,16 +472,16 @@
     \label{intabxfxdx}
 \end{example}
 \begin{proof}[{\songti \textbf{证法一}}]
-    要证不等式成立, 即要证 $\displaystyle\int_{a}^{b}\qty(x-\dfrac{a+b}{2})f(x)\dd x\geqslant 0$, 因为 $f(x)$ 在 $[a,b]$ 上单调递增, 
+    要证不等式成立, 即要证 $\displaystyle\int_{a}^{b}\qty(x-\dfrac{a+b}{2})f(x)\dd x\geqslant 0$, 因为 $f(x)$ 在 $[a,b]$ 上单调递增,
     所以
     $$\displaystyle \qty(x-\dfrac{a+b}{2})\qty(f(x)-f\qty(\dfrac{a+b}{2}))\geqslant 0$$
     两边积分, 得
-    $\displaystyle \int_{a}^{b}\qty(x-\dfrac{a+b}{2})\qty(f(x)-f\qty(\dfrac{a+b}{2}))\geqslant 0$, 
+    $\displaystyle \int_{a}^{b}\qty(x-\dfrac{a+b}{2})\qty(f(x)-f\qty(\dfrac{a+b}{2}))\geqslant 0$,
     而 $$\displaystyle\int_{a}^{b}\qty(x-\dfrac{a+b}{2})f\qty(\dfrac{a+b}{2})\dd x=f\qty(\dfrac{a+b}{2})\int_{a}^{b}\qty(x-\dfrac{a+b}{2})\dd x=0$$
     所以 $\displaystyle\int_{a}^{b}\qty(x-\dfrac{a+b}{2})f(x)\dd x\geqslant 0$, 故得证.
 \end{proof}
 \begin{proof}[{\songti \textbf{证法二}}]
-    由第一积分中值定理, 
+    由第一积分中值定理,
     \begin{flalign*}
         \int_{a}^{b}\qty(x-\dfrac{a+b}{2})f(x)\dd x & =\int_{a}^{\frac{a+b}{2}}\qty(x-\dfrac{a+b}{2})\dd x+\int_{\frac{a+b}{2}}^{b}\qty(x-\dfrac{a+b}{2})f(x)\dd x             \\
                                                     & =f(\xi_1)\int_{a}^{\frac{a+b}{2}}\qty(x-\dfrac{a+b}{2})\dd x+f(\xi_2)\int_{\frac{a+b}{2}}^{b}\qty(x-\dfrac{a+b}{2})\dd x \\
@@ -562,7 +562,7 @@
     已知曲线 $$L:\begin{cases}
             x=f(t) \\y=\cos t
         \end{cases}\qty(0\leqslant t<\dfrac{\pi}{2})$$
-    其中函数 $f(t)$ 具有连续导数, 且 $f(0)=0,~f'(t)>0~ \qty(0<t<\dfrac{\pi}{2})$, 若曲线 $L$ 的切屑与 $x$ 轴的交点到切点的距离恒为 1, 求函数 $f(t)$ 的表达式, 
+    其中函数 $f(t)$ 具有连续导数, 且 $f(0)=0,~f'(t)>0~ \qty(0<t<\dfrac{\pi}{2})$, 若曲线 $L$ 的切屑与 $x$ 轴的交点到切点的距离恒为 1, 求函数 $f(t)$ 的表达式,
     并求以曲线 $L$ 及 $x$ 轴和 $y$ 轴为边界的区域的面积.
 \end{example}
 
@@ -663,7 +663,7 @@
     令 $\begin{cases}
             x=r\cos\theta \\
             y=r\sin\theta
-        \end{cases}$ 代入直角坐标系方程, 得 $r^2=a^2\qty(\cos^2\theta-\sin^2\theta)=a^2\cos 2\theta$, 由 $r=0$ 得 $\theta=\dfrac{\pi}{4}$, 从而双纽线在第一象限部分的方程为 $r^2=a^2\cos2\theta,~0\leqslant\theta\leqslant \dfrac{\pi}{4}$, 
+        \end{cases}$ 代入直角坐标系方程, 得 $r^2=a^2\qty(\cos^2\theta-\sin^2\theta)=a^2\cos 2\theta$, 由 $r=0$ 得 $\theta=\dfrac{\pi}{4}$, 从而双纽线在第一象限部分的方程为 $r^2=a^2\cos2\theta,~0\leqslant\theta\leqslant \dfrac{\pi}{4}$,
     并且 $$\dd s=\sqrt{r^2+\qty(r')^2}\dd \theta=\sqrt{a^2\cos2\theta+\dfrac{a^4\sin ^22\theta}{r^2}}\dd \theta=\dfrac{a}{\sqrt{\cos 2\theta}}\dd \theta$$
     由对称性 $\displaystyle \int_{L}|y|\dd s=4\int_{0}^{\frac{\pi}{4}}r\sin\theta\cdot\dfrac{a}{\sqrt{\cos 2\theta}}\dd \theta=4a^2\int_{0}^{\frac{\pi}{4}}\sin\theta\dd \theta=4a^2\qty(1-\dfrac{\sqrt{2}}{2})$.
 \end{solution}
@@ -727,27 +727,27 @@
     $l=\displaystyle\int_{0}^{3\pi}a\sin^2\dfrac{\theta}{3}\dd \theta=\eval{\dfrac{a}{2}\qty(\theta-\dfrac{3}{2}\sin\dfrac{2\theta}{3})}_{0}^{3\pi}=\dfrac{3a\pi}{2}.$
 \end{solution}
 
-\subsection{定积分的物理应用}
-
-% \subsubsection{变力所做的功}
-
-% \begin{theorem}[变力的功]
-%     若质点沿变力 $F(x)$ 方向从 $x=a$ 到 $x=b$ 做直线运动, 则变力所做的功为:
-%     $$W=\int_{a}^{b}F(x)\dd x.$$
-% \end{theorem}
-
-% \subsubsection{物体的质量与重心}
-
-% \begin{theorem}[质量与重心坐标公式]
-%     若 $f(x)$ 代表细棒的质量密度, 细棒所占区间为 $[a,b]$, 则细棒的质量为:
-%     $$M=\int_{a}^{b}f(x)\dd x.$$
-%     重心坐标为:
-%     $$\overline{x}=\dfrac{1}{M}\int_{a}^{b}xf(x)\dd x.$$
-% \end{theorem}
+\begin{example}
+    已知星形线 $\begin{cases}
+            x=a\cos^3t \\ y=a\sin^3t
+        \end{cases}(a>0)$ 求:
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 它所围的面积;
+        \item 它的弧长;
+        \item 它绕 $x$ 轴旋转而成的旋转体的表面积.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\displaystyle S=4\int_{0}^{a} y \dd x=4\int_{\frac{\pi}{2}}^{0} a\sin^3t\qty(-3a\cos^2t\sin t) \dd t=12a^2\int_{0}^{\frac{\pi}{2}} \sin^4t\cos^2t \dd t=\dfrac{3}{8}\pi a^2.$
+        \item $\displaystyle L=4\int_{0}^{\frac{\pi}{2}} \sqrt{x'^2+y'^2} \dd t=4\int_{0}^{\frac{\pi}{2}} \sqrt{9a^2\cos^4t\sin^2t+9a^2\sin^4t\cos^2t} \dd t=12a\int_{0}^{\frac{\pi}{2}} \sin t \dd \sin t=6a.$
+        \item $\displaystyle S=2\int_{0}^{a} 2\pi y\sqrt{1+\qty(y'_x)^2} \dd x=4\pi a\int_{0}^{\frac{\pi}{2}} \sin^3t\cdot 3a \cos t\sin t \dd t=\dfrac{12}{5}\pi a^2.$
+    \end{enumerate}
+\end{solution}
 
 \begin{example}
-    设心形线为 $r=a(1+\cos\theta)~ (a>0)$, 试用定积分计算: \newline
-    \begin{enumerate*}[label=(\arabic{*})]
+    设心形线为 $r=a(1+\cos\theta)~ (a>0)$, 试用定积分计算:
+    \begin{enumerate}[label=(\arabic{*})]
         \item 它所围成的图形的面积 $A$;
         \item 它的长度 $L$;
         \item 它所围成的图形 $D$ 的重心 ($D$ 的密度为 1);
@@ -755,7 +755,7 @@
         \item 它绕极轴旋转所得闭曲面所围立体的体积 $V$;
         \item 它绕极轴旋转所得闭曲面的面积 $S$;
         \item 它对极轴的转动惯量 $I$ (线密度为 1).
-    \end{enumerate*}
+    \end{enumerate}
 \end{example}
 \begin{solution}
     \begin{minipage}{0.81\linewidth}
@@ -764,7 +764,7 @@
             \item $\displaystyle L=2\int_{0}^{\pi}\sqrt{r^2(\theta)+\qty[r'(\theta)]^2}\dd \theta=2\sqrt{2}a\int_{0}^{\pi}\sqrt{1+\cos\theta}\dd \theta=4a\int_{0}^{\pi}\cos\dfrac{\theta}{2}\dd \theta   =8a$.
             \item 设重心坐标 $C$ 为 $(\xi,\eta)$, $D$ 在极轴上方的一半区域为 $D_1$, 由对称性知 $\eta=0$, 下求 $\xi$, \newline
                   \textbf{法一: }用静力矩微元法, 这里从略.\newline
-                  \textbf{法二: }利用二重积分求 $\xi$, 
+                  \textbf{法二: }利用二重积分求 $\xi$,
                   \begin{flalign*}
                       \xi & =\dfrac{1}{M}\iint\limits_{D_1}\rho x\dd \sigma=\dfrac{1}{M}\int_{0}^{\pi}\dd \theta\int_{0}^{a(1+\cos\theta)}r^2\cos\theta\dd r=\dfrac{a^3}{3M}\int_{0}^{\pi}(1+\cos\theta)^3\cos\theta\dd \theta \\
                           & =\dfrac{a^3}{3M}\int_{0}^{\pi}\qty(\cos\theta+3\cos^2\theta++3\cos^3\theta+\cos^4\theta)\dd \theta=\dfrac{5a}{6}
@@ -841,6 +841,24 @@
     \end{minipage}
 \end{solution}
 
+\subsection{定积分的物理应用}
+
+\subsubsection{变力所做的功}
+
+\begin{theorem}[变力的功]
+    若质点沿变力 $F(x)$ 方向从 $x=a$ 到 $x=b$ 做直线运动, 则变力所做的功为:
+    $$W=\int_{a}^{b}F(x)\dd x.$$
+\end{theorem}
+
+\subsubsection{物体的质量与重心}
+
+\begin{theorem}[质量与重心坐标公式]
+    若 $f(x)$ 代表细棒的质量密度, 细棒所占区间为 $[a,b]$, 则细棒的质量为:
+    $$M=\int_{a}^{b}f(x)\dd x.$$
+    重心坐标为:
+    $$\overline{x}=\dfrac{1}{M}\int_{a}^{b}xf(x)\dd x.$$
+\end{theorem}
+
 \subsection{定积分综合性问题}
 
 \subsubsection{积分等式命题的证明}
@@ -850,7 +868,7 @@
     $$f(x)=f(a)+f^{\prime}(a)(x-a)+\int_{a}^{x}(x-t) f^{\prime \prime}(t) \dd  t, \forall x \in[a, b] .$$
 \end{example}
 \begin{proof}[{\songti \textbf{证法一}}]
-    由 N-L 公式, 
+    由 N-L 公式,
     \begin{flalign*}
         f(x) & =f(a)+\int_{a}^{x}f'(t)\dd t=f(a)+\int_{a}^{x}f'(a)\dd t+\int_{a}^{x}\dd t\int_{a}^{t}f''(u)\dd u \\
              & =f(a)+f'(a)(x-a)+\int_{a}^{x}\dd t\int_{t}^{x}f''(u)\dd u=f(a)+f'(a)(x-a)+\int_{a}^{x}(x-t).
@@ -877,7 +895,7 @@
 \begin{proof}[{\songti \textbf{证}}]
     令 $F(x)=\e^{-x}(f(x)+x+1)$, 有 $F(0)=-1,~F(1)=0$, 因为 $\displaystyle\int_{0}^{1}f(x)\dd x=0$, 由积分中值定理知, $\exists\eta\in(0,1)$, 使得
     $$\displaystyle\int_{0}^{1}f(x)\dd x=f(\eta)\int_{0}^{1}\dd x=f(\eta)=0$$
-    而 $F(\eta)=\e^{-\eta}(f(\eta)+\eta+1)>0$, 因此 $\exists\xi\in(0,1)$, 使得 $F(x)\leqslant F(\xi)$, 即 $F(x)$ 的最大值一定在区间 $(0,1)$ 内取到, 
+    而 $F(\eta)=\e^{-\eta}(f(\eta)+\eta+1)>0$, 因此 $\exists\xi\in(0,1)$, 使得 $F(x)\leqslant F(\xi)$, 即 $F(x)$ 的最大值一定在区间 $(0,1)$ 内取到,
     由 Fermat 引理知, $F'(\xi)=0$, 即 $$\eval{-\e^{-x}(f(x)+x+1)+\e^{-x}(f'(x)+1)}_{x=\xi}=f'(\xi)-f(\xi)=\xi.$$
 \end{proof}
 
@@ -907,13 +925,13 @@
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
     构造 $F(x)=xf(x)$, 那么 $F(x)$ 在 $[-1,1]$ 二阶导函数连续, 并且 $$F'(x)=f(x)+xf'(x),~F''(x)=2f'(x)+xf''(x)$$
-    又由 Taylor 展开得, 
+    又由 Taylor 展开得,
     $$F(x)=F(0)+F'(0)x+\dfrac{1}{2!}F''(\theta x)x^2~ \theta\in(0,1)$$
-    且 $F(0)=0,F'(0)=f(0)x$, 于是 $F(x)=f(0)x+\dfrac{1}{2}F''(\theta x)x^2$, 两边对 $x$ 积分, 则有, 
+    且 $F(0)=0,F'(0)=f(0)x$, 于是 $F(x)=f(0)x+\dfrac{1}{2}F''(\theta x)x^2$, 两边对 $x$ 积分, 则有,
     $$\int_{-1}^{1}F(x)\dd x=\int_{-1}^{1}f(0)x\dd x+\dfrac{F''(\theta x)}{2}\int_{-1}^{1}x^2\dd x=\dfrac{F''(\theta x)}{2}\int_{-1}^{1}x^2\dd x$$
     记 $m=\min\limits_{0\leqslant x\leqslant 1}F''(x),~M=\max\limits_{0\leqslant x\leqslant 1}F''(x)$, 于是
     $$m\int_{-1}^{1}x^2\dd x\leqslant \int_{-1}^{1}F''(\theta x)x^2\dd x\leqslant M\int_{-1}^{1}x^2\dd x$$
-    即 $\dfrac{2}{3}m\leqslant\displaystyle\int_{-1}^{1}F''(\theta x)x^2\dd x\leqslant \dfrac{2}{3}M$, 
+    即 $\dfrac{2}{3}m\leqslant\displaystyle\int_{-1}^{1}F''(\theta x)x^2\dd x\leqslant \dfrac{2}{3}M$,
     因此有 $\displaystyle m\leqslant \int_{-1}^{1}F(x)\dd x\leqslant M$, 对 $F''(x)$ 利用连续函数的介值定理, 即 $\exists\xi\in[-1,1]$, 使得 $3\displaystyle\int_{-1}^{1}F(x)\dd x=F''(\xi)$, 即得证.
 \end{proof}
 
@@ -921,8 +939,8 @@
     已知 $f(x)$ 在 $[a,b]$ 上二阶可导, $f(a)=f(b)=0$, 试证: $\exists \xi\in(a,b)$, 使得 $$\int_{a}^{b}f(x)\dd x=\frac{1}{12}f''(\xi)(a-b)^3.$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    令 $\displaystyle F(x)=\int_{a}^{x}f(t)\dd t-\frac{1}{2}(x-a)f(x)$, $\displaystyle G(x)=-\frac{1}{12}(x-a)^3$, 
-    在 $[a,b]$ 上连续两次应用 Cauchy 中值定理, 
+    令 $\displaystyle F(x)=\int_{a}^{x}f(t)\dd t-\frac{1}{2}(x-a)f(x)$, $\displaystyle G(x)=-\frac{1}{12}(x-a)^3$,
+    在 $[a,b]$ 上连续两次应用 Cauchy 中值定理,
     \begin{flalign*}
         \dfrac{\displaystyle\int_{a}^{b}f(x)\dd x-0}{-\dfrac{1}{12}(b-a)^3-0} & =\dfrac{F(b)-F(a)}{G(b)-G(a)}\xlongequal[a\leqslant \xi_1\leqslant b]{\text{Cauchy 中值定理}}\dfrac{F"(\xi_1)}{G'(\xi_1)}                                                                                                    \\
                                                                               & =\dfrac{\dfrac{1}{2}f(\xi_1)-\dfrac{1}{2}(\xi_1-a)f'(\xi)-0}{-\dfrac{1}{4}(\xi_1-a)^2-0}\xlongequal[a\leqslant\xi\leqslant\xi_1]{\text{Cauchy 中值定理}}\dfrac{-\dfrac{1}{2}f''(\xi)(\xi-a)}{-\dfrac{1}{2}(\xi-a)}=f''(\xi).
@@ -960,7 +978,7 @@
     $$F(x)  =F\left( x_{0}\right) +F'\left( x_{0}\right) \left( x-x_{0}\right) +\dfrac{F''(x)  }{2!}\left( x-x_{0}\right) ^{2}+\dfrac{F'''\left( \xi \right) }{3!}\left( x-x_{0}\right) ^{3}$$
     其中 $\xi$ 介于 $x_0$ 与 $x$ 之间, 将 $x=a$ 和 $x=b$ 代入上式, 并相减得
     $$F\left( b\right) -F\left( a\right) =\left( b-a\right) f\left( \dfrac{a+b}{2}\right) +\dfrac{1}{24}\left( b-a\right) ^{3}\dfrac{f''\left( \xi _{1}\right) +f''\left( \xi _{2}\right) }{2}$$
-    其中 $a <\xi _{2} <\dfrac{a+b}{2} <\xi _{1} <b$, 不妨设 $f''(\xi_1)\leqslant f''(\xi_2)$, 则 $f''(x_1)\leqslant \dfrac{f''(\xi_1)+f''(\xi_2)}{2}\leqslant f''(\xi_2)$, 由导函数 $f''(x)$ 的 Darboux 定理或 $f''(x)$ 的连续性及介值定理知, 
+    其中 $a <\xi _{2} <\dfrac{a+b}{2} <\xi _{1} <b$, 不妨设 $f''(\xi_1)\leqslant f''(\xi_2)$, 则 $f''(x_1)\leqslant \dfrac{f''(\xi_1)+f''(\xi_2)}{2}\leqslant f''(\xi_2)$, 由导函数 $f''(x)$ 的 Darboux 定理或 $f''(x)$ 的连续性及介值定理知,
     $\exists\xi\in(\xi_1,\xi_2)$ 或 $(\xi_2,\xi_1)\subset (a,b)$, 使 $f''(\xi)=\dfrac{f''(\xi_1)+f''(\xi_2)}{2}$, 故 $\displaystyle\int_{a}^{b}f(x)\dd x=(b-a)f\qty(\dfrac{a+b}{2})+\dfrac{1}{24}(b-a)^3f''(\xi).$
 \end{proof}
 \begin{proof}[{\songti \textbf{证法三}}]
@@ -970,13 +988,13 @@
     $$f(\eta)-f\left(\frac{a+\eta}{2}\right)-\frac{\eta-a}{2} f^{\prime}\left(\frac{a+\eta}{2}\right)-\frac{k}{8}(\eta-a)^{2}=0 $$
     又将 $ f(\eta) $ 在 $ x=\dfrac{a+\eta}{2} $ 处进行 Taylor 展开, 有
     $$f(\eta)=f\left(\dfrac{a+\eta}{2}\right)+f^{\prime}\left(\frac{a+\eta}{2}\right) \frac{\eta-a}{2}+\frac{f^{\prime \prime}(\xi)}{2 !}\left(\frac{\eta-a}{2}\right)^{2}$$
-    其中 $ \xi \in\left(\dfrac{a+\eta}{2}, \eta\right) \subset(a, b) $, 
+    其中 $ \xi \in\left(\dfrac{a+\eta}{2}, \eta\right) \subset(a, b) $,
     比较上述两式, 得 $ k=f^{\prime \prime}(\xi) $ 故得证.
 \end{proof}
 \begin{proof}[{\songti \textbf{证法四}}]
-    取 $\rho\equiv1$, 首先构造数值求积公式 $\displaystyle\int_{a}^{b}f(x)\dd x\approx A_0f\qty(\dfrac{a+b}{2})$, 使其具有尽可能高的代数精度, 
+    取 $\rho\equiv1$, 首先构造数值求积公式 $\displaystyle\int_{a}^{b}f(x)\dd x\approx A_0f\qty(\dfrac{a+b}{2})$, 使其具有尽可能高的代数精度,
     为此, 取 $f(x)=1$ 使求积公式精确成立, 则有 $$A_0=b-a$$
-    把 $A_0$ 代入求积公式, 取 $f(x)=x$, 代入验算知求积公式精确成立; 再取 $f(x)=x^2$, 求积公式不精确成立, 
+    把 $A_0$ 代入求积公式, 取 $f(x)=x$, 代入验算知求积公式精确成立; 再取 $f(x)=x^2$, 求积公式不精确成立,
     故求积公式 $\displaystyle\int_{a}^{b}f(x)\dd x\approx (b-a)f\qty(\dfrac{a+b}{2})$ 的代数精度为 $1$;
     其次, 构造一次插值多项式
     $$P_1\qty(\dfrac{a+b}{2})=f\qty(\dfrac{a+b}{2}),~P'_1\qty(\dfrac{a+b}{2})=f'\qty(\dfrac{a+b}{2})$$
@@ -1000,12 +1018,12 @@
     即得证 $k=f''(\xi).$
 \end{proof}
 \begin{proof}[{\songti \textbf{证法二}}]
-    取 $\rho(x)\equiv1$, 首先构造数值求积公式 $\displaystyle\int_{a}^{b}f(x)\dd x\approx A_0f(a)+A_1f(b)$, 使其具有尽可能高的代数精度, 为此, 
+    取 $\rho(x)\equiv1$, 首先构造数值求积公式 $\displaystyle\int_{a}^{b}f(x)\dd x\approx A_0f(a)+A_1f(b)$, 使其具有尽可能高的代数精度, 为此,
     分别取 $f(x)=1,x$ 使求积公式精确成立, 则有 $$\left\{\begin{matrix}
             A_0  & + & A_1  & = & b-a                \\
             aA_0 & + & bA_1 & = & \dfrac{b^2-a^2}{2}
         \end{matrix}\right.\Rightarrow A_0=A_1=\dfrac{b-a}{2} $$
-    把 $A_0,~A_1$ 代入求积公式, 取 $f(x)=x^2$, 代入验算知求积公式精确成立; 再取 $f(x)=x^3$, 求积公式不精确成立, 
+    把 $A_0,~A_1$ 代入求积公式, 取 $f(x)=x^2$, 代入验算知求积公式精确成立; 再取 $f(x)=x^3$, 求积公式不精确成立,
     故求积公式 $\displaystyle\int_{a}^{b}f(x)\dd x\approx\dfrac{b-a}{2}(f(a)+f(b))$ 的代数精度为 $2$;
     其次, 构造二次插值多项式 $P_1(x)$, 使满足 $$P_1(a)=f(a),~P'_1(b)=f'(b)$$
     那么 $W_2(x)=(x-a)(x-b)\geqslant 0$ 且不恒为 $0$, 又
@@ -1020,7 +1038,7 @@
     $$\int_{a}^{b}f(x)\dd x=\dfrac{b-a}{4}\qty[f(a)+3f\qty(\dfrac{a+2b}{3})]+\dfrac{(b-a)^4}{216}f'''(\eta).$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    令 $k$ 为使 $\displaystyle\int_{a}^{b}f(x)\dd x=\dfrac{b-a}{4}\qty[f(a)+3f\qty(\dfrac{a+2b}{3})]+\dfrac{(b-a)^4}{216}k$ 成立的实常数, 要证结论成立, 只需证 $k=f'''(\eta)$, 
+    令 $k$ 为使 $\displaystyle\int_{a}^{b}f(x)\dd x=\dfrac{b-a}{4}\qty[f(a)+3f\qty(\dfrac{a+2b}{3})]+\dfrac{(b-a)^4}{216}k$ 成立的实常数, 要证结论成立, 只需证 $k=f'''(\eta)$,
     为此, 将上式右端移到左端, 并将 $b$ 改写为 $x$, 构造辅助函数
     $$F(x)=\int_{a}^{x}f(t)\dd t-\dfrac{x-a}{4}\qty[f(a)+3f\qty(\dfrac{a+2x}{3})]-\dfrac{(x-a)^4}{216}k,~x\in[a,b]$$
     则 $F(a)=F(b)=0$, $F(x)$ 在 $[a,b]$ 上连续且可导, 由 Rolle 定理, $\exists\xi_1\in(a,b)$, 使得 $F'(\xi_1)=0$, 又
@@ -1037,7 +1055,7 @@
     $$\int_{a}^{b}f(x)\dd x=\dfrac{b-a}{4}\qty[3f\qty(\dfrac{2a+b}{3})+f(b)]-\dfrac{(b-a)^4}{216}f'''(\xi).$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    令 $k$ 为使 $\displaystyle \int_{a}^{b}f(x)\dd x=\dfrac{b-a}{4}\qty[3f\qty(\dfrac{2a+b}{3})+f(b)]-\dfrac{(b-a)^4}{216}k$ 成立的实常数, 要证结论成立, 只需证 $k=f'''(\eta)$, 
+    令 $k$ 为使 $\displaystyle \int_{a}^{b}f(x)\dd x=\dfrac{b-a}{4}\qty[3f\qty(\dfrac{2a+b}{3})+f(b)]-\dfrac{(b-a)^4}{216}k$ 成立的实常数, 要证结论成立, 只需证 $k=f'''(\eta)$,
     为此, 构造辅助函数 $$F(x)=\int_{x}^{b}f(t)\dd t-\dfrac{b-x}{4}\qty[3f\qty(\dfrac{2x+b}{3})+f(b)]+\dfrac{(b-x)^4}{216}k$$
     则 $F(a)=F(b)=0$, $F(x)$ 在 $[a,b]$ 上连续且可导, 由 Rolle 定理, $\exists\xi_1\in(a,b)$, 使得 $F'(\xi_1)=0$, 又
     $$F'(x)=-f(x)+\dfrac{1}{4}\qty[3f\qty(\dfrac{2x+b}{3})+f(b)]-\dfrac{b-x}{2}f'\qty(\dfrac{2x+b}{3})-\dfrac{(b-x)^3}{54}k$$
@@ -1081,7 +1099,7 @@
     得证 $k=f^{(4)}(x)$, 即原命题成立.
 \end{proof}
 \begin{proof}[{\songti \textbf{证法二}}]
-    取 $\rho(x)\equiv1$, 首先构造数值求积公式 $\displaystyle\int_{a}^{b}f(x)\dd x\approx A_0\cdot f(a)+A_1\cdot f\qty(\dfrac{a+b}{2})+A_2\cdot f(b)$, 
+    取 $\rho(x)\equiv1$, 首先构造数值求积公式 $\displaystyle\int_{a}^{b}f(x)\dd x\approx A_0\cdot f(a)+A_1\cdot f\qty(\dfrac{a+b}{2})+A_2\cdot f(b)$,
     使其具有尽可能高的代数精度, 为此, 分别取 $f(x)=1,x,x^2$ 使求积公式精确成立, 则有
     $$\left\{\begin{matrix}
             A_0    & + & A_1                       & + & A_2    & = & b-a                \\
@@ -1122,7 +1140,7 @@
             0 & 0 & 1 & \dfrac{b-a}{6}         \\
         \end{pNiceArray}
     \end{flalign*}
-    取 $f(x)=x^3$, 代入验算知求积公式精确成立; 再令 $f(x)=x^4$, 求积公式不精确成立, 
+    取 $f(x)=x^3$, 代入验算知求积公式精确成立; 再令 $f(x)=x^4$, 求积公式不精确成立,
     于是 $$\displaystyle \int_{a}^{b}f(x)\dd x\approx \dfrac{b-a}{6}\qty[f(a)+4f\qty(\dfrac{a+b}{2})+f(b)]$$
     其次, 构造三次插值多项式 $P_3(x)$, 使满足
     $$P_3(a)=f(a),~P_3\qty(\dfrac{a+b}{2})=f\qty(\dfrac{a+b}{2}),~P_3(b)=f(b),~P'_3(b)=f'(b)$$
@@ -1164,7 +1182,7 @@
     $$\int_{a}^{b}f(x)\dd x=\dfrac{b-a}{3}(2f(a)+f(b))+\dfrac{(b-a)^2}{6}f'(a)-\dfrac{f'''(\xi)}{72}(b-a)^4.$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    取 $\rho\equiv1$, 首先构造数值求积公式 $\displaystyle\int_{a}^{b}f(x)\dd x\approx A_0\cdot f(a)+A_1\cdot f(b)+B_0\cdot f'(a)$, 使其具有尽可能高的代数精度, 
+    取 $\rho\equiv1$, 首先构造数值求积公式 $\displaystyle\int_{a}^{b}f(x)\dd x\approx A_0\cdot f(a)+A_1\cdot f(b)+B_0\cdot f'(a)$, 使其具有尽可能高的代数精度,
     为此, 分别取 $f(x)=1,x,x^2$ 使求积公式精确成立, 则有
     $$\left\{\begin{matrix}
             A_0    & + & A_1    &   &       & = & b-a                \\[6pt]
@@ -1227,7 +1245,7 @@
     \end{flalign*}
 \end{proof}
 \begin{proof}[{\songti \textbf{证法二}}]
-    取 $\rho\equiv1$, 首先构造数值求积公式 $\displaystyle\int_{a}^{b}f(x)\dd x\approx A_0\cdot f(a)+A_1\cdot f(b)+B_0\cdot f'(a)+B_1\cdot f'(b)$, 使其具有尽可能高的代数精度, 
+    取 $\rho\equiv1$, 首先构造数值求积公式 $\displaystyle\int_{a}^{b}f(x)\dd x\approx A_0\cdot f(a)+A_1\cdot f(b)+B_0\cdot f'(a)+B_1\cdot f'(b)$, 使其具有尽可能高的代数精度,
     为此, 分别取 $f(x)=1,x,x^2,x^3$ 使求积公式精确成立, 则有增广矩阵
     \begin{flalign*}
         \begin{pNiceArray}{c:c}
@@ -1304,7 +1322,7 @@
     $$I=-\lim_{n\to\infty}n\sum_{k=1}^{n}\int_{x_{k-1}}^{x_k}f'(\xi_k(x))(x_k-x)\dd x$$
     由 $f'(x)$ 在 $[a,b]$ 上连续, 故由最值定理知, $\exists m_k,M_k\in[x_{k-1},x_k]$, 使得 $m_k\leqslant f'(\xi_k(x))\leqslant M_k$, 故
     $$\dfrac{1}{2}m_kh^2=m_k\int_{x_{k-1}}^{x_k}(x_k-x)\dd x\leqslant \int_{x_{k-1}}^{x_k}f'(\xi_k(x))(x_k-x)\dd x\leqslant M_k\int_{x_{k-1}}^{x_k}(x_k-x)\dd x=\dfrac{1}{2}M_kh^2$$
-    即 $\displaystyle m_k\leqslant \dfrac{2}{h^2}\int_{x_{k-1}}^{x_k}f'(\xi_k(x))(x_k-x)\dd x\leqslant M$, 
+    即 $\displaystyle m_k\leqslant \dfrac{2}{h^2}\int_{x_{k-1}}^{x_k}f'(\xi_k(x))(x_k-x)\dd x\leqslant M$,
     又有介值定理 $\exists \eta_k\in[x_{k-1},x_k]$, 使得
     $$\displaystyle f'(\eta_k)=\dfrac{2}{h^2}\int_{x_{k-1}}^{x_k}f'(\xi_k(x))(x_k-x)\dd x\Rightarrow \dfrac{h^2}{2}f'(\eta_k)=\int_{x_{k-1}}^{x_k}f'(\xi_k(x))(x_k-x)\dd x$$
     即 $$I=-\lim_{n\to\infty}n\sum_{k=1}^{n}\int_{x_{k-1}}^{x_k}f'(\xi_k(x))(x_k-x)\dd x=-\lim_{n\to\infty}n\sum_{k=1}^{n}\dfrac{h^2}{2}f'(\eta_k)=-\dfrac{b-a}{2}\lim_{n\to\infty}\sum_{k=1}^{n}f'(\eta_k)h$$
@@ -1373,7 +1391,7 @@
 \begin{proof}[{\songti \textbf{证}}]
     $\displaystyle\forall x\in[0,1],~\frac{3}{4}\leqslant x^2-x+1=\left(x-\dfrac{1}{2}\right)^2+\frac{3}{4}\leqslant 1$, 所以
     $$\dfrac{\sqrt{3}}{2}\int _{0}^{1}\dfrac{\dd x}{\sqrt{x-x^{2}}}\leqslant \int _{0}^{1}\sqrt{\dfrac{x^{2}-x+1}{x-x^{2}}}\dd x\leqslant \int _{0}^{1}\dfrac{\dd x}{\sqrt{x-x^{2}}}$$
-    $\displaystyle \int _{0}^{1}\dfrac{\dd x}{\sqrt{x-x^{2}}}=\int _{0}^{1}\dfrac{\dd \left( x-\dfrac{1}{2}\right) }{\sqrt{\dfrac{1}{4}-\left( x-\dfrac{1}{2}\right)^2}}=\arcsin \left( 2x-1\right)\bigg |_0^1=\pi $, 
+    $\displaystyle \int _{0}^{1}\dfrac{\dd x}{\sqrt{x-x^{2}}}=\int _{0}^{1}\dfrac{\dd \left( x-\dfrac{1}{2}\right) }{\sqrt{\dfrac{1}{4}-\left( x-\dfrac{1}{2}\right)^2}}=\arcsin \left( 2x-1\right)\bigg |_0^1=\pi $,
     $\displaystyle \dfrac{\sqrt{3}}{2}\pi\leqslant \int_{0}^{1}\sqrt{\frac{x^2-x+1}{x-x^2}}\dd x\leqslant \pi.$
 \end{proof}
 
@@ -1386,7 +1404,7 @@
         f(x) =\int_{0}^{2\pi}\sin\dfrac{\dd t}{2\sqrt{t}}=\int_{0}^{\pi}\dfrac{\sin t}{2\sqrt{t}}\dd t+\underbrace{\int_{\pi}^{2\pi}\dfrac{\sin t}{2\sqrt{t}}\dd t}_{u=t-\pi}
         =\int_{0}^{\pi}\qty(\dfrac{\sin t}{2\sqrt{t}}-\dfrac{\sin t}{2\sqrt{t+\pi}})\dd t=\dfrac{1}{2}\int_{0}^{\pi}\qty(\dfrac{2}{\sqrt{t}}-\dfrac{1}{\sqrt{t+\pi}})\sin t\dd t
     \end{flalign*}
-    令 $g(t)=\dfrac{1}{\sqrt{t}}-\dfrac{1}{\sqrt{t+\pi}},~t\in(0,\pi)$, 那么 $g'(t)=-\dfrac{1}{2}t^{-\frac{3}{2}}+\dfrac{1}{2}(t+\pi)^{-\frac{3}{2}}<0$, 则 $g(t)$ 在 $[0,\pi]$ 上单调递减, 
+    令 $g(t)=\dfrac{1}{\sqrt{t}}-\dfrac{1}{\sqrt{t+\pi}},~t\in(0,\pi)$, 那么 $g'(t)=-\dfrac{1}{2}t^{-\frac{3}{2}}+\dfrac{1}{2}(t+\pi)^{-\frac{3}{2}}<0$, 则 $g(t)$ 在 $[0,\pi]$ 上单调递减,
     所以 $g(t)>g_{min}(t)=g(\pi)=\dfrac{1}{\sqrt{\pi}}-\dfrac{1}{\sqrt{2\pi}}$, 则
     \begin{flalign*}
         f(x)>\dfrac{1}{2}\qty(\dfrac{1}{\sqrt{\pi}}-\dfrac{1}{\sqrt{2\pi}})\int_{0}^{\pi}\sin t\dd t=\dfrac{1}{\sqrt{\pi}}-\dfrac{1}{\sqrt{2\pi}}=\dfrac{2-\sqrt{2}}{2\sqrt{\pi}}.
@@ -1397,7 +1415,7 @@
     证明: $\displaystyle\int_{0}^{1}\dfrac{\sin x}{\sqrt{1-x^2}}\dd x<\int_{0}^{1}\dfrac{\cos x}{\sqrt{1-x^2}}\dd x.$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    只需证 $\displaystyle\int_{0}^{\frac{\pi}{2}}\sin(\cos t)\dd t<\int_{0}^{\frac{\pi}{2}}\cos(\sin t)\dd t$, 
+    只需证 $\displaystyle\int_{0}^{\frac{\pi}{2}}\sin(\cos t)\dd t<\int_{0}^{\frac{\pi}{2}}\cos(\sin t)\dd t$,
     即证 $$\sin(\cos t)<\cos(\sin t)~  x\in\qty(0,\dfrac{\pi}{2})$$
     因为在 $\qty(0,\dfrac{\pi}{2})$ 内 $\cos x\searrow$, 所以 $x>\sin x$, 所以有
     $\cos(\sin x)>\cos x>\sin(\cos x)$
@@ -1430,7 +1448,7 @@
     $$\dfrac{1}{a}\int_{0}^{a}f(g(x))\dd x\geqslant f\qty(\dfrac{1}{a}\int_{0}^{a}g(x)\dd x).$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    由 $f(x)$ 在 $x=x_0$ 处的 Taylor 展开, 
+    由 $f(x)$ 在 $x=x_0$ 处的 Taylor 展开,
     $$f(x)=f(x_0)+f'(x_0)(x-x_0)+\dfrac{1}{2!}f''(\xi)(x-x_0)^2$$
     因为 $f''(\xi)\geqslant 0$, 所以有 $f(x)\geqslant f(x_0)+f'(x_0)(x-x_0)$, 现令
     $$x=g(x),~x_0=\dfrac{1}{a}\int_{0}^{a}g(x)\dd x$$
@@ -1459,11 +1477,11 @@
     设函数 $f(x)$ 在 $[0,\pi]$ 上连续, $f(x)>0$, 证明 $\displaystyle \e ^{\int_{0}^{1}\ln f(x)\dd x}\leqslant \int_{0}^{1}f(x)\dd x.$
 \end{example}
 \begin{proof}[{\songti \textbf{证法一}}]
-    将 $[0,1]~n$ 等分, 则 $\displaystyle\int_{0}^{1}f(x)\dd x=\lim_{n\to\infty}\dfrac{1}{n}\sum_{i=1}^{n}f\qty(\dfrac{i}{n})$, 
+    将 $[0,1]~n$ 等分, 则 $\displaystyle\int_{0}^{1}f(x)\dd x=\lim_{n\to\infty}\dfrac{1}{n}\sum_{i=1}^{n}f\qty(\dfrac{i}{n})$,
     \begin{flalign*}
         \exp\int_{0}^{1}\ln f(x)\dd x=\exp\lim_{n\to\infty}\dfrac{1}{n}\sum_{i=1}^{n}\ln f\qty(\dfrac{i}{n})=\exp\lim_{n\to\infty}\ln\qty[\prod_{i=1}^{n}f\qty(\dfrac{i}{n})]^{\frac{1}{n}}=\lim_{n\to\infty}\qty[\prod_{i=1}^{n}f\qty(\dfrac{i}{n})]^{\frac{1}{n}}
     \end{flalign*}
-    由几何平均数 $\leqslant $ 算术平均数, 得 $\displaystyle \qty[\prod_{i=1}^{n}f\qty(\dfrac{i}{n})]^{\frac{1}{n}}\leqslant \dfrac{1}{n}\sum_{i=1}^{n}f\qty(\frac{i}{n})$, 
+    由几何平均数 $\leqslant $ 算术平均数, 得 $\displaystyle \qty[\prod_{i=1}^{n}f\qty(\dfrac{i}{n})]^{\frac{1}{n}}\leqslant \dfrac{1}{n}\sum_{i=1}^{n}f\qty(\frac{i}{n})$,
     故令 $n\to\infty$, 由定积分定义得 $\displaystyle \e ^{\int_{0}^{1}\ln f(x)\dd x}\leqslant \int_{0}^{1}f(x)\dd x.$
 \end{proof}
 \begin{proof}[{\songti \textbf{证法二}}]
@@ -1478,8 +1496,8 @@
     设函数 $f(x)$ 在 $[0,1]$ 上连续, 证明 $\displaystyle \e ^{\int_{0}^{1}f(x)\dd x}\leqslant \int_{0}^{1}\e ^{f(x)}\dd x.$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    要证不等式两边取对数, 并且令 $g(x)=\e ^{f(x)}$, 即要证 $\displaystyle\int_{0}^{1}\ln g(x)\dd x\leqslant \ln\qty(\int_{0}^{1}g(x)\dd x)$, 
-    记 $ \displaystyle s=\int_{0}^{1} g(x) \dd  x $, 因为 $ g(x)>0$, 所以 $ \displaystyle s>0, \frac{g(x)}{s}>0, \frac{g(x)}{s}-1>-1$, 
+    要证不等式两边取对数, 并且令 $g(x)=\e ^{f(x)}$, 即要证 $\displaystyle\int_{0}^{1}\ln g(x)\dd x\leqslant \ln\qty(\int_{0}^{1}g(x)\dd x)$,
+    记 $ \displaystyle s=\int_{0}^{1} g(x) \dd  x $, 因为 $ g(x)>0$, 所以 $ \displaystyle s>0, \frac{g(x)}{s}>0, \frac{g(x)}{s}-1>-1$,
     故由已知不等式: 当 $ x>-1 $ 时, $ \ln (1+x) \leqslant x$, 可得
     \begin{flalign*}
         \int_{0}^{1}(\ln g(x)-\ln s) \dd  x & =\int_{0}^{1} \ln \frac{g(x)}{s} \dd x=\int_{0}^{1} \ln \left[1+\left(\frac{g(x)}{s}-1\right)\right] \dd  x \leqslant \int_{0}^{1}\left(\frac{g(x)}{s}-1\right) \dd  x \\
@@ -1501,15 +1519,15 @@
     $$\qty(\int_{0}^{1}f(x)\dd x)^2\geqslant \int_{0}^{1}f^3(x)\dd x.$$
 \end{example}
 \begin{proof}[{\songti \textbf{证法一}}]
-    要证结论, 只需证明 $\displaystyle\qty(\int_{0}^{1}f(x)\dd x)^2\geqslant \int_{0}^{1}f^3(x)\dd x\geqslant0$, 
+    要证结论, 只需证明 $\displaystyle\qty(\int_{0}^{1}f(x)\dd x)^2\geqslant \int_{0}^{1}f^3(x)\dd x\geqslant0$,
     为此, 令 $\displaystyle F(x)=\qty(\int_{0}^{x}f(t)\dd t)^2-\int_{0}^{x}f^3(t)\dd t,~x\in[0,1]$, 则 $f(0)=0$, 且
     $$F'(x)=f(x)\cdot\qty[2\int_{0}^{x}f(t)\dd t-f^2(x)]$$
-    故只需证当 $x\in[0,1]$ 时, $F'(x)\geqslant 0$ 即可, 由有题设 $f(0)=0$, 且 $f'(x)>0~ (x\in[0,1])$, 所以当 $x\in[0,1]$ 时, $f(x)\geqslant f(0)=0$, 
-    而因为 $F'(x)$ 的符号不易确定, 故再令 $g(x)=2\displaystyle\int_{0}^{x}f(t)\dd t-f^2(x)$, 则 $g'(x)=2f(x)\cdot \qty(1-f'(x))\geqslant 0$, 于是 $g(x)\geqslant g(0)=0$, 
+    故只需证当 $x\in[0,1]$ 时, $F'(x)\geqslant 0$ 即可, 由有题设 $f(0)=0$, 且 $f'(x)>0~ (x\in[0,1])$, 所以当 $x\in[0,1]$ 时, $f(x)\geqslant f(0)=0$,
+    而因为 $F'(x)$ 的符号不易确定, 故再令 $g(x)=2\displaystyle\int_{0}^{x}f(t)\dd t-f^2(x)$, 则 $g'(x)=2f(x)\cdot \qty(1-f'(x))\geqslant 0$, 于是 $g(x)\geqslant g(0)=0$,
     从而 $F'(x)\geqslant 0$, 故当 $x\in[0,1]$ 时, $F(x)\geqslant F(0)=0$, 因而 $F(1)\geqslant 0$, 即得 $\displaystyle\qty(\int_{0}^{1}f(x)\dd x)^2\geqslant \int_{0}^{1}f^3(x)\dd x.$
 \end{proof}
 \begin{proof}[{\songti \textbf{证法二}}]
-    同证法一, $f(x)>0$, 于是 $\displaystyle\int_{0}^{1}f^3(x)\dd x>0$, 故要证结论成立, 只需证明 $\dfrac{\qty(\displaystyle\int_{0}^{1}f(x)\dd x)^2}{\displaystyle\int_{0}^{1}f^3(x)\dd x}\geqslant 1$, 
+    同证法一, $f(x)>0$, 于是 $\displaystyle\int_{0}^{1}f^3(x)\dd x>0$, 故要证结论成立, 只需证明 $\dfrac{\qty(\displaystyle\int_{0}^{1}f(x)\dd x)^2}{\displaystyle\int_{0}^{1}f^3(x)\dd x}\geqslant 1$,
     为此, 令 $\displaystyle F(x)=\qty(\int_{0}^{x}f(t)\dd t)^2,~G(x)=\int_{0}^{x}f^3(t)\dd t$, 则两次用 Cauchy 中值定理, 有
     \begin{flalign*}
         \dfrac{\qty(\displaystyle\int_{0}^{1}f(x)\dd x)^2}{\displaystyle\int_{0}^{1}f^3(x)\dd x}=\dfrac{F(1)-F(0)}{G(1)-G(0)}=\dfrac{F'(\xi)}{G'(\xi)}=\dfrac{2\displaystyle\int_{0}^{\xi}f(t)\dd t}{f^2(\xi)}=\dfrac{2\displaystyle\int_{0}^{\xi}f(t)\dd t-2\int_{0}^{0}f(t)\dd t}{f^2(\xi)-f^2(0)}=\dfrac{1}{f'(\eta)}
@@ -1540,7 +1558,7 @@
 \end{inference}
 \begin{proof}[{\songti \textbf{证}}]
     因为 $0<f'(x)\leqslant \lambda$, 且 $f(0)=0$, 所以当 $x\in[0,+\infty)$ 时, $f(x)>0$, 于是 $$\displaystyle\dfrac{m}{(2\lambda)^{m-1}}\int_{0}^{a}f^{2m-1}(x)\dd x>0$$
-    故要证结论成立, 即证 $I=\dfrac{\qty(\displaystyle\int_{0}^{a}f(x)\dd x)^m}{\dfrac{m}{(2\lambda)^{m-1}}\displaystyle\int_{0}^{a}f^{2m-1}(x)\dd x}\geqslant 1$, 
+    故要证结论成立, 即证 $I=\dfrac{\qty(\displaystyle\int_{0}^{a}f(x)\dd x)^m}{\dfrac{m}{(2\lambda)^{m-1}}\displaystyle\int_{0}^{a}f^{2m-1}(x)\dd x}\geqslant 1$,
     令 $$\displaystyle F(x)=\qty(\int_{0}^{x}f(t)\dd t)^m,~G(x)=\dfrac{m}{(2\lambda)^{m-1}}\int_{0}^{x}f^{2m-1}(t)\dd t$$
     则两次用 Cauchy 中值定理, 有
     \begin{flalign*}
@@ -1554,14 +1572,14 @@
     设 $f(x)$ 在 $[0,+\infty)$ 连续, 在 $(0,+\infty)$ 上恒正, 且当 $x>0$ 时, $\displaystyle f^3(x)\leqslant 3\int_{0}^{x}f^2(t)\dd t$, 证明: 当 $x\geqslant 0$ 时, 恒有 $f(x)\leqslant x.$
 \end{example}
 \begin{solution}
-    \textbf{法一: }令 $F(x)=\displaystyle\int_{0}^{x}f^2(t)\dd t$, 那么 $F(x)>0,~F'(x)=f^2(x)$, 于是 $x>0$ 时有, 
+    \textbf{法一: }令 $F(x)=\displaystyle\int_{0}^{x}f^2(t)\dd t$, 那么 $F(x)>0,~F'(x)=f^2(x)$, 于是 $x>0$ 时有,
     $$\qty[F'(x)]^{\frac{3}{2}}\leqslant 3F(x)\Rightarrow \dfrac{\qty[F'(x)]^{\frac{3}{2}}}{F(x)}\leqslant 3\Rightarrow \dfrac{F'(x)}{F^{\frac{2}{3}}(x)}\leqslant 3^{\frac{2}{3}}\Rightarrow \int_{0}^{x}\dfrac{F'(t)}{F^{\frac{2}{3}}(t)}\dd t\leqslant 3^{\frac{2}{3}}x$$
     不等式左边有 $\displaystyle\int_{0}^{x}F^{-\frac{2}{3}}x\dd F(x)=\eval{3F^{\frac{1}{3}}(t)}_{0}^{x}=3F^{\frac{1}{3}}(x)$, 即 $F^{\frac{2}{3}}(x)\leqslant 3^{-\frac{2}{3}}x^2$, 又因为 $\dfrac{F'(x)}{3^{\frac{2}{3}}}\leqslant F^{\frac{2}{3}}(x)$, 因此
     $$\dfrac{F'(x)}{3^{\frac{2}{3}}}\leqslant F^{\frac{2}{3}}(x)\leqslant 3^{-\frac{2}{3}}x^2\Rightarrow f^2(x)\leqslant x^2\Rightarrow f(x)\leqslant x$$
     当 $x\to0^+$ 时, $f^3\qty(0^+)\leqslant 0\Rightarrow f(0)\leqslant 0$, 综上所述, 当 $x\geqslant 0$ 时, 恒有 $f(x)\leqslant x.$\\
-    \textbf{法二: }由题意可知, $f(x)\leqslant \sqrt[3]{3}\sqrt[3]{\displaystyle\int_{0}^{x}f^2(t)\dd t}$, 记 $g(x)=\sqrt[3]{\displaystyle\int_{0}^{x}f^2(t)\dd t}$, 那么 $g'(x)=\dfrac{1}{3}\qty(\displaystyle\int_{0}^{x}f^2(t)\dd t)^{-\frac{2}{3}}\cdot f^2(x)$, 在 $[0,x]$ 区间由 Lagrange 中值定理知, 
+    \textbf{法二: }由题意可知, $f(x)\leqslant \sqrt[3]{3}\sqrt[3]{\displaystyle\int_{0}^{x}f^2(t)\dd t}$, 记 $g(x)=\sqrt[3]{\displaystyle\int_{0}^{x}f^2(t)\dd t}$, 那么 $g'(x)=\dfrac{1}{3}\qty(\displaystyle\int_{0}^{x}f^2(t)\dd t)^{-\frac{2}{3}}\cdot f^2(x)$, 在 $[0,x]$ 区间由 Lagrange 中值定理知,
     $$g(x)-g(0)=g'(\xi)\cdot x\Rightarrow \sqrt[3]{\displaystyle\int_{0}^{x}f^2(t)\dd t}=\dfrac{1}{3}\qty(\displaystyle\int_{0}^{\xi}f^2(t)\dd t)^{-\frac{2}{3}}f^2(\xi)\cdot x$$
-    由 $f^3(x)\leqslant 3\displaystyle\int_{0}^{x}f^2(t)\dd t$, 可得 $\dfrac{1}{3}f^2(\xi)\leqslant \displaystyle \int_{0}^{\xi}f^2(t)\dd t$, 结合 $x^{-\frac{2}{3}}$ 关于 $x$ 单调递减可得, 
+    由 $f^3(x)\leqslant 3\displaystyle\int_{0}^{x}f^2(t)\dd t$, 可得 $\dfrac{1}{3}f^2(\xi)\leqslant \displaystyle \int_{0}^{\xi}f^2(t)\dd t$, 结合 $x^{-\frac{2}{3}}$ 关于 $x$ 单调递减可得,
     $$\qty(\int_{0}^{\xi}f^2\dd t)^{-\frac{2}{3}}\leqslant \qty(\dfrac{1}{3}f^3(\xi))^{-\frac{2}{3}}\Rightarrow f(x)\leqslant \sqrt[3]{3}\cdot\dfrac{1}{3}\qty(\dfrac{1}{3}f^3(\xi))^{-\frac{2}{3}}\cdot f^2(\xi)\cdot x=x$$
     当 $x\to0^+$ 时, $f^3\qty(0^+)\leqslant 0\Rightarrow f(0)\leqslant 0$, 综上所述, 当 $x\geqslant 0$ 时, 恒有 $f(x)\leqslant x.$
 \end{solution}
@@ -1579,13 +1597,13 @@
     于是有 $ \displaystyle t^{2} \int_{a}^{b} f^{2}(x) \dd  x-2 t \int_{a}^{b} f(x) g(x) \dd  x+\int_{a}^{b} g^{2}(x) \dd  x \geqslant 0, \forall t \in \mathbb{R}  $ 都成立.
     \begin{enumerate}[label=(\arabic{*})]
         \item 当 $ \displaystyle\int_{a}^{b} f^{2}(x) \dd  x=0 $ 时, 由 $ f(x) $ 在 $ [a, b] $ 上的连续性知, $f(x) \equiv 0$, 此时要证的不等式中成立;
-        \item 当 $ \displaystyle\int_{a}^{b} f^{2}(x) \dd  x>0 $ 时, 由于关于 $ t $ 的二次三项式恒大于零, 
+        \item 当 $ \displaystyle\int_{a}^{b} f^{2}(x) \dd  x>0 $ 时, 由于关于 $ t $ 的二次三项式恒大于零,
               故它的判别式 $$ \Delta=\left(2 \int_{a}^{b} f(x) g(x) \dd  x\right)^{2}-4 \int_{a}^{b} f^{2}(x) \dd  x \cdot \int_{a}^{b} g^{2}(x) \dd  x \leqslant 0$$
     \end{enumerate}
     即得 $\displaystyle \left(\int_{a}^{b} f(x) g(x) \dd  x\right)^{2} \leqslant \int_{a}^{b} f^{2}(x) \dd  x \cdot \int_{a}^{b} g^{2}(x) \dd  x.$
 \end{proof}
 \begin{proof}[{\songti \textbf{证法二}}]
-    要证结论, 即证 $ \displaystyle\int_{a}^{b} f^{2}(x) \dd  x \cdot \int_{a}^{b} g^{2}(x) \dd  x-\left(\int_{a}^{b} f(x) g(x) \dd  x\right)^{2} \geqslant 0 $, 
+    要证结论, 即证 $ \displaystyle\int_{a}^{b} f^{2}(x) \dd  x \cdot \int_{a}^{b} g^{2}(x) \dd  x-\left(\int_{a}^{b} f(x) g(x) \dd  x\right)^{2} \geqslant 0 $,
     \begin{flalign*}
          & \int_{a}^{b} f^{2}(x) \dd  x \cdot \int_{a}^{b} g^{2}(x) \dd  x-\left(\int_{a}^{b} f(x) g(x) \dd  x\right)^{2}                                                                                             \\
          & = \frac{1}{2} \int_{a}^{b} f^{2}(x) \dd  x \int_{a}^{b} g^{2}(y) \dd  y+\frac{1}{2} \int_{a}^{b} f^{2}(y) \dd  y \int_{a}^{b} g^{2}(x) \dd  x -\int_{a}^{b} f(x) g(x) \dd  x \int_{a}^{b} f(y) g(y) \dd  y \\
@@ -1594,17 +1612,17 @@
     其中 $D=\{(x,y)|a\leqslant x,y\leqslant b\}$, 故得 $\displaystyle \left(\int_{a}^{b} f(x) g(x) \dd  x\right)^{2} \leqslant \int_{a}^{b} f^{2}(x) \dd  x \cdot \int_{a}^{b} g^{2}(x) \dd  x.$
 \end{proof}
 \begin{proof}[{\songti \textbf{证法三}}]
-    因为 $f(x),g(x)$ 在 $[a,b]$ 上连续, 所以 $f(x),g(x),f(x)g(x)$ 在 $[a,b]$ 上可积, 将 $[a,b]~n$ 等分, 取 $$ \displaystyle\Delta x=\frac{b-a}{n}, \xi_{i}=x_{i}=a+\frac{i}{n}(b-a)$$ 
+    因为 $f(x),g(x)$ 在 $[a,b]$ 上连续, 所以 $f(x),g(x),f(x)g(x)$ 在 $[a,b]$ 上可积, 将 $[a,b]~n$ 等分, 取 $$ \displaystyle\Delta x=\frac{b-a}{n}, \xi_{i}=x_{i}=a+\frac{i}{n}(b-a)$$
     则由离散情形 的 Cauchy-Schwarz 不等式, 有
     $$\left(\sum_{i=1}^{n} f\left(x_{i}\right) g\left(x_{i}\right)\right)^{2} \leqslant\left(\sum_{i=1}^{n} f^{2}\left(x_{i}\right)\right)\left(\sum_{i=1}^{n} g^{2}\left(x_{i}\right)\right)$$
-    于是得 $ \displaystyle\left(\frac{b-a}{n} \sum_{i=1}^{n} f\left(x_{i}\right) g\left(x_{i}\right)\right)^{2} \leqslant\left(\frac{b-a}{n} \sum_{i=1}^{n} f^{2}\left(x_{i}\right)\right)\left(\frac{b-a}{n} \sum_{i=1}^{n} g^{2}\left(x_{i}\right)\right)$, 
+    于是得 $ \displaystyle\left(\frac{b-a}{n} \sum_{i=1}^{n} f\left(x_{i}\right) g\left(x_{i}\right)\right)^{2} \leqslant\left(\frac{b-a}{n} \sum_{i=1}^{n} f^{2}\left(x_{i}\right)\right)\left(\frac{b-a}{n} \sum_{i=1}^{n} g^{2}\left(x_{i}\right)\right)$,
     故令 $ n \rightarrow \infty $ 两边取极限, 由定积分定义得
     $\displaystyle\left(\int_{a}^{b} f(x) g(x) \dd  x\right)^{2} \leqslant \int_{a}^{b} f^{2}(x) \dd  x \int_{a}^{b} g^{2}(x) \dd  x .$
 \end{proof}
 \begin{proof}[{\songti \textbf{证法四}}]
     构作辅助积分上限函数, 将要证不等式中的 $ b $ 改为 $ x $, 并移项, 令
     $$F(x)=\left(\int_{a}^{x} f(t) g(t) \dd  t\right)^{2}-\int_{a}^{x} f^{2}(t) \dd  t \cdot \int_{a}^{x} g^{2}(t) \dd  t$$
-    则有 $ F(a)=0, \forall x \in[a, b]$, 
+    则有 $ F(a)=0, \forall x \in[a, b]$,
     \begin{flalign*}
         F^{\prime}(x) & =2 \int_{a}^{x} f(t) g(t) \dd  t \cdot f(x) g(x)-f^{2}(x) \int_{a}^{x} g^{2}(t) \dd  t-g^{2}(x) \int_{a}^{x} f^{2}(t) \dd  t \\
                       & =-\int_{a}^{x}\left[f^{2}(x) g^{2}(t)-2 f(x) f(t) g(x) g(t)+f^{2}(t) g^{2}(x)\right] \dd  t                                  \\
@@ -1624,7 +1642,7 @@
     已知 $f(x)$ 在闭区间 $[0,1]$ 上的连续函数, 且满足 $\displaystyle\int_{0}^{1} f(x)\dd x=1$, 求函数 $f(x)$, 使得 $$\displaystyle I=\int_{0}^{1}(1+x^2)f^2(x)\dd x$$ 取得最小值.
 \end{example}
 \begin{solution}
-    由 Cauchy-Schwarz 不等式, 
+    由 Cauchy-Schwarz 不等式,
     \begin{flalign*}
         1^2=\qty(\int_{0}^{1}f(x)\dd x)^2=\qty(\int_{0}^{1}\sqrt{1+x^2}f(x)\cdot\dfrac{1}{\sqrt{1+x^2}}\dd x)^2\leqslant \int_{0}^{1}(1+x^2)f^2(x)\dd x\cdot\int_{0}^{1}\dfrac{\dd x}{1+x^2}
     \end{flalign*}
@@ -1670,7 +1688,7 @@
     \begin{flalign*}
         \frac{(f(x)-m)(f(x)-M)}{f(x)}=f(x)-(M+m)+\frac{mM}{f(x)}\leqslant 0\Rightarrow f(x)+\frac{mM}{f(x)}\leqslant M+m
     \end{flalign*}
-    从而 $\displaystyle \int _a^b\left[f(x)+\frac{mM}{f(x)}\right]\dd x\leqslant (M+m)(b-a)$, 且 $\displaystyle ab\leqslant \frac{(a+b)^2}{4}$, 
+    从而 $\displaystyle \int _a^b\left[f(x)+\frac{mM}{f(x)}\right]\dd x\leqslant (M+m)(b-a)$, 且 $\displaystyle ab\leqslant \frac{(a+b)^2}{4}$,
     \begin{flalign*}
         \text{所以 } \int_a^b\frac{mM}{f(x)}\dd x\cdot\int _a^bf(x)\dd x\leqslant \frac{1}{4}\int _a^b\left[f(x)+\frac{mM}{f(x)}\right]^2\leqslant \frac{(m+M)^2(b-a)^2}{4}
     \end{flalign*}
@@ -1766,7 +1784,7 @@
         \qty(\int_{a}^{c}f(x)\dd x)^2\leqslant \dfrac{(c-a)^3}{3}\int_{a}^{c}\qty[f'(x)]^2 \dd x \\
         \qty(\int_{c}^{b}f(x)\dd x)^2\leqslant \dfrac{(b-c)^3}{3}\int_{c}^{b}\qty[f'(x)]^2 \dd x
     \end{flalign*}
-    于是由 Cauchy-Schwarz 不等式, 
+    于是由 Cauchy-Schwarz 不等式,
     \begin{flalign*}
         \qty(\int_{a}^{b}f(x)\dd x)^2 & =\qty(\int_{a}^{c}f(x)\dd x+\int_{c}^{b}f(x)\dd x)^2\leqslant 2\qty[\qty(\int_{a}^{c}f(x)\dd x)^2+\qty(\int_{c}^{b}f(x)\dd x)^2]                     \\
                                       & \leqslant\dfrac{(b-a)^3}{12}\qty[\int_{a}^{c}\qty[f'(x)]^2 \dd x+\int_{c}^{b}\qty[f'(x)]^2 \dd x]=\dfrac{(b-a)^3}{12}\int_{a}^{b}\qty[f'(x)]^2 \dd x
@@ -1819,7 +1837,7 @@
     $$\qty(\int_{a}^{b}f(x)\dd x)^2\leqslant \dfrac{(b-a)^{2n+1}}{(n!)^2(2n+1)}\int_{a}^{b}\qty[f^{(n)}(x)]^2\dd x.$$
 \end{inference}
 \begin{proof}[{\songti \textbf{证}}]
-    下面以 $f^{(k)}(b)=0~ (k=-,1,\cdots,n-1)$ 为例进行证明, 
+    下面以 $f^{(k)}(b)=0~ (k=-,1,\cdots,n-1)$ 为例进行证明,
     \begin{flalign*}
         \int_{a}^{b}f(x)\dd x & =\int_{a}^{b}f(x)\dd (x-a)=-\int_{a}^{b}(x-a)f'(x)\dd x=-\int_{a}^{b}f'(x)\dd \dfrac{(x-a)^2}{2}=\int_{a}^{b}\dfrac{(x-a)^2}{2}f''(x)\dd x \\
                               & =\dfrac{(-1)^2}{1\cdot 2}\int_{a}^{b}(x-a)^2f''(x)\dd x=\cdots=\dfrac{(-1)^n}{n!}\int_{a}^{b}(x-a)^nf^{(n)}(x)\dd x
@@ -1856,7 +1874,7 @@
         \qty(\int_{a}^{c}f(x)\dd x)^2 & \leqslant \dfrac{(c-a)^{2n+1}}{(n!)^2(2n+1)}\int_{a}^{c}\qty[f^{(n)}(x)]^2\dd x=\dfrac{(b-a)^{2n+1}}{2^{2n+1}(n!)^2(2n+1)}\int_{a}^{c}\qty[f^{(n)}(x)]\dd x \\
         \qty(\int_{c}^{b}f(x)\dd x)^2 & \leqslant \dfrac{(b-c)^{2n+1}}{(n!)^2(2n+1)}\int_{c}^{b}\qty[f^{(n)}(x)]^2\dd x=\dfrac{(b-a)^{2n+1}}{2^{2n+1}(n!)^2(2n+1)}\int_{c}^{b}\qty[f^{(n)}(x)]\dd x
     \end{flalign*}
-    于是由基本不等式, 
+    于是由基本不等式,
     $$\qty(\int_{a}^{b}f(x)\dd x)^2\leqslant 2\qty[\qty(\int_{a}^{c}f(x)\dd x)^2+\qty(\int_{c}^{b}f(x)\dd x)^2]\leqslant \dfrac{(b-a)^{2n+1}}{2^{2n}(n!)^2(2n+1)}\int_{a}^{b}\qty[f^{(n)}(x)]^2\dd x.$$
 \end{proof}
 
@@ -1881,7 +1899,7 @@
         I & =\int_{a}^{b}|f(x)f'(x)|\dd x=\int_{a}^{\frac{a+b}{2}}|f(x)f'(x)|\dd x+\int_{\frac{a+b}{2}}^{b}|f(x)f'(x)|\dd x                      \\
           & \leqslant -\int_{a}^{\frac{a+b}{2}}g_1(x)g'_1(x)\dd x+\int_{\frac{a+b}{2}}^{b}g_2(x)g'_2(x)\dd x=\dfrac{1}{2}\qty(g_1^2(a)+g_2^2(b))
     \end{flalign*}
-    于是, 由 Cauchy-Schwarz 不等式得, 
+    于是, 由 Cauchy-Schwarz 不等式得,
     \begin{flalign*}
         \int_{a}^{b}|f(x)f'(x)|\dd x & \leqslant\dfrac{1}{2}\qty(\int_{a}^{\frac{a+b}{2}}|f'(t)|\dd t)^2+\dfrac{1}{2}\qty(\int_{\frac{a+b}{2}}^{b}|f'(t)|\dd t)^2                                                         \\
                                      & \leqslant\dfrac{1}{2}\int_{a}^{\frac{a+b}{2}}|f'(t)|^2\dd t\cdot\int_{a}^{\frac{a+b}{2}}\dd t+\dfrac{1}{2}\int_{\frac{a+b}{2}}^{b}|f'(t)|^2\dd t\cdot\int_{\frac{a+b}{2}}^{b}\dd t
@@ -1894,7 +1912,7 @@
     设函数 $f(x)$ 在 $[0,a]~(a>0)$ 上有连续的一阶导数, 且 $f(0)=0,~M=\max\limits_{x\in[0,a]}|f'(x)|$, 证明 $$\displaystyle\left|\int_{0}^{a}f(x)\dd x \right|\leqslant \dfrac{Ma^2}{2}.$$
 \end{example}
 \begin{proof}[{\songti \textbf{证法一}}]
-    $\displaystyle \int_{0}^{a}f(x)\dd x=\int_{0}^{a}f(x)\dd (x-a)=(x-a)f(x)\bigg |_0^a-\int_{0}^{a}(x-a)f'(x)\dd x=\int_{0}^{a}(a-x)f'(x)\dd x$, 
+    $\displaystyle \int_{0}^{a}f(x)\dd x=\int_{0}^{a}f(x)\dd (x-a)=(x-a)f(x)\bigg |_0^a-\int_{0}^{a}(x-a)f'(x)\dd x=\int_{0}^{a}(a-x)f'(x)\dd x$,
     故 $$\displaystyle \qty|\int_{0}^{a}f(x)\dd x|=\qty|\int_{0}^{a}(a-x)f'(x)\dd x|\leqslant M\qty|\int_{0}^{a}(a-x)\dd x|=\dfrac{Ma^2}{2}.$$
 \end{proof}
 \begin{proof}[{\songti \textbf{证法二}}]
@@ -1917,7 +1935,7 @@
     $$\qty|\int_{0}^{2}f(x)\dd x|\leqslant \dfrac{M}{3}.$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    由 $f(x)$ 在 $x=1$ 出的 Taylor 展开得, 
+    由 $f(x)$ 在 $x=1$ 出的 Taylor 展开得,
     $$f(x)=f(1)+f'(1)(x-1)+\dfrac{1}{2}f''(\xi)(x-1)^2$$
     其中 $\xi\in(0,2)$, 又 $f(1)=0,~M=\max\limits_{x\in[0,2]}|f''(x)|$ 所以有
     $$f'(1)(x-1)-\dfrac{M}{2}(x-1)^2\leqslant f(x)\leqslant f'(1)(x-1)+\dfrac{M}{2}(x-1)^2$$
