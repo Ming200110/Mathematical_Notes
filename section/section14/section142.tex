@@ -375,3 +375,37 @@
         \end{pNiceArray}$
     由此可得 $\vb*{\varLambda}=\mqty(\dmat{1,1,-5}),~\vb*{C}=\mqty(1&-1&-1\\0&1&1\\0&0&1)$, 且 $\vb*{C}^\top\vb*{AC}=\vb*{\varLambda}.$
 \end{solution}
+
+\begin{example}
+    设 3 阶矩阵 $\vb*{A}=\begin{pmatrix} 1 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & -1 \\\end{pmatrix}, \vb*{B}=\begin{pmatrix} 1 & 3 & 1 \\ 3 & a & 1 \\ 1 & 1 & 0 \\\end{pmatrix}$,
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 若矩阵 $\vb*{A}$ 与 $\vb*{B}$ 合同, 求 $a$ 与可逆矩阵 $\vb*{P}$, 使得 $\vb*{P}^\top\vb*{AP}=\vb*{B}$;
+        \item 矩阵 $\vb*{A}$ 与 $\vb*{B}$ 是否相似.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 因为 $\vb*{A}$ 与 $\vb*{B}$ 合同, 所以 $\rank\vb*{A}=\rank\vb*{B}$, 那么
+        $$\det\vb*{A}=0=\det\vb*{B}=5-a\Rightarrow a=5$$
+        实对称矩阵 $\vb*{A}$ 对应二次型为 $f(x_1,x_2,x_3)=x_1^2-x_3^2+2x_1x_2+2x_2x_3=(x_1+x_2)^2-(x_2-x_3)^2$
+        作可逆线性变化 $\begin{cases}
+            z_1=x_1+x_2\\ z_2=x_2-x_3\\ z_3=x_3
+        \end{cases}$ 即 $$\mqty( z_1 \\ z_2 \\ z_3 )=\begin{pmatrix} 1 & 1 & 0 \\ 0 & 1 & -1 \\ 0 & 0 & 1 \\\end{pmatrix}\mqty( x_1 \\ x_2 \\ x_n )=\vb*{P}_1\vb*{X}$$
+        实对称矩阵 $\vb*{B}$ 对应二次型为 $f(y_1, y_2, y_3)=y_1^2+5y_2^2+6y_1y_2+2y_1y_3+2y_2y_3=(y_1+3y_2+y_3)^2-(y_2-y_3)^2$ 作可逆线性变化 $\begin{cases}
+            z_1=y_1+3y_2+y_3\\ z_2=y_2-y_3\\ z_3=y_3
+        \end{cases}$
+        即 
+        $$
+        \mqty( z_1 \\ z_2 \\ z_n )=\begin{pmatrix} 1 & 3 & 1 \\ 0 & 2 & 1 \\ 0 & 0 & 1 \\\end{pmatrix}\mqty( y_1 \\ y_2 \\ y_n )=\vb*{P}_2\vb*{X}
+        $$
+        则 $$\vb*{X}=\vb*{P}_1^{-1}\vb*{P}_2\vb*{Y}=\begin{pmatrix} 1 & 1 & 0 \\ 0 & 1 & -1 \\ 0 & 0 & 1 \\\end{pmatrix}^{-1}\begin{pmatrix} 1 & 3 & 1 \\ 0 & 2 & 1 \\ 0 & 0 & 1 \\\end{pmatrix}\mqty( y_1 \\ y_2 \\ y_n )=\begin{pmatrix} 1 & 1 & -1 \\ 0 & 2 & 2 \\ 0 & 0 & 1 \\\end{pmatrix}\mqty( y_1 \\ y_2 \\ y_n )$$
+        记 $\vb*{P}=\begin{pmatrix} 1 & 1 & -1 \\ 0 & 2 & 2 \\ 0 & 0 & 1 \\\end{pmatrix}$, 于是在可逆线性变换 $\vb*{X}=\vb*{PY}$ 下, 二次型 $f(\vb*{X})$ 化为二次型 $g(\vb*{Y})$, 从而有 $\vb*{P}^\top\vb*{AP}=\vb*{B}.$
+        \item 矩阵 $\vb*{A}$ 与 $\vb*{B}$ 不相似, 理由如下, 因为若矩阵 $\vb*{A} \sim \vb*{B}$ 则 $|\vb*{A}|=|\vb*{B}|,\tr\vb*{A}=\tr\vb*{B}$, 由于 
+        $$
+        |\vb*{A}|=0,|\vb*{B}|=5-a,\tr\vb*{A}=0,\tr\vb*{B}=1+a
+        $$
+        方程组 $\begin{cases}
+            5-a=0\\ 1+a=0
+        \end{cases}$ 无解, 所以对任意实数 $a$, 矩阵 $\vb*{A}$ 与 $\vb*{B}$ 均不相似.
+    \end{enumerate}
+\end{solution}

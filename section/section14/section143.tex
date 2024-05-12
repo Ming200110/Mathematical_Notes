@@ -1,5 +1,11 @@
 \section{正交变换与直角坐标变换}
 
+正交变换是一种线性变换, 它保持向量的内积不变, 即在变换前后, 向量的模长和夹角保持不变. 这种变换可以通过正交矩阵来实现, 这些矩阵的特征值的绝对值为 1, 并且可以准对角化. 在图形学中, 正交变换可以用来调整图形, 使其更加规整而不改变其大小和形状. 
+
+直角坐标变换则是指在平面上, 从一个直角坐标系到另一个直角坐标系的坐标转换, 这种转换通常涉及到坐标轴的旋转或平移. 正交变换与直角坐标变换不同, 因为它不仅仅是坐标的简单转换, 而是在保持向量内积不变的同时进行坐标系的变换. 
+
+\subsection{正交变换}
+
 \begin{definition}[正交矩阵]
     设 $\vb*{A}$ 为 $n$ 阶实对称矩阵, 则存在正交矩阵 $\vb*{Q}$, 使得
     $$\vb*{Q}^{-1}\vb*{AQ}=\vb*{Q}^\top\vb*{AQ}=\mqty(\dmat{\lambda_1,\lambda_2,\ddots,\lambda_n})$$
@@ -41,6 +47,15 @@
         \end{cases}\Rightarrow a+b=2.$$
 \end{solution}
 
+\begin{example}
+    设 $\vb*{\alpha},~\vb*{\beta}$ 是三维列向量, 且 $[\vb*{\alpha},\vb*{\beta}]=-1$, 又 $\vb*{A}=\vb*{E}-\vb*{\alpha\beta}^\top$ 求 $(\vb*{A}+\vb*{E})^{-1}.$
+\end{example}
+\begin{solution}
+    因为 $[\vb*{\alpha},\vb*{\beta}]=-1$ (两个向量的内积), 所以
+    $$\vb*{A}^2=\qty(\vb*{E}-\vb*{\alpha\beta}^\top)\qty(\vb*{E}-\vb*{\alpha\beta}^\top)=\vb*{E}-2\vb*{\alpha\beta}^\top+\vb*{\alpha}\underbrace{\vb*{\beta}^\top\cdot\vb*{\alpha}}_{[\vb*{\alpha},\vb*{\beta}=-1]}\vb*{\beta}^\top=\vb*{E}-3\vb*{\alpha\beta}^\top=3\qty(\vb*{E}-\vb*{\alpha\beta}^\top)-2\vb*{E}=3\vb*{A}-2\vb*{E}$$
+    即 $\vb*{A}^2-3\vb*{A}+2\vb*{E}=\vb*{O}\Rightarrow (\vb*{A}+\vb*{E})(\vb*{A}-4\vb*{E})+6\vb*{E}=\vb*{O}\Rightarrow (\vb*{A}+\vb*{E})\dfrac{\vb*{A}-4\vb*{E}}{-6}=\vb*{E}\Rightarrow (\vb*{A}+\vb*{E})^{-1}=\dfrac{4\vb*{E}-\vb*{A}}{6}.$
+\end{solution}
+
 % \begin{example}
 %     已知二次型 $$f(x_1,x_2,x_3)=\vb*{x}^\top\vb*{Ax}=ax_1^2+ax_2^2+ax_3^2+2x_1x_2+2x_1x_3-2x_2x_3$$ 的标准形为 $y_1^2+y_2^2$, 
 %     \begin{enumerate}[label=(\arabic{*})]
@@ -72,6 +87,45 @@
     $\lambda_1=\dfrac{3}{2},\lambda_2=-\dfrac{1}{2}$, 设 $\vb*{\alpha}=(a_1,a_2,a_3)^\top,~\vb*{\beta}=(b_1,b_2,b_3)^\top$, 
     那么 $$\tr\vb*{A}=2a_1b_1+2a_2b_2+2a_3b_3=2\vb*{\alpha}^\top\vb*{\beta}=1\Rightarrow \lambda_3=\tr\vb*{A}-\lambda_1-\lambda_2=0$$
     于是 $\vb*{x}^\top\vb*{Ax}$ 的标准形为 $\dfrac{3}{2}y_1^2-\dfrac{1}{2}y_2^2.$
+\end{solution}
+
+\begin{example}
+    设 3 阶实对称矩阵 $\vb*{A}$ 的秩为 2, $\lambda_1= \lambda_2=6$ 是 $\vb*{A}$ 的二重特征值, 若 $\vb*{\alpha}_1=(1,a,0)^\top,\vb*{\alpha}_2=(2,1,1)^\top,\vb*{\alpha}_3=(0,1,-1)^\top$ 都是矩阵 $\vb*{A}$ 属于特征值 6 的特征向量,
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求 $a$ 的值;
+        \item 求 $\vb*{A}$ 的另一特征值和对应的特征向量;
+        \item 若 $\vb*{\beta}=(-2,2,-1)^\top$, 求 $\vb*{A}^{n}\vb*{\beta}$.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 对于实对称矩阵 $\vb*{A}$, 若 $\lambda$ 是矩阵 $\vb*{A}$ 的 $k$ 重特征值, 则矩阵 $\vb*{A}$ 属于特征值 $\lambda$ 的特征向量有且仅有 $k$ 个是线性无关的, 因此 $\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3$ 必线性相关, 那么 
+        $$
+        |\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3|=\mqty|1 & 2 & 0 \\ a & 1 & 1 \\ 0 & 1 & -1|=2a-2=0\Rightarrow a=1.
+        $$
+        \item 由 $\rank\vb*{A}=2$ 知 $\det\vb*{A}=0$, 又 $\det\vb*{A}=\prod \lambda_i=0\Rightarrow \lambda_3=0$, 不同的特征值对应的特征向量相互正交, 则 $\vb*{\alpha}_2\times\vb*{\alpha}_3=(-2,2,2)$, 那么矩阵 $\vb*{A}$ 属于特征值 $\lambda_3=0$ 的全部特征向量为 $k\vb*{\alpha}=k(-1,1,1)^\top.$
+        \item 设 $x_1\vb*{\alpha}_1, x_2\vb*{\alpha}_2, x_3\vb*{\alpha}=\vb*{\beta}$, 对 $\begin{pNiceArray}{ccc:c}\vb*{\alpha}_1&\vb*{\alpha}_2&\vb*{\alpha}_3&\vb*{\beta}\end{pNiceArray}$ 作初等行变换, 有 
+        $$
+        \begin{pNiceArray}{ccc:c}1 & 2 & -1 &-2\\ 1 & 1 & 1 &2\\ 0 & 1 & 1 &-1\end{pNiceArray}\xrightarrow{r_2-r_1}
+        \begin{pNiceArray}{ccc:c}1 & 2 & -1 &-2\\ 0 & -1 & 2 &4\\ 0 & 1 & 1 &-1\end{pNiceArray}\xrightarrow[r_2\times(-1)]{r_3+r_2}
+        \begin{pNiceArray}{ccc:c}1 & 2 & -1 &-2\\ 0 & 1 & -2 &-4\\ 0 & 0 & 3 &3\end{pNiceArray}
+        $$
+        解得 $x_1=3, x_2=-2, x_3=1$, 故 $\vb*{\beta}=3\vb*{\alpha}_1-2\vb*{\alpha}_2+\vb*{\alpha}$, 因为 $\vb*{A\alpha}_1=6\vb*{\alpha}_1, \vb*{A\alpha}_2=6\vb*{\alpha}_2, \vb*{A\alpha}=0\vb*{\alpha}$, 所以
+        $$\vb*{A}^{n}\vb*{\beta}=3\vb*{A}^{n}\vb*{\alpha}_1-2\vb*{A}^{n}\vb*{\alpha}_2+\vb*{A}^{n}\vb*{\alpha}=3\cdot 6^{n}\vb*{\alpha}_1-2\cdot 6^{n}\vb*{\alpha}_2=\qty(-6^{n},6^{n},-2\cdot 6^{n})^{\top}.$$
+    \end{enumerate}
+\end{solution}
+
+\begin{example}
+    若二次型 $f(x_1, x_2, x_3)=x_1^2+2x_2^2+x_3^2-2x_1x_3$, 经正交变换 $\vb*{x}=\vb*{Qy}$ 化为二次型 $g(y_1, y_2, y_3)=y_1^2+y_2^2+ay_3^2+2y_1y_2$, 求 $a$ 与矩阵 $\vb*{Q}$.
+\end{example}
+\begin{solution}
+    由题意知 $\vb*{A}=\begin{pmatrix} 1 & 0 & -1 \\ 0 & 2 & 0 \\ -1 & 0 & 1 \\\end{pmatrix}, \vb*{B}=\begin{pmatrix} 1 & 1 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & a \\\end{pmatrix}$, 且 $\vb*{A}\sim \vb*{B}$, 于是 $\tr\vb*{A}=\tr\vb*{B}\Rightarrow a=2$, 又 
+    $$
+    |\lambda\vb*{E}-\vb*{A}|=\mqty|\lambda-1 & 0 & 1 \\ 0 & \lambda-2 & 0 \\ 1 & 0 & \lambda-1 |=\lambda(\lambda-2)^2=0\Rightarrow \lambda_1=0,\lambda_2=\lambda_3=2
+    $$
+    当 $\lambda=\lambda_1=0$ 时, 对应的特征向量为 $\vb*{\xi}_1=\mqty(1\\0\\1)$, 当 $\lambda=\lambda_{2,3}=2$ 时, 对应的特征向量分别为
+    $\vb*{\xi}_2=\mqty(1\\0\\-1),\vb*{\xi}_3=\mqty(0\\1\\0)$, 令 $\vb*{Q}_1=\qty(\dfrac{\vb*{\xi}_1}{\norm*{\vb*{\xi}_1}},\dfrac{\vb*{\xi}_2}{\norm*{\vb*{\xi}_2}},\dfrac{\vb*{\xi}_3}{\norm*{\vb*{\xi}_3}})=\mqty(\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{2}}&0\\ 0&0&1\\ \dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{2}}&0)$, 二次型 $f(\vb*{x})$ 在 $\vb*{x}=\vb*{Q}_1\vb*{z}$ 下化为 $f(\vb*{z})=z_2^2+z_3^2$, 同样的, 当 $\lambda=\lambda_1=0$ 时, 对应的特征向量为 $\vb*{\eta}_1=\mqty(1\\-1\\0)$, 当 $\lambda=\lambda_{2,3}=2$ 时, 对应的特征向量分别为 $\vb*{\eta}_2=\mqty(1\\1\\0),\vb*{\xi}_3=\mqty(0\\0\\1)$, 令 $\vb*{Q}_2=\qty(\dfrac{\vb*{\eta}_1}{\norm*{\vb*{\eta}_1}},\dfrac{\vb*{\eta}_2}{\norm*{\vb*{\eta}_2}},\dfrac{\vb*{\eta}_3}{\norm*{\vb*{\eta}_3}})=\mqty(\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{2}}&0\\[6pt]-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{2}}&0\\0&0&1)$, 二次型 $g(\vb*{y})$ 在 $\vb*{y}=\vb*{Q}_2\vb*{z}$ 下化为 $g(\vb*{y})=z_2^2+z_3^2$, 则 
+    $$\vb*{Q}=\vb*{Q}_1\vb*{Q}_2^{-1}=\vb*{Q}_1\vb*{Q}_2^\top=\begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & -1 & 0 \\\end{pmatrix}.$$
 \end{solution}
 
 \begin{example}
@@ -207,15 +261,6 @@
 \end{solution}
 
 \begin{example}
-    设 $\vb*{\alpha},~\vb*{\beta}$ 是三维列向量, 且 $[\vb*{\alpha},\vb*{\beta}]=-1$, 又 $\vb*{A}=\vb*{E}-\vb*{\alpha\beta}^\top$ 求 $(\vb*{A}+\vb*{E})^{-1}.$
-\end{example}
-\begin{solution}
-    因为 $[\vb*{\alpha},\vb*{\beta}]=-1$ (两个向量的内积), 所以
-    $$\vb*{A}^2=\qty(\vb*{E}-\vb*{\alpha\beta}^\top)\qty(\vb*{E}-\vb*{\alpha\beta}^\top)=\vb*{E}-2\vb*{\alpha\beta}^\top+\vb*{\alpha}\underbrace{\vb*{\beta}^\top\cdot\vb*{\alpha}}_{[\vb*{\alpha},\vb*{\beta}=-1]}\vb*{\beta}^\top=\vb*{E}-3\vb*{\alpha\beta}^\top=3\qty(\vb*{E}-\vb*{\alpha\beta}^\top)-2\vb*{E}=3\vb*{A}-2\vb*{E}$$
-    即 $\vb*{A}^2-3\vb*{A}+2\vb*{E}=\vb*{O}\Rightarrow (\vb*{A}+\vb*{E})(\vb*{A}-4\vb*{E})+6\vb*{E}=\vb*{O}\Rightarrow (\vb*{A}+\vb*{E})\dfrac{\vb*{A}-4\vb*{E}}{-6}=\vb*{E}\Rightarrow (\vb*{A}+\vb*{E})^{-1}=\dfrac{4\vb*{E}-\vb*{A}}{6}.$
-\end{solution}
-
-\begin{example}
     设 $\vb*{\alpha}$ 为 3 维非零实列向量, $\vb*{A}=\vb*{E}-\dfrac{a}{\vb*{\alpha}^\top\vb*{\alpha}}\vb*{\alpha\alpha}^\top$ 为正交矩阵, 其中 $a\neq0,~\vb*{E}$ 为三阶单位矩阵, 
     \begin{enumerate}[label=(\arabic{*})]
         \item 求 $a$ 的值, 并证明: $\vb*{\alpha}$ 与 $\vb*{A\alpha}$ 线性相关;
@@ -238,7 +283,7 @@
                   \item $|\lambda\vb*{E}-\vb*{A}|=\begin{pNiceArray}{cc:c}
                                 \lambda&1&0\\1&\lambda&0\\ \hdottedline
                                 0&0&\lambda-1
-                            \end{pNiceArray}\qty(\lambda^2-1)(\lambda-1)=0$, 得特征值为 $\lambda_1=-1,~\lambda_2=\lambda_3=1$, 
+                            \end{pNiceArray}=\qty(\lambda^2-1)(\lambda-1)=0$, 得特征值为 $\lambda_1=-1,~\lambda_2=\lambda_3=1$, 
                   \item $\lambda^3-\tr\vb*{A}\cdot\lambda^2+\displaystyle\sum_{1\leqslant j_1<j_2\leqslant 3}\mqty|a_{j_1j_1}&a_{j_1j_2}\\a_{j_2j_1}&a_{j_2j_2}|\cdot\lambda-\det\vb*{A}=\lambda^3-\lambda^2-\lambda+1$, 解得 $\lambda_1=-1,~\lambda_2=\lambda_3=1$, 
               \end{enumerate}
               当 $\lambda=\lambda_1$ 时, 解得特征向量为 $\vb*{\xi}_1=(1,1,0)^\top$;
@@ -338,23 +383,6 @@
                                                            & =\vb*{P}\qty(\dfrac{3}{2})^{2024}\vb*{EP}^{-1}=\qty(\dfrac{3}{2})^{2024}\vb*{PP}^{-1}=\qty(\dfrac{3}{2})^{2024}\vb*{E}.
               \end{flalign*}
     \end{enumerate}
-\end{solution}
-
-\begin{example}[2024 数一]
-    已知数列 $\qty{x_n},\qty{y_n},\qty{z_n}$ 满足 $x_0=-1,y_0=0,z_0=2$, 且 $$\begin{cases}
-            x_n=-2x_{n-1}+2z_{n-1} \\
-            y_n=-2y_{n-1}-2z_{n-1} \\
-            z_n=-6x_{n-1}-3y_{n-1}+3z_{n-1}
-        \end{cases}$$ 记 $\vb*{\alpha}_n=\mqty(x_n\\y_n\\z_n)$, 写出满足 $\vb*{\alpha}_n=\vb*{A\alpha}_{n-1}$ 的矩阵 $\vb*{A}$, 并求 $\vb*{A}^n$ 及 $x_n,y_n,z_n$.
-\end{example}
-\begin{solution}
-    由题设知, $\mqty(x_n\\y_n\\z_n)=\mqty(-2&0&2\\0&-2&-2\\-6&-3&3)\mqty(x_{n-1}\\y_{n-1}\\z_{n-1})$, 即 $\vb*{A}=\mqty(-2&0&2\\0&-2&-2\\-6&-3&3)$, 
-    由 $|\lambda\vb*{E}-\vb*{A}|=0$ 得 $\lambda(\lambda-1)(\lambda+2)=0$, 解得 $\lambda_1=0,\lambda_2=1,\lambda_3=-2$, 那么, 当 $\lambda_1=0$ 时, 对应的特征向量为 $\vb*{\xi}_1=(1,-1,1)^\top$, 
-    当 $\lambda_2=1$ 时, 对应的特征向量为 $\vb*{\xi}_2=(2,-2,3)^\top$, 当 $\lambda_2=-2$ 时, 对应的特征向量为 $\vb*{\xi}_3=(1,-2,0)^\top$, 
-    故存在可逆矩阵 $\vb*{P}=(\vb*{\xi}_1,\vb*{\xi}_2,\vb*{\xi}_3)=\mqty(1&2&1\\-1&-2&-2\\1&3&0)$, 使得 $\vb*{P}^{-1}\vb*{AP}=\diag(0,1,-2)=\vb*{\Lambda}$, 即 $\vb*{A}=\vb*{P\Lambda P}^{-1}$, 那么 
-    $$\vb*{A}^n=\vb*{P}\vb*{\Lambda}^{n}\vb*{P}^{-1}=\mqty(-4+(-1)^{n+1}\cdot 2^{n}& -2+(-1)^{n+1}\cdot 2^{n}& 2\\4+(-1)^{n}\cdot 2^{n+1}& 2+(-1)^{n}\cdot 2^{n+1}&-2\\-6&-3&3)$$
-    由 $\vb*{\alpha}_n=\vb*{A\alpha}_{n-1}$, 那么 $\vb*{\alpha}_n=\vb*{A}^n\vb*{\alpha}_0=\mqty(-4+(-1)^{n+1}\cdot 2^{n}& -2+(-1)^{n+1}\cdot 2^{n}& 2\\4+(-1)^{n}\cdot 2^{n+1}& 2+(-1)^{n}\cdot 2^{n+1}&-2\\-6&-3&3)\mqty(x_0\\y_0\\z_0)=\mqty(8+(-2)^{n}\\-8+(-2)^{n+1}\\12)$, 
-    则 $x_n=8+(-2)^{n},y_n=-8+(-2)^{n+1},z_n=12.$
 \end{solution}
 
 \begin{example}

@@ -2989,8 +2989,8 @@ INPUT section/section12/section121.tex
 INPUT ./section/section12/section121.tex
 INPUT section/section12/section121.tex
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unihei/unihei9f.tfm
-INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai78.tfm
 INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unisong/unisongsl9f.tfm
+INPUT d:/texlive/2022/texmf-dist/fonts/tfm/zhmetrics/unikai/unikai78.tfm
 INPUT ./section/section12/section122.tex
 INPUT section/section12/section122.tex
 INPUT ./section/section12/section122.tex

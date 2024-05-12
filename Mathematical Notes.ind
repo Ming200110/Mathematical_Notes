@@ -16,7 +16,7 @@
 
   \item Darboux 定理, \hyperpage{85}
   \item Dirichlet 定理, \hyperpage{193}
-  \item Dirichlet 收敛定理, \hyperpage{341}
+  \item Dirichlet 收敛定理, \hyperpage{342}
   \item Dirichlet 积分等式, \hyperpage{194}
 
   \indexspace
@@ -25,7 +25,7 @@
 
   \indexspace
 
-  \item Fourier 展开, \hyperpage{341}
+  \item Fourier 展开, \hyperpage{342}
   \item Fresnel 积分等式, \hyperpage{195}
   \item Frink 判别法, \hyperpage{322}
   \item Frullani 积分定理, \hyperpage{190}
@@ -94,7 +94,7 @@
   \item 二重积分分部积分公式, \hyperpage{284}
   \item 二阶差商, \hyperpage{103}
   \item 二阶常系数线性齐次微分方程的通解结构, 
-		\hyperpage{353}
+		\hyperpage{354}
 
   \indexspace
 
@@ -146,7 +146,7 @@
   \item 周期函数的定积分公式, \hyperpage{147}
   \item 因变量, \hyperpage{3}
   \item 均值不等式, \hyperpage{111}
-  \item 均方逼近, \hyperpage{344}
+  \item 均方逼近, \hyperpage{345}
   \item 基本初等函数, \hyperpage{4}
   \item 复合函数, \hyperpage{4}
   \item 奇偶次项幂级数的收敛半径, \hyperpage{325}
@@ -215,8 +215,8 @@
   \item 用参数方程确定的函数的导数, \hyperpage{74}
   \item 留数定理, \hyperpage{196}
   \item 积分判别法, \hyperpage{316}
-  \item 积分因子, \hyperpage{350}
-  \item 积分因子的存在性定理, \hyperpage{352}
+  \item 积分因子, \hyperpage{351}
+  \item 积分因子的存在性定理, \hyperpage{353}
   \item 移位性质, \hyperpage{66}
   \item 空间曲线绕直线旋转的曲面方程, \hyperpage{213}
   \item 第一型余元公式, \hyperpage{193}
@@ -232,7 +232,7 @@
   \item 第二类曲线积分化为定积分, \hyperpage{277}
   \item 等价无穷小的充要条件, \hyperpage{30}
   \item 等价积分, \hyperpage{45}
-  \item 算子特性, \hyperpage{357}
+  \item 算子特性, \hyperpage{358}
   \item 线轴夹角余弦平方和公式, \hyperpage{208}
   \item 线面夹角余弦平方和公式, \hyperpage{208}
   \item 绝对值函数, \hyperpage{4}
@@ -250,7 +250,7 @@
 
   \indexspace
 
-  \item 通解公式, \hyperpage{348}
+  \item 通解公式, \hyperpage{349}
   \item 重积分的对称性, \hyperpage{257}
   \item 重节点差商, \hyperpage{102}
   \item 铅直渐近线, \hyperpage{7}
@@ -258,7 +258,7 @@
   \item 隐函数存在定理, \hyperpage{225}
   \item 隐函数的导数, \hyperpage{75}
   \item 高阶常系数线性齐次微分方程通解结构, 
-		\hyperpage{354}
+		\hyperpage{355}
   \item 高阶幂展开式, \hyperpage{132}
 
 \end{theindex}
