@@ -17,8 +17,8 @@
 \end{example}
 \begin{solution}
     要使函数有意义, 变量 $x$ 必须同时满足 $\begin{cases}
-        25-x^2>0\\\qty|\dfrac{x-1}{5}|\leqslant 1
-    \end{cases}\Rightarrow -4\leqslant x<5$, 因此定义域为 $[-4,5).$
+            25-x^2>0 \\\qty|\dfrac{x-1}{5}|\leqslant 1
+        \end{cases}\Rightarrow -4\leqslant x<5$, 因此定义域为 $[-4,5).$
 \end{solution}
 
 \begin{definition}[有界性]
@@ -102,12 +102,12 @@
     设 $f(x)$ 是周期为 4 的可导奇函数, 且 $f'(x)=2(x-1)~ (0\leqslant x\leqslant 2)$, 求 $f(7)$.
 \end{example}
 \begin{solution}
-    $f(x)=\displaystyle\int 2(x-1)\dd x=x^2-2x+C$, 因为 $f(x)$ 是奇函数, 所以 $f(0)=0$, 可知 $C=0$, 于是 $f(x)=x^2-2x$, 
+    $f(x)=\displaystyle\int 2(x-1)\dd x=x^2-2x+C$, 因为 $f(x)$ 是奇函数, 所以 $f(0)=0$, 可知 $C=0$, 于是 $f(x)=x^2-2x$,
     又 $f(x)$ 的周期为 $4$, 于是 $f(7)=f(-1+8)=f(-1)=-f(1)=1$.
 \end{solution}
 
 \begin{definition}[基本初等函数与初等函数]
-    常数函数 $ y=c$ ($c $ 为常数), 幂函数 $ y=x^{\alpha}(\alpha \in \mathbf{R}) $, 指数函数 $ y=a^{x}(a \neq 1, a>0) $, 对数函数 $ y=\log _{a} x(a \neq 1, a>0) $, 三角函数和反三角函数称为\textit{基本初等函数}. 由基本初等函数经过有限次四则运算或有限次复合, 并由一个式子表示的函数称为\textit{初等函数}.
+    常数函数 $ y=c$ ($c $ 为常数), 幂函数 $ y=x^{\alpha}(\alpha \in \mathbb{R}) $, 指数函数 $ y=a^{x}(a \neq 1, a>0) $, 对数函数 $ y=\log _{a} x(a \neq 1, a>0) $, 三角函数和反三角函数称为\textit{基本初等函数}. 由基本初等函数经过有限次四则运算或有限次复合, 并由一个式子表示的函数称为\textit{初等函数}.
     \index{基本初等函数}
     \index{初等函数}
 \end{definition}
@@ -119,14 +119,14 @@
 (2) \textit{取整函数}: $ y=[x] $, 表示不超过 $ x $ 的最大整数.\index{取整函数}
 
 (3) \textit{Dirichlet 函数}: $ D(x)=\begin{cases}
-    1, & x \text { 为有理数, } \\ 0, & x \text { 为无理数. }
-\end{cases}$\index{函数}
+        1, & x \text { 为有理数, } \\ 0, & x \text { 为无理数. }
+    \end{cases}$\index{函数}
 
 \subsection{复合函数与反函数}
 
 \begin{definition}[复合函数]
-    如果我们有两个函数 $ f $ 和 $ g $, 而两者的定义域分别是 $ D_{f} $ 和 $ D_{g} $, 
-    值域分别是 $ I_{f} $ 和 $ I_{g} $. 如果 $ I_{f} \cap D_{g} \neq \varnothing $, 
+    如果我们有两个函数 $ f $ 和 $ g $, 而两者的定义域分别是 $ D_{f} $ 和 $ D_{g} $,
+    值域分别是 $ I_{f} $ 和 $ I_{g} $. 如果 $ I_{f} \cap D_{g} \neq \varnothing $,
     那我们定义\textit{复合函数} 为 $$ g \circ f:=\left\{(x, z) \mid\left(\exists y \in I_{f} \cap D_{g}\right)[y=f(x) \wedge z=g(y)]\right\} .$$
     \index{复合函数}
 \end{definition}
@@ -159,7 +159,7 @@
                 1,   & 0\leqslant x<\dfrac{1}{2} \\[6pt]
                 2x,  & \dfrac{1}{2}\leqslant x<2 \\[6pt]
                 x^2, & 2\leqslant x
-            \end{cases}$ 因此 
+            \end{cases}$ 因此
         $g(x)=\begin{cases}
                 1,  & -1\leqslant x<1 \\
                 -x, & |x|>1           \\
@@ -292,7 +292,7 @@
 
 \begin{definition}[可去间断点]
     如果不连续点 $ x_{0} $ 两侧函数的极限存在且相等, 无论在 $ x_{0} $ 处是否定义
-    (若有定义, 则函数值不是在这一点的左右极限), 
+    (若有定义, 则函数值不是在这一点的左右极限),
     这类间断点叫\textit{可去间断点} (或\textit{可移间断点}), 这类函数通过补充定义
     $$f\left(x_{0}\right)=\lim _{x \rightarrow x_{0}^{+}} f(x)=\lim _{x \rightarrow x_{0}^{-}} f(x)$$
     后可变为连续函数.
@@ -330,7 +330,7 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    因为 $x\neq-1,0,1$, 下求各不连续点的左右极限值, 
+    因为 $x\neq-1,0,1$, 下求各不连续点的左右极限值,
     $$f(-1^-)=\lim_{x\to-1^-}f(x)=\lim_{\substack{x\to-1-\delta\\\delta>0}}f(x)=\dfrac{\qty(1-2^{-\frac{1}{2}})\e^{-1}}{1+2^{-1}}\cdot\dfrac{\pi}{2},~f(-1^+)=\lim_{x\to-1^+}=\lim_{\substack{x\to-1+\delta\\\delta>0}}f(x)=0$$
     则 $x=-1$ 为 $f$ 的跳跃间断点;
     $$f(0^-)=\lim_{x\to0^-}f(x)=\lim_{\substack{x\to0-\delta\\\delta>0}}f(x)=0,~f(0^+)=\lim_{x\to0^+}f(x)=\lim_{\substack{x\to0+\delta\\\delta>0}}f(x)=+\infty$$
@@ -350,7 +350,7 @@
     \index{水平渐近线}
 \end{definition}
 \begin{definition}[斜渐近线]
-    若 $\displaystyle\lim_{x\to-\infty}\dfrac{f(x)}{x}=k$ 存在且不为零, 同时 $\displaystyle\lim_{x\to-\infty}[f(x)-kx]=b$ 也存在 (或 $\displaystyle\lim_{x\to+\infty}\dfrac{f(x)}{x}=k$ 存在且不为零, 同时 $\displaystyle\lim_{x\to+\infty}[f(x)-kx]=b$ 存在), 
+    若 $\displaystyle\lim_{x\to-\infty}\dfrac{f(x)}{x}=k$ 存在且不为零, 同时 $\displaystyle\lim_{x\to-\infty}[f(x)-kx]=b$ 也存在 (或 $\displaystyle\lim_{x\to+\infty}\dfrac{f(x)}{x}=k$ 存在且不为零, 同时 $\displaystyle\lim_{x\to+\infty}[f(x)-kx]=b$ 存在),
     则称 $y=kx+b$ 为曲线 $y=f(x)$ \textit{斜渐近线}.
     \index{斜渐近线}
 \end{definition}
@@ -382,7 +382,7 @@
               故 $y$ 的水平渐近线为 $y=\dfrac{\pi}{4}$, 又因为
               $$k=\lim_{x\to+\infty}\dfrac{y }{x}=\lim_{x\to+\infty}\dfrac{\mathrm{e}^{-x^2}}{x}\arctan\dfrac{x^2+x+1}{(x-1)(x+2)}=0$$
               故曲线共存在两条渐近线, 分别为 $x=0$ 与 $y=\dfrac{\pi}{4}$.
-        \item 显然 $x=1$ 为该曲线的铅直渐近线, 下求斜渐近线, 
+        \item 显然 $x=1$ 为该曲线的铅直渐近线, 下求斜渐近线,
               \begin{flalign*}
                   k & =\lim_{x\to\pm\infty}\dfrac{y}{x}=\lim_{x\to\pm\infty}\dfrac{x^2}{(x-1)^2}\cos(2\arctan x)=1\cdot -1=-1                                               \\
                   b & =\lim_{x\to\pm\infty}(y-kx)=\lim_{x\to\pm\infty}\dfrac{x^3\cos(2\arctan x)+x(x-1)^2}{(x-1)^2}=\lim_{x\to\pm\infty}\dfrac{-x^3+x^3-2x^2+x}{(x-1)^2}=-2
@@ -392,7 +392,7 @@
               由 $$f(-1^-)=\lim_{x\to-1^-}f(x)=\dfrac{\pi}{4}-\dfrac{\pi}{4}=0,~f(-1^+)=\lim_{x\to-1^+}f(x)=\dfrac{\pi}{4}+\dfrac{\pi}{4}=\dfrac{\pi}{2}$$
               得 $x=-1$ 不是该曲线的铅直渐近线;
               又由 $$\lim_{x\to1}f(x)=\dfrac{3\pi}{4}+\lim_{x\to1}\dfrac{\arctan\dfrac{1}{x^2-1}}{x^2+x-2}=\infty$$
-              得 $x=1$ 是该曲线的铅直渐近线; 下求斜渐近线, 
+              得 $x=1$ 是该曲线的铅直渐近线; 下求斜渐近线,
               $$k_1=\lim_{x\to-\infty}\dfrac{f(x)}{x}=\lim_{x\to-\infty}\qty(2+\dfrac{1}{x})\arctan x+\dfrac{\arctan\dfrac{1}{x^2-1}}{x^3+x^2-2x}=-\pi$$
               那么
               \begin{flalign*}
@@ -455,7 +455,7 @@
     故所求斜渐近线方程为 $y=x+\dfrac{1}{\mathrm{e}}$.\\
     \textbf{法二: }改写函数表达式为 $$y=x\ln\mathrm{e}\qty[1+\dfrac{1}{\mathrm{e}(x-1)}]=x+x\ln\qty[1+\dfrac{1}{\mathrm{e}(x-1)}]=x+\dfrac{x}{\mathrm{e}(x-1)}=x+\dfrac{1}{\mathrm{e}}+o(1)~  (x\to\infty)$$
     所以斜渐近线方程为 $y=x+\dfrac{1}{\mathrm{e}}.$\\
-    \textbf{法三: }利用割线定理, 
+    \textbf{法三: }利用割线定理,
     \begin{flalign*}
         k & =\lim_{x\to\infty}\qty[f(x+1)-f(x)]=\lim_{x\to\infty}\qty[(x+1)\ln\qty(\e+\dfrac{1}{x})-x\ln\qty(\e+\dfrac{1}{x-1})]=1+\lim_{x\to\infty}x\ln\dfrac{\e+x^{-1}}{\e+(x-1)^{-1}}                                                 \\
           & =1+\lim_{x\to\infty}x\cdot\dfrac{\dfrac{1}{x}-\dfrac{1}{x-1}}{\e+\dfrac{1}{x-1}}=1-\lim_{x\to\infty}\dfrac{1}{\e(x-1)+1}=1                                                                                                   \\

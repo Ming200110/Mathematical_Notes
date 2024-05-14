@@ -32,6 +32,18 @@
     故 $\displaystyle\int_{0}^{\frac{\pi}{2}}\dfrac{\sin x}{(\sin x+\cos x)^{3}}\dd x=\eval*{-\dfrac{1}{2}(\tan x+1)^{-1}+\dfrac{1}{4}(\sin x+\cos x)^{-2}}_{0}^{\frac{\pi}{2}}=\dfrac{1}{2}.$
 \end{solution}
 
+\begin{example}
+    设 $D=\qty{(x, y)\mid x^{4}+y^{4}\leqslant 1}$, 求 $\displaystyle \iint\limits_D\qty(x^2+y^2)\dd x\dd y.$
+\end{example}
+\begin{solution}
+    由题意 $D_{\rho\theta}=\qty{(\rho,\theta)\big|0\leqslant \theta\leqslant 2\pi,0\leqslant \rho\leqslant \dfrac{1}{\sqrt[4]{\cos^4\theta+\sin^4\theta}}}$, 则
+    \begin{flalign*}
+        I & =\iint\limits_D\qty(x^2+y^2)\dd x\dd y=\int_{0}^{2\pi} \dd\theta\int_{0}^{\frac{1}{\sqrt[4]{\cos^4\theta+\sin^4\theta}}} \rho^3 \dd \rho=\dfrac{1}{4}\int_{0}^{2\pi}\dfrac{\dd \theta}{\cos^4\theta+\sin^4\theta}=\dfrac{1}{4}\int_{0}^{2\pi}\dfrac{\sin^2\theta+\cos^2\theta}{\cos^4\theta+\sin^4\theta}\dd \theta \\
+          & =\int_{0}^{\frac{\pi}{2}}\dfrac{1+\tan^2\theta}{1+\tan^4\theta}\dd \tan\theta=\int_{0}^{+\infty}\dfrac{1+t^2}{1+t^4}\dd t=\int_{0}^{+\infty}\dfrac{\dfrac{1}{t^2}+1}{\dfrac{1}{t^2}+t^2}\dd t=\int_{0}^{+\infty}\dfrac{\dfrac{1}{t^2}+1}{\qty(t-\dfrac{1}{t})^2+2}\dd t                                               \\
+          & \xlongequal{u=t-\frac{1}{t}}\int_{-\infty}^{+\infty}\dfrac{\dd u}{u^2+2}=\eval{\dfrac{1}{\sqrt{2}}\arctan\dfrac{u}{\sqrt{2}}}_{-\infty}^{+\infty}=\dfrac{\pi}{\sqrt{2}}.
+    \end{flalign*}
+\end{solution}
+
 \subsubsection{含绝对值类型}
 
 \begin{example}

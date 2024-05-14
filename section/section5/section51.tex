@@ -1,5 +1,9 @@
 \section{多元函数的极限与连续}
 
+多元函数极限主要涉及到重极限、方向极限和累次极限等概念. 重极限是指当自变量的数量趋于无穷大时, 函数值的极限情况. 方向极限则是在某一点沿特定方向的极限情况. 累次极限涉及到函数值在多个变量上逐一取极限的情况. 
+
+多元函数的连续性则涉及到函数在每一点都连续, 即在该点的所有偏导数都存在且连续. 连续性的判断不仅依赖于偏导数的存在性, 还涉及到偏导数的连续性. 
+
 \subsection{多元函数的极限}
 
 \begin{definition}[二元函数的极限]
@@ -39,6 +43,13 @@
         \item $\displaystyle\text{原式}\xlongequal[y=\rho\sin\theta]{x=\rho\cos\theta}\left(3\sin^3\theta+2\cos^2\theta\sin\theta\right)\lim_{\rho\to0^+}\frac{\rho}{1-\cos\theta\sin\theta}=0$.
         \item $\displaystyle\text{原式}\xlongequal[y=\rho\sin\theta]{x=\rho\cos\theta}\lim_{\rho\to0^+}\frac{1-\cos\rho^2}{\rho^2\e ^{\rho^4\cos^2\theta\sin^2\theta}}=\lim_{\rho\to0^+}\frac{\dfrac{1}{2}\rho^4}{\rho^2}=\lim_{\rho\to0^+}\frac{\rho^2}{2}=0$.
     \end{enumerate}
+\end{solution}
+
+\begin{example}
+    利用极坐标方法判断 $ \displaystyle f(x,y)=\dfrac{xy}{x^2+y^2} $ 当 $(x,y)\to(0,0)$ 时二重极限的存在性.
+\end{example}
+\begin{solution}
+    使用极坐标变换, 令 $x=\rho\cos\theta,y=\rho\sin\theta$, 则 $ \displaystyle \lim_{\substack{x\to0\\y\to0}} \dfrac{xy}{x^2+y^2}=\lim_{\rho \to 0^+}\cos\theta\sin\theta$, 因为极限值与 $\theta$ 相关, 当 $\theta$ 取不同值时, 函数具有不同的极限值, 因此该极限不存在.
 \end{solution}
 
 \begin{example}

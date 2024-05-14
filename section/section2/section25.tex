@@ -1,6 +1,6 @@
 \section{Lagrange 插值与 Hermite 插值}
 
-Lagrange 插值和 Hermite 插值都是插值法的一种, 用于通过已知数据点构建一个多项式函数, 从而估计在其他点上的函数. 它们的主要区别在于插值多项式的构造方式和插值点的选择.
+Lagrange 插值和 Hermite 插值是多项式插值中的两种重要方法, 它们在数学分析、数值分析和工程应用中有着广泛的应用. Lagrange 插值通过线性组合已知点的函数值来构造插值多项式, 而 Hermite 插值则是在 Lagrange 插值的基础上, 进一步要求插值多项式及其导数在某些节点处为零. 
 
 \subsection{Lagrange 插值}
 
@@ -188,7 +188,7 @@ $$\begin{cases}
     若函数 $f(x)\text{ 在 }[a,b]$ 上三阶可导, 且 $f(a)=a,f(b)=b,f'(a)=f'(b)=0$, 则 $\exists\xi\in(a,b)$, 使得 $$f'''(\xi)=-\dfrac{12}{(a-b)^2}.$$
 \end{inference}
 \begin{proof}[{\songti \textbf{证}}]
-    令 $c=a,d=b,e=f=0$, 即得证。
+    令 $c=a,d=b,e=f=0$, 即得证. 
 \end{proof}
 
 \begin{example}
