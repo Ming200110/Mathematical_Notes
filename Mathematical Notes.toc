@@ -123,17 +123,15 @@
 \contentsline {paragraph}{根式代换}{125}{Item.231}%
 \contentsline {paragraph}{二项微分式的积分}{129}{Item.252}%
 \contentsline {subsubsection}{三角函数型}{130}{Item.259}%
-\contentsline {paragraph}{各三角函数之间的关系图}{131}{theorem.3.1.3}%
-\contentsline {paragraph}{三角函数换元及万能公式}{132}{Item.265}%
 \contentsline {subsubsection}{指数型}{136}{Item.279}%
 \contentsline {subsubsection}{对数型}{137}{Item.287}%
 \contentsline {subsection}{\numberline {3.1.2}隐函数类型}{138}{subsection.3.1.2}%
 \contentsline {subsection}{\numberline {3.1.3}复合类型}{138}{subsection.3.1.3}%
 \contentsline {subsubsection}{表格积分法}{138}{subsection.3.1.3}%
-\contentsline {subsubsection}{多初等函数复合型}{139}{example.3.1.22}%
-\contentsline {paragraph}{组合积分法}{139}{example.3.1.22}%
-\contentsline {paragraph}{形式待定法}{141}{example.3.1.27}%
-\contentsline {paragraph}{双变量代换法}{143}{example.3.1.29}%
+\contentsline {subsubsection}{多初等函数复合型}{139}{example.3.1.20}%
+\contentsline {paragraph}{组合积分法}{139}{example.3.1.20}%
+\contentsline {paragraph}{形式待定法}{141}{example.3.1.25}%
+\contentsline {paragraph}{双变量代换法}{143}{example.3.1.27}%
 \contentsline {section}{\numberline {3.2}定积分}{144}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}求出不定积分后计算}{144}{subsection.3.2.1}%
 \contentsline {subsubsection}{根式积分}{144}{subsection.3.2.1}%
@@ -207,19 +205,19 @@
 \contentsline {subsubsection}{空间曲线绕直线旋转的曲面方程}{213}{subsection.4.2.4}%
 \contentsline {subsubsection}{常见的曲线及其对应方程}{213}{theorem.4.2.5}%
 \contentsline {paragraph}{摆线}{213}{theorem.4.2.5}%
-\contentsline {paragraph}{箕舌线}{213}{figure.caption.102}%
-\contentsline {paragraph}{双纽线}{213}{figure.caption.103}%
-\contentsline {paragraph}{对数螺线}{214}{figure.caption.104}%
-\contentsline {paragraph}{星形线}{214}{figure.caption.105}%
-\contentsline {paragraph}{心形线}{215}{figure.caption.106}%
-\contentsline {paragraph}{叶形线}{215}{figure.caption.107}%
-\contentsline {paragraph}{玫瑰线}{216}{figure.caption.108}%
+\contentsline {paragraph}{箕舌线}{213}{figure.caption.101}%
+\contentsline {paragraph}{双纽线}{213}{figure.caption.102}%
+\contentsline {paragraph}{对数螺线}{214}{figure.caption.103}%
+\contentsline {paragraph}{星形线}{214}{figure.caption.104}%
+\contentsline {paragraph}{心形线}{215}{figure.caption.105}%
+\contentsline {paragraph}{叶形线}{215}{figure.caption.106}%
+\contentsline {paragraph}{玫瑰线}{216}{figure.caption.107}%
 \contentsline {chapter}{\numberline {第五章\hspace {.3em}}多元函数微分学}{218}{chapter.5}%
 \contentsline {section}{\numberline {5.1}多元函数的极限与连续}{218}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}多元函数的极限}{219}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}多元函数的连续性与可微性}{220}{subsection.5.1.2}%
 \contentsline {subsubsection}{连续、偏导数存在、可微及偏导数连续之间的关系}{220}{theorem.5.1.2}%
-\contentsline {paragraph}{判断函数在某点处可微性的一般步骤}{220}{figure.caption.111}%
+\contentsline {paragraph}{判断函数在某点处可微性的一般步骤}{220}{figure.caption.110}%
 \contentsline {subsection}{\numberline {5.1.3}二元函数的 Taylor 展开}{222}{subsection.5.1.3}%
 \contentsline {section}{\numberline {5.2}多元函数的偏导数}{223}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}偏导数与隐函数}{223}{subsection.5.2.1}%
@@ -269,7 +267,7 @@
 \contentsline {subsection}{\numberline {6.2.1}两类曲线积分}{275}{subsection.6.2.1}%
 \contentsline {subsubsection}{第一类曲线积分的计算}{275}{subsection.6.2.1}%
 \contentsline {subsubsection}{第二类曲线积分的计算}{278}{example.6.2.5}%
-\contentsline {subsubsection}{方向导数与两类曲线积分的联系}{280}{figure.caption.130}%
+\contentsline {subsubsection}{方向导数与两类曲线积分的联系}{280}{figure.caption.129}%
 \contentsline {subsection}{\numberline {6.2.2}Green 公式}{280}{subsection.6.2.2}%
 \contentsline {subsubsection}{计算封闭曲线上的线积分}{281}{theorem.6.2.7}%
 \contentsline {subsubsection}{含有奇点形式}{282}{example.6.2.11}%
@@ -323,7 +321,7 @@
 \contentsline {subsection}{\numberline {8.1.4}Bernoulli 微分方程}{350}{subsection.8.1.4}%
 \contentsline {subsection}{\numberline {8.1.5}恰当方程与积分因子}{351}{subsection.8.1.5}%
 \contentsline {subsubsection}{恰当方程}{351}{subsection.8.1.5}%
-\contentsline {subsubsection}{积分因子}{352}{table.caption.146}%
+\contentsline {subsubsection}{积分因子}{352}{table.caption.145}%
 \contentsline {section}{\numberline {8.2}高阶微分方程}{355}{section.8.2}%
 \contentsline {subsection}{\numberline {8.2.1}常系数齐次线性微分方程}{355}{subsection.8.2.1}%
 \contentsline {subsubsection}{二阶常系数线性齐次微分方程的通解}{355}{subsection.8.2.1}%
@@ -532,4 +530,4 @@
 \contentsline {section}{\numberline {A.4}含有 $ax^2+b\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces (a>0)$ 的积分}{552}{section.A.4}%
 \contentsline {section}{\numberline {A.5}含有 $ax^2+b+c\hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces \hspace {0.25em plus 0.125em minus 0.08em}\ignorespaces (a>0)$ 的积分}{553}{section.A.5}%
 \contentsline {chapter}{索引}{557}{section.A.5}%
-\contentsline {chapter}{参考文献}{557}{appendix*.197}%
+\contentsline {chapter}{参考文献}{557}{appendix*.196}%

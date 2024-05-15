@@ -624,7 +624,6 @@ $\displaystyle\int x^{m}\left(ax^{n}+b \right)^{p} \dd  x$, 式中 $ m, n $ 和 
             (\rownumber{}) $\displaystyle\int \tan ^{n} x \dd  x=\frac{\tan ^{n-1} x}{n-1} -I_{n-2}$                       & (\rownumber{}) $\displaystyle\int \cot ^{n} x \dd  x=-\frac{\cot ^{n-1} x}{n-1}-I_{n-2}$                         \\
             (\rownumber{}) $\displaystyle\int \sec ^{n} x \dd  x=\frac{ \sec ^{n-2} x \tan x}{n-1}+\frac{n-2}{n-1}I_{n-2}$ & (\rownumber{}) $\displaystyle\int \csc ^{n} x \dd  x=-\frac{\csc ^{n-2} x \cot x}{n-1} +\frac{n-2}{n-1}I_{n-2}$  \\
             \midrule
-            (\rownumber{}) $\displaystyle \int\sin x\cos x\dd x=\dfrac{1}{2}\sin^2x+C$                                     & (\rownumber{}) $\displaystyle \int\sec x\csc x\dd x=\ln|\tan x|+C$                                               \\
             (\rownumber{}) $\displaystyle\int \sec x \tan x \dd  x=\sec x+C$                                               & (\rownumber{}) $\displaystyle\int \csc x \cot x \dd  x=-\csc x+C$                                                \\
             \midrule
             % \multicolumn{2}{l}{(\rownumber{}) $\displaystyle\int \cos^mx\sin^nx\dd x=-\dfrac{\cos^{m+1}x\sin^{n-1}x}{m+n}+\dfrac{n-1}{m+n}\int\cos^mx\sin^{n-2}x\dd x+C$}\\
@@ -637,32 +636,7 @@ $\displaystyle\int x^{m}\left(ax^{n}+b \right)^{p} \dd  x$, 式中 $ m, n $ 和 
         \end{tabular}}
 \end{table}
 
-\begin{theorem}
-    \(\displaystyle\int \sin^px\cos^qx\dd x=\begin{cases}
-        \displaystyle\sum_{k=0}^{\frac{q-1}{2}}(-1)^k\C_n^k\dfrac{\sin^{p+2k+1}x}{p+2k+1}+C,               & p , q \text{ 为正奇数} \\[6pt]
-        \displaystyle\sum_{k=0}^{-\frac{p+q}{2}-1}\C_{-\frac{p+q}{2}-1}^k\dfrac{\tan^{p+2k+1}x}{p+2k+1}+C, & p+q \text{ 为负偶数.}
-    \end{cases}\)
-\end{theorem}
-
-\begin{theorem}
-    $\displaystyle \dfrac{\sin 2nx}{\sin x}=2\sum_{k=1}^{n} \cos(2k-1)x,~\dfrac{\sin (2n+1)x}{\sin x}=1+\sum_{k=1}^{n} \cos 2kx.$
-\end{theorem}
-
-\begin{theorem}[高阶幂展开式]
-    正弦函数与余项函数的高阶幂展开式如下:\index{高阶幂展开式}
-    \begin{flalign*}
-        \cos^nx & =\begin{cases}
-                       \displaystyle \dfrac{1}{2^{n-1}}\sum_{k=0}^{\frac{n-1}{2}}\C_n^k\sin((n-2k)x),                                      & n \text{ 是奇数}  \\[6pt]
-                       \displaystyle \dfrac{1}{2^{n-1}}\qty[\sum_{k=0}^{\frac{n}{2}-1}\C_n^k\sin((n-2k)x)+\dfrac{1}{2}\C_n^{\frac{n}{2}}], & n \text{ 是偶数.}
-                   \end{cases}                                                                   \\
-        \sin^nx & =\begin{cases}
-                       \displaystyle \dfrac{1}{(2\i)^{n-1}}\sum_{k=0}^{\frac{n-1}{2}}(-1)^{k}\C_n^k\cos((n-2k)x),                                                      & n\text{ 是奇数}   \\
-                       \displaystyle \dfrac{2}{(2\i)^{n}}\qty[\sum_{k=0}^{\frac{n}{2}-1}(-1)^{k}\C_n^k\cos ((n-2k)x)+\dfrac{(-1)^{\frac{n}{2}}}{2}\C_n^{\frac{n}{2}}], & n \text{ 是偶数.}
-                   \end{cases}
-    \end{flalign*}
-\end{theorem}
-
-\paragraph{各三角函数之间的关系图} 下图可以很好的概括各三角函数之间的转化关系.
+% \paragraph{各三角函数之间的关系图} 下图可以很好的概括各三角函数之间的转化关系.
 
 \begin{figure}[H]
     \centering
@@ -712,14 +686,72 @@ $\displaystyle\int x^{m}\left(ax^{n}+b \right)^{p} \dd  x$, 式中 $ m, n $ 和 
     \caption{}
 \end{figure}
 
+\setcounter{magicrownumbers}{0}
+\begin{table}[H]
+    \centering
+    \caption{常用三角函数转换公式}
+    \resizebox{.99\textwidth}{!}{
+        \begin{tabular}{l l}
+            和差化积                                                                                                                                                                                                                 \\
+            (\rownumber{}) $\displaystyle\sin\alpha+\sin\beta=2\sin\dfrac{\alpha+\beta}{2}\cos\dfrac{\alpha-\beta}{2}$ & (\rownumber{}) $\displaystyle\sin\alpha-\sin\beta=2\sin\dfrac{\alpha-\beta}{2}\cos\dfrac{\alpha+\beta}{2}$  \\
+            (\rownumber{}) $\displaystyle\cos\alpha+\cos\beta=2\cos\dfrac{\alpha+\beta}{2}\cos\dfrac{\alpha-\beta}{2}$ & (\rownumber{}) $\displaystyle\cos\alpha-\cos\beta=-2\sin\dfrac{\alpha+\beta}{2}\sin\dfrac{\alpha-\beta}{2}$ \\
+            (\rownumber{}) $\displaystyle\tan\alpha+\tan\beta=\dfrac{\sin(\alpha+\beta)}{\cos\alpha\cos\beta}$         & (\rownumber{}) $\displaystyle\tan\alpha-\tan\beta=\dfrac{\sin(\alpha-\beta)}{\cos\alpha\cos\beta}$          \\
+            (\rownumber{}) $\displaystyle\cot\alpha+\cot\beta=\dfrac{\sin(\alpha+\beta)}{\sin\alpha\sin\beta}$         & (\rownumber{}) $\displaystyle\cot\alpha-\cot\beta=-\dfrac{\sin(\alpha-\beta)}{\sin\alpha\sin\beta}$         \\
+            (\rownumber{}) $\displaystyle\tan\alpha+\cot\beta=\dfrac{\cos(\alpha-\beta)}{\cos\alpha\sin\beta}$         & (\rownumber{}) $\displaystyle\tan\alpha-\cot\beta=-\dfrac{\cos(\alpha+\beta)}{\cos\alpha\sin\beta}$         \\
+            \midrule
+            平方形式的和差化积公式                                                                                                                                                                                                   \\
+            (\rownumber{}) $\displaystyle \sin^2\alpha-\sin^2\beta=\sin(\alpha+\beta)\sin(\alpha-\beta)$               & (\rownumber{}) $\displaystyle \cos^2\alpha-\cos^2\beta=-\sin(\alpha+\beta)\sin(\alpha-\beta)$               \\
+            (\rownumber{}) $\displaystyle \cos^2\alpha-\sin^2\beta=\cos(\alpha+\beta)\cos(\alpha-\beta)$               & (\rownumber{}) $\displaystyle \sin^2\alpha-\cos^2\beta=-\cos(\alpha+\beta)\cos(\alpha-\beta)$
+        \end{tabular}}
+\end{table}
+
+\begin{theorem}
+    \(\displaystyle\int \sin^px\cos^qx\dd x=\begin{cases}
+        \displaystyle\sum_{k=0}^{\frac{q-1}{2}}(-1)^k\C_n^k\dfrac{\sin^{p+2k+1}x}{p+2k+1}+C,               & p , q \text{ 为正奇数} \\[6pt]
+        \displaystyle\sum_{k=0}^{-\frac{p+q}{2}-1}\C_{-\frac{p+q}{2}-1}^k\dfrac{\tan^{p+2k+1}x}{p+2k+1}+C, & p+q \text{ 为负偶数.}
+    \end{cases}\)
+\end{theorem}
+
+\begin{theorem}
+    $\displaystyle \dfrac{\sin 2nx}{\sin x}=2\sum_{k=1}^{n} \cos(2k-1)x,~\dfrac{\sin (2n+1)x}{\sin x}=1+\sum_{k=1}^{n} \cos 2kx.$
+\end{theorem}
+
+\begin{theorem}[高阶幂展开式]
+    正弦函数与余项函数的高阶幂展开式如下:\index{高阶幂展开式}
+    \begin{flalign*}
+        \cos^nx & =\begin{cases}
+                       \displaystyle \dfrac{1}{2^{n-1}}\sum_{k=0}^{\frac{n-1}{2}}\C_n^k\sin((n-2k)x),                                      & n \text{ 是奇数}  \\[6pt]
+                       \displaystyle \dfrac{1}{2^{n-1}}\qty[\sum_{k=0}^{\frac{n}{2}-1}\C_n^k\sin((n-2k)x)+\dfrac{1}{2}\C_n^{\frac{n}{2}}], & n \text{ 是偶数.}
+                   \end{cases}                                                                   \\
+        \sin^nx & =\begin{cases}
+                       \displaystyle \dfrac{1}{(2\i)^{n-1}}\sum_{k=0}^{\frac{n-1}{2}}(-1)^{k}\C_n^k\cos((n-2k)x),                                                      & n\text{ 是奇数}   \\
+                       \displaystyle \dfrac{2}{(2\i)^{n}}\qty[\sum_{k=0}^{\frac{n}{2}-1}(-1)^{k}\C_n^k\cos ((n-2k)x)+\dfrac{(-1)^{\frac{n}{2}}}{2}\C_n^{\frac{n}{2}}], & n \text{ 是偶数.}
+                   \end{cases}
+    \end{flalign*}
+\end{theorem}
+
+\begin{theorem}[三角函数换元及万能公式]
+    形如 $ \displaystyle\int R(\sin x, \cos x) \dd  x $ ( $ R $ 为有理函数) 的积分在一般情形下可利用代换 $ \tan \dfrac{x}{2}=t $ 化为有理函数的积分, 即
+    $$\int R(\sin x, \cos x) \dd  x=\int R\left(\frac{2 t}{1+t^{2}}, \frac{1-t^{2}}{1+t^{2}}\right) \frac{2 \dd  t}{1+t^{2}}.$$
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 若等式 $$R(-\sin x, \cos x) \equiv-R(\sin x, \cos x) \text { 或 } R(\sin x,-\cos x) \equiv-R(\sin x, \cos x)$$
+              成立, 则最好利用相应的代换 $ \cos x=t $ 或 $ \sin x=t .$
+        \item 若等式 $$R(-\sin x,-\cos x) \equiv R(\sin x, \cos x)$$ 成立, 则最好利用代换 $ \tan x=t .$
+    \end{enumerate}
+\end{theorem}
+
 \begin{example}
     求下列不定积分
     \setcounter{magicrownumbers}{0}
     \begin{table}[H]
         \centering
         \begin{tabular}{l | l | l}
-            (\rownumber{}) $\displaystyle\int\cos^5x\dd x.$           & (\rownumber{}) $\displaystyle\int\sin^6x\dd x.$ & (\rownumber{}) $\displaystyle\int\dfrac{\dd x}{\sin^3x}.$ \\
-            (\rownumber{}) $\displaystyle\int\dfrac{\dd x}{\cos^3x}.$ & (\rownumber{}) $\displaystyle\int\tan^5x\dd x.$ & (\rownumber{}) $\displaystyle\int\cot^6x\dd x.$
+            (\rownumber{}) $\displaystyle\int\cos^5x\dd x.$                              & (\rownumber{}) $\displaystyle\int\sin^6x\dd x.$                                        & (\rownumber{}) $\displaystyle\int\dfrac{\dd x}{\sin^3x}.$                       \\
+            (\rownumber{}) $\displaystyle\int\dfrac{\dd x}{\cos^3x}.$                    & (\rownumber{}) $\displaystyle\int\tan^5x\dd x.$                                        & (\rownumber{}) $\displaystyle\int\cot^6x\dd x.$                                 \\
+            (\rownumber{}) $\displaystyle\int\frac{\dd x}{3\sin x-4\cos x}.$             & (\rownumber{}) $\displaystyle\int\frac{\sin x+\cos x}{\sqrt[3]{\sin x-\cos x}}\dd x.$  & (\rownumber{}) $\displaystyle\int\frac{\dd x}{2\sin x-\cos x+5}.$               \\
+            (\rownumber{}) $\displaystyle\int\frac{\cos x\dd x}{\sin x(\sin x+\cos x)}.$ & (\rownumber{}) $\displaystyle\int\frac{\sin x\cos x}{\sin x+\cos x}\dd x.$             & (\rownumber{}) $\displaystyle\int\dfrac{\sin^2x}{\sin x+2\cos x}\dd x.$         \\
+            (\rownumber{}) $\displaystyle\int\frac{\dd x}{\sin^4x+\cos^4x}.$             & (\rownumber{}) $\displaystyle\int\frac{\sin x\cos x}{1+\sin^4x}\dd x.$                 & (\rownumber{}) $\displaystyle\int\frac{\sin^2x-\cos^2x}{\sin^4x+\cos^4x}\dd x.$ \\
+            (\rownumber{}) $\displaystyle\int\frac{\sin x\dd x}{\sin^3x+\cos^3x}.$       & (\rownumber{}) $\displaystyle\int\dfrac{\tan^{\frac{1}{3}}x\dd x}{(\sin x+\cos x)^2}.$ & (\rownumber{}) $\displaystyle\int\dfrac{\cos^2x\dd x}{\csc^2x+\cot^4x}.$
         \end{tabular}
     \end{table}
 \end{example}
@@ -769,32 +801,6 @@ $\displaystyle\int x^{m}\left(ax^{n}+b \right)^{p} \dd  x$, 式中 $ m, n $ 和 
                               & = -\int \cot ^{2} x\left(1+\cot ^{2} x\right) \dd (\cot x)+2 \int \cot ^{2} x \dd (\cot x)+\int\left(\csc ^{2} x-1\right) \dd  x                         \\
                               & = -\frac{1}{3} \cot ^{3} x-\frac{1}{5} \cot ^{5} x+\frac{2}{3} \cot ^{3} x-\cot x-x+C=-\frac{1}{5} \cot ^{5} x+\frac{1}{3} \cot ^{3} x-\cot x-x+C .
               \end{flalign*}
-    \end{enumerate}
-\end{solution}
-
-\paragraph{三角函数换元及万能公式}
-
-形如 $ \displaystyle\int R(\sin x, \cos x) \dd  x $ ( $ R $ 为有理函数) 的积分在一般情形下可利用代换 $ \tan \dfrac{x}{2}=t $ 化为有理函数的积分, 即
-$$\int R(\sin x, \cos x) \dd  x=\int R\left(\frac{2 t}{1+t^{2}}, \frac{1-t^{2}}{1+t^{2}}\right) \frac{2 \dd  t}{1+t^{2}}.$$
-\begin{enumerate}[label=(\arabic{*})]
-    \item 若等式 $$R(-\sin x, \cos x) \equiv-R(\sin x, \cos x) \text { 或 } R(\sin x,-\cos x) \equiv-R(\sin x, \cos x)$$
-          成立, 则最好利用相应的代换 $ \cos x=t $ 或 $ \sin x=t .$
-    \item 若等式 $$R(-\sin x,-\cos x) \equiv R(\sin x, \cos x)$$ 成立, 则最好利用代换 $ \tan x=t .$
-\end{enumerate}
-
-\begin{example}
-    求下列不定积分
-    \setcounter{magicrownumbers}{0}
-    \begin{table}[H]
-        \centering
-        \begin{tabular}{l | l | l}
-            (\rownumber{}) $\displaystyle\int\frac{\dd x}{3\sin x-4\cos x}.$             & (\rownumber{}) $\displaystyle\int\frac{\sin x+\cos x}{\sqrt[3]{\sin x-\cos x}}\dd x.$ & (\rownumber{}) $\displaystyle\int\frac{\dd x}{2\sin x-\cos x+5}.$       \\
-            (\rownumber{}) $\displaystyle\int\frac{\cos x\dd x}{\sin x(\sin x+\cos x)}.$ & (\rownumber{}) $\displaystyle\int\frac{\sin x\cos x}{\sin x+\cos x}\dd x.$            & (\rownumber{}) $\displaystyle\int\dfrac{\sin^2x}{\sin x+2\cos x}\dd x.$
-        \end{tabular}
-    \end{table}
-\end{example}
-\begin{solution}
-    \begin{enumerate}[label=(\arabic{*})]
         \item 运用万能代换公式转为多项式函数.
               \begin{flalign*}
                   I & \xlongequal[]{t=\tan\frac{x}{2}}\int\dfrac{\dfrac{2\dd t}{1+t^2}}{\dfrac{6t}{1+t^2}-\dfrac{4(1-t^2)}{1+t^2}}=\int\dfrac{\dd t}{2t^2+3t-2}=\int\dfrac{\dd t}{(t+2)(2t-1)}         \\
@@ -838,22 +844,6 @@ $$\int R(\sin x, \cos x) \dd  x=\int R\left(\frac{2 t}{1+t^{2}}, \frac{1-t^{2}}{
                               & =-\dfrac{2}{5}\cdot \dfrac{1+2t}{1+t^{2}}+\dfrac{4}{5\sqrt{5}}\ln \left| \dfrac{\dfrac{\sqrt{5}-1}{2}+t}{\dfrac{\sqrt{5}+1}{2}-t}\right| +C
                   =-\dfrac{1}{5}\left( \cos x+2\sin x\right) +\dfrac{4}{5\sqrt{5}}\ln \left| \tan \left( \dfrac{x}{2}+\dfrac{\arctan 2}{2}\right) \right| +C.
               \end{flalign*}
-    \end{enumerate}
-\end{solution}
-
-\begin{example}
-    求下列不定积分
-    \setcounter{magicrownumbers}{0}
-    \begin{table}[H]
-        \centering
-        \begin{tabular}{l | l | l}
-            (\rownumber{}) $\displaystyle\int\frac{\dd x}{\sin^4x+\cos^4x}.$       & (\rownumber{}) $\displaystyle\int\frac{\sin x\cos x}{1+\sin^4x}\dd x.$                 & (\rownumber{}) $\displaystyle\int\frac{\sin^2x-\cos^2x}{\sin^4x+\cos^4x}\dd x.$ \\
-            (\rownumber{}) $\displaystyle\int\frac{\sin x\dd x}{\sin^3x+\cos^3x}.$ & (\rownumber{}) $\displaystyle\int\dfrac{\tan^{\frac{1}{3}}x\dd x}{(\sin x+\cos x)^2}.$ & (\rownumber{}) $\displaystyle\int\dfrac{\cos^2x\dd x}{\csc^2x+\cot^4x}.$
-        \end{tabular}
-    \end{table}
-\end{example}
-\begin{solution}
-    \begin{enumerate}[label=(\arabic{*})]
         \item $\displaystyle\text{原式}=\int \dfrac{2\dd x}{2-\sin ^{2}2x}=\int \dfrac{\dd \left( \tan 2x\right) }{2\sec ^{2}2x-\tan ^{2}2x}=\int \dfrac{\dd \left( \tan 2x\right) }{2+\tan ^{2}2x}=\dfrac{1}{\sqrt{2}}\arctan \dfrac{\tan 2x}{\sqrt{2}}+C.$
         \item $\displaystyle\text{原式}=\int \dfrac{\tan x\sec ^{2}x}{\sec ^{4}x+\tan ^{4}x}\dd x=\dfrac{1}{2}\int \dfrac{\dd \left( \tan ^{2}x\right) }{2\tan ^{4}x+2\tan ^{2}x+1}=\dfrac{1}{2}\arctan \left( 1+2\tan ^{2}x\right) +C.$
         \item $\displaystyle\text{原式}=\int \dfrac{-\cos 2x}{1-\dfrac{1}{2}\sin ^{2}2x}\dd x=\dfrac{-1}{2\sqrt{2}}\int \left( \dfrac{2\cos 2x}{\sqrt{2}-\sin 2x}+\dfrac{2\cos 2x}{\sqrt{2}+\sin 2x}\right) \dd x=\dfrac{\sqrt{2}}{4}\ln \dfrac{\sqrt{2}-\sin 2x}{\sqrt{2}+\sin 2x}+C.$
