@@ -1,16 +1,16 @@
 # Fdb version 3
-["makeindex Mathematical Notes.idx"] 1715603385 "Mathematical Notes.idx" "Mathematical Notes.ind" "Mathematical Notes" 1715603475
-  "Mathematical Notes.idx" 1715603472 9488 1eedbe15ee0eeb2b85640296a16e9cf5 "pdflatex"
+["makeindex Mathematical Notes.idx"] 1715782725 "Mathematical Notes.idx" "Mathematical Notes.ind" "Mathematical Notes" 1715782814
+  "Mathematical Notes.idx" 1715782811 9488 75e2b7dd8ab9a4c4a6a969b0a72ca9e3 "pdflatex"
   (generated)
   "Mathematical Notes.ilg"
   "Mathematical Notes.ind"
-["pdflatex"] 1715603431 "Mathematical Notes.tex" "Mathematical Notes.pdf" "Mathematical Notes" 1715603475
+["pdflatex"] 1715782769 "Mathematical Notes.tex" "Mathematical Notes.pdf" "Mathematical Notes" 1715782814
   "Frontmatter.tex" 1714620256 173 d5fa1dfe605feb8ee2a63e038f19bb00 ""
-  "Mathematical Notes.aux" 1715603472 355382 4fdae9b44c817f5baf5b586c14f38936 "pdflatex"
-  "Mathematical Notes.ind" 1715603385 9224 643460c9e77e09f0fd4a0361399646c7 "makeindex Mathematical Notes.idx"
-  "Mathematical Notes.lot" 1715603472 3887 17948bbc53c2c2b878d6de26882aae86 "pdflatex"
+  "Mathematical Notes.aux" 1715782810 355380 69d5a0ad46e7bf67d2bf2e0f750b7a97 "pdflatex"
+  "Mathematical Notes.ind" 1715782725 9224 876168e677403c471a53f351fbc596a2 "makeindex Mathematical Notes.idx"
+  "Mathematical Notes.lot" 1715782811 3887 17948bbc53c2c2b878d6de26882aae86 "pdflatex"
   "Mathematical Notes.tex" 1715308737 2121 69ce2118f9a5778a3f427fd715645290 ""
-  "Mathematical Notes.toc" 1715603472 46403 972ec089e9b672a68461098a04f193cb "pdflatex"
+  "Mathematical Notes.toc" 1715782811 46401 b72cd0b14e70da675f5d6aaa6692b373 "pdflatex"
   "appendix/appendix1.tex" 1715150078 7574 83440839dc4532ccde6e8803ab78bc56 ""
   "appendix/appendix2.tex" 1714746049 68 812d672093a73bab8e43bfa7418648e1 ""
   "c:/Windows/Fonts/msyh.ttc" 1688022991 19701556 07c864a5b15e68fa47639738197fae38 ""
@@ -742,7 +742,7 @@
   "section/section13/section13Intr.tex" 1714999457 1939 dfa7df5a050067111fac072a283bc996 ""
   "section/section14/section141.tex" 1715000224 19670 72be5ad470069264fb1d910cd4f8f9e6 ""
   "section/section14/section142.tex" 1715499216 26664 9a12a5efa2b4f54859a2c6b2c14c4236 ""
-  "section/section14/section143.tex" 1715526428 65372 00d89037d96497f79a299a4924cf1d8a ""
+  "section/section14/section143.tex" 1715778455 65569 79f7e3fa3b73a07b849f1cb1a2edd2d5 ""
   "section/section14/section14Intr.tex" 1714999737 1292 b72454d90cf8a8c7b3b78557724b07a5 ""
   "section/section15/section151.tex" 1714895459 12207 219f5130ca1a7ccfa71d830491191881 ""
   "section/section15/section152.tex" 1686214878 30 16c5c3abd40e99a2e70359996197dd71 ""
@@ -779,7 +779,7 @@
   "section/section22/section222.tex" 1715253094 12052 2558faba8bc47a452cffcf9d3f0aae4f ""
   "section/section22/section223.tex" 1714895459 5686 8059fbf5a35e3dd7a597ca5153a7cfd2 ""
   "section/section22/section22Intr.tex" 1715001650 1813 f2924c77e36544f4375ebbb5c1173eb1 ""
-  "section/section3/section31.tex" 1715573988 118426 59243efe01a491c4957048a3b2d04863 ""
+  "section/section3/section31.tex" 1715782616 118893 5e38ac94b7a6124163ba84a7f83e79a7 ""
   "section/section3/section32.tex" 1715603413 141347 480327cd3f6beddd8193d81751242481 ""
   "section/section3/section33.tex" 1715427722 44256 086ea9eec42a1e50bf31f33415080ee6 ""
   "section/section3/section34.tex" 1715568993 7900 05444a5ea8ed3dc178863a57b2961530 ""

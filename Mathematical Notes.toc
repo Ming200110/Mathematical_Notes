@@ -123,7 +123,7 @@
 \contentsline {paragraph}{根式代换}{125}{Item.231}%
 \contentsline {paragraph}{二项微分式的积分}{129}{Item.252}%
 \contentsline {subsubsection}{三角函数型}{130}{Item.259}%
-\contentsline {paragraph}{各三角函数之间的关系图}{130}{table.caption.67}%
+\contentsline {paragraph}{各三角函数之间的关系图}{131}{theorem.3.1.3}%
 \contentsline {paragraph}{三角函数换元及万能公式}{132}{Item.265}%
 \contentsline {subsubsection}{指数型}{136}{Item.279}%
 \contentsline {subsubsection}{对数型}{137}{Item.287}%
@@ -436,7 +436,7 @@
 \contentsline {subsection}{\numberline {14.3.2}谱分解}{482}{subsection.14.3.2}%
 \contentsline {subsection}{\numberline {14.3.3}正交变换的应用}{486}{subsection.14.3.3}%
 \contentsline {subsubsection}{几何应用}{486}{subsection.14.3.3}%
-\contentsline {subsubsection}{二次型与曲面方程}{486}{example.14.3.21}%
+\contentsline {subsubsection}{二次型与曲面方程}{486}{inference.14.3.1}%
 \contentsline {subsubsection}{最值问题}{488}{example.14.3.23}%
 \contentsline {subsection}{\numberline {14.3.4}直角坐标变换}{489}{subsection.14.3.4}%
 \contentsline {part}{第三部分\hspace {1em}概率论与数理统计}{492}{part.3}%
