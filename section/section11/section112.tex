@@ -82,6 +82,39 @@ $$\begin{array}{c}
 \end{enumerate}
 
 \begin{example}
+    设 $\vb*{\alpha}_1=(0,1,2,3), \vb*{\beta}_1=(2,2,3,1), \vb*{\beta}_2=(-1,2,1,2), \vb*{\beta}_3=(2,1,-1,-2)$, 问 $\vb*{\alpha}_1$ 是否可表示成 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 的线性表示.
+\end{example}
+\begin{solution}
+    由线性表示秩的关系:
+    \begin{flalign*}
+        \qty(\vb*{\beta}_1^{\top}, \vb*{\beta}_2^{\top}, \vb*{\beta}_3^{\top}, \vb*{\alpha}_1^{\top})&=\begin{pmatrix} 2 & -1 & 2 & 0 \\ 2 & 2 & 1 & 1 \\ 3 & 1 & -1 & 2 \\ 1 & 2 & -2 & 3 \\\end{pmatrix}\xrightarrow[\substack{r_3-2r_1\\ r_4-2r_1}]{\substack{r_1\leftrightarrow r_4\\ r_2-2r_1}}\begin{pmatrix} 1 & 2 & -2 & 3 \\ 0 & -2 & 5 & -5 \\ 0 & -5 & 5 & -7 \\ 0 & -5 & 6 & -6 \\\end{pmatrix}\\ 
+        &\xrightarrow[\substack{r_3-r_4\\ r_4+5r_2}]{r_2\times\qty(-\frac{1}{2})}\begin{pmatrix} 1 & 2 & -2 & 3 \\ 0 & 1 & -\dfrac{5}{2} & \dfrac{5}{2} \\ 0 & 0 & -1 & -1 \\ 0 & 0 & -\dfrac{13}{2} & \dfrac{13}{2} \\\end{pmatrix}\xrightarrow[\substack{r_4\times\qty(-\frac{2}{13})-r_3\\ r_4\times\qty(-\frac{1}{2})}]{r_3\times(-1)}\begin{pmatrix} 1 & 2 & -2 & 3 \\ 0 & 1 & -\dfrac{5}{2} & \dfrac{5}{2} \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1 \\\end{pmatrix}
+    \end{flalign*}
+    由 $\rank(\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3)=3<\rank(\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3, \vb*{\alpha}_1)=4$, 知 $\vb*{\alpha}_1$ 不能表示为 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 的线性组合.
+\end{solution}
+
+\begin{example}[2011 数一]
+    设向量组 $\vb*{\alpha}_1=(1,0,1)^\top,\vb*{\alpha}_2=(0,1,1)^\top,\vb*{\alpha}_3=(1,3,5)^\top$ 不能由向量组 $\vb*{\beta}_1=(1,1,1)^\top,\vb*{\beta}_2=(1,2,3)^\top,\vb*{\beta}_3=(3,4,a)^\top$ 线性表示,
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求 $a$ 的值;
+        \item 将 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 用 $\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3$ 线性表示.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 因为四个 $3$ 维向量 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3,\vb*{\alpha}$ 必定线性相关, 所以若 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 线性无关, 那么 $\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3$ 必可由 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 线性表示, 与题设矛盾, 故 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 一定相关, 那么
+              $$
+                  |\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3|=\mqty|1&1&3\\1&2&4\\1&3&a|=\mqty|1&1&3\\0&1&1\\0&2&a-3|=a-5=0\Rightarrow a=5.
+              $$
+        \item 对 $\begin{pNiceArray}{ccc:ccc}\vb*{\alpha}_1& \vb*{\alpha}_2& \vb*{\alpha}_3&\vb*{\beta}_1& \vb*{\beta}_2& \vb*{\beta}_3\end{pNiceArray}$ 做初等行变换, 有
+              \begin{flalign*}
+                  \begin{pNiceArray}{ccc:ccc}1&0&1&1&1&3\\0&1&3&1&2&4\\1&1&5&1&3&5\end{pNiceArray}\xrightarrow[r_2-3r_3]{r_3-r_1-r_2}\begin{pNiceArray}{ccc:ccc}1&0&0&2&1&5\\0&1&0&4&2&10\\0&0&1&-1&0&-2\end{pNiceArray}
+              \end{flalign*}
+              所以 $\vb*{\beta}_1=2\vb*{\alpha}_1+4\vb*{\alpha}_2-\vb*{\alpha}_3,~\vb*{\beta}_2=\vb*{\alpha}_1+2\vb*{\alpha}_2,~\vb*{\beta}_3=5\vb*{\alpha}_1+10\vb*{\alpha}_2-2\vb*{\alpha}_3$.
+    \end{enumerate}
+\end{solution}
+
+\begin{example}[1998 数二]
     已知 $\vb*{\alpha}_1=(1,4,0,2)^\top, \vb*{\alpha}_2=(2,7,1,3)^\top, \vb*{\alpha}_3=(0,1,-1,a)^\top, \vb*{\beta}=(3,10,b,4)^\top$,
     \begin{enumerate}[label=(\arabic{*})]
         \item $a,b$ 取何值时, $\vb*{\beta}$ 不能由 $\vb*{\alpha}_i~(i=1,2,3)$ 线性表示;

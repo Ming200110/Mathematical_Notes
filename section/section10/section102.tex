@@ -71,7 +71,7 @@
 可逆矩阵具有如下性质:
 \begin{enumerate}[label=(\arabic{*})]
     \item 方阵 $ \boldsymbol{A} $ 可逆的充分必要条件是 $ |\boldsymbol{A}| \neq 0 $;
-    \item 若 $ \boldsymbol{A} $ 可逆, 则 $ \boldsymbol{A}^{\top} $ 亦可逆, 
+    \item 若 $ \boldsymbol{A} $ 可逆, 则 $ \boldsymbol{A}^{\top} $ 亦可逆,
           且 $ \left(\boldsymbol{A}^{\top}\right)^{-1}=\left(\boldsymbol{A}^{-1}\right)^{\top}$ ;
     \item 若 $ \boldsymbol{A} $ 可逆, 则 $ \boldsymbol{A}^{-1} $ 亦可逆, 且 $ \left(\boldsymbol{A}^{-1}\right)^{-1}=\boldsymbol{A} $;
     \item 若 $ \boldsymbol{A} $ 可逆, 数 $ \lambda \neq 0 $, 则 $ \lambda \boldsymbol{A} $ 亦可逆, 且 $ (\lambda \boldsymbol{A})^{-1}=\dfrac{1}{\lambda} \boldsymbol{A}^{-1}$ ;
@@ -114,8 +114,8 @@
     其中 $\vb*{W}=\qty(\vb*{D}-\vb*{CA}^{-1}\vb*{B})^{-1}.$
 \end{theorem}
 \begin{proof}[{\songti \textbf{证}}]
-    为方便叙述, 记 $\vb*{W}=\qty(\vb*{D}-\vb*{CA}^{-1}\vb*{B})^{-1}$ 设 $\vb*{F}=\mqty(\vb*{A}&\vb*{B}\\\vb*{C}&\vb*{D})$ 的逆矩阵为 $\vb*{U}=\mqty(\vb*{U}_{11}&\vb*{U}_{12}\\\vb*{U}_{21}&\vb*{U}_{22})$, 其中 $\vb*{U}$ 的分块与 $\mqty(\vb*{A}&\vb*{B}\\\vb*{C}&\vb*{D})$ 分块后满足乘法原则, 
-    则根据可逆矩阵的定义 $\vb*{FU}=\vb*{E}$, 下面直接计算 $\vb*{FU}$ 的分块矩阵的乘积即可, 
+    为方便叙述, 记 $\vb*{W}=\qty(\vb*{D}-\vb*{CA}^{-1}\vb*{B})^{-1}$ 设 $\vb*{F}=\mqty(\vb*{A}&\vb*{B}\\\vb*{C}&\vb*{D})$ 的逆矩阵为 $\vb*{U}=\mqty(\vb*{U}_{11}&\vb*{U}_{12}\\\vb*{U}_{21}&\vb*{U}_{22})$, 其中 $\vb*{U}$ 的分块与 $\mqty(\vb*{A}&\vb*{B}\\\vb*{C}&\vb*{D})$ 分块后满足乘法原则,
+    则根据可逆矩阵的定义 $\vb*{FU}=\vb*{E}$, 下面直接计算 $\vb*{FU}$ 的分块矩阵的乘积即可,
     \begin{flalign*}
         \mqty(\vb*{E}_{11} & \vb*{O} \\\vb*{O}&\vb*{E}_{12})=\vb*{E}=\vb*{FU}=\mqty(\vb*{A}&\vb*{B}\\\vb*{C}&\vb*{D})\mqty(\vb*{U}_{11}&\vb*{U}_{12}\\\vb*{U}_{21}&\vb*{U}_{22})=\mqty(\vb*{AU}_{11}+\vb*{BU}_{21}&\vb*{AU}_{12}+\vb*{BU}_{22}\\\vb*{CU}_{11}+\vb*{DU}_{21}&\vb*{CU}_{12}+\vb*{DU}_{22})
     \end{flalign*}
@@ -274,6 +274,32 @@
 \end{solution}
 
 \begin{example}
+    已知 $n$ 阶矩阵 $\vb*{A}=\begin{pmatrix} 2 & 2 & 2 & \cdots & 2 \\ 0 & 1 & 1 & \cdots & 1 \\ 0 & 0 & 1 & \cdots & 1 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & 0 & \cdots & 1 \\\end{pmatrix}$, 求 $ \displaystyle \sum_{i,j=1}^{n} A_{ij} $.
+\end{example}
+\begin{solution}
+    其实 $\displaystyle \sum_{i,j=1}^{n} A_{ij}$ 为 $\vb*{A}^{*}$ 的所有值相加, 所以只需要求出 $\vb*{A}^{*}$, 为此
+    $$
+        \begin{pNiceArray}{c:c}
+            \vb*{A} & \vb*{E}
+        \end{pNiceArray} =\begin{pNiceArray}{ccccc:ccccc}
+            2 & 2 & 2 & \cdots & 2 & 1 & 0 & 0 & \cdots & 0\\
+            0 & 1 & 1 & \cdots & 1 & 0 & 1 & 0 & \cdots & 0\\
+            0 & 0 & 1 & \cdots & 1 & 0 & 0 & 1 & \cdots & 0\\
+            \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
+            0 & 0 & 0 & \cdots & 1 & 0 & 0 & 0 & \cdots & 1\\
+        \end{pNiceArray}\xrightarrow[\substack{r_i-r_{i+1}\\i=2,\cdots,n-1}]{r_1\times\frac{1}{2}-r_2}
+        \begin{pNiceArray}{ccccc:ccccc}
+            1 & 0 & 0 & \cdots & 0 & \dfrac{1}{2} & -1 & 0 & \cdots & 0\\
+            0 & 1 & 0 & \cdots & 0 & 0 & 1 & -1 & \cdots & 0\\
+            0 & 0 & 1 & \cdots & 0 & 0 & 0 & 1 & \cdots & 0\\
+            \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots\\
+            0 & 0 & 0 & \cdots & 1 & 0 & 0 & 0 & \cdots & 1\\
+        \end{pNiceArray}
+    $$
+    于是 $\vb*{A}^{-1}=\mqty(\dfrac{1}{2} & -1 & 0 & \cdots & 0\\0 & 1 & -1 & \cdots & 0\\ 0 & 0 & 1 & \cdots & 0\\\vdots & \vdots & \vdots & \ddots & \vdots\\ 0 & 0 & 0 & \cdots & 1)$, 且 $|\vb*{A}|=2$, 则 $\vb*{A}^{*}=\mqty(1 & -2 & 0 & \cdots & 0\\0 & 2 & -2 & \cdots & 0\\ 0 & 0 & 2 & \cdots & 0\\\vdots & \vdots & \vdots & \ddots & \vdots\\ 0 & 0 & 0 & \cdots & 2)$, 那么 $$\displaystyle \sum_{i,j=1}^{n} A_{ij}=1+2^{n-1}-2^{n-1}=1.$$
+\end{solution}
+
+\begin{example}
     设矩阵 $\vb*{A}=\mqty(1&3&0&0\\0&4&6&0\\0&0&7&9\\0&0&0&10),~\vb*{B}=(2\vb*{A}+\vb*{E})(\vb*{A}+2\vb*{E})^{-1}$, 则 $|\vb*{B}-2\vb*{E}|$ 中所有元素的代数余子式之和为多少.
 \end{example}
 \begin{solution}
@@ -283,9 +309,9 @@
                                     & =\qty((-3\vb*{E})(\vb*{A}+2\vb*{E})^{-1})^{-1}=\qty(-3(\vb*{A}+2\vb*{E})^{-1})^{-1}=-\dfrac{1}{3}(\vb*{A}+2\vb*{E})                                                        \\
                                     & =-\dfrac{1}{3}\mqty(3                                                                                                                                          & 3 & 0 & 0 \\0&6&6&0\\0&0&9&9\\0&0&0&12)=\mqty(-1&-1&0&0\\0&-2&-2&0\\0&0&-3&-3\\0&0&0&-4)
     \end{flalign*}
-    因为所有代数余子式之和等于这个伴随矩阵所有元素之和, 故先求出它的伴随矩阵, 再计算伴随矩阵各个元素相加, 
+    因为所有代数余子式之和等于这个伴随矩阵所有元素之和, 故先求出它的伴随矩阵, 再计算伴随矩阵各个元素相加,
     $|\vb*{B}-2\vb*{E}|=\dfrac{1}{24}$, 于是
-    $(\vb*{B}-2\vb*{E})^*=|\vb*{B}-2\vb*{E}|(\vb*{B}-2\vb*{E})^{-1}=\dfrac{1}{24}\mqty(-1&-1&0&0\\0&-2&-2&0\\0&0&-3&-3\\0&0&0&-4)$, 
+    $(\vb*{B}-2\vb*{E})^*=|\vb*{B}-2\vb*{E}|(\vb*{B}-2\vb*{E})^{-1}=\dfrac{1}{24}\mqty(-1&-1&0&0\\0&-2&-2&0\\0&0&-3&-3\\0&0&0&-4)$,
     因此 $|\vb*{B}-2\vb*{E}|$ 中所有元素的代数余子式之和为 $-\dfrac{2}{3}.$
 \end{solution}
 
@@ -299,7 +325,7 @@
     \label{ABA}
 \end{example}
 \begin{solution}
-    因为 $\vb*{ABA}^{-1}=\vb*{BA}^{-1}+3\vb*{E}\Rightarrow \vb*{B}=\qty(\vb*{A}-\vb*{E})^{-1}\cdot 3\vb*{A}=3\qty[\vb*{A}^{-1}\qty(\vb*{A}-\vb*{E})]^{-1}=3\qty(\vb*{A}^{-1}\vb*{A}-\vb*{A}^{-1})^{-1}=3\qty(\vb*{E}-\dfrac{1}{|\vb*{A}|}\vb*{A}^*)^{-1}$, 
+    因为 $\vb*{ABA}^{-1}=\vb*{BA}^{-1}+3\vb*{E}\Rightarrow \vb*{B}=\qty(\vb*{A}-\vb*{E})^{-1}\cdot 3\vb*{A}=3\qty[\vb*{A}^{-1}\qty(\vb*{A}-\vb*{E})]^{-1}=3\qty(\vb*{A}^{-1}\vb*{A}-\vb*{A}^{-1})^{-1}=3\qty(\vb*{E}-\dfrac{1}{|\vb*{A}|}\vb*{A}^*)^{-1}$,
     且 $|\vb*{A}^*|=8$, 又 $|\vb*{A}^*|=|\vb*{A}|^{n-1}$, 故 $|\vb*{A}|=2$, 所以
     \begin{flalign*}
         \vb*{B}=3\qty(\begin{pmatrix}

@@ -1,8 +1,8 @@
 \section{正交变换与直角坐标变换}
 
-正交变换是一种线性变换, 它保持向量的内积不变, 即在变换前后, 向量的模长和夹角保持不变. 这种变换可以通过正交矩阵来实现, 这些矩阵的特征值的绝对值为 1, 并且可以准对角化. 在图形学中, 正交变换可以用来调整图形, 使其更加规整而不改变其大小和形状. 
+正交变换是一种线性变换, 它保持向量的内积不变, 即在变换前后, 向量的模长和夹角保持不变. 这种变换可以通过正交矩阵来实现, 这些矩阵的特征值的绝对值为 1, 并且可以准对角化. 在图形学中, 正交变换可以用来调整图形, 使其更加规整而不改变其大小和形状.
 
-直角坐标变换则是指在平面上, 从一个直角坐标系到另一个直角坐标系的坐标转换, 这种转换通常涉及到坐标轴的旋转或平移. 正交变换与直角坐标变换不同, 因为它不仅仅是坐标的简单转换, 而是在保持向量内积不变的同时进行坐标系的变换. 
+直角坐标变换则是指在平面上, 从一个直角坐标系到另一个直角坐标系的坐标转换, 这种转换通常涉及到坐标轴的旋转或平移. 正交变换与直角坐标变换不同, 因为它不仅仅是坐标的简单转换, 而是在保持向量内积不变的同时进行坐标系的变换.
 
 \subsection{正交变换}
 
@@ -73,7 +73,7 @@
     设 $\vb*{\alpha},\vb*{\beta}$ 均为 3 维单位列向量, $\vb*{\alpha}^\top\vb*{\beta}=\dfrac{1}{2},~\vb*{A}=\vb*{\alpha\beta}^\top+\vb*{\beta\alpha}^\top$, 求正交变换下, 二次型 $\vb*{x}^\top\vb*{Ax}$ 的标准形.
 \end{example}
 \begin{solution}
-    先证明 $\vb*{A}$ 是实对称矩阵, 
+    先证明 $\vb*{A}$ 是实对称矩阵,
     $$\vb*{A}^\top=\qty(\vb*{\alpha\beta}^\top+\vb*{\beta\alpha}^\top)^\top=\qty(\vb*{\alpha\beta}^\top)^\top+\qty(\beta\alpha^\top)^\top=\vb*{\beta\alpha}^\top+\vb*{\alpha\beta}^\top=\vb*{A}$$
     对 $\vb*{A}$ 右乘 $\vb*{\alpha}$ 和 $\vb*{\beta}$ 得
     $$\begin{cases}
@@ -84,7 +84,7 @@
             \vb*{A}(\vb*{\alpha}-\vb*{\beta})=-\dfrac{1}{2}(\vb*{\alpha}-\vb*{\beta})
         \end{cases}$$
     因为 $\vb*{\alpha}^\top\vb*{\beta}=\dfrac{1}{2}\Rightarrow\vb*{\beta}^\top\vb*{\alpha}=\dfrac{1}{2}$, 且 $\vb*{\alpha}^\top\vb*{\alpha}=\vb*{\beta}^\top\vb*{\beta}=1$, 则得特征值
-    $\lambda_1=\dfrac{3}{2},\lambda_2=-\dfrac{1}{2}$, 设 $\vb*{\alpha}=(a_1,a_2,a_3)^\top,~\vb*{\beta}=(b_1,b_2,b_3)^\top$, 
+    $\lambda_1=\dfrac{3}{2},\lambda_2=-\dfrac{1}{2}$, 设 $\vb*{\alpha}=(a_1,a_2,a_3)^\top,~\vb*{\beta}=(b_1,b_2,b_3)^\top$,
     那么 $$\tr\vb*{A}=2a_1b_1+2a_2b_2+2a_3b_3=2\vb*{\alpha}^\top\vb*{\beta}=1\Rightarrow \lambda_3=\tr\vb*{A}-\lambda_1-\lambda_2=0$$
     于是 $\vb*{x}^\top\vb*{Ax}$ 的标准形为 $\dfrac{3}{2}y_1^2-\dfrac{1}{2}y_2^2.$
 \end{solution}
@@ -99,19 +99,19 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 对于实对称矩阵 $\vb*{A}$, 若 $\lambda$ 是矩阵 $\vb*{A}$ 的 $k$ 重特征值, 则矩阵 $\vb*{A}$ 属于特征值 $\lambda$ 的特征向量有且仅有 $k$ 个是线性无关的, 因此 $\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3$ 必线性相关, 那么 
-        $$
-        |\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3|=\mqty|1 & 2 & 0 \\ a & 1 & 1 \\ 0 & 1 & -1|=2a-2=0\Rightarrow a=1.
-        $$
+        \item 对于实对称矩阵 $\vb*{A}$, 若 $\lambda$ 是矩阵 $\vb*{A}$ 的 $k$ 重特征值, 则矩阵 $\vb*{A}$ 属于特征值 $\lambda$ 的特征向量有且仅有 $k$ 个是线性无关的, 因此 $\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3$ 必线性相关, 那么
+              $$
+                  |\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3|=\mqty|1 & 2 & 0 \\ a & 1 & 1 \\ 0 & 1 & -1|=2a-2=0\Rightarrow a=1.
+              $$
         \item 由 $\rank\vb*{A}=2$ 知 $\det\vb*{A}=0$, 又 $\det\vb*{A}=\prod \lambda_i=0\Rightarrow \lambda_3=0$, 不同的特征值对应的特征向量相互正交, 则 $\vb*{\alpha}_2\times\vb*{\alpha}_3=(-2,2,2)$, 那么矩阵 $\vb*{A}$ 属于特征值 $\lambda_3=0$ 的全部特征向量为 $k\vb*{\alpha}=k(-1,1,1)^\top.$
-        \item 设 $x_1\vb*{\alpha}_1, x_2\vb*{\alpha}_2, x_3\vb*{\alpha}=\vb*{\beta}$, 对 $\begin{pNiceArray}{ccc:c}\vb*{\alpha}_1&\vb*{\alpha}_2&\vb*{\alpha}_3&\vb*{\beta}\end{pNiceArray}$ 作初等行变换, 有 
-        $$
-        \begin{pNiceArray}{ccc:c}1 & 2 & -1 &-2\\ 1 & 1 & 1 &2\\ 0 & 1 & 1 &-1\end{pNiceArray}\xrightarrow{r_2-r_1}
-        \begin{pNiceArray}{ccc:c}1 & 2 & -1 &-2\\ 0 & -1 & 2 &4\\ 0 & 1 & 1 &-1\end{pNiceArray}\xrightarrow[r_2\times(-1)]{r_3+r_2}
-        \begin{pNiceArray}{ccc:c}1 & 2 & -1 &-2\\ 0 & 1 & -2 &-4\\ 0 & 0 & 3 &3\end{pNiceArray}
-        $$
-        解得 $x_1=3, x_2=-2, x_3=1$, 故 $\vb*{\beta}=3\vb*{\alpha}_1-2\vb*{\alpha}_2+\vb*{\alpha}$, 因为 $\vb*{A\alpha}_1=6\vb*{\alpha}_1, \vb*{A\alpha}_2=6\vb*{\alpha}_2, \vb*{A\alpha}=0\vb*{\alpha}$, 所以
-        $$\vb*{A}^{n}\vb*{\beta}=3\vb*{A}^{n}\vb*{\alpha}_1-2\vb*{A}^{n}\vb*{\alpha}_2+\vb*{A}^{n}\vb*{\alpha}=3\cdot 6^{n}\vb*{\alpha}_1-2\cdot 6^{n}\vb*{\alpha}_2=\qty(-6^{n},6^{n},-2\cdot 6^{n})^{\top}.$$
+        \item 设 $x_1\vb*{\alpha}_1, x_2\vb*{\alpha}_2, x_3\vb*{\alpha}=\vb*{\beta}$, 对 $\begin{pNiceArray}{ccc:c}\vb*{\alpha}_1&\vb*{\alpha}_2&\vb*{\alpha}_3&\vb*{\beta}\end{pNiceArray}$ 作初等行变换, 有
+              $$
+                  \begin{pNiceArray}{ccc:c}1 & 2 & -1 &-2\\ 1 & 1 & 1 &2\\ 0 & 1 & 1 &-1\end{pNiceArray}\xrightarrow{r_2-r_1}
+                  \begin{pNiceArray}{ccc:c}1 & 2 & -1 &-2\\ 0 & -1 & 2 &4\\ 0 & 1 & 1 &-1\end{pNiceArray}\xrightarrow[r_2\times(-1)]{r_3+r_2}
+                  \begin{pNiceArray}{ccc:c}1 & 2 & -1 &-2\\ 0 & 1 & -2 &-4\\ 0 & 0 & 3 &3\end{pNiceArray}
+              $$
+              解得 $x_1=3, x_2=-2, x_3=1$, 故 $\vb*{\beta}=3\vb*{\alpha}_1-2\vb*{\alpha}_2+\vb*{\alpha}$, 因为 $\vb*{A\alpha}_1=6\vb*{\alpha}_1, \vb*{A\alpha}_2=6\vb*{\alpha}_2, \vb*{A\alpha}=0\vb*{\alpha}$, 所以
+              $$\vb*{A}^{n}\vb*{\beta}=3\vb*{A}^{n}\vb*{\alpha}_1-2\vb*{A}^{n}\vb*{\alpha}_2+\vb*{A}^{n}\vb*{\alpha}=3\cdot 6^{n}\vb*{\alpha}_1-2\cdot 6^{n}\vb*{\alpha}_2=\qty(-6^{n},6^{n},-2\cdot 6^{n})^{\top}.$$
     \end{enumerate}
 \end{solution}
 
@@ -119,17 +119,17 @@
     若二次型 $f(x_1, x_2, x_3)=x_1^2+2x_2^2+x_3^2-2x_1x_3$, 经正交变换 $\vb*{x}=\vb*{Qy}$ 化为二次型 $g(y_1, y_2, y_3)=y_1^2+y_2^2+ay_3^2+2y_1y_2$, 求 $a$ 与矩阵 $\vb*{Q}$.
 \end{example}
 \begin{solution}
-    由题意知 $\vb*{A}=\begin{pmatrix} 1 & 0 & -1 \\ 0 & 2 & 0 \\ -1 & 0 & 1 \\\end{pmatrix}, \vb*{B}=\begin{pmatrix} 1 & 1 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & a \\\end{pmatrix}$, 且 $\vb*{A}\sim \vb*{B}$, 于是 $\tr\vb*{A}=\tr\vb*{B}\Rightarrow a=2$, 又 
+    由题意知 $\vb*{A}=\begin{pmatrix} 1 & 0 & -1 \\ 0 & 2 & 0 \\ -1 & 0 & 1 \\\end{pmatrix}, \vb*{B}=\begin{pmatrix} 1 & 1 & 0 \\ 1 & 1 & 0 \\ 0 & 0 & a \\\end{pmatrix}$, 且 $\vb*{A}\sim \vb*{B}$, 于是 $\tr\vb*{A}=\tr\vb*{B}\Rightarrow a=2$, 又
     $$
-    |\lambda\vb*{E}-\vb*{A}|=\mqty|\lambda-1 & 0 & 1 \\ 0 & \lambda-2 & 0 \\ 1 & 0 & \lambda-1 |=\lambda(\lambda-2)^2=0\Rightarrow \lambda_1=0,\lambda_2=\lambda_3=2
+        |\lambda\vb*{E}-\vb*{A}|=\mqty|\lambda-1 & 0 & 1 \\ 0 & \lambda-2 & 0 \\ 1 & 0 & \lambda-1 |=\lambda(\lambda-2)^2=0\Rightarrow \lambda_1=0,\lambda_2=\lambda_3=2
     $$
     当 $\lambda=\lambda_1=0$ 时, 对应的特征向量为 $\vb*{\xi}_1=\mqty(1\\0\\1)$, 当 $\lambda=\lambda_{2,3}=2$ 时, 对应的特征向量分别为
-    $\vb*{\xi}_2=\mqty(1\\0\\-1),\vb*{\xi}_3=\mqty(0\\1\\0)$, 令 $\vb*{Q}_1=\qty(\dfrac{\vb*{\xi}_1}{\norm*{\vb*{\xi}_1}},\dfrac{\vb*{\xi}_2}{\norm*{\vb*{\xi}_2}},\dfrac{\vb*{\xi}_3}{\norm*{\vb*{\xi}_3}})=\mqty(\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{2}}&0\\ 0&0&1\\ \dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{2}}&0)$, 二次型 $f(\vb*{x})$ 在 $\vb*{x}=\vb*{Q}_1\vb*{z}$ 下化为 $f(\vb*{z})=z_2^2+z_3^2$, 同样的, 当 $\lambda=\lambda_1=0$ 时, 对应的特征向量为 $\vb*{\eta}_1=\mqty(1\\-1\\0)$, 当 $\lambda=\lambda_{2,3}=2$ 时, 对应的特征向量分别为 $\vb*{\eta}_2=\mqty(1\\1\\0),\vb*{\xi}_3=\mqty(0\\0\\1)$, 令 $\vb*{Q}_2=\qty(\dfrac{\vb*{\eta}_1}{\norm*{\vb*{\eta}_1}},\dfrac{\vb*{\eta}_2}{\norm*{\vb*{\eta}_2}},\dfrac{\vb*{\eta}_3}{\norm*{\vb*{\eta}_3}})=\mqty(\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{2}}&0\\[6pt]-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{2}}&0\\0&0&1)$, 二次型 $g(\vb*{y})$ 在 $\vb*{y}=\vb*{Q}_2\vb*{z}$ 下化为 $g(\vb*{y})=z_2^2+z_3^2$, 则 
+    $\vb*{\xi}_2=\mqty(1\\0\\-1),\vb*{\xi}_3=\mqty(0\\1\\0)$, 令 $\vb*{Q}_1=\qty(\dfrac{\vb*{\xi}_1}{\norm*{\vb*{\xi}_1}},\dfrac{\vb*{\xi}_2}{\norm*{\vb*{\xi}_2}},\dfrac{\vb*{\xi}_3}{\norm*{\vb*{\xi}_3}})=\mqty(\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{2}}&0\\ 0&0&1\\ \dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{2}}&0)$, 二次型 $f(\vb*{x})$ 在 $\vb*{x}=\vb*{Q}_1\vb*{z}$ 下化为 $f(\vb*{z})=z_2^2+z_3^2$, 同样的, 当 $\lambda=\lambda_1=0$ 时, 对应的特征向量为 $\vb*{\eta}_1=\mqty(1\\-1\\0)$, 当 $\lambda=\lambda_{2,3}=2$ 时, 对应的特征向量分别为 $\vb*{\eta}_2=\mqty(1\\1\\0),\vb*{\xi}_3=\mqty(0\\0\\1)$, 令 $\vb*{Q}_2=\qty(\dfrac{\vb*{\eta}_1}{\norm*{\vb*{\eta}_1}},\dfrac{\vb*{\eta}_2}{\norm*{\vb*{\eta}_2}},\dfrac{\vb*{\eta}_3}{\norm*{\vb*{\eta}_3}})=\mqty(\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{2}}&0\\[6pt]-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{2}}&0\\0&0&1)$, 二次型 $g(\vb*{y})$ 在 $\vb*{y}=\vb*{Q}_2\vb*{z}$ 下化为 $g(\vb*{y})=z_2^2+z_3^2$, 则
     $$\vb*{Q}=\vb*{Q}_1\vb*{Q}_2^{-1}=\vb*{Q}_1\vb*{Q}_2^\top=\begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & -1 & 0 \\\end{pmatrix}.$$
 \end{solution}
 
 \begin{example}
-    已知 $\vb*{A}=\mqty(0&1&1&-1\\1&0&-1&1\\1&-1&0&1\\-1&1&1&0)$, 
+    已知 $\vb*{A}=\mqty(0&1&1&-1\\1&0&-1&1\\1&-1&0&1\\-1&1&1&0)$,
     求正交矩阵 $\vb*{P}$, 使 $\vb*{P}^\top\vb*{AP}$ 成为对角矩阵.
 \end{example}
 \begin{solution}
@@ -144,7 +144,7 @@
     $$\vb*{\alpha}_1=(1,1,0,0)^\top,~\vb*{\alpha}_2=(1,0,1,0)^\top,~\vb*{\alpha}_3=(-1,0,0,1)^\top$$
     利用 Schmidt 正交化方法, 得
     $$\vb*{\xi}_1=\dfrac{1}{\sqrt{2}}(1,1,0,0)^\top,~\vb*{\xi}_2=\dfrac{1}{\sqrt{6}}(1,-1,2,0)^\top,~\vb*{\xi}_3=\dfrac{1}{\sqrt{12}}(-1,1,1,3)^\top$$
-    对于 $\lambda_2=-3$, 可求得 $\vb*{A}$ 的相应的一个线性无关的特征向量为 $\vb*{\alpha}_4=(1,-1,-1,1)^\top$, 把它单位化得 $\vb*{\xi}_4=\dfrac{1}{2}(1,-1,-1,1)^\top$, 
+    对于 $\lambda_2=-3$, 可求得 $\vb*{A}$ 的相应的一个线性无关的特征向量为 $\vb*{\alpha}_4=(1,-1,-1,1)^\top$, 把它单位化得 $\vb*{\xi}_4=\dfrac{1}{2}(1,-1,-1,1)^\top$,
     于是有 $\vb*{P}^\top\vb*{AP}=\mathrm{diag}(1,1,1,-3)$, 其中正交矩阵 $\vb*{P}$ 为
     $$\vb*{P}=\qty(\vb*{\xi}_1,\vb*{\xi}_2,\vb*{\xi}_3,\vb*{\xi}_4)=\mqty(\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}&-\dfrac{1}{\sqrt{12}}&\dfrac{1}{2}\\[6pt]\dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{6}}&\dfrac{1}{\sqrt{12}}&-\dfrac{1}{2}\\[6pt]0&\dfrac{2}{\sqrt{6}}&\dfrac{1}{\sqrt{12}}&-\dfrac{1}{2}\\[6pt]0&0&\dfrac{3}{\sqrt{12}}&\dfrac{1}{2}).$$
 \end{solution}
@@ -162,7 +162,7 @@
     \begin{enumerate}[label=(\arabic{*})]
         \item 因为 $\vb*{A\alpha}_1=\vb*{0}=0\vb*{\alpha}_1,~\vb*{A\alpha}_2=\vb*{0}=0\vb*{\alpha}_2$, 所以 $\lambda_1=\lambda_2=0$ 是 $\vb*{A}$ 的二重特征值, $\vb*{\alpha}_1,~\vb*{\alpha}_2$ 是 $\vb*{A}$ 的属于特征值
               0 的两个线性无关的特征向量; 又 $\vb*{A}$ 的各行元素之和均为 3, 所以 $$\vb*{A}(1,1,1)^{\top}=(3,3,3)^{\top}=3(1,1,1)^{\top}$$
-              则 $\lambda_3=3$ 是 $\vb*{A}$ 的一个特征值, $\vb*{\alpha}_3=(1,1,1)^{\top}$ 是 $\vb*{A}$ 的属于特征值 3 的特征向量, 总之, $\vb*{A}$ 的特征值为 $0,0,3$, 属于特征值 0 的所有特征向量为 $k_1\vb*{\alpha}_1+k_2\vb*{\alpha}_2$ ($k_1,~k_2\text{ 不全为零}$), 
+              则 $\lambda_3=3$ 是 $\vb*{A}$ 的一个特征值, $\vb*{\alpha}_3=(1,1,1)^{\top}$ 是 $\vb*{A}$ 的属于特征值 3 的特征向量, 总之, $\vb*{A}$ 的特征值为 $0,0,3$, 属于特征值 0 的所有特征向量为 $k_1\vb*{\alpha}_1+k_2\vb*{\alpha}_2$ ($k_1,~k_2\text{ 不全为零}$),
               属于特征值 3 的所有特征向量为 $k_3\vb*{\alpha}_3~  (k_3\neq0)$.
         \item 先将 $\vb*{\alpha}_1,~\vb*{\alpha}_2$ 正交化 $$\vb*{\xi}_1=\vb*{\alpha}_1=(-1,2,-1)^{\top},~\vb*{\xi}_2=\vb*{\alpha}_2-\dfrac{\comm{\vb*{\alpha}_2}{\vb*{\xi}_1}}{\norm*{\vb*{\xi}_1}^2}\vb*{\xi}_1=\qty(-\dfrac{1}{2},0,\dfrac{1}{2})^{\top}$$
               再将 $\vb*{\xi}_1,~\vb*{\xi}_2,~\vb*{\alpha}_3$ 单位化, 得
@@ -185,7 +185,7 @@
 \end{solution}
 
 \begin{example}
-    设 $\vb*{A}$ 是 3 阶实对称矩阵, $\vb*{\alpha}=(0,-1,1)^\top,~\vb*{\beta}=(1,0,-1)^\top,~\vb*{A\alpha}=3\vb*{\beta},~\vb*{A\beta}=3\vb*{\alpha}$, 且存在 3 阶矩阵 $\vb*{B}$, 有 $\rank(\vb*{AB})<\rank\vb*{B}$, 
+    设 $\vb*{A}$ 是 3 阶实对称矩阵, $\vb*{\alpha}=(0,-1,1)^\top,~\vb*{\beta}=(1,0,-1)^\top,~\vb*{A\alpha}=3\vb*{\beta},~\vb*{A\beta}=3\vb*{\alpha}$, 且存在 3 阶矩阵 $\vb*{B}$, 有 $\rank(\vb*{AB})<\rank\vb*{B}$,
     \begin{enumerate}[label=(\arabic{*})]
         \item 求正交变换 $\vb*{x}=\vb*{Qy}$, 化二次型 $\vb*{x}^\top\qty(\vb*{A}+\vb*{A}^*)\vb*{x}$ 为标准形, 并写出该标准形;
         \item 若 $\vb*{\gamma}=(2,0,-1)^\top$, 求 $\vb*{A}^n\vb*{\gamma}.$
@@ -236,7 +236,7 @@
 
 \begin{example}
     设二次型 $$f(x_1,x_2,x_3)=4x_2^2-3x_3^2+2ax_1x_2-4x_1x_3+8x_2x_3~~(a\in\mathbb{N})$$
-    经过正交变换 $\vb*{x}=\vb*{Qy}$ 化为标准形为 $y_1^2+6y_2^2+by_3^2$, 
+    经过正交变换 $\vb*{x}=\vb*{Qy}$ 化为标准形为 $y_1^2+6y_2^2+by_3^2$,
     \begin{enumerate}[label=(\arabic{*})]
         \item 求 $a,b$ 的值及正交变换;
         \item 证明: 二次型 $\vb*{x}^\top\qty(\vb*{A}^*+37\vb*{E})\vb*{x}$ 正定, 其中 $\vb*{A}^*$ 为 $\vb*{A}$ 的伴随矩阵.
@@ -245,9 +245,9 @@
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
         \item 二次型的矩阵为 $\vb*{A}=\mqty(0&a&-2\\a&4&4\\-2&4&-3)$, 且 $\vb*{A}\sim\diag(1,6,b)$, 由矩阵相似可得 $\tr\vb*{A}=1+6+b,~\det\vb*{A}=6b$, 解得 $a=2,b=-6$, 因此 $\vb*{A}$ 的特征值分别为 $\lambda_1=1,~\lambda_2=6,~\lambda_3=-6$, \\
-              \textbf{法一: }$|\lambda\vb*{E}-\vb*{A}|=\mqty|\lambda&-2&2\\-2&\lambda-4&-4\\2&-4&\lambda+3|$, 当 $\lambda=\lambda_1$ 时, $\qty(1\vb*{E}-\vb*{A})\vb*{x}=\vb*{0}$, 解得特征向量为 $\vb*{\xi}_1=(-2,0,1)^\top$; 当 $\lambda=\lambda_2$ 时, 
+              \textbf{法一: }$|\lambda\vb*{E}-\vb*{A}|=\mqty|\lambda&-2&2\\-2&\lambda-4&-4\\2&-4&\lambda+3|$, 当 $\lambda=\lambda_1$ 时, $\qty(1\vb*{E}-\vb*{A})\vb*{x}=\vb*{0}$, 解得特征向量为 $\vb*{\xi}_1=(-2,0,1)^\top$; 当 $\lambda=\lambda_2$ 时,
               $(6\vb*{E}-\vb*{A})\vb*{x}=\vb*{0}$, 解得特征向量为 $\vb*{\xi}_2=(1,5,2)^\top$; 当 $\lambda=\lambda_3$ 时, $(-6\vb*{E}-\vb*{A})\vb*{x}=\vb*{0}$, 解得特征向量为 $\vb*{\xi}_3=(1,-1,2)^\top$, \\
-              \textbf{法二: }$\lambda=\lambda_1$ 时, $1\vb*{E}-\vb*{A}=\mqty(1&-2&2\\-2&-3&-4\\2&-4&4)\xrightarrow{r_3-2r_1}\mqty(1&-2&2\\-2&-3&-4\\0&0&0)$, $r_1$ 可由 $r_2$ 与 $(3,1,6)$ 线性表示, 
+              \textbf{法二: }$\lambda=\lambda_1$ 时, $1\vb*{E}-\vb*{A}=\mqty(1&-2&2\\-2&-3&-4\\2&-4&4)\xrightarrow{r_3-2r_1}\mqty(1&-2&2\\-2&-3&-4\\0&0&0)$, $r_1$ 可由 $r_2$ 与 $(3,1,6)$ 线性表示,
               则 $$(-2,-3,-4)\times(3,1,6)=(-14,0,7)\Rightarrow (-2,0,1)\Rightarrow \vb*{\xi}_1=(-2,0,1)^\top$$
               当 $\lambda=\lambda_2$ 时, $6\vb*{E}-\vb*{A}=\mqty(6&-2&2\\-2&2&-4\\2&-4&9)\xrightarrow[\substack{r_2\times\frac{3}{2}\\r_1\times\frac{1}{2}}]{\substack{r_2+\frac{1}{3}r_1\\r_3-\frac{1}{3}r_1\\\frac{3}{5}r_3+\frac{3}{2}r_2}}\mqty(3&-1&1\\0&2&-5\\0&0&0)$, $r_1$ 可由 $r_2$ 与 $(3,-3,6)$ 线性表示, 则
               $$(0,2,-5)\times(3,-3,6)=(-3,-15,-6)\Rightarrow(1,5,2)\Rightarrow \vb*{\xi}_2=(1,5,2)^\top$$
@@ -261,7 +261,7 @@
 \end{solution}
 
 \begin{example}
-    设 $\vb*{\alpha}$ 为 3 维非零实列向量, $\vb*{A}=\vb*{E}-\dfrac{a}{\vb*{\alpha}^\top\vb*{\alpha}}\vb*{\alpha\alpha}^\top$ 为正交矩阵, 其中 $a\neq0,~\vb*{E}$ 为三阶单位矩阵, 
+    设 $\vb*{\alpha}$ 为 3 维非零实列向量, $\vb*{A}=\vb*{E}-\dfrac{a}{\vb*{\alpha}^\top\vb*{\alpha}}\vb*{\alpha\alpha}^\top$ 为正交矩阵, 其中 $a\neq0,~\vb*{E}$ 为三阶单位矩阵,
     \begin{enumerate}[label=(\arabic{*})]
         \item 求 $a$ 的值, 并证明: $\vb*{\alpha}$ 与 $\vb*{A\alpha}$ 线性相关;
         \item 当 $\vb*{\alpha}=(b,b,0)^\top~~(b\neq0)$ 时, 求正交变换 $\vb*{x}=\vb*{Qy}$ 将二次型 $f(x_1,x_2,x_3)=\vb*{x}^\top\vb*{Ax}$ 化为规范形.
@@ -273,21 +273,21 @@
               \begin{flalign*}
                   \vb*{A}^2=\vb*{AA}^\top=\qty(\vb*{E}-\dfrac{a}{\vb*{\alpha}^\top\vb*{\alpha}}\vb*{\alpha\alpha}^\top)(\vb*{E}-\dfrac{a}{\vb*{\alpha}^\top\vb*{\alpha}}\vb*{\alpha\alpha}^\top)=\vb*{E}-\dfrac{2a}{\vb*{\alpha}^\top\vb*{\alpha}}\vb*{\alpha\alpha}^\top+\dfrac{a^2}{\qty(\vb*{\alpha}^\top\vb*{\alpha})^2}\vb*{\alpha}\underbrace{\vb*{\alpha}^\top\vb*{\alpha}}\vb*{\alpha}^\top=\vb*{E}+\dfrac{a^2-2a}{\vb*{\alpha}^\top\vb*{\alpha}}\vb*{\alpha\alpha}^\top
               \end{flalign*}
-              又因为 $\vb*{A}$ 是正交矩阵, 所以 $\vb*{A}^2=\vb*{E}$, 即 $\dfrac{a^2-2a}{\vb*{\alpha}^\top\vb*{\alpha}}\vb*{\alpha\alpha}^\top=\vb*{O}$, 而 $\vb*{\alpha}$ 为 3 维非零实列向量, 即 $\vb*{\alpha}^\top\vb*{\alpha}\neq0,~\vb*{\alpha\alpha}^\top\neq\vb*{O}$, 
-              因此 $a^2-2a=0\Rightarrow a=2~~(a\neq0)$, 
+              又因为 $\vb*{A}$ 是正交矩阵, 所以 $\vb*{A}^2=\vb*{E}$, 即 $\dfrac{a^2-2a}{\vb*{\alpha}^\top\vb*{\alpha}}\vb*{\alpha\alpha}^\top=\vb*{O}$, 而 $\vb*{\alpha}$ 为 3 维非零实列向量, 即 $\vb*{\alpha}^\top\vb*{\alpha}\neq0,~\vb*{\alpha\alpha}^\top\neq\vb*{O}$,
+              因此 $a^2-2a=0\Rightarrow a=2~~(a\neq0)$,
               $\vb*{A\alpha}=\qty(\vb*{E}-\dfrac{a}{\vb*{\alpha}^\top\vb*{\alpha}}\vb*{\alpha\alpha}^\top)\vb*{\alpha}=\vb*{\alpha}-a\vb*{\alpha}=-\vb*{\alpha}$, 因此 $\vb*{\alpha}$ 与 $\vb*{A\alpha}$ 线性相关.
-        \item \textbf{法一: }当 $\vb*{\alpha}=(b,b,0)^\top~~(b\neq0)$ 时, 
+        \item \textbf{法一: }当 $\vb*{\alpha}=(b,b,0)^\top~~(b\neq0)$ 时,
               $$\vb*{\alpha}^\top\vb*{\alpha}=(b,b,0)\mqty(b\\b\\0)=2b^2,~\vb*{\alpha\alpha}^\top=\mqty(b\\b\\0)(b,b,0)=\mqty(b^2&b^2&0\\b^2&b^2&0\\0&0&0)=b^2\mqty(1&1&0\\1&1&0\\0&0&0)$$
               那么 $\vb*{A}=\vb*{E}-\dfrac{2}{\vb*{\alpha}^\top\vb*{\alpha}}\vb*{\alpha\alpha}^\top=\mqty(0&-1&0\\-1&0&0\\0&0&1)$, 因此特征多项式为 (两种方法)
               \begin{enumerate}[label=(\roman{*})]
                   \item $|\lambda\vb*{E}-\vb*{A}|=\begin{pNiceArray}{cc:c}
                                 \lambda&1&0\\1&\lambda&0\\ \hdottedline
                                 0&0&\lambda-1
-                            \end{pNiceArray}=\qty(\lambda^2-1)(\lambda-1)=0$, 得特征值为 $\lambda_1=-1,~\lambda_2=\lambda_3=1$, 
-                  \item $\lambda^3-\tr\vb*{A}\cdot\lambda^2+\displaystyle\sum_{1\leqslant j_1<j_2\leqslant 3}\mqty|a_{j_1j_1}&a_{j_1j_2}\\a_{j_2j_1}&a_{j_2j_2}|\cdot\lambda-\det\vb*{A}=\lambda^3-\lambda^2-\lambda+1$, 解得 $\lambda_1=-1,~\lambda_2=\lambda_3=1$, 
+                            \end{pNiceArray}=\qty(\lambda^2-1)(\lambda-1)=0$, 得特征值为 $\lambda_1=-1,~\lambda_2=\lambda_3=1$,
+                  \item $\lambda^3-\tr\vb*{A}\cdot\lambda^2+\displaystyle\sum_{1\leqslant j_1<j_2\leqslant 3}\mqty|a_{j_1j_1}&a_{j_1j_2}\\a_{j_2j_1}&a_{j_2j_2}|\cdot\lambda-\det\vb*{A}=\lambda^3-\lambda^2-\lambda+1$, 解得 $\lambda_1=-1,~\lambda_2=\lambda_3=1$,
               \end{enumerate}
               当 $\lambda=\lambda_1$ 时, 解得特征向量为 $\vb*{\xi}_1=(1,1,0)^\top$;
-              当 $\lambda=\lambda_{2,3}$ 时, 解得对应的特征向量分别为 $\vb*{\xi}_2=(-1,1,0)^\top,~\vb*{\xi}_3=(0,0,1)^\top$, 
+              当 $\lambda=\lambda_{2,3}$ 时, 解得对应的特征向量分别为 $\vb*{\xi}_2=(-1,1,0)^\top,~\vb*{\xi}_3=(0,0,1)^\top$,
               将 $\vb*{\xi}_{1,2,3}$ 分别单位化, 得
               $$\vb*{e}_1=\dfrac{1}{\sqrt{2}}\mqty(1\\1\\0),~\vb*{e}_2=\dfrac{1}{\sqrt{2}}\mqty(-1\\1\\0),~\vb*{e}_3=\mqty(0\\0\\1)$$
               令 $\vb*{Q}=(\vb*{e}_1,\vb*{e}_2,\vb*{e}_3)$, 在正交变换 $\vb*{x}=\vb*{Qy}$ 下, 标准形为 $-y_1^2+y_2^2+y_2^2$ 也是规范形.\\
@@ -297,11 +297,42 @@
                       0                                            & 0 & 0 \\
                   \end{pNiceMatrix}$, 则 $\rank\vb*{B}=1$, 所以矩阵 $\vb*{B}$ 的特征值为
               $$\lambda_{b1}=\lambda_{b2}=0,~\lambda_{b3}=\tr\vb*{B}=\vb*{\alpha}^\top\vb*{\alpha}=2b^2$$
-              又因为 $\vb*{A}=\vb*{E}-\dfrac{2}{\vb*{\alpha}^\top\vb*{\alpha}}\vb*{\alpha\alpha}^\top=\vb*{E}-\dfrac{1}{b^2}\vb*{B}$, 
+              又因为 $\vb*{A}=\vb*{E}-\dfrac{2}{\vb*{\alpha}^\top\vb*{\alpha}}\vb*{\alpha\alpha}^\top=\vb*{E}-\dfrac{1}{b^2}\vb*{B}$,
               因此矩阵 $\vb*{A}$ 的特征值为 $\lambda_{a1}=\lambda_{a2}=1,~\lambda_{a3}=-1$, 并且 $\lambda_{b1}$ 对应的特征向量为 $\vb*{\xi}_1=(-1,1,0)^\top$; $\lambda_{b2}$ 对应的特征向量为 $\vb*{\xi}_2=(0,0,1)^\top$;
               $$\vb*{B\alpha}=\vb*{\alpha\alpha}^\top\vb*{\alpha}=\tr\vb*{B}\cdot\vb*{\alpha}\Rightarrow\vb*{\xi}_3=(1,1,0)^\top$$
               单位化得 $\vb*{e}_1=\dfrac{1}{\sqrt{2}}\mqty(-1\\1\\0),~\vb*{e}_2=\mqty(0\\0\\1),~\vb*{e}_3=\dfrac{1}{\sqrt{2}}\mqty(1\\1\\0)$, 令 $\vb*{Q}=(\vb*{e}_1,\vb*{e}_2,\vb*{e}_3)$, 则在正交变换 $\vb*{x}=\vb*{Qy}$ 下, 标准形为 $y_1^2+y_2^2-y_3^2$  也是规范形.
     \end{enumerate}
+\end{solution}
+
+\begin{example}
+    设 $\vb*{P}=\mqty(\cos\theta&-\sin\theta\\\sin\theta&\cos\theta)$ 为二阶正交矩阵, 证明: $\vb*{P}^{n}$ 可以表示为 $$\vb*{P}^{n}=\mqty(\cos(n\theta)&-\sin(n\theta)\\ \sin(n\theta)&\cos(n\theta)).$$
+    \label{zjjzzmti}
+\end{example}
+\begin{proof}[{\songti \textbf{证}}]
+    当 $n=2$ 时, $\vb*{P}^{2}=\vb*{P}\cdot\vb*{P}=\mqty(\cos\theta&-\sin\theta\\\sin\theta&\cos\theta)\mqty(\cos\theta&-\sin\theta\\\sin\theta&\cos\theta)=\mqty(\cos2\theta&-\sin2\theta\\\sin2\theta&\cos2\theta)$, 当 $n=3$ 时, $\vb*{P}^{3}=\vb*{P}^{2}\cdot\vb*{P}=\mqty(\cos2\theta&-\sin2\theta\\\sin2\theta&\cos2\theta)\mqty(\cos\theta&-\sin\theta\\\sin\theta&\cos\theta)=\mqty(\cos3\theta&-\sin3\theta\\\sin3\theta&\cos3\theta)$, 猜想 $\vb*{P}^{k}=\mqty(\cos k\theta&-\sin k\theta\\\sin k\theta&\cos k\theta)$, 下面利用数学归纳法证明:\\
+    当 $k=1,2$ 时, 显然成立, 假设当 $k=n$ 时, 公式成立, 那么当 $k=n+1$ 时, 有
+    \begin{flalign*}
+        \vb*{P}^{n+1} & =\vb*{P}^{n}\cdot\vb*{P}=\mqty(\cos n\theta & -\sin n\theta    \\\sin n\theta&\cos n\theta)\mqty(\cos\theta&-\sin\theta\\\sin\theta&\cos\theta)=\mqty(\cos n\theta\cos\theta-\sin n\theta\sin\theta&-\cos n\theta\sin\theta-\sin n\theta\cos\theta\\ \sin n\theta\cos\theta+\cos n\theta\sin\theta&-\sin n\theta\sin\theta+\cos n\theta\cos\theta)\\
+                      & =\mqty(\cos(n+1)\theta                      & -\sin(n+1)\theta \\\sin(n+1)\theta&\cos(n+1)\theta)
+    \end{flalign*}
+    显然此时, 猜想公式成立, 因此对一切的正整数 $n$, 猜想的公式均成立, 故 $\vb*{P}^{n}=\mqty(\cos(n\theta)&-\sin(n\theta)\\ \sin(n\theta)&\cos(n\theta)).$
+\end{proof}
+
+\begin{example}
+    已知 $\vb*{A}=\mqty(1&-\dfrac{x}{n}\\ \dfrac{x}{n}&1)$, 计算 $\displaystyle \lim_{x \to 0}\qty[\lim_{n \to +\infty}\dfrac{1}{x}\qty(\vb*{E}-\vb*{A}^{n})]$ (注明: 矩阵的极限, 即它每个元素取极限, 且 $n\in\mathbb{N}^{*}$).
+\end{example}
+\begin{solution}
+    注意到 $\vb*{A}$ 的列向量相互正交, 且模为 $|\vb*{\alpha}|=\sqrt{1^2+\qty(\pm\dfrac{x}{n})^n}=\sqrt{1+\dfrac{x^2}{n^2}}$, 把矩阵 $\vb*{A}$ 表示为 $\vb*{A}=\vb*{\alpha P}$, 其中 $\vb*{P}$ 为正交矩阵, 由例题 \ref{zjjzzmti} 知
+    $$
+        \vb*{A}^{n}=\vb*{\alpha}^{n}\mqty(\cos(n\theta)&-\sin(n\theta)\\ \sin(n\theta)&\cos(n\theta))
+    $$
+    其中 $\theta=\arcsin\qty(\dfrac{x}{n|\vb*{\alpha}|})$, 当 $n\to+\infty$ 时, 有 $$|\vb*{\alpha}|=\lim_{n \to +\infty}\qty(1+\dfrac{x^2}{n^2})^{\frac{1}{2}}=1,~|\vb*{\alpha}|^{n}=1$$
+    而 $n\theta=\dfrac{x}{|\vb*{\alpha}|}\qty(\dfrac{|\vb*{\alpha}|n}{x}\arcsin\dfrac{x}{n|\vb*{\alpha}|})\to x~(n\to+\infty)$, 所以 $\displaystyle \lim_{n \to +\infty}\qty(\vb*{E}-\vb*{A}^{n})=\mqty(1-\cos x& \sin x\\ -\sin x&1-\cos x)$
+    \begin{flalign*}
+        \lim_{x\to0}\qty[\lim_{n \to +\infty}\dfrac{1}{x}\qty(\vb*{E}-\vb*{A}^{n})] & =\lim_{x\to0}\dfrac{1}{x}\mqty(1-\cos x & \sin x                        \\ -\sin x&1-\cos x)=\lim_{x\to0}\mqty(\dfrac{1-\cos x}{x}&\dfrac{\sin x}{x}\\ -\dfrac{\sin x}{x}&\dfrac{1-\cos x}{x})\\
+                                                                                    & =\mqty(\displaystyle\lim_{x\to0}\dfrac{1-\cos x}{x}  & \displaystyle\lim_{x\to0}\dfrac{\sin x}{x} \\[6pt] \displaystyle\lim_{x\to0}-\dfrac{\sin x}{x}&\displaystyle\lim_{x\to0}\dfrac{1-\cos x}{x})=\mqty(0&1\\-1&0).
+    \end{flalign*}
+
 \end{solution}
 
 \subsection{谱分解}
@@ -367,7 +398,7 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item \textbf{法一: }因为 $\vb*{A}$ 的每行元素之和为 3, 故特征值 $\lambda_1=3$, 且对应的特征向量为 $\vb*{\xi}_1=(1,1,1)^\top$, 又因为 $\vb*{A}$ 是实对称矩阵, 所以 $\vb*{A}$ 一定能相似对角化, 并且由 $\rank\vb*{A}=1$, 故矩阵 $\vb*{A}$ 的非零特征值个数为 1, 即 $\lambda_2=\lambda_3=0$, 设其对应的特征向量为 $\vb*{\xi}_2,~\vb*{\xi}_3$, 
+        \item \textbf{法一: }因为 $\vb*{A}$ 的每行元素之和为 3, 故特征值 $\lambda_1=3$, 且对应的特征向量为 $\vb*{\xi}_1=(1,1,1)^\top$, 又因为 $\vb*{A}$ 是实对称矩阵, 所以 $\vb*{A}$ 一定能相似对角化, 并且由 $\rank\vb*{A}=1$, 故矩阵 $\vb*{A}$ 的非零特征值个数为 1, 即 $\lambda_2=\lambda_3=0$, 设其对应的特征向量为 $\vb*{\xi}_2,~\vb*{\xi}_3$,
               则 $\vb*{\xi}_1,\vb*{\xi}_2,\vb*{\xi}_3$ 相互正交, 故可令 $\vb*{\xi}_2=(-1,1,0)^\top,~\vb*{\xi}_3=(-1,0,1)^\top$, 因为 $\vb*{\xi}_1,\vb*{\xi}_2,\vb*{\xi}_3$ 是三维空间中线性无关的三个向量, 则其线性组合能表示该空间中的任一向量, 即 $\exists k_1,k_2,k_3$, 使得 $\vb*{\beta}=k_1\vb*{\xi}_1+k_2\vb*{\xi}_2+k_3\vb*{\xi}_3$, 即
               $$\vb*{A}^n\vb*{\beta}=\vb*{A}^n\qty(k_1\vb*{\xi}_1+k_2\vb*{\xi}_2+k_3\vb*{\xi}_3)=k_1\vb*{A}^n\vb*{\xi}_1+k_2\vb*{A}^n\vb*{\xi}_2+k_3\vb*{A}^n\vb*{\xi}_3=k_1\lambda_1^n\vb*{\xi}_1+k_2\lambda_2^n\vb*{\xi}_2+k_3\lambda_3^n\vb*{\xi}_3$$
               作增广矩阵 $\vb*{B}=\begin{pNiceArray}{ccc:c}\vb*{\xi}_1&\vb*{\xi}_2&\vb*{\xi}_3&\vb*{\beta}\end{pNiceArray}=\begin{pNiceArray}{ccc:c}1&-1&-1&-1\\1&1&0&2\\1&0&1&2\end{pNiceArray}$, 将其化为行最简形
@@ -397,7 +428,7 @@
     $$(-1,0,1)\times(-1,2,1)=(-2,-2,-2)\Rightarrow (1,1,1)\Rightarrow \vb*{\xi}_1=(1,1,1)^\top$$
     分别将特征向量 $\vb*{\xi}_{1,2,3}$ 单位化, 有 $\vb*{e}_1=\dfrac{1}{\sqrt{3}}\mqty(1\\1\\1),~\vb*{e}_2=\dfrac{1}{\sqrt{2}}\mqty(-1\\0\\1),~\vb*{e}_3=\dfrac{1}{\sqrt{6}}\mqty(-1\\2\\-1)$, 那么
     $$\vb*{Q}=(\vb*{e}_1,\vb*{e}_2,\vb*{e}_3)=\mqty(\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{6}})$$
-    因此 $\vb*{Q}^\top\vb*{AQ}=\vb*{\Lambda}=\mqty(\dmat{-1,2,2})$, 因此二次型的标准形为 $f(y_1,y_2,y_3)=-y_1^2+2y_2^2+2y_3^2$, 
+    因此 $\vb*{Q}^\top\vb*{AQ}=\vb*{\Lambda}=\mqty(\dmat{-1,2,2})$, 因此二次型的标准形为 $f(y_1,y_2,y_3)=-y_1^2+2y_2^2+2y_3^2$,
     \begin{flalign*}
         \vb*{A} & =\mqty(\dfrac{1}{\sqrt{3}}  & -\dfrac{1}{\sqrt{2}} & -\dfrac{1}{\sqrt{6}} \\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{6}})\mqty(\dmat{-1,2,2})\mqty(\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{6}})^\top\\
                 & =\mqty(-\dfrac{1}{\sqrt{3}} & -\dfrac{2}{\sqrt{2}} & -\dfrac{2}{\sqrt{6}} \\[6pt]-\dfrac{1}{\sqrt{3}}&0&\dfrac{4}{\sqrt{6}}\\[6pt]-\dfrac{1}{\sqrt{3}}&\dfrac{2}{\sqrt{2}}&-\dfrac{2}{\sqrt{6}})\mqty(\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{6}})^\top=\mqty(1&-1&-1\\-1&1&-1\\-1&-1&1).
@@ -407,7 +438,7 @@
 \end{solution}
 
 \begin{example}
-    设 3 阶实矩阵 $\vb*{A}$ 及其伴随矩阵 $\vb*{A}^*$ 满足 $\vb*{A}-\vb*{A}^*-\vb*{E}=\vb*{O}$, 且 $\det\vb*{A}=2$, 
+    设 3 阶实矩阵 $\vb*{A}$ 及其伴随矩阵 $\vb*{A}^*$ 满足 $\vb*{A}-\vb*{A}^*-\vb*{E}=\vb*{O}$, 且 $\det\vb*{A}=2$,
     \begin{enumerate}[label=(\arabic{*})]
         \item 证明: $\vb*{A}$ 能相似对角化;
         \item 如果 $\vb*{A}$ 为实对称矩阵, 且 $\vb*{\xi}=(1,1,-1)^\top$ 是齐次线性方程组 $(\vb*{A}-2\vb*{E})\vb*{x}=\vb*{0}$ 的一个解, 求对称矩阵 $\vb*{B}$, 使得 $\vb*{B}^2=\vb*{A}+\vb*{E}$.
@@ -419,7 +450,7 @@
               $$\vb*{A}\qty(\vb*{A}-\vb*{A}^*-\vb*{E})=\vb*{O}\Rightarrow \vb*{A}^2-\vb*{A}-2\vb*{E}=\vb*{O}\Rightarrow (\vb*{A}+\vb*{E})(\vb*{A}-2\vb*{E})=\vb*{O}$$
               那么 $$3=\rank\qty[(\vb*{A}+\vb*{E})-(\vb*{A}-2\vb*{E})]\leqslant \rank(\vb*{A}+\vb*{E})+\rank(\vb*{A}-2\vb*{E})\leqslant 3\Rightarrow \rank(\vb*{A}+\vb*{E})+\rank(\vb*{A}-2\vb*{E})=3$$
               又因为属于特征值 -1 的特征向量的个数为 $3-\rank(\vb*{A}+\vb*{E})$, 属于特征值 2 的特征向量的个数为 $3-\rank(\vb*{A}-2\vb*{E})$, 相加得 $\vb*{A}$ 有 3 个线性无关的特征向量, 即 $\vb*{A}$ 能相似对角化.
-        \item 由 (1) 可知, 矩阵 $\vb*{A}$ 的两个特征值分别为 $\lambda_1=-1,~\lambda_2=2$, 且 $\det\vb*{A}=2=\lambda_1\lambda_2\lambda_3$, 所以 $\lambda_3=-1$, 又因为 $\vb*{\xi}=(1,1,-1)^\top$ 是齐次线性方程组 $(\vb*{A}-2\vb*{E})\vb*{x}=\vb*{0}$ 的一个解, 
+        \item 由 (1) 可知, 矩阵 $\vb*{A}$ 的两个特征值分别为 $\lambda_1=-1,~\lambda_2=2$, 且 $\det\vb*{A}=2=\lambda_1\lambda_2\lambda_3$, 所以 $\lambda_3=-1$, 又因为 $\vb*{\xi}=(1,1,-1)^\top$ 是齐次线性方程组 $(\vb*{A}-2\vb*{E})\vb*{x}=\vb*{0}$ 的一个解,
               所以 $\lambda_2$ 对应的特征向量为 $\vb*{\xi}=(1,1,-1)^\top$, 故 $\vb*{A}+\vb*{E}$ 的两个特征值分别为 $3,~0,~0$, 所以存在正交矩阵 $\vb*{Q}$, 使得 $\vb*{Q}^\top(\vb*{A}+\vb*{E})\vb*{Q}=\diag(3,0,0)$
               因此 $$\vb*{A}+\vb*{E}=\vb*{Q}\diag(3,0,0)\vb*{Q}^\top=\vb*{Q}\mqty(\dmat{\pm\sqrt{3},0,0})\vb*{Q}^\top\vb*{Q}\mqty(\dmat{\pm\sqrt{3},0,0})\vb*{Q}^\top\Rightarrow \vb*{B}=\vb*{Q}\mqty(\dmat{\pm\sqrt{3},0,0})\vb*{Q}^\top$$
               即 $\vb*{B}=\pm\sqrt{3}\cdot\dfrac{1}{\sqrt{3}}\mqty(1\\1\\-1)\cdot\dfrac{1}{\sqrt{3}}(1,1,-1)=\pm\dfrac{\sqrt{3}}{3}\mqty(1&1&-1\\1&1&-1\\-1&-1&1).$
@@ -440,7 +471,7 @@
             \lambda_1+\lambda_2+\lambda_3=0
         \end{cases}$ 解得 $\lambda_2=\lambda_3=1$, 设 $\lambda_2$ 对应的特征向量为 $(t_1,t_2,t_3)^\top$, 因为 $\vb*{A}$ 是三阶实对称矩阵, 所以不同特征值的特征向量是正交的, 所以 $t_1+t_2+t_3=0$, 由此解得 $\vb*{A}$ 的属于 1 的两个相互正交的特征向量为 $\vb*{\alpha}_2=(-1,1,0)^\top,~\vb*{\alpha}_3=(-1,-1,2)^\top$, 取正交矩阵
     $$\vb*{P}=\qty(\dfrac{\vb*{\alpha}_1}{\norm*{\vb*{\alpha}_1}},\dfrac{\vb*{\alpha}_2}{\norm*{\vb*{\alpha}_2}},\dfrac{\vb*{\alpha}_3}{\norm*{\vb*{\alpha}_3}})=\mqty(\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}})$$
-    则 $\vb*{P}^\top\vb*{AP}=\diag(-2,1,1)$, 因此 $\vb*{P}^\top\vb*{A}^*\vb*{P}=|\vb*{A}|\qty(\vb*{P}^\top\vb*{AP})^{-1}\diag(1,-2,-2)$, 于是, 可取正交变换 $\vb*{x}=\vb*{Py}$, 其中 $\vb*{y}=(y_2,y_3,y_4)^\top$, 使得 $g=\vb*{y}^\top\qty(\vb*{P}^\top\vb*{A}^*\vb*{P})\vb*{y}=y_2^2-2y_3^2-2y_4^2$, 
+    则 $\vb*{P}^\top\vb*{AP}=\diag(-2,1,1)$, 因此 $\vb*{P}^\top\vb*{A}^*\vb*{P}=|\vb*{A}|\qty(\vb*{P}^\top\vb*{AP})^{-1}\diag(1,-2,-2)$, 于是, 可取正交变换 $\vb*{x}=\vb*{Py}$, 其中 $\vb*{y}=(y_2,y_3,y_4)^\top$, 使得 $g=\vb*{y}^\top\qty(\vb*{P}^\top\vb*{A}^*\vb*{P})\vb*{y}=y_2^2-2y_3^2-2y_4^2$,
     最后再令 $x_1=y_1$, 以及 $\vb*{Q}=\mqty(1\\&\vb*{P})$, 则正交变换 $\mqty(x_1\\\vb*{x})=\vb*{Q}\mqty(y_1\\\vb*{y})$ 可使 $f$ 化为标准形 $f=-2y_1^2-y_2^2+2y_3^2+2y_4^2$, 并且由
     $$\vb*{A}-\vb*{E}=\sum_{i=1}^{3}\lambda_i\vb*{e}_i\vb*{e}_i^\top=-3\cdot\dfrac{1}{\sqrt{3}}\mqty(1\\1\\1)\cdot\dfrac{1}{\sqrt{3}}(1,1,1)=-\mqty(1&1&1\\1&1&1\\1&1&1)\Rightarrow \vb*{A}=\vb*{E}-\mqty(1&1&1\\1&1&1\\1&1&1)=\mqty(0&-1&-1\\-1&0&-1\\-1&-1&0)$$
     其中 $\vb*{e}_i=\dfrac{\vb*{\alpha}_i}{\norm*{\vb*{\alpha}_i}}$.
@@ -463,13 +494,13 @@
     求椭圆 $2x^2+4xy+5y^2=1$ 的面积.
 \end{example}
 \begin{solution}
-    由题意 $f=\vb*{X}^\top\vb*{AX}=\vb*{X}^\top\mqty(2&2\\2&5)\vb*{X}=1$, 那么 $|\lambda \vb*{E}-\vb*{A}|=(\lambda-6)(\lambda-1)=0\Rightarrow \lambda_1=6,\lambda_2=1$, 因此 
+    由题意 $f=\vb*{X}^\top\vb*{AX}=\vb*{X}^\top\mqty(2&2\\2&5)\vb*{X}=1$, 那么 $|\lambda \vb*{E}-\vb*{A}|=(\lambda-6)(\lambda-1)=0\Rightarrow \lambda_1=6,\lambda_2=1$, 因此
     $$(\lambda_i\vb*{E}-\vb*{A})\vb*{\alpha}_i=\vb*{0}\Rightarrow \vb*{\alpha}_1=(1,2)^\top,\vb*{\alpha}_2=(-2,1)^\top\Rightarrow Q=\qty(\dfrac{\vb*{\alpha}_1}{|\vb*{\alpha}_1|},\dfrac{\vb*{\alpha}_2}{|\vb*{\alpha}_2|})$$
     $f=\vb*{X}^\top\vb*{AX}$ 在 $\vb*{X}=\vb*{QY}$ 的作用下, 化为 $f=\vb*{Y}^\top\vb*{Q}^\top\vb*{AQY}=6y_1^2+y_2^2=1\Rightarrow S=\dfrac{\pi}{\sqrt{6}}.$
 \end{solution}
 
 \begin{inference}[一般椭圆面积公式]
-    设曲线 $Ax^2+2Bxy+Cy^2=1,A>0$, 且 $AC-B^2>0$, 那么该曲线为椭圆，该椭圆的面积 $S=\dfrac{\pi}{\sqrt{AC-B^2}}.$
+    设曲线 $Ax^2+2Bxy+Cy^2=1,A>0$, 且 $AC-B^2>0$, 那么该曲线为椭圆, 该椭圆的面积 $S=\dfrac{\pi}{\sqrt{AC-B^2}}.$
 \end{inference}
 
 \subsubsection{二次型与曲面方程}
@@ -540,7 +571,7 @@
     $$|\lambda\vb*{E}-\vb*{A}|=\mqty|\lambda-1&2&-2\\2&\lambda+2&-4\\-2&-4&\lambda+2|=(\lambda-2)^2(\lambda+7)=0$$
     对于 $\lambda_{1,2}=2$, 解齐次线性方程组 $(\lambda_{1,2}\vb*{E}-\vb*{A})\vb*{X}=\vb*{0}$, 求得对应的线性无关的特征向量为 $\vb*{\alpha}_1=(-2,1,0)^\top,~\vb*{\alpha}_2=(2,0,1)^\top$, 并将其正交化, 得
     $$\vb*{e}_1=\dfrac{1}{\sqrt{5}}(-2,1,0)^\top,~\vb*{e}_2=\dfrac{1}{3\sqrt{5}}(2,4,5)^\top$$
-    对于 $\lambda_3=-7$, 解齐次线性方程组 $(\lambda_3\vb*{E}-\vb*{A})\vb*{X}=\vb*{0}$, 求得对应的单位化特征向量为 $\vb*{e}_3=\dfrac{1}{3}(1,2,-2)^\top$, 
+    对于 $\lambda_3=-7$, 解齐次线性方程组 $(\lambda_3\vb*{E}-\vb*{A})\vb*{X}=\vb*{0}$, 求得对应的单位化特征向量为 $\vb*{e}_3=\dfrac{1}{3}(1,2,-2)^\top$,
     取正交矩阵 $\vb*{Q}=(\vb*{e}_1,\vb*{e}_2,\vb*{e}_3)$, 令 $\vb*{X}'=(x',y',z')^\top$, 则正交变换 $\vb*{X}=\vb*{QX}'$ 将曲面的方程 $\vb*{X}^\top\vb*{AX}=27$ 可化为如下标准方程
     $$2x'^2+2y'^2-7z'^2=27$$ 这是单叶双曲面.
 \end{solution}
@@ -548,7 +579,7 @@
 \subsubsection{最值问题}
 
 \begin{example}
-    已知二次型 $f(x_1,x_2,x_3)=x_1^2-3x_2^2-3x_3^2+2x_1x_2-4x_1x_3$, 
+    已知二次型 $f(x_1,x_2,x_3)=x_1^2-3x_2^2-3x_3^2+2x_1x_2-4x_1x_3$,
     \begin{enumerate}[label=(\arabic{*})]
         \item 写出二次型 $f$ 的矩阵表达式;
         \item 用正交变换把二次型 $f$ 化为标准形, 并写出相应的正交矩阵;
@@ -576,7 +607,7 @@
 \end{solution}
 
 \begin{example}
-    已知二次型 $f(x,y,z)=3x^2+2y^2+2z^2+2xy+2zx$, 
+    已知二次型 $f(x,y,z)=3x^2+2y^2+2z^2+2xy+2zx$,
     \begin{enumerate}[label=(\arabic{*})]
         \item 用正交变换把二次型 $f$ 化为标准形, 并写出相应的正交矩阵;
         \item 求函数 $f(x,y,z)$ 在单位球面 $x^2+y^2+z^2=1$ 上的最大值与最小值.
@@ -587,7 +618,7 @@
         \item 二次型对应的矩阵 $\vb*{A}=\mqty(3&1&1\\1&2&0\\1&0&2)$, 则特征多项式为
               $$f(\lambda)=\lambda^3-7\lambda^2+14\lambda-8=(\lambda-1)(\lambda-2)(\lambda-4)\Rightarrow \lambda_1=1,~\lambda_2=2,~\lambda_3=4$$
               那么 $\lambda_1\vb*{E}-\vb*{A}=\mqty(-2&-1&-1\\-1&-1&0\\-1&0&-1)\to\mqty(1&1&0\\1&0&1\\0&0&0)$ 其中 $r_1$ 可由 $r_2$ 与 $(0,1,-1)$ 线性表示, 则 $$(1,0,1)\times(0,1,-1)=(-1,1,1)\Rightarrow \vb*{\xi}_1=(-1,1,1)^\top$$
-              同理可得 $\vb*{\xi}_2=(0,-1,1)^\top,~\vb*{\xi}_3=(2,1,1)^\top$, 则令 $\vb*{P}=\qty(\dfrac{\vb*{\xi}_1}{\norm*{\vb*{\xi}_1}},\dfrac{\vb*{\xi}_2}{\norm*{\vb*{\xi}_2}},\dfrac{\vb*{\xi}_3}{\norm*{\vb*{\xi}_3}})=\mqty(-\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}})$, 
+              同理可得 $\vb*{\xi}_2=(0,-1,1)^\top,~\vb*{\xi}_3=(2,1,1)^\top$, 则令 $\vb*{P}=\qty(\dfrac{\vb*{\xi}_1}{\norm*{\vb*{\xi}_1}},\dfrac{\vb*{\xi}_2}{\norm*{\vb*{\xi}_2}},\dfrac{\vb*{\xi}_3}{\norm*{\vb*{\xi}_3}})=\mqty(-\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}})$,
               于是正交变换 $\vb*{X}'=\vb*{P}^\top\vb*{X}$, 其中 $\vb*{X}'=(x',y',z'),~\vb*{X}=(x,y,z).$
         \item 注意到
               $$x^2+y^2+z^2=\vb*{X}^\top\vb*{X}=\vb*{X}^\top\vb*{PP}^\top\vb*{X}=\qty(\vb*{P}^\top\vb*{X})^\top\qty(\vb*{P}^\top\vb*{X})=\vb*{X}'^\top\vb*{X}'=x'^2+y'^2+z'^2$$
@@ -609,7 +640,7 @@ $$a_{11}x^2+a_{22}y^2+a_{33}z^2+2a_{12}xy+2a_{13}xz+2a_{23}yz+2b_1x+2b_2y+2b_3z+
     \vb*{x}^\top\vb*{Ax}+2\vb*{B}^\top\vb*{x}+c=0
     \tag{1}
 \end{equation*}
-其中 $\vb*{A}=\mqty(\xmat*{a}{3}{3})~~(a_{ij}=a_{ji}),~\vb*{x}=(x,y,z)^\top,~\vb*{B}=(b_1,b_2,b_3)^\top$, 
+其中 $\vb*{A}=\mqty(\xmat*{a}{3}{3})~~(a_{ij}=a_{ji}),~\vb*{x}=(x,y,z)^\top,~\vb*{B}=(b_1,b_2,b_3)^\top$,
 作正交矩阵 $\vb*{Q}$, 使 $\vb*{Q}^\top\vb*{AQ}=\diag(\lambda_1,\lambda_2,\lambda_3)$, 其中 $\lambda_{1,2,3}$ 为 $\vb*{A}$ 的特征值, 那么化为标准方程可分为两种情况进行.
 \begin{enumerate}[label=(\arabic{*})]
     \item 若方程组 $\vb*{Ax}+\vb*{B}=\vb*{0}$ 有解, 则取其任意一个解 $\vb*{\delta}$, 作直角坐标变换 $$\vb*{x}=\vb*{Qx}'+\vb*{\delta}$$ 代入 (1) 式得
