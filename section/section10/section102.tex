@@ -236,33 +236,33 @@
         \end{pNiceArray}
     \end{flalign*}
     于是 $\vb*{A}^{-1}=\mqty(-20  & 8  & 11 \\17  & -7 & -9 \\-2 & 1  & 1 \\).$\\
-    \textbf{法三: }设 $\vb*{M}=\mqty(\vb*{A}&\vb*{E}\\-\vb*{E}&\vb*{O})$, 若将 $\vb*{M}$ 的前 $n$ 行施行初等行变换, 将 $\vb*{M}$ 化为分块矩阵 $\displaystyle\mqty(\vb*{B}&\vb*{C}\\\vb*{O}&\vb*{X})$, 那么 $\vb*{X}=\vb*{A}^{-1}$, 则
-    \begin{flalign*}
-        \mqty(\vb*{A} & \vb*{E}                                  \\-\vb*{E}&\vb*{O})&=\begin{vNiceArray}{ccc:c}
-            2 & 3        & 5 &         \\
-            1 & 2        & 7 & \vb*{E} \\
-            3 & 4        & 4           \\ \hdottedline
-            & -\vb*{E} &   & \vb*{O}
-        \end{vNiceArray}\xrightarrow[r_3-3r_1]{\substack{r_1\leftrightarrow r_2\\r_2-2r_1}}\begin{pNiceArray}{ccc:ccc}
-            1 & 2        & 7   & 0 & 1       & 0 \\
-            0 & -1       & -9  & 1 & -2      & 0 \\
-            0 & -2       & -17 & 0 & -3      & 1 \\ \hdottedline
-            & -\vb*{E} &     &   & \vb*{O}
-        \end{pNiceArray}\\
-                      & \xrightarrow[r_3+2r_2]{\substack{r_1+r_3 \\r_2\times(-1)}}\begin{pNiceArray}{ccc:ccc}
-            1 & 0        & -10 & 0  & -2      & 1 \\
-            0 & 1        & 9   & -1 & 2       & 0 \\
-            0 & 0        & 1   & -2 & 1       & 1 \\ \hdottedline
-            & -\vb*{E} &     &    & \vb*{O}
-        \end{pNiceArray}\xrightarrow[r_2-9r_3]{r_1+10r_3}\begin{pNiceArray}{ccc:ccc}
-            1 & 0        & 0 & -20 & 8       & 11 \\
-            0 & 1        & 0 & 17  & -7      & -9 \\
-            0 & 0        & 1 & -2  & 1       & 1  \\ \hdottedline
-            & -\vb*{E} &   &     & \vb*{O}
-        \end{pNiceArray}
-    \end{flalign*}
-    故得 $\vb*{A}^{-1}=\mqty(-20  & 8  & 11 \\17  & -7 & -9 \\-2 & 1  & 1 \\).$\\
-    \textbf{法四: (该方法仅对三阶矩阵有效) }第一步, 将矩阵前两列复制一份在原矩阵的右侧, 将矩阵前两行复制一份再矩阵的下侧, 再将子矩阵 $\mqty(a_{11}&a_{12}\\a_{21}&a_{22})$ 复制到原矩阵的右下角, 即
+    % \textbf{法三: }设 $\vb*{M}=\mqty(\vb*{A}&\vb*{E}\\-\vb*{E}&\vb*{O})$, 若将 $\vb*{M}$ 的前 $n$ 行施行初等行变换, 将 $\vb*{M}$ 化为分块矩阵 $\displaystyle\mqty(\vb*{B}&\vb*{C}\\\vb*{O}&\vb*{X})$, 那么 $\vb*{X}=\vb*{A}^{-1}$, 则
+    % \begin{flalign*}
+    %     \mqty(\vb*{A} & \vb*{E}                                  \\-\vb*{E}&\vb*{O})&=\begin{pNiceArray}{ccc:c}
+    %         2 & 3        & 5 &         \\
+    %         1 & 2        & 7 & \vb*{E} \\
+    %         3 & 4        & 4           \\ \hdottedline
+    %         & -\vb*{E} &   & \vb*{O}
+    %     \end{pNiceArray}\xrightarrow[r_3-3r_1]{\substack{r_1\leftrightarrow r_2\\r_2-2r_1}}\begin{pNiceArray}{ccc:ccc}
+    %         1 & 2        & 7   & 0 & 1       & 0 \\
+    %         0 & -1       & -9  & 1 & -2      & 0 \\
+    %         0 & -2       & -17 & 0 & -3      & 1 \\ \hdottedline
+    %         & -\vb*{E} &     &   & \vb*{O}
+    %     \end{pNiceArray}\\
+    %                   & \xrightarrow[r_3+2r_2]{\substack{r_1+r_3 \\r_2\times(-1)}}\begin{pNiceArray}{ccc:ccc}
+    %         1 & 0        & -10 & 0  & -2      & 1 \\
+    %         0 & 1        & 9   & -1 & 2       & 0 \\
+    %         0 & 0        & 1   & -2 & 1       & 1 \\ \hdottedline
+    %         & -\vb*{E} &     &    & \vb*{O}
+    %     \end{pNiceArray}\xrightarrow[r_2-9r_3]{r_1+10r_3}\begin{pNiceArray}{ccc:ccc}
+    %         1 & 0        & 0 & -20 & 8       & 11 \\
+    %         0 & 1        & 0 & 17  & -7      & -9 \\
+    %         0 & 0        & 1 & -2  & 1       & 1  \\ \hdottedline
+    %         & -\vb*{E} &   &     & \vb*{O}
+    %     \end{pNiceArray}
+    % \end{flalign*}
+    % 故得 $\vb*{A}^{-1}=\mqty(-20  & 8  & 11 \\17  & -7 & -9 \\-2 & 1  & 1 \\).$\\
+    \textbf{法三: (该方法仅对三阶矩阵有效) }第一步, 将矩阵前两列复制一份在原矩阵的右侧, 将矩阵前两行复制一份再矩阵的下侧, 再将子矩阵 $\mqty(a_{11}&a_{12}\\a_{21}&a_{22})$ 复制到原矩阵的右下角, 即
     $$\mqty({\color{red} 2}&{\color{red} 3}&{\color{red} 5}\\{\color{orange} 1}&{\color{orange} 2}&{\color{orange} 7}\\3&4&4)\Rightarrow
         \mqty({\color{red} 2}&{\color{red} 3}&{\color{red} 5}&{\color{red} 2}&{\color{red} 3}\\{\color{orange} 1}&{\color{orange} 2}&{\color{orange} 7}& {\color{orange} 1}&{\color{orange} 2}\\3&4&4&3&4)\Rightarrow
         \mqty({\color{red} 2}&{\color{red} 3}&{\color{red} 5}&{\color{red} 2}&{\color{red} 3}\\{\color{orange} 1}&{\color{orange} 2}&{\color{orange} 7}& {\color{orange} 1}&{\color{orange} 2}\\3&4&4&3&4\\{\color{red} 2}&{\color{red} 3}&{\color{red} 5}\\{\color{orange} 1}&{\color{orange} 2}&{\color{orange} 7})\Rightarrow

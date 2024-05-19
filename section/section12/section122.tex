@@ -62,6 +62,37 @@
 
 \subsection{非齐次线性方程组解的讨论}
 
+\subsubsection{方程组无解的充要条件}
+
+\begin{example}[2000 数一]
+    已知方程组 $\begin{pmatrix} 1 & 2 & 1 \\ 2 & 3 & a+2 \\ 1 & a & -2 \\\end{pmatrix}\mqty( x_1 \\ x_2  \\ x_n )=\mqty( 1 \\ 3  \\ 0 )$ 无解, 求 $a$.
+\end{example}
+\begin{solution}
+    方程组无解的充要条件是 $\rank\vb*{A}\neq\rank\vb*{\bar{A}}$, 故应对增广矩阵作初等行变换, 由 
+    $$
+    \begin{pNiceArray}{ccc:c}
+        1 & 2 & 1 & 1 \\ 2 & 3 & a+2 & 3 \\ 1 & a & -2 & 0
+    \end{pNiceArray}\xrightarrow[r_3-r_1]{r_2-2r_1}\begin{pNiceArray}{ccc:c}
+        1 & 2 & 1 & 1 \\ 0 & -1 & a & 1 \\ 0 & a-2 & -3 & -1
+    \end{pNiceArray}\xrightarrow{r_3+(a-2)\times r_2}\begin{pNiceArray}{ccc:c}
+        1 & 2 & 1 & 1 \\ 0 & -1 & a & 1 \\ 0 & 0 & a^2-2a-3 & a-3
+    \end{pNiceArray}
+    $$
+    可知, 若 $a=-1$, 则 $\vb*{\bar{A}}\to\begin{pNiceArray}{ccc:c}
+        1 & 2 & 1 & 1 \\ 0 & -1 & -1 & 1 \\ 0 & 0 & 0 & -4
+    \end{pNiceArray}$, 于是 $\rank\vb*{A}=2, \rank\vb*{\bar{A}}=3$, 从而方程组无解, 因此 $a=-1.$
+\end{solution}
+
+% \subsubsection{无穷多解}
+
+% \begin{example}
+%     设方程组 $\begin{pmatrix} a & 1 & 1 \\ 1 & a & 1 \\ 1 & 1 & a \\\end{pmatrix}\mqty( x_1 \\ x_2 \\ x_n )=\mqty(1\\1\\-2)$ 有无穷多解, 求 $a$.
+% \end{example}
+% \begin{solution}
+%     对增广矩阵 $\vb*{\bar{A}}$ 作初等行变换化为行最简单形:
+    
+% \end{solution}
+
 \begin{example}[2016 南京大学]
     讨论当 $a,b$ 为何值时, 线性方程组
     $$\left\{\begin{array}{rrrrrrrrrrr}
@@ -91,3 +122,54 @@
     \end{enumerate}
 \end{solution}
 
+\subsubsection{方程组解的结构与通解}
+
+\begin{example}
+    已知 $\vb*{\xi}_1=(-9,1,2,11)^\top, \vb*{\xi}_2=(1,-5,13,0)^\top, \vb*{\xi}_3=(-7,-9,24,11)^\top$ 是方程组
+    $$
+    \begin{cases}
+        a_1x_1+7x_2+a_3x_3+x_4=d_1\\ 3x_1+b_2x_2+2x_3+2x_4=d_2\\9x_1+4x_2+x_3+7x_4=2
+    \end{cases}
+    $$的解, 求方程组的通解.
+\end{example}
+\begin{solution}
+    只要知道 $\rank\vb*{A}$, 算出 $n-\rank\vb*{A}$ 就知道解的结构, 因为矩阵 $\vb*{A}=\begin{pmatrix} a_1 & 7 & a_3 & 1\\ 3 & b_2 & 2 & 2\\ 9 & 4 & 1 & 7\\\end{pmatrix}$ 中有二阶子式 $\mqty|2&2\\1&7|\neq0$, 所以 $\rank\vb*{A}\geqslant 2$, 又 
+    $$
+    \vb*{xi}_1-\vb*{xi}_2=(-10,6,-11,11)^\top, \quad \vb*{xi}_1-\vb*{xi}_3=(-2,10,-22,0)^\top
+    $$
+    是齐次方程组 $\vb*{Ax}=\vb*{0}$ 的两个线性无关的解, 而有 $$4-\rank\vb*{A}\geqslant 2\Rightarrow \rank\vb*{A}\leqslant 2$$
+    从而得 $\rank\vb*{A}=2$, 所以方程组的通解为 $\mqty(-9\\1\\2\\11)+k_1\mqty(-10\\6\\-11\\11)+k_2\mqty(-1\\5\\-11\\0),\forall k_1,k_2\in \mathbb{R}.$
+\end{solution}
+
+\begin{example}[2014 数一]
+    设 $\vb*{A}=\mqty(1&-2&3&-4\\0&1&-1&1\\1&2&0&-3)$, $\vb*{E}$ 为 $3$ 阶矩阵,
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求方程组 $\vb*{Ax}=\vb*{0}$ 的一个基础解系;
+        \item 求满足 $\vb*{AB}=\vb*{E}$ 的所有矩阵 $\vb*{B}$.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 对矩阵 $\vb*{A}$ 作初等行变换化为行最简单形, 有
+        $$
+        \vb*{A}=\mqty(1&-2&3&-4\\0&1&-1&1\\1&2&0&-3)\xrightarrow{r_3-r_1-4r_2}\mqty(1&-2&3&-4\\0&1&-1&1\\0&0&1&-3)\xrightarrow[r_1+2r_2-3r_3]{r_2+r_3}\mqty(1&0&0&1\\0&1&0&-2\\0&0&1&-3)
+        $$
+        因 $n-\rank\vb*{A}=4-3=1$, 令 $x_4=1$, 则有 $x_3=3, x_2=2, x_1=-1$, 因此基础解系为 $\vb*{\eta}=(-1,2,3,1)^\top.$
+        \item $\vb*{AB}=\vb*{E}$ 中 $\vb*{B}$ 的列向量其实是三个非齐次线性方程组
+        $$
+        \vb*{Ax}=\mqty(1\\0\\0),\quad\vb*{Ax}=\mqty(0\\1\\0),\quad\vb*{Ax}=\mqty(0\\0\\1)
+        $$
+        的解, 由于这三个方程组的系数矩阵是相同的, 所以令 $\vb*{\bar{A}}=(\vb*{A},\vb*{E})$ 作初等行变换, 
+        \begin{flalign*}
+            \vb*{\bar{A}}=\begin{pNiceArray}{cccc:ccc}1&-2&3&-4&1&0&0\\0&1&-1&1&0&1&0\\1&2&0&-3&0&0&1\end{pNiceArray}\xrightarrow[\substack{r_2+r_3\\ r_1+2r_2-3r_3}]{r_3-r_1-4r_2}
+            \begin{pNiceArray}{cccc:ccc}1&0&0&1&2&6&-1\\0&1&0&-2&-1&-3&1\\0&0&1&-3&-1&-4&1\end{pNiceArray}
+        \end{flalign*}
+        由此解得三个方程组的通解 
+        $$
+        (-2,-1,-1,0)^\top+k_1\vb*{\eta},\quad
+        (6,-3,-4,0)^\top+k_2\vb*{\eta},\quad
+        (-1,1,1,0)^\top+k_3\vb*{\eta}
+        $$
+        因此 $\vb*{B}=\mqty(2-k_1&6+2k_2&-1-k_3\\-1+2k_1&-3+2k_2&1+2k_3\\-3+3k_1&-4+3k_2&1+3k_2\\k_1&k_2&k_3),\forall k_1, k_2, k_3\in\mathbb{R}.$
+    \end{enumerate}
+\end{solution}
