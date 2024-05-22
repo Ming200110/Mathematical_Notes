@@ -552,14 +552,14 @@
     \end{flalign*}
     \textbf{法二: }利用变量代换, 令 $ x+y=u, y=u v $, 则区域 $ D $ 化为 $ D^{\prime}=\{(u, v) \mid 0<u<1,0<v<1\} $,
     $$
-        \dfrac{\partial(x, y)}{\partial(u, v)}=\mqty|\dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\
+        \dfrac{\partial(x, y)}{\partial(u, v)}=\mqty|\dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\[6pt]
         \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v}|=\mqty|1-v & -u \\
         v & u|=u
     $$
     于是 $\displaystyle  \iint\limits_{D} \mathrm{e}^{\frac{y}{x+y}} \dd  x \dd  y=\iint\limits_{D^{\prime}} \mathrm{e}^{v}\left|\frac{\partial(x, y)}{\partial(u, v)}\right| \mathrm{d} u \dd  v=\int_{0}^{1} u \dd  u \int_{0}^{1} \mathrm{e}^{v} \dd  v=\frac{1}{2}(\mathrm{e}-1) .$\\
     \textbf{法三: }利用变量代换, 令 $ x+y=u, y-x=v $, 则区域 $ D $ 化为 $ D^{\prime}=\{(u, v) \mid 0<u<1,-u<v<u\} $,
     $$
-    \dfrac{\partial(x, y)}{\partial(u, v)}=\mqty|\dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\
+    \dfrac{\partial(x, y)}{\partial(u, v)}=\mqty|\dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\[6pt]
     \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v}|=\mqty|\dfrac{1}{2} & -\dfrac{1}{2} \\[6pt]
     \dfrac{1}{2} & \dfrac{1}{2}|=\dfrac{1}{2}
     $$
@@ -600,7 +600,7 @@
     其中区域 $D$ 为 $x=0,x+y=1,y=x$ 所围成的三角形区域.
 \end{example}
 \begin{solution}
-    原式改写为 $\displaystyle I=\iint\limits_D\dfrac{(x+y)\ln\qty(1+\dfrac{x}{y})}{\sqrt{2-(x+y)}}\dd x\dd y$, 则令 $u=x+y,v=\dfrac{x}{y}$, 那么 $\begin{cases}
+    原式改写为 $\displaystyle I=\iint\limits_D\dfrac{(x+y)\ln\qty(1+\dfrac{x}{y})}{\sqrt{2-(x+y)}}\dd x\dd y$, 则令 $u=x+y,~v=\dfrac{x}{y}$, 那么 $\begin{cases}
             x=\dfrac{uv}{1+v} \\[6pt]
             y=\dfrac{u}{1+v}
         \end{cases}$, 并且
@@ -1214,7 +1214,7 @@ $$
 \end{solution}
 
 \begin{example}[第十届 “景润杯”]
-    计算极限 $\displaystyle\lim_{R\to+\infty}\iint\limits_{D_R}\mathrm{e}^{-x}\arctan\dfrac{y}{x}\dd x\dd y$, 其中 $D_R$ 是由 $$x=R,y=0,y=\dfrac{2}{R}x-1$$ 所围成.
+    计算极限 $\displaystyle\lim_{R\to+\infty}\iint\limits_{D_R}\mathrm{e}^{-x}\arctan\dfrac{y}{x}\dd x\dd y$, 其中 $D_R$ 是由 $$x=R,~y=0,~y=\dfrac{2}{R}x-1$$ 所围成.
 \end{example}
 \begin{solution}
     由二重积分的积分中值定理知, $\exists(\xi,\eta)\in D_R$,

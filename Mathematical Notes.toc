@@ -345,7 +345,7 @@
 \contentsline {subsection}{\numberline {8.3.2}微分方程与积分}{369}{subsection.8.3.2}%
 \contentsline {subsubsection}{微分方程与定积分}{369}{subsection.8.3.2}%
 \contentsline {subsubsection}{微分方程与重积分}{371}{Item.611}%
-\contentsline {subsubsection}{微分方程与曲面积分}{373}{example.8.3.13}%
+\contentsline {subsubsection}{微分方程与曲线 (面) 积分}{373}{example.8.3.13}%
 \contentsline {subsection}{\numberline {8.3.3}微分方程与幂级数}{377}{subsection.8.3.3}%
 \contentsline {part}{第二部分\hspace {1em}线性代数}{380}{part.2}%
 \contentsline {chapter}{\numberline {第九章\hspace {.3em}}行列式}{381}{chapter.9}%
