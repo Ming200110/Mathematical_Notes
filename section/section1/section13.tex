@@ -154,7 +154,8 @@
         \centering
         \begin{tabular}{l | l}
             (\rownumber{}) $\displaystyle x_n=\cos\frac{x}{2}\cos\frac{x}{2^2}\cdots\cos\frac{x}{2^n}$. & (\rownumber{}) $\displaystyle x_n=\frac{3}{2}\frac{5}{4}\frac{17}{16}\cdots\frac{2^{2^n}+1}{2^{2^n}}$. \\
-            (\rownumber{}) $\displaystyle x_n=\sum_{i=1}^n\frac{1}{\sqrt{1^3+2^3+\cdots+i^3}}$.         & (\rownumber{}) $\displaystyle x_n=\sum_{i=1}^n\frac{1}{i(i+1)(i+2)}$.
+            (\rownumber{}) $\displaystyle x_n=\sum_{i=1}^n\frac{1}{\sqrt{1^3+2^3+\cdots+i^3}}$.         & (\rownumber{}) $\displaystyle x_n=\sum_{i=1}^n\frac{1}{i(i+1)(i+2)}$. \\ 
+            (\rownumber{}) $\displaystyle x_n=\sum_{k=1}^{n} \dfrac{k^3+6k^2+11k+5}{(k+3)!}$.
         \end{tabular}
     \end{table}
 \end{example}
@@ -175,6 +176,9 @@
                               & =2\lim_{n\to\infty}\sum_{i=1}^n\left(\frac{1}{i}-\frac{1}{i+1}\right)=2\lim_{n\to\infty}\left(1-\frac{1}{n+1}\right)=2.
               \end{flalign*}
         \item $\displaystyle\lim_{n\to\infty}x_n=\frac{1}{2}\sum_{i=1}^n\left[\frac{1}{i(i+1)}-\frac{1}{(i+1)(i+2)}\right]=\frac{1}{2}\lim_{n\to\infty}\left[\frac{1}{2}-\frac{1}{(n+1)(n+2)}\right]=\frac{1}{4}.$
+        \item 由于 $k^3+6k^2+11k+5=(k+1)(k+2)(k+3)-1$, 所以 $$
+        x_n=\sum_{k=1}^{n} \qty(\dfrac{1}{k!}-\dfrac{1}{(k+3)!})=\dfrac{1}{1!}+\dfrac{1}{2!}+\dfrac{1}{3!}-\dfrac{1}{(n+1)!}-\dfrac{1}{(n+2)!}-\dfrac{1}{(n+3)!}\to 1+\dfrac{1}{2}+\dfrac{1}{6}=\dfrac{5}{3}(n\to \infty)
+        $$ 即 $\displaystyle \lim_{n \to \infty}x_n=\dfrac{5}{3}.$
     \end{enumerate}
 \end{solution}
 
@@ -879,6 +883,19 @@ $$\frac{\dd }{\dd x}\int_{\alpha(x)}^{\beta(x)}f(t)\dd t=f(\beta(x))\cdot\beta'(
 \end{proof}
 
 \begin{example}
+    当 $x\to0$ 时, $\dfrac{1}{x^2}\sin\dfrac{1}{x}$ 是 
+    \begin{tasks}(4)
+        \task 无穷大
+        \task 无穷小
+        \task 有界但非无穷小
+        \task 无界但非无穷大
+    \end{tasks}
+\end{example}
+\begin{solution}
+    当 $ x \rightarrow 0 $ 时, $ \dfrac{1}{x^{2}} \rightarrow+\infty, \sin \dfrac{1}{x} $ 在 $-1$ 和 $1$ 之间振荡, 且重复函数值为零, 故可排除 A、B, 取 $ x_{n}=\dfrac{1}{2 n \pi+\dfrac{\pi}{2}}~(n=1,2, \cdots) $, 则当 $ x_{n} \rightarrow 0 $ 时, $ f\left(x_{n}\right)=\left(2 n+\dfrac{1}{2}\right)^{2} \cdot \pi^{2} \rightarrow \infty $, 故 $ \dfrac{1}{x^{2}} \sin \dfrac{1}{x}(x \rightarrow 0) $ 不是无穷小, 也不是有界量.
+\end{solution}
+
+\begin{example}
     设 $\cos x-1=x\sin\alpha(x)$, 其中 $|\alpha(x)|<\dfrac{\pi}{2}$, 则当 $x\to0$ 时, $\alpha(x)$ 是
     \begin{tasks}(2)
         \task 比 $x$ 高阶的无穷小量
@@ -968,6 +985,17 @@ $$f(x)=f(x_0)+f'(x_0)(x-x_0)+\cdots+\frac{1}{n!}f^{(n)}(x_0)(x-x_0)^n+R_n(x)$$
 其中, $\displaystyle R_n(x)=\frac{1}{(n+1)!}f^{(n+1)}(\xi)(x-x_0)^{n+1}$ 为 \textit{Lagrange 余项}.\\
 若 $f(x)$ 在 $x_0$ 处有 $n$ 阶导数 $f^{(n)}(x_0)$, 则在 $x_0$ 邻域内上式成立,
 其中 $R_n(x)=o((x-x_0)^n)~ (x\to x_0)$, 称为 \textit{Peano 余项}. 常用函数的展开式可见 \ref{table mijishu} 节.
+
+\begin{example}
+    求 $f(x)=\dfrac{\tan x}{1+x^2}$ 在 $x=0$ 处的 3 次 Taylor 展开多项式.
+\end{example}
+\begin{solution}
+    因为 $\tan x=x+\dfrac{1}{3}x^3+o\qty(x^3), \dfrac{1}{1+x^2}=\dfrac{1}{1-\qty(-x^2)}=1-x^2+x^4+o\qty(x^4)$
+    所以 $$
+    f(x)=\dfrac{\tan x}{1+x^2}=\qty(x+\dfrac{1}{3}x^3+o\qty(x^3))\qty(1-x^2+x^4+o\qty(x^4))=x-\dfrac{2}{3}x^3+o\qty(x^3)
+    $$
+    故 $\dfrac{\tan x}{1+x^2}$ 在 $x=0$ 处的 3 次 Taylor 多项式为 $x-\dfrac{2}{3}x^3.$
+\end{solution}
 
 \begin{example}
     若要使 $x\to0$ 时, $\e^x-\dfrac{1+ax}{1+bx}$ 为尽可能高阶的无穷小量, 问数 $a,b$ 应取何值? 用 $x$ 的幂级数写出此时的等价无穷小.
@@ -1860,6 +1888,17 @@ $$f(x)=f(x_0)+f'(x_0)(x-x_0)+\cdots+\frac{1}{n!}f^{(n)}(x_0)(x-x_0)^n+R_n(x)$$
     $$I=-\lim_{x\to3}\dfrac{\dfrac{f(x)-f(3)}{x-3}}{\dfrac{g(x)-g(3)}{x-3}}=-\lim_{x\to3}\dfrac{f'(x)}{g'(x)}$$
     对 $f(x)$ 取对数并求导, 有 $$\dv{x}(\ln f(x))=\dv{x}\qty[\dfrac{1}{2}\ln\qty(x^3+9)+\dfrac{1}{3}\ln\qty(2x^2-17)]=\dfrac{1}{2}\dfrac{3x^2}{x^3+9}+\dfrac{1}{3}\dfrac{4x}{2x^2-17}$$
     所以 $f'(3)=\dfrac{105}{4}$, 同理可得 $g'(3)=\dfrac{33}{2}$, 于是 $I=-\dfrac{35}{22}.$
+\end{solution}
+
+\begin{example}
+    求极限 $\displaystyle \lim_{x \to 0}\dfrac{\displaystyle \prod_{k=1}^{n}\qty(\dfrac{1+kx}{1-kx})^{\frac{1}{2k}}-1}{3\pi \arcsin x-\qty(x^2-1)\arctan^3x}$, 其中 $n$ 为正整数.
+\end{example}
+\begin{solution}
+    记 $f(x)=\displaystyle \prod_{k=1}^{n}\qty(\dfrac{1+kx}{1-kx})^{\frac{1}{2k}}$, 那么 $f(0)=1$, 且 $\ln f(x)=\displaystyle \sum_{k=1}^{n} \dfrac{1}{2k}\ln\qty(\dfrac{1+kx}{1-kx})$, 那么
+    $$
+    \dfrac{f'(x)}{f(x)}=\sum_{k=1}^{n} \dfrac{1}{2k}\dfrac{2k}{(1+kx)(1-kx)}\Rightarrow f'(0)=n
+    $$
+    因此, 原式化为 $\displaystyle \lim_{x \to 0}\dfrac{x}{3\pi \arcsin x-\qty(x^2-1)\arctan^3x}\cdot\dfrac{f(x)-f(0)}{x-0}=\dfrac{f'(0)}{3\pi}=\dfrac{n}{3\pi}.$
 \end{solution}
 
 \subsubsection{利用高等变形求极限}

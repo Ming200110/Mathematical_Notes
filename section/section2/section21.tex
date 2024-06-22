@@ -23,6 +23,24 @@
     \index{导数}
 \end{definition}
 
+\begin{theorem}[导数与极限式]
+    若 $f(x)$ 在 $x=x_0$ 处连续, 且 $\displaystyle \lim_{x \to x_0}\dfrac{f(x)}{x-x_0}=a$, 则 $f(x_0)=0$, 且 $f'(x_0)=a.$
+\end{theorem}
+
+\begin{example}
+    设 $f(x)$ 为连续可导函数, 且 $\displaystyle f(x)=x+x\int_{0}^{1} f(t) \dd t+x^2\cdot\lim_{x \to 0}\dfrac{f(x)}{x}$, 求 $f(x)$.
+\end{example}
+\begin{solution}
+    易知 $f(0)=0, f'(0)=\displaystyle \lim_{x \to 0}\dfrac{f(x)}{x}$, 设 $\displaystyle \int_{0}^{1} f(t) \dd t=A$, 那么 
+    \begin{equation*}
+        f(x)=x+Ax+f'(0)x^2
+        \tag{*}
+    \end{equation*}
+    对 (*) 式两边积分, 得 $$\displaystyle A=\int_{0}^{1} f(x) \dd x=\int_{0}^{1} \qty(x+Ax+f'(0)x^2) \dd x \Rightarrow 3+2f'(0)=3A$$
+    对 (*) 式两边求导, 并令 $x=0$, 得 $$f'(0)=1+A$$
+    于是解得 $f'(0)=6, \displaystyle \int_{0}^{1} f(x) \dd x=5$, 故 $f(x)=6x+6x^2.$
+\end{solution}
+
 \begin{example}[2004 数一]
     设函数 $f(x)$ 连续, 且 $f'(0)>0$, 则存在 $\delta>0$, 使得
     \begin{tasks}(2)

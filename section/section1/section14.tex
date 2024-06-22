@@ -83,6 +83,22 @@
 
 有关无穷小量的概念可参考定义 \ref{infinitesimalDefinitions}.
 
+\begin{example}[1999 数二]
+    设 $\displaystyle \alpha(x)=\int_{0}^{5x} \dfrac{\sin t}{t} \dd t,\beta(x)=\int_{0}^{\sin x} (1+t)^{\frac{1}{t}} \dd t$, 则当 $x \to0$ 时, $\alpha(x)$ 是 $\beta(x)$ 的 
+    \begin{tasks}(2)
+        \task 高阶无穷小
+        \task 低阶无穷小
+        \task 同阶但不等价的无穷小
+        \task 等价无穷小
+    \end{tasks}
+\end{example}
+\begin{solution}
+    因为 $$
+    \lim_{x \to 0}\dfrac{\alpha(x)}{\beta(x)}=\lim_{x \to 0}\dfrac{\displaystyle \int_{0}^{5x} \dfrac{\sin t}{t} \dd t}{\displaystyle \int_{0}^{\sin x} (1+t)^{\frac{1}{t}} \dd t}=\lim_{x \to 0}\dfrac{\dfrac{\sin 5x}{5x}\cdot 5}{(1+x)^{\frac{1}{x}}}=\dfrac{5}{\e}
+    $$
+    所以 $\alpha(x)$ 是 $\beta(x)$ 同阶但不等价的无穷小.
+\end{solution}
+
 \begin{example}[2019 数一]
     当 $x\to0$ 时, 若 $x-\tan x$ 与 $x^{k}$ 是同阶无穷小, 则 $k$ 等于 
     \begin{tasks}(4)

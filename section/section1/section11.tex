@@ -288,6 +288,27 @@
     \index{函数连续的充要条件}
 \end{theorem}
 
+\begin{example}
+    设连续函数 $f(x)$ 满足方程 $f(x)-\dfrac{1}{2}f\qty(\dfrac{x}{2})=x^2$, 求 $f(x)$ 的表达式.
+\end{example}
+\begin{solution}
+    由已知条件, 有 
+    \begin{flalign*}
+        f(x)&=\dfrac{1}{2}f\qty(\dfrac{x}{2})+x^2\\ 
+        f\qty(\dfrac{x}{2})&=\dfrac{1}{2}f\qty(\dfrac{x}{2^2})+\qty(\dfrac{x}{2})^{2}\\ 
+        \vdots&\\ 
+        f\qty(\dfrac{x}{2^{n}})&=\dfrac{1}{2}f\qty(\dfrac{x}{2^{n+1}})+\qty(\dfrac{x}{2^{n}})^2
+    \end{flalign*}
+    将上面等式从后往前依次代入, 得 
+    $$
+    f(x)=\dfrac{1}{2^{n+1}}f\qty(\dfrac{x}{2^{n+1}})+\dfrac{1}{2^{n}}\qty(\dfrac{x}{2^{n}})+ \cdots +\dfrac{1}{2}\qty(\dfrac{x}{2})^2+x^2=\dfrac{1}{2^{n+1}}f\qty(\dfrac{x}{2^{n+1}})+x^2\sum_{k=0}^{n} \dfrac{1}{2^{3k}}
+    $$
+    取 $n\to \infty$, 由 $f$ 的连续性及 $f(0)=0$, 可得
+    $$
+    f(x)=x^2\sum_{k=0}^{\infty} \dfrac{1}{2^{3k}}=x^2\lim_{n\to \infty}\dfrac{1-\dfrac{1}{8^{n}}}{\dfrac{7}{8}}=\dfrac{8}{7}x^2.
+    $$
+\end{solution}
+
 \subsubsection{第一类间断点}
 
 \begin{definition}[可去间断点]

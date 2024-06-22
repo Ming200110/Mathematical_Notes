@@ -79,6 +79,47 @@
 
 \subsection{曲面及其方程}
 
+\subsubsection{空间曲线绕直线旋转的曲面方程}
+
+\begin{theorem}[空间曲线绕直线旋转的曲面方程]
+    设空间曲线 $\Gamma:\begin{cases}
+        F(x,y,z)=0\\
+        G(x,y,z)=0
+    \end{cases}$, 直线 $$L:\dfrac{x-x_0}{l}=\dfrac{y-y_0}{m}=\dfrac{z-z_0}{n}$$ 
+    记 $P_0=(x_0,y_0,z_0),\vb*{\tau}=(l,m,n)$, 在曲线 $\Gamma$ 上任取一点 $M_1(x_1,y_1,z_1)$, 
+    而过点 $M_1$ 的纬圆上任意一点满足 $Q(x,y,z)$ 方程
+    $$
+    \begin{cases}
+        l(x-x_1)+m(y-y_1)+n(z-z_1)=0\\ 
+        (x-x_0)^2+(y-y_0)^2+(z-z_0)^2=(x_1-x_0)^2+(y_1-y_0)^2+(z_1-z_0)^2
+    \end{cases}
+    $$
+    又因为 $M_1$ 在母线 $\Gamma$ 上, 满足母线的方程, 有 
+    $$
+    \begin{cases}
+        F(x_1, y_1, z_1)=0\\ 
+        G(x_1, y_1, z_1)=0
+    \end{cases}
+    $$
+    联立上述两个方程组消去参数 $x_1,y_1,z_1$, 最后得到三元方程 $T(x,y,z)=0$, 即为以 $\Gamma$ 为母线, $L$ 为旋转轴的旋转曲面的方程.
+    \index{空间曲线绕直线旋转的曲面方程}
+\end{theorem}
+
+\begin{example}
+    已知点 $A(1,0,0)$ 与点 $B(1,1,1)$, 求由线段 $AB$ 绕 $z$ 轴旋转一周得到的旋转曲面方程.
+\end{example}
+\begin{solution}
+    由题意得 $$
+    \begin{cases}
+        z-z_1=0\\ 
+        x^2+y^2+z^2=x_1^2+y_1^2+z_1^2 \\ 
+        x_1=1\\ 
+        y_1=z_1
+    \end{cases}
+    $$
+    消去 $x_1, y_1, z_1$, 得 $z=\sqrt{x^2+y^2-1},~0\leqslant z\leqslant 1.$
+\end{solution}
+
 \subsubsection{曲面与直线的关系}
 
 \begin{example}
@@ -245,21 +286,6 @@
 \end{table}
 
 \subsection{空间曲线及其方程}
-
-\subsubsection{空间曲线绕直线旋转的曲面方程}
-
-\begin{theorem}[空间曲线绕直线旋转的曲面方程]
-    设空间曲线 $\Gamma:\begin{cases}
-        F(x,y,z)=0\\
-        G(x,y,z)=0
-    \end{cases}$, 直线 $L:\dfrac{x-x_0}{l}=\dfrac{y-y_0}{m}=\dfrac{z-z_0}{n}$, 
-    记 $M_0=(x_0,y_0,z_0),\vb*{\tau}=(l,m,n)$, 在曲线 $\Gamma$ 上任取一点 $M(x,y,z)$, 
-    而过点 $M$ 的纬圆上任意一点 $P(X,Y,Z)$ 满足条件 $\begin{cases}
-        \qty|\overrightarrow{M_0P}|=\qty|\overrightarrow{M_0M}|\\
-        \overrightarrow{M_0M}\perp \vb*{\tau}.
-    \end{cases}$
-    \index{空间曲线绕直线旋转的曲面方程}
-\end{theorem}
 
 \subsubsection{常见的曲线及其对应方程}
 

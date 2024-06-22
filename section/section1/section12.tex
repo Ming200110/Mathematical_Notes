@@ -1,13 +1,13 @@
 \section{极限的概念、性质及存在准则}
 
-极限是微积分中非常重要的概念, 它描述了函数在某一点或无穷远处的趋势或取值. 极限的性质包括唯一性、局部性、保号性、保序性和四则运算法则等. 极限的存在准则有夹逼准则、单调有界准则等. 
+极限是微积分中非常重要的概念, 它描述了函数在某一点或无穷远处的趋势或取值. 极限的性质包括唯一性、局部性、保号性、保序性和四则运算法则等. 极限的存在准则有夹逼准则、单调有界准则等.
 
 \subsection{数列、函数极限的定义}
 
 \subsubsection{数列的极限定义}
 
 \begin{definition}[数列极限 A]
-    设 $\qty{a_n}$ 是一数列, 如果存在常数 $a$, 当 $n$ 无限增大时, $a_n$ 无限接近 (或趋近) 于 $a$, 则称数列 $\qty{a_n}$ \textit{收敛}, $a$ 称为\textit{数列} $\qty{a_n}$ \textit{的极限}, 
+    设 $\qty{a_n}$ 是一数列, 如果存在常数 $a$, 当 $n$ 无限增大时, $a_n$ 无限接近 (或趋近) 于 $a$, 则称数列 $\qty{a_n}$ \textit{收敛}, $a$ 称为\textit{数列} $\qty{a_n}$ \textit{的极限},
     或称数列 $\qty{a_n}$ 收敛于 $a$, 记作 $\displaystyle\lim_{n\to\infty}a_n=a$, 或 $a_n\to\infty,~n\to\infty$.
     当 $n\to\infty$ 时, 若不存在这样的常数 $a$, 则称数列 $\qty{a_n}$ \textit{发散} 或 \textit{不收敛}, 也可以说极限 $\displaystyle\lim_{n\to\infty}a_n$ 不存在.
     \index{收敛}
@@ -43,20 +43,20 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    因为 $\displaystyle\lim_{n\to\infty}a_n=a\neq 0$, 所以 $\forall\varepsilon>0$, 都存在一个正整数 $N$, 使得当 $n>N$ 时, 有 $|a_n-a|<\varepsilon$, 
+    因为 $\displaystyle\lim_{n\to\infty}a_n=a\neq 0$, 所以 $\forall\varepsilon>0$, 都存在一个正整数 $N$, 使得当 $n>N$ 时, 有 $|a_n-a|<\varepsilon$,
     即 $a-\varepsilon<a_n<a+\varepsilon$, 则 $|a|-\varepsilon<|a_n|\leqslant |a|+\varepsilon$, 取 $\varepsilon=\dfrac{|a|}{2}$, 得 $|a_n|>\dfrac{|a|}{2}$, 选 A.
 \end{solution}
 
 \subsubsection{函数的极限定义}
 
 \begin{definition}[函数的极限]
-    设函数 $f(x)$ 在点 $x_0$ 的邻域内 (点 $x_0$ 可除外) 有定义, $A$ 为一个常数, 若对任意给定的 $\varepsilon>0$, 都存在一个正数 $\delta$, 
+    设函数 $f(x)$ 在点 $x_0$ 的邻域内 (点 $x_0$ 可除外) 有定义, $A$ 为一个常数, 若对任意给定的 $\varepsilon>0$, 都存在一个正数 $\delta$,
     当 $0<|x-x_0|<\delta$ 时, 有 $|f(x)-A|<\varepsilon$, 则称 $A$ 为\textit{函数} $f(x)$ 当 $x\to x_0$ \textit{时的极限}, 记作 $\displaystyle\lim_{x\to x_0}f(x)=A.$
     \index{函数的极限}
 \end{definition}
 
 \begin{definition}[左右极限]
-    若对于满足 $0<x_0-x<\delta~~(0<x-x_0<\delta)$ 的一切 $x$ 所对应的 $f(x)$ 都不满足 $|f(x)-A|<\varepsilon$, 则称 $A$ 为函数 $f(x)$ 当 $x$ 自 $x_0$ 左 (右) 侧趋于 $x_0$ 时的极限, 即\textit{左 (右) 极限}, 
+    若对于满足 $0<x_0-x<\delta~~(0<x-x_0<\delta)$ 的一切 $x$ 所对应的 $f(x)$ 都不满足 $|f(x)-A|<\varepsilon$, 则称 $A$ 为函数 $f(x)$ 当 $x$ 自 $x_0$ 左 (右) 侧趋于 $x_0$ 时的极限, 即\textit{左 (右) 极限},
     分别记作 $$\lim_{x\to x_0^-}f(x)=f(x_0-0)=A~~(\lim_{x\to x_0^+}f(x)=f(x_0+0)=A)$$
     类似地, 可以给出当 $x\to\infty,~x\to+\infty,~x\to-\infty$ 时, $f(x)$ 的极限为 $A$ 的定义.
     \index{左极限}
@@ -76,13 +76,13 @@
     题目中的两个条件分别为
     \begin{enumerate}[label=(\roman{*})]
         \item $\exists x_n\in [a,+\infty)$ 有 $\displaystyle\lim_{n\to\infty}x_n=+\infty$ 且 $\displaystyle\lim_{n\to\infty}f(x_n)=\infty$ ;
-        \item $f(x)$ 在 $[a,+\infty)$ 无界, 
+        \item $f(x)$ 在 $[a,+\infty)$ 无界,
     \end{enumerate}
     \textbf{讨论充分性, 即 (i)$\to$(ii)}\\
     因为 $\displaystyle\lim_{n\to\infty}f(x_n)=\infty$ 可知对于 $\forall M>0,\exists N\in [a,+\infty)$ 使得 $|f(x_N)|>M$, 故 $f(x)$ 在 $[a,+\infty)$ 无界;\\
     \textbf{讨论必要性, 即 (ii)$\to$(i)}\\
-    因为 $f(x)$ 在 $[a,+\infty)$ 无界, 则对 $\forall M_1>0,\exists X_1\in [a,+\infty)$, 使得 $|f(X_1)|>M_1$, 且 $\exists X_2\in [X_1,+\infty)$, 使得 $|f(X_2)|>|f(X_1)|$, 同理可取 $x_1$, 
-    $\exists x_2\in [x_1,+\infty)$, 使得 $|f(x_2)|>|f(x_1)|$; $\exists x_3\in [x_2,+\infty)$, 使得 $|f(x_3)|>|f(x_2)|$, 由此递推, 
+    因为 $f(x)$ 在 $[a,+\infty)$ 无界, 则对 $\forall M_1>0,\exists X_1\in [a,+\infty)$, 使得 $|f(X_1)|>M_1$, 且 $\exists X_2\in [X_1,+\infty)$, 使得 $|f(X_2)|>|f(X_1)|$, 同理可取 $x_1$,
+    $\exists x_2\in [x_1,+\infty)$, 使得 $|f(x_2)|>|f(x_1)|$; $\exists x_3\in [x_2,+\infty)$, 使得 $|f(x_3)|>|f(x_2)|$, 由此递推,
     得存在严格 $\nearrow$ 的数列 $\qty{x_n}$, 有 $\displaystyle\lim_{n\to\infty}x_n=\infty$, 且存在单调的 $|f(x_n)|$, 有 $\displaystyle\lim_{n\to\infty}|f(x_n)|=+\infty$, 即 $\displaystyle\lim_{n\to\infty}f(x_n)=\infty.$
 \end{solution}
 
@@ -94,7 +94,7 @@
 \end{theorem}
 
 \begin{example}[2015 数三]
-    设 $\qty{x_n}$ 是数列, 下列命题中不正确的是 
+    设 $\qty{x_n}$ 是数列, 下列命题中不正确的是
     \begin{tasks}(1)
         \task 若 $\displaystyle\lim_{n\to\infty}x_n=a$, 则 $\displaystyle\lim_{n\to\infty}x_{2n}=\lim_{n\to\infty}x_{2n+1}=a$
         \task 若 $\displaystyle\lim_{n\to\infty}x_{2n}=\lim_{n\to\infty}x_{2n+1}=a$, 则 $\displaystyle\lim_{n\to\infty}x_n=a$
@@ -114,6 +114,20 @@
     $$x_{2n}=\dfrac{2n+1}{2n}=1+\dfrac{1}{2n}\to 1~~(n\to\infty),~x_{2n+1}=-\dfrac{2n+2}{2n+1}=-1-\dfrac{1}{2n+1}\to-1~~(n\to\infty)$$
     由定理 \ref{theRelationshipBetweenASequenceAndItsSubColumnLimits} 可知 $\displaystyle\lim_{n\to\infty}x_n$ 不存在, 即得证数列 $\qty{x_n}$ 发散.
 \end{proof}
+
+\begin{example}
+    设 $x_n=\dfrac{1}{n}\cdot|1-2+3- \cdots +(-1)^{n+1}n|$, 求 $\displaystyle \lim_{n \to \infty}x_n$.
+\end{example}
+\begin{solution}
+    讨论 $n$ 的奇偶性,
+    \begin{flalign*}
+        x_{2n}   & =\dfrac{1}{2n}\cdot|1-2+3-\dots+(2n-1)+(2n)|=\dfrac{1}{2n}\cdot|(1+3+5+\cdots+(2n-1))-(2+4+6+\cdots+2n)| \\
+                 & =\dfrac{1}{2n}\cdot|n^2-(n^2+n)|=\dfrac{1}{2}                                                            \\
+        x_{2n+1} & =\dfrac{1}{2n+1}\cdot|1-2+3-\dots-2n+(2n+1)|=\dfrac{1}{2n+1}\cdot|(1+3+\dots+(2n+1))-(2+4+\dots+2n)|     \\
+                 & =\dfrac{1}{2n+1}\cdot|(n^2+2n+1)-(n^2+n)|=\dfrac{n+1}{2n+1}
+    \end{flalign*}
+    由于 $\displaystyle \lim_{n \to \infty}x_{2n}=\lim_{n \to \infty}x_{2n+1}=\dfrac{1}{2}$, 故 $\displaystyle \lim_{n \to \infty}x_n=\dfrac{1}{2}.$
+\end{solution}
 
 \subsection{数列、函数极限的性质}
 
@@ -139,7 +153,7 @@
 \end{theorem}
 
 \begin{example}[2017 数二]
-    设数列 $\qty{x_n}$ 收敛, 则 
+    设数列 $\qty{x_n}$ 收敛, 则
     \begin{tasks}(2)
         \task 当 $\displaystyle\lim_{n\to\infty}\sin x_n=0$ 时, $\displaystyle\lim_{n\to\infty}x_n=0$
         \task 当 $\displaystyle\lim_{n\to\infty}\qty(x_n+\sqrt{|x_n|})=0$ 时, $\displaystyle\lim_{n\to\infty}x_n=0$
@@ -200,7 +214,7 @@
 \end{theorem}
 
 \begin{example}[2008 数一]
-    设函数 $f(x)$ 在 $(-\infty,+\infty)$ 内单调有界, $\qty{x_n}$ 为数列, 下列命题正确的是 
+    设函数 $f(x)$ 在 $(-\infty,+\infty)$ 内单调有界, $\qty{x_n}$ 为数列, 下列命题正确的是
     \begin{tasks}(2)
         \task 若 $\qty{x_n}$ 收敛, 则 $\qty{f(x_n)}$ 收敛
         \task 若 $\qty{x_n}$ 单调, 则 $\qty{f(x_n)}$ 收敛
@@ -228,7 +242,7 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    本题中所给条件比夹逼准则的条件弱, 事实上, 若 $\displaystyle\lim_{x\to\infty}g(x)=\lim_{x\to\infty}\varphi(x)=A$ (有限), 则必有 $\displaystyle\lim_{x\to\infty}[g(x)-\varphi(x)]=0$, 反之则不然, 因为当 $\displaystyle\lim_{x\to\infty}[g(x)-\varphi(x)]=0$ 时, 
+    本题中所给条件比夹逼准则的条件弱, 事实上, 若 $\displaystyle\lim_{x\to\infty}g(x)=\lim_{x\to\infty}\varphi(x)=A$ (有限), 则必有 $\displaystyle\lim_{x\to\infty}[g(x)-\varphi(x)]=0$, 反之则不然, 因为当 $\displaystyle\lim_{x\to\infty}[g(x)-\varphi(x)]=0$ 时,
     极限 $\displaystyle\lim_{x\to\infty}g(x)$ 和 $\displaystyle\lim_{x\to\infty}\varphi(x)$ 可以都不存在, 如 $g(x)=\varphi(x)=x$.
     \begin{enumerate}[label=(\arabic{*})]
         \item 若取 $\varphi(x)=x-\dfrac{1}{x^2},~f(x)=x,~g(x)=x+\dfrac{1}{x^2}$, 显然有 $\varphi(x)\leqslant f(x)\leqslant g(x)$, 且 $\displaystyle\lim_{x\to\infty}[g(x)-\varphi(x)]=0$, 但 $\displaystyle\lim_{x\to\infty}f(x)$ 不存在, 则排除选项 A、B.

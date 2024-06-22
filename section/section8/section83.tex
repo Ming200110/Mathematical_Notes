@@ -2,6 +2,14 @@
 
 \subsection{微分方程与函数性质}
 
+\begin{example}[2002 数二]
+    已知函数 $f(x)$ 在 $(0,+\infty)$ 内可导, $f(x)>0, \displaystyle \lim_{x \to +\infty}f(x)=1$, 且满足 $ \displaystyle \lim_{h \to 0}\qty[\dfrac{f(x+hx)}{f(x)}]^{\frac{1}{x}}=\e ^{\frac{1}{x}} $, 求 $f(x)$.
+\end{example}
+\begin{solution}
+    $ \displaystyle \lim_{h \to 0}\qty[\dfrac{f(x+hx)}{f(x)}]^{\frac{1}{x}}=\exp\lim_{h \to 0}\dfrac{1}{h}\ln\dfrac{f(x+hx)}{f(x)}=\exp\lim_{h \to 0}x\dfrac{\ln f(x+hx)-\ln f(x)}{hx}=\e ^{x\qty[\ln f(x)]'}=\e ^{\frac{1}{x}}$
+    于是 $f(x)=C\e ^{-\frac{1}{x}}$, 又 $\displaystyle  \lim_{x \to +\infty}f(x)=1$, 所以 $C=1$, 于是 $f(x)=\e ^{-\frac{1}{x}}$.
+\end{solution}
+
 \begin{example}[2022 数一]
     设函数 $y(x)$ 是微分方程 $y'+\dfrac{1}{2\sqrt{x}}y=2+\sqrt{x}$ 的满足条件 $y(1)=3$ 的解, 求曲线 $y=y(x)$ 的渐近线.
 \end{example}
@@ -22,7 +30,7 @@
 \end{solution}
 
 \begin{example}
-    设函数 $f(x)$ 在 $\qty(\dfrac{1}{2},+\infty)$, 且 $\displaystyle\lim_{h\to0}\dfrac{f\qty[(x+h)^2]-f\qty(x^2+h)}{h}=1,~f(1)=1$, 求 $f(x)$ 的表达式.
+    设函数 $f(x)$ 在 $\qty(\dfrac{1}{2},+\infty)$ 可导, 且 $\displaystyle\lim_{h\to0}\dfrac{f\qty[(x+h)^2]-f\qty(x^2+h)}{h}=1,~f(1)=1$, 求 $f(x)$ 的表达式.
 \end{example}
 \begin{solution}
     因为 $\displaystyle\lim_{h\to0}\dfrac{f\qty[(x+h)^2]-f\qty(x^2+h)}{h}=\lim_{h\to0}\dfrac{f\qty[(x+h)^2]-f\qty(x^2)}{h}-\lim_{h\to0}\dfrac{f\qty(x^2)-f\qty(x^2+h)}{h}=\qty[f\qty(x^2)]'-f'\qty(x^2)=1$, 则

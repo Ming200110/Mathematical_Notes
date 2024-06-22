@@ -371,6 +371,23 @@
         \end{cases}\Rightarrow \dd f(1,0)=f_1'(1,0)\dd x+f_2'(1,0)\dd y=2\dd x+\dd y.$
 \end{solution}
 
+\begin{example}
+    设连续函数 $f(x,y)$ 满足 $\displaystyle \lim_{\substack{x\to0\\ y\to0}}\dfrac{f(x,y)-2x-3y-2}{\sqrt{x^2+y^2}}=0$, 又 $z=f(3x,x+y)$, 且 $y=y(x)$ 由 $(2x+1)y+\e ^{y}=4x+1$ 确定, 求 $\eval{\dfrac{\dd z}{\dd x}}_{x=0}.$
+\end{example}
+\begin{solution}
+    令 $\rho=\sqrt{x^2+y^2}$, 由 $\displaystyle \lim_{\substack{x\to0\\ y\to0}}\dfrac{f(x,y)-2x-3y-2}{\sqrt{x^2+y^2}}=0$ 得 $f(0,0)=2$, 且 
+    $$
+    f(x,y)-2x-3y-2=o(\rho)\Rightarrow f(x,y)-f(0,0)=2x+3y+o(\rho)
+    $$
+    即 $f(x,y)$ 在 $(0,0)$ 处可微, 且 $f'_x(0,0)=2,f'_y(0,0)=3$, 将 $x=0$ 代入 $(2x+1)y+\e ^{y}=4x+1$ 解得 $y(0)=0$, 在 $(2x+1)y+\e ^{y}=4x+1$ 两边对 $x$ 求导得
+    $$
+    2y+(2x+1)\dv{y}{x}+\e ^{y}\cdot\dv{y}{x}=4
+    $$
+    将 $x=0,y=0$ 代入上式, 得 $\displaystyle \eval{\dv{y}{x}}_{x=0}=2$, 则 
+    $$
+    \eval{\dv{z}{x}}_{x=0}=\eval{3f'_x(3x,x+y)+f'_y(3x,x+y)\qty(1+\dv{y}{x})}_{x=0}=3f'_x(0,0)+f'_y(0,0)\qty(1+\eval{\dv{y}{x}}_{x=0})=15.
+    $$
+\end{solution}
 
 \subsection{复合函数微分法 (链式法则)}
 

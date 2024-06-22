@@ -357,6 +357,20 @@
     因此在 $(r,\theta)=\qty(\e ^{\frac{\pi}{2}},\dfrac{\pi}{2})\Rightarrow (x,y)=\qty(0,\e ^{\frac{\pi}{2}})$ 处的切线的直角坐标方程为 $x+y=\e ^{\frac{\pi}{2}}.$
 \end{solution}
 
+\begin{example}
+    已知 $f(x)$ 是周期为 5 的连续函数, 它在 $x=0$ 的某邻域内满足关系式 $$
+    f(1+\sin x)-3f(1-\sin x)=8x+\alpha(x)
+    $$
+    其中 $\alpha(x)$ 是当 $x\to 0$ 时比 $x$ 的高阶无穷小, 且 $f(x)$ 在 $x=1$ 处可导, 求曲线 $y=f(x)$ 在点 $(6,f(6))$ 处的切线方程.
+\end{example}
+\begin{solution}
+    由题意得 $\displaystyle \lim_{x \to 0}[f(1+\sin x)-3f(1-\sin x)]=\lim_{x \to 0}(8x+\alpha(x))\Rightarrow f(1)=0$, 由导数定义得 
+    $$
+    \lim_{x \to 0}\dfrac{f(1+\sin x)-3f(1-\sin x)}{\sin x}\xlongequal{t=\sin x}\lim_{t \to 0}\qty[\dfrac{f(1+t)-f(1)}{t}+3\dfrac{f(1)-f(1-t)}{t}]=4f'(1)=\lim_{x \to 0}\dfrac{8x+\alpha(x)}{\sin x}=8
+    $$
+    因此 $f'(1)=2$, 又 $T=5$, 所以 $f'(6)=f'(1)=2,f(6)=f(1)=0$, 故在点 $(6,f(6))$ 处的切线方程为 $y=2x-12.$
+\end{solution}
+
 \subsubsection{曲线的曲率}
 
 \begin{definition}[曲率]

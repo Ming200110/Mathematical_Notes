@@ -85,6 +85,17 @@
     $$2+a=-2+b\text{, }-3a+8=b$$ 解得 $a=1\text{, }b=5.$
 \end{solution}
 
+\begin{example}
+    设矩阵 $\vb*{A}=\begin{pmatrix} 0 & 2 & 0 \\ 1 & -1 & a+1 \\ 0 & 0 & 1 \\\end{pmatrix}, \vb*{B}=\begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & b \\\end{pmatrix}$, 且 $\vb*{A}$ 与 $\vb*{B}$ 相似, 求 $a+b.$
+\end{example}
+\begin{solution}
+    因为 $\vb*{A}\sim \vb*{B}$, 所以 $\tr\vb*{A}=\tr\vb*{B}\Rightarrow b=-2$, 又 $\vb*{B}$ 为对角矩阵, 所以 $\vb*{A}$ 可相似对角化, 所以 $\rank(\vb*{E}-\vb*{A})=1$, 即 
+    $$
+    \vb*{E}-\vb*{A}=\begin{pmatrix} 1 & -2 & 0 \\ -1 & 2 & -a-1 \\ 0 & 0 & 0 \\\end{pmatrix}\to \begin{pmatrix} 1 & -2 & 0 \\ 0 & 0 & -a-1 \\ 0 & 0 & 0 \\\end{pmatrix}
+    $$
+    因此 $a=-1$, 所以 $a+b=-3.$
+\end{solution}
+
 \begin{example}[2017 数一]
     已知矩阵 $\vb*{A}=\mqty(2&0&0\\0&2&1\\0&0&1)\text{, }\vb*{B}=\mqty(2&1&0\\0&2&0\\0&0&1)\text{, }\vb*{C}=\mqty(1&0&0\\0&2&0\\0&0&2)$, 则\footnote[1]{假如三阶矩阵 $\vb*{A}$ 的特征值为 $a,b,b$, 那么有 $$\vb*{A}\text{ 可相似对角化}\Leftrightarrow\rank(b\vb*{E}-\vb*{A})=\text{阶数}-b\text{ 的重数}$$
     即只需要判断 $\rank(\vb*{A}-b\vb*{E})\xlongequal{?}\text{阶数}-b\text{ 的重数}.$} 

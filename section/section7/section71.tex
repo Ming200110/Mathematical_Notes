@@ -453,6 +453,25 @@
     \end{enumerate}
 \end{solution}
 
+\begin{example}
+    讨论级数 $\displaystyle \sum_{n=1}^{\infty} \dfrac{(-1)^{n-1}}{n}\qty(1+\dfrac{1}{2}+\cdots+\dfrac{1}{n})$ 的敛散性.
+\end{example}
+\begin{solution}
+    令 $u_n=\dfrac{1}{n}\qty(1+\dfrac{1}{2}+\cdots+\dfrac{1}{n})=\dfrac{H_n}{n}$, 由 Stolz 定理可知,
+    $$
+    \lim_{n \to +\infty}u_n=\lim_{n \to +\infty}\dfrac{H_{n+1}-H_n}{n+1-1}=\lim_{n \to +\infty}\dfrac{1}{n+1}=0
+    $$
+    且
+    $$
+    u_{n+1}-u_n=\dfrac{nH_{n+1}-(n+1)H_n}{(n+1)n}=\dfrac{\dfrac{n}{n+1}-\qty(1+\dfrac{1}{2}+\cdots+\dfrac{1}{n})}{(n+1)n}=\dfrac{\displaystyle \sum_{i=1}^{n}\qty(\dfrac{1}{n+1}-\dfrac{1}{i})}{(n+1)n}<0
+    $$
+    所以, 数列 $u_n$ 单调递减, 且趋于零, 由 Leibniz 判别法知, 原级数收敛, 但非绝对收敛, 事实上
+    $$
+    \lim_{n \to +\infty}\dfrac{u_n}{\dfrac{1}{n}}=+\infty
+    $$
+    且 $\displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n}$ 发散, 所以由比较判别法知 $ \displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n}\qty(1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}) $ 发散, 故原交错级数条件收敛, 但非绝对收敛.
+\end{solution}
+
 \subsection{一般数项级数的判别法}
 
 \begin{definition}[绝对收敛与条件收敛]
