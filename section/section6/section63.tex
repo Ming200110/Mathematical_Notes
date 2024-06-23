@@ -839,6 +839,33 @@ Gauss 公式与 Stokes 公式, 它们都是重要的数学定理, 用于描述�
     即得证.
 \end{proof}
 
+\begin{theorem}[Euler 齐次函数]
+    若 $f$ 是 $n$ 元 $k$ 次齐次函数, 即 $f(tx_1, tx_2, \cdots , tx_n)=t^{k}f(x_1, x_2, \cdots ,x_n)$, 则有 
+    $$
+    x_1f_{x_{1}}+ x_2f_{x_{2}}+ \cdots +x_nf_{x_{n}}=kf(x_1, x_2, \cdots x_n).
+    $$
+\end{theorem}
+
+\begin{example}
+    设 $f(x,y,z)=2x^4-y^4+3z^4+x^2y^2-2x^2z^2+y^2z^2$, 求 $\displaystyle \oiint\limits_\varSigma f(x,y,z)\dd S$, 其中 $\varSigma$ 为球心在原点, 半径为 2 的球面.
+\end{example}
+\begin{solution}
+    方程 $f(tx,ty,tz)=t^4f(x,y,z)$ 两边对 $t$ 求导, 并令 $t=1$, 可得 
+    $$
+    x\pdv{f}{x}+y\pdv{f}{z}+z\pdv{f}{z}=4f(x,y,z)
+    $$
+    注意到 $\varSigma$ 的外侧单位法向量为 $\vb*{e}=\qty(\dfrac{x}{2},\dfrac{y}{2},\dfrac{z}{2})$, 记 $\varSigma$ 所围成的空间区域为 $\Omega$, 则有 
+    \begin{flalign*}
+        \oiint\limits_\varSigma f(x,y,z)\dd S&=\dfrac{1}{4}\oiint\limits_\varSigma\qty(x\pdv{f}{x}+y\pdv{f}{y}+z\pdv{f}{z})\dd S=\dfrac{1}{2}\oiint\limits_\varSigma\pdv{f}{x}\dd y\dd z+\pdv{f}{y}\dd z\dd x\pdv{f}{z}\dd x\dd y\\ 
+        &=\dfrac{1}{2}\iiint\limits_\Omega\qty(\pdv[2]{f}{x}+\pdv[2]{f}{y}+\pdv[2]{f}{z})\dd V=\iiint\limits_\Omega\qty(11x^2-4y^2+17z^2)\dd V
+    \end{flalign*}
+    由于 $\Omega$ 关于 $x,y,z$ 轮换对称, 有 
+    $$
+    \iiint\limits_\Omega x^2\dd V=\iiint\limits_\Omega y^2\dd V=\iiint\limits_\Omega z^2\dd V=\dfrac{1}{3}\iiint\limits_\Omega \qty(x^2+y^2+z^2)\dd V=\dfrac{1}{3}\int_{0}^{2\pi}  \dd \theta \int_{0}^{\pi}  \dd \varphi \int_{0}^{2} r^4\sin\varphi \dd r=\dfrac{128}{15}\pi
+    $$
+    所以 $$\oiint\limits_\varSigma f(x,y,z)\dd S=(11-4+17)\cdot\dfrac{128}{25}\pi=\dfrac{1024}{5}\pi.$$
+\end{solution}
+
 \subsubsection{Stokes 公式}
 
 \begin{theorem}[Stokes 积分法]

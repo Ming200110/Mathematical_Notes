@@ -875,31 +875,31 @@
 
 \subsubsection{积分等式命题的证明}
 
-\begin{example}
-    设 $ f(x) $ 在 $ [a, b] $ 上有二阶导数, 且 $ f^{\prime \prime}(x) $ 在 $ [a, b] $ 上黎曼可积, 证明:
-    $$f(x)=f(a)+f^{\prime}(a)(x-a)+\int_{a}^{x}(x-t) f^{\prime \prime}(t) \dd  t, \forall x \in[a, b] .$$
-\end{example}
-\begin{proof}[{\songti \textbf{证法一}}]
-    由 N-L 公式,
-    \begin{flalign*}
-        f(x) & =f(a)+\int_{a}^{x}f'(t)\dd t=f(a)+\int_{a}^{x}f'(a)\dd t+\int_{a}^{x}\dd t\int_{a}^{t}f''(u)\dd u \\
-             & =f(a)+f'(a)(x-a)+\int_{a}^{x}\dd t\int_{t}^{x}f''(u)\dd u=f(a)+f'(a)(x-a)+\int_{a}^{x}(x-t).
-    \end{flalign*}
-\end{proof}
-\begin{proof}[{\songti \textbf{证法二}}]
-    即证 $\displaystyle \int_{a}^{x}(x-t)f''(t)\dd t=f(x)-f(a)-f'(a)(x-a)$, 由表格积分法:
-    \begin{table}[H]
-        \centering
-        \begin{tabular}{l| c c c}
-            $f'$   & $(x-t)$     & $1$         & $0$    \\
-            \midrule
-                   & $+\searrow$ & $-\searrow$          \\
-            \midrule
-            $\int$ & $f''(t)$    & $f'(t)$     & $f(t)$
-        \end{tabular}
-    \end{table}
-    于是 $\displaystyle \int_{a}^{x}(x-t)f''(t)\dd t=[(x-t)f'(t)-f(t)]_a^x=-f(x)-(x-a)f'(a)+f(a)$, 整理得证.
-\end{proof}
+% \begin{example}
+%     设 $ f(x) $ 在 $ [a, b] $ 上有二阶导数, 且 $ f^{\prime \prime}(x) $ 在 $ [a, b] $ 上黎曼可积, 证明:
+%     $$f(x)=f(a)+f^{\prime}(a)(x-a)+\int_{a}^{x}(x-t) f^{\prime \prime}(t) \dd  t, \forall x \in[a, b] .$$
+% \end{example}
+% \begin{proof}[{\songti \textbf{证法一}}]
+%     由 N-L 公式,
+%     \begin{flalign*}
+%         f(x) & =f(a)+\int_{a}^{x}f'(t)\dd t=f(a)+\int_{a}^{x}f'(a)\dd t+\int_{a}^{x}\dd t\int_{a}^{t}f''(u)\dd u \\
+%              & =f(a)+f'(a)(x-a)+\int_{a}^{x}\dd t\int_{t}^{x}f''(u)\dd u=f(a)+f'(a)(x-a)+\int_{a}^{x}(x-t).
+%     \end{flalign*}
+% \end{proof}
+% \begin{proof}[{\songti \textbf{证法二}}]
+%     即证 $\displaystyle \int_{a}^{x}(x-t)f''(t)\dd t=f(x)-f(a)-f'(a)(x-a)$, 由表格积分法:
+%     \begin{table}[H]
+%         \centering
+%         \begin{tabular}{l| c c c}
+%             $f'$   & $(x-t)$     & $1$         & $0$    \\
+%             \midrule
+%                    & $+\searrow$ & $-\searrow$          \\
+%             \midrule
+%             $\int$ & $f''(t)$    & $f'(t)$     & $f(t)$
+%         \end{tabular}
+%     \end{table}
+%     于是 $\displaystyle \int_{a}^{x}(x-t)f''(t)\dd t=[(x-t)f'(t)-f(t)]_a^x=-f(x)-(x-a)f'(a)+f(a)$, 整理得证.
+% \end{proof}
 
 \begin{example}
     设 $f(x)\in D(0,1),~f(0)=f(1)=-2,~\displaystyle\int_{0}^{1}f(x)\dd x=0$, 证明: $\exists\xi\in(0,1)$, 使得 $$f'(\xi)-f(\xi)=\xi.$$

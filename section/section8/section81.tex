@@ -103,7 +103,7 @@ $f(x,y)$ 是关于 $x$ 和 $y$ 的函数.
     即 $\displaystyle\frac{1}{\sqrt{1+z^2}+z}=Cx\Rightarrow\sqrt{x^2+y^2}+y=C.$
 \end{solution}
 
-\subsubsection{可化为齐次方程的微分方程形如方程}
+\subsubsection{可化为齐次方程的微分方程}
 
 $$\dfrac{\dd y}{\dd x}=f\left(\dfrac{a_{1} x+b_{1} y+c_{1}}{a_{2} x+b_{2} y+c_{2}}\right)$$
 
@@ -360,4 +360,26 @@ $$\dfrac{\dd y}{\dd x}=f\left(\dfrac{k u+c_{1}}{u+c_{2}}\right)=g(u), \quad \dfr
               即 $$\dd \qty(-\dfrac{1}{xy})+\dd \qty(\dfrac{1}{2x^4})=0$$
               故原方程的通解为 $\dfrac{1}{2x^4}-\dfrac{1}{xy}=C.$
     \end{enumerate}
+\end{solution}
+
+\subsection{参数式通解}
+
+形如 $F(y,y')=0$ 或 $F(x,y')=0$ 的方程, 可考虑用 “参数式解法” 求解, 对方程 $F(y,y')=0$, 可令 $y=\varphi(t)$, 由方程解得 $y'=\psi(t)$ (显然 $y=\varphi(t)$ 或 $y'=\psi(t)$ 的选择具有多样性), 再由 $\dd x=\dfrac{\dd y}{y'}=\dfrac{\varphi'(t)}{\psi(t)}\dd t$, 积分得 $\displaystyle x=\int\dfrac{\varphi'(t)}{\psi(t)}\dd t$, 
+即微分方程的通解为 $\begin{cases}
+    \displaystyle x=\int\dfrac{\varphi'(t)}{\psi(t)}\dd t \\ 
+    y=\varphi(t)
+\end{cases}$, 同理可得 $F(x,y')=0$ 型方程的求解.
+
+\begin{example}
+    求微分方程 $y+y'=\ln\sqrt{1+y'^2}$ 的通解.
+\end{example}
+\begin{solution}
+    令 $y'=\tan t$, 代入方程得 $y=\ln|\sec t|-\tan t$, 所以 
+    $$
+    \dd x=\dfrac{\dd y}{y'}=\qty(1-\dfrac{\sec^2 t}{\tan t})\dd t\Rightarrow x=t-\ln|\tan t|+C
+    $$
+    于是得到微分方程参数形式的通解 $\begin{cases}
+        x=t-\ln|\tan t|+C \\ 
+        y=\ln|\sec t|-\tan t.
+    \end{cases}$
 \end{solution}

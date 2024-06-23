@@ -552,12 +552,12 @@
     \end{flalign*}
     \textbf{法二: }利用变量代换, 令 $ x+y=u, y=u v $, 则区域 $ D $ 化为 $ D^{\prime}=\{(u, v) \mid 0<u<1,0<v<1\} $,
     $$
-        \dfrac{\partial(x, y)}{\partial(u, v)}=\mqty|\dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\[6pt]
-        \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v}|=\mqty|1-v & -u \\
-        v & u|=u
+    \dfrac{\partial(x, y)}{\partial(u, v)}=\mqty|\dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\[6pt]
+    \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v}|=\mqty|1-v & -u \\
+    v & u|=u
     $$
-    于是 $\displaystyle  \iint\limits_{D} \mathrm{e}^{\frac{y}{x+y}} \dd  x \dd  y=\iint\limits_{D^{\prime}} \mathrm{e}^{v}\left|\frac{\partial(x, y)}{\partial(u, v)}\right| \mathrm{d} u \dd  v=\int_{0}^{1} u \dd  u \int_{0}^{1} \mathrm{e}^{v} \dd  v=\frac{1}{2}(\mathrm{e}-1) .$\\
-    \textbf{法三: }利用变量代换, 令 $ x+y=u, y-x=v $, 则区域 $ D $ 化为 $ D^{\prime}=\{(u, v) \mid 0<u<1,-u<v<u\} $,
+        于是 $\displaystyle  \iint\limits_{D} \mathrm{e}^{\frac{y}{x+y}} \dd  x \dd  y=\iint\limits_{D^{\prime}} \mathrm{e}^{v}\left|\frac{\partial(x, y)}{\partial(u, v)}\right| \mathrm{d} u \dd  v=\int_{0}^{1} u \dd  u \int_{0}^{1} \mathrm{e}^{v} \dd  v=\frac{1}{2}(\mathrm{e}-1) .$\\
+        \textbf{法三: }利用变量代换, 令 $ x+y=u, y-x=v $, 则区域 $ D $ 化为 $ D^{\prime}=\{(u, v) \mid 0<u<1,-u<v<u\} $,
     $$
     \dfrac{\partial(x, y)}{\partial(u, v)}=\mqty|\dfrac{\partial x}{\partial u} & \dfrac{\partial x}{\partial v} \\[6pt]
     \dfrac{\partial y}{\partial u} & \dfrac{\partial y}{\partial v}|=\mqty|\dfrac{1}{2} & -\dfrac{1}{2} \\[6pt]
@@ -664,20 +664,20 @@
 
 \begin{theorem}[高次积分球坐标公式]
     根据球坐标变换公式:
-\begin{flalign*}
-    x_{1}   & =r \cos \phi_{1}                                                      \\
-    x_{2}   & =r \sin \phi_{1} \cos \phi_{2}                                        \\
-    \vdots  &                                                                       \\
-    x_{n-1} & =r \sin \phi_{1} \sin \phi_{2} \cdots \sin \phi_{n-2} \cos \phi_{n-1} \\
-    x_{n}   & =r \sin \phi_{1} \sin \phi_{2} \cdots \sin \phi_{n-2} \sin \phi_{n-1}
-\end{flalign*}
-将直角坐标 $ \left(x_{1}, x_{2}, \cdots, x_{n}\right) $ 变换为极坐标 $ \left(r, \phi_{1}, \phi_{2}, \cdots, \phi_{n-1}\right) $ 特别地,
-$$
-    \begin{array}{c}
-        x_{1}^{2}+x_{2}^{2}+\cdots+x_{n}^{2}=1 \\
-        \displaystyle \frac{\partial\left(x_{1}, x_{2}, \cdots, x_{n}\right)}{\partial\left(r, \phi_{1}, \phi_{2}, \cdots, \phi_{n-1}\right)}=r^{n-1} \sin ^{n-2} \phi_{1} \sin ^{n-3} \phi_{2} \cdots \sin \phi_{n-2}.
-    \end{array}
-$$
+    \begin{flalign*}
+        x_{1}   & =r \cos \phi_{1}                                                      \\
+        x_{2}   & =r \sin \phi_{1} \cos \phi_{2}                                        \\
+                & \vdots                                                                \\
+        x_{n-1} & =r \sin \phi_{1} \sin \phi_{2} \cdots \sin \phi_{n-2} \cos \phi_{n-1} \\
+        x_{n}   & =r \sin \phi_{1} \sin \phi_{2} \cdots \sin \phi_{n-2} \sin \phi_{n-1}
+    \end{flalign*}
+    将直角坐标 $ \left(x_{1}, x_{2}, \cdots, x_{n}\right) $ 变换为极坐标 $ \left(r, \phi_{1}, \phi_{2}, \cdots, \phi_{n-1}\right) $ 特别地,
+    $$
+        \begin{array}{c}
+            x_{1}^{2}+x_{2}^{2}+\cdots+x_{n}^{2}=1 \\
+            \displaystyle \frac{\partial\left(x_{1}, x_{2}, \cdots, x_{n}\right)}{\partial\left(r, \phi_{1}, \phi_{2}, \cdots, \phi_{n-1}\right)}=r^{n-1} \sin ^{n-2} \phi_{1} \sin ^{n-3} \phi_{2} \cdots \sin \phi_{n-2}.
+        \end{array}
+    $$
 \end{theorem}
 
 \begin{example}\scriptsize\linespread{0.8}
@@ -710,17 +710,17 @@ $$
               \begin{enumerate}[label=(\roman{*})]
                   \item 若积分区域 $ D $ 关于 $ x $ 轴对称, 而 $ D_{1}$ 是 $ D $ 中对应于 $ y \geqslant 0 $ 的部分, 则
                         $$\iint\limits_{D} f(x, y) \dd  x \dd  y=\begin{cases}
-                                2 \displaystyle\iint_{D_{1}} f(x, y) \dd  x \dd  y, & f(x,-y)=f(x, y),   \\
+                                2 \displaystyle\iint\limits_{D_{1}} f(x, y) \dd  x \dd  y, & f(x,-y)=f(x, y),   \\
                                 0,                                                  & f(x,-y)=-f(x, y) .
                             \end{cases}$$
                   \item 若积分区域 $ D $ 关于 $ y $ 轴对称, 而 $ D_{1} $ 是 $ D $ 中对应于 $ x \geqslant 0 $ 的部分, 则
                         $$\iint\limits_{D} f(x, y) \dd  x \dd  y=\begin{cases}
-                                2 \displaystyle\iint_{D_{1}} f(x, y) \dd  x \dd  y, & f(-x, y)=f(x, y),   \\
+                                2 \displaystyle\iint\limits_{D_{1}} f(x, y) \dd  x \dd  y, & f(-x, y)=f(x, y),   \\
                                 0,                                                  & f(-x, y)=-f(x, y) .
                             \end{cases}$$
                   \item 若积分区域 $ D $ 关于 $ x $ 轴和 $ y $ 轴均对称, 而 $ D_{1} $ 是 $ D $ 中对应于 $ x \geqslant 0, y \geqslant 0 $ 的部分, 则
                         $$\iint\limits_{D} f(x, y) \dd  x \dd  y=\begin{cases}
-                                4 \displaystyle\iint_{D_{1}} f(x, y) \dd  x \dd  y, & f(-x, y)=f(x,-y)=f(x, y),                \\
+                                4 \displaystyle\iint\limits_{D_{1}} f(x, y) \dd  x \dd  y, & f(-x, y)=f(x,-y)=f(x, y),                \\
                                 0,                                                  & f(-x, y) \text { 或 } f(x,-y)=-f(x, y) .
                             \end{cases}$$
               \end{enumerate}
@@ -746,6 +746,10 @@ $$
               \end{enumerate}
     \end{enumerate}
 \end{theorem}
+
+\begin{definition}[轮换对称性]
+    若积分区域 $\Omega$ 的边界曲面中的 $x,y,z$ 依次轮换 $x\to y\to z\to x$, 其方程不变, 则称 $\Omega$ 关于 $x,y,z$ \textit{具有轮换对称性}.
+\end{definition}
 
 \begin{example}
     计算 $ \displaystyle \iint\limits_D\qty(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2})\dd x\dd y $, 其中 $D$ 为圆域: $x^2+y^2\leqslant R^2.$

@@ -587,6 +587,27 @@
     $$2x'^2+2y'^2-7z'^2=27$$ 这是单叶双曲面.
 \end{solution}
 
+\begin{example}
+    已知二次型 $f(x_1, x_2, x_3)=x_1^2+x_2^2+ax_3^2-2x_1x_3$, 且二次曲面 $f(x_1, x_2, x_3)=1$ 是柱面,
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求 $a$ 的值;
+        \item 用正交变换将二次型 $f$ 化为标准形, 并求所用的正交变换;
+        \item 求此柱面母线的方向向量.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 因为 $f(x_1, x_2, x_3)=1$ 为柱面, 所以 $f$ 有 $0$ 特征值, 则 $|\vb*{A}|=\mqty|1&0&-1\\0&1&0\\-1&0&a|=a-1=0\Rightarrow a=1$.
+        \item $f(x_1, x_2, x_3+=x_1^2+ x_2^2+ x_3^2-2x_1x_3$, $$
+        |\lambda\vb*{E}-\vb*{A}|=\mqty| \lambda-1 & 0 & 1 \\ 0 & \lambda-1 & 0 \\ 1 & 0 & \lambda-1 \\|=\lambda(\lambda-1)(\lambda-2)=0
+        $$
+        解得 $\lambda_1=0, \lambda_2=1, \lambda_3=2$, 当 $\lambda=\lambda_1$ 时, 对应的特征向量为 $\vb*{\xi}_1=(1,0,1)^\top$, 当 $\lambda=\lambda_2$ 时, 对应的特征向量为 $\vb*{\xi}_2=(0,1,0)^\top$, 当 $\lambda=\lambda_3$ 时, 对应的特征向量为 $\vb*{\xi}_3=(1,0,-1)^\top$, 
+        令 $\vb*{Q}=\qty(\dfrac{\vb*{\xi}_1}{\left\lVert \vb*{\xi}_1\right\rVert },\dfrac{\vb*{\xi}_2}{\left\lVert \vb*{\xi}_2\right\rVert },\dfrac{\vb*{\xi}_3}{\left\lVert \vb*{\xi}_3\right\rVert })=\begin{pmatrix} \dfrac{1}{\sqrt{2}} & 0 & \dfrac{1}{\sqrt{2}} \\ 0 & 1 & 0 \\ \dfrac{1}{\sqrt{2}} & 0 & -\dfrac{1}{\sqrt{2}} \\\end{pmatrix}$
+        因此 $f=\vb*{x}^\top\vb*{Ax}\xlongequal{\vb*{x}=\vb*{Qy}}y_2^2+2y_3^2$.
+        \item 由 (2) 知 $f=y_2^2+2y_3^2=1$, 故该柱面的母线平行于 $y_1$ 轴, 即在 $Oy_1, y_2, y_3$ 坐标系下的方向向量为 $\vb*{\tau }_y=(1,0,0)^\top$, 于是在 $Ox_1, x_2, x_3$ 坐标系下的方向向量为 $\vb*{\tau}_x=\vb*{Q\tau}_y=\qty(\dfrac{\sqrt{2}}{2},0,\dfrac{\sqrt{2}}{2})^\top.$
+    \end{enumerate}
+\end{solution}
+
 \subsubsection{最值问题}
 
 \begin{example}

@@ -312,6 +312,16 @@
     $f(2)=4\Leftrightarrow g(4)=2$, 故 $g'(4)=\dfrac{1}{f'(2)}=\dfrac{1}{\sqrt{5}}$, 选 B.
 \end{solution}
 
+\begin{theorem}[反函数的二阶导数]
+    反函数二阶导数 $\displaystyle \dv[2]{y}{x}=-\dv[2]{x}{y}\cdot\qty(\dv{y}{x})^{3}$.
+\end{theorem}
+\begin{proof}[{\songti \textbf{证}}]
+    因为 $\displaystyle \dv{y}{x}=\qty(\dv{x}{y})^{-1}$, 所以 
+    $$
+    \dv[2]{y}{x}=\dv{x}\qty(\dv{x}{y})^{-1}=\dv{y}\qty(\dv{x}{y})^{-1}\cdot\dv{y}{x}=-\qty(\dv{x}{y})^{-2}\dv[2]{y}{x}\cdot\dv{y}{x}=-\dv[2]{x}{y}\cdot\qty(\dv{y}{x})^{3}.
+    $$
+\end{proof}
+
 \begin{theorem}[用参数方程确定的函数的导数]
     若方程组
     $\begin{cases}

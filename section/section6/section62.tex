@@ -7,7 +7,7 @@
 \subsubsection{第一类曲线积分的计算}
 
 \begin{definition}[对弧长的曲线积分 (第一类曲线积分)]
-    $\displaystyle\int_L f(x,y)\dd s=\lim_{\lambda\to0}\sum_{i=1}^{n}f(\xi_i,\eta_i)\Delta s_i$, 如果函数 $f(x,y)$ 在曲线 $L$ 上连续, 
+    $\displaystyle\int_L f(x,y)\dd s=\lim_{\lambda\to0}\sum_{i=1}^{n}f(\xi_i,\eta_i)\Delta s_i$, 如果函数 $f(x,y)$ 在曲线 $L$ 上连续,
     则 $f(x,y)$ 在曲线 $L$ 上对弧长的曲线积分 $\displaystyle\int_L f(x,y)\dd s$ 一定存在.\\
     上述概念可以推广到空间, 如果 $f(x,y,z)$ 是定义在空间中分段光滑曲线 $L$ 上的有界函数, 则函数 $f(x,y,z)$ 在曲线 $L$ 上对弧长的曲线积分是
     $$\int_Lf(x,y,z)\dd s=\lim_{\lambda\to0}\sum_{i=1}^{n}f(\xi_i,\eta_i,\zeta_i)\Delta s_i.$$
@@ -117,12 +117,12 @@
         \end{cases}$ 求曲线积分 $\displaystyle\int_\Gamma (x+y)^2\dd s.$
 \end{example}
 \begin{solution}
-    \textbf{法一: }由 $x+y=-z$, 于是 $\displaystyle\int_\Gamma(x+y)^2\dd s=\int_\Gamma z^2\dd s$, 
+    \textbf{法一: }由 $x+y=-z$, 于是 $\displaystyle\int_\Gamma(x+y)^2\dd s=\int_\Gamma z^2\dd s$,
     由轮换对称性知 $$\int_\Gamma x^2\dd s=\int_\Gamma y^2\dd s=\int_\Gamma z^2\dd s=\dfrac{1}{3}\qty(x^2+y^2+z^2)\dd s$$
     又 $x^2+y^2+z^2=a^2$, 于是 $$\displaystyle\int_\Gamma (x+y)^2\dd s=\dfrac{1}{3}\int_\Gamma \qty(x^2+y^2+z^2)\dd s=\dfrac{a^2}{3}\int_\Gamma \dd s=\dfrac{2\pi}{3}a^3.$$
     \textbf{法二: }由 $z=-(x+y)$, 代入 $x^2+y^2+z^2=a^2$, 得 $x^2+y^2+xy=\dfrac{a^2A}{2}$, 故由旋转变换
     $$x=\dfrac{\sqrt{2}}{2}(X+Y),~y=\dfrac{\sqrt{2}}{2}(X-Y)$$
-    将其转换为 $3X^2+Y^2=a^2$, 并令 $X=\dfrac{a}{\sqrt{3}}\cos t,Y=a\sin t,0\leqslant t\leqslant 2\pi$, 
+    将其转换为 $3X^2+Y^2=a^2$, 并令 $X=\dfrac{a}{\sqrt{3}}\cos t,Y=a\sin t,0\leqslant t\leqslant 2\pi$,
     可得 $\Gamma$ 的参数方程为 $$\begin{cases}
             x=\dfrac{\sqrt{2} }{2} \qty(\dfrac{a}{\sqrt 3}\cos t-a\sin t ) \\[6pt]
             y=\dfrac{\sqrt 2}{2}\qty(\dfrac{a}{\sqrt 3}\cos t+a\sin t )    \\[6pt]
@@ -164,13 +164,13 @@
                   \int_{\widehat{AB} }P(x,y)\dd x & =\int_{\alpha}^{\beta}P[x(t),y(t)]x'(t)\dd t \\
                   \int_{\widehat{AB} }Q(x,y)\dd y & =\int_{\alpha}^{\beta}Q[x(t),y(t)]y'(t)\dd t
               \end{flalign*}
-        \item 如果曲线 $L$ 由方程 $y=y(x)~~(a\leqslant x\leqslant b)$ 给出, 曲线 $L$ 的起点 $A$ 的横坐标为 $x=a$, 终点 $B$ 的横坐标为 $x=b$, 
+        \item 如果曲线 $L$ 由方程 $y=y(x)~~(a\leqslant x\leqslant b)$ 给出, 曲线 $L$ 的起点 $A$ 的横坐标为 $x=a$, 终点 $B$ 的横坐标为 $x=b$,
               函数 $y(x)$ 具有连续的一阶导数, 则
               \begin{flalign*}
                   \int_{\widehat{AB} }P(x,y)\dd x & =\int_{a}^{b}P[x,y(x)]\dd x      \\
                   \int_{\widehat{AB} }Q(x,y)\dd y & =\int_{a}^{b}Q[x,y(x)]y'(x)\dd x
               \end{flalign*}
-        \item 如果曲线 $L$ 由方程 $x=x(y)~~(c\leqslant y\leqslant d)$ 给出, 曲线 $L$ 的起点 $A$ 的横坐标为 $y=c$, 终点 $B$ 的横坐标为 $y=d$, 
+        \item 如果曲线 $L$ 由方程 $x=x(y)~~(c\leqslant y\leqslant d)$ 给出, 曲线 $L$ 的起点 $A$ 的横坐标为 $y=c$, 终点 $B$ 的横坐标为 $y=d$,
               函数 $x(y)$ 具有连续的一阶导数, 则
               \begin{flalign*}
                   \int_{\widehat{AB} }P(x,y)\dd x & =\int_{c}^{d}P[x(y),y]x'(y)\dd y \\
@@ -230,36 +230,13 @@
     \end{flalign*}
 \end{solution}
 
-\subsubsection{方向导数与两类曲线积分的联系}
-
-\begin{example}
-    设 $u(x,y)$ 于圆盘 $D=\qty{(x,y):x^2+y^2\leqslant \dfrac{\pi}{2}}$ 内有二阶连续的偏导数, 并且满足:
-    $$\pdv[2]{u}{x}+\pdv[2]{u}{y}=\qty(x^2+y^2)\sin^6\qty(x^2+y^2)$$
-    记 $D$ 的正向边界曲线为 $\partial D$, $\partial D$ 的外法线向量为 $\va*{n}$, 求 $\displaystyle \oint_{\partial D}\pdv{u}{\va*{n}}\dd s.$
-\end{example}
-\begin{solution}
-    设 $\va*{T}=(\cos\alpha,\cos\beta)$ 对应的正向切线的单位向量, 则单位向量为 $\va*{n}=(\cos\alpha,-\cos\beta)$, 由题设可知 $u(x,y)$ 可微, 
-    故由方向导数计算公式和两类曲线积分之间的关系, 得
-    $$I=\oint_{\partial D}\pdv{u}{\va*{n}}\dd s=\oint_{\partial D}\qty(\pdv{u}{x}\cos \beta-\pdv{u}{y}\cos \alpha)\dd s=\oint_{\partial D}\pdv{u}{x}\dd y-\pdv{u}{y}\dd x$$
-    于是由 Green 公式和二重积分的极坐标计算公式, 得
-    \begin{flalign*}
-        I & =\iint\limits_D\qty(\pdv[2]{u}{x}+\pdv[2]{u}{y})\dd x\dd y=\iint\limits_D\qty(x^2+y^2)\sin^6\qty(x^2+y^2)\dd x\dd y=\int_{0}^{2\pi}\dd \theta\int_{0}^{\sqrt{\frac{\pi}{2}}}r^2\sin^6r^2\dd r=\pi\int_{0}^{\frac{\pi}{2}}u\sin^6u\dd u
-    \end{flalign*}
-    又因为 $\sin^nx=\begin{cases}
-            \displaystyle \dfrac{1}{(2\i)^{n-1}}\sum_{k=0}^{\frac{n-1}{2}}(-1)^k\C_n^k\cos((n-2k)x) \\
-            \displaystyle \dfrac{2}{(2\i)^n}\qty[\sum_{k=0}^{\frac{n}{2}-1}(-1)^k\C_n^k\cos((n-2k)x)+\dfrac{(-1)^{\frac{n}{2}}}{2}\C_n^{\frac{n}{2}}]
-        \end{cases}\Rightarrow \sin^6x=-\dfrac{1}{8}\cos^32x+\dfrac{3}{16}\cos 4x-\dfrac{3}{8}\cos 2x+\dfrac{5}{16}$, 由分部积分公式
-    $$\int u\cos nu\dd u=\dfrac{\cos nu}{n^2}+\dfrac{u\sin nu}{n}+C$$
-    分别取 $n=2,4,6$, 得 $\displaystyle I=\pi\qty(\dfrac{17}{72}+\dfrac{5\pi^2}{128}).$
-\end{solution}
-
 \subsection{Green 公式}
 
 \begin{theorem}[Green 公式]
     \index{Green 公式}
     Green 公式给出了平面上有限条逐段光滑封闭曲线上的线积分与它们所包围区域上的二重积分的关系:
     $$\oint_{L^+}P\dd x+Q\dd y=\iint\limits_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\dd x\dd y$$
-    这里 $L^+$ 表示沿 $L$ 的正向取积分. 正向指前进时  保持在左边的方向, 当 $D$ 为单连通区域时, 
+    这里 $L^+$ 表示沿 $L$ 的正向取积分. 正向指前进时  保持在左边的方向, 当 $D$ 为单连通区域时,
     即是逆时针方向；当 $D$ 为多联通区域时, 外边界为逆时针方向, 内边界为顺时针方向. $P,Q$ 要求
     在区域 $D$ 内直到边界 $L$ 上连续, 并且连续偏导数. 由此可得 $D$ 的面积公式为:
     $$S=\iint\limits_D\dd x\dd y=\oint_{L^+}x\dd y=-\oint_{L^-}y\dd x=\frac{1}{2}\int_Lx\dd y-y\dd x.$$
@@ -272,7 +249,7 @@
     $$\displaystyle\oint_L\mathrm{e}^{x^2y^2}\qty[\qty(y-\dfrac{1}{x})\dd x+\qty(x+\dfrac{1}{y})\dd y].$$
 \end{example}
 \begin{solution}
-    令 $u=\dfrac{y}{x},~v=xy$, 那么 $x=\sqrt{\dfrac{v}{u}},~y=\sqrt{uv}$, $\dd u=\dd \qty(\dfrac{y}{x})=\dfrac{x\dd y-y\dd x}{x^2}$, $\dd v=\dd (xy)=y\dd x+x\dd y$, 
+    令 $u=\dfrac{y}{x},~v=xy$, 那么 $x=\sqrt{\dfrac{v}{u}},~y=\sqrt{uv}$, $\dd u=\dd \qty(\dfrac{y}{x})=\dfrac{x\dd y-y\dd x}{x^2}$, $\dd v=\dd (xy)=y\dd x+x\dd y$,
     $L'$ 是区域 $D':\dfrac{1}{2}\leqslant u\leqslant 2,~1\leqslant v\leqslant 2$ 的正向边界曲线, 于是
     \begin{flalign*}
         I & =\oint_L\mathrm{e}^{x^2y^2}\qty[\qty(y-\dfrac{1}{x})\dd x+\qty(x+\dfrac{1}{y})\dd y]=\oint_L\mathrm{e}^{x^2y^2}\qty(y\dd x+x\dd y+\dfrac{x}{y}\cdot\dfrac{x\dd y-y\dd x}{x^2})                                             \\
@@ -330,7 +307,7 @@
         则有 $$\int_{\partial D}=\int_{\partial D+l-l}=\int_{\partial D+l}+\int_{l^-}:=I_1+I_2$$
         设 $P=\dfrac{x\e^{x^2+4y^2}+y}{x^2+4y^2},~Q=\dfrac{4y\e^{x^2+4y^2}-x}{x^2+4y^2}$, 那么
         $$\pdv{Q}{x}=\dfrac{8xy\e^{x^2+4y^2}\qty(x^2+4y^2-1)+x^2-4y^2}{\qty(x^2+4y^2)^2}=\pdv{P}{y}$$
-        因此 $\displaystyle I_1=\iint\limits_D\qty(\pdv{Q}{x}-\pdv{P}{y})\dd x\dd y=0$, 下求 $I_2$, 
+        因此 $\displaystyle I_1=\iint\limits_D\qty(\pdv{Q}{x}-\pdv{P}{y})\dd x\dd y=0$, 下求 $I_2$,
     \end{minipage}
     \begin{flalign*}
         I_2 & =\dfrac{1}{\varepsilon^2}\int_{l^-}\underbrace{\qty(x\e^{x^2+4y^2}+y)}_{P_1}\dd x+\underbrace{\qty(4y\e^{x^2+4y^2}-x)}_{Q_1}\dd y=\dfrac{1}{\varepsilon^2}\iint\limits_{D_{\varepsilon}}\qty(\pdv{Q_1}{x}-\pdv{P_1}{y})\dd x\dd y \\
@@ -345,8 +322,8 @@
 \begin{solution}
     当 $R<1$ 时, 满足 Green 公式的条件, 则 $$\frac{\partial }{\partial x}\left(\frac{x}{4x^2+y^2}\right)=\frac{y^2-4x^2}{(4x^2+y^2)^2}=\frac{\partial }{\partial y}\left(\frac{-y}{4x^2+y^2}\right)$$
     所以 $\displaystyle\oint_{C^+}\frac{x\dd y-y\dd x}{4x^2+y^2}=0~~(x,y\not=0)$;\\
-    当 $R>1$ 时, 取 $\varepsilon>0$ 充分小, 使得 $\Gamma_\varepsilon:~4x^2+y^2=\varepsilon^2$, 且 $\Gamma_\varepsilon^+$ 表示其上的方向为顺时针方向, 
-    记 $C$ 与 $\Gamma$ 所围成区域为 $D$, 则 $\displaystyle\oint_{C^++\Gamma_\varepsilon^+}\frac{x\dd y-y\dd x}{4x^2+y^2}=0$, 
+    当 $R>1$ 时, 取 $\varepsilon>0$ 充分小, 使得 $\Gamma_\varepsilon:~4x^2+y^2=\varepsilon^2$, 且 $\Gamma_\varepsilon^+$ 表示其上的方向为顺时针方向,
+    记 $C$ 与 $\Gamma$ 所围成区域为 $D$, 则 $\displaystyle\oint_{C^++\Gamma_\varepsilon^+}\frac{x\dd y-y\dd x}{4x^2+y^2}=0$,
     那么 $$\oint_{C^+}\frac{x\dd y-y\dd x}{4x^2+y^2}=\oint_{\Gamma_\varepsilon^-}\frac{x\dd y-y\dd x}{4x^2+y^2}=\frac{1}{\varepsilon^2}\oint_{\Gamma_\varepsilon^-}x\dd y-y\dd x=\frac{1}{\varepsilon^2}\cdot \pi\varepsilon^2=\pi.$$
 \end{solution}
 
@@ -354,7 +331,7 @@
     设 $f(x,y)$ 单位圆上有连续的偏导数, 且在边界上取值为零, 求证: $$\displaystyle\lim_{\varepsilon\to 0^+}\iint\limits_D\dfrac{x\dfrac{\partial f}{\partial x}+y\dfrac{\partial f}{\partial y}}{x^2+y^2}\dd x\dd y=-2\pi f(0,0).$$ 其中 $D$ 为圆环域: $\varepsilon ^2\leqslant  x^2+y^2\leqslant  1.$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    记 $\displaystyle L_1:~x^2+y^2=1$ (逆时针方向), $L_2:~x^2+y^2=\varepsilon ^2$ (顺时针方向), 
+    记 $\displaystyle L_1:~x^2+y^2=1$ (逆时针方向), $L_2:~x^2+y^2=\varepsilon ^2$ (顺时针方向),
     \begin{flalign*}
         \iint\limits_D\dfrac{x\dfrac{\partial f}{\partial x}+y\dfrac{\partial f}{\partial y}}{x^2+y^2}\dd x\dd y & =\oint_{L_2}\dfrac{-yf(x,y)\dd x+xf(x,y)\dd y}{x^2+y^2}=\dfrac{1}{\varepsilon^2}\oint_{L_2}-yf(x,y)\dd x+xf(x,y)\dd y                                                                                 \\
                                                                                                                  & =\dfrac{1}{\varepsilon^2}\int_{2\pi}^0\left[(-\varepsilon\sin\theta)(-\varepsilon\sin\theta)+\epsilon\cos\theta\cdot\epsilon\cos\theta\right]f(\varepsilon\cos\theta,\varepsilon\sin\theta)\dd \theta \\
@@ -362,6 +339,43 @@
     \end{flalign*}
     故 $\displaystyle\lim_{\varepsilon\to0^+}\iint\limits_D\dfrac{x\dfrac{\partial f}{\partial x}+y\dfrac{\partial f}{\partial y}}{x^2+y^2}\dd x\dd y=-2\pi f(0,0).$
 \end{proof}
+
+\subsubsection{曲线积分最大值}
+
+\begin{example}
+    确定曲线 $C$, 使得 $\displaystyle I=\oint_C\qty(x+\dfrac{y^3}{3})\dd x+\qty(y+x-\dfrac{2x^3}{3})\dd y$ 达到最大值.
+\end{example}
+\begin{solution}
+    记 $D$ 为曲线 $C$ 所围区域, 由 Green 公式 $$
+        I=\iint\limits_D\qty[\pdv{x}\qty(y+x-\dfrac{2x^3}{3})-\pdv{y}\qty(x+\dfrac{y^3}{3})]\dd x\dd y=\iint\limits_D\qty(1-2x^2-y^2)\dd x\dd y
+    $$
+    当 $2x^2+y^2>1$ 时, 积分函数 $<0\to I<0$; 当 $2x^2+y^2\leqslant 1$, 积分函数 $\geqslant 0\to I\geqslant 0$, 因此当 $C:2x^2+y^2=1$ 时, $I$ 有最大值.
+\end{solution}
+
+\begin{example}
+    设曲线 $L$ 是 $xOy$ 平面上有界单连通闭区域 $D$ 的正向边界, 当曲线 $L$ 的方程为 $x^2+y^2=1$ 时,
+    $$
+        I=\oint_L\qty(ax+\dfrac{a}{3}x^3-\dfrac{1}{2}x\e ^{x^2+y^2})\dd y+\qty(\dfrac{1}{2}y\e ^{x^2+y^2}-\dfrac{a}{3}y^3)\dd x
+    $$
+    值最大, 求
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 常数 $a$ 的值;
+        \item $I$ 的最大值 $I_{max}$.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 由 Green 公式 $$
+                  I=\iint\limits_D\qty[\pdv{x}\qty(ax+\dfrac{a}{3}x^3-\dfrac{1}{2}x\e ^{x^2+y^2})-\pdv{y}\qty(\dfrac{1}{2}y\e ^{x^2+y^2}-\dfrac{a}{3}y^3)]\dd x \dd y =\iint\limits_D\qty(1+x^2+y^2)\qty(a-\e ^{x^2+y^2})\dd x \dd y
+              $$
+              因为曲线 $L$ 为 $x^2+y^2=1$ 时, $I$ 最大, 故 $a=\e$.
+        \item 由 (1) 可得
+              \begin{flalign*}
+                  I_{max} & =\iint\limits_D\qty(1+x^2+y^2)\qty(\e -\e ^{x^2+y^2})\dd x \dd y=\int_{0}^{2\pi}  \dd \theta \int_{0}^{1} \qty(r+r^3)\qty(\e -\e ^{r^2}) \dd r \\
+                          & \xlongequal{r^2=t}\pi \int_{0}^{1}(1+t)\qty(\e -\e ^{t})\dd t=\pi\qty(\e-\e+1+\dfrac{\e }{2}-1)=\dfrac{1}{2}\pi \e.
+              \end{flalign*}
+    \end{enumerate}
+\end{solution}
 
 \subsubsection{外法向量形式}
 
@@ -392,6 +406,29 @@
         =\int_0^{2\pi}\dd \theta\int_0^{\sqrt{\pi}}\rho\mathrm{e}^{\pi-\rho^2}\sin\rho^2\dd \rho
         =\pi\int_0^\pi\mathrm{e}^{\pi-t}\sin t\dd t=\frac{\pi}{2}\left(\mathrm{e}^\pi+1\right)
     \end{flalign*}
+\end{solution}
+
+\subsubsection{方向导数与两类曲线积分的联系}
+
+\begin{example}
+    设 $u(x,y)$ 于圆盘 $D=\qty{(x,y):x^2+y^2\leqslant \dfrac{\pi}{2}}$ 内有二阶连续的偏导数, 并且满足:
+    $$\pdv[2]{u}{x}+\pdv[2]{u}{y}=\qty(x^2+y^2)\sin^6\qty(x^2+y^2)$$
+    记 $D$ 的正向边界曲线为 $\partial D$, $\partial D$ 的外法线向量为 $\va*{n}$, 求 $\displaystyle \oint_{\partial D}\pdv{u}{\va*{n}}\dd s.$
+\end{example}
+\begin{solution}
+    设 $\va*{T}=(\cos\alpha,\cos\beta)$ 对应的正向切线的单位向量, 则单位向量为 $\va*{n}=(\cos\alpha,-\cos\beta)$, 由题设可知 $u(x,y)$ 可微,
+    故由方向导数计算公式和两类曲线积分之间的关系, 得
+    $$I=\oint_{\partial D}\pdv{u}{\va*{n}}\dd s=\oint_{\partial D}\qty(\pdv{u}{x}\cos \beta-\pdv{u}{y}\cos \alpha)\dd s=\oint_{\partial D}\pdv{u}{x}\dd y-\pdv{u}{y}\dd x$$
+    于是由 Green 公式和二重积分的极坐标计算公式, 得
+    \begin{flalign*}
+        I & =\iint\limits_D\qty(\pdv[2]{u}{x}+\pdv[2]{u}{y})\dd x\dd y=\iint\limits_D\qty(x^2+y^2)\sin^6\qty(x^2+y^2)\dd x\dd y=\int_{0}^{2\pi}\dd \theta\int_{0}^{\sqrt{\frac{\pi}{2}}}r^2\sin^6r^2\dd r=\pi\int_{0}^{\frac{\pi}{2}}u\sin^6u\dd u
+    \end{flalign*}
+    又因为 $\sin^nx=\begin{cases}
+            \displaystyle \dfrac{1}{(2\i)^{n-1}}\sum_{k=0}^{\frac{n-1}{2}}(-1)^k\C_n^k\cos((n-2k)x) \\
+            \displaystyle \dfrac{2}{(2\i)^n}\qty[\sum_{k=0}^{\frac{n}{2}-1}(-1)^k\C_n^k\cos((n-2k)x)+\dfrac{(-1)^{\frac{n}{2}}}{2}\C_n^{\frac{n}{2}}]
+        \end{cases}\Rightarrow \sin^6x=-\dfrac{1}{8}\cos^32x+\dfrac{3}{16}\cos 4x-\dfrac{3}{8}\cos 2x+\dfrac{5}{16}$, 由分部积分公式
+    $$\int u\cos nu\dd u=\dfrac{\cos nu}{n^2}+\dfrac{u\sin nu}{n}+C$$
+    分别取 $n=2,4,6$, 得 $\displaystyle I=\pi\qty(\dfrac{17}{72}+\dfrac{5\pi^2}{128}).$
 \end{solution}
 
 \subsubsection{积分与路径无关问题}
@@ -435,7 +472,7 @@
     记 $l_2:\overrightarrow{BA},~l_3:x^2+y^2=\varepsilon^2\text{ 方向: 顺时针},~l_4:\overrightarrow{BCA},~l_5:\overrightarrow{AFB},~l_6:\overrightarrow{ADEB}$, 则
     有向线段 $l_1,~l_2,~l_3$ 围成的区域记为 $D_1$, 且 $\displaystyle\pdv{Q}{x}=\dfrac{y^2-x^2}{\qty(x^2+y^2)^2}=\pdv{P}{y}$\\
     \begin{minipage}{0.64\linewidth}
-        \textbf{法一: }$l_3$ 围成的区域记为 $D_\varepsilon$ 由 Green 公式, 
+        \textbf{法一: }$l_3$ 围成的区域记为 $D_\varepsilon$ 由 Green 公式,
         \begin{flalign*}
             I & =\qty(\oint_{l_1+l_2+l_3})\dfrac{-y\dd x+x\dd y}{x^2+y^2}                                                                              \\
               & =\iint\limits_{D_1}\qty(\pdv{Q}{x}-\pdv{P}{y})\dd x\dd y-\qty(\int_{\overrightarrow{BA}}+\int_{l_3})\dfrac{-y\dd x+x\dd y}{x^2+y^2}    \\
@@ -487,7 +524,7 @@
 \end{theorem}
 
 \begin{example}[2023 西北大学]
-    设 $D$ 是由简单光滑闭曲线 $L$ 围成的区域, $f(x,y)$ 在 $D$ 上具有连续的偏导数, 记作: $d=\max\limits_{(x,y)\in D}\sqrt{x^2+y^2}$, 
+    设 $D$ 是由简单光滑闭曲线 $L$ 围成的区域, $f(x,y)$ 在 $D$ 上具有连续的偏导数, 记作: $d=\max\limits_{(x,y)\in D}\sqrt{x^2+y^2}$,
     \begin{enumerate}[label=(\arabic{*})]
         \item 证明: $\displaystyle \iint\limits_D f(x,y)\dd x\dd y=\int_L x\cdot f \dd y-\iint\limits_Dx\pdv{f}{x}\dd x\dd y$;
         \item 若 $\forall (x,y)\in L$, 有 $f(x,y)=0$, 证明:
@@ -499,8 +536,8 @@
         \item 有 Green 公式得 $$\iint\limits_Du\pdv{v}{x}\dd x\dd y=\oint_{\partial D}uv\dd y-\iint\limits_Dv\pdv{u}{x}\dd x\dd y$$
               令 $u=x,~v=f$, 则有 $\displaystyle\iint\limits_Dx\pdv{f}{x}\dd x\dd y=\int_Lx\cdot f\dd y-\iint\limits_Df(x,y)\dd x\dd y$, 整理得证;
         \item 由 (1) 可得, $\displaystyle \iint\limits_D f^2\dd x\dd y=\dfrac{1}{2}\int_L f^2(x\dd y-y\dd x)-\dfrac{1}{2}\iint\limits_D\qty(x\pdv{f^2}{x}+y\pdv{f^2}{y})\dd x\dd y$
-              又 $\forall (x,y)\in L$, 有 $f(x,y)=0$, 于是 $\displaystyle \int_Lf^2(x\dd y-y\dd x)=0$, 故 $\displaystyle \iint\limits_D f^2\dd x\dd y=-\dfrac{1}{2}\iint\limits_D\qty(x\pdv{f^2}{x}+y\pdv{f^2}{y})\dd x\dd y$, 
-              于是由 Cauchy-Schwarz 不等式得, 
+              又 $\forall (x,y)\in L$, 有 $f(x,y)=0$, 于是 $\displaystyle \int_Lf^2(x\dd y-y\dd x)=0$, 故 $\displaystyle \iint\limits_D f^2\dd x\dd y=-\dfrac{1}{2}\iint\limits_D\qty(x\pdv{f^2}{x}+y\pdv{f^2}{y})\dd x\dd y$,
+              于是由 Cauchy-Schwarz 不等式得,
               \begin{flalign*}
                   \iint\limits_D f^2\dd x\dd y & \leqslant \iint\limits_D\qty|xf\pdv{f}{x}+yf\pdv{f}{y}|\dd x\dd y\leqslant \iint\limits_D|f|\sqrt{x^2+y^2}\cdot\sqrt{\qty(\pdv{f}{x})^2+\qty(\pdv{f}{y})^2}\dd x\dd y                                                 \\
                                                & \leqslant d \iint\limits_D|f|\sqrt{\qty(\pdv{f}{x})^2+\qty(\pdv{f}{y})^2}\dd x\dd y\leqslant d\qty[\iint\limits_Df^2\dd x\dd y\cdot\iint\limits_D\qty(\qty(\pdv{f}{x})^2+\qty(\pdv{f}{y})^2)\dd x\dd y]^{\frac{1}{2}}
@@ -510,7 +547,7 @@
 \end{proof}
 
 \begin{example}
-    设函数 $f(x,y)$ 在区域 $D:x^2+y^2\leqslant  1$ 上有二阶连续偏导数, 
+    设函数 $f(x,y)$ 在区域 $D:x^2+y^2\leqslant  1$ 上有二阶连续偏导数,
     且 $\displaystyle\frac{\partial^2f}{\partial x^2}+\frac{\partial^2f}{\partial y^2}=\mathrm{e}^{-\left(x^2+y^2\right)}$, 证明:
     $$\iint\limits_D\left(x\frac{\partial f}{\partial x}+y\frac{\partial f}{\partial y}\right)\dd x\dd y=\frac{\pi}{2\mathrm{e}}.$$
 \end{example}
@@ -553,7 +590,7 @@
 \end{proof}
 
 \begin{example}[首届数学竞赛数学类决赛]
-    设 $f(x,y)$ 是 $D=\{(x,y)|x^2+y^2\leqslant  1\}$ 上二次连续可微函数, 满足 $\displaystyle\frac{\partial^2f}{\partial x^2}+\frac{\partial^2f}{\partial y^2}=x^2y^2$, 
+    设 $f(x,y)$ 是 $D=\{(x,y)|x^2+y^2\leqslant  1\}$ 上二次连续可微函数, 满足 $\displaystyle\frac{\partial^2f}{\partial x^2}+\frac{\partial^2f}{\partial y^2}=x^2y^2$,
     计算积分
     $$I=\iint\limits_D\left(\frac{x}{\sqrt{x^2+y^2}}\frac{\partial f}{\partial x}+\frac{y}{\sqrt{x^2+y^2}}\frac{\partial f}{\partial y}\right)\dd x\dd y.$$
 \end{example}
@@ -586,8 +623,8 @@
 \end{solution}
 
 \begin{example}[第十三届数学竞赛非数学预赛补赛]
-    设函数 $f(x,y)$ 在闭区间 $D=\{(x,y)|x^2+y^2\leqslant  1\}$ 上具有二阶连续偏导数, 
-    且 $\displaystyle\frac{\partial^2f}{\partial x^2}+\frac{\partial^2f}{\partial y^2}=x^2+y^2$, 
+    设函数 $f(x,y)$ 在闭区间 $D=\{(x,y)|x^2+y^2\leqslant  1\}$ 上具有二阶连续偏导数,
+    且 $\displaystyle\frac{\partial^2f}{\partial x^2}+\frac{\partial^2f}{\partial y^2}=x^2+y^2$,
     求 $$\displaystyle\lim_{r\to0^+}\frac{\displaystyle\iint\limits_{x^2+y^2\leqslant  r^2}\left(x\frac{\partial f}{\partial x}+y\frac{\partial f}{\partial y}\right)\dd x\dd y}{\left(\tan r-\sin r\right)^2}.$$
 \end{example}
 \begin{solution}
@@ -621,11 +658,11 @@
 \end{solution}
 
 \begin{example}
-    设 $u(x,y)$ 在 $D:x^2+y^2\leqslant 1$ 上有二阶连续偏导数, 且 $\displaystyle\pdv[2]{u}{x}+\pdv[2]{u}{y}=\dfrac{x^2+y^2}{\e^{x}+\e^{y}}\cdot\e^{x}$, 
+    设 $u(x,y)$ 在 $D:x^2+y^2\leqslant 1$ 上有二阶连续偏导数, 且 $\displaystyle\pdv[2]{u}{x}+\pdv[2]{u}{y}=\dfrac{x^2+y^2}{\e^{x}+\e^{y}}\cdot\e^{x}$,
     试求 $$\displaystyle\lim_{t\to0^+}\dfrac{\displaystyle\iint\limits_{x^2+y^2\leqslant t^2}\qty(x\cdot\pdv{u}{x}+y\cdot\pdv{u}{y})\dd x\dd y}{(\tan t-\arctan t)^2}.$$
 \end{example}
 \begin{solution}
-    令 $D_t:x^2+y^2\leqslant t^2$, 由 Green 公式可得二重积分分部积分公式, 
+    令 $D_t:x^2+y^2\leqslant t^2$, 由 Green 公式可得二重积分分部积分公式,
     $$\begin{cases}
             \displaystyle \iint\limits_{D_t}x\pdv{u}{x}\dd x\dd y=\oint_{\partial D_t}\pdv{u}{x}\cdot\dfrac{x^2+y^2}{2}\dd y-\iint\limits_{D_t}\dfrac{x^2+y^2}{2}\cdot\pdv[2]{u}{x}\dd x\dd y \\
             \displaystyle \iint\limits_{D_t}y\pdv{u}{y}\dd x\dd y=-\oint_{\partial D_t}\pdv{u}{y}\cdot\dfrac{x^2+y^2}{2}\dd x-\iint\limits_{D_t}\dfrac{x^2+y^2}{2}\cdot\pdv[2]{u}{y}\dd x\dd y
@@ -643,7 +680,7 @@
 \end{solution}
 
 \begin{example}[第九届数学竞赛决赛]
-    设函数 $f(x,y)$ 在区域 $D=\left\{(x,y)|x^2+y^2\leqslant  a^2\right\}$ 上是有一阶连续偏导数, 
+    设函数 $f(x,y)$ 在区域 $D=\left\{(x,y)|x^2+y^2\leqslant  a^2\right\}$ 上是有一阶连续偏导数,
     且满足 $$f(x,y)|_{x^2+y^2=a^2}=a^2\text{, 以及} \displaystyle\max\limits_{(x,y)\in D}\left[\left(\frac{\partial f}{\partial x}\right)^2+\left(\frac{\partial f}{\partial y}\right)^2\right]=a^2$$
     其中 $a>0$. 证明: $\displaystyle\left |\iint\limits_Df(x,y)\dd x\dd y\right |\leqslant \frac{4}{3}\pi a^4$.
 \end{example}
@@ -659,7 +696,7 @@
     \begin{flalign*}
         \iint\limits_Du\frac{\partial v}{\partial y}\dd x\dd y=\iint\limits_Df(x,y)\dd x\dd y=-\oint_{\partial D}yf(x,y)\dd x-\iint\limits_Dy\frac{\partial f}{\partial y}\dd x\dd y
     \end{flalign*}
-    所以由 Cauchy-Schwarz 不等式, 
+    所以由 Cauchy-Schwarz 不等式,
     \begin{flalign*}
         \left |\iint\limits_Df(x,y)\dd x\dd y\right | & =\frac{1}{2}\oint_{\partial D}\left |xf(x,y)\dd y-yf(x,y)\dd x\right |+\frac{1}{2}\iint\limits_D\left |x\frac{\partial f}{\partial x}+y\frac{\partial f}{\partial y}\right |\dd x\dd y   \\
                                                       & \leqslant  a^2\iint\limits_D\dd x\dd y+\frac{1}{2}\iint\limits_D\sqrt{x^2+y^2}\sqrt{\left(\frac{\partial f}{\partial x}\right)^2+\left(\frac{\partial f}{\partial y}\right)^2}\dd x\dd y \\
