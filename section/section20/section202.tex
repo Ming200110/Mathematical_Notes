@@ -3,9 +3,9 @@
 \subsection{\texorpdfstring{$\chi^2$}. 分布}
 
 \begin{definition}[卡方分布]
-    设 $ X_{1}, X_{2}, \cdots, X_{n} $ 相互独立, 且都服从标准正态分布 $ N(0,1) $, 则称统计量
+    设 $ X_{1}, X_{2}, \cdots, X_{n} $ 相互独立, 且都服从标准正态分布 $ N(0,1) $, 则称\textit{统计量}
     $$\chi^{2}=X_{1}^{2}+X_{2}^{2}+\cdots+X_{n}^{2}$$
-    服从自由度为 $ n $ 的 $ \chi^{2} $ 分布, 记为 $ \chi^{2} \sim \chi^{2}(n) .$
+    \textit{服从自由度为} $ n $ \textit{的} $ \chi^{2} $ \textit{分布}, 记为 $ \chi^{2} \sim \chi^{2}(n) .$\index{卡方分布}
 \end{definition}
 
 \begin{figure}[H]
@@ -117,6 +117,24 @@
     的点 $ t_{\alpha}(n) $ 称为 $ t(n) $ 分布的上 $ \alpha $ 分位点.
 \end{definition}
 
+\begin{example}
+    设 $(X_1, X_2, X_3)$ 为总体 $X\sim N\qty(0,\sigma^2)$ 的简单随机样本, 则统计量 $U=\dfrac{X_1-X_2}{\sqrt{2}|X_3|}$ 服从的分布为 
+    \begin{tasks}(4)
+        \task $t(1)$
+        \task $t(2)$
+        \task $F(1,1)$
+        \task $F(2,1)$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    第一步找出分子上的标准正态分布, 由题意 $\dfrac{X_1-X_2}{\sqrt{2}\sigma}\sim N(0,1)$,
+    第二步找出分母上的卡方分布, $\qty(\dfrac{X_3}{\sigma})\sim \chi^2(1)$,
+    第三步写出 $t$ 分布 $$
+    \dfrac{\dfrac{X_1-X_2}{\sqrt{2}\sigma}}{\sqrt{\dfrac{\qty(\dfrac{X_3}{\sigma})^2}{1}}}=\dfrac{X_1-X_2}{\sqrt{2}\sigma\cdot\qty|\dfrac{X_3}{\sigma}|}\xlongequal{\sigma>0}\dfrac{X_1-X_2}{\sqrt{2}|X_3|}\sim t(1)
+    $$
+    因此选 A.
+\end{solution}
+
 \subsection{\texorpdfstring{$F$}. 分布}
 
 \begin{definition}[$F$ 分布]
@@ -152,8 +170,8 @@
             \midrule
             (\rownumber) 均匀分布 $U(a,b)$              & $f(x)=\begin{cases}\dfrac{1}{b-1},&a\leqslant x\leqslant b\\0,&\text{其他}\end{cases}$                                                                                                                                                                                                & $\dfrac{a+b}{2}$     & $\dfrac{(b-a)^2}{12}$                            \\
             (\rownumber) 指数分布 $e(\lambda)$          & $f(x)=\begin{cases}\lambda\e^{-\lambda x},&x>0\\0,&\text{其他}\end{cases}\lambda>0$                                                                                                                                                                                                   & $\dfrac{1}{\lambda}$ & $\dfrac{1}{\lambda^2}$                           \\
-            \midrule
             (\rownumber) 正态分布 $N\qty(\mu,\sigma^2)$ & $f(x)=\dfrac{1}{\sqrt{2\pi}\sigma}\e^{-\frac{(x-\mu)^2}{2\sigma^2}},~-\infty<x+\infty,~\sigma>0$                                                                                                                                                                                      & $\mu$                & $\sigma^2$                                       \\
+            \midrule
             (\rownumber) $\chi^2$ 分布 $\chi^2(k)$      & $f(x)=\begin{cases}\dfrac{x^{\frac{k}{2}-1}\e^{-\frac{x}{2}}}{2^{\frac{k}{2}}\Gamma\qty(\dfrac{k}{2})},&x>0\\0,&x\leqslant 0\end{cases}k\in\mathbb{Z}$                                                                                         & $k$                  & $2k$                                             \\
             (\rownumber) $t$ 分布 $t(k)$                & $f(x)=\dfrac{\Gamma\qty(\dfrac{k+1}{2})}{\sqrt{k\pi}\Gamma\qty(\dfrac{k}{2})}\qty(1+\dfrac{x^2}{k})^{-\frac{k+1}{2}}$                                                                                                                                                                 & $0$                  & $\dfrac{k}{k-2}$                                 \\
             (\rownumber) $F$ 分布 $F(k_1,k_2)$          & $f(x)=\begin{cases}\dfrac{\Gamma\qty(\dfrac{k_1+k_2}{2})}{\Gamma\qty(\dfrac{k_1}{2})\Gamma\qty(\dfrac{k_2}{2})}k_1^{\frac{k_1}{2}}k_2^{\frac{k_2}{2}}\dfrac{x^{\frac{k_1}{2}-1}}{(k_1x+k_2)^{\frac{k_1+k_2}{2}}},&x>0\\0,&x\leqslant 0\end{cases}$ & $\dfrac{k_2}{k_2-2}$ & $\dfrac{2k_2^2(k_1+k_2-2)}{k_1(k_2-2)^2(k_2-4)}$
@@ -161,19 +179,20 @@
 \end{table}
 
 \begin{example}
-    设 $X_1,X_2,\cdots,X_n~~(n\geqslant 2)$ 为来自总体 $N(\mu,1)$ 的简单随机样本, 及 $\bar{X}=\dfrac{1}{n}\displaystyle\sum_{i=1}^{n}X_i$, 则 不能得出结论
+    设随机变量 $X\sim  N(0,4)$, $X_1, X_2, \cdots ,X_n~(n>2)$ 是来自总体 $X$ 的简单随机样本, 则 
     \begin{tasks}(2)
-        \task $\displaystyle \sum_{i=1}^{n}(X_i-\mu)^2$ 服从 $\chi^2$ 分布
-        \task $\displaystyle 2(X_n-X_1)^2$ 服从 $\chi^2$ 分布
-        \task $\displaystyle \sum_{i=1}^{n}\qty(X_i-\bar{X})^2$ 服从 $\chi^2$ 分布
-        \task $\displaystyle n\qty(\bar{X}-\mu)^2$ 服从 $\chi^2$ 分布
+        \task $\displaystyle \dfrac{1}{2n}\qty(\sum_{i=1}^{n}X_i)^2\sim \chi^2(1)$
+        \task $\displaystyle \dfrac{1}{16}\qty(\sum_{i=1}^{n}X_i)^2\sim \chi^2(n)$
+        \task $\sqrt{\dfrac{(n-1)X_n^2}{\displaystyle \sum_{i=1}^{n} X_i^2}}\sim t(n-1)$
+        \task $\dfrac{(n-1)X_1^2}{\displaystyle \sum_{i=1}^{n} X_i^2}\sim F(1,n-1)$
     \end{tasks}
 \end{example}
 \begin{solution}
-    $X_i-\mu\sim N(0,1)$, 由卡方分布的定义知 $\displaystyle\sum_{i=1}^{n}(X_i-\mu)^2\sim \chi^2(n)$, A 正确;
-    $X_n\sim N(\mu,1),~X_1\sim N(\mu,1)$, 标准化处理有 $\dfrac{X_n-X_1}{\sqrt{2}}\sim N(0,1)$, 即 $\qty(\dfrac{X_n-X_1}{\sqrt{2}})^2\sim \chi^2(1)\Rightarrow \dfrac{\qty(X_n-X_1)^2}{2}\sim \chi^2(1)$, 故选项 B 错误;
-    由于 $\displaystyle \sum_{i=1}^{n}\qty(X_i-\bar{X})^2=(n-1)S^2$, 而 $\dfrac{(n-1)S^2}{\sigma^2}\sim \chi^2(n-1)$, 则 $\dfrac{(n-1)S^2}{1}\sim \chi^2(n-1)$, 即 $\displaystyle \sum_{i=1}^{n}\qty(X_i-\bar{X})^2\sim \chi^2(n-1)$, C 正确;
-    由于 $\dfrac{\bar{X}-\mu}{\sqrt{\dfrac{1}{n}}}\sim N(0,1)$, 则 $\displaystyle\qty(\dfrac{\bar{X}-\mu}{\sqrt{\dfrac{1}{n}}})^2=n\qty(\bar{X}-\mu)^2\sim \chi^2(1)$, D 正确.
+    对 A 选项, 因为 $\dfrac{\bar{X}}{\dfrac{2}{\sqrt{n}}}\sim N(0,1)$, 其中 $\bar{X}=\dfrac{1}{n}\displaystyle \sum_{i=1}^{n} X_i$, 所以 $$\dfrac{1}{2\sqrt{n}}\displaystyle \sum_{i=1}^{n} X_i\sim N(0,1)$$ 即 $\dfrac{1}{4n}\displaystyle \sum_{i=1}^{n} X_i\sim \chi^2(1)$ A 错误;
+    对 B 选项, 因为 $\dfrac{X}{2}\sim N(0,1)$, 所以 $$\displaystyle \sum_{i=1}^{n} \qty(\dfrac{X_i}{2})^2\sim \chi^2(n)$$ B 错误;
+    对 C 选项, $$\displaystyle \dfrac{\dfrac{X_n}{2}}{\sqrt{\dfrac{\dfrac{1}{4}\displaystyle \sum_{i=1}^{n-1} X_i^2}{n-1}}}=\dfrac{X_n\sqrt{n-1}}{\sqrt{\displaystyle \sum_{i=1}^{n-1} X_i^2}}\sim t(n-1)$$ C 错误;
+    对 D 选项, $\qty(\dfrac{1}{2}X_1)^2\sim \chi^2(1), \displaystyle \sum_{i=2}^{n} \qty(\dfrac{1}{2}X_i)^2\sim \chi^2(n-1)$, 那么 $$\dfrac{\qty(\dfrac{1}{2}X_1)^2/1}{\displaystyle \sum_{i=2}^{n}\qty(\dfrac{1}{2}X_i)^2 / (n-1)}=\dfrac{(n-1)X_1}{\displaystyle \sum_{i=2}^{n} X_i^2}\sim F(1,n-1)$$
+    因此选 D.
 \end{solution}
 
 \begin{example}
@@ -191,6 +210,22 @@
     因此
     $$E\qty{\displaystyle\qty(\sum_{i=1}^{n}X_i)\qty[\sum_{j=1}^{n}\qty(nX_j-\sum_{k=1}^{n}X_k)^2]}=E\qty[n\bar{X}\cdot n^2(n-1)S^2]=n^3(n-1)E\qty(\bar{X}\cdot S^2)\xlongequal{\bar{X},S^2\text{ 相互独立}}n^3(n-1)\mu\sigma^2$$
     故选 A.
+\end{solution}
+
+\begin{example}
+    设 $X_1,X_2,\cdots,X_n~~(n\geqslant 2)$ 为来自总体 $N(\mu,1)$ 的简单随机样本, 及 $\bar{X}=\dfrac{1}{n}\displaystyle\sum_{i=1}^{n}X_i$, 则 不能得出结论
+    \begin{tasks}(2)
+        \task $\displaystyle \sum_{i=1}^{n}(X_i-\mu)^2$ 服从 $\chi^2$ 分布
+        \task $\displaystyle 2(X_n-X_1)^2$ 服从 $\chi^2$ 分布
+        \task $\displaystyle \sum_{i=1}^{n}\qty(X_i-\bar{X})^2$ 服从 $\chi^2$ 分布
+        \task $\displaystyle n\qty(\bar{X}-\mu)^2$ 服从 $\chi^2$ 分布
+    \end{tasks}
+\end{example}
+\begin{solution}
+    $X_i-\mu\sim N(0,1)$, 由卡方分布的定义知 $\displaystyle\sum_{i=1}^{n}(X_i-\mu)^2\sim \chi^2(n)$, A 正确;
+    $X_n\sim N(\mu,1),~X_1\sim N(\mu,1)$, 标准化处理有 $\dfrac{X_n-X_1}{\sqrt{2}}\sim N(0,1)$, 即 $\qty(\dfrac{X_n-X_1}{\sqrt{2}})^2\sim \chi^2(1)\Rightarrow \dfrac{\qty(X_n-X_1)^2}{2}\sim \chi^2(1)$, 故选项 B 错误;
+    由于 $\displaystyle \sum_{i=1}^{n}\qty(X_i-\bar{X})^2=(n-1)S^2$, 而 $\dfrac{(n-1)S^2}{\sigma^2}\sim \chi^2(n-1)$, 则 $\dfrac{(n-1)S^2}{1}\sim \chi^2(n-1)$, 即 $\displaystyle \sum_{i=1}^{n}\qty(X_i-\bar{X})^2\sim \chi^2(n-1)$, C 正确;
+    由于 $\dfrac{\bar{X}-\mu}{\sqrt{\dfrac{1}{n}}}\sim N(0,1)$, 则 $\displaystyle\qty(\dfrac{\bar{X}-\mu}{\sqrt{\dfrac{1}{n}}})^2=n\qty(\bar{X}-\mu)^2\sim \chi^2(1)$, D 正确.
 \end{solution}
 
 \begin{example}

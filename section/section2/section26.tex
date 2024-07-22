@@ -33,6 +33,22 @@
           \end{enumerate}
 \end{enumerate}
 
+% \begin{example}
+%     设函数 $f(x)=\begin{cases}
+%         x^2,&x\leqslant 0\\ 
+%         \ln x, &x>0
+%     \end{cases}$ 则函数 $f(f(x))$
+%     \begin{tasks}(2)
+%         \task 无极值点
+%         \task 有一个极小值点, 无极大值点
+%         \task 有一个极大值点, 无极小值点
+%         \task 有一个极小值点和极大值点
+%     \end{tasks}
+% \end{example}
+% \begin{solution}
+    
+% \end{solution}
+
 \begin{example}
     求函数 $f(x)=\qty|x\qty(x^2-1)|$ 的极值以及在 $[-2,2]$ 上的最值.
 \end{example}
@@ -128,27 +144,27 @@
 \end{solution}
 
 \begin{example}[1995 数学 (二)]
-    设 $ f(x) $ 二阶可导, 且 $ \displaystyle\lim _{x \rightarrow 0} \frac{f(x)}{x}=1,~f^{\prime \prime}(x)>0$, 
+    设 $ f(x) $ 二阶可导, 且 $ \displaystyle\lim _{x \to 0} \frac{f(x)}{x}=1,~f^{\prime \prime}(x)>0$, 
     证明 $ f(x) \geqslant x .$
 \end{example}
 
 \begin{proof}[{\songti \textbf{证法一}}]
-    要证 $ f(x) \geqslant x$, 只需证 $ f(x)-x \geqslant 0$, 为此, 令 $ g(x)=f(x)-x$, 则由 $\displaystyle \lim _{x \rightarrow 0} \frac{f(x)}{x}=1$, 
-    得 $\displaystyle f(0)=\lim _{x \rightarrow 0} f(x)=0,~f^{\prime}(0)=\lim _{x \rightarrow 0} \frac{f(x)-f(0)}{x}=1$, 
+    要证 $ f(x) \geqslant x$, 只需证 $ f(x)-x \geqslant 0$, 为此, 令 $ g(x)=f(x)-x$, 则由 $\displaystyle \lim _{x \to 0} \frac{f(x)}{x}=1$, 
+    得 $\displaystyle f(0)=\lim _{x \to 0} f(x)=0,~f^{\prime}(0)=\lim _{x \to 0} \frac{f(x)-f(0)}{x}=1$, 
     所以 $ g^{\prime}(x)=f^{\prime}(x)-1=f^{\prime}(x)-f^{\prime}(0)$, 
     又由 $ f^{\prime \prime}(x)=\left(f^{\prime}(x)\right)^{\prime}>0 $ 知, $f^{\prime}(x)$  在 $ (-\infty,+\infty)$ 上单调递增, 
     于是当 $ x<0 $ 时, $g^{\prime}(x)<0$; 当 $ x>0 $ 时, $g^{\prime}(x)>0$, 从而知 $ x=0 $ 为 $ g(x) $ 的极小值点也是最小值点,, 
     故 $ g(x) \geqslant g(0)=0$, 即 $ f(x) \geqslant x .$
 \end{proof}
 \begin{proof}[{\songti \textbf{证法二}}]
-    由 $\displaystyle \lim _{x \rightarrow 0} \frac{f(x)}{x}=1 $ 可知, $\displaystyle f(0)=\lim _{x \rightarrow 0} f(x)=0, f^{\prime}(0)=\lim _{x \rightarrow 0} \frac{f(x)-f(0)}{x}= \lim _{x \rightarrow 0} \frac{f(x)}{x}=1$, 
+    由 $\displaystyle \lim _{x \to 0} \frac{f(x)}{x}=1 $ 可知, $\displaystyle f(0)=\lim _{x \to 0} f(x)=0, f^{\prime}(0)=\lim _{x \to 0} \frac{f(x)-f(0)}{x}= \lim _{x \to 0} \frac{f(x)}{x}=1$, 
     由题设 $ f(x) $ 二阶可导, 将 $ f(x) $ 在 $ x=0 $ 点进行 Taylor 展开, 得
     $$f(x)=f(0)+f^{\prime}(0) x+\frac{f^{\prime \prime}(\xi)}{2 !} x^{2}$$
     其中 $ \xi $ 介于 $0$ 与 $ x $ 之间, 
     故由 $ f^{\prime \prime}(x)>0 $ 得 $ f(x) \geqslant f(0)+f^{\prime}(0) x=x $ (等号仅当 $ x=0 $ 时成立).
 \end{proof}
 \begin{proof}[{\songti \textbf{证法三}}]
-    由 $\displaystyle \lim _{x \rightarrow 0} \frac{f(x)}{x}=1 $ 及 $ f(x) $ 连续可知, $\displaystyle f(0)=\lim _{x \rightarrow 0} f(x)=0, f^{\prime}(0)= \lim _{x \rightarrow 0} \frac{f(x)-f(0)}{x}=1$, 
+    由 $\displaystyle \lim _{x \to 0} \frac{f(x)}{x}=1 $ 及 $ f(x) $ 连续可知, $\displaystyle f(0)=\lim _{x \to 0} f(x)=0, f^{\prime}(0)= \lim _{x \to 0} \frac{f(x)-f(0)}{x}=1$, 
     又由 $ f^{\prime \prime}(x)=\left(f^{\prime}(x)\right)^{\prime}>0 $ 知 $ f^{\prime}(x) $ 严格单调递增,  于是由 Lagrange 中值定理得\\
     当 $ x>0 $ 时, $\displaystyle\frac{f(x)}{x}=\frac{f(x)-f(0)}{x}=f^{\prime}\left(\xi_{1}\right)>f^{\prime}(0)=1$, 其中 $ \xi_{1} \in(0, x)$, 故 $ f(x)>x$; \\
     当 $ x<0 $ 时, $\displaystyle\frac{f(x)}{x}=\frac{f(x)-f(0)}{x}=f^{\prime}\left(\xi_{2}\right)<f^{\prime}(0)=1$, 其中 $ \xi_{2} \in(x, 0)$, 故 $ f(x)>x$; \\
@@ -407,6 +423,23 @@
     \end{flalign*}
     于是 $K=\dfrac{2}{3}.$\\
     \textbf{法二: }$\displaystyle \dv{y}{x}=\dv{y}{t}\qty(\dv{x}{t})^{-1}=-\tan t,~\dv[2]{y}{x}=\dfrac{1}{3\cos ^4t\sin t}$, 于是 $K=\dfrac{|y''|}{\qty(1+\qty(y')^2)^{3/2}}=\dfrac{2}{3}.$
+\end{solution}
+
+\begin{example}
+    设 $y=y(x)$ 是由方程 $2y^3-2y^2+2xy-x^2=1$ 确定, 求 $y=y(x)$ 的极值, 并求极值点处的曲率圆方程.
+\end{example}
+\begin{solution}
+    方程两边对 $x$ 求导得 $$
+    6y^2\cdot y'-4y\cdot y'+2y+2xy'-2x=0\Rightarrow y'=\dfrac{x-y}{x-2y+3y^2}
+    $$
+    令 $y'=0$ 得 $x=y$, 代入方程求得驻点 $x=1$, 并且 
+    $$
+    12y\cdot y'^2+6y^2\cdot y''-4y'^2-4y\cdot y''+4y'+2x\cdot y''-2=0
+    $$
+    代入 $x=y=1,y'(1)=0$ 得 $y''(1)=\dfrac{1}{2}$, 因此 $y(1)=1$ 为极小值, 曲线在 $(1,1)$ 处的曲率为 $$
+    K=\dfrac{|y''|}{\qty(1+y'^2)^{\frac{3}{2}}}=\dfrac{1}{2}
+    $$
+    故曲率圆半径 $R=\dfrac{1}{K}=2$, 点 $(1,1)$ 处的法线方程为 $x=1$, 又 $y''(1)=\dfrac{1}{2}>0$, 所以曲率圆的圆心坐标为 $(1,3)$, 故曲率圆方程为 $(x-1)^2+(y-3)^2=4.$
 \end{solution}
 
 \subsection{导数不等式证明中的应用}

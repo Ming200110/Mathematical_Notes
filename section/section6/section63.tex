@@ -10,7 +10,7 @@
     设 $ \varSigma $ 为空间的有界曲面, 函数 $ f(x, y, z) $ 在 $ \varSigma $ 上定义,
     将 $ \varSigma $ 任意地分割为 $ n $ 个小曲面 $ \varSigma_{i}(i=1,2, \cdots, n)$, $\varSigma_{i} $ 的面积为 $ \Delta S_{i}, \varSigma_{i} $ 的直径为 $ \displaystyle d_{i}, \lambda=\max _{1 \leqslant i \leqslant n}\left\{d_{i}\right\} $,
     在 $ \varSigma_{i} $ 上任取点 $ \left(x_{i}, y_{i}, z_{i}\right) $, 则函数 $ f $ 沿 $ \varSigma $ 的\textit{第一型曲面积分}定义为
-    $$\iint\limits_{\varSigma} f(x, y, z) \dd S = \lim _{\lambda \rightarrow 0} \sum_{i=1}^{n} f\left(x_{i}, y_{i}, z_{i}\right) \Delta S_{i}$$
+    $$\iint\limits_{\varSigma} f(x, y, z) \dd S = \lim _{\lambda \to 0} \sum_{i=1}^{n} f\left(x_{i}, y_{i}, z_{i}\right) \Delta S_{i}$$
     这里右端的极限存在, 且与分割 $ \varSigma $ 的方式无关, 与点 $ \left(x_{i}, y_{i}, z_{i}\right) $ 的取法无关.
     当 $ f(x, y, z) $ 在 $ \varSigma $ 上连续时, $f $ 在 $ \varSigma $ 上的第一型曲面积分存在, 即可积.
 \end{definition}
@@ -840,7 +840,7 @@ Gauss 公式与 Stokes 公式, 它们都是重要的数学定理, 用于描述�
 \end{proof}
 
 \begin{theorem}[Euler 齐次函数]
-    若 $f$ 是 $n$ 元 $k$ 次齐次函数, 即 $f(tx_1, tx_2, \cdots , tx_n)=t^{k}f(x_1, x_2, \cdots ,x_n)$, 则有 
+    \index{Euler 齐次函数}若 $f$ 是 $n$ 元 $k$ 次齐次函数, 即 $f(tx_1, tx_2, \cdots , tx_n)=t^{k}f(x_1, x_2, \cdots ,x_n)$, 则有 
     $$
     x_1f_{x_{1}}+ x_2f_{x_{2}}+ \cdots +x_nf_{x_{n}}=kf(x_1, x_2, \cdots x_n).
     $$

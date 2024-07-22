@@ -26,6 +26,7 @@
 \end{solution}
 
 \begin{definition}[接收域和拒绝域]
+    \index{接收域和拒绝域}
     上述例题中, 若 $ z $ 取值在区间 $ (-1.96,1.96) $ 范围内, 则接受假设 $ H_{0} $, 即 $ |z|<z_{\alpha / 2} $ 称为\textit{接受域}, 
     而 $ |z| \geqslant z_{\alpha / 2} $ 称为\textit{拒绝域}, $z_{\alpha / 2} $ 称为\textit{临界值}, $\displaystyle Z=\frac{\bar{X}-\mu_{0}}{\sigma / \sqrt{n}} $ 称为\textit{检验统计量}.
 \end{definition}
@@ -33,18 +34,19 @@
 在根据样本作推断时, 由于样本的随机性, 难免会做出错误的决定.
 
 \begin{definition}[第一类错误]
-    当原假设 $ H_{0} $ 为真时, 而做出拒绝 $ H_{0} $ 的判断, 称为犯\textit{第一类错误} (\textit{拒真错误})
+    \index{第一类错误}当原假设 $ H_{0} $ 为真时, 而做出拒绝 $ H_{0} $ 的判断, 称为犯\textit{第一类错误} (\textit{拒真错误})
 \end{definition}
 
 \begin{definition}[第二类错误]
-    当原假设 $ H_{0} $ 不真时, 而作出接受 $ H_{0} $ 的判断, 称为犯\textit{第二类错误} (\textit{取伪错误}).
+    \index{第二类错误}当原假设 $ H_{0} $ 不真时, 而作出接受 $ H_{0} $ 的判断, 称为犯\textit{第二类错误} (\textit{取伪错误}).
 \end{definition}
 
 \begin{definition}[显著性水平]
-    在实际应用中, 控制犯第一类错误的概率, 使其不大于一个较小的正数 $ \alpha(0<\alpha<1)$, 称 $ \alpha $ 为检验的\textit{显著性水平}.
+    \index{显著性水平}在实际应用中, 控制犯第一类错误的概率, 使其不大于一个较小的正数 $ \alpha(0<\alpha<1)$, 称 $ \alpha $ 为检验的\textit{显著性水平}.
 \end{definition}
 
 \begin{definition}[双边备择假设与双边假设检验]
+    \index{双边备择假设与双边假设检验}
     形如 $ H_{1}: \mu \neq \mu_{0} $ 的假设, 表示 $ \mu $ 可能大于 $ \mu_{0} $, 也可能小于 $ \mu_{0}$, 称为\textit{双边备择假设};
     形如 $ H_{0}: \mu=\mu_{0} $ 的假设, 称为\textit{双边假设检验}.
 \end{definition}
@@ -54,12 +56,12 @@
 原假设 $ H_{0}: \mu \geqslant \mu_{0}$, 备择假设 $ H_{1}: \mu<\mu_{0} .$
 
 \begin{definition}[单边检验]
+    \index{单边检验}
     形如 $ H_{0}: \mu \geqslant \mu_{0} $ 的假设称为\textit{左边检验}, 类似的形如 $ H_{0}: \mu \leqslant \mu_{0} $ 的假设称为\textit{右边检验}.
     左边检验和右边检验统称为\textit{单边检验}.
 \end{definition}
 
-\subsection{假设检验的解题步骤}
-
+假设检验的解题步骤:
 \begin{enumerate}[label=(\arabic{*})]
     \item 确定原假设 $H_0$ 与备择假设 $H_1$;
     \item 选择合适的检验统计量, 在原假设成立的条件下求其发布;
@@ -192,6 +194,13 @@ $$P_{\mu_{0}}\left\{\left|\frac{\bar{X}-\mu_{0}}{S / \sqrt{n}}\right| \geqslant 
     $$H_{0}: \mu \leqslant 0.8, \quad H_{1}: \mu>0.8$$
     由于 $ \sigma $ 未知, 故采用 $ t $ 检验法, 选择检验统计量 $\displaystyle t=\frac{\bar{X}-\mu}{S / \sqrt{16}} \sim t(15) $, 
     查表得 $ t_{0.05}(15)=  1.753$, 故拒绝域为 $\displaystyle \frac{\bar{x}-0.8}{s / \sqrt{n}}>1.753 $, 代人样本数据, 得 $\displaystyle t=\frac{\bar{x}-0.8}{s / \sqrt{n}}=\frac{0.9-0.8}{0.2 / \sqrt{16}}=2 $, 因此拒绝原假设, 即认为电器在正常工作条件下平均消耗电流会超过  $0.8 \mathrm{~A}$ .
+\end{solution}
+
+\begin{example}[1995 数三]
+    设 $X_1, X_2, \cdots , X_n$ 是来自正态总体 $N\qty(\mu,\sigma^2)$ 的简单随机样本, 其中参数 $\mu$ 和 $\sigma^2$ 均未知, 记 $\bar{X}=\displaystyle \dfrac{1}{n}\sum_{i=1}^{n} X_i, Q^2=\sum_{i=1}^{n} \qty(X_i-\bar{X})^2$, 求假设 $H_0:\mu=0$ 的 $t$ 检验使用统计量.
+\end{example}
+\begin{solution}
+    因为 $\sigma^2$ 未知, 故取统计量 $t=\dfrac{\bar{X}-\mu}{S/\sqrt{n}}$, 由 $\mu=0, S^2=\dfrac{Q^2}{n-1}$, 解得 $t=\dfrac{\bar{X}}{Q}\sqrt{n(n-1)}.$
 \end{solution}
 
 \subsubsection{\texorpdfstring{$\mu$}. 未知, 关于 \texorpdfstring{$\sigma^2$}. 的检验 (\texorpdfstring{$\chi^2$}. 检验)}

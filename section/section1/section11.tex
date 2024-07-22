@@ -5,11 +5,7 @@
 \subsection{函数的性质}
 
 \begin{definition}[函数的概念]
-    $  $ 设有两个变量 $ x $ 与 $ y $, 如果变量 $ x $ 在其变化范围 $ D $ 内任取一个确定的数值时, 变量 $ y $ 按照一定的规则 $ f $ 总有唯一确定的数值和它对应, 则称变量 $ y $ 是变量 $ x $ 的\textit{函数}, 记为 $ y=f(x), x $ 称为\textit{自变量}, $ y $ 称为\textit{因变量}, $ D $ 称为函数的\textit{定义域}, $ f $ 表示由 $ x $ 确定 $ y $ 的对应规则.
-    \index{函数}
-    \index{自变量}
-    \index{因变量}
-    \index{定义域}
+    设有两个变量 $ x $ 与 $ y $, 如果变量 $ x $ 在其变化范围 $ D $ 内任取一个确定的数值时, 变量 $ y $ 按照一定的规则 $ f $ 总有唯一确定的数值和它对应, 则称变量 $ y $ 是变量 $ x $ 的\textit{函数}\index{函数}, 记为 $ y=f(x), x $ 称为\textit{自变量}\index{自变量}, $ y $ 称为\textit{因变量}\index{因变量}, $ D $ 称为函数的\textit{定义域}\index{定义域}, $ f $ 表示由 $ x $ 确定 $ y $ 的对应规则.
 \end{definition}
 
 \begin{example}
@@ -22,16 +18,44 @@
 \end{solution}
 
 \begin{definition}[有界性]
-    设函数 $ f(x) $ 在集合 $ D $ 上有定义, 如果存在一个正常数 $ M $, 使得对于 $ x$ 在 $ D $ 上的任意取值, 均有 $ |f(x)|<M $, 则称函数 $ f(x) $ 在 $ D $ 上\textit{有界}, 否则称 $ f(x) $ 在 $ D $ 上\textit{无界}.
-    \index{有界}
-    \index{无界}
+    设函数 $ f(x) $ 在集合 $ D $ 上有定义, 如果存在一个正常数 $ M $, 使得对于 $ x$ 在 $ D $ 上的任意取值, 均有 $ |f(x)|<M $, 则称函数 $ f(x) $ 在 $ D $ 上\textit{有界}\index{有界}, 否则称 $ f(x) $ 在 $ D $ 上\textit{无界}\index{无界}.
 \end{definition}
 
-\begin{theorem}[函数的有界性定理]
-    若函数 $f(x)$ 在闭区间 $[a,b]$ 上连续, 则 $f(x)$ 在 $[a,b]$ 上有界;
+\begin{theorem}[闭区间函数的有界性]
+    \index{闭区间函数的有界性定理}若函数 $f(x)$ 在闭区间 $[a,b]$ 上连续, 则 $f(x)$ 在 $[a,b]$ 上有界;
     若函数 $f(x)$ 在开区间 $(a,b)$ 内连续, 且 $\displaystyle\lim_{x\to a^+}f(x)$ 与 $\displaystyle\lim_{x\to b^-}f(x)$ 存在 (见定义 \ref{unilateral continuous}), 则函数 $f(x)$ 在 $(a,b)$ 内有界.
-    \index{函数的有界性定理}
 \end{theorem}
+
+\begin{example}
+    设 $f(x)$ 在 $[a,+\infty)$ 连续, 则“$\exists x_n\in[a,+\infty)$ 有 $\displaystyle \lim_{n \to \infty}x_n=+\infty $ 且 $\displaystyle \lim_{n \to \infty}f(x_n)=\infty$”是 $f(x)$ 在 $[a,+\infty)$ 无界的 
+    \begin{tasks}(4)
+        \task 充分不必要条件
+        \task 必要不充分条件
+        \task 充分必要条件
+        \task 不充分也非必要条件
+    \end{tasks}
+\end{example}
+\begin{solution}
+    提炼题目的信息, 前提条件: $f(x)$ 在 $[a,+\infty)$ 连续, I: $\exists x_n\in[a,+\infty)$ 有 $\displaystyle \lim_{n \to \infty}x_n=+\infty $ 且 $\displaystyle \lim_{n \to \infty}f(x_n)=\infty$, II: $f(x)$ 在 $[a,+\infty)$ 无界.\\
+    第一步: 讨论充分性, 即 $I\rightarrow II$, 采用反证法, 假设 $f(x)$ 有界, 则存在 $M>0$, 使得在区间 $[a,+\infty)$ 上 $|f(x)|<M$, 但由 $\displaystyle \lim_{n \to \infty}f(x_n)=\infty$, 故存在 $N$, 当 $n>N$ 时, $|f(x)|>M$, 矛盾, 故函数在此区间上无界;\\ 
+    第二步: 讨论必要性, 即 $II\rightarrow I$, 由函数无界的定义, $f(x)$ 在 $[a,+\infty)$ 无界可得 $\forall M>0,\exists x\in[a,+\infty),s.t.|f(x)|>M$, 即 $1>0,\exists x_1,s.t.|f(x_1)|>1$, $2>0,\exists x_2,s.t.|f(x_2)|>2, \cdots $, 故必有 $\displaystyle \lim_{n \to \infty}|f(x_n)|=+\infty\Rightarrow \lim_{n \to \infty}f(x_n)=\infty$, 将区间 $ [a,+\infty) $ 拆分成两部分: $ [a, X], [X,+\infty) $, 因为 $ f(x) $ 在 $ [a,+\infty) $ 连续, 由闭区间上的连续函数必有界知, 有限远处 $ [a, X] $ 的 $ f(x) $ 都是有界的, 所以 $ f(x) $ 无界必是在无穷远处取得.\\ 
+    即对于 $ \forall M>0 $, 存在 $ X>a $, 存在 $ x_{0} \in(X,+\infty) $, 使得 $ \left|f\left(x_{0}\right)\right|>M $, 
+    取 $ M=1,\exists x_{1}>1 $, 使得 $ \left|f\left(x_{1}\right)\right|>1 $; $M=2, \exists x_{2}>2 $, 使得 $ \left|f\left(x_{2}\right)\right|>2 $; $M=n, \exists x_{n}>n $, 使得 $ \left|f\left(x_{n}\right)\right|>n $. 也即存在 $ x_{n}>n $, 故必然就有 $\displaystyle  \lim _{n \rightarrow \infty} x_{n}=+\infty $.\\ 
+    但题目若将闭区间 $ [a,+\infty) $ 改为开区间 $ (a,+\infty) $, 就无法推出 $\displaystyle  \lim _{n \rightarrow \infty} x_{n}=+\infty $ 了, 即必要性得证, 因此选 C.
+\end{solution}
+
+\begin{example}
+    在下列区间内函数 $f(x)=\dfrac{x \sin (x-3)}{(x-1)(x-3)^2}$ 有界的是
+    \begin{tasks}(4)
+        \task $(-1,0)$
+        \task $(0,1)$
+        \task $(1,2)$
+        \task $(2,3)$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    当 $x \neq 1,3$ 时, $f(x)$ 连续, 那么由闭区间连续函数必有界可知, $f(x)$ 在 $(-1,0)$ 内有界, 故选 A.
+\end{solution}
 
 \begin{example}[2004 数三]
     函数 $f(x)=\dfrac{|x|\sin(x-2)}{x(x-1)(x-2)^2}$ 在下列哪个区间内有界
@@ -81,8 +105,7 @@
 \end{definition}
 
 \begin{theorem}[函数的周期性定理]
-    若函数 $f(x)$ 以 $T$ 为周期, 则 $f(x)=f(x+T)=f(x+2T)=\cdots=f(x+nT).$
-    \index{函数的周期性定理}
+    \index{函数的周期性定理}若函数 $f(x)$ 以 $T$ 为周期, 则有 $$f(x)=f(x+T)=f(x+2T)=\cdots=f(x+nT).$$
 \end{theorem}
 
 \begin{example}[1987 数二]
@@ -125,10 +148,9 @@
 \subsection{复合函数与反函数}
 
 \begin{definition}[复合函数]
-    如果我们有两个函数 $ f $ 和 $ g $, 而两者的定义域分别是 $ D_{f} $ 和 $ D_{g} $,
+    \index{复合函数}如果我们有两个函数 $ f $ 和 $ g $, 而两者的定义域分别是 $ D_{f} $ 和 $ D_{g} $,
     值域分别是 $ I_{f} $ 和 $ I_{g} $. 如果 $ I_{f} \cap D_{g} \neq \varnothing $,
     那我们定义\textit{复合函数} 为 $$ g \circ f:=\left\{(x, z) \mid\left(\exists y \in I_{f} \cap D_{g}\right)[y=f(x) \wedge z=g(y)]\right\} .$$
-    \index{复合函数}
 \end{definition}
 
 \begin{example}[2001 数二]
@@ -212,7 +234,7 @@
                 \draw[-,fill=white] (1,-1) circle (0.5pt);
                 \node[left] at (2.3,0.25){$I$};
                 \node[left] at (2.3,1.25){$II$};
-                \node[left] at (2.3,2.25){$III$};
+                \node[left] at (2.3,2.2){$III$};
             \end{tikzpicture}
             \caption{}
             \label{fig:IIIgIIfI}
@@ -289,6 +311,41 @@
 \end{theorem}
 
 \begin{example}
+    当 $x\to1$ 时, 函数 $\dfrac{x^2-1}{x-1}\e ^{\frac{1}{x-1}}$ 的极限为 
+    \begin{tasks}(4)
+        \task 2
+        \task 0
+        \task $\infty$
+        \task 不存在且不为 $\infty$
+    \end{tasks}
+\end{example}
+\begin{errorSolution}
+    $ \displaystyle \lim_{x \to 1}\dfrac{x^2-1}{x-1}\e ^{\frac{1}{x-1}}=\lim_{x \to 1}(x+1)\e ^{\frac{1}{x-1}} =2\cdot \infty=\infty$\\ 
+    \textbf{错因: }判断一个极限是否存在, 要看其左右极限是否相等.\\
+\end{errorSolution}
+\begin{solution}
+    因为 $\displaystyle \lim_{x \to 1^{+}}\e ^{\frac{1}{x-1}}=0, \lim_{x \to 1^{-}}\e ^{\frac{1}{x-1}}=+\infty$, 左右极限不相等, 故原极限不存在.
+\end{solution}
+
+计算函数极限时, 大多数情况下不需要分左右极限考虑, 需要分左右的情况主要为以下两部分:
+\begin{enumerate}[label=(\arabic{*})]
+    \item 基本初等函数:
+    \begin{enumerate}
+        \item 幂函数, 如 $ \dfrac{1}{x}(x \to 0) $, $\displaystyle  \lim _{x \to 0^{-}} \dfrac{1}{x}=-\infty$,  $\displaystyle  \lim _{x \to 0^{+}} \dfrac{1}{x}=+\infty$;
+        \item 指数函数, 如 $ \mathrm{e}^{\infty} $ 型： $\displaystyle  \lim _{x \to \infty} \mathrm{e}^{x} $, $\displaystyle  \lim _{x \to 0} \mathrm{e}^{\frac{1}{x}}  $, $\displaystyle   \lim _{x \to 1} \mathrm{e}^{\frac{1}{x-1}} $;
+        \item 三角函数, 如 $\displaystyle  \tan x: \lim _{x \to \pi^{+}} \tan x=-\infty  $, $\displaystyle   \lim _{x \to \frac{\pi}{2}^{-}} \tan x=+\infty  $;
+        \item 反三角函数, 如 $\arctan  \infty $ 型: $\displaystyle  \lim _{x \to \infty} \arctan x  $, $\displaystyle   \lim _{x \to 0} \arctan \dfrac{1}{x}, \quad \lim _{x \to 1} \arctan \dfrac{1}{x-1} $.
+    \end{enumerate}
+    \item 分段函数分段点:
+    \begin{enumerate}
+        \item 绝对值函数, 例如 $ |x|(x \to 0)$ 时: $\displaystyle \lim _{x \to 0^{+}} \frac{|x|}{x}=1, \quad \lim _{x \to 0^{-}} \frac{|x|}{x}=-1$;
+        \item 取整函数, 例如 $ [x](x \to \mathbb{Z})$ 时: $\displaystyle \lim _{x \to 0^{+}}[x]=0, \quad \lim _{x \to 0^{-}}[x]=-1$;
+        \item 符号函数: $\displaystyle  y=\operatorname{sgn} x=\begin{cases}1, &x>0 \\ 0, &x=0 \\ -1, &x<0\end{cases}$ 有 $\displaystyle  \lim _{x \to 0^{-}} \operatorname{sgn} x=-1, \lim _{x \to 0^{+}} \operatorname{sgn} x=1 .$
+    \end{enumerate}
+    还比如 $ x \to \infty $ 型: 当 $ x \to \infty $ 要分 $ x \to-\infty, x \to+\infty $ 讨论.
+\end{enumerate}
+
+\begin{example}
     设连续函数 $f(x)$ 满足方程 $f(x)-\dfrac{1}{2}f\qty(\dfrac{x}{2})=x^2$, 求 $f(x)$ 的表达式.
 \end{example}
 \begin{solution}
@@ -314,8 +371,8 @@
 \begin{definition}[可去间断点]
     如果不连续点 $ x_{0} $ 两侧函数的极限存在且相等, 无论在 $ x_{0} $ 处是否定义
     (若有定义, 则函数值不是在这一点的左右极限),
-    这类间断点叫\textit{可去间断点} (或\textit{可移间断点}), 这类函数通过补充定义
-    $$f\left(x_{0}\right)=\lim _{x \rightarrow x_{0}^{+}} f(x)=\lim _{x \rightarrow x_{0}^{-}} f(x)$$
+    这类间断点叫\textit{可去间断点} (或\textit{可疑间断点}), 这类函数通过补充定义
+    $$f\left(x_{0}\right)=\lim _{x \to x_{0}^{+}} f(x)=\lim _{x \to x_{0}^{-}} f(x)$$
     后可变为连续函数.
     \index{可去间断点}
 \end{definition}
@@ -342,7 +399,35 @@
 \end{definition}
 
 \begin{example}
-    设 $f(x)=\dfrac{\qty(1-2^{\frac{1}{x-1}})\e^{\frac{1}{x}}}{1+2^{\frac{2}{x-1}}}\cdot\arctan\dfrac{[~x+1~]}{x+1}$, 则下列关于 $f(x)$ 间断点的描述正确的是
+    函数 $f(x)=\dfrac{x^2-x}{x^2-1}\sqrt{1+\dfrac{1}{x^2}}$ 的无穷间断点的个数为 
+    \begin{tasks}(4)
+        \task 0
+        \task 1
+        \task 2
+        \task 3
+    \end{tasks}
+\end{example}
+\begin{solution}
+    经观察函数得, $f(x)$ 在 $x=0,x=\pm1$ 时分母为 $0$ 无意义, 因此 $f(x)$ 的间断点个数为 $3$, 又 
+    $$
+    f(x)=\dfrac{x^2-x}{x^2-1}\sqrt{1+\dfrac{1}{x^2}}=\dfrac{x(x-1)}{(x-1)(x+1)}\dfrac{\sqrt{x^2+1}}{|x|}=\dfrac{x\sqrt{x^2+1}}{|x|(x+1)}
+    $$
+    那么 $$
+    \lim_{x \to 0^+}f(x)=\lim_{x \to 0^+}\dfrac{x\sqrt{x^2+1}}{|x|(x+1)}=1,\quad\lim_{x \to 0^-}f(x)=\lim_{x \to 0^-}\dfrac{x\sqrt{x^2+1}}{|x|(x+1)}=-1
+    $$
+    因此 $x=0$ 为跳跃间断点, 
+    $$
+    \lim_{x \to 1^+}f(x)=\lim_{x \to 1^+}\dfrac{x\sqrt{x^2+1}}{|x|(x+1)}=\dfrac{\sqrt{2}}{2},\quad\lim_{x \to 1^-}\dfrac{x\sqrt{x^2+1}}{|x|(x+1)}=\dfrac{\sqrt{2}}{2}
+    $$
+    因此 $x=1$ 为可去间断点,
+    $$
+    \lim_{x \to -1^+}f(x)=\lim_{x \to -1^+}\dfrac{x\sqrt{x^2+1}}{|x|(x+1)}=-\infty, \lim_{x \to -1^-}f(x)=\lim_{x \to -1^-}\dfrac{x\sqrt{x^2+1}}{|x|(x+1)}=+\infty
+    $$
+    因此 $x=-1$ 为无穷间断点, 因此选 B.
+\end{solution}
+
+\begin{example}
+    设 $f(x)=\dfrac{\qty(1-2^{\frac{1}{x-1}})\e^{\frac{1}{x}}}{1+2^{\frac{2}{x-1}}}\cdot\arctan\dfrac{[~x+1~]}{x+1}$, 其中 $[x]$ 表示不大于 $x$ 的整数, 则下列关于 $f(x)$ 间断点的描述正确的是
     \begin{tasks}(1)
         \task $f(x)$ 有一个可去间断点, 一个跳跃间断点, 一个第二类间断点
         \task $f(x)$ 有两个可去间断点, 一个第二类间断点
@@ -453,14 +538,14 @@
     \begin{enumerate}[label=(\arabic{*})]
         \item 设 $ p>0 $, $ y=f(x) $ 在 $ [p,+\infty) $ 上有界, 若有
               $$\begin{array}{l}
-                      \displaystyle\lim _{x \rightarrow+\infty}[f(x+1)-f(x)]=k, \\
-                      \displaystyle\lim _{x \rightarrow+\infty}[(x+1) f(x)-x f(x+1)]=b
+                      \displaystyle\lim _{x \to+\infty}[f(x+1)-f(x)]=k, \\
+                      \displaystyle\lim _{x \to+\infty}[(x+1) f(x)-x f(x+1)]=b
                   \end{array}$$
               则直线 $ y=k x+b $ 是曲线 $ y=f(x) $ 的渐近线.
         \item 设 $ q<0 $, $ y=f(x) $ 在 $ (-\infty, q] $ 上有界, 若有
               $$\begin{array}{l}
-                      \displaystyle \lim _{x \rightarrow+\infty}[f(x+1)-f(x)]=k, \\
-                      \displaystyle \lim _{x \rightarrow+\infty}[(x+1) f(x)-x f(x+1)]=b,
+                      \displaystyle \lim _{x \to+\infty}[f(x+1)-f(x)]=k, \\
+                      \displaystyle \lim _{x \to+\infty}[(x+1) f(x)-x f(x+1)]=b,
                   \end{array}$$
               则直线 $ y=k x+b $ 是曲线 $ y=f(x) $ 的渐近线.
     \end{enumerate}

@@ -1,28 +1,28 @@
 \section{多元函数的极限与连续}
 
-多元函数极限主要涉及到重极限、方向极限和累次极限等概念. 重极限是指当自变量的数量趋于无穷大时, 函数值的极限情况. 方向极限则是在某一点沿特定方向的极限情况. 累次极限涉及到函数值在多个变量上逐一取极限的情况. 
+多元函数极限主要涉及到重极限、方向极限和累次极限等概念. 重极限是指当自变量的数量趋于无穷大时, 函数值的极限情况. 方向极限则是在某一点沿特定方向的极限情况. 累次极限涉及到函数值在多个变量上逐一取极限的情况.
 
-多元函数的连续性则涉及到函数在每一点都连续, 即在该点的所有偏导数都存在且连续. 连续性的判断不仅依赖于偏导数的存在性, 还涉及到偏导数的连续性. 
+多元函数的连续性则涉及到函数在每一点都连续, 即在该点的所有偏导数都存在且连续. 连续性的判断不仅依赖于偏导数的存在性, 还涉及到偏导数的连续性.
 
 \subsection{多元函数的极限}
 
 \begin{definition}[二元函数的极限]
-    设二元函数 $ f(x, y) $ 在区间 $ (a, b) $ 的某去心邻域内有定义, 
+    设二元函数 $ f(x, y) $ 在区间 $ (a, b) $ 的某去心邻域内有定义,
     若 $ \forall \varepsilon>0, \exists \delta>0 $, 当 $ 0<\sqrt{(x-a)^{2}+(y-b)^{2}}<\delta $ 时恒有
     $$|f(x, y)-A|<\varepsilon$$
     则称
-    $$\lim _{\substack{x \rightarrow a \\ y \rightarrow b}} f(x, y)=A.$$
+    $$\lim _{\substack{x \to a \\ y \to b}} f(x, y)=A.$$
 \end{definition}
 
 在二元函数极限的定义中, 动点 $ (x, y) $ 在 $ (a, b) $ 的邻近以任意路径趋向于点 $ (a, b) $ 时, 函数值 $ f(x, y) $ 与常数 $ A $ 需任意地接近.
-这些任意路径是不可能一一取到的. 若取两条不同的路径让 $ (x, y) \rightarrow(a, b) $, 而 $ f(x, y) $ 取不同的极限, 
-则可推知: $ (x, y) \rightarrow(a, b) $ 时 $ f(x, y) $ 的极限不存在.
+这些任意路径是不可能一一取到的. 若取两条不同的路径让 $ (x, y) \to(a, b) $, 而 $ f(x, y) $ 取不同的极限,
+则可推知: $ (x, y) \to(a, b) $ 时 $ f(x, y) $ 的极限不存在.
 
 通常求二元函数极限的方法如下:
 \begin{enumerate}[label=(\arabic{*})]
     \item 利用定义求极限;
     \item 利用路径法;
-    \item 在 $ (x, y) \rightarrow(0,0) $ 时化为极坐标求极限, 即 $ (x, y) \rightarrow(0,0) \Leftrightarrow \rho \rightarrow 0^+ $;
+    \item 在 $ (x, y) \to(0,0) $ 时化为极坐标求极限, 即 $ (x, y) \to(0,0) \Leftrightarrow \rho \to 0^+ $;
     \item 利用无穷小量乘以有界变量仍为无穷小量;
     \item 利用夹逼准则求极限.
 \end{enumerate}
@@ -63,8 +63,8 @@
 \end{example}
 \begin{solution}
     \textbf{法一: }令 $\begin{cases}
-        x=\rho\cos\theta\\y=\rho\sin\theta
-    \end{cases}$
+            x=\rho\cos\theta \\y=\rho\sin\theta
+        \end{cases}$
     于是原极限等于 $\displaystyle\lim_{\rho\to0^+}\dfrac{2\rho^3\cos^2\theta\sin\theta }{\rho^4\cos^4\theta+\rho^2\sin^2\theta}=2\cos^2\theta\sin\theta\lim_{\rho\to0^+}\dfrac{\rho^3}{\rho^4\cos^4\theta+\rho^2\sin^2\theta}=\infty$, 即不存在, 选 A.\\
     \textbf{法二: }取 $x\to0,~y=x$, 则有 $(x,y)\to(0,0)$, 于是 $$\displaystyle\lim_{x\to0,y=x}\dfrac{2x^2\cdot x}{x^4+x^2}=\lim_{x\to0,y=x}\dfrac{2x^3}{(1+x^2)x^2}=0$$
     再取 $x\to0,~y=x^2$, 同理 $(x,y)\to(0,0)$, 于是 $$\displaystyle\lim_{x\to0,y=x^2}\dfrac{2x^2\cdot x^2}{x^4+x^4}=1$$
@@ -80,15 +80,17 @@
 
 \subsection{多元函数的连续性与可微性}
 
-\begin{definition}
-    若 $\displaystyle \lim _{\substack{x \rightarrow a \\ y \rightarrow b}} f(x, y)=f(a, b)$
-    则称 $ f(x, y) $ 在 $ (a, b) $ 内连续.
+\begin{definition}[二元函数连续]
+    \index{二元函数连续}
+    若 $\displaystyle \lim _{\substack{x \to a \\ y \to b}} f(x, y)=f(a, b)$
+    则称 $ f(x, y) $ \textit{在} $ (a, b) $ \textit{内连续}.
 \end{definition}
 
 \begin{theorem}
     多元初等函数在其有定义的区域上连续.
 \end{theorem}
-\begin{theorem}
+\begin{theorem}[闭区间多元函数的有界性]
+    \index{闭区间多元函数的有界性}
     若 $ f(x, y) $ 在有界闭域 $ D $ 上连续, 则 $ f(x, y) $ 在 $ D $ 上为有界函数, $f(x, y) $ 在 $ D $ 上取到最大值与最小值.
 \end{theorem}
 
@@ -112,6 +114,13 @@
     \caption{}
 \end{figure}
 
+\begin{theorem}[连续偏导数]
+    若二元函数 $f(x,y)$ 在点 $(x_0,y_0)$ 处有连续偏导数, 则 
+    $$
+    f(x_0+\Delta x,y_0+\Delta y)-f(x_0,y_0)=f_x'(\xi,\eta)\Delta x+f_y'(\xi, \eta)\Delta y.
+    $$
+\end{theorem}
+
 \paragraph{判断函数在某点处可微性的一般步骤}
 \begin{enumerate}[label=(\arabic{*})]
     \item 判断 $f(x,y)$ 在 $(a,b)$ 处的两个偏导数是否存在, 若不存在, 则 $f(x,y)$ 在 $(a,b)$ 点不可微；若存在, 则求出两个偏导数 $f'_x(a,b)$ 和 $f'_y(a,b)$;
@@ -120,26 +129,72 @@
 \end{enumerate}
 
 \begin{example}
+    设函数 $f(x,y)$ 可微, 且 $f(0,0)=0, f(2,1)>3, f_y'(x,y)<0$, 则至少存在一点 $(x_0,y_0)$, 使得 
+    \begin{tasks}(4)
+        \task $f_x'(x_0,y_0)<1.$
+        \task $f_x'(x_0,y_0)<-3.$
+        \task $f_x'(x_0,y_0)=\dfrac{3}{2}.$
+        \task $f_x'(x_0,y_0)>\dfrac{3}{2}.$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    \textbf{法一: }因为 $f(2,1)=f(2,1)-f(0,0)$, 有 Lagrange 中值定理可得 
+    $$
+    f(2,1)-f(0,1)+f(0,1)-f(0,0)=2f_x'(\xi,1)+f_y'(0, \eta)
+    $$
+    其中 $\xi\in(0,2),\eta\in(0,1)$, 于是 $2f_x'(\xi,1)=f(2,1)-f_y'(0,\eta)$, 又 $f(2,1)>3, f_y'(x,y)<0$, 故 $f_x'(\xi,1)>\dfrac{3}{2}$, 因此选 D. \\ 
+    \textbf{法二: }加强题目条件, 假设一阶偏导数连续, 那么 $$
+    f(2,1)-f(0,0)=2\cdot f_x'(x_0,y_0)+1\cdot f_y'(x_0,y_0)\Rightarrow f'_x(x_0,y_0)=\dfrac{f(2,1)-f_y'(x_0,y_0)}{2}>\dfrac{3}{2}.
+    $$
+\end{solution}
+
+\begin{example}
+    设 $f(x,y)=\begin{cases}
+            \dfrac{x^2y}{x^2+y^2}, & x^2+y^2\neq 0 \\
+            0,                     & x^2+y^2=0
+        \end{cases}$ 则
+    \begin{tasks}(2)
+        \task $f''_{xy}(0,0), f''_{yx}(0,0)$ 均存在
+        \task $f''_{xy}(0,0), f''_{yx}(0,0)$ 均不存在
+        \task $f''_{xy}(0,0), $ 存在 $ f''_{yx}(0,0)$ 不存在
+        \task $f''_{xy}(0,0), $ 不存在 $ f''_{yx}(0,0)$ 存在
+    \end{tasks}
+\end{example}
+\begin{solution}
+    因为 $$
+        f'_x(0,0)=\lim_{x \to 0}\dfrac{f(x,0)-f(0,0)}{x}=0,\quad f'_y=\lim_{y \to 0}\dfrac{f(0,y)-f(0,0)}{y}=0
+    $$
+    当 $x^2+y^2\neq 0$ 时
+    $$
+        f'_x=\dfrac{2xy^3}{\qty(x^2+y^2)^2},\quad f'_y=\dfrac{x^4-x^2y^2}{\qty(x^2+y^2)^2}
+    $$
+    那么 $$
+        f''_{xy}(0,0)=\lim_{y \to 0}\dfrac{f'_x(0,y)-f'_x(0,0)}{y}=0,\quad f''_{yx}(0,0)=\lim_{x \to 0}\dfrac{f'_y(x,0)-f'_y(0,0)}{x}=\lim_{x \to 0}\dfrac{1}{x}\text{ 不存在}
+    $$
+    故选 C.
+\end{solution}
+
+\begin{example}
     设 $f(x,y)=\begin{cases}
             \dfrac{x^2y}{x^2+y^2}, & x^2+y^2\neq 0 \\
             0,                     & x^2+y^2=0
         \end{cases},z(t)=f\qty(\e^{2t}-1,\arctan t)$, 求 $z'(0).$
 \end{example}
 \begin{errorSolution}
-    $z'(t)=f'_x\cdot \qty(2\e^{2t})+f'_y\cdot\dfrac{1}{1+t^2}\Rightarrow z'(0)=2f_x'(0,0)+\dfrac{1}{2}f_y'(0,0)$, 下求 $f_x'(0,0)$ 和 $f_y'(0,0)$, 由定义 
+    $z'(t)=f'_x\cdot \qty(2\e^{2t})+f'_y\cdot\dfrac{1}{1+t^2}\Rightarrow z'(0)=2f_x'(0,0)+\dfrac{1}{2}f_y'(0,0)$, 下求 $f_x'(0,0)$ 和 $f_y'(0,0)$, 由定义
     \begin{flalign*}
-        f_x'(0,0)=\lim_{x\to0}\dfrac{f(x,0)-f(0,0)}{x-0}=\lim_{x\to0}\dfrac{f(x,0)}{x}=0\\
+        f_x'(0,0)=\lim_{x\to0}\dfrac{f(x,0)-f(0,0)}{x-0}=\lim_{x\to0}\dfrac{f(x,0)}{x}=0 \\
         f_y'(0,0)=\lim_{y\to0}\dfrac{f(0,y)-f(0,0)}{y-0}=\lim_{y\to0}\dfrac{f(0,y)}{y}=0
     \end{flalign*}
     那么 $z'(0)=0.$\\
-    \textbf{错因: }只有函数 $z=f(u,v)$ 在对应点 $(u,v)$ 具有连续偏导数, 那么复合函数 $z=f[\varphi(u,v),\psi(u,v)]$ 在点 $(x,y)$ 的两个偏导数才存在. 
+    \textbf{错因: }只有函数 $z=f(u,v)$ 在对应点 $(u,v)$ 具有连续偏导数, 那么复合函数 $z=f[\varphi(u,v),\psi(u,v)]$ 在点 $(x,y)$ 的两个偏导数才存在.
     对于本题, 即外层函数 $f$ 在 $(0,0)$ 可微, 才能使用链式求导法则.\\
 \end{errorSolution}
 \begin{solution}
-    先判断 $f$ 在 $(0,0)$ 处是否可微, 
+    先判断 $f$ 在 $(0,0)$ 处是否可微,
     \begin{flalign*}
-        \lim_{(x,y)\to(0,0)}\dfrac{f(x,y)-f(0,0)-f_x'(0,0)x-f_y'(0,0)y}{\sqrt{x^2+y^2}}&=\lim_{(x,y)\to(0,0)}\dfrac{f(x,y)}{\sqrt{x^2+y^2}}=\lim_{(x,y)\to(0,0)}\dfrac{x^2y}{\qty(x^2+y^2)^{\frac{3}{2}}}\\
-        & \xlongequal[y=\rho\sin\theta]{x=\rho\cos\theta}\lim_{\rho\to0^+}\dfrac{\rho^3\cos^2\theta\sin\theta}{\rho^3}=\cos^2\theta\sin\theta\neq0
+        \lim_{(x,y)\to(0,0)}\dfrac{f(x,y)-f(0,0)-f_x'(0,0)x-f_y'(0,0)y}{\sqrt{x^2+y^2}} & =\lim_{(x,y)\to(0,0)}\dfrac{f(x,y)}{\sqrt{x^2+y^2}}=\lim_{(x,y)\to(0,0)}\dfrac{x^2y}{\qty(x^2+y^2)^{\frac{3}{2}}}                        \\
+                                                                                        & \xlongequal[y=\rho\sin\theta]{x=\rho\cos\theta}\lim_{\rho\to0^+}\dfrac{\rho^3\cos^2\theta\sin\theta}{\rho^3}=\cos^2\theta\sin\theta\neq0
     \end{flalign*}
     则 $f$ 在 $(0,0)$ 处不可微, 于是
     \begin{flalign*}
@@ -149,18 +204,18 @@
 
 \begin{example}
     已知函数 $\displaystyle f(x,y)=f(x,y)=\begin{cases}
-            \dfrac{1-\e ^{x(x^2+y^2)} }{x^2+y^2} ,& x^2+y^2\neq 0; \\
-            0                                           ,& x^2+y^2=0,
+            \dfrac{1-\e ^{x(x^2+y^2)} }{x^2+y^2} ,        & x^2+y^2\neq 0; \\
+            0                                           , & x^2+y^2=0,
         \end{cases}$ 讨论 $f(x,y)$ 在点 $(0,0)$ 处的连续性与可微性.
 \end{example}
 \begin{solution}
-    \textbf{连续性证明} $$\lim _{\substack{x \rightarrow 0 \\ y \rightarrow 0}}f(x,y)=\lim _{\substack{x \rightarrow 0 \\ y \rightarrow 0}}\dfrac{1-\e ^{x(x^2+y^2)}}{x^2+y^2}=-\lim _{\substack{x \rightarrow 0 \\ y \rightarrow 0}}\dfrac{x(x^2+y^2)}{x^2+y^2}=0=f(0,0)$$
+    \textbf{连续性证明} $$\lim _{\substack{x \to 0 \\ y \to 0}}f(x,y)=\lim _{\substack{x \to 0 \\ y \to 0}}\dfrac{1-\e ^{x(x^2+y^2)}}{x^2+y^2}=-\lim _{\substack{x \to 0 \\ y \to 0}}\dfrac{x(x^2+y^2)}{x^2+y^2}=0=f(0,0)$$
     即 $f(x,y)$ 在 $(0,0)$ 处连续; \\
     \textbf{可微性证明} $$\lim_{x\to0}\dfrac{f(x,0)-f(0,0)}{x-0}=\lim_{x\to0}\dfrac{\dfrac{1-\e ^{x^3}}{x^2}-0}{x}=\lim_{x\to0}\dfrac{1-\e ^{x^3}}{x^3}=-1=f'_x(0,0)$$
     $$\lim_{y\to0}\dfrac{f(0,y)-f(0,0)}{y-0}=0=f'_y(0,0)$$
     于是 \begin{flalign*}
-         & \lim _{\substack{x \rightarrow 0                                                               \\ y \rightarrow 0}}\dfrac{f(x,y)-f(0,0)-f'_x(0,0)x-f'_y(0,0)y}{\sqrt{x^2+y^2}}=\lim _{\substack{x \rightarrow 0 \\ y \rightarrow 0}}\dfrac{\dfrac{1-\e ^{x(x^2+y^2)}}{x^2+y^2}-0-(-1)x-0}{\sqrt{x^2+y^2}}\\
-         & =\lim _{\substack{x \rightarrow 0                                                              \\ y \rightarrow 0}}\dfrac{1-\e ^{x(x^2+y^2)}+x(x^2+y^2)}{\qty(x^2+y^2)^{\frac{3}{2}}}\xlongequal[y=\rho\sin\theta]{x=\rho\cos\theta}\lim_{\rho\to0^+}\dfrac{1-\e ^{\rho^3\cos\theta}+\rho^3\cos\theta}{\rho^3}\\
+         & \lim _{\substack{x \to 0                                                               \\ y \to 0}}\dfrac{f(x,y)-f(0,0)-f'_x(0,0)x-f'_y(0,0)y}{\sqrt{x^2+y^2}}=\lim _{\substack{x \to 0 \\ y \to 0}}\dfrac{\dfrac{1-\e ^{x(x^2+y^2)}}{x^2+y^2}-0-(-1)x-0}{\sqrt{x^2+y^2}}\\
+         & =\lim _{\substack{x \to 0                                                              \\ y \to 0}}\dfrac{1-\e ^{x(x^2+y^2)}+x(x^2+y^2)}{\qty(x^2+y^2)^{\frac{3}{2}}}\xlongequal[y=\rho\sin\theta]{x=\rho\cos\theta}\lim_{\rho\to0^+}\dfrac{1-\e ^{\rho^3\cos\theta}+\rho^3\cos\theta}{\rho^3}\\
          & =\lim_{\rho\to0^+}\dfrac{-\rho^3\cos\theta+\rho^3\cos\theta+o\qty(\rho^3\cos\theta)}{\rho^3}=0
     \end{flalign*}
     故 $f(x,y)$ 在 $(0,0)$ 处可微.
@@ -182,12 +237,12 @@
 \begin{example}\scriptsize\linespread{0.8}
     讨论如下向量函数的连续性: 设 $(u,v)=F(x,y)=(f(x,y),g(x,y))$, 其中
     $$u=f(x,y)=\begin{cases}
-            \displaystyle \frac{x}{\left ( x^2+y^2 \right )^\alpha  }\ln(|x|+|y|) ,& \text{当 } x^2+y^2\not=0\text{ 时} \\
-            \displaystyle 0                                                       ,&  \text{当 } x^2+y^2=0\text{ 时}
+            \displaystyle \frac{x}{\left ( x^2+y^2 \right )^\alpha  }\ln(|x|+|y|) , & \text{当 } x^2+y^2\not=0\text{ 时} \\
+            \displaystyle 0                                                       , & \text{当 } x^2+y^2=0\text{ 时}
         \end{cases}$$
     $$v=g(x,y)=\begin{cases}
-            \displaystyle \frac{y}{\left ( x^2+y^2 \right )^\alpha  }\ln(|x|+|y|) ,& \text{当 } x^2+y^2\not=0\text{ 时} \\
-            \displaystyle 0                                                       ,&  \text{当 } x^2+y^2=0\text{ 时}
+            \displaystyle \frac{y}{\left ( x^2+y^2 \right )^\alpha  }\ln(|x|+|y|) , & \text{当 } x^2+y^2\not=0\text{ 时} \\
+            \displaystyle 0                                                       , & \text{当 } x^2+y^2=0\text{ 时}
         \end{cases}.$$
 \end{example}
 \begin{solution}\scriptsize\linespread{0.8}
@@ -195,8 +250,8 @@
     \begin{flalign*}
         u^2+v^2 & =\frac{x^2+y^2}{\left(x^2+y^2\right)^{2\alpha}}\ln^2(|x|+|y|)=\left(x^2+y^2\right)^{1-2\alpha}\ln^2(|x|+|y|) \\
                 & \to\begin{cases}
-                         0       ,& \text{当 }\displaystyle  \alpha <\frac{1}{2}\text{ 时}          \\[6pt]
-                         +\infty ,& \text{当 }\displaystyle  \alpha \geqslant \frac{1}{2}\text{ 时}
+                         0       , & \text{当 }\displaystyle  \alpha <\frac{1}{2}\text{ 时}          \\[6pt]
+                         +\infty , & \text{当 }\displaystyle  \alpha \geqslant \frac{1}{2}\text{ 时}
                      \end{cases}~ (r^2=x^2+y^2\to0\text{ 时}).
     \end{flalign*}
     故当且仅当 $\displaystyle\alpha<\frac{1}{2}$ 时 $F$ 在点 $(0,0)$ 连续, 下面对上式中的极限进行补充证明.
@@ -205,6 +260,72 @@
     这时 $$0\leqslant \frac{\left(x^2+y^2\right)^\mu}{(|x|+|y|)^{2\mu}}=\frac{\left(x^2+y^2\right)^\mu}{(x^2+2|x|~|y|+y^2)^{\mu}}\leqslant \frac{\left(x^2+y^2\right)^{\mu}}{\left(x^2+y^2\right)^{\mu}}=1$$
     但 $\displaystyle (|x|+|y|)^{2\mu}\ln^2(|x|+|y|)\to0$, 所以
     $$\left(x^2+y^2\right)^{1-2\alpha}\ln^2(|x|+|y|)\to0~ (r\to0).$$
+\end{solution}
+
+\subsubsection{多元函数可微性}
+
+$\displaystyle \lim _{(x, y) \to\left(x_{0}, y_{0}\right)} \frac{f(x, y)-f\left(x_{0}, y_{0}\right)-\left[f_{x}^{\prime}\left(x_{0}, y_{0}\right)\left(x-x_{0}\right)+f_{y}^{\prime}\left(x_{0}, y_{0}\right)\left(y-y_{0}\right)\right]}{\sqrt{\left(x-x_{0}\right)^{2}+\left(y-y_{0}\right)^{2}}}=0$ 等价于
+$$
+    \lim _{(x, y) \to\left(x_{0}, y_{0}\right)} \frac{f(x, y)-f_{x}^{\prime}\left(x_{0}, y_{0}\right) x-f_{y}^{\prime}\left(x_{0}, y_{0}\right) y-f\left(x_{0}, y_{0}\right)-f_{x}^{\prime}\left(x_{0}, y_{0}\right) x_{0}-f_{y}^{\prime}\left(x_{0}, y_{0}\right) y_{0}}{\sqrt{\left(x-x_{0}\right)^{2}+\left(y-y_{0}\right)^{2}}}=0
+$$
+若记 $ -f_{x}^{\prime}\left(x_{0}, y_{0}\right)=A ,-f_{y}^{\prime}\left(x_{0}, y_{0}\right)=B, -f\left(x_{0}, y_{0}\right)-f_{x}^{\prime}\left(x_{0}, y_{0}\right) x_{0}-f_{y}^{\prime}\left(x_{0}, y_{0}\right) y_{0}=C $, 则上式等价于
+$$
+    \lim _{(x, y) \to\left(x_{0}, y_{0}\right)} \frac{f(x, y)+A x+B y+C}{\sqrt{\left(x-x_{0}\right)^{2}+\left(y-y_{0}\right)^{2}}}=0
+$$
+于是, 只要题干给出 $ f(x, y) $ 在 $ \left(x_{0}, y_{0}\right) $ 处连续和 $\displaystyle  \lim _{(x, y) \to\left(x_{0}, y_{0}\right)} \frac{f(x, y)+A x+B y+C}{\sqrt{\left(x-x_{0}\right)^{2}+\left(y-y_{0}\right)^{2}}}=d $ 的条件, 则
+\begin{enumerate}[label=(\arabic{*})]
+    \item 若 $d=0$, 则函数 $f(x, y) $ 在点 $\left(x_{0}, y_{0}\right) $ 处可微, 且 $f_{x}^{\prime}\left(x_{0}, y_{0}\right)=-A, f_{y}^{\prime}\left(x_{0}, y_{0}\right)=-B$;
+    \item 若 $ d \neq 0 $, 则函数 $ f(x, y) $ 在点 $ \left(x_{0}, y_{0}\right) $ 处不可微 ,且 $ f_{x}^{\prime}\left(x_{0}, y_{0}\right) $ 与 $ f_{y}^{\prime}\left(x_{0}, y_{0}\right) $ 均不存在.
+\end{enumerate}
+
+\begin{example}
+    设连续函数 $z=f(x,y)$ 满足 $\displaystyle \lim_{\substack{x\to0\\ y\to1}}\dfrac{f(x,y)-2x+y-2}{\sqrt{x^2+(y-1)^2}}=0$, 求 $\dd z|_{(0,1)}.$
+\end{example}
+\begin{solution}
+    由已知得 $f_x'(0,1)=2, f_y'(0,1)=-1$, 那么 $\dd z|_{(0,1)}=f_x'(0,1)\dd x+f_y'(0,1)\dd y=2\dd x-\dd y.$
+\end{solution}
+
+\begin{example}
+    设 $f(x,y)$ 在点 $(0,0)$ 处连续, 若 $ \displaystyle \lim_{\substack{x\to0\\ y\to0}}\dfrac{f(x,y)-2x-3y}{\qty(x^2+y^2)^{\alpha}}=1 $, 其中 $\alpha>0$, 则 $f(x,y)$ 在点 $(0,0)$ 处可微的充分必要条件是
+    \begin{tasks}(4)
+        \task $\alpha<\dfrac{1}{2}$
+        \task $\alpha=\dfrac{1}{2}$
+        \task $\alpha>\dfrac{1}{2}$
+        \task $\alpha>1$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    因为 $f(x,y)$ 在 $(0,0)$ 处连续, 那么
+    $$
+        f(0,0)=\lim_{\substack{x\to0 \\ y\to0}}\qty[\dfrac{f(x,y)-2x-3y}{\qty(x^2+y^2)^{\alpha}}\cdot\qty(x^2+y^2)^{\alpha}+2x+3y]=0
+    $$
+    故 $ \displaystyle \lim_{\substack{x\to0\\ y\to0}}\dfrac{f(x,y)-2x-3y}{\qty(x^2+y^2)^{\alpha}}=\lim_{\substack{x\to0\\ y\to0}}\dfrac{f(x,y)-2x-3y}{\sqrt{x^2+y^2}}\cdot\dfrac{1}{\qty(x^2+y^2)^{\alpha-\frac{1}{2}}}=1 $, 只需 $\alpha-\dfrac{1}{2}>0$, 即 $\alpha>\dfrac{1}{2}$,
+    那么有  $$ \displaystyle \lim_{\substack{x\to0\\ y\to0}}\dfrac{f(x,y)-2x-3y-f(0,0)}{\sqrt{x^2+y^2}}=0$$ 因此选 C.
+\end{solution}
+
+\begin{example}
+    设连续可偏导函数 $f(x,y)$ 满足 $\displaystyle \lim_{\substack{x\to1\\ y\to0}}\dfrac{f(x,y)-2x-y+1}{(x-1)^2+y^2}=-1$, 则
+    $$
+        I=\lim_{x \to 0}\qty[f\qty(\e ^{2x^2}, x\tan 2x)]^{\frac{1}{\sqrt{1+x}-\sqrt{1+\ln(1+x)}}}.
+    $$
+    \begin{tasks}(4)
+        \task $\e ^{6}$
+        \task $\e ^{12}$
+        \task $\e ^{18}$
+        \task $\e ^{24}$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    因为 $f(x,y)$ 为连续可偏导函数, 于是
+    $$
+        f(1,0)= \lim_{\substack{x\to1\\ y\to0}} f(x,y)=\lim_{\substack{x\to1\\ y\to0}}\qty[\dfrac{f(x,y)-2x-y+1}{(x-1)^2+y^2}\cdot\qty((x-1)^2+y^2)+2x+y-1]=1
+    $$
+    且 $f_x'(1,0)=2, f_y'(1,0)=1$, 于是
+    \begin{flalign*}
+        I & =\exp\lim_{x\to0}\dfrac{\ln f\qty(\e ^{2x^2}, x\tan 2x)}{\sqrt{1+x}-\sqrt{1+\ln(1+x)}}=\exp\lim_{x\to0}\dfrac{f\qty(\e ^{2x^2}, x\tan 2x)-1}{\dfrac{1}{4}x^2}     \\
+          & \xlongequal{L'}\exp\lim_{x\to0}\dfrac{4x\e ^{2x^2}f_x'+\qty(\tan 2x+2x\sec^2x)f_y'}{\dfrac{1}{2}x} =\exp\lim_{x\to0}\dfrac{8x+2x+2x+o(x)}{\dfrac{1}{2}x}=\e ^{24}
+    \end{flalign*}
+    因此选 D.
 \end{solution}
 
 \subsection{二元函数的 Taylor 展开}
@@ -220,9 +341,9 @@
     设 $f(x,y)$ 连续, $f(0,0)=0$, $f(x,y)$ 在 $(0,0)$ 处可微且 $f'_y(0,0)=1$, 求 $$\displaystyle I=\lim_{x\to0^+}\dfrac{\displaystyle\int_{0}^{x^3}\dd t\int_{\sqrt[3]{t}}^{x}f(t,u)\dd u}{1-\sqrt[3]{1-x^5}}.$$
 \end{example}
 \begin{solution}
-    当 $x\to0^+$ 时, $1-\sqrt[3]{1-x^5}\sim\dfrac{1}{3}x^5$, 考虑交换积分次序, 
+    当 $x\to0^+$ 时, $1-\sqrt[3]{1-x^5}\sim\dfrac{1}{3}x^5$, 考虑交换积分次序,
     $$\int_{0}^{x^3}\dd t\int_{\sqrt[3]{t}}^{x}f(t,u)\dd u=\iint\limits_{\substack{0\leqslant t\leqslant x^3\\0\leqslant u\leqslant u}}f(t,u)\dd t\dd u=\int_{0}^{x}\dd u\int_{0}^{u^3}f(t,u)\dd t$$
-    于是, 
+    于是,
     \begin{flalign*}
         I=\lim_{x\to0^+}\dfrac{\displaystyle \int_{0}^{x}\dd u\int_{0}^{u^3}f(t,u)\dd t}{\dfrac{1}{3}x^5}\xlongequal[]{L'}3\lim_{x\to0^+}\dfrac{\displaystyle\int_{0}^{x^3}f(t,x)\dd t}{5x^4}\xlongequal[]{L'}3\lim_{x\to0^+}\dfrac{3x^2f\qty(x^3,x)}{20x^3}=\dfrac{9}{20}\lim_{x\to0^+}\dfrac{f\qty(x^3,x)}{x}
     \end{flalign*}

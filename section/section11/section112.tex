@@ -1,6 +1,6 @@
-\section{向量间的线性关系}
+\section{向量的关系}
 
-\subsection{基本概念}
+\subsection{向量之间的线性关系}
 
 \begin{definition}[线性表示]
     对于向量 $\vb*{\beta},\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_m$, 如果存在一组数 $k_1,k_2,\cdots, k_m$, 使得
@@ -13,8 +13,6 @@
     $$k_{1} \vb*{\alpha}_{1}+k_{2} \vb*{\alpha}_{2}+\cdots+k_{m} \vb*{\alpha}_{m}=\mathbf{0}$$
     成立, 则称向量组 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ \textit{线性相关}; 当且仅当  $k_{1}=k_{2}=\cdots=k_{m}=0 $ 时等式成立, 则称向量组 $ \vb*{\alpha}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ \textit{线性无关}.
 \end{definition}
-
-\subsection{常用结论}
 
 设
 $$\begin{array}{c}
@@ -87,31 +85,10 @@ $$\begin{array}{c}
 \begin{solution}
     由线性表示秩的关系:
     \begin{flalign*}
-        \qty(\vb*{\beta}_1^{\top}, \vb*{\beta}_2^{\top}, \vb*{\beta}_3^{\top}, \vb*{\alpha}_1^{\top})&=\begin{pmatrix} 2 & -1 & 2 & 0 \\ 2 & 2 & 1 & 1 \\ 3 & 1 & -1 & 2 \\ 1 & 2 & -2 & 3 \\\end{pmatrix}\xrightarrow[\substack{r_3-2r_1\\ r_4-2r_1}]{\substack{r_1\leftrightarrow r_4\\ r_2-2r_1}}\begin{pmatrix} 1 & 2 & -2 & 3 \\ 0 & -2 & 5 & -5 \\ 0 & -5 & 5 & -7 \\ 0 & -5 & 6 & -6 \\\end{pmatrix}\\ 
-        &\xrightarrow[\substack{r_3-r_4\\ r_4+5r_2}]{r_2\times\qty(-\frac{1}{2})}\begin{pmatrix} 1 & 2 & -2 & 3 \\ 0 & 1 & -\dfrac{5}{2} & \dfrac{5}{2} \\ 0 & 0 & -1 & -1 \\ 0 & 0 & -\dfrac{13}{2} & \dfrac{13}{2} \\\end{pmatrix}\xrightarrow[\substack{r_4\times\qty(-\frac{2}{13})-r_3\\ r_4\times\qty(-\frac{1}{2})}]{r_3\times(-1)}\begin{pmatrix} 1 & 2 & -2 & 3 \\ 0 & 1 & -\dfrac{5}{2} & \dfrac{5}{2} \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1 \\\end{pmatrix}
+        \qty(\vb*{\beta}_1^{\top}, \vb*{\beta}_2^{\top}, \vb*{\beta}_3^{\top}, \vb*{\alpha}_1^{\top}) & =\begin{pmatrix} 2 & -1 & 2 & 0 \\ 2 & 2 & 1 & 1 \\ 3 & 1 & -1 & 2 \\ 1 & 2 & -2 & 3 \\\end{pmatrix}\xrightarrow[\substack{r_3-2r_1 \\ r_4-2r_1}]{\substack{r_1\leftrightarrow r_4\\ r_2-2r_1}}\begin{pmatrix} 1 & 2 & -2 & 3 \\ 0 & -2 & 5 & -5 \\ 0 & -5 & 5 & -7 \\ 0 & -5 & 6 & -6 \\\end{pmatrix}\\
+                                                                                                      & \xrightarrow[\substack{r_3-r_4                                                                                                      \\ r_4+5r_2}]{r_2\times\qty(-\frac{1}{2})}\begin{pmatrix} 1 & 2 & -2 & 3 \\ 0 & 1 & -\dfrac{5}{2} & \dfrac{5}{2} \\ 0 & 0 & -1 & -1 \\ 0 & 0 & -\dfrac{13}{2} & \dfrac{13}{2} \\\end{pmatrix}\xrightarrow[\substack{r_4\times\qty(-\frac{2}{13})-r_3\\ r_4\times\qty(-\frac{1}{2})}]{r_3\times(-1)}\begin{pmatrix} 1 & 2 & -2 & 3 \\ 0 & 1 & -\dfrac{5}{2} & \dfrac{5}{2} \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1 \\\end{pmatrix}
     \end{flalign*}
     由 $\rank(\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3)=3<\rank(\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3, \vb*{\alpha}_1)=4$, 知 $\vb*{\alpha}_1$ 不能表示为 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 的线性组合.
-\end{solution}
-
-\begin{example}[2011 数一]
-    设向量组 $\vb*{\alpha}_1=(1,0,1)^\top,\vb*{\alpha}_2=(0,1,1)^\top,\vb*{\alpha}_3=(1,3,5)^\top$ 不能由向量组 $\vb*{\beta}_1=(1,1,1)^\top,\vb*{\beta}_2=(1,2,3)^\top,\vb*{\beta}_3=(3,4,a)^\top$ 线性表示,
-    \begin{enumerate}[label=(\arabic{*})]
-        \item 求 $a$ 的值;
-        \item 将 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 用 $\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3$ 线性表示.
-    \end{enumerate}
-\end{example}
-\begin{solution}
-    \begin{enumerate}[label=(\arabic{*})]
-        \item 因为四个 $3$ 维向量 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3,\vb*{\alpha}$ 必定线性相关, 所以若 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 线性无关, 那么 $\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3$ 必可由 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 线性表示, 与题设矛盾, 故 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 一定相关, 那么
-              $$
-                  |\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3|=\mqty|1&1&3\\1&2&4\\1&3&a|=\mqty|1&1&3\\0&1&1\\0&2&a-3|=a-5=0\Rightarrow a=5.
-              $$
-        \item 对 $\begin{pNiceArray}{ccc:ccc}\vb*{\alpha}_1& \vb*{\alpha}_2& \vb*{\alpha}_3&\vb*{\beta}_1& \vb*{\beta}_2& \vb*{\beta}_3\end{pNiceArray}$ 做初等行变换, 有
-              \begin{flalign*}
-                  \begin{pNiceArray}{ccc:ccc}1&0&1&1&1&3\\0&1&3&1&2&4\\1&1&5&1&3&5\end{pNiceArray}\xrightarrow[r_2-3r_3]{r_3-r_1-r_2}\begin{pNiceArray}{ccc:ccc}1&0&0&2&1&5\\0&1&0&4&2&10\\0&0&1&-1&0&-2\end{pNiceArray}
-              \end{flalign*}
-              所以 $\vb*{\beta}_1=2\vb*{\alpha}_1+4\vb*{\alpha}_2-\vb*{\alpha}_3,~\vb*{\beta}_2=\vb*{\alpha}_1+2\vb*{\alpha}_2,~\vb*{\beta}_3=5\vb*{\alpha}_1+10\vb*{\alpha}_2-2\vb*{\alpha}_3$.
-    \end{enumerate}
 \end{solution}
 
 \begin{example}[1998 数二]
@@ -143,3 +120,207 @@ $$\begin{array}{c}
               \end{enumerate}
     \end{enumerate}
 \end{solution}
+
+\subsection{极大线性无关组}
+
+\begin{definition}[极大线性无关组]
+    设向量组 $ \vb*{\alpha}_{i 1}, \vb*{\alpha}_{i 2}, \cdots, \vb*{\alpha}_{i r} $ 为向量组 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 的一个部分组, 且满足
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\vb*{\alpha}_{i 1}, \vb*{\alpha}_{i 2}, \cdots, \vb*{\alpha}_{i} $ 线性无关;
+        \item 向量组 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 中任一向量均可由 $ \vb*{\alpha}_{i 1}, \vb*{\alpha}_{i 2}, \cdots, \vb*{\alpha}_{i r} $ 线性表示,
+    \end{enumerate}
+    则称向量组 $\vb*{\alpha}_{i 1}, \vb*{\alpha}_{i 2}, \cdots, \vb*{\alpha}_{1} $ 为向量组 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 的一个极大线性无关组, 简称极大无关组.
+\end{definition}
+
+\subsection{向量组等价}
+
+\begin{definition}[向量组等价]
+    如果向量组 $(I),(II)$ 可以相互线性表示, 则称向量组 $(I)$ 与向量组 $(II)$ \textit{等价}.
+    \index{向量组等价}
+\end{definition}
+
+向量组等价的结论:
+\begin{enumerate}[label=(\arabic{*})]
+    \item 任一向量组和它的极大无关组等价;
+    \item 向量组的任意两个极大无关组等价;
+    \item 两个等价的线性无关的向量组所含向量的个数相同;
+    \item 两个向量组等价的充要条件是它们的极大无关组等价;
+    \item 等价的两个向量组有相同的秩.
+\end{enumerate}
+
+\begin{example}
+    设 $n$ 维向量组 $(I):\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_k~ (k<n)$ 线性无关, 则 $n$ 维向量组 $(II):\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_k$ 也线性无关的充要条件为
+    \begin{tasks}
+        \task $\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_k$ 可由 $\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_k$ 线性表示
+        \task $\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_k$ 可由 $\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_k$ 线性表示
+        \task 向量组 $(I)$ 与向量组 $(II)$ 等价
+        \task 矩阵 $(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_k)$ 与矩阵 $(\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_k)$ 等价
+    \end{tasks}
+\end{example}
+\begin{solution}
+    对于 A 选项, 因为 $\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_k$ 可由 $\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_k$ 线性表示, 所以 $\rank(II)\leqslant \rank(I)$, 而向量组 $(I)$ 线性无关, 
+    所以 $\rank(I)=k$, 即 $\rank(II)\leqslant k$, 由于无法保证 $\rank(II)=k$, 故不能得出 $(II)$ 线性无关;\\
+    对于 B 选项, 因为 $\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_k$ 可由 $\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_k$ 线性表示, 所以 $\rank(I)\leqslant \rank(II)$, 同样地, 
+    $$k=\rank(I)\leqslant\rank(II)\leqslant k\Rightarrow \rank(II)=k$$
+    因此 $(II)$ 线性无关, 充分条件成立, 但不是必要条件, 如 $(I):\mqty(1\\0)$ 与 $(II):\mqty(0\\1)$ 均线性无关, 但 $(I)$ 不能由 $(II)$ 线性表示;\\
+    对于 C 选项, 由 $(I)$ 与 $(II)$ 等价知 $(I)$ 与 $(II)$ 可相互线性表示, 则 $\rank(I)=\rank(II)=k$, 故 $(II)$ 线性无关, 充分条件成立, 同 B 选项知必须条件不成立;\\
+    因为矩阵 $\vb*{A}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_k)$ 与矩阵 $\vb*{B}=(\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_k)$ 等价, 则 $\rank\vb*{A}=\rank\vb*{B}=k$, 
+    又 $(I):\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_k~ (k<n)$ 线性无关, 即 $\rank\vb*{A}=\rank\vb*{B}=k$, 故 $\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_k$ 线性无关, 故选 D.
+\end{solution}
+
+\begin{example}
+    已知 $n$ 维向量组 $$(I):\vb*{\alpha}_1,~\vb*{\alpha}_2,\cdots,\vb*{\alpha}_s,~(II): \vb*{\beta}_1,\vb*{\beta}_2,~\cdots,\vb*{\beta}_t$$
+    且 $\rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_s)=\rank(\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_t)=r$, 则 
+    \begin{tasks}
+        \task 当 $s=r$ 时, 向量组 $(I)$ 与 $(II)$ 等价
+        \task 当 $s=t=r$ 时, 向量组 $(I)$ 与 $(II)$ 等价
+        \task 当 $\rank(\vb*{\alpha}_1,\cdots,\vb*{\alpha}_s,\vb*{\beta}_1,\cdots,\vb*{\beta}_t)=r$ 时, 向量组 $(I)$ 与 $(II)$ 等价
+        \task 当 $\rank(\vb*{\alpha}_1,\cdots,\vb*{\alpha}_s,\vb*{\beta}_1,\cdots,\vb*{\beta}_t)=2r$ 时, 向量组 $(I)$ 与 $(II)$ 等价
+    \end{tasks}
+\end{example}
+\begin{solution}
+    记向量组 $(III):\vb*{\alpha}_1,\cdots,\vb*{\alpha}_s,\vb*{\beta}_1,\cdots,\vb*{\beta}_t$, 取 ${I}$ 和 ${II}$ 的一个极大无关组 $(I_0): \vb*{\alpha}_{i_1},\vb*{\alpha}_{i_2},\cdots,\vb*{\alpha}_{i_r}$ 与 $(II_0):\vb*{\beta}_{j_1},\vb*{\beta}_{j_2},\cdots,\vb*{\beta}_{j_r}$, 
+    那么向量组 $(I)$ 与 $(I_0)$ 等价, 向量组 $(II)$ 与 $(II_0)$ 的等价, 如果 $\rank(III)=r$, 那么向量组 $(I_0)$ 与 $(II_0)$ 都是 $(III)$ 的一个极大无关组, 这表明向量组 $(I_0)$ 与 $(II_0)$ 等价, 因此, 向量组 $(I)$ 与 $(II)$ 等价.\\
+    另外, 考虑向量组 $$(I):\vb*{\alpha}_1=(1,0,0,0)^\top,~\vb*{\alpha}_2=(0,1,0,0)^\top,~(II):\vb*{\beta}_1=(0,0,1,0)^\top,~\vb*{\beta}_2=(0,0,0,1)^\top$$
+    则 $\rank(\vb*{\alpha}_1,\vb*{\alpha}_2)=\rank(\vb*{\beta}_1,\vb*{\beta}_2)=2,~\rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\beta}_1,\vb*{\beta}_2)=4$, 但选项 A、B、D 均不成立.
+\end{solution}
+
+\begin{example}
+    设有向量组 $(I):\vb*{\alpha}_1=(1,0,2)^\top,\vb*{\alpha}_2=(1,1,3)^\top,\vb*{\alpha}_3=(1,-1,a+2)^\top$ 和向量组 $(II):\vb*{\beta}_1=(1,2,a+3)^\top,\vb*{\beta}_2=(2,1,a+6)^\top,\vb*{\beta}_3=(2,1,a+4)^\top$ 试问:
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 当 $a $ 为何值时, 向量组 $(I)$ 与向量组 $(II)$ 等价;
+        \item 当 $a$ 为何值时, 向量组 $(I)$ 与向量组 $(II)$ 不等价.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 对 $\begin{pNiceArray}{ccc:ccc}
+                      \vb*{\alpha}_1 & \vb*{\alpha}_2 & \vb*{\alpha}_3 & \vb*{\beta}_1 & \vb*{\beta}_2 & \vb*{\beta}_3
+                  \end{pNiceArray}$ 作初等行变换, 有
+              $$
+                  \begin{pNiceArray}{ccc:ccc}
+                      1 & 1 & 1 & 1 & 2 & 2 \\
+                      0 & 1 & -1 & 2 & 1 & 1 \\
+                      2 & 3 & a+2 & a+3 & a+6 & a+4 \\
+                  \end{pNiceArray}\xrightarrow[r_1-r_2]{r_3-2r_1-r_2}
+                  \begin{pNiceArray}{ccc:ccc}
+                      1 & 0 & 2 & -1 & 1 & 1 \\
+                      0 & 1 & -1 & 2 & 1 & 1 \\
+                      0 & 0 & a+1 & a-1 & a+1 & a-1 \\
+                  \end{pNiceArray}
+              $$
+              当 $a\neq -1$ 时, $$\rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3)=3=\rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3,\vb*{\beta}_i)~(i=1, 2, 3)$$
+              因此 $\vb*{\beta}_i=(k_1, k_2, k_3)\cdot (\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3)$ 有唯一解, 从而 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 可由 $\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3$ 线性表示,
+              又因为 $\det(\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3)=6\neq 0$, 所以 $$
+                  \rank(\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3)=3=\rank(\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3,\vb*{\alpha}_i)~(i=1, 2, 3)
+              $$
+              因此 $\vb*{\alpha}_i=(l_1, l_2, l_3)\cdot (\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3)$ 有唯一解, 从而 $\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3$ 可由 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 线性表示.
+        \item 当 $a=-1$ 时, $$\rank(\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3)=2\neq \rank(\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3,\vb*{\beta}_1)=3$$
+        因此 $\vb*{\beta}_1$ 不可由 $\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3$ 线性表示, 从而向量组 $(I)$ 与 $(II)$ 不等价.
+    \end{enumerate}
+\end{solution}
+
+\begin{example}[2011 数一]
+    设向量组 $\vb*{\alpha}_1=(1,0,1)^\top,\vb*{\alpha}_2=(0,1,1)^\top,\vb*{\alpha}_3=(1,3,5)^\top$ 不能由向量组 $\vb*{\beta}_1=(1,1,1)^\top,\vb*{\beta}_2=(1,2,3)^\top,\vb*{\beta}_3=(3,4,a)^\top$ 线性表示,
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求 $a$ 的值;
+        \item 将 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 用 $\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3$ 线性表示.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 因为四个 $3$ 维向量 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3,\vb*{\alpha}$ 必定线性相关, 所以若 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 线性无关, 那么 $\vb*{\alpha}_1, \vb*{\alpha}_2, \vb*{\alpha}_3$ 必可由 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 线性表示, 与题设矛盾, 故 $\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3$ 一定相关, 那么
+              $$
+                  |\vb*{\beta}_1, \vb*{\beta}_2, \vb*{\beta}_3|=\mqty|1&1&3\\1&2&4\\1&3&a|=\mqty|1&1&3\\0&1&1\\0&2&a-3|=a-5=0\Rightarrow a=5.
+              $$
+        \item 对 $\begin{pNiceArray}{ccc:ccc}\vb*{\alpha}_1& \vb*{\alpha}_2& \vb*{\alpha}_3&\vb*{\beta}_1& \vb*{\beta}_2& \vb*{\beta}_3\end{pNiceArray}$ 作初等行变换, 有
+              \begin{flalign*}
+                  \begin{pNiceArray}{ccc:ccc}1&0&1&1&1&3\\0&1&3&1&2&4\\1&1&5&1&3&5\end{pNiceArray}\xrightarrow[r_2-3r_3]{r_3-r_1-r_2}\begin{pNiceArray}{ccc:ccc}1&0&0&2&1&5\\0&1&0&4&2&10\\0&0&1&-1&0&-2\end{pNiceArray}
+              \end{flalign*}
+              所以 $\vb*{\beta}_1=2\vb*{\alpha}_1+4\vb*{\alpha}_2-\vb*{\alpha}_3,~\vb*{\beta}_2=\vb*{\alpha}_1+2\vb*{\alpha}_2,~\vb*{\beta}_3=5\vb*{\alpha}_1+10\vb*{\alpha}_2-2\vb*{\alpha}_3$.
+    \end{enumerate}
+\end{solution}
+
+\begin{example}[2000 数二]
+    已知向量组 $\vb*{\beta}_1=\mqty(0\\1\\-1),~\vb*{\beta}_2=\mqty(a\\2\\1),~\vb*{\beta}_3=\mqty(b1\\1\\0)$ 与向量组 $\vb*{\alpha}_1=\mqty(1\\2\\-3),\\~\vb*{\alpha}_2=\mqty(3\\0\\1),~\vb*{\alpha}_3=\mqty(9\\6\\-7)$ 具有相同的秩, 且 $\vb*{\beta}_3$ 可由 $\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3$ 线性表示, 求 $a,b$ 的值.
+\end{example}
+\begin{solution}
+    易知 $\vb*{\alpha}_1,~\vb*{\alpha}_2$ 线性无关, $\vb*{\alpha}_3=3\vb*{\alpha}_1+2\vb*{\alpha}_2$, 即 $\vb*{\alpha}_3$ 可由 $\vb*{\alpha}_1,~\vb*{\alpha}_2$ 线性表示, 所以向量组 $\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3$ 的秩为 2, 且 $\vb*{\alpha}_1,~\vb*{\alpha}_2$ 是它的一个极大无关组, 
+    由于向量组 $\vb*{\beta}_1,~\vb*{\beta}_2,~\vb*{\beta}_3$ 与 $\vb*{\alpha}_1,~\vb*{\alpha}_2,~\vb*{\alpha}_3$ 具有相同的秩, 故 $\vb*{\beta}_1,~\vb*{\beta}_2,~\vb*{\beta}_3$ 线性相关, 从而行列式 
+    $$|\vb*{\beta}_1,\vb*{\beta}_2,\vb*{\beta}_3|=\mqty|0&a&b\\1&2&1\\-1&1&0|=0\Rightarrow a=3b$$
+    又 $\vb*{\beta}_3$ 可由 $\vb*{\alpha}_1,~\vb*{\alpha}_2,~\vb*{\alpha}_3$ 线性表示, 而 $\vb*{\alpha}_3$ 可由 $\vb*{\alpha}_1,~\vb*{\alpha}_2$ 线性表示, 所以 $\vb*{\alpha}_1,~\vb*{\alpha}_2,~\vb*{\beta}_3$ 线性相关, 于是 
+    $$|\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\beta}_3|=\mqty|1&3&b\\2&0&1\\-3&1&0|=0\Rightarrow b=5\Rightarrow a=15.$$
+\end{solution}
+
+\begin{example}[2016 南京航空航天大学]
+    设由向量组 $$(I):\vb*{\alpha}_1=\mqty(1\\1\\a),~\vb*{\alpha}_2=\mqty(-2\\a\\4),~\vb*{\alpha}_3=\mqty(-2\\a\\a),~(II):\vb*{\beta}_1=\mqty(1\\1\\a),~\vb*{\beta}_2=\mqty(1\\a\\1),~\vb*{\beta}_3=\mqty(a\\1\\1)$$
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求 $a$ 的值, 使得向量组 $(I)$ 线性相关;
+        \item 求 $a$ 的值, 使得向量组 $(I)$ 不能由向量组 $(II)$ 线性表示;
+        \item 在题 (1) 和 (2) 同时成立的条件下, 将向量 $\vb*{\gamma}=(1,-2,-5)^\top$ 用 $\vb*{\beta}_1,~\vb*{\beta}_2,\vb*{\alpha}_3$ 线性表示.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 令 $\vb*{A}=(\vb*{\alpha}_1,\vb*{\alpha}_2,\vb*{\alpha}_3)$, 则行列式 $\det\vb*{A}=0$ 等价于向量组 $(I)$ 线性相关, 则
+              $$\mqty|1&-2&-2\\1&a&a\\a&4&a|=a^2-2a-8=0\Rightarrow a=4\text{ 或 }-2.$$
+        \item 令 $\vb*{B}=(\vb*{\beta}_1,\vb*{\beta}_2,\vb*{\beta}_3)$, 由于向量组 $(I)$ 不能由 $(II)$ 线性表示, 说明向量组 $(II)$ 线性相关, 如若不然, 则任一 $\vb*{\alpha}_i$, 可由向量组 $(II)$ 线性表示, 矛盾, 
+              因此, $\det\vb*{B}=0$, 则
+              $$\mqty|1&1&a\\1&a&1\\a&1&1|=(a-1)^2(a+2)=0\Rightarrow a=1\text{ 或 }a=-2$$
+              当 $a=1$ 时, $\vb*{\alpha}_3$ 显然不能由 $\vb*{\beta}_j~~(j=1,2,3)$ 线性表示, 符合题意; 当 $a=-2$ 时, 将 $\begin{pNiceArray}{c:c}
+                      \vb*{B} & \vb*{A}
+                  \end{pNiceArray}$ 化简为行阶梯形, 有
+              $$\begin{pNiceArray}{c:c}\vb*{B} & \vb*{A}\end{pNiceArray}=\begin{pNiceArray}{ccc:ccc}
+                      1&1&-2&1&-2&-2\\1&-2&1&1&-2&-2\\-2&1&1&-2&4&-2
+                  \end{pNiceArray}\xrightarrow[\substack{r_3\times(-\frac{1}{6})\\r_2\times(-\frac{1}{3})\\r_1-r_2}]{\substack{r_2-r_1\\r_3+2r_1\\r_3+r_2}}\begin{pNiceArray}{ccc:ccc}
+                      1\Block[borders={bottom,tikz=dashed}]{1-1}{}&0&-1&1&-2&-2\\
+                      0&1\Block[borders={left,bottom,tikz=dashed}]{1-4}{}&-1&0&0&0\\
+                      0&0&0&0&0&1\Block[borders={left,bottom,tikz=dashed}]{1-1}{}
+                  \end{pNiceArray}$$
+              由此可见, $\vb*{\alpha}_3$ 不能由 $\vb*{\beta}_i~~(i=1,2,3)$ 线性表示, 所以 $a=-2$ 也符合题意.
+        \item 若 (1) 和 (2) 同时成立, 则 $a=-2$, 此时, 把 $(\vb*{\beta}_1,\vb*{\beta}_2,\vb*{\alpha}_3,\vb*{\gamma})$ 化为行最简形, 有
+              $$\begin{pNiceArray}{c:c}\vb*{\beta}_1,\vb*{\beta}_2,\vb*{\alpha}_3 & \vb*{\gamma}\end{pNiceArray}=\begin{pNiceArray}{ccc:c}
+                      1&1&-2&1\\
+                      1&-2&-2&-2\\
+                      -2&1&-2&-5
+                  \end{pNiceArray}\to\begin{pNiceArray}{ccc:c}
+                      1&0&0&2\\
+                      0&1&0&1\\
+                      0&0&1&1
+                  \end{pNiceArray}$$
+              因为初等行变换不改变列向量之间的线性关系, 所以 $\vb*{\gamma}=2\vb*{\beta}_1+\vb*{\beta}_2+\vb*{\alpha}_3.$
+    \end{enumerate}
+\end{solution}
+
+\subsection{向量组的秩}
+
+\begin{definition}[向量组的秩]
+    向量组 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 的极大无关组中所含向量的个数称为该\textit{向量组的秩}, 记为 $ \rank\left(\vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m}\right) $, 如果一个向量组仅合存焉问量, 则规定它的秩为零.
+\end{definition}
+
+向量组的秩的性质:
+\begin{enumerate}[label=(\arabic{*})]
+    \item 若 $ \rank\left(\vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m}\right)=r $, 则
+    \begin{enumerate}
+        \item $\vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 的任何含存多于 $ r $ 个向量的部分组一定线性相关;
+        \item $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 的任何含 $ r $ 个向量的线性无关部分组一定是极大无关组.
+    \end{enumerate}
+    \item $\rank\left(\vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m}\right) \leqslant m $, 且 $ \rank\left(\vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m}\right)=m \Leftrightarrow \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 线性无关.
+    \item 向量 $ \vb*{\beta} $ 可用 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 线性表示 $ \Leftrightarrow \rank\left(\vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m}, \vb*{\beta}\right)=\rank\left(\vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m}\right) $.
+    \item 向量 $ \vb*{\beta} $ 可用 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m} $ 唯一线性表示 $ \Leftrightarrow \rank\left(\vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{m}, \vb*{\beta}\right)=\rank\left(\vb*{\alpha}_{1},\vb*{\alpha}_{2}, \cdots,\right.$\\ $\left.  \vb*{\alpha}_{m}\right)=m $.
+    \item 向量组 $ \vb*{\beta}_{1}, \vb*{\beta}_{2}, \cdots, \vb*{\beta}_{t} $ 可以用 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{s} $ 线性表示 $ \Leftrightarrow \rank\left(\vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{s}, \vb*{\beta}_{1}, \vb*{\beta}_{2}, \cdots,\right.$\\$ \left.\vb*{\beta}_{t}\right)=\rank\left(\vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{s}\right) .$
+    \item 向量组 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{s} $ 与 $ \vb*{\beta}_{1}, \vb*{\beta}_{2}, \cdots, \vb*{\beta}_{t} $ 等价 $ \Leftrightarrow \rank\left(\vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{s}\right)=\rank\left(\vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{s},\right.$\\$\left. \vb*{\beta}_{1}, \vb*{\beta}_{2}, \cdots, \vb*{\beta}_{t}\right)=\rank\left(\vb*{\beta}_{1}, \vb*{\beta}_{2}, \cdots, \vb*{\beta}_{t}\right) $.
+    \item 设 $ \vb*{A} $ 是一个 $ m \times n $ 矩阵, 记 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{n} $ 是 $ \vb*{A} $ 的列向量组 ($m$ 维), $ \vb*{\beta}_{1}, \vb*{\beta}_{2}, \cdots ,  \vb*{\beta}_{m} $ 是 $ \vb*{A} $ 的行向量组 ($n$ 维), 则 $ \rank(\vb*{A})=r\left(\vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{n}\right)=r\left(\vb*{\beta}_{1}, \vb*{\beta}_{2}, \cdots, \vb*{\beta}_{m}\right) $.
+\end{enumerate}
+
+\begin{theorem}
+    若向量组 $\vb*{\alpha}_i~ (i=1,2,\cdots,s)$ 可以由向量组 $\vb*{\beta}_j~ (j=1,2,\cdots,t)$ 表示, 则
+    $$\rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_s)\leqslant \rank(\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_t).$$
+\end{theorem}
+\begin{proof}[{\songti \textbf{证}}]
+    由于 $\vb*{\alpha}_i$ 可由 $\vb*{\beta}_j$ 线性表示, 不妨设 $$\vb*{\alpha}_i=\sum_{k=1}^{t}x_{ik}\vb*{\beta}_k$$
+    故 $$(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_s)=(\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_t)\mqty(x_{11}&x_{12}&\cdots&x_{1t}\\x_{21}&x_{22}&\cdots&x_{2t}\\\vdots &\vdots&&\vdots\\x_{s1}&x_{s2}&\cdots&x_{st})$$
+    由于矩阵乘积的秩小于等于每一个, 则
+    $$\rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_s)\leqslant \rank\min\qty{(\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_t),\mqty(x_{11}&x_{12}&\cdots&x_{1t}\\x_{21}&x_{22}&\cdots&x_{2t}\\\vdots &\vdots&&\vdots\\x_{s1}&x_{s2}&\cdots&x_{st})}$$
+    即 $\rank(\vb*{\alpha}_1,\vb*{\alpha}_2,\cdots,\vb*{\alpha}_s)\leqslant \rank(\vb*{\beta}_1,\vb*{\beta}_2,\cdots,\vb*{\beta}_t).$
+\end{proof}

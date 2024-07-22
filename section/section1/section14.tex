@@ -79,6 +79,23 @@
         \end{cases}$, 联立解得 $A=-\dfrac{1}{4},~B=\dfrac{3}{4},~C=\dfrac{5}{12}.$
 \end{solution}
 
+\begin{example}
+    设 $\displaystyle \lim_{x \to 0}\dfrac{[(x+1)^{x}-1]\qty(\displaystyle \int_{0}^{x} \cos^2 2t \dd t-ax)}{\displaystyle \tan x\int_{0}^{x^2} \dfrac{\ln^2(1+2t)}{\sin t} \dd t}=b~(b\neq 0, \infty)$, 则 
+    \begin{tasks}(4)
+        \task $a=2,b=-\dfrac{2}{3}$
+        \task $a=1,b=-\dfrac{2}{3}$
+        \task $a=2,b=\dfrac{2}{3}$
+        \task $a=2,b=\dfrac{2}{3}$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    因为 $(x+1)^{x}-1\sim  x^2~(x\to0)$, $\displaystyle \int_{0}^{x^2} \dfrac{\ln^2(1+2t)}{\sin t} \dd t\sim \int_{0}^{x^2} 4t \dd t=2x^4~(x\to0)$, 所以 
+    $$
+    I=\lim_{x \to 0}\dfrac{x^2\cdot \qty(\displaystyle \int_{0}^{x} \cos^2 2t \dd t-ax)}{x\cdot 2x^4}\xlongequal{L'}\lim_{x \to 0}\dfrac{\cos^2 2x-a}{6x^2}
+    $$
+    可得 $a=1$, 则 $\displaystyle I=\lim_{x \to 0}\dfrac{\cos^2 2x-a}{6x^2}=\lim_{x \to 0}\dfrac{\ln\cos 2x}{3x^2}=\lim_{x \to 0}\dfrac{\cos 2x-1}{3x^2}=-\dfrac{2}{3}$, 因此选 B.
+\end{solution}
+
 \subsection{无穷小量及其阶的比较}
 
 有关无穷小量的概念可参考定义 \ref{infinitesimalDefinitions}.

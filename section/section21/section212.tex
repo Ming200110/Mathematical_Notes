@@ -4,12 +4,13 @@
 
 正态总体 $ N\left(\mu, \sigma^{2}\right) $ 是最常见的分布, 
 下面我们讨论它的两个参数 $ \mu $ 和 $ \sigma^{2} $ 的置信区间.
-设 $ X_{1}, X_{2}, \cdots, X_{n} $ 是来自总体 $ X $ 的样本.
+设 $$ X_{1}, X_{2}, \cdots, X_{n} $$ 是来自总体 $ X $ 的样本.
 \begin{theorem}[$\sigma^{2} $ 已知时 $ \mu $ 的置信区间]
     $\sigma^{2} $ 已知, 选择枢轴量 $\displaystyle \frac{\bar{X}-\mu}{\sigma / \sqrt{n}}$, 
-    得到 $ \mu $ 的置信水平为 $ 1-\alpha $ 的置信区间为 $ \left(\bar{X} \pm z_{\alpha / 2} \sigma / \sqrt{n}\right) .$
+    得到 $ \mu $ 的置信水平为 $ 1-\alpha $ 的置信区间为 $ \left(\bar{X} \pm z_{\alpha / 2} \sigma / \sqrt{n}\right) .$\index{$\sigma^{2} $ 已知时 $ \mu $ 的置信区间}
 \end{theorem}
 \begin{theorem}[$\sigma^{2} $ 未知时 $ \mu $ 的置信区间]
+    \index{$\sigma^{2} $ 未知时 $ \mu $ 的置信区间}
     $\sigma^{2} $ 未知, 由于枢轴量 $\displaystyle \frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1) $ 中含有未知参数 $ \sigma $, 
     故不能采用. 而 $\displaystyle \frac{\bar{X}-\mu}{S / \sqrt{n}} \sim t(n-1)$ 含有待估计参数 $ \mu $, 
     且不含有其他未知参数, 则使用 $\displaystyle \frac{\bar{X}-\mu}{S / \sqrt{n}} $ 作为枢轴量 (见图 \ref{tfweidian}(a)), 得
@@ -74,6 +75,7 @@
 在实际中, $\sigma^{2} $ 未知且 $ \mu $ 已知的情形是极为少见的, 因此这里只讨论 $ \mu $ 未知时 $ \sigma^{2} $ 的置信区间.
 
 \begin{theorem}[$\mu$ 未知时 $\sigma^2$ 的置信区间]
+    \index{$\mu$ 未知时 $\sigma^2$ 的置信区间}
     由于 $ \mu $ 未知, 枢轴量 $\displaystyle U=\frac{\bar{X}-\mu}{\sqrt{\sigma^{2} / n}} \sim N(0,1) $ 和 $\displaystyle t=\frac{\bar{X}-\mu}{S / \sqrt{n}} \sim t(n-1) $ 中都包含 $ \mu$, 
     故此不能采用, 而 $\displaystyle \frac{(n-1) S^{2}}{\sigma^{2}} \sim \chi^{2}(n-1) $ 不含有其他未知参数, 
     我们采用统计量 $\displaystyle \frac{(n-1) S^{2}}{\sigma^{2}} $ 作为枢轴量 (见图 \ref{tfweidian}(b)), 由

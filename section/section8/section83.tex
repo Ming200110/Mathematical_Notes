@@ -3,7 +3,7 @@
 \subsection{微分方程与函数性质}
 
 \begin{example}[2002 数二]
-    已知函数 $f(x)$ 在 $(0,+\infty)$ 内可导, $f(x)>0, \displaystyle \lim_{x \to +\infty}f(x)=1$, 且满足 $ \displaystyle \lim_{h \to 0}\qty[\dfrac{f(x+hx)}{f(x)}]^{\frac{1}{x}}=\e ^{\frac{1}{x}} $, 求 $f(x)$.
+    已知函数 $f(x)$ 在 $(0,+\infty)$ 内可导, $f(x)>0, \displaystyle \lim_{x \to +\infty}f(x)=1$, 且满足 $$ \displaystyle \lim_{h \to 0}\qty[\dfrac{f(x+hx)}{f(x)}]^{\frac{1}{x}}=\e ^{\frac{1}{x}} $$ 求 $f(x)$.
 \end{example}
 \begin{solution}
     $ \displaystyle \lim_{h \to 0}\qty[\dfrac{f(x+hx)}{f(x)}]^{\frac{1}{x}}=\exp\lim_{h \to 0}\dfrac{1}{h}\ln\dfrac{f(x+hx)}{f(x)}=\exp\lim_{h \to 0}x\dfrac{\ln f(x+hx)-\ln f(x)}{hx}=\e ^{x\qty[\ln f(x)]'}=\e ^{\frac{1}{x}}$
@@ -65,6 +65,17 @@
 \subsection{微分方程与积分}
 
 \subsubsection{微分方程与定积分}
+
+\begin{example}
+    已知 $f(x)$ 是微分方程 $x^2f'(x)-xf(x)=\sin^4x$ 满足初始条件 $f\qty(\dfrac{\pi  }{2})=0$ 的特解, 求 $\displaystyle \int_{0}^{\frac{\pi}{2}} xf(x) \dd x.$
+\end{example}
+\begin{solution}
+    由分部积分公式
+    $$
+    I=\dfrac{1}{2}\int_{0}^{\frac{\pi}{2}}f(x)\dd x^2=\dfrac{1}{2}\qty[\eval{f(x)x^2}_{0}^{\frac{\pi}{2}}-\int_{0}^{\frac{\pi}{2}}x^2f'(x)\dd x]=-\dfrac{1}{2}\int_{0}^{\frac{\pi}{2}}\qty[\sin^4x+xf(x)]\dd x
+    $$
+    即 $\displaystyle I=-\dfrac{1}{3}\int_{0}^{\frac{\pi}{2}} \sin^4x \dd x=-\dfrac{\pi}{16}.$
+\end{solution}
 
 \begin{example}
     设 $y=y(x)$ 是 $y''+4y'+4y=\e ^{-2x}$ 满足 $y(0)=y'(0)=0$ 的解,
@@ -260,7 +271,7 @@
 \end{example}
 \begin{solution}
     采用极坐标将二重积分化为定积分, 得
-    $$\displaystyle\iint\limits_{x^2+y^2\leqslant t^2}\qty(x^2+y^2)f\qty(\sqrt{x^2+y^2})\dd x\dd y\int_{0}^{2\pi}\dd \theta\int_{0}^{t}\rho^3f(\rho)\dd \rho=2\pi\int_{0}^{t}\rho^3f(\rho)\dd\rho$$
+    $$\displaystyle\iint\limits_{x^2+y^2\leqslant t^2}\qty(x^2+y^2)f\qty(\sqrt{x^2+y^2})\dd x\dd y=\int_{0}^{2\pi}\dd \theta\int_{0}^{t}\rho^3f(\rho)\dd \rho=2\pi\int_{0}^{t}\rho^3f(\rho)\dd\rho$$
     代入原式得 $$f(t)=4\pi\int_{0}^{t}\rho^3f(\rho)\dd \rho+t^4$$
     两边求导得 $$f'(t)=4\pi t^3f(t)+4t^3~  f(0)=0$$
     此为一阶线性微分方程, 其通解为

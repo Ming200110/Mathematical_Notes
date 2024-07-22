@@ -6,6 +6,7 @@
 \subsection{无偏性}
 
 \begin{definition}[无偏性]
+    \index{无偏性}
     若 $ \hat{\theta}=\hat{\theta}\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 是参数 $ \theta $ 的估计量, 
     其数学期望 $ E\qty(\hat{\theta}) $ 存在, 且 $ E\qty(\hat{\theta})=\theta $, 则称 $ \hat{\theta} $ \textit{是} $ \theta $ \textit{的无偏估计量}.
 \end{definition}
@@ -47,6 +48,7 @@ $ \displaystyle\frac{n}{n-1} $, 就修正成为 $ \sigma^{2} $ 的无偏估计�
 即 $\hat{\theta}_{1}$ 的方差较 $\hat{\theta}_{2}$ 的方差小, 我们认为 $\hat{\theta}_{1}$ 较 $\hat{\theta}_{2}$ 要好, 由此有如下的定义.
 
 \begin{definition}[有效性]
+    \index{有效性}
     设 $ \hat{\theta}_{1}=\hat{\theta}_{1}\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 与 $ \hat{\theta}_{2}=\hat{\theta}_{2}\left(X_{1}, X_{2}, \cdots, X_{n}\right)$
     都是参数 $ \theta $ 的无偏估计量, 若 $ D\left(\hat{\theta}_{1}\right) \leqslant D\left(\hat{\theta}_{2}\right) $, 则称 $ \hat{\theta}_{1} $ \textit{较} $ \hat{\theta}_{2} $ \textit{更有效}.
 \end{definition}
@@ -74,9 +76,10 @@ $ \displaystyle\frac{n}{n-1} $, 就修正成为 $ \sigma^{2} $ 的无偏估计�
 这就是估计量的一致性或称之为相合性.
 
 \begin{definition}[一致性]
-    设 $ \hat{\theta}\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 为参数 $ \theta $ 的估计量, 当 $ n \rightarrow \infty $ 时, $\hat{\theta}\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 概率收敛于
+    \index{一致性}
+    设 $ \hat{\theta}\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 为参数 $ \theta $ 的估计量, 当 $ n \to \infty $ 时, $\hat{\theta}\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 概率收敛于
     $ \theta $, 即对于任意 $ \varepsilon>0 $, 有
-    $$\lim _{n \rightarrow \infty} P\qty{\qty|\hat{\theta}-\theta|<\varepsilon}=1$$
+    $$\lim _{n \to \infty} P\qty{\qty|\hat{\theta}-\theta|<\varepsilon}=1$$
     则称 $ \hat{\theta} $ \textit{为} $ \theta $ \textit{的相合估计量}.
 \end{definition}
 

@@ -183,19 +183,30 @@
 \end{theorem}
 
 \begin{theorem}[函数极限的充要条件]
-    \begin{enumerate}[label=(\arabic{*})]
-        \item $\displaystyle\lim _{x \rightarrow x_{0}} f(x)=A \Leftrightarrow \lim _{x \rightarrow x_{0}^{-}} f(x)=\lim _{x \rightarrow x_{0}} f(x)=A $.
-        \item $\displaystyle\lim _{x \rightarrow \infty} f(x)=A \Leftrightarrow \lim _{x \rightarrow-\infty} f(x)=\lim _{x \rightarrow+\infty} f(x)=A .$
+    \index{函数极限的充要条件}\begin{enumerate}[label=(\arabic{*})]
+        \item $\displaystyle\lim _{x \to x_{0}} f(x)=A \Leftrightarrow \lim _{x \to x_{0}^{-}} f(x)=\lim _{x \to x_{0}} f(x)=A $.
+        \item $\displaystyle\lim _{x \to \infty} f(x)=A \Leftrightarrow \lim _{x \to-\infty} f(x)=\lim _{x \to+\infty} f(x)=A .$
     \end{enumerate}
-    \index{函数极限的充要条件}
 \end{theorem}
+
+\begin{example}
+    下列说法正确的是 
+    \begin{tasks}(1)
+        \task 设在 $x=x_0$ 的去心左邻域内有 $f(x)<g(x)$, 且 $\displaystyle \lim_{x \to x_0^-}f(x)=a, \lim_{x \to x_0^-}g(x)=b$, 则必有 $a<b$.
+        \task 设 $\displaystyle \lim_{x \to x_0^-}f(x)=a, \lim_{x \to x_0^-}g(x)=b,a<b$, 则必存在 $x=x_0$ 的去心左邻域, 使 $f(x)<g(x)$.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    对 A, 若存在常数 $\delta>0$, 当 $0<x-x_0<\delta$ 时, 都有 $g(x)-f(x)>0$, 且 $\displaystyle \lim_{x \to x_0^-}[g(x)-f(x)]=b-a$, 那么 $b-a\geqslant 0$, 所以错误;
+    对 B, 由极限局部保号性可得.
+\end{solution}
 
 \subsubsection{证明函数 $ f(x) $ 的极限不存在的方法}
 
 \begin{enumerate}[label=(\arabic{*})]
-    \item 若 $ f\left(x_{0}-0\right) \neq f\left(x_{0}+0\right)$, 则 $\displaystyle \lim _{x \rightarrow x_{0}} $ 不存在. 当 $ x \rightarrow \infty $ 时, 对含有 $ a^{x}(a>0, a \neq 1) $ 或 $ \arctan x $ 或 $ \arccot x $ 的函数极限, 一定要对 $ x \rightarrow+\infty $ 与 $ x \rightarrow-\infty $ 分别求极限, 若两者的极限值相等,则 $ x \rightarrow \infty $ 时极限存在, 否则不存在.
-    \item 若存在数列 $ \left\{x_{n}\right\}: x_{n} \rightarrow x_{0}, x_{n} \neq x_{0} $, 使得 $\displaystyle \lim _{n \rightarrow \infty} f\left(x_{n}\right) $ 不存在; 或有两个数列 $ \left\{x_{n}\right\} $ 与 $ \left\{y_{n}\right\} $, 满足 $ x_{n} \rightarrow x_{0}\left(x_{n} \neq x_{0}\right), y_{n} \rightarrow y_{0}\left(y_{n} \neq y_{0}\right) $ 使得 $ \displaystyle\lim _{n \rightarrow \infty} f\left(x_{n}\right) \neq \lim _{n \rightarrow \infty} f\left(y_{n}\right) $, 则 $ \displaystyle\lim _{x \rightarrow x_{0}} f(x) $ 不存在.
-    \item 利用结论: 设 $\displaystyle \lim _{x \rightarrow x_{0}} f(x)=A, \lim _{x \rightarrow x_{0}} g(x) $ 不存在, 则 $\displaystyle \lim _{x \rightarrow x_{0}}[f(x)+g(x)] $ 不存在; 若又有 $ A \neq 0 $, 则 $ \displaystyle\lim _{x \rightarrow x_{0}} f(x) g(x) $ 不存在.
+    \item 若 $ f\left(x_{0}-0\right) \neq f\left(x_{0}+0\right)$, 则 $\displaystyle \lim _{x \to x_{0}} $ 不存在. 当 $ x \to \infty $ 时, 对含有 $ a^{x}(a>0, a \neq 1) $ 或 $ \arctan x $ 或 $ \arccot x $ 的函数极限, 一定要对 $ x \to+\infty $ 与 $ x \to-\infty $ 分别求极限, 若两者的极限值相等,则 $ x \to \infty $ 时极限存在, 否则不存在.
+    \item 若存在数列 $ \left\{x_{n}\right\}: x_{n} \to x_{0}, x_{n} \neq x_{0} $, 使得 $\displaystyle \lim _{n \to \infty} f\left(x_{n}\right) $ 不存在; 或有两个数列 $ \left\{x_{n}\right\} $ 与 $ \left\{y_{n}\right\} $, 满足 $ x_{n} \to x_{0}\left(x_{n} \neq x_{0}\right), y_{n} \to y_{0}\left(y_{n} \neq y_{0}\right) $ 使得 $ \displaystyle\lim _{n \to \infty} f\left(x_{n}\right) \neq \lim _{n \to \infty} f\left(y_{n}\right) $, 则 $ \displaystyle\lim _{x \to x_{0}} f(x) $ 不存在.
+    \item 利用结论: 设 $\displaystyle \lim _{x \to x_{0}} f(x)=A, \lim _{x \to x_{0}} g(x) $ 不存在, 则 $\displaystyle \lim _{x \to x_{0}}[f(x)+g(x)] $ 不存在; 若又有 $ A \neq 0 $, 则 $ \displaystyle\lim _{x \to x_{0}} f(x) g(x) $ 不存在.
 \end{enumerate}
 
 \subsection{数列、函数极限的存在准则}

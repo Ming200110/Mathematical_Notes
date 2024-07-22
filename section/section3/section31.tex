@@ -159,8 +159,8 @@
               显然 $ a_{k}=\cos \dfrac{2 k-1}{2 n} \pi+\mathrm{i} \sin \dfrac{2 k-1}{2 n} \pi$, 其中 $ \mathrm{i}^{2}=-1$, 于是
               $$\left|a_{k}\right|=1, ~  a_{k}^{2 n}=-1, ~  \bar{a}_{k}=a_{2 n-k+1}, a_{k} \bar{a}_{k}=1, ~  a_{k}+\bar{a}_{k}=2 \cos \dfrac{2 k-1}{2 n} \pi$$
               设 $ \displaystyle\dfrac{1}{1+x^{2 n}}=\sum_{k=1}^{2 n} \dfrac{A_{k}}{x-a_{k}} \Rightarrow 1=\sum_{k=1}^{2 n} \dfrac{A_{k}\left(1+x^{2 n}\right)}{x-a_{k}}$,
-              令 $ x \rightarrow a_{i}$, 由 L'Hospital 法则, 得
-              $$1=\lim _{x \rightarrow a_{i}} \sum_{k=1}^{2 n} \dfrac{A_{k}\left(1+x^{2 n}\right)}{x-a_{k}}=\lim _{x \rightarrow a_{i}} \dfrac{A_{i}\left(1+x^{2 n}\right)}{x-a_{i}}=\lim _{x \rightarrow a_{i}}\left(2 n A_{i} x^{2 n-1}\right)=2 n A_{i} \dfrac{a_{i}^{2 n}}{a_{i}}=-\dfrac{2 n A_{i}}{a_{i}}$$
+              令 $ x \to a_{i}$, 由 L'Hospital 法则, 得
+              $$1=\lim _{x \to a_{i}} \sum_{k=1}^{2 n} \dfrac{A_{k}\left(1+x^{2 n}\right)}{x-a_{k}}=\lim _{x \to a_{i}} \dfrac{A_{i}\left(1+x^{2 n}\right)}{x-a_{i}}=\lim _{x \to a_{i}}\left(2 n A_{i} x^{2 n-1}\right)=2 n A_{i} \dfrac{a_{i}^{2 n}}{a_{i}}=-\dfrac{2 n A_{i}}{a_{i}}$$
               即 $ A_{k}=-\dfrac{a_{k}}{2 n} ~ (k=1,2, \cdots, 2 n)$, 于是,
               \begin{flalign*}
                   \dfrac{1}{1+x^{2 n}} & =-\dfrac{1}{2 n} \sum_{k=1}^{2 n} \dfrac{a_{k}}{x-a_{k}}=-\dfrac{1}{2 n} \sum_{k=1}^{n}\left(\dfrac{a_{k}}{x-a_{k}}+\dfrac{\bar{a}_{k}}{x-\bar{a}_{k}}\right)=-\dfrac{1}{2 n} \sum_{k=1}^{n} \dfrac{\left(a_{k}+\bar{a}_{k}\right) x-2 a_{k} \bar{a}_{k}}{x^{2}-\left(a_{k}+\bar{a}_{k}\right) x+a_{k} \bar{a}_{k}} \\
@@ -704,6 +704,17 @@ $\displaystyle\int x^{m}\left(ax^{n}+b \right)^{p} \dd  x$, 式中 $ m, n $ 和 
             (\rownumber{}) $\displaystyle \cos^2\alpha-\sin^2\beta=\cos(\alpha+\beta)\cos(\alpha-\beta)$               & (\rownumber{}) $\displaystyle \sin^2\alpha-\cos^2\beta=-\cos(\alpha+\beta)\cos(\alpha-\beta)$
         \end{tabular}}
 \end{table}
+
+% \setcounter{magicrownumbers}{0}
+% \begin{table}[H]
+%     \centering
+%     \caption{三角函数与反三角函数嵌套关系}
+%     \resizebox{.99\textwidth}{!}{
+%         \begin{tabular}{l l l l}
+%             & $\sin\theta$ & $\cos\theta$ & $\tan\theta$ \\ 
+%             $\arcsin x$ & $\sin(\arcsin)=x$
+%         \end{tabular}}
+% \end{table}
 
 \begin{theorem}
     \(\displaystyle\int \sin^px\cos^qx\dd x=\begin{cases}

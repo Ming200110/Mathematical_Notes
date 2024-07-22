@@ -45,11 +45,17 @@
     设曲线 $L:\begin{cases}
             x^2+y^2+z^2=a^2 \\
             x+y+z=0
-        \end{cases}$ 求 $\displaystyle\oint_L\qty(x^2+2y^2+z)\dd s.$
+        \end{cases}$ 求 $\displaystyle\oint_L\qty(x^2+2y^2+z)\dd s$ 和 $\displaystyle \oint_L(xy+yz+zx)\dd s$.
 \end{example}
 \begin{solution}
     有轮换对称性 $\displaystyle\oint_Lx^2\dd s=\oint_Ly^2\dd s=\oint_Lz^2\dd s=\dfrac{1}{3}\oint_L\qty(x^2+y^2+z^2)\dd s,~\oint_Lx\dd s=\oint_Ly\dd s=\oint_Lz\dd s=\dfrac{1}{3}\oint_L(x+y+z)\dd s$, 因此
-    $$\oint_L\qty(x^2+2y^2+z)\dd s=\oint_L\qty(x^2+y^2+z^2)\dd s+\dfrac{1}{3}\oint_L(x+y+z)\dd s=a^2\oint_L\dd s+0=2\pi a^3.$$
+    $$\oint_L\qty(x^2+2y^2+z)\dd s=\oint_L\qty(x^2+y^2+z^2)\dd s+\dfrac{1}{3}\oint_L(x+y+z)\dd s=a^2\oint_L\dd s+0=2\pi a^3$$
+    注意到 $$
+    xy+yz+zx=\dfrac{1}{2}(x+y+z)^2-\dfrac{1}{2}\qty(x^2+y^2+z^2)
+    $$
+    所以 $$
+    \oint_L(xy+yz+zx)\dd s=\dfrac{1}{2}\oint_L(x+y+z)^2\dd s-\dfrac{1}{2}\oint_L\qty(x^2+y^2+z^2)\dd s=-\dfrac{1}{2}R^2\oint_L\dd s=-\pi R^3.
+    $$
 \end{solution}
 
 \begin{example}
@@ -377,7 +383,15 @@
     \end{enumerate}
 \end{solution}
 
-\subsubsection{外法向量形式}
+\subsubsection{方向导数与两类曲线积分的联系}
+
+\begin{theorem}[方向导数与两类曲线积分的联系]
+    \index{方向导数与两类曲线积分的联系}
+    设 $\alpha_1,\beta_1$ 分别为外法线向量 $\vb*{n}$ 与 $x$ 轴、$y$ 轴的正方向的夹角, 则 
+    $$
+    \oint_L\pdv{u}{\vb*{n}}\dd s=\oint_L\qty(\pdv{u}{x}\cos\alpha_1+\pdv{u}{y}\cos\beta_1) \dd s.
+    $$
+\end{theorem}
 
 \begin{example}
     设 $u(x,y)$ 于圆盘 $D:x^2+y^2\leqslant  \pi$ 内有二阶连续偏导数, 且
@@ -393,6 +407,7 @@
                                                                          & \xlongequal[]{t=\rho^2}\pi\int_0^\pi\mathrm{e}^{\pi-t}\sin t\dd t=\frac{\pi}{2}\left(\mathrm{e}^\pi+1\right).
     \end{flalign*}
 \end{solution}
+
 \begin{example}
     设函数 $u(x,y)$ 在区域 $D=\left\{(x,y)|x^2+y^2\leqslant \pi\right\}$ 上有二阶连续偏导数, 且
     $$\frac{\partial^2u}{\partial x^2}+\frac{\partial ^2u}{\partial y^2}=\mathrm{e}^{\pi-x^2-y^2}\cdot\sin\left(x^2+y^2\right)$$
@@ -407,8 +422,6 @@
         =\pi\int_0^\pi\mathrm{e}^{\pi-t}\sin t\dd t=\frac{\pi}{2}\left(\mathrm{e}^\pi+1\right)
     \end{flalign*}
 \end{solution}
-
-\subsubsection{方向导数与两类曲线积分的联系}
 
 \begin{example}
     设 $u(x,y)$ 于圆盘 $D=\qty{(x,y):x^2+y^2\leqslant \dfrac{\pi}{2}}$ 内有二阶连续的偏导数, 并且满足:
@@ -436,7 +449,7 @@
 该部分内容可能需要结合第八章“微分方程”的知识, 若不熟悉常见的微分方程求解, 可暂缓阅读.
 
 \begin{definition}[单连通与复连通区域]
-    若平面区域 $ D $ 内任一闭曲线所围的部分都属于 $D$, 则称 $ D $ 为\textit{平面单连通区域}, 否则称为\textit{复连通区域}. 通俗地讲, 平面单连通区域就是不含有“洞”的区域.
+    若平面区域 $ D $ 内任一闭曲线所围的部分都属于 $D$, 则称 $ D $ 为\textit{平面单连通区域}, 否则称为\textit{复连通区域}. 通俗地讲, 平面单连通区域就是不含有“洞”的区域.\index{单连通与复连通区域}
 \end{definition}
 
 \begin{theorem}[路径无关]

@@ -142,7 +142,7 @@
 
 \begin{theorem}
     设 $\displaystyle \sum_{n=0}^{\infty} a_{n} x^{n}\left(a_{n} \neq 0\right) $, 其收敛半径为 $ R $,
-    则 $\displaystyle  R=\lim _{n \rightarrow \infty}\left|\frac{a_{n}}{a_{n+1}}\right| $ 或 $\displaystyle R=\dfrac{1}{\displaystyle\lim _{n \rightarrow \infty} \sqrt[n]{\left|a_{n}\right|}} .$
+    则 $\displaystyle  R=\lim _{n \to \infty}\left|\frac{a_{n}}{a_{n+1}}\right| $ 或 $\displaystyle R=\dfrac{1}{\displaystyle\lim _{n \to \infty} \sqrt[n]{\left|a_{n}\right|}} .$
 \end{theorem}
 
 \begin{theorem}[奇偶次项幂级数的收敛半径]
@@ -186,20 +186,18 @@
         \caption{常见函数的幂级数展开式}
         \begin{tabular}{l l}
             (\rownumber{}) $\displaystyle\mathrm{e}^x=\sum_{n=0}^{\infty}\frac{x^n}{n!},~|x|<+\infty$                                                                                                                                                                                                                                                              & (\rownumber{}) $\displaystyle a^x=\sum_{n=0}^{\infty}\ln ^na\frac{ x^n}{n!},~|x|<+\infty$                                                                                                                                                                                                                                                                          \\
+            \multicolumn{2}{l}{(\rownumber{}) $\displaystyle(1+x)^\alpha=1+\sum_{n=1}^{\infty}\dfrac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!} x^n=\sum_{n=0}^{\infty}\binom{\alpha}{n}x^n=\sum_{n=0}^{\infty}\dfrac{\alpha^{\underline{n}}}{n!}x^n,~|x|<1$}\\
             \midrule
-            \multirow{2}{*}{(\rownumber{}) $\displaystyle\ln(1+x)=\sum_{n=0}^{\infty}(-1)^n\frac{x^{n+1}}{n+1},~x\in(-1,1]$}                                                                                                                                                                                                                                       & (\rownumber{}) $\displaystyle-\ln(1-x)=\sum_{n=1}^{\infty}\frac{x^n}{n},~|x|<1$                                                                                                                                                                                                                                                                                    \\
+            \multirow{2}{*}{(\rownumber{}) $\displaystyle\ln(1+x)=\sum_{n=0}^{\infty}(-1)^n\frac{x^{n+1}}{n+1},~x\in(-1,1]$}                                                                                                                                                                                                                                       & (\rownumber{}) $\displaystyle-\ln(1-x)=\sum_{n=0}^{\infty}\frac{x^{n+1}}{n+1},~|x|<1$                                                                                                                                                                                                                                                                                    \\
                                                                                                                                                                                                                                                                                                                                                                    & (\rownumber{}) $\displaystyle\ln\frac{1+x}{1-x}=2\sum_{n=0}^{\infty}\frac{x^{2n+1}}{2n+1},~|x|<1$                                                                                                                                                                                                                                                                  \\
             \midrule
             (\rownumber{}) $\displaystyle\sin x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!},~|x|<+\infty$                                                                                                                                                                                                                                                    & (\rownumber{}) $\displaystyle\cos x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!},~|x|<+\infty$                                                                                                                                                                                                                                                                    \\
             (\rownumber{}) \tablefootnote{$\displaystyle \arctan x=\int _{0}^{x}\dfrac{\dd t}{1+t^{2}}=\int _{0}^{x}\sum ^{\infty }_{n=0}\left( -t^{2}\right) ^{n}\dd t=\sum ^{\infty }_{n=0}(-1)^{n}\int _{0}^{x}t^{2n}\dd t=\sum ^{\infty }_{n=0}(-1)^{n}\dfrac{x^{2n+1}}{2n+1}$}$\displaystyle\arctan x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{2n+1},~|x|<1.$ & (\rownumber{}) \tablefootnote{由 $\displaystyle \left( \arcsin x\right) '=\left( 1-x^{2}\right) ^{-\frac{1}{2}}=1+\sum ^{\infty }_{n=0}\dfrac{\left( -\dfrac{1}{2}\right) \left( -\dfrac{1}{2}-1\right) \ldots \left( -\dfrac{1}{2}+n-1\right) }{n!}\left( -x^{2}\right) ^{n}=1+\sum ^{\infty }_{n=1}\dfrac{\left( 2n\right) !}{4^{n}\left( n!\right) ^{2}}x^{2n}$ \\
             则 $\displaystyle\arcsin x=\int _{0}^{x}\left[ 1+\sum ^{\infty }_{n=1}\dfrac{\left( 2n\right) !}{4^{n}\left( n!\right) ^{2}}t^{2n}\right] \dd t=x+\sum ^{\infty }_{n=1}\dfrac{\left( 2n\right) !}{4^{n}\left( n!\right) ^{2}}\int _{0}^{x}t^{2n}\dd t=\sum_{n=0}^{\infty}\frac{(2n)!}{4^n(n!)^2(2n+1)}x^{2n+1}$}$\displaystyle\arcsin x=\sum_{n=0}^{\infty}\frac{(2n)!}{4^n(n!)^2}\dfrac{x^{2n+1}}{(2n+1)},~|x|<1$                                                                                                                                                                                                                                                                                                          \\
             \midrule
-            (\rownumber{}) $\displaystyle\frac{1}{1-x}=\sum_{n=0}^{\infty}x^n,~|x|<1$                                                                                                                                                                                                                                                                              & (\rownumber{}) $\displaystyle\frac{1}{(1-x)^2}=\sum_{n=1}^{\infty}(n+1)x^n,~|x|<1$                                                                                                                                                                                                                                                                                 \\
-            (\rownumber{}) $\displaystyle\dfrac{2}{(1-x)^3}=\sum_{n=0}^{\infty}(n+2)(n+1)x^n,~|x|<1$                                                                                                                                                                                                                                                               & (\rownumber{}) $\displaystyle\dfrac{m}{(1-x)^{m+1}}=\sum_{n=0}^{\infty}(n+m)^{\underline{m}}x^n,~|x|<1$                                                                                                                                                                                                                                                            \\
-            (\rownumber{}) $\displaystyle \dfrac{1}{1+x}=\sum_{n=0}^{\infty}(-1)^nx^n,~|x|<1$                                                                                                                                                                                                                                                                      & (\rownumber{}) $\displaystyle\dfrac{x^q}{1+x^p}=\sum_{n=0}^{\infty}(-1)^nx^{np+q},~|x|<1$                                                                                                                                                                                                                                                                          \\
-            \midrule
-            \multicolumn{2}{l}{(\rownumber{}) $\displaystyle(1+x)^\alpha=1+\sum_{n=1}^{\infty}\dfrac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!} x^n=\sum_{n=0}^{\infty}\binom{\alpha}{n}x^n=\sum_{n=0}^{\infty}\dfrac{\alpha^{\underline{n}}}{n!}x^n,~|x|<1$}                                                                                                                                                                                                                                                                                                                                                                                                                                                                              \\
-            \multicolumn{2}{l}{(\rownumber{}) $\displaystyle \frac{1}{\sqrt{1-x^2}}=1+\sum_{n=1}^\infty\dfrac{(2n-1)!!}{(2n)!!}x^{2n},~|x|<1$}
+            (\rownumber{}) $\displaystyle\frac{1}{1-x}=\sum_{n=0}^{\infty}x^n,~|x|<1$                                                                                                                                                                                                                                                                              & (\rownumber{}) $\displaystyle \dfrac{1}{1+x}=\sum_{n=0}^{\infty}(-1)^nx^n,~|x|<1$                                                                                                                                                                                                                                                                                  \\
+            (\rownumber{}) $\displaystyle\dfrac{m}{(1-x)^{m+1}}=\sum_{n=0}^{\infty}(n+m)^{\underline{m}}x^n,~|x|<1$                                                                                                                                                                                                                                                               & (\rownumber{}) $\displaystyle\dfrac{x^q}{1+x^p}=\sum_{n=0}^{\infty}(-1)^nx^{np+q},~|x|<1$                                                                                                                                                                                                                                                           \\
+            % \multicolumn{2}{l}{(\rownumber{}) $\displaystyle \frac{1}{\sqrt{1-x^2}}=1+\sum_{n=1}^\infty\dfrac{(2n-1)!!}{(2n)!!}x^{2n},~|x|<1$}
         \end{tabular}
     \end{minipage}
 \end{table}
@@ -684,7 +682,7 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
         \dfrac{1}{4}\left( \dfrac{1}{t}-t\right) \ln \dfrac{1+t}{1-t} & =\dfrac{1}{2}\left( \dfrac{1}{t}-t\right) \sum ^{\infty }_{n=0}\dfrac{t^{2n+1}}{2n+1}=\dfrac{1}{2}\left( \sum ^{\infty }_{n=0}\dfrac{t^{2n}}{2n+1}-\sum ^{\infty }_{n=0}\dfrac{t^{2n+2}}{2n+1}\right) \\
                                                                       & =\dfrac{1}{2}-\dfrac{1}{3}t^{2}+\sum ^{\infty }_{n=2}\left( \dfrac{1}{2n+1}-\dfrac{1}{2n-1}\right) t^{2n}=\dfrac{1}{2}-\dfrac{1}{3}t^{2}-\sum ^{\infty }_{n=2}\dfrac{t^{2n}}{4n^{2}-1}
     \end{flalign*}
-    记 $\displaystyle u_{n}=\dfrac{t^{2n}}{4n^{2}-1}\text{, 则 } \lim _{n\rightarrow \infty }\dfrac{u_{n}+1}{u_{n}}=t^{2}\Rightarrow \sum ^{\infty }_{n=2}\dfrac{t^{2n}}{4n^{2}-1}$ 收敛, 且和大于 $0$,
+    记 $\displaystyle u_{n}=\dfrac{t^{2n}}{4n^{2}-1}\text{, 则 } \lim _{n\to \infty }\dfrac{u_{n}+1}{u_{n}}=t^{2}\Rightarrow \sum ^{\infty }_{n=2}\dfrac{t^{2n}}{4n^{2}-1}$ 收敛, 且和大于 $0$,
     于是 $0<\dfrac{x\ln x}{x^2-1}<\dfrac{1}{2}.$
 \end{proof}
 
@@ -712,6 +710,18 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
 \end{proof}
 
 \subsubsection{求和问题}
+
+\begin{example}
+    求级数 $\displaystyle \sum_{n=0}^{\infty} \int_{0}^{1} \qty(1-x^2)^nx^3 \dd x$.
+\end{example}
+\begin{solution}
+    令 $x=\cos\theta$, 那么
+    \begin{flalign*}
+        \int_{0}^{1}\qty(1-x^2)^nx^3\dd x & =\int_{0}^{\frac{\pi}{2}}\sin^{2n+1}\theta\cos^3\theta\dd \theta=\int_{0}^{\frac{\pi}{2}}\qty(\sin^{2n+1}\theta-\sin^{2n+3}\theta)\dd \sin\theta \\
+                                          & =\dfrac{1}{2}\qty(\dfrac{1}{n+1}-\dfrac{1}{n+2})
+    \end{flalign*}
+    所以 $\displaystyle \sum_{n=0}^{\infty} \int_{0}^{1} \qty(1-x^2)^nx^3 \dd x=\dfrac{1}{2}\sum_{n=0}^{\infty} \qty(\dfrac{1}{n+1}-\dfrac{1}{n+2})=\dfrac{1}{2}\lim_{n \to \infty}\qty(1-\dfrac{1}{n+2})=\dfrac{1}{2}.$
+\end{solution}
 
 % begin{example}
 %    求级数 $\displaystyle\sum_{n=1}^{\infty}(-1)^{n-1}\dfrac{n\cdot 2^{2n+1}-2n-1}{n(2n-1)\cdot 2^{n+1}}$ 的和.
@@ -830,11 +840,11 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
               $$
               因此 $F'(x)=0$, 从而 $\forall x\in(0,1), F(x)\equiv C$, 又 $f(0)=0,f(1)=\displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n^2}=\dfrac{\pi^2}{6}$,
               $$
-                  \lim _{x \rightarrow 0^{+}} \ln x \ln (1-x)=\lim _{x \rightarrow 0^{+}}(-x \ln x)=\lim _{t \rightarrow+\infty} \frac{\ln t}{t}=0
+                  \lim _{x \to 0^{+}} \ln x \ln (1-x)=\lim _{x \to 0^{+}}(-x \ln x)=\lim _{t \to+\infty} \frac{\ln t}{t}=0
               $$
               而 $\displaystyle  \sum_{n=1}^{\infty} \frac{x^{n}}{n^{2}} $ 在 $ x=1 $ 处收敛, 故 $ f(x) $ 在 $ x=1 $ 处左连续, $f(1-x)$ 在 $ x=0 $ 处右连续, 可知 $ F(x) $ 在 $ x=0 $ 处右连续, 故
               $$
-                  \lim _{x \rightarrow 0^{+}} F(x)=C=0+\frac{\pi^{2}}{6}+0=\frac{\pi^{2}}{6}
+                  \lim _{x \to 0^{+}} F(x)=C=0+\frac{\pi^{2}}{6}+0=\frac{\pi^{2}}{6}
               $$
               得 $ C=\dfrac{\pi^{2}}{6} $, 故得
               $$
@@ -846,7 +856,7 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
               \end{flalign*}
               下求 $\displaystyle \int_{1}^{2} \dfrac{1}{t}\ln\qty(1-\dfrac{t}{2}) \dd t$,
               \begin{flalign*}
-                  \int_{1}^{2} \dfrac{1}{t}\ln\qty(1-\dfrac{t}{2}) \dd t & =-\int_{1}^{2} \sum_{n=1}^{\infty} \dfrac{t^{n-1}}{n\cdot 2^{n}} \dd t=-\sum_{n=1}^{\infty} \int_{1}^{2} \dfrac{t^{n-1}}{n\cdot 2^{n}} \dd t=\sum_{n=1}^{\infty} \qty(\dfrac{1}{n^2\cdot2^n}-\dfrac{1}{n^2})                                                                             \\
+                  \int_{1}^{2} \dfrac{1}{t}\ln\qty(1-\dfrac{t}{2}) \dd t & =-\int_{1}^{2} \sum_{n=1}^{\infty} \dfrac{t^{n-1}}{n\cdot 2^{n}} \dd t=-\sum_{n=1}^{\infty} \int_{1}^{2} \dfrac{t^{n-1}}{n\cdot 2^{n}} \dd t=\sum_{n=1}^{\infty} \qty(\dfrac{1}{n^2\cdot2^n}-\dfrac{1}{n^2}) \\
                                                                          & =\sum_{n=1}^{\infty} \dfrac{1}{n^2\cdot 2^n}-\sum_{n=1}^{\infty} \dfrac{1}{n^2}=\dfrac{\pi^2}{12}-\dfrac{\ln^2 2}{2}-\dfrac{\pi^2}{6}
               \end{flalign*}
               其中, $ \displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n^2\cdot 2^n}=f\qty(\dfrac{1}{2})=\dfrac{1}{2}\qty(\dfrac{\pi^2}{6}-\ln^2 2) $, 于是 $I=\dfrac{\pi^2}{12}-\dfrac{\ln^2 2}{2}.$

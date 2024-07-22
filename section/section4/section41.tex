@@ -1,5 +1,9 @@
 \section{向量代数}
 
+向量代数是高等数学中的一个重要部分, 主要研究向量及其运算. 向量是一种既有大小又有方向的量, 通常用于表示力、速度、加速度等物理量. 在数学中, 向量可以被视为一个有向线段, 其起点和终点可以任意平行移动, 但不改变其大小和方向. 
+
+向量代数的内容包括向量的基本概念、线性运算、数量积 (点积)、向量积 (叉积)、向量的模、方向余弦、投影等. 具体来说, 向量的线性运算包括向量的加法、减法和数乘. 向量的模是指向量长度的度量, 而方向余弦则是描述向量方向的三个参数. 
+
 \subsection{模、方向角、投影}
 
 \begin{definition}[投影]
@@ -34,7 +38,7 @@
     因为 $\qty(\vb*{a}+3\vb*{b})\bot \qty(7\vb*{a}-5\vb*{b})$, 所以 $7\vb*{a}^2-15\vb*{b}^2=-16\vb*{ab}$, 同理可得 $7\vb*{a}^2+8\vb*{b}^2=30\vb*{ab}$, 
     联立解得 $\begin{cases}
             \vb*{b}^2=2\vb*{ab} \\\vb*{a}^2=\vb*{b}^2
-        \end{cases}$, 于是 $\cos<\vb*{a},\vb*{b}>=\dfrac{\vb*{ab}}{|\vb*{a}|\cdot|\vb*{b}|}=\dfrac{1}{2}$, 因此 $\vb*{a}$ 与 $\vb*{b}$ 之间的夹角为 $\dfrac{\pi}{3} .$
+        \end{cases}$, 于是 $$\cos<\vb*{a},\vb*{b}>=\dfrac{\vb*{ab}}{|\vb*{a}|\cdot|\vb*{b}|}=\dfrac{1}{2}$$ 因此 $\vb*{a}$ 与 $\vb*{b}$ 之间的夹角为 $\dfrac{\pi}{3} .$
 \end{solution}
 
 % \begin{example}
@@ -61,7 +65,7 @@
 \subsubsection{数量积}
 
 \begin{definition}[向量的数量积 (点乘积或内积)]
-    向量 $ \vb*{a}=\left\{a_{1}, a_{2}, a_{3}\right\} $ 与 $ \vb*{b}=\left\{b_{1}, b_{2}, b_{3}\right\} $ 的\textit{数量积}是一个数 $ |\vb*{a}| \cdot|\vb*{b}| \cos (\widehat{\vb*{a}, \vb*{b}}) $ (其中 $ 0 \leqslant(\widehat{a, b}) \leqslant \pi$), 
+    \index{向量的数量积}向量 $ \vb*{a}=\left\{a_{1}, a_{2}, a_{3}\right\} $ 与 $ \vb*{b}=\left\{b_{1}, b_{2}, b_{3}\right\} $ 的\textit{数量积}是一个数 $ |\vb*{a}| \cdot|\vb*{b}| \cos (\widehat{\vb*{a}, \vb*{b}}) $ (其中 $ 0 \leqslant(\widehat{a, b}) \leqslant \pi$), 
     记作 $ \vb*{a} \cdot \vb*{b} $. 若向量 $ \vb*{a} $ 或 $ \vb*{b} $ 为零向量时, 则定义 $ \vb*{a} \cdot \vb*{b}=0$, 数量积 $ \vb*{a} \cdot \vb*{b} $ 的坐标表示式为
     $$\vb*{a} \cdot \vb*{b}=a_{1} b_{1}+a_{2} b_{2}+a_{3} b_{3} .$$
 \end{definition}
@@ -81,7 +85,7 @@
 \subsubsection{向量积}
 
 \begin{definition}[向量的向量积 (叉乘积或外积)]
-    两个向量 $ \vb*{a} $ 和 $ \vb*{b} $ 的\textit{向量积}是一个向量 $ \vb*{c} $, 记为 $ \vb*{a} \times \vb*{b} $, 
+    \index{向量的向量积}两个向量 $ \vb*{a} $ 和 $ \vb*{b} $ 的\textit{向量积}是一个向量 $ \vb*{c} $, 记为 $ \vb*{a} \times \vb*{b} $, 
     即 $ \vb*{c}=\vb*{a} \times \vb*{b}$; $\vb*{c} $ 的模等于 $ |\vb*{a}||\vb*{b}| \sin (\widehat{\vb*{a}, \vb*{b}})$, $\vb*{c} $ 的方向垂直于 $ \vb*{a} $ 与 $ \vb*{b} $ 所决定的平面,且 $ \vb*{a}, \vb*{b}, \vb*{c} $ 顺次构成右手系.
     若向量 $ \vb*{a} $ 或 $ \vb*{b} $ 为零向量时, 则定义 $ \vb*{a} \times \vb*{b}=\mathbf{0} $, 向量积 $ \vb*{a} \times \vb*{b} $ 坐标表示式为
     $$
@@ -204,7 +208,7 @@
 % 
 % \begin{example}
 %     设 $ \vec{a}, \vec{b} $ 为两个非零向量, $ \displaystyle |\vec{b}|=1,(\widehat{\vec{a}, \vec{b}})=\frac{\pi}{3} $, 计算极限
-%     $$\lim _{x \rightarrow 0} \frac{|\vec{a}+x \vec{b}|-|\vec{a}|}{x}.$$
+%     $$\lim _{x \to 0} \frac{|\vec{a}+x \vec{b}|-|\vec{a}|}{x}.$$
 % \end{example}
 % 
 % \begin{example}
@@ -239,7 +243,7 @@
 
 \begin{definition}[向量的混合积]
     设 $ \vb*{a}=\left\{a_{1}, a_{2}, a_{3}\right\}, \vb*{b}=\left\{b_{1}, b_{2}, b_{3}\right\}, \vb*{c}=\left\{c_{1}, c_{2}, c_{3}\right\}$, 
-    则称 $ (\vb*{a} \times \vb*{b}) \cdot \vb*{c} $ 为向量 $ \vb*{a}, \vb*{b}, \vb*{c} $ 的混合积, 记为 $ [\vb*{a}, \vb*{b}, \vb*{c}] $.
+    则称 $ (\vb*{a} \times \vb*{b}) \cdot \vb*{c} $ \textit{为向量} $ \vb*{a}, \vb*{b}, \vb*{c} $ \textit{的混合积}, 记为 $ [\vb*{a}, \vb*{b}, \vb*{c}] $.\index{向量的混合积}
 \end{definition}
 
 \begin{theorem}[共面条件]

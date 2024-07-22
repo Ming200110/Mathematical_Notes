@@ -17,6 +17,32 @@
     \end{enumerate}
 \end{theorem}
 
+\begin{example}
+    设相互独立的总体 $X\sim N\qty(\mu,\sigma^2),Y\sim N\qty(\mu,\sigma^2)$, $(X_1, X_2, \cdots ,X_{10})$ 与 $(Y_1, Y_2, \cdots ,Y_{10})$ 分别来自总体 $X,Y$ 的简单随机样本,
+    $$
+    \bar{X}=\dfrac{1}{10}\sum_{i=1}^{10} X_i, \bar{Y}=\dfrac{1}{10}\sum_{i=1}^{10} Y_i, S_1^2=\dfrac{1}{9}\sum_{i=1}^{10} \qty(X_i-\bar{X})^2,S_2^2=\dfrac{1}{9}\sum_{i=1}^{10} \qty(Y_i-\bar{Y})^2
+    $$
+    令 $U=\dfrac{a\qty(\bar{X}-\bar{Y})}{\sqrt{S_1^2+S_2^2}}$, 则 $a$ 的值及 $U$ 服从的分别分别为 
+    \begin{tasks}(4)
+        \task $\sqrt{10},t(18)$
+        \task $\sqrt{10},t(9)$
+        \task $\sqrt{5},t(18)$
+        \task $\sqrt{5},t(9)$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    因为 $\bar{X}\sim N\qty(\mu,\dfrac{\sigma^2}{10}),\bar{Y}\sim N\qty(\mu,\dfrac{\sigma^2}{10})$, 所以 $$
+    \bar{X}-\bar{Y}\sim N\qty(0,\dfrac{\sigma^2}{5})\Rightarrow \dfrac{\bar{X}-\bar{Y}}{\sigma /\sqrt{5}}\sim N(0,1)
+    $$
+    又因为 $\dfrac{9S_1^2}{\sigma^2}\sim \chi^2(9),\dfrac{9S_2^2}{\sigma^2}\sim \chi^2(9)$, 所以 $$
+    \dfrac{9\qty(S_1^2+S_2^2)}{\sigma^2}\sim \chi^2(18)
+    $$
+    因此 $$
+    \dfrac{\dfrac{\bar{X}-\bar{Y}}{\sigma /\sqrt{ 5}}}{\sqrt{\dfrac{9\qty(S_1^2+S_2^2)}{\sigma^2}/18} }=\dfrac{\sqrt{5}\qty(\bar{X}-\bar{Y})}{\sqrt{2}\sqrt{S_1^2+S_2^2}}=\dfrac{\sqrt{10}\qty(\bar{X}-\bar{Y})}{\sqrt{S_1^2+S_2^2}}\sim t(18)
+    $$
+    因此选 A.
+\end{solution}
+
 \subsection{双正态总体的抽样分布}
 
 \begin{theorem}[双正态总体的抽样分布]

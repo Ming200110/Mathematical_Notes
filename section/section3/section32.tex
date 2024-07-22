@@ -39,7 +39,7 @@
     由题意 $D_{\rho\theta}=\qty{(\rho,\theta)\big|0\leqslant \theta\leqslant 2\pi,0\leqslant \rho\leqslant \dfrac{1}{\sqrt[4]{\cos^4\theta+\sin^4\theta}}}$, 则
     \begin{flalign*}
         I & =\iint\limits_D\qty(x^2+y^2)\dd x\dd y=\int_{0}^{2\pi} \dd\theta\int_{0}^{\frac{1}{\sqrt[4]{\cos^4\theta+\sin^4\theta}}} \rho^3 \dd \rho=\dfrac{1}{4}\int_{0}^{2\pi}\dfrac{\dd \theta}{\cos^4\theta+\sin^4\theta}=\dfrac{1}{4}\int_{0}^{2\pi}\dfrac{\sin^2\theta+\cos^2\theta}{\cos^4\theta+\sin^4\theta}\dd \theta \\
-          & =\int_{0}^{\frac{\pi}{2}}\dfrac{1+\tan^2\theta}{1+\tan^4\theta}\dd \tan\theta=\int_{0}^{+\infty}\dfrac{1+t^2}{1+t^4}\dd t=\int_{0}^{+\infty}\dfrac{\dfrac{1}{t^2}+1}{\dfrac{1}{t^2}+t^2}\dd t=\int_{0}^{+\infty}\dfrac{\dfrac{1}{t^2}+1}{\qty(t-\dfrac{1}{t})^2+2}\dd t                                               \\
+          & =\int_{0}^{\frac{\pi}{2}}\dfrac{1+\tan^2\theta}{1+\tan^4\theta}\dd \tan\theta=\int_{0}^{+\infty}\dfrac{1+t^2}{1+t^4}\dd t=\int_{0}^{+\infty}\dfrac{\dfrac{1}{t^2}+1}{\dfrac{1}{t^2}+t^2}\dd t=\int_{0}^{+\infty}\dfrac{\dfrac{1}{t^2}+1}{\qty(t-\dfrac{1}{t})^2+2}\dd t                                             \\
           & \xlongequal{u=t-\frac{1}{t}}\int_{-\infty}^{+\infty}\dfrac{\dd u}{u^2+2}=\eval{\dfrac{1}{\sqrt{2}}\arctan\dfrac{u}{\sqrt{2}}}_{-\infty}^{+\infty}=\dfrac{\pi}{\sqrt{2}}.
     \end{flalign*}
 \end{solution}
@@ -72,6 +72,20 @@
     \end{flalign*}
     其中 $\displaystyle\int_{0}^{1}\dfrac{t\ln t}{t-1}\dd t=\int_{0}^{1}\dfrac{(t-1+1)\ln t}{t-1}\dd t=\int_{0}^{1}\ln t\dd t+\int_{0}^{1}\dfrac{\ln t}{t-1}\dd t=\dfrac{\pi^2}{6}-1$,
     所以原式$ =\dfrac{1}{2}-\dfrac{\pi^2}{24}$ 另解见例题 \ref{jishusin2xlnsinxlncosx}.
+\end{solution}
+
+\begin{example}
+    计算 $\displaystyle \int_{\e ^{-2n\pi}}^{1} \qty|\qty[\cos\qty(\ln\dfrac{1}{x})]'|\ln\dfrac{1}{x} \dd x$, 其中 $n$ 为正整数.
+\end{example}
+\begin{solution}
+    令 $\ln\dfrac{1}{x}=t$, 那么 $x=\e ^{-t}, \dd x=-\e ^{-t}\dd t$, 则原式化为 
+    $$
+    \int_{0}^{2n\pi} \qty|(\cos t)'_x|t\cdot \e ^{-t} \dd t=\int_{0}^{2n\pi} \qty|\dv{\cos t}{t}\cdot \qty(\dv{x}{t})^{-1}|t\cdot \e ^{-t} \dd t=\int_{0}^{2n\pi} t|\sin t| \dd t
+    $$
+    由 $\displaystyle \int_{a}^{b} f(x) \dd x=\int_{a}^{\frac{a+b}{2}} (f(x)+f(a+b-x)) \dd x$ 知, 
+    $$
+    \int_{0}^{2n\pi} t|\sin t| \dd t=\int_{0}^{n\pi} [t|\sin t|+(2n\pi -t)|\sin (2n\pi -t)|] \dd t=2n\pi \int_{0}^{n\pi} |\sin t| \dd t=4n^2\pi.
+    $$
 \end{solution}
 
 \begin{example}
@@ -553,6 +567,28 @@
 
 \subsection{定积分的几何应用}
 
+\subsubsection{函数的最值}
+
+\begin{example}
+    求 $\displaystyle f(x)=\int_{0}^{x} \dfrac{2t-1}{t^2-t+1} \dd t$ 在 $[-1,1]$ 上的最大值 $M$ 与最小值 $m$ 的差.
+\end{example}
+\begin{solution}
+    易得 $f(x)=\ln\qty(x^2-x+1)$, 那么 $f'(x)=\dfrac{2x-1}{x^2-x+1}$, 令 $f'(x)=0$, 解得 $x=\dfrac{1}{2}$, 且 $f(-1)=\ln 3, f\qty(\dfrac{1}{2})=\ln\dfrac{3}{4}, f(1)=0$, $f$ 在 $\qty(-1,\dfrac{1}{2})$ 上单调递减, 在 $\qty(\dfrac{1}{2},1)$ 上单调递增, 那么 $M-m=\ln 3-\ln \dfrac{3}{4}=\ln 4.$
+\end{solution}
+
+\subsubsection{函数的平均值}
+
+\begin{definition}[函数的平均值]
+    函数 $f(x)$ 在区间 $[a,b]$ 上的\textit{平均值}为 $\displaystyle \overline{f} =\dfrac{1}{b-a}\int_{a}^{b} f(x) \dd x$.\index{函数的平均值}
+\end{definition}
+
+\begin{example}
+    求函数 $y=\dfrac{x^2}{\sqrt{1-x^2}}$ 在 $\qty[\dfrac{1}{2},\dfrac{\sqrt{3}}{2}]$ 上的平均值.
+\end{example}
+\begin{solution}
+    $\displaystyle \overline{f}=\dfrac{1}{\dfrac{\sqrt{3}}{2}-\dfrac{1}{2}}\int_{\frac{1}{2}}^{\frac{\sqrt{3}}{2}} \dfrac{x^2}{\sqrt{1-x^2}} \dd x\xlongequal{x=\cos\theta}\dfrac{2}{\sqrt{3}-1}\int_{\frac{\pi}{6}}^{\frac{\pi}{3}} \cos^2\theta \dd \theta=\dfrac{2}{\sqrt{3}-1}\qty(\dfrac{\theta}{2}+\dfrac{1}{4}\sin 2\theta)_{\frac{\pi}{6}}^{\frac{\pi}{3}}=\dfrac{\qty(\sqrt{3}+1)\pi}{12}.$
+\end{solution}
+
 \subsubsection{平面图形的面积}
 
 \begin{theorem}[平面图形面积公式]
@@ -596,12 +632,55 @@
     \end{flalign*}
 \end{solution}
 
-\begin{theorem}[旋转体的体积公式]
-    \index{旋转体的体积公式}由 $xOy$ 平面上的曲线 $y=f(x)$ 与直线 $x=a,~x=b$ 以及 $x$ 轴所围成的曲边梯形绕 $x$ 轴旋转而成的旋转体体积为:
+\begin{theorem}[旋转体的体积公式 A]
+    \index{旋转体的体积公式 A}由 $xOy$ 平面上的曲线 $y=f(x)$ 与直线 $x=a,~x=b$ 以及 $x$ 轴所围成的曲边梯形绕 $x$ 轴旋转而成的旋转体体积为:
     $$V_x=\pi\int_{a}^{b}f^2(x)\dd x.$$
     绕 $y$ 轴旋转而成的旋转体体积为:
-    $$V_y=2\pi\int_{a}^{b}xf(x)\dd x.$$
+    $$V_y=2\pi\int_{a}^{b}x|f(x)|\dd x.$$
+    绕 $x=c$ 旋转而成的旋转体体积为:
+    $$
+        V_c=\pi\int_{f(a)}^{f(b)} (c-g(y))^2 \dd y.
+    $$
 \end{theorem}
+
+\begin{example}
+    设平面图形 $D$ 由 $x^2+y^2\leqslant 2x$ 与 $y\geqslant x$ 确定, 求图形 $D$ 绕直线 $x=2$ 旋转一周所得旋转体的体积.\label{xzttj}
+\end{example}
+\begin{solution}
+    由题意得
+    \begin{flalign*}
+        V & =\pi\int_{0}^{1} \qty(2-1+\sqrt{1-y^2})^2 \dd y-\pi\int_{0}^{1} (2-y)^2 \dd y=\pi\int_{0}^{1}\qty(2-y^2+2\sqrt{1-y^2})\dd y+\pi \int_{0}^{1}(2-y)^2\dd (2-y) \\
+          & =\dfrac{5\pi}{3}+\dfrac{\pi^2}{4}+\dfrac{\pi}{3}-\dfrac{8\pi}{3}=\dfrac{\pi^2}{4}-\dfrac{2\pi}{3}.
+    \end{flalign*}
+\end{solution}
+
+\begin{example}
+    设连续函数 $f(x)$ 满足 $\displaystyle f(x)+3\int_{0}^{x} f(x-t) \dd t+2\int_{0}^{x} tf(x-t) \dd t=2\e ^{-x}+5x-1$,
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求 $f(x)$;
+        \item 求曲线 $y=f(x)~(x\geqslant 0)$ 与 $x$ 轴围成的无界区域绕 $x$ 轴旋转一周所得旋转体体积.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 令 $x-t=u$, 并对 $\displaystyle f(x)+3\int_{0}^{x} f(x-t) \dd t+2\int_{0}^{x} tf(x-t) \dd t=2\e ^{-x}+5x-1$ 方程两边 $x$ 求导两次, 得 $$
+                  f''(x)+3f'(x)+2f(x)=2\e ^{-x}
+              $$
+              解微分方程, 令 $\displaystyle \mathrm{D}=\dv{x}$, 得 $(\mathrm{D}+1)(\mathrm{D}+2)f=2\e ^{-x}$, 再令 $(\mathrm{D}+2)f=z$, 得 $\displaystyle \dv{z}{x}+z=2\e ^{-x}$, 由一阶线性微分方程通解公式得
+              $$
+                  z=\e ^{-\int \dd x}\qty[\int 2\e ^{-x}\cdot \e ^{\int \dd x}\dd x+C_1]=\e ^{-x}(2x+C_1)
+              $$
+              即 $\displaystyle \dv{f}{x}+2f=\e ^{-x}(2x+C_1)$, 注意到 $f(0)=1, f'(0)=0$, 解得 $C_1=2$, 由一阶线性微分方程通解公式得
+              $$
+                  f=\e ^{-2\int \dd x}\qty[\int \e ^{-x}(2x+2)\cdot \e ^{2\int \dd x}\dd x+C_2]=\e ^{-2x}\qty(2x\e ^{x}+C_2)
+              $$
+              又 $f(0)=1$, 解得 $C_1=1$，所以 $f(x)=2x\e ^{-x}+\e ^{-2x}.$
+        \item 所求体积为 $V$, 则
+              \begin{flalign*}
+                  V=\pi \int_{0}^{+\infty}f^2(x)\dd x=\pi \int_{0}^{+\infty}\qty(4x^2\e ^{-2x}+\e ^{-4x}+4x\e ^{-3x})\dd x=\pi\qty(\dfrac{1}{2}\Gamma(3)+\dfrac{1}{4}+\dfrac{4}{9}\Gamma(2))=\dfrac{61\pi}{36}.
+              \end{flalign*}
+    \end{enumerate}
+\end{solution}
 
 \begin{example}
     设 $D:x^2+y^2\leqslant 4x,~y\leqslant -x$, 在 $D$ 的边界 $y=-x$ 上任取一点 $P$, 设 $P$ 到原点的距离为 $t$, 作 $PQ$ 垂直 $y=-x$, 交 $D$ 的边界 $x^2+y^2=4x$ 于点 Q.
@@ -700,6 +779,19 @@
 \end{example}
 \begin{solution}
     与例题 \ref{tantdt} 同样地, $\displaystyle s=\int_{0}^{\frac{\pi}{6}}\sqrt{1+\tan^2x}\dd x=\dfrac{1}{2}\ln 3.$
+\end{solution}
+
+\begin{example}
+    求曲线 $\displaystyle 4y=\int_{0}^{2} x\sqrt{12-x^2u^2} \dd u~(x\geqslant 0)$ 的全长.
+\end{example}
+\begin{solution}
+    令 $xu=t$, 那么 $$
+        \int_{0}^{2} x\sqrt{12-x^2u^2} \dd u=\int_{0}^{2x} \sqrt{12-t^2} \dd t
+    $$
+    则 $\displaystyle y=\dfrac{1}{4}\int_{0}^{2x} \sqrt{12-t^2} \dd t, y'=\sqrt{3-x^2}$, 那么 $3-x^2\geqslant 0\Rightarrow x\in \qty[0,\sqrt{3}]~(x\geqslant 0)$, 于是曲线全长
+    $$
+        s=\int_{0}^{\sqrt{3}} \sqrt{1+\qty(y')^2} \dd x=\int_{0}^{\sqrt{3}} \sqrt{4-x^2} \dd x\xlongequal{\frac{x}{2}=\sin\theta}\int_{0}^{\frac{\pi}{3}} 4\cos^2\theta \dd \theta=\dfrac{2\pi}{3}+\dfrac{\sqrt{3}}{2}.
+    $$
 \end{solution}
 
 \begin{example}
@@ -858,9 +950,30 @@
 \subsubsection{变力所做的功}
 
 \begin{theorem}[变力的功]
-    若质点沿变力 $F(x)$ 方向从 $x=a$ 到 $x=b$ 做直线运动, 则变力所做的功为:
+    若质点沿变力 $F(x)$ 方向从 $x=a$ 到 $x=b$ 做直线运动, 则变力所做的功为:\index{变力的功}
     $$W=\int_{a}^{b}F(x)\dd x.$$
 \end{theorem}
+
+\begin{example}
+    由 $y=-\sqrt{1-x^2}$ 与 $y=1-x^2$ 所围成的区域绕 $y$ 轴旋转而成的几何体容器 $\Omega$ 内充满水, 若将水从顶部抽取出来, 求所做的功.
+\end{example}
+\begin{solution}
+    设将上半部分水取出做功为 $w_1$, 下半部分为 $w_2$, 取 $[y,y+\dd y]\subset[0,1]$, 则
+    $$
+        \dd w_1=g\dd m\cdot(1-y)=\rho g\dd v(1-y)=\pi \rho g(1-y)x^2\dd y=\pi \rho g(1-y)^2\dd y
+    $$
+    那么 $$
+        w_1=\int_{0}^{1} w_1 \dd y=\pi\rho g\int_{0}^{1} (1-y)^2 \dd y=\dfrac{\pi \rho g}{3}
+    $$
+    同理, 取 $[y,y+\dd y]\subset[-1,0]$
+    $$
+        \dd w_2=g \dd m\cdot (1-y)=\rho g\dd v(1-y)=\pi \rho g(1-y)x^2\dd y=\pi \rho g(1-y)\qty(1-y^2)\dd y
+    $$
+    那么 $$
+        w_2=\int_{-1}^{0} \dd w_2 =\pi \rho g \int_{-1}^{0} (1-y)\qty(1-y^2) \dd y=\dfrac{11\pi \rho  g}{12}
+    $$
+    所做的功为 $w=w_1+w_2=\dfrac{5\pi\rho g}{4}$.
+\end{solution}
 
 \subsubsection{物体的质量与重心}
 
@@ -872,6 +985,22 @@
 \end{theorem}
 
 \subsection{定积分综合性问题}
+
+\subsubsection{函数性质的计算题}
+
+\begin{example}
+    设 $f(x)$ 在 $[0,+\infty)$ 上可导, $f(0)=0$, 其反函数为 $g(x)$, 若 $\displaystyle \int_{x}^{x+f(x)} g(t-x) \dd t=x^2\ln(1+x)$, 求 $f(x)$.
+\end{example}
+\begin{solution}
+    令 $t-x=u$, 则有 $ \displaystyle \int_{0}^{f(x)} g(u) \dd u=x^2\ln(1+x) $, 两边对 $x$ 求导得
+    \begin{flalign*}
+        f'(x)\cdot g(f(x))=2x\ln(1+x)+\dfrac{x^2}{1+x}\Rightarrow f'(x)=2\ln(1+x)+\dfrac{x}{1+x}
+    \end{flalign*}
+    于是 $$
+        f(x)=\int\qty[2\ln(1+x)+\dfrac{x}{1+x}]\dd x=(2x+1)\ln(1+x)-x-2+C
+    $$
+    又 $f(0)=0$, 解得 $C=2$, 故 $f(x)=(2x+1)\ln(1+x)-x.$
+\end{solution}
 
 \subsubsection{积分等式命题的证明}
 
@@ -1628,7 +1757,7 @@
     则由离散情形 的 Cauchy-Schwarz 不等式, 有
     $$\left(\sum_{i=1}^{n} f\left(x_{i}\right) g\left(x_{i}\right)\right)^{2} \leqslant\left(\sum_{i=1}^{n} f^{2}\left(x_{i}\right)\right)\left(\sum_{i=1}^{n} g^{2}\left(x_{i}\right)\right)$$
     于是得 $ \displaystyle\left(\frac{b-a}{n} \sum_{i=1}^{n} f\left(x_{i}\right) g\left(x_{i}\right)\right)^{2} \leqslant\left(\frac{b-a}{n} \sum_{i=1}^{n} f^{2}\left(x_{i}\right)\right)\left(\frac{b-a}{n} \sum_{i=1}^{n} g^{2}\left(x_{i}\right)\right)$,
-    故令 $ n \rightarrow \infty $ 两边取极限, 由定积分定义得
+    故令 $ n \to \infty $ 两边取极限, 由定积分定义得
     $\displaystyle\left(\int_{a}^{b} f(x) g(x) \dd  x\right)^{2} \leqslant \int_{a}^{b} f^{2}(x) \dd  x \int_{a}^{b} g^{2}(x) \dd  x .$
 \end{proof}
 \begin{proof}[{\songti \textbf{证法四}}]

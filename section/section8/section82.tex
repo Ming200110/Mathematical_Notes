@@ -20,6 +20,9 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
         \item 特征方程有两个相等实根 $ r_{1}=r_{2}=r $, 则方程 (1) 的通解为 $ Y=\left(C_{1}+C_{2} x\right) \e^{r x} $;
         \item 特征方程有一对共轭复根 $ r_{1,2}=\alpha \pm \mathrm{i} \beta $, 则方程 (1) 的通解为
               $$Y=\e^{\alpha x}\left(C_{1} \cos \beta x+\right.   \left.C_{2} \sin \beta x\right) $$
+              且虚根对应的特征方程为 $$
+                  \alpha \pm \mathrm{i} \beta \Leftrightarrow (r-\alpha)^2+\beta^2=0
+              $$
     \end{enumerate}
 \end{theorem}
 
@@ -29,8 +32,8 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
     \begin{table}[H]
         \centering
         \begin{tabular}{l | l | l}
-            (\rownumber{}) $ y''-12y'+35y=0 $             & (\rownumber{}) $ y''+2y'+3y=0 $  & (\rownumber{}) $y'''-6y''+3y'+10y=0$ \\
-            (\rownumber{}) $ y^{(4)}-2y'''+2y''-2y'+y=0 $ & (\rownumber{}) $y'''-2y''+5y'=0$ & (\rownumber{}) $ y'''-2y''+y'-2y=0 $
+            (\rownumber{}) $ y''-12y'+35y=0 $             . & (\rownumber{}) $ y''+2y'+3y=0 $  . & (\rownumber{}) $y'''-6y''+3y'+10y=0$ . \\
+            (\rownumber{}) $ y^{(4)}-2y'''+2y''-2y'+y=0 $ . & (\rownumber{}) $y'''-2y''+5y'=0$ . & (\rownumber{}) $ y'''-2y''+y'-2y=0 $.
         \end{tabular}
     \end{table}
 \end{example}
@@ -67,8 +70,8 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
 
 \subsubsection{$n$ 阶常系数线性齐次微分方程}
 
-\begin{theorem}[$n$ 阶常系数线性齐次微分方程通解结构]
-    \index{高阶常系数线性齐次微分方程通解结构}
+\begin{definition}[特征方程与特征根]
+    \index{特征方程与特征根}
     设 $ n $ 阶常系数线性齐次微分方程是
     \begin{equation*}
         y^{(n)}+p_{1} y^{(n-1)}+p_{2} y^{(n-2)}+\cdots+p_{n-1} y^{\prime}+p_{n} y=0
@@ -76,7 +79,12 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
     \end{equation*}
     其中 $ p_{1}, p_{2}, \cdots, p_{n} $ 是常数, 代数方程
     $$r^{n}+p_{1} r^{n-1}+p_{2} r^{n-2}+\cdots+p_{n-1} r+p_{n}=0$$
-    称为微分方程 (2) 的特征方程, 特征方程的根叫作微分方程 (2) 的特征根.
+    称为\textit{微分方程} (2) \textit{的特征方程}, 特征方程的根叫作\textit{微分方程} (2) \textit{的特征根}.
+\end{definition}
+
+\begin{theorem}[$n$ 阶常系数线性齐次微分方程通解结构]
+    \index{高阶常系数线性齐次微分方程通解结构}
+    对于 $n$ 阶常系数线性齐次微分方程,
     \begin{enumerate}[label=(\arabic{*})]
         \item 如果 $ r_{1} $ 是特征方程的单根, 则
               $$y=C \e^{r_{1} x}$$
@@ -97,8 +105,126 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
 
 \subsubsection{二阶常系数非齐次线性微分方程的通解结构}
 
+\begin{theorem}[二阶常系数非齐次线性微分方程解的性质]
+    若 $y_1, y_2, y_3$ 为二阶非齐次微分方程的解, 令 $$
+        y=k_1y_1 +k_2y_2 +k_3y_3
+    $$
+    若 $k_1+ k_2+ k_3=1$, 则 $y$ 为该非齐次微分方程的解; 若 $k_1+ k_2+ k_3=0$, 则 $y$ 为该方程对应齐次方程的解.
+\end{theorem}
+
+\begin{example}
+    设线性无关的函数 $y_1, y_2, y_3$ 都是二阶非齐次线性方程 $y''+p(x)y'+q(x)y=f(x)$ 的解, $c_1,c_2$ 是任意常数,
+    则该非齐次方程的通解是
+    \begin{tasks}(2)
+        \task $c_1y_1+c_2y_2+y_3.$
+        \task $c_1y_1+c_2y_2-(c_1+c_2)y_3.$
+        \task $c_1y_1+c_2y_2-(1-c_1-c_2)y_3.$
+        \task $c_1y_1+c_2y_2+(1-c_1-c_2)y_3.$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    对于 D 选项, 由 $c_1+c_2+(1-c_1-c_2)=1$, 则 $y=c_1y_1+c_2y_2+(1-c_1-c_2)y_3$ 是二阶非齐次线性方程的解, 再用解的结构进一步分析:
+    $$
+        y=c_1y_1+c_2y_2+(1-c_1-c_2)y_3=c_1(y_1-y_3)+c_2(y_2-y_3)+y_3
+    $$
+    其中 $$
+        (y_1-y_3,y_2-y_3)=(y_1, y_2, y_3)\mqty(1&0\\ 0&1\\ -1&-1)
+    $$
+    令 $\vb*{A}=\mqty(1&0\\ 0&1\\ -1&-1)$, 则 $\rank\vb*{A}=2$, 故 $\rank((y_1-y_3,y_2-y_3))=2$, 从而 $y_1-y_3$ 与 $y_2-y_3$ 二者无关, 那么 $y=c_1(y_1-y_3)+c_2(y_2-y_3)$ 是对应齐次方程的通解.
+\end{solution}
+
+\begin{theorem}
+    当方程 $ y^{\prime \prime}+p y^{\prime}+q y=f(x) $ 的自由项
+    $$f(x)=\mathrm{e}^{\alpha x}\left[P_{m}(x) \cos \beta x+P_{n}(x) \cos \beta x\right] $$ 时
+    非齐次特解要设为
+    $$y^{*}=\mathrm{e}^{\alpha x}\left[Q_{l}^{(1)}(x) \sin \beta x+Q_{l}^{(2)}(x) \cos \beta x\right] x^{k}$$
+    其中 $\begin{cases}
+        \mathrm{e}^{\alpha x} \text { 照抄,  } \\ l=\max \{m, n\}, Q_{l}^{(1)}, Q_{l}^{(2)} \text { 分别为 } x \text { 的 } l \text { 次多项式,  } \\ k=\begin{cases}
+            0, \alpha \pm \beta i \text { 不是特征值,  } \\ 1, \alpha \pm \beta i \text { 是特征值. }
+        \end{cases}
+    \end{cases}$
+\end{theorem}
+
+\begin{example}
+    如果二阶常系数非齐次线性微分方程 $y''+ay'+by=\e ^{-x}\cos x$ 有一个特解 $$y^*=\e ^{-x}(x\cos x+x\sin x)$$ 则
+    \begin{tasks}(4)
+        \task $a=-1,b=1.$
+        \task $a=1,b=-1.$
+        \task $a=2,b=-1.$
+        \task $a=2,b=2.$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    由特解 $y^*=\e ^{-x}(x\cos x+x\sin x)$, 得特征根 $-1\pm i$, 对应的特征方程为 $(r+1)^2+1=0\Rightarrow r^2+2r+2=0$, 对应的齐次微分方程为 $y''+2y'+2y=0$, 故 $a=b=2$, 选 D.
+\end{solution}
+
+若 $ y_{1}, y_{2} $ 为二阶线性齐次微分方程 $ y^{\prime \prime}+P(x) y^{\prime}+Q(x) y=0 $ 的两个线性无关的解, 则其通解为 $ y=C_{1} y_{1}+C_{2} y_{2} $, 即 $ y-C_{1} y_{1}-C_{2} y_{2}=0 $, 继而有
+$
+    \begin{cases}
+        y-C_{1} y_{1}-C_{2} y_{2}=0                            \\
+        y^{\prime}-C_{1} y_{1}^{\prime}-C_{2} y_{2}^{\prime}=0 \\
+        y^{\prime \prime}-C_{1} y_{1}^{\prime \prime}-C_{2} y_{2}^{\prime \prime}=0
+    \end{cases}
+$
+即 $$\begin{pmatrix}  y & y_{1} & y_{2} \\ y^{\prime} & y_{1}^{\prime} & y_{2}^{\prime} \\ y^{\prime \prime} & y_{1}^{\prime \prime} & y_{2}^{\prime \prime}\\\end{pmatrix} \begin{pmatrix}1 \\ -C_{1} \\ -C_{2}\end{pmatrix}=\begin{pmatrix}0 \\ 0 \\ 0\end{pmatrix}$$
+该方程组有非零解, 故其系数行列式
+$$
+    \begin{vmatrix}y                 & y_{1}                 & y_{2}                 \\
+               y^{\prime}        & y_{1}^{\prime}        & y_{2}^{\prime}        \\
+               y^{\prime \prime} & y_{1}^{\prime \prime} & y_{2}^{\prime \prime}\end{vmatrix}=0
+$$
+据此即可解出待求的二阶线性齐次方程. 最后得到的齐次方程等号右边是 0, 此时将 0 换成 $ f(x) $, 再找一个二阶非齐次方程的特解代进去, 将 $ f(x) $ 解出来, 就可以得到二阶非齐次方程了.
+
+\begin{example}
+    求以 $y=x^2-\e^x$ 和 $y=x^2$ 为特解的一阶非齐次线性微分方程.
+\end{example}
+\begin{solution}
+    令 $y_1=x^2-\qty(x^2-\e^x)=\e^x$, 那么 $$\begin{pmatrix} y & y_1 \\ y' & y'_1 \\\end{pmatrix}=\begin{pmatrix} y & \e^x \\ y' & \e^x \\\end{pmatrix}=\e^x\begin{pmatrix} y & 1 \\ y' & 1 \\\end{pmatrix}=0$$
+    即 $y-y'=0$, 又 $y=x^2$, 所以 $f(x)=x^2-2x$, 故一节非齐次线性微分方程为 $y'-y=2x-x^2.$
+\end{solution}
+
+\begin{example}
+    已知 $y_1=x,~y_2=x+\sin x,~y_3=\e ^x+x$ 为某二阶非齐次线性微分方程的三个特解, 求该微分方程, 并求其通解.
+\end{example}
+\begin{solution}
+    $y_2-y_1=\sin x, y_3-y_1=\e^x$, 那么 $$\begin{pmatrix} y & \sin x & \e^x \\ y' & \cos x & \e^x \\ y'' & -\sin x & \e^x \\\end{pmatrix}=0\Rightarrow (\sin x-\cos x)y''-2\sin xy'+(\sin x+\cos x)y=f(x)$$
+    又 $y_1=x$, 所以 $f(x)=-2\sin x+x(\sin x+\cos x)$, 于是通解为
+    $$
+        (\cos x-\sin x)y''+2\sin xy'-(\sin x+\cos x)y=2\sin x-x(\sin x+\cos x).
+    $$
+\end{solution}
+
+% \begin{theorem}
+%     一般地, 设线性无关的函数 $y_1,~y_2,~y_3$ 都是以下二阶非齐次线性微分方程的解, 则
+%     $$y''(x)+p(x)y'+q(x)y=f(x)$$
+%     \begin{enumerate}[label=(\arabic{*})]
+%         \item $y_1-y_2,~y_1-y_3,~y_2-y_3$ 都是 $y''+p(x)y'+q(x)y=0$ 的解,
+%               且 $y_1-y_3$ 与 $y_2-y_3$ 线性无关;
+%         \item 非齐次线性微分方程的通解为 $$y=C_1(y_1-y_3)+C_2(y_2-y_3)+y_3=C_1y_1+C_2y_2+(1-C_1-C_2)y_3.$$
+%     \end{enumerate}
+% \end{theorem}
+
+% \begin{example}
+%     设二阶线性微分方程 $y''+p(x)y'+q(x)y=f(x)$ 有三个特解 $y_1=\e ^x,~y_2=\e ^x+\e ^{\frac{x}{2}},~y_3=\e ^x+\e ^{-x}$, 
+%     试求该微分方程, 并求其通解.
+% \end{example}
+
+\begin{example}[1997 数二]
+    设某个二阶常系数非齐次线性微分方程有三个特解:
+    $$y_1=x\e ^x+\e ^{2x},~y_2=x\e ^x+\e ^{-x},~y_3=x\e ^x+\e ^{2x}-\e ^{-x}$$
+    求该微分方程, 并给出其通解.
+\end{example}
+\begin{solution}
+    $y_1-y_3=\e ^{-x}, y_1-y_2+(y_1-y_3)=\e ^{2x}$, 那么 $$
+        \begin{pmatrix} y & \e ^{-x} & \e ^{2x} \\ y' & -\e ^{-x} & 2\e ^{2x} \\ y'' & \e ^{-x} & 4\e ^{2x} \\\end{pmatrix}=0\Rightarrow y''-y'-2y=f(x)
+    $$
+    又 $y_1=x\e ^{x}+\e ^{2x}$, 所以 $f(x)=\e ^{x}-2x\e ^{x}$, 那么通解为 $$
+        y''-y'-2y=\e ^{x}-2x\e ^{x}.
+    $$
+\end{solution}
+
 \begin{example}[1993 数三]
-    设二阶常系数非齐次线性微分方程 $ y^{\prime \prime}+a y^{\prime}+b y=k \mathrm{e}^{x} $ 的一个特解为 $ y=\mathrm{e}^{2 x}+(1+x) \mathrm{e}^{x} $, 试确定 $ a, b, k $, 并求该方程的通解.
+    设二阶常系数非齐次线性微分方程 $ y^{\prime \prime}+a y^{\prime}+b y=k \mathrm{e}^{x} $ 的一个特解为 $$ y=\mathrm{e}^{2 x}+(1+x) \mathrm{e}^{x} $$ 试确定 $ a, b, k $, 并求该方程的通解.
 \end{example}
 \begin{solution}
     \textbf{法一: }
@@ -128,10 +254,10 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
     解得 $ p=-2, q=2 $, 故所求微分方程为 $ y^{\prime \prime}-2 y^{\prime}+2 y=0 $.\\
     \textbf{法三: }设所求微分方程为 $ y^{\prime \prime}+p y^{\prime}+q y=0 $, 其中 $ p, q $ 为常数.
     因为 $ y=\mathrm{e}^{x}\left(C_{1} \sin x+C_{2} \cos x\right) $ 为上述方程的通解, 所以 $ y_{1}=\mathrm{e}^{x} \sin x $ 和 $ y_{2}=   \mathrm{e}^{x} \cos x $ 为 $ y^{\prime \prime}+p y^{\prime}+q y=0 $ 的特解, 代人方程, 得
-    $$\left\{\begin{array}{l}
+    $$\begin{cases}
             p(\cos x+\sin x)+q \sin x+2 \cos x=0 \\
             p(\cos x-\sin x)+q \cos x-2 \sin x=0
-        \end{array}\right.$$
+        \end{cases}$$
     改写为矩阵形式, 有 $ \mqty(\cos x+\sin x & \sin x \\ \cos x-\sin x & \cos x)\mqty(p\\ q)=\mqty(-2\cos x\\ 2\sin x) $, 而
     $$\mqty(\cos x+\sin x & \sin x \\
         \cos x-\sin x & \cos x)^{-1}=\mqty(\cos x        & -\sin x       \\
@@ -144,51 +270,6 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
     \textbf{法四: }由通解 $ y=\mathrm{e}^{x}\left(C_{1} \sin x+C_{2} \cos x\right) $, 求出 $ y^{\prime}, y^{\prime \prime} $:
     $$y^{\prime}=\mathrm{e}^{x}\left[\left(C_{1}-C_{2}\right) \sin x+\left(C_{1}+C_{2}\right) \cos x\right], \quad y^{\prime \prime}=\mathrm{e}^{x}\left(-2 C_{2} \sin x+2 C_{1} \cos x\right)$$
     消去 $ C_{1} $ 与 $ C_{2} $, 得 $ y^{\prime \prime}-2 y^{\prime}+2 y=0 $, 此即为所求微分方程.
-\end{solution}
-
-\begin{example}
-    已知 $y_1=x,~y_2=x+\sin x,~y_3=\e ^x+x$ 为某二阶非齐次线性微分方程的三个特解, 求该微分方程, 并求其通解.
-\end{example}
-\begin{solution}
-    因为 $\dfrac{y_2-y_1}{y_3-y_1}=\dfrac{\sin x}{\e ^x}\neq C$, 所以 $y_2-y_1$ 与 $y_3-y_2$ 线性无关, 从而得所求微分方程的通解为 $y=C_1\sin x+C_2\e ^x+x$,
-    分别求一、二阶导数, 并解出 $C_1,~C_2$,
-    $$\left\{\begin{matrix}
-            y'  & = & C_1\cos x  & + & 7C_2\e ^x & + & 1 \\
-            y'' & = & -C_1\sin x & + & C_2\e ^x
-        \end{matrix}\right.$$
-    即得所求的微分方程为
-    $$(\cos x-\sin x)y''+2\sin x\cdot y'-(\sin x+\cos x)y=2\sin x-x(\sin x+\cos x).$$
-\end{solution}
-
-% \begin{theorem}
-%     一般地, 设线性无关的函数 $y_1,~y_2,~y_3$ 都是以下二阶非齐次线性微分方程的解, 则
-%     $$y''(x)+p(x)y'+q(x)y=f(x)$$
-%     \begin{enumerate}[label=(\arabic{*})]
-%         \item $y_1-y_2,~y_1-y_3,~y_2-y_3$ 都是 $y''+p(x)y'+q(x)y=0$ 的解,
-%               且 $y_1-y_3$ 与 $y_2-y_3$ 线性无关;
-%         \item 非齐次线性微分方程的通解为 $$y=C_1(y_1-y_3)+C_2(y_2-y_3)+y_3=C_1y_1+C_2y_2+(1-C_1-C_2)y_3.$$
-%     \end{enumerate}
-% \end{theorem}
-
-% \begin{example}
-%     设二阶线性微分方程 $y''+p(x)y'+q(x)y=f(x)$ 有三个特解 $y_1=\e ^x,~y_2=\e ^x+\e ^{\frac{x}{2}},~y_3=\e ^x+\e ^{-x}$, 
-%     试求该微分方程, 并求其通解.
-% \end{example}
-
-\begin{example}[1997 数二]
-    设某个二阶常系数非齐次线性微分方程有三个特解:
-    $$y_1=x\e ^x+\e ^{2x},~y_2=x\e ^x+\e ^{-x},~y_3=x\e ^x+\e ^{2x}-\e ^{-x}$$
-    求该微分方程, 并给出其通解.
-\end{example}
-\begin{solution}
-    因为 $\dfrac{y_1-y_3}{(y_1-y_2)+(y_1-y_3)}=\dfrac{\e ^{-x}}{\e ^{2x}}\neq C$, 于是该方程的通解为 $$y=C_1\e ^{-x}+C_2\e ^{2x}+x\e ^x$$
-    分别求一、二阶导数, 有
-    $$y'=-C_1\e ^{-x}+2C_2\e ^{2x}+\e ^x(x+1),~y''=C_1\e ^{-x}+4C_2\e ^{2x}+\e ^x(x+2)$$
-    于是 $$\mqty(-\e ^{-x}&2\e ^{2x}\\ \e ^{-x}&4\e ^{2x} )\mqty(C_1\\C_2)=\mqty(y'-\e ^x(x+1)\\y''-\e ^x(x+2))$$
-    即 \begin{flalign*}
-        \mqty(C_1 \\C_2)=\mqty(-\e ^{-x}&2\e ^{2x}\\ \e ^{-x}&4\e ^{2x} )^{-1}\mqty(y'-\e ^x(x+1)\\y''-\e ^x(x+2))=\mqty(\dfrac{1}{3}\e ^x\qty[y''-\e ^x(x+2)]-\dfrac{2}{3}\e ^x\qty[y'-\e ^x(x+1)]\\[6pt]\dfrac{1}{6}\e ^{-2x}\qty[y''-\e ^x(x+2)]+\dfrac{1}{6}\e ^{-2x}\qty[y'-\e ^x(x+1)])
-    \end{flalign*}
-    消去 $C_1,~C_2$ 得该微分方程为 $y''-y'-2y=(1-2x)\e ^x.$
 \end{solution}
 
 \subsubsection{微分算子法}
@@ -207,31 +288,93 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
     因此, 在形式上可以把 $\displaystyle\frac{1}{\mathrm{D}}f(x)$ 看成是 $L(\mathrm{D})$ 的逆算子.
 \end{definition}
 
-\begin{theorem}
+\begin{theorem}[算子逆运算]
+    \index{算子逆运算}
     $\displaystyle\frac{1}{\mathrm{D}}f(x)=\int f(x)\mathrm{d}x.$
 \end{theorem}
-\begin{theorem}
+\begin{theorem}[算子特性]
+    \index{算子特性}
     对于任意常数 $a$, $\displaystyle\frac{1}{\mathrm{D}-a}f(x)=\e ^{ax}\int\e ^{-ax}f(x)\mathrm{d}x.$
 \end{theorem}
-\begin{theorem}
+\begin{theorem}[算子分配律]
+    \index{算子分配律}
     对于任意常数 $\alpha$ 和 $\beta$, $\displaystyle\frac{1}{L(\mathrm{D})}(\alpha u(x)+\beta v(x))=\alpha\frac{1}{L(\mathrm{D})}u(x)+\beta\frac{1}{L(\mathrm{D})}v(x).$
 \end{theorem}
-\begin{theorem}
+\begin{theorem}[算子结合律]
+    \index{算子结合律}
     $\displaystyle\frac{1}{L_1(\mathrm{D})L_2(\mathrm{D})}f(x)=\frac{1}{L_1(\mathrm{D})}\left(\frac{1}{L_2(\mathrm{D})}f(x)\right)=\frac{1}{L_2(\mathrm{D})}\left(\frac{1}{L_1(\mathrm{D})}f(x)\right).$
 \end{theorem}
 
-\begin{theorem}[算子特性]
-    \index{算子特性}
+\setcounter{magicrownumbers}{0}
+\begin{table}[H]
+    \centering
+    \caption{微分算子常用结论}
+    \begin{tabular}{l l}
+        (\rownumber) $L(\mathrm{D})=\mathrm{D}^m$ 时, $\dfrac{1}{L(\mathrm{D})}f^{(m)}(x)=f(x)$.                                                                                                                            \\
+        \midrule
+        $L(\mathrm{D})=\mathrm{D}-k$ 时                                                                                                                                                                                     \\
+        (\rownumber) $\dfrac{1}{L(\mathrm{D})}\e^{bx}=\dfrac{e^{bx}}{b-k},~b\neq k$.     & (\rownumber) $\dfrac{1}{L(\mathrm{D})}x^{\alpha}=\qty(-\displaystyle\sum_{n=0}^{\alpha}\dfrac{\mathrm{D}^n}{k^{n+1}})x^{\alpha}$ \\
+        \midrule
+        (\rownumber) $\dfrac{1}{L(\mathrm{D})}\e^{kx}=\dfrac{1}{L(k)}\e^{kx},~L(k)\neq0$ & (\rownumber) $\dfrac{1}{L(\mathrm{D})}u(x)\e^{kx}=\e^{kx}\dfrac{1}{L(\mathrm{D}+k)}u(x)$                                         \\
+        \multicolumn{2}{l}{(\rownumber) $L(\mathrm{D})=(\mathrm{D}-b)(\mathrm{D}-a)$ 时, $\dfrac{1}{L(\mathrm{D})}f(x)=\dfrac{1}{\mathrm{D}-b}\dfrac{1}{\mathrm{D}-a}f(x)$, 当 $ab\neq0$ 时, $\dfrac{1}{\mathrm{D}-b}\dfrac{1}{\mathrm{D}-a}=\dfrac{1}{ab}$.}
+    \end{tabular}
+\end{table}
+
+\begin{example}
+    用微分算子法计算下列微分方程的特解.
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l | l}
+            (\rownumber{}) $y''+3y'+2y=5\e ^{3x}$      . & (\rownumber{}) $y''+3y'+2y=\e ^{-x}$.     \\
+            (\rownumber{}) $y''+3y=\sin 2x$            . & (\rownumber{}) $y''+3y'-2y=\sin 2x$     . \\
+            (\rownumber{}) $y''+3y'-2y=\e ^{x}\sin 2x$ . & (\rownumber{}) $y''+y=x\cos 2x$.          \\
+            (\rownumber{}) $y''-3y'+2y=2x^2+x+1$.
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item $F(\mathrm{D})=\mathrm{D}^m,~\dfrac{1}{F(\mathrm{D})}f^{(m)}(x)=f(x)$;
-        \item $F(\mathrm{D})=\mathrm{D}-k$ 时, $\dfrac{1}{F(\mathrm{D})}\e^{bx}=\dfrac{e^{bx}}{b-k},~b\neq k$;
-        \item $F(\mathrm{D})=(\mathrm{D}-b)(\mathrm{D}-a)$ 时, $\dfrac{1}{F(\mathrm{D})}f(x)=\dfrac{1}{\mathrm{D}-b}\dfrac{1}{\mathrm{D}-a}f(x)$, 当 $ab\neq0$ 时, $\dfrac{1}{\mathrm{D}-b}\dfrac{1}{\mathrm{D}-a}=\dfrac{1}{ab}$;
-        \item $\dfrac{1}{F(\mathrm{D})}\e^{kx}=\dfrac{1}{F(k)}\e^{kx},~F(k)\neq0$;
-        \item $\dfrac{1}{F(\mathrm{D})}u(x)\e^{kx}=\e^{kx}\dfrac{1}{F(\mathrm{D}+k)}u(x)$;
-        \item $\dfrac{1}{F(\mathrm{D})}\qty[f_1(x)+f_2(x)]=\dfrac{1}{F(\mathrm{D})}f_1(x)+\dfrac{1}{F(\mathrm{D})}f_2(x)$;
-        \item $F(\mathrm{D})=\mathrm{D}-k,~\dfrac{1}{F(\mathrm{D})}x^{\alpha}=\qty(-\displaystyle\sum_{n=0}^{\alpha}\dfrac{\mathrm{D}^n}{k^{n+1}})x^{\alpha}$.
+        \item $y^*=\dfrac{1}{\mathrm{D}^2+3\mathrm{D}+2}5\e ^{3x}=\dfrac{1}{3^2+3\cdot 3+2}5\e ^{3x}=\dfrac{1}{4}\e ^{3x}$.
+        \item $y^*=\dfrac{1}{\mathrm{D}^2+3\mathrm{D}+2}\e ^{-x}=x\dfrac{1}{2\mathrm{D}+3}\e ^{-x}=x\e ^{-x}$.
+        \item $y^*=\dfrac{1}{\mathrm{D}^2+3}\sin 2x=-\sin 2x$.
+        \item $y^*=\dfrac{1}{\mathrm{D}^2+3\mathrm{D}-2}\sin 2x=\dfrac{1}{-(2)^2+3\mathrm{D}-2}\sin 2x=\dfrac{1}{3}\dfrac{\mathrm{D}+2}{\mathrm{D}^2-4}\sin 2x=-\dfrac{1}{12}(\sin2x+\cos 2x)$.
+        \item $y^*=\dfrac{1}{\mathrm{D}^2+3\mathrm{D}-2}\e ^{x}\sin 2x=\e ^{x}\dfrac{1}{(\mathrm{D}+1)^2+3(\mathrm{D}+1)-2}\sin 2x=\e ^{x}\dfrac{5\mathrm{D}+2}{25\mathrm{D}^2-4}\sin 2x= -\dfrac{\e ^{x}}{52}(5\cos2x+\sin2x)$.
+        \item $y^*=\dfrac{1}{\mathrm{D}^2+1}x\cos2x=\qty(x-\dfrac{2\mathrm{D}}{\mathrm{D}^2+1})\dfrac{1}{\mathrm{D}^2+1}\cos2x=-\dfrac{1}{3}\qty(x-\dfrac{2\mathrm{D}}{\mathrm{D}^2+1})\cos 2x=\dfrac{4}{9}\sin 2x-\dfrac{1}{3}x\cos 2x.$
+        \item $y^*=\dfrac{1}{\mathrm{D}^2-3\mathrm{D}+2}\qty(2x^2+x+1)=\qty(\dfrac{1}{2}+\dfrac{3}{4}\mathrm{D}+\dfrac{7}{8}\mathrm{D}^2)\qty(2x^2+x+1)=x^2+\dfrac{7}{2}x+\dfrac{19}{4}$.
     \end{enumerate}
-\end{theorem}
+\end{solution}
+
+\begin{inference}[微分算子法快速计算]
+    对于下列的情况有,
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $f(x)=\e ^{kx}$ 型: 所有 $\mathrm{D}$ 的值都为 $k$ 的值; 当发现分母为 0 时, 需要对分母求导, 求 $l$ 次导, 前面添加 $x^l$ (类似于洛必达法则);
+        \item $\sin\alpha x$ 或 $\cos \alpha x$ 型: 将 $\mathrm{D}^2$ 换成 $-\alpha^2$, 当分母没有 $\mathrm{D}$ 的平方项时, 用平方差公式创造出平方项;
+        \item $\e ^{kx}y(x)$ 型: 采用“漂移法”, 将 $\e ^{kx}$ 移至左侧;
+        \item $x \sin \alpha x$ 或 $x \cos \alpha x$ 型: 有公式 $y^*=\qty(x-\dfrac{2\mathrm{D}}{\mathrm{D}^2+1})\dfrac{1}{L(\mathrm{D})}\sin\alpha x (\text{ 或} \cos\alpha x).$
+        \item 多项式型: 采用“长除法”.
+    \end{enumerate}
+\end{inference}
+
+\begin{example}
+    若 $A,B$ 为非零常数, $k$ 为常数, 则微分方程 $y''+k^2y=\cos x$ 的特解可能具有的形式是
+    \begin{tasks}(4)
+        \task $A\sin x+B\cos x$
+        \task $Ax\cos x$
+        \task $Ax \sin x$
+        \task $Ax\sin x+Bx\cos x$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    该微分方程的特解为 $y^*=\dfrac{\cos x}{\mathrm{D}^2+k^2}$, 若 $k^2=1$ 时, $$
+        y^*=\dfrac{\cos x}{\mathrm{D}^2+k^2}=x\dfrac{\cos x}{2 \mathrm{D}}=\dfrac{x}{2}\sin x
+    $$
+    若 $k^2\neq 1$ 时,
+    $$
+        y^*=\dfrac{\cos x}{\mathrm{D}^2+k^2}=\dfrac{\cos x}{k^2-1}
+    $$
+    因为 $A,B$ 都是非零常数, 所以只有 $C$ 符合.
+\end{solution}
 
 \begin{example}[2010 数学 (一)]
     \label{y3y2y2xex}求微分方程 $y''-3y'+2y=2x\e ^x$ 的通解.
@@ -282,14 +425,14 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
     \centering
     \caption{常见的 Laplace 变换}
     \begin{tabular}{l l}
-        (\rownumber)$\displaystyle \mathcal{L}\{1\}=\frac{1}{s}$                                                                       & (\rownumber)$\displaystyle \mathcal{L}\{t^n\}=\frac{n!}{s^{n+1}}$                                                                  \\
-        (\rownumber)$\displaystyle \mathcal{L}\{\e ^{\alpha t}\}=\frac{1}{s-\alpha}$                                                   & (\rownumber)$\displaystyle \mathcal{L}\{t^n\e ^{\alpha t}\}=\frac{n!}{(s-\alpha)^{n+1}}$                                           \\
+        (\rownumber) $\displaystyle \mathcal{L}\{1\}=\frac{1}{s}$                                                                       & (\rownumber) $\displaystyle \mathcal{L}\{t^n\}=\frac{n!}{s^{n+1}}$                                                                  \\
+        (\rownumber) $\displaystyle \mathcal{L}\{\e ^{\alpha t}\}=\frac{1}{s-\alpha}$                                                   & (\rownumber) $\displaystyle \mathcal{L}\{t^n\e ^{\alpha t}\}=\frac{n!}{(s-\alpha)^{n+1}}$                                           \\
         \midrule
-        (\rownumber)$\displaystyle \mathcal{L}\{\sin \omega t\}=\frac{\omega}{s^2+\omega}$                                             & (\rownumber)$\displaystyle \mathcal{L}\{\cos \omega t\}=\frac{s}{s^2+\omega}$                                                      \\
-        (\rownumber)$\displaystyle \mathcal{L}\{t\sin \omega t\}=\frac{2s\omega}{(s^2+\omega^2)^2}$                                    & (\rownumber)$\displaystyle \mathcal{L}\{t\cos \omega t\}=\frac{s^2-\omega^2}{(s^2+\omega^2)^2}$                                    \\
+        (\rownumber) $\displaystyle \mathcal{L}\{\sin \omega t\}=\frac{\omega}{s^2+\omega}$                                             & (\rownumber) $\displaystyle \mathcal{L}\{\cos \omega t\}=\frac{s}{s^2+\omega}$                                                      \\
+        (\rownumber) $\displaystyle \mathcal{L}\{t\sin \omega t\}=\frac{2s\omega}{(s^2+\omega^2)^2}$                                    & (\rownumber) $\displaystyle \mathcal{L}\{t\cos \omega t\}=\frac{s^2-\omega^2}{(s^2+\omega^2)^2}$                                    \\
         \midrule
-        (\rownumber)$\displaystyle \mathcal{L}\{\e ^{\lambda t}\sin \omega t\}=\frac{\omega}{(s-\lambda)^2+\omega^2}$                  & (\rownumber)$\displaystyle \mathcal{L}\{\e ^{\lambda t}\cos \omega t\}=\frac{s-\lambda}{(s-\lambda)^2+\omega^2}$                   \\
-        (\rownumber)$\displaystyle \mathcal{L}\{t\e ^{\lambda t}\sin \omega t\}=\frac{2\omega(s-\lambda)}{[(s-\lambda)^2+\omega^2]^2}$ & (\rownumber)$\displaystyle \mathcal{L}\{t\e ^{\lambda t}\cos \omega t\}=\frac{(s-\lambda)^2-\omega^2}{[(s-\lambda)^2+\omega^2]^2}$
+        (\rownumber) $\displaystyle \mathcal{L}\{\e ^{\lambda t}\sin \omega t\}=\frac{\omega}{(s-\lambda)^2+\omega^2}$                  & (\rownumber) $\displaystyle \mathcal{L}\{\e ^{\lambda t}\cos \omega t\}=\frac{s-\lambda}{(s-\lambda)^2+\omega^2}$                   \\
+        (\rownumber) $\displaystyle \mathcal{L}\{t\e ^{\lambda t}\sin \omega t\}=\frac{2\omega(s-\lambda)}{[(s-\lambda)^2+\omega^2]^2}$ & (\rownumber) $\displaystyle \mathcal{L}\{t\e ^{\lambda t}\cos \omega t\}=\frac{(s-\lambda)^2-\omega^2}{[(s-\lambda)^2+\omega^2]^2}$
     \end{tabular}
 \end{table}
 
@@ -304,7 +447,7 @@ $F$ 是关于 $x,y,y',y'',\cdots,y^{(n)}$ 的函数, 解高阶微分方程需要
 
 \subsection{可降阶的高阶微分方程}
 
-\subsubsection{$y^{(n)}=f(x)$}
+\subsubsection{$y^{(n)}=f(x)$ 型}
 
 方程特点是右端为自变量 $x$ 的函数, 且不含有函数 $y$ 及其导数 $y',y'',\cdots,y^{(n-1)}$, 将方程两边对 $x$ 积分 $n$ 次, 即得其通解
 $$y=\int\dd x\cdots\int f(x)\dd x+\sum_{i=1}^{n}\dfrac{\C_i}{(n-i)!}x^{n-i}.$$
@@ -325,11 +468,11 @@ $$y=\int\dd x\cdots\int f(x)\dd x+\sum_{i=1}^{n}\dfrac{\C_i}{(n-i)!}x^{n-i}.$$
     $$y=\e ^{2x}\qty[\int\qty(x^2\e ^x+C_1\e ^x)\e ^{-2x}\dd x+C_2]=-\qty(x^2+2x+1)\e ^x-C_1\e ^x+C_2\e ^{2x}.$$
 \end{solution}
 
-\subsubsection{$y''=f\qty(x,y')$}
+\subsubsection{$y''=f\qty(x,y')$ 型}
 
 方程的特点是右端不显含 $y$, 令 $y'=p(x), y''=\dfrac{\dd p}{\dd x}=p'$, 代入原方程即可化为一阶方程 $p'=f(x,p)$, 若其解为 $p=\varphi(x,C_1)$, 则原方程的通解为 $$y=\int\varphi(x,C_1)\dd x+C_2.$$
 
-\subsubsection{$y''=f\qty(y,y')$}
+\subsubsection{$y''=f\qty(y,y')$ 型}
 
 方程的特点是右端不显含自变量 $x$, 令 $y'=p(x)$, 并利用复合函数的求导法则, 有
 $$y''=\dv{p}{x}=\dv{p}{y}\cdot\dv{y}{x}=p\cdot\dv{p}{y}$$

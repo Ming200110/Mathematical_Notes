@@ -752,6 +752,19 @@
 \end{definition}
 
 \begin{example}
+    设空间区域 $\Omega_1:x^2+y^2+z^2\leqslant R^2,z\geqslant 0;\Omega_2:x^2+y^2+z^2\leqslant R^2,x,y,z\geqslant 0$, 则 
+    \begin{tasks}(2)
+        \task $\displaystyle \iiint\limits_{\Omega_1}x \dd V=4\iiint\limits_{\Omega_2}x \dd V$.
+        \task $\displaystyle \iiint\limits_{\Omega_1}y \dd V=4\iiint\limits_{\Omega_2}y \dd V$.
+        \task $\displaystyle \iiint\limits_{\Omega_1}z \dd V=4\iiint\limits_{\Omega_2}z \dd V$.
+        \task $\displaystyle \iiint\limits_{\Omega_1}xyz \dd V=4\iiint\limits_{\Omega_2}xyz \dd V$.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    因为被积函数 $z$ 关于 $x,y$ 均为偶函数, $\Omega_1$ 关于 $yOz,zOx$ 平面对称, 因此 $\displaystyle \iiint\limits_{\Omega_1}z \dd V=4\iiint\limits_{\Omega_2}z \dd V$.
+\end{solution}
+
+\begin{example}
     计算 $ \displaystyle \iint\limits_D\qty(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2})\dd x\dd y $, 其中 $D$ 为圆域: $x^2+y^2\leqslant R^2.$
 \end{example}
 \begin{solution}
@@ -1269,6 +1282,24 @@
 \subsection{重积分的应用}
 
 \subsubsection{重积分在几何上的应用}
+
+\begin{theorem}[旋转体的体积公式 B]
+    对于 $y=f(x)$ 在 $[a,b]$ 区间绕轴旋转形成的旋转体体积, 使用二重积分的方法计算公式为 
+    $$
+    V=\iint\limits_D2\pi r(x,y)\dd x\dd y
+    $$
+    其中, $r(x,y)$ 为任意一点 $(x,y)$ 到旋转轴的距离.\index{旋转体的体积公式 B}
+\end{theorem}
+
+\begin{example}
+    试用重积分计算例题 \ref{xzttj}.
+\end{example}
+\begin{solution}
+    本题中 $r(x,y)=|2-x|$, 因为 $x$ 均在 $x=2$ 的左侧, 则 $r(x,y)=2-x$, 于是 
+    \begin{flalign*}
+        V=2\pi\iint\limits_D(2-x)\dd x\dd y=2\pi\int_{0}^{1}\dd y\int_{1-\sqrt{1-y^2}}^{y}(2-x)\dd x=2\pi\int_{0}^{1}\qty(2y-y^2-1+\sqrt{1-y^2})\dd y=\dfrac{\pi^2}{2}-\dfrac{2\pi}{3}.
+    \end{flalign*}
+\end{solution}
 
 \begin{example}
     求球面 $x^2+y^2+z^2=4$ 和抛物面 $x^2+y^2=3z$ 所围的立体 (含在抛物面内部) $\Omega$ 的体积 $V$.

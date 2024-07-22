@@ -291,6 +291,8 @@
     则 $f(x)=\cos \sqrt{|x|}$ 在 $x=0$ 处不可导, 故选 D.
 \end{solution}
 
+
+
 \subsection{反函数、用参数方程确定的函数、隐函数的导数}
 
 \begin{theorem}[反函数的导数]
@@ -646,6 +648,17 @@ $$(u\cdot v)^{(n)}=\sum_{k=0}^{n}\mathrm{C}_n^ku^{(k)}v^{(n-k)}.$$
     $$\lim_{x\to1}\dfrac{f(1)+f'(1)(x-1)+\cdots+\dfrac{f^{(n)}(1)}{n!}(x-1)^n+o\qty((x-1)^{n})}{(x-1)^n}=1$$
     即 $$f(1)=f'(1)=\cdots=f^{(n-1)}(1)=0,~\dfrac{f^{(n)}(1)}{n!}=1$$
     故 $f^{(n)}(1)=n!.$
+\end{solution}
+
+\begin{example}
+    设 $f(x)=\arctan\dfrac{1+x}{1-x}$, $n$ 为正整数, 求 $f^{(2n+1)}(0)$.
+\end{example}
+\begin{solution}
+    因为 $f'(x)=\dfrac{1}{1+\qty(\dfrac{1+x}{1-x})^2}\cdot\qty(\dfrac{1+x}{1-x})'=\dfrac{1}{1+x^2}=\displaystyle \sum_{n=0}^{\infty} (-1)^{n}x^{2n}$, 所以 
+    $$
+    f(x)=\sum_{n=0}^{\infty} (-1)^{n}\int_{0}^{x} t^{2n} \dd t=\sum_{n=0}^{\infty} (-1)^{n}\dfrac{x^{2n+1}}{2n+1}
+    $$
+    由 Taylor 展开的唯一性, $f^{(2n+1)}(0)=(2n+1)!\cdot\dfrac{(-1)^{n}}{2n+1}=(-1)^{n}(2n)!.$
 \end{solution}
 
 \begin{example}

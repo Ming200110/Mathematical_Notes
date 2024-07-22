@@ -22,7 +22,7 @@
 \end{figure}
 
 \begin{theorem}[特征值的积与和]
-    设 $n$ 阶方阵 $\vb*{A}$ 的特征值为 $\lambda_1,\lambda_2,\cdots,\lambda_n$, 则 $$\displaystyle\det\vb*{A}=\prod_{i=1}^{n}\lambda_i,~\tr\vb*{A}=\sum_{i=1}^{n}\lambda_i.$$
+    \index{特征值的积与和}设 $n$ 阶方阵 $\vb*{A}$ 的特征值为 $\lambda_1,\lambda_2,\cdots,\lambda_n$, 则 $$\displaystyle\det\vb*{A}=\prod_{i=1}^{n}\lambda_i,~\tr\vb*{A}=\sum_{i=1}^{n}\lambda_i.$$
 \end{theorem}
 
 \begin{example}
@@ -33,11 +33,11 @@
 \end{solution}
 
 \begin{theorem}[逆矩阵的特征值]
-    矩阵可逆当且仅当其特征值都不等于零, 若 $\lambda$ 是可逆矩阵 $\vb*{A}$ 的特征值, 则 $\dfrac{1}{\lambda}$ 是逆矩阵 $\vb*{A}^{-1}$ 的特征值.
+    矩阵可逆当且仅当其特征值都不等于零, 若 $\lambda$ 是可逆矩阵 $\vb*{A}$ 的特征值, 则 $\dfrac{1}{\lambda}$ 是逆矩阵 $\vb*{A}^{-1}$ 的特征值.\index{逆矩阵的特征值}
 \end{theorem}
 
 \begin{theorem}[秩一矩阵的特征值]
-    若 $n$ 阶方阵 $\vb*{A}$ 满足 $\rank\vb*{A}=1$, 那么矩阵 $\vb*{A}$ 的特征值为 $\tr\vb*{A}$ 及 $n-1$ 重 0 根.
+    若 $n$ 阶方阵 $\vb*{A}$ 满足 $\rank\vb*{A}=1$, 那么矩阵 $\vb*{A}$ 的特征值为 $\tr\vb*{A}$ 及 $n-1$ 重 0 根.\index{秩一矩阵的特征值}
 \end{theorem}
 
 \begin{example}
@@ -50,10 +50,11 @@
 \begin{theorem}[伴随矩阵的特征值 A]
     若 $\vb*{A}$ 为 $n$ 阶可逆矩阵, 且 $\lambda_i~ (i=1,2,\cdots,n)$ 是 $\vb*{A}$ 的全部特征值, 则 $\dfrac{|\vb*{A}|}{\lambda_i}$ 是 $\vb*{A}^*$ 的全部特征值; 
     若 $\vb*{A}$ 为 $n$ 阶不可逆矩阵, 则 $\vb*{A}^*$ 有 $n-1$ 个特征值为 0, 另一个特征值为 $\tr\vb*{A}^*.$
+    \index{伴随矩阵的特征值}
 \end{theorem}
 
 \begin{theorem}[伴随矩阵的特征值 B]
-    \label{bsjzdtzzB}设 $n$ 阶方阵 $\vb*{A}$ 的特征值为 $\lambda_j~ (j=1,2,\cdots,n)$, 则 $\vb*{A}^*$ 的 $n$ 个特征值为 $\lambda_i^*$, 则
+    \label{bsjzdtzzB}\index{伴随矩阵的特征值}设 $n$ 阶方阵 $\vb*{A}$ 的特征值为 $\lambda_j~ (j=1,2,\cdots,n)$, 则 $\vb*{A}^*$ 的 $n$ 个特征值为 $\lambda_i^*$, 则
     $$\lambda_i^*=\prod_{\substack{1\leqslant j\leqslant n\\j\neq i}}\lambda_j~  (i=1,2,\cdots,n).$$
 \end{theorem}
 
@@ -85,7 +86,7 @@
 \end{solution}
 
 \begin{theorem}[特征值不等式]
-    \label{tzzbds}若 $\vb*{A}$ 的特征值按从小到大排列, 即 $\lambda_1\leqslant \lambda_2\leqslant \cdots\leqslant \lambda_n$, 则 $$\lambda_1\vb*{x}^\top\vb*{x}\leqslant \vb*{x}^\top\vb*{Ax}\leqslant \lambda_n\vb*{x}^\top\vb*{x}.$$
+    \label{tzzbds}\index{特征值不等式}若 $\vb*{A}$ 的特征值按从小到大排列, 即 $\lambda_1\leqslant \lambda_2\leqslant \cdots\leqslant \lambda_n$, 则 $$\lambda_1\vb*{x}^\top\vb*{x}\leqslant \vb*{x}^\top\vb*{Ax}\leqslant \lambda_n\vb*{x}^\top\vb*{x}.$$
 \end{theorem}
 \begin{proof}[{\songti \textbf{证}}]
     存在正交矩阵 $\vb*{Q}$, 令 $\vb*{x}=\vb*{Qy}$, 使得 $$f(x_1,x_2,\cdots,x_n)=\vb*{x}^\top\vb*{Ax}=\vb*{y}^\top\vb*{Q}^\top\vb*{AQy}=\lambda_1y_1^2+\lambda_2y_2^2+\cdots+\lambda_ny_n^2$$
@@ -95,7 +96,7 @@
 \end{proof}
 
 \begin{theorem}[行均和定理]
-    \label{hangjunhedl}若矩阵 $\vb*{A}$ 的每行元素之和均为 $k$, 则 $\vb*{A}$ 有一特征值为 $k$, 所对应特征向量为 $(1,1,\cdots,1)^\top.$
+    \label{hangjunhedl}\index{行均和定理}若矩阵 $\vb*{A}$ 的每行元素之和均为 $k$, 则 $\vb*{A}$ 有一特征值为 $k$, 所对应特征向量为 $(1,1,\cdots,1)^\top.$
 \end{theorem}
 
 \subsubsection{特征值在求解迭代方程中的应用}

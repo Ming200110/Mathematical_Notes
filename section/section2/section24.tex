@@ -100,7 +100,7 @@
     比较式 (1)、(2) 得
     $$\theta f^{\prime \prime}(x_0+\xi \theta) =\dfrac{1}{2} f^{\prime \prime}\left(x_{0}+\eta h\right)$$
     因 $f^{\prime \prime}(x)$ 在 $x_{0}$ 点连续, 所以
-    $$\lim _{h \rightarrow 0} \theta f^{\prime \prime}(x_0+\xi \theta) =\lim _{h \rightarrow 0} \dfrac{1}{2} f^{\prime \prime}\left(x_{0}+\eta h\right)$$
+    $$\lim _{h \to 0} \theta f^{\prime \prime}(x_0+\xi \theta) =\lim _{h \to 0} \dfrac{1}{2} f^{\prime \prime}\left(x_{0}+\eta h\right)$$
     因此有 $f''(x_0)\lim\limits_{h\to0}\theta=\dfrac{1}{2}f''(x_0)$, 又因为 $f''(x_0)\neq0$, 所以 $\lim\limits_{h\to0}\theta=\dfrac{1}{2}.$
 \end{proof}
 
@@ -124,7 +124,7 @@
     $$f^{(k)}(x_0)=0,k=2,3,\cdots,n-1\text{, 且 }f^{(n)}(x_0)\neq 0$$
     当 $0<|h|<\delta$ 时, 
     $$f(x_0+h)  -f(x_0)  =hf'(x_{0}+\theta h)  ~ ( 0 <\theta  < 1) $$
-    证明: $\displaystyle \lim _{n\rightarrow 0}\theta =\dfrac{1}{\sqrt[n-1] {n}}.$
+    证明: $\displaystyle \lim _{n\to 0}\theta =\dfrac{1}{\sqrt[n-1] {n}}.$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
     由 Taylor 公式可得
@@ -164,20 +164,20 @@
         f\left( x+j\right) -f(x) =f'(x) j+\dfrac{f''(x) }{2!}j^{2}+\cdots +\dfrac{f^{\left( n-1\right) }(x) }{\left( n-1\right) !}j^{n-1}+\dfrac{f^{(n) }\left( \xi _{j}\right) }{n!}j^{n} \tag{*}
     \end{equation}
     由于 $\lim\limits_{x\to\infty}f(x)=c,~\lim\limits_{x\to\infty}f^{(n)}(x)=0,~x<\xi_j<x+j$, 可知
-    $$\lim _{x\rightarrow \infty }f\left( x+j\right) =c,~\lim _{x\rightarrow \infty }f^{(n) }\left( \xi _{j}\right) =0$$
+    $$\lim _{x\to \infty }f\left( x+j\right) =c,~\lim _{x\to \infty }f^{(n) }\left( \xi _{j}\right) =0$$
     由式 (*) 可得
-    $$0=\lim _{x\rightarrow \infty }\left[ f\left( x+j\right) -f(x) \right] =\lim _{x\rightarrow \infty }\left[ f'(x) j+\dfrac{1}{2}f''(x) j^{2}+\cdots +\dfrac{f^{\left( n-1\right) }(x) }{\left( n-1\right) !}j^{n-1}+\dfrac{f^{(n) }\left( \xi _{i}\right) }{n!}j^{n}\right] $$
+    $$0=\lim _{x\to \infty }\left[ f\left( x+j\right) -f(x) \right] =\lim _{x\to \infty }\left[ f'(x) j+\dfrac{1}{2}f''(x) j^{2}+\cdots +\dfrac{f^{\left( n-1\right) }(x) }{\left( n-1\right) !}j^{n-1}+\dfrac{f^{(n) }\left( \xi _{i}\right) }{n!}j^{n}\right] $$
     令 $j=1$ 得
     \begin{flalign*}
-        0 & =\lim _{x\rightarrow \infty }\left[ f'(x) +\dfrac{1}{2!}f''(x) +\cdots +\dfrac{f^{\left( n-1\right) }(x) }{\left( n-1\right) !}+\dfrac{f^{(n) }(\xi_1 ) }{n!}\right]             \\
-          & =\lim _{x\rightarrow \infty }f'(x) +\dfrac{1}{2!}\lim _{x\rightarrow \infty }f''(x) +\cdots +\dfrac{1}{\left( n-1\right) !}\lim _{x\rightarrow \infty }f^{\left( n-1\right) }(x)
+        0 & =\lim _{x\to \infty }\left[ f'(x) +\dfrac{1}{2!}f''(x) +\cdots +\dfrac{f^{\left( n-1\right) }(x) }{\left( n-1\right) !}+\dfrac{f^{(n) }(\xi_1 ) }{n!}\right]             \\
+          & =\lim _{x\to \infty }f'(x) +\dfrac{1}{2!}\lim _{x\to \infty }f''(x) +\cdots +\dfrac{1}{\left( n-1\right) !}\lim _{x\to \infty }f^{\left( n-1\right) }(x)
     \end{flalign*}
     相仿可得
     \begin{flalign*}
-        0 & =2\lim _{x\rightarrow \infty }f'(x) +\dfrac{2^{2}}{2!}\lim _{x\rightarrow \infty }f''(x) +\cdots +\dfrac{2^{n-1}}{\left( n-1\right) !}\lim _{x\rightarrow \infty }f^{\left( n-1\right) }(x)             \\
-          & =3\lim _{x\rightarrow \infty }f'(x) +\dfrac{3^{2}}{2!}\lim _{x\rightarrow \infty }f''(x) +\cdots +\dfrac{3^{n-1}}{\left( n-1\right) !}\lim _{x\rightarrow \infty }f^{\left( n-1\right) }(x)             \\
+        0 & =2\lim _{x\to \infty }f'(x) +\dfrac{2^{2}}{2!}\lim _{x\to \infty }f''(x) +\cdots +\dfrac{2^{n-1}}{\left( n-1\right) !}\lim _{x\to \infty }f^{\left( n-1\right) }(x)             \\
+          & =3\lim _{x\to \infty }f'(x) +\dfrac{3^{2}}{2!}\lim _{x\to \infty }f''(x) +\cdots +\dfrac{3^{n-1}}{\left( n-1\right) !}\lim _{x\to \infty }f^{\left( n-1\right) }(x)             \\
           & \cdots\cdots                                                                                                                                                                                            \\
-          & =(n-1)\lim _{x\rightarrow \infty }f'(x) +\dfrac{(n-1)^{2}}{2!}\lim _{x\rightarrow \infty }f''(x) +\cdots +\dfrac{(n-1)^{n-1}}{\left( n-1\right) !}\lim _{x\rightarrow \infty }f^{\left( n-1\right) }(x)
+          & =(n-1)\lim _{x\to \infty }f'(x) +\dfrac{(n-1)^{2}}{2!}\lim _{x\to \infty }f''(x) +\cdots +\dfrac{(n-1)^{n-1}}{\left( n-1\right) !}\lim _{x\to \infty }f^{\left( n-1\right) }(x)
     \end{flalign*}
     不妨记 $\lim\limits_{x\to\infty}f^{(k)}(x)=a_k$ 为待定数值, 可得含有 $n-1$ 个未知量, $n-1$ 个方程构成的方程组, 
     $$\begin{cases}

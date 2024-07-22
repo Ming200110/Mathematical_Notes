@@ -43,7 +43,7 @@
             \lambda \mathrm{e}^{-\lambda x}, & x>0           \\
             0,                               & x \leqslant 0
         \end{cases}$$
-    则称 $ X $ 服从参数为 $ \lambda(\lambda>0) $ 的指数分布, 记为 $ X \sim E(\lambda) $, 其分布函数为
+    则称 $ X $ \textit{服从参数为} $ \lambda(\lambda>0) $ \textit{的指数分布}, 记为 $ X \sim E(\lambda) $, 其分布函数为
     $$F(x)=\begin{cases}
             1-\mathrm{e}^{-\lambda x}, & x>0           \\
             0,                         & x \leqslant 0
@@ -52,7 +52,15 @@
         \item 指数分布常用来描述电子元器件的寿命, $P\{X>x\}=\mathrm{e}^{-\lambda x} $;
         \item 指数分布具有无记忆性, 对于任意 $ s, t>0$, 有 $P\{X>s+t \mid X>s\}=P\{X>t\} .$
     \end{enumerate}
+    \index{指数分布}
 \end{definition}
+
+\begin{example}
+    设随机变量 $X$ 服从参数为 $1$ 的指数分布, 求 $P\qty{3>X>2|X>1}$.
+\end{example}
+\begin{solution}
+    $\displaystyle P\qty{3>X>2|X>1}=P\qty{X>2|X>1}-P\qty{X>3|X>1}=P\qty{X>1}-P\qty{X>2}=\int_{1}^{+\infty} \e ^{-x} \dd x-\int_{2}^{+\infty} \e ^{-x} \dd x=\e ^{-1}-\e ^{-2}.$
+\end{solution}
 
 \begin{example}
     设 $X$ 是服从参数为 2 的指数分布的随机变量, 求随机变量 $Y=X-\dfrac{1}{2}$ 的概率密度函数 $f_Y(y).$

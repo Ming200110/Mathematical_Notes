@@ -1,13 +1,19 @@
 \section{正定性与矩阵的合同}
 
-正定矩阵是正实数概念的延伸——它定义了何为“正”的矩阵, 一种方法是全部元素为正数, 但这显然不是一个好的定义, 
-因为它完全不涉及矩阵的具体结构。因此尝试借助正实数的概念推广至矩阵的正定性。
+正定矩阵是正实数概念的延伸——它定义了何为“正”的矩阵, 一种方法是全部元素为正数, 但这显然不是一个好的定义,
+因为它完全不涉及矩阵的具体结构. 因此尝试借助正实数的概念推广至矩阵的正定性.
 
 一个正实数 $\alpha$ 满足: 对任意一个矢量\footnote{当强调方向时, 采用矢量的说法} $\vb*{v}$, 矢量 $\alpha\vb*{v}$ 会和 $\vb*{v}$ 在同一方向上\footnote{仅描述新矢量在原矢量的分量方向上的投影是正的情況, 不要求两个矢量之间的夹角为零角即完全重合.}, 即内积为正 $\vb*{v}^\top\alpha\vb*{v}>0.$
 
 借助这个准则, 一个正的矩阵 $\vb*{A}$ 需要满足: 对任意一个矢量 $\vb*{v}$, $\vb*{A}v$ 和 $\vb*{v}$ 在同一方向上, 即内积为正: $\vb*{v}^\top\vb*{A}\vb*{v}>0.$
 
 \subsection{正定性}
+
+\begin{theorem}[正定的必要条件]
+    对称矩阵 $\vb*{A}$ 的对角线上的元素 $a_{ii}$ 均大于 0.
+    \index{正定的必要条件}
+    \label{zddbytj}
+\end{theorem}
 
 \begin{theorem}[Hurwitz 定理]
     对称矩阵 $\vb*{A}$ 为正定的充分必要条件: $\vb*{A}$ 的各阶主子式 (顺序主子式) 都为正, 即
@@ -28,6 +34,17 @@
     \label{Hurwitztheorem}
 \end{theorem}
 
+判断一个对称矩阵 $\vb*{A}$ 是否正定, 第一步用正定的必要条件 (定理 \ref{zddbytj}), 第二步用 Hurwitz 定理 (定理 \ref{Hurwitztheorem}).
+
+\begin{theorem}
+    若 $\vb*{A}$ 与 $\vb*{B}$ 都是正定矩阵, 则 
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\vb*{A}^{-1}, \vb*{A}^*,k\vb*{A}~(k>0)$ 都是正定矩阵;
+        \item $\vb*{A}+\vb*{B}$ 是正定矩阵 ($\vb*{A},\vb*{B}$ 同阶);
+        \item $\mqty(\vb*{A}& \vb*{O}\\ \vb*{O} & \vb*{B})$ 是正定矩阵.
+    \end{enumerate}
+\end{theorem}
+
 \begin{theorem}[实对称方阵的等价命题]
     设 $\vb*{S}=(s_{ij})$ 是 $n$ 阶实对称方阵, 则下述命题等价:
     \begin{enumerate}[label=(\arabic{*})]
@@ -45,11 +62,11 @@
 \end{example}
 \begin{solution}
     因为 $\begin{NiceArray}{c:ccc}
-        & x_1 & x_2 & x_3 \\ \hdottedline
+                & x_1 & x_2 & x_3 \\ \hdottedline
             x_1 & 5   & -2  & 0   \\
             x_2 & -2  & 6   & -2  \\
             x_3 & 0   & -2  & 4
-    \end{NiceArray}$, 所以 $f$ 的矩阵 $\vb*{A}=\begin{pmatrix}
+        \end{NiceArray}$, 所以 $f$ 的矩阵 $\vb*{A}=\begin{pmatrix}
             5  & -2 & 0  \\
             -2 & 6  & -2 \\
             0  & -2 & 4
@@ -75,11 +92,11 @@
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
         \item 因为 $\begin{NiceArray}{c:ccc}
-            & x_1 & x_2 & x_3 \\ \hdottedline
-                          x_1 & 1   & t   & -1  \\
-                          x_2 & t   & 1   & 2   \\
-                          x_3 & -1  & 2   & 5
-        \end{NiceArray}$, 所以 $f$ 的矩阵 $\vb*{A}_1=\begin{pmatrix}
+                          & x_1 & x_2 & x_3 \\ \hdottedline
+                      x_1 & 1   & t   & -1  \\
+                      x_2 & t   & 1   & 2   \\
+                      x_3 & -1  & 2   & 5
+                  \end{NiceArray}$, 所以 $f$ 的矩阵 $\vb*{A}_1=\begin{pmatrix}
                       1  & t & -1 \\
                       t  & 1 & 2  \\
                       -1 & 2 & 5
@@ -115,11 +132,11 @@
 \end{example}
 \begin{solution}
     因为 $\begin{NiceArray}{c:ccc}
-        & x  & y  & z  \\ \hdottedline
+              & x  & y  & z  \\ \hdottedline
             x & -5 & 2  & 2  \\
             y & 2  & -6 & 0  \\
             z & 2  & 0  & -4
-    \end{NiceArray}$, 所以 $f$ 的矩阵 $\vb*{A}=\begin{pmatrix}
+        \end{NiceArray}$, 所以 $f$ 的矩阵 $\vb*{A}=\begin{pmatrix}
             -5 & 2  & 2  \\
             2  & -6 & 0  \\
             2  & 0  & -4
@@ -148,27 +165,27 @@
         0&0&0&\cdots&\dfrac{1}{2}&1
         )$, 任取 $\vb*{A}$ 的一个 $k$ 阶顺序主子式, 有
     \begin{flalign*}
-        |\vb*{A}_k|&=\mqty|
-        1            & \dfrac{1}{2} & 0            & \cdots & 0              & 0                                                                           \\
-        \dfrac{1}{2} & 1            & \dfrac{1}{2} & \cdots & 0              & 0                                                                           \\
-        0            & \dfrac{1}{2} & 1            & \cdots & 0              & 0                                                                           \\
-        \vdots       & \vdots       & \vdots       & \ddots & \vdots         & \vdots                                                                      \\
-        0            & 0            & 0            & \cdots & 1              & \dfrac{1}{2}                                                                \\
-        0            & 0            & 0            & \cdots & \dfrac{1}{2}   & 1
+        |\vb*{A}_k|  & =\mqty|
+        1            & \dfrac{1}{2}                        & 0            & \cdots & 0              & 0                                                                           \\
+        \dfrac{1}{2} & 1                                   & \dfrac{1}{2} & \cdots & 0              & 0                                                                           \\
+        0            & \dfrac{1}{2}                        & 1            & \cdots & 0              & 0                                                                           \\
+        \vdots       & \vdots                              & \vdots       & \ddots & \vdots         & \vdots                                                                      \\
+        0            & 0                                   & 0            & \cdots & 1              & \dfrac{1}{2}                                                                \\
+        0            & 0                                   & 0            & \cdots & \dfrac{1}{2}   & 1
         |=\dfrac{1}{2^k} \mqty|
-        2            & 1            & 0            & \cdots & 0              & 0                                                                           \\
-        1            & 2            & 1            & \cdots & 0              & 0                                                                           \\
-        0            & 1            & 2            & \cdots & 0              & 0                                                                           \\
-        \vdots       & \vdots       & \vdots       & \ddots & \vdots         & \vdots                                                                      \\
-        0            & 0            & 0            & \cdots & 2              & 1                                                                           \\
-        0            & 0            & 0            & \cdots & 1              & 2|\xlongequal[i=1,\cdots,k-1]{r_{i+1}-\frac{i}{i+1}r_i}\dfrac{1}{2^k}\mqty|
-        2            & 1            & 0            & \cdots & 0              & 0                                                                           \\
-        0            & \dfrac{3}{2} & 1            & \cdots & 0              & 0                                                                           \\
-        0            & 0            & \dfrac{4}{3} & \cdots & 0              & 0                                                                           \\
-        \vdots       & \vdots       & \vdots       &        & \vdots         & \vdots                                                                      \\
-        0            & 0            & 0            & \cdots & \dfrac{k}{k-1} & 1                                                                           \\
-        0            & 0            & 0            & \cdots & 0              & \dfrac{k+1}{k}|\\ 
-        &= \dfrac{k+1}{k}>0,~k=1,2,\cdots, n
+        2            & 1                                   & 0            & \cdots & 0              & 0                                                                           \\
+        1            & 2                                   & 1            & \cdots & 0              & 0                                                                           \\
+        0            & 1                                   & 2            & \cdots & 0              & 0                                                                           \\
+        \vdots       & \vdots                              & \vdots       & \ddots & \vdots         & \vdots                                                                      \\
+        0            & 0                                   & 0            & \cdots & 2              & 1                                                                           \\
+        0            & 0                                   & 0            & \cdots & 1              & 2|\xlongequal[i=1,\cdots,k-1]{r_{i+1}-\frac{i}{i+1}r_i}\dfrac{1}{2^k}\mqty|
+        2            & 1                                   & 0            & \cdots & 0              & 0                                                                           \\
+        0            & \dfrac{3}{2}                        & 1            & \cdots & 0              & 0                                                                           \\
+        0            & 0                                   & \dfrac{4}{3} & \cdots & 0              & 0                                                                           \\
+        \vdots       & \vdots                              & \vdots       &        & \vdots         & \vdots                                                                      \\
+        0            & 0                                   & 0            & \cdots & \dfrac{k}{k-1} & 1                                                                           \\
+        0            & 0                                   & 0            & \cdots & 0              & \dfrac{k+1}{k}|                                                             \\
+                     & = \dfrac{k+1}{k}>0,~k=1,2,\cdots, n
     \end{flalign*}
     所以 $\vb*{A}$ 正定, 从而二次型正定.
 \end{solution}
@@ -195,8 +212,8 @@
 \begin{solution}
     设 $k$ 维列向量 $\vb*{\alpha}=(3,1,\cdots,1)^{\top}$, 则 $\vb*{A}$ 的 $k$ 阶顺序主子式为
     \begin{flalign*}
-        |\vb*{A}_k|&=\begin{vmatrix}
-            \begin{pmatrix}
+        |\vb*{A}_k| & =\begin{vmatrix}
+                           \begin{pmatrix}
                 b-1 &     &        &     \\
                     & b-1 &        &     \\
                     &     & \ddots &     \\
@@ -207,15 +224,15 @@
                               \vdots \\
                               1
                           \end{pmatrix}(3,1,\cdots,1)
-        \end{vmatrix}=|(b-1)\vb*{E}_k+\vb*{\alpha\alpha}^{\top}|\\
-        &=(b-1)^{k-1}|(b-1)\vb*{E}_1+\vb*{\alpha}^{\top}\vb*{\alpha}|=(b-1)^{k-1}(b+k+7)
+                       \end{vmatrix}=|(b-1)\vb*{E}_k+\vb*{\alpha\alpha}^{\top}|             \\
+                    & =(b-1)^{k-1}|(b-1)\vb*{E}_1+\vb*{\alpha}^{\top}\vb*{\alpha}|=(b-1)^{k-1}(b+k+7)
     \end{flalign*}
     因为 $\vb*{A}$ 的正定的充分必要条件是 $$|\vb*{A}_k|>0\Leftrightarrow b>1\text{ 且 } b>-(k+7),~k=1,2,\cdots,n$$
     所以, 当 $b>1$ 时 $\vb*{A}$ 是正定矩阵.
 \end{solution}
 
 \begin{example}[2019 数一]
-    已知 $\vb*{A}=\mqty(a&1&-1\\1&a&-1\\-1&-1&a)$, 
+    已知 $\vb*{A}=\mqty(a&1&-1\\1&a&-1\\-1&-1&a)$,
     \begin{enumerate}[label=(\arabic{*})]
         \item 求正交矩阵 $\vb*{P}$, 使得 $\vb*{P}^\top\vb*{AP}$ 为对角矩阵;
         \item 求正定矩阵 $\vb*{C}$, 使得 $\vb*{C}^2=(a+3)\vb*{E}-\vb*{A}.$
@@ -223,20 +240,20 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item \textbf{法一: }$|\lambda\vb*{E}-\vb*{A}|=\mqty|\lambda-a&-1&1\\-1&\lambda-a&1\\1&1&\lambda-a|\xlongequal[r_2+r_3]{r_1+r_3}\mqty|\lambda-a+1&0&\lambda-a+1\\0&\lambda-a+1&\lambda-a+1\\1&1&\lambda-a|=(\lambda-a+1)^2(\lambda-a-2)=0$, 
-        因此特征值为 $\lambda_1=a+2$, $\lambda_{2,3}=a-1$ (二重), 则 $\lambda_1$ 对应的特征向量为 $\vb*{\xi}_1=(-1,-1,1)^\top$, $\lambda_{2,3}$ 对应的特征向量分别为 $\vb*{\xi}_2=(-1,1,0)^\top,~\vb*{\xi}_3=(1,0,1)^\top$, 下作特征向量的正交单位化, 
-        $$\vb*{\alpha}_1=\vb*{\xi}_1,~\vb*{\alpha}_2=\vb*{\xi}_2-\dfrac{\qty[\vb*{\alpha}_1,\vb*{\xi}_2]}{\qty[\vb*{\alpha}_1,\vb*{\alpha}_1]}\vb*{\alpha}_1=\vb*{\xi}_2,~\vb*{\alpha}_3=\vb*{\xi}_3-\dfrac{\qty[\vb*{\alpha}_1,\vb*{\xi}_3]}{\qty[\vb*{\alpha}_1,\vb*{\alpha}_1]}\vb*{\alpha}_1-\dfrac{\qty[\vb*{\alpha}_2,\vb*{\xi}_3]}{\qty[\vb*{\alpha}_2,\vb*{\alpha}_2]}\vb*{\alpha}_2=(1,1,2)^\top$$
-        单位化 $$\vb*{e}_1=\dfrac{1}{||\vb*{\alpha}_1||}\vb*{\alpha}_1=\dfrac{1}{\sqrt{3}}\mqty(-1\\-1\\1),~\vb*{e}_2=\dfrac{1}{||\vb*{\alpha}_2||}\vb*{\alpha}_2=\dfrac{1}{\sqrt{2}}\mqty(-1\\1\\0),~\vb*{e}_3=\dfrac{1}{||\vb*{\alpha}_3||}\vb*{\alpha}_3=\dfrac{1}{\sqrt{6}}\mqty(1\\1\\2)$$
-        得正交矩阵 $\vb*{P}=\mqty(-\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]-\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}})$, 使得 $\vb*{P}^\top\vb*{AP}=\mqty(a+2\\&a-1\\&&a-1).$\\
-        \textbf{法二: }因为 $\vb*{A}=\mqty(a&1&-1\\1&a&-1\\-1&-1&a)$, 于是 
-        $$f(\lambda)=\lambda^3-\tr\vb*{A}\lambda^2+\sum_{1\leqslant j_1<j_2\leqslant 3}A\mqty|a_{j_1j_1}&a_{j_1j_2}\\a_{j_2j_1}&a_{j_2j_2}|-\det\vb*{A}=\lambda^3-3a\lambda^2+3\qty(a^2-1)\lambda-(a-1)^2(a+2)=0$$
-        即得特征值 $\lambda_1=a+2,~\lambda_{2,3}=a-1$ (二重), 当 $\lambda=\lambda_1$ 时, $\lambda_1\vb*{E}-\vb*{A}=\mqty(2&-1&1\\-1&2&1\\1&1&2)\xrightarrow{r_3-r_1-r_2}\mqty(2&-1&1\\-1&2&1\\0&0&0)$, 那么 $r_1$ 可由 $r_2$ 与 $(3,-3,0)$ 线性表示, 则
-        $$(2,-1,1)\times(3,-3,0)=(3,3,-3)\Rightarrow (1,1,-1)\Rightarrow \vb*{\xi}_1=(1,1,-1)^\top$$
-        当 $\lambda=\lambda_{2,3}$ 时, $\lambda_{2,3}\vb*{E}-\vb*{A}=\mqty(-1&-1&1\\-1&-1&1\\1&1&-1)\xrightarrow[r_1\leftrightarrow r_3]{\substack{r_1+r_3\\r_2+r_3}}\mqty(1&1&-1\\0&0&0\\0&0&0)$, 那么 $$r_1\cdot (1,1,2)=0,~r_1\times(1,1,2)=(-3,3,0)\Rightarrow(-1,1,0)$$
-        则取 $\vb*{\xi}_2=(-1,1,0)^\top,~\vb*{\xi}_3=(1,1,2)^\top$, 因此 $\vb*{\xi}_{1,2,3}$ 已经两两相互正交, 则正交矩阵 $\vb*{P}=\mqty(-\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]-\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}})$, 使得 $\vb*{P}^\top\vb*{AP}=\mqty(a+2\\&a-1\\&&a-1).$
-        \item 因为 $\vb*{P}^\top\vb*{AP}=\mqty(a+2\\&a-1\\&&a-1)$, 所以 $\vb*{P}^\top\qty[(a+3)\vb*{E}-\vb*{A}]\vb*{P}=\mqty(1\\&4\\&&4)$, 即 
-        $$(a+3)\vb*{E}-\vb*{A}=\vb*{P}\mqty(1\\&4\\&&4)\vb*{P}^\top=\vb*{P}\mqty(1\\&2\\&&2)\vb*{P}^\top\cdot\vb*{P}\mqty(1\\&2\\&&2)\vb*{P}^\top$$
-        $\vb*{C}=\vb*{P}\mqty(1\\&2\\&&2)\vb*{P}^\top\Rightarrow\mqty(-\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]-\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}})\mqty(1\\&2\\&&2)\mqty(-\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]-\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}})^\top=\dfrac{1}{3}\mqty(5&-1&1\\-1&5&1\\1&1&5).$
+        \item \textbf{法一: }$|\lambda\vb*{E}-\vb*{A}|=\mqty|\lambda-a&-1&1\\-1&\lambda-a&1\\1&1&\lambda-a|\xlongequal[r_2+r_3]{r_1+r_3}\mqty|\lambda-a+1&0&\lambda-a+1\\0&\lambda-a+1&\lambda-a+1\\1&1&\lambda-a|=(\lambda-a+1)^2(\lambda-a-2)=0$,
+              因此特征值为 $\lambda_1=a+2$, $\lambda_{2,3}=a-1$ (二重), 则 $\lambda_1$ 对应的特征向量为 $\vb*{\xi}_1=(-1,-1,1)^\top$, $\lambda_{2,3}$ 对应的特征向量分别为 $\vb*{\xi}_2=(-1,1,0)^\top,~\vb*{\xi}_3=(1,0,1)^\top$, 下作特征向量的正交单位化,
+              $$\vb*{\alpha}_1=\vb*{\xi}_1,~\vb*{\alpha}_2=\vb*{\xi}_2-\dfrac{\qty[\vb*{\alpha}_1,\vb*{\xi}_2]}{\qty[\vb*{\alpha}_1,\vb*{\alpha}_1]}\vb*{\alpha}_1=\vb*{\xi}_2,~\vb*{\alpha}_3=\vb*{\xi}_3-\dfrac{\qty[\vb*{\alpha}_1,\vb*{\xi}_3]}{\qty[\vb*{\alpha}_1,\vb*{\alpha}_1]}\vb*{\alpha}_1-\dfrac{\qty[\vb*{\alpha}_2,\vb*{\xi}_3]}{\qty[\vb*{\alpha}_2,\vb*{\alpha}_2]}\vb*{\alpha}_2=(1,1,2)^\top$$
+              单位化 $$\vb*{e}_1=\dfrac{1}{||\vb*{\alpha}_1||}\vb*{\alpha}_1=\dfrac{1}{\sqrt{3}}\mqty(-1\\-1\\1),~\vb*{e}_2=\dfrac{1}{||\vb*{\alpha}_2||}\vb*{\alpha}_2=\dfrac{1}{\sqrt{2}}\mqty(-1\\1\\0),~\vb*{e}_3=\dfrac{1}{||\vb*{\alpha}_3||}\vb*{\alpha}_3=\dfrac{1}{\sqrt{6}}\mqty(1\\1\\2)$$
+              得正交矩阵 $\vb*{P}=\mqty(-\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]-\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}})$, 使得 $\vb*{P}^\top\vb*{AP}=\mqty(a+2\\&a-1\\&&a-1).$\\
+              \textbf{法二: }因为 $\vb*{A}=\mqty(a&1&-1\\1&a&-1\\-1&-1&a)$, 于是
+              $$f(\lambda)=\lambda^3-\tr\vb*{A}\lambda^2+\sum_{1\leqslant j_1<j_2\leqslant 3}A\mqty|a_{j_1j_1}&a_{j_1j_2}\\a_{j_2j_1}&a_{j_2j_2}|-\det\vb*{A}=\lambda^3-3a\lambda^2+3\qty(a^2-1)\lambda-(a-1)^2(a+2)=0$$
+              即得特征值 $\lambda_1=a+2,~\lambda_{2,3}=a-1$ (二重), 当 $\lambda=\lambda_1$ 时, $\lambda_1\vb*{E}-\vb*{A}=\mqty(2&-1&1\\-1&2&1\\1&1&2)\xrightarrow{r_3-r_1-r_2}\mqty(2&-1&1\\-1&2&1\\0&0&0)$, 那么 $r_1$ 可由 $r_2$ 与 $(3,-3,0)$ 线性表示, 则
+              $$(2,-1,1)\times(3,-3,0)=(3,3,-3)\Rightarrow (1,1,-1)\Rightarrow \vb*{\xi}_1=(1,1,-1)^\top$$
+              当 $\lambda=\lambda_{2,3}$ 时, $\lambda_{2,3}\vb*{E}-\vb*{A}=\mqty(-1&-1&1\\-1&-1&1\\1&1&-1)\xrightarrow[r_1\leftrightarrow r_3]{\substack{r_1+r_3\\r_2+r_3}}\mqty(1&1&-1\\0&0&0\\0&0&0)$, 那么 $$r_1\cdot (1,1,2)=0,~r_1\times(1,1,2)=(-3,3,0)\Rightarrow(-1,1,0)$$
+              则取 $\vb*{\xi}_2=(-1,1,0)^\top,~\vb*{\xi}_3=(1,1,2)^\top$, 因此 $\vb*{\xi}_{1,2,3}$ 已经两两相互正交, 则正交矩阵 $\vb*{P}=\mqty(-\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]-\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}})$, 使得 $\vb*{P}^\top\vb*{AP}=\mqty(a+2\\&a-1\\&&a-1).$
+        \item 因为 $\vb*{P}^\top\vb*{AP}=\mqty(a+2\\&a-1\\&&a-1)$, 所以 $\vb*{P}^\top\qty[(a+3)\vb*{E}-\vb*{A}]\vb*{P}=\mqty(1\\&4\\&&4)$, 即
+              $$(a+3)\vb*{E}-\vb*{A}=\vb*{P}\mqty(1\\&4\\&&4)\vb*{P}^\top=\vb*{P}\mqty(1\\&2\\&&2)\vb*{P}^\top\cdot\vb*{P}\mqty(1\\&2\\&&2)\vb*{P}^\top$$
+              $\vb*{C}=\vb*{P}\mqty(1\\&2\\&&2)\vb*{P}^\top\Rightarrow\mqty(-\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]-\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}})\mqty(1\\&2\\&&2)\mqty(-\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]-\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}})^\top=\dfrac{1}{3}\mqty(5&-1&1\\-1&5&1\\1&1&5).$
     \end{enumerate}
 \end{solution}
 
@@ -285,12 +302,12 @@
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
     \begin{enumerate}[label=(\arabic{*})]
-        \item 因为 $\vb*{A},~\vb*{B}$ 均为 $n$ 阶实对称矩阵, 所以存在可逆实矩阵 $\vb*{P}$, 使得 $\vb*{P}^\top\vb*{BP}=\vb*{E}$, $\vb*{P}^\top\vb*{AP}$ 仍为实对称矩阵, 故又存在正交矩阵 $\vb*{Q}$ 使得, 
+        \item 因为 $\vb*{A},~\vb*{B}$ 均为 $n$ 阶实对称矩阵, 所以存在可逆实矩阵 $\vb*{P}$, 使得 $\vb*{P}^\top\vb*{BP}=\vb*{E}$, $\vb*{P}^\top\vb*{AP}$ 仍为实对称矩阵, 故又存在正交矩阵 $\vb*{Q}$ 使得,
               $$\vb*{Q}^\top\qty(\vb*{P}^\top\vb*{AP})\vb*{Q}=\diag(\lambda_1,\lambda_2,\cdots,\lambda_n)$$
               其中 $\lambda_k,~(k=1,2,\cdots,n)$ 为 $\vb*{P}^\top\vb*{AP}$ 的特征值, 又因为
               $$\qty|\lambda\vb*{E}-\vb*{P}^\top\vb*{AP}|=\qty|\lambda \vb*{P}^\top\vb*{BP}-\vb*{P}^\top\vb*{AP}|=\qty|\vb*{P}^2|~\qty|\lambda\vb*{B}-\vb*{A}|=|\vb*{B}|~\qty|\vb*{P}^2|~\qty|\lambda\vb*{E}-\vb*{AB}^{-1}|=0$$
-              因为 $\vb*{B}$ 是正定的, $\det\vb*{P}^2>0$, 所以 $|\vb*{B}|~\qty|\vb*{P}^2|>0$, 所以 $\lambda_1,\cdots,\lambda_n$ 是 $\vb*{AB}^{-1}$ 的全部特征值, 也是 $|\vb*{A}-\lambda\vb*{B}|$ 的所有根, 
-              又因为 $\vb*{P}^\top(\vb*{A}-\vb*{B})\vb*{P}$ 是实对称矩阵, 其特征值为 $\lambda_1-1,\lambda_2-1,\cdots,\lambda_n-1$, 
+              因为 $\vb*{B}$ 是正定的, $\det\vb*{P}^2>0$, 所以 $|\vb*{B}|~\qty|\vb*{P}^2|>0$, 所以 $\lambda_1,\cdots,\lambda_n$ 是 $\vb*{AB}^{-1}$ 的全部特征值, 也是 $|\vb*{A}-\lambda\vb*{B}|$ 的所有根,
+              又因为 $\vb*{P}^\top(\vb*{A}-\vb*{B})\vb*{P}$ 是实对称矩阵, 其特征值为 $\lambda_1-1,\lambda_2-1,\cdots,\lambda_n-1$,
               所以 $\vb*{A}-\vb*{B}$ 半正定当且仅当 $\vb*{P}^\top(\vb*{A}-\vb*{B})\vb*{P}$ 半正定, 这又等价为 $\lambda_k-1\geqslant 0,~(k=1,2,\cdots,n)$, 即 $|\vb*{A}-\lambda\vb*{B}|=0$ 的任一根 $\lambda\geqslant 1.$
         \item 由 (1) 可知 $\det\qty(\vb*{AB}^{-1})=\displaystyle\prod_{i=1}^{r}\lambda_k\geqslant 1$, 所以 $\det\vb*{A}\geqslant \det\vb*{B}.$
     \end{enumerate}
@@ -305,11 +322,11 @@
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
     \begin{enumerate}[label=(\arabic{*})]
-        \item 由题意知: $\rank\vb*{A}=m,~\rank\vb*{B}=s$, 且 $\rank\qty(\vb*{AA}^\top)=m,~\rank\qty(\vb*{BB}^\top)=s$, 
-              所以 $\vb*{AA}^\top,~\vb*{BB}^\top$ 均为可逆矩阵, 并且分块矩阵 $\mqty(\vb*{AA}^\top&\vb*{AB}^\top\\\vb*{BA}^\top&\vb*{BB}^\top)=\mqty(\vb*{A}\\\vb*{B})\mqty(\vb*{A}\\\vb*{B})^\top$ 是半正定的, 且与 $\mqty(\vb*{AA}^\top-\vb*{Q}&\vb*{O}\\\vb*{O}&\vb*{BB}^\top)$ 合同, 
+        \item 由题意知: $\rank\vb*{A}=m,~\rank\vb*{B}=s$, 且 $\rank\qty(\vb*{AA}^\top)=m,~\rank\qty(\vb*{BB}^\top)=s$,
+              所以 $\vb*{AA}^\top,~\vb*{BB}^\top$ 均为可逆矩阵, 并且分块矩阵 $\mqty(\vb*{AA}^\top&\vb*{AB}^\top\\\vb*{BA}^\top&\vb*{BB}^\top)=\mqty(\vb*{A}\\\vb*{B})\mqty(\vb*{A}\\\vb*{B})^\top$ 是半正定的, 且与 $\mqty(\vb*{AA}^\top-\vb*{Q}&\vb*{O}\\\vb*{O}&\vb*{BB}^\top)$ 合同,
               因此 $\vb*{AA}^\top-\vb*{Q}$ 是半正定的.
         \item 易知 $\vb*{AA}^\top$ 是正定的, $\vb*{Q}$ 是半正定的, 所以存在可逆实矩阵 $P$, 使得 $$\vb*{P}^\top\qty(\vb*{AA}^\top)\vb*{P}=\vb*{E},~\vb*{P}^\top\vb*{QP}=\diag(\lambda_1,\lambda_2,\cdots,\lambda_n),~(\lambda_k\geqslant 0)$$
-              又因为 $\vb*{AA}^\top-\vb*{Q}$ 是半正定的, 所以 $1-\lambda_k\geqslant 0$ 即 $0\leqslant \lambda_k\leqslant 1$, 其中 $k=1,2,\cdots,n$, 
+              又因为 $\vb*{AA}^\top-\vb*{Q}$ 是半正定的, 所以 $1-\lambda_k\geqslant 0$ 即 $0\leqslant \lambda_k\leqslant 1$, 其中 $k=1,2,\cdots,n$,
               $$\det\qty(\vb*{P}^\top\vb*{QP})=\qty|\vb*{P}^2|~\qty|\vb*{Q}|=\prod_{i=1}^{r}\lambda_i\leqslant 1=\qty|\vb*{P}^2|\qty|\vb*{AA}^\top|\Rightarrow 0\leqslant \det\vb*{Q}\leqslant \det\qty(\vb*{AA}^\top).$$
     \end{enumerate}
 \end{proof}
@@ -319,6 +336,27 @@
 \end{inference}
 
 \subsection{矩阵的合同}
+
+\begin{definition}[矩阵合同]
+    对于两个 $ n $ 阶矩阵 $\vb*{A}$ 和 $\vb*{B}$, 若存在可逆矩阵 $\vb*{C}$, 使得
+    $$
+        \boldsymbol{C}^{\mathrm{T}} \boldsymbol{A} \boldsymbol{C}=\boldsymbol{B}
+    $$
+    则称矩阵 $\vb*{A}$ 与 $\vb*{B}$ 合同, 记作 $ \vb*{A} \simeq \vb*{B} .$\\
+    并不一定要求矩阵是对称矩阵, 但是考研基本都是对称矩阵. 设矩阵 $\vb*{A}$ 与 $\vb*{B}$ 合同, 若 $ \vb*{A} $ 是对称矩阵, 则 $ \vb*{B} $ 也是对称矩阵; 若 $ \vb*{A} $ 不是对称矩阵, 则 $ \boldsymbol{B} $ 也不是对称矩阵.\\
+    二次型的可逆变换都是合同变换, 即
+    $$
+        \boldsymbol{x}^{\mathrm{T}} \boldsymbol{A} \boldsymbol{x} \xlongequal{\boldsymbol{x}=\boldsymbol{C} \boldsymbol{y}}(\boldsymbol{C} \boldsymbol{y})^{\mathrm{T}} \boldsymbol{A} \boldsymbol{C} \boldsymbol{y}=\boldsymbol{y}^{\mathrm{T}} \boldsymbol{B} \boldsymbol{y}
+    $$
+    其中 $ \boldsymbol{C}^{\mathrm{T}} \boldsymbol{A} \boldsymbol{C}=\boldsymbol{B} $.\index{矩阵合同}
+\end{definition}
+
+矩阵合同关系也是一种等价关系, 有以下性质:
+\begin{enumerate}[label=(\arabic{*})]
+    \item 反身性: $\vb*{A} \simeq \vb*{A} $;
+    \item  对称性: 若 $ \vb*{A} \simeq \vb*{B} $, 则 $ \vb*{B} \simeq \vb*{A} $;
+    \item 传递性: 若 $ \boldsymbol{A} \simeq \vb*{B}, \vb*{B} \simeq \vb*{C} $, 则 $ \vb*{A} \simeq \vb*{C} .$
+\end{enumerate}
 
 \begin{example}
     对于二次型 $f=\vb*{x}^\top\vb*{Ax}$ 经非奇异线性变换 $\vb*{x}=\vb*{Cy}$ 化为 $f=\vb*{y}^\top\vb*{By}$, 则 $\vb*{A}$ 与 $\vb*{B}$ 必定是
@@ -330,9 +368,28 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    令 $\vb*{x}=\vb*{Cy}$, 则 
+    令 $\vb*{x}=\vb*{Cy}$, 则
     $$f=\vb*{x}^\top\vb*{Ax}=(\vb*{Cy})^\top\vb*{A}(\vb*{Cy})=\qty(\vb*{y}^\top\vb*{C}^\top)\vb*{A}(\vb*{Cy})=\vb*{y}^\top\qty(\vb*{C}^\top\vb*{AC})\vb*{y}=\vb*{y}^\top\vb*{By}$$
     因此 $\vb*{B}=\vb*{C}^\top\vb*{AC}$, 那么 $\vb*{A}$ 与 $\vb*{B}$ 合同.
+\end{solution}
+
+\begin{example}
+    设 $\vb*{A}=\mqty(1&2\\2&1), \vb*{B}=\begin{pmatrix} 1 & 4 \\ 1 & 1 \\\end{pmatrix}$, 则正确的是
+    \begin{tasks}(2)
+        \task 必存在正交矩阵 $\vb*{Q}$, 使得 $\vb*{Q}^{-1}\vb*{AQ}=\vb*{B}.$
+        \task 必存在可逆矩阵 $\vb*{P}$, 使得 $\vb*{P}^{-1}\vb*{AP}=\vb*{B}.$
+        \task 必存在可逆矩阵 $\vb*{P}$, 使得 $\vb*{P}^{\top}\vb*{AP}=\vb*{B}.$
+        \task 必存在可逆矩阵 $\vb*{P}$, 使得 $\vb*{A}=\vb*{P}^\top\vb*{P}.$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    矩阵 $\vb*{A}$ 和 $\vb*{B}$ 均有特征值 $\lambda_1=3,\lambda_2=-1$, 且 $\vb*{A}$ 为实对称矩阵, 所以 $$\exists\vb*{Q}_1, \exists\vb*{P}_1,s.t. \vb*{Q}_1\vb*{AQ}_1=\mqty(3\\&-1)=\vb*{P}_1\vb*{BP}_1$$
+    所以 $\qty(\vb*{Q}_1\vb*{P}_1^{-1})^{-1}\vb*{A}\qty(\vb*{Q}_1\vb*{P}_1^{-1})=\vb*{B}$, 但 $\vb*{Q}_1\vb*{P}_1^{-1}$ 不一定为正交矩阵, A 错误, B 正确,
+    $\vb*{A}$ 为实对称矩阵, $\vb*{B}$ 不为实对称矩阵, 二者不合同, 故 C 错误,
+    $$
+        \vb*{A}=\vb*{P}^\top\vb*{P}=\vb*{P}^\top\vb*{EP}
+    $$
+    因为 $p_{\vb*{A}}=1,q_{\vb*{A}}=1, p_{\vb*{E}}=2$, 所以二者不合同, D 错误.
 \end{solution}
 
 \begin{example}
@@ -386,26 +443,26 @@
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
         \item 因为 $\vb*{A}$ 与 $\vb*{B}$ 合同, 所以 $\rank\vb*{A}=\rank\vb*{B}$, 那么
-        $$\det\vb*{A}=0=\det\vb*{B}=5-a\Rightarrow a=5$$
-        实对称矩阵 $\vb*{A}$ 对应二次型为 $f(x_1,x_2,x_3)=x_1^2-x_3^2+2x_1x_2+2x_2x_3=(x_1+x_2)^2-(x_2-x_3)^2$
-        作可逆线性变化 $\begin{cases}
-            z_1=x_1+x_2\\ z_2=x_2-x_3\\ z_3=x_3
-        \end{cases}$ 即 $$\mqty( z_1 \\ z_2 \\ z_3 )=\begin{pmatrix} 1 & 1 & 0 \\ 0 & 1 & -1 \\ 0 & 0 & 1 \\\end{pmatrix}\mqty( x_1 \\ x_2 \\ x_n )=\vb*{P}_1\vb*{X}$$
-        实对称矩阵 $\vb*{B}$ 对应二次型为 $f(y_1, y_2, y_3)=y_1^2+5y_2^2+6y_1y_2+2y_1y_3+2y_2y_3=(y_1+3y_2+y_3)^2-(y_2-y_3)^2$ 作可逆线性变化 $\begin{cases}
-            z_1=y_1+3y_2+y_3\\ z_2=y_2-y_3\\ z_3=y_3
-        \end{cases}$
-        即 
-        $$
-        \mqty( z_1 \\ z_2 \\ z_n )=\begin{pmatrix} 1 & 3 & 1 \\ 0 & 2 & 1 \\ 0 & 0 & 1 \\\end{pmatrix}\mqty( y_1 \\ y_2 \\ y_n )=\vb*{P}_2\vb*{X}
-        $$
-        则 $$\vb*{X}=\vb*{P}_1^{-1}\vb*{P}_2\vb*{Y}=\begin{pmatrix} 1 & 1 & 0 \\ 0 & 1 & -1 \\ 0 & 0 & 1 \\\end{pmatrix}^{-1}\begin{pmatrix} 1 & 3 & 1 \\ 0 & 2 & 1 \\ 0 & 0 & 1 \\\end{pmatrix}\mqty( y_1 \\ y_2 \\ y_n )=\begin{pmatrix} 1 & 1 & -1 \\ 0 & 2 & 2 \\ 0 & 0 & 1 \\\end{pmatrix}\mqty( y_1 \\ y_2 \\ y_n )$$
-        记 $\vb*{P}=\begin{pmatrix} 1 & 1 & -1 \\ 0 & 2 & 2 \\ 0 & 0 & 1 \\\end{pmatrix}$, 于是在可逆线性变换 $\vb*{X}=\vb*{PY}$ 下, 二次型 $f(\vb*{X})$ 化为二次型 $g(\vb*{Y})$, 从而有 $\vb*{P}^\top\vb*{AP}=\vb*{B}.$
-        \item 矩阵 $\vb*{A}$ 与 $\vb*{B}$ 不相似, 理由如下, 因为若矩阵 $\vb*{A} \sim \vb*{B}$ 则 $|\vb*{A}|=|\vb*{B}|,\tr\vb*{A}=\tr\vb*{B}$, 由于 
-        $$
-        |\vb*{A}|=0,|\vb*{B}|=5-a,\tr\vb*{A}=0,\tr\vb*{B}=1+a
-        $$
-        方程组 $\begin{cases}
-            5-a=0\\ 1+a=0
-        \end{cases}$ 无解, 所以对任意实数 $a$, 矩阵 $\vb*{A}$ 与 $\vb*{B}$ 均不相似.
+              $$\det\vb*{A}=0=\det\vb*{B}=5-a\Rightarrow a=5$$
+              实对称矩阵 $\vb*{A}$ 对应二次型为 $f(x_1,x_2,x_3)=x_1^2-x_3^2+2x_1x_2+2x_2x_3=(x_1+x_2)^2-(x_2-x_3)^2$
+              作可逆线性变化 $\begin{cases}
+                      z_1=x_1+x_2 \\ z_2=x_2-x_3\\ z_3=x_3
+                  \end{cases}$ 即 $$\mqty( z_1 \\ z_2 \\ z_3 )=\begin{pmatrix} 1 & 1 & 0 \\ 0 & 1 & -1 \\ 0 & 0 & 1 \\\end{pmatrix}\mqty( x_1 \\ x_2 \\ x_n )=\vb*{P}_1\vb*{X}$$
+              实对称矩阵 $\vb*{B}$ 对应二次型为 $f(y_1, y_2, y_3)=y_1^2+5y_2^2+6y_1y_2+2y_1y_3+2y_2y_3=(y_1+3y_2+y_3)^2-(y_2-y_3)^2$ 作可逆线性变化 $\begin{cases}
+                      z_1=y_1+3y_2+y_3 \\ z_2=y_2-y_3\\ z_3=y_3
+                  \end{cases}$
+              即
+              $$
+                  \mqty( z_1 \\ z_2 \\ z_n )=\begin{pmatrix} 1 & 3 & 1 \\ 0 & 2 & 1 \\ 0 & 0 & 1 \\\end{pmatrix}\mqty( y_1 \\ y_2 \\ y_n )=\vb*{P}_2\vb*{X}
+              $$
+              则 $$\vb*{X}=\vb*{P}_1^{-1}\vb*{P}_2\vb*{Y}=\begin{pmatrix} 1 & 1 & 0 \\ 0 & 1 & -1 \\ 0 & 0 & 1 \\\end{pmatrix}^{-1}\begin{pmatrix} 1 & 3 & 1 \\ 0 & 2 & 1 \\ 0 & 0 & 1 \\\end{pmatrix}\mqty( y_1 \\ y_2 \\ y_n )=\begin{pmatrix} 1 & 1 & -1 \\ 0 & 2 & 2 \\ 0 & 0 & 1 \\\end{pmatrix}\mqty( y_1 \\ y_2 \\ y_n )$$
+              记 $\vb*{P}=\begin{pmatrix} 1 & 1 & -1 \\ 0 & 2 & 2 \\ 0 & 0 & 1 \\\end{pmatrix}$, 于是在可逆线性变换 $\vb*{X}=\vb*{PY}$ 下, 二次型 $f(\vb*{X})$ 化为二次型 $g(\vb*{Y})$, 从而有 $\vb*{P}^\top\vb*{AP}=\vb*{B}.$
+        \item 矩阵 $\vb*{A}$ 与 $\vb*{B}$ 不相似, 理由如下, 因为若矩阵 $\vb*{A} \sim \vb*{B}$ 则 $|\vb*{A}|=|\vb*{B}|,\tr\vb*{A}=\tr\vb*{B}$, 由于
+              $$
+                  |\vb*{A}|=0,|\vb*{B}|=5-a,\tr\vb*{A}=0,\tr\vb*{B}=1+a
+              $$
+              方程组 $\begin{cases}
+                      5-a=0 \\ 1+a=0
+                  \end{cases}$ 无解, 所以对任意实数 $a$, 矩阵 $\vb*{A}$ 与 $\vb*{B}$ 均不相似.
     \end{enumerate}
 \end{solution}
