@@ -70,7 +70,7 @@
 \end{solution}
 
 \begin{example}
-    设 $X_1,X_2$ 是来自总体 $X$ 的简单随机样本, 且 $\bar{X}=\dfrac{1}{2}\displaystyle \sum_{i=1}^{2}X_i,S_2^2=\sum_{i=1}^{2}\qty(X-\bar{X})^2,Y=\sqrt{X_1X_2}$, 
+    设 $X_1,X_2$ 是来自总体 $X$ 的简单随机样本, 且 $$\bar{X}=\dfrac{1}{2}\displaystyle \sum_{i=1}^{2}X_i,S_2^2=\sum_{i=1}^{2}\qty(X-\bar{X})^2,Y=\sqrt{X_1X_2}$$
     \begin{enumerate}[label=(\arabic{*})]
         \item 若 $X$ 服从参数为 $\dfrac{1}{2}$ 的指数分布, 求 $EY$;
         \item 若 $X\sim N\qty(\mu,\sigma^2)$, 求 $E\qty[\qty(\bar{X}S_2^2)^2].$
@@ -168,7 +168,7 @@
             (\rownumber) 泊松分布 $\pi(\lambda)$          & $p(x)=\dfrac{\lambda^x\e^{-\lambda}}{x!},~x=0,1,2,\cdots,~\lambda>0$                                                                                                                                                                                                                  & $\lambda$            & $\lambda$                                        \\
             (\rownumber) 几何分布 $G(p)$                & $p(x)=pq^{x-1},~x=1,2,\cdots,~0<p<1,~p+q=1$                                                                                                                                                                                                                                           & $\dfrac{1}{p}$       & $\dfrac{q}{p^2}$                                 \\
             \midrule
-            (\rownumber) 均匀分布 $U(a,b)$              & $f(x)=\begin{cases}\dfrac{1}{b-1},&a\leqslant x\leqslant b\\0,&\text{其他}\end{cases}$                                                                                                                                                                                                & $\dfrac{a+b}{2}$     & $\dfrac{(b-a)^2}{12}$                            \\
+            (\rownumber) 均匀分布 $U(a,b)$              & $f(x)=\begin{cases}\dfrac{1}{b-a},&a\leqslant x\leqslant b\\0,&\text{其他}\end{cases}$                                                                                                                                                                                                & $\dfrac{a+b}{2}$     & $\dfrac{(b-a)^2}{12}$                            \\
             (\rownumber) 指数分布 $e(\lambda)$          & $f(x)=\begin{cases}\lambda\e^{-\lambda x},&x>0\\0,&\text{其他}\end{cases}\lambda>0$                                                                                                                                                                                                   & $\dfrac{1}{\lambda}$ & $\dfrac{1}{\lambda^2}$                           \\
             (\rownumber) 正态分布 $N\qty(\mu,\sigma^2)$ & $f(x)=\dfrac{1}{\sqrt{2\pi}\sigma}\e^{-\frac{(x-\mu)^2}{2\sigma^2}},~-\infty<x+\infty,~\sigma>0$                                                                                                                                                                                      & $\mu$                & $\sigma^2$                                       \\
             \midrule
@@ -225,7 +225,7 @@
     $X_i-\mu\sim N(0,1)$, 由卡方分布的定义知 $\displaystyle\sum_{i=1}^{n}(X_i-\mu)^2\sim \chi^2(n)$, A 正确;
     $X_n\sim N(\mu,1),~X_1\sim N(\mu,1)$, 标准化处理有 $\dfrac{X_n-X_1}{\sqrt{2}}\sim N(0,1)$, 即 $\qty(\dfrac{X_n-X_1}{\sqrt{2}})^2\sim \chi^2(1)\Rightarrow \dfrac{\qty(X_n-X_1)^2}{2}\sim \chi^2(1)$, 故选项 B 错误;
     由于 $\displaystyle \sum_{i=1}^{n}\qty(X_i-\bar{X})^2=(n-1)S^2$, 而 $\dfrac{(n-1)S^2}{\sigma^2}\sim \chi^2(n-1)$, 则 $\dfrac{(n-1)S^2}{1}\sim \chi^2(n-1)$, 即 $\displaystyle \sum_{i=1}^{n}\qty(X_i-\bar{X})^2\sim \chi^2(n-1)$, C 正确;
-    由于 $\dfrac{\bar{X}-\mu}{\sqrt{\dfrac{1}{n}}}\sim N(0,1)$, 则 $\displaystyle\qty(\dfrac{\bar{X}-\mu}{\sqrt{\dfrac{1}{n}}})^2=n\qty(\bar{X}-\mu)^2\sim \chi^2(1)$, D 正确.
+    由于 $\dfrac{\bar{X}-\mu}{\sqrt{\dfrac{1}{n}}}\sim N(0,1)$, 则 $\displaystyle\qty(\dfrac{\bar{X}-\mu}{1/ \sqrt{n}})^2=n\qty(\bar{X}-\mu)^2\sim \chi^2(1)$, D 正确.
 \end{solution}
 
 \begin{example}
@@ -247,8 +247,8 @@
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
         \item 因为 $\displaystyle\sum_{i=1}^{3}X_i=X_1+X_2+X_3\sim N(0+0+0,1+1+1)=N(0,3)$, 所以
-              $$\dfrac{1}{3}\qty(\sum_{i=1}^{3}X_i)^2=\dfrac{\displaystyle\qty(\sum_{i=1}^{3}X_i)^2}{\qty(\sqrt{3})^2}=\qty(\dfrac{\displaystyle\sum_{i=1}^{3}X_i-0}{\sqrt{3}})^2\sim \chi^2(1)$$
-              同理 $\dfrac{1}{7}\qty(\displaystyle\sum_{i=4}^{10}X_i)^2=\dfrac{\qty(\displaystyle\sum_{i=4}^{10}X_i)^2}{\qty(\sqrt{7})^2}=\qty(\dfrac{\displaystyle\sum_{i=4}^{10}X_i-0}{\sqrt{7}})^2\sim\chi^2(1)$, 
+              $$\dfrac{1}{3}\qty(\sum_{i=1}^{3}X_i)^2=\dfrac{\displaystyle\qty(\sum_{i=1}^{3}X_i)^2}{\qty(\sqrt{3})^2}=\qty(\dfrac{\sum_{i=1}^{3}X_i-0}{\sqrt{3}})^2\sim \chi^2(1)$$
+              同理 $\dfrac{1}{7}\qty(\displaystyle\sum_{i=4}^{10}X_i)^2=\dfrac{\qty(\displaystyle\sum_{i=4}^{10}X_i)^2}{\qty(\sqrt{7})^2}=\qty(\dfrac{\sum_{i=4}^{10}X_i-0}{\sqrt{7}})^2\sim\chi^2(1)$, 
               于是 $T=\displaystyle\dfrac{1}{3}\qty(\sum_{i=1}^{3}X_i)^3+\dfrac{1}{7}\qty(\sum_{i=4}^{10}X_i)^2\sim\chi^2(2).$
         \item $T=\dfrac{\displaystyle7\sum_{i=1}^{3}X_i^2}{\displaystyle 3\sum_{i=4}^{10}X_i^2}=\dfrac{\dfrac{\sum_{i=1}^{3}X_i^2}{3}}{\dfrac{\sum_{i=4}^{10}X_i^2}{7}}\sim F(3,7).$
         \item $T=\dfrac{3X_1}{\sqrt{\displaystyle\sum_{i=2}^{10}X_i^2}}=\dfrac{X_1}{\dfrac{\sqrt{\sum_{i=2}^{10}X_i^2}}{3}}=\dfrac{X_1}{\sqrt{\dfrac{\sum_{i=2}^{10}X_i^2}{9}}}\sim t(9).$

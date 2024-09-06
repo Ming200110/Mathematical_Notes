@@ -206,6 +206,29 @@
     \index{全微分的形式不变性}
 \end{theorem}
 
+\begin{theorem}
+    若 $P \dd x+Q \dd y$ 为某函数 $u(x,y)$ 的全微分, 则 
+    $$
+    \dd u= P\dd x+Q\dd y\Leftrightarrow \pdv{P}{y}\equiv\pdv{Q}{x}.
+    $$
+\end{theorem}
+
+\begin{example}
+    已知 $\dfrac{(x+ay)\dd x+y\dd y}{(x+y)^2}$ 为某函数的全微分, 则 $a$ 等于 
+    \begin{tasks}(4)
+        \task -1.
+        \task 0.
+        \task 1.
+        \task 2.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    由题意 $P=\dfrac{x+ay}{(x+y)^2},Q=\dfrac{y}{(x+y)^2}$, 那么 $$
+    \pdv{P}{y}=\dfrac{(a-2)x-ay}{(x+y)^3},\quad \pdv{Q}{x}=\dfrac{-2y}{(x+y)^3}
+    $$
+    为使 $ \displaystyle \pdv{P}{y}\equiv\pdv{Q}{x} $ 恒成立, 则 $a=2$, 故选 D.
+\end{solution}
+
 \begin{example}
     设 $xu-yv=0, yu+xv=1$, 求 $\displaystyle \pdv{u}{x},\pdv{u}{y},\pdv{v}{x}, \pdv{v}{y}$.
 \end{example}
@@ -732,7 +755,7 @@
 \subsection{高阶全微分}
 
 \begin{definition}[二阶全微分]
-    \index{二姐全微分}
+    \index{二阶全微分}
     设函数 $ y=f\left(x_{1},x_{2},\cdots,x_{n}\right) $ 在 $ x_{0} $ 处可微, 则
     $$\dd  y=\frac{\partial f\left(x_{0}\right)}{\partial x_{1}} \dd  x_{1}+\frac{\partial f\left(x_{0}\right)}{\partial x_{2}} \dd  x_{2}+\cdots+\frac{\partial f\left(x_{0}\right)}{\partial x_{n}} \dd  x_{n}$$
     若函数 $ f $ 在开集 $ D $ 上的每一点都可微, 则对于给定的 $ \dd  x_{1},\dd  x_{2},\cdots,\dd  x_{n}$, 全微分 $ \dd  y $ 是 $ D $ 上的一个 $ n $ 元函数:

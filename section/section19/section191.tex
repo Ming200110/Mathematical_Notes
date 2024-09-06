@@ -5,7 +5,7 @@
 
 \begin{theorem}[Chebyshev 不等式]
     设随机变量 $X$ 的数学期望 $E(X)$ 和方差 $D(X)$ 均存在, 则对于任意 $\varepsilon>0$, 不等式
-    $$P\qty{|X-E(X)|\geqslant \varepsilon}\leqslant \dfrac{D(X)}{\varepsilon^2}\text{ 或 }P\qty{|X-\mu|<\varepsilon}\geqslant 1-\dfrac{D(X)}{\varepsilon^2}.$$
+    $$P\qty{|X-E(X)|\geqslant \varepsilon}\leqslant \dfrac{D(X)}{\varepsilon^2}\text{ 或 }P\qty{|X-E(X)|<\varepsilon}\geqslant 1-\dfrac{D(X)}{\varepsilon^2}.$$
 \end{theorem}
 
 \begin{example}
@@ -16,7 +16,24 @@
     设 $ X $ 表示夜晚同时开着的电灯数目, 它服从参数 $ n=10000, p=0.7 $ 的二项分布. 于是有
     $$\begin{array}{l}
             E(X)=n p=10000 \times 0.7=7000, D(X)=n p q=10000 \times 0.7 \times 0.3=2100, \\
-            P\{6800<X<7200\}=P\{|X-7000|<200\} \geqslant 1-\frac{2100}{200^{2}} \approx 0.95 .
+            P\{6800<X<7200\}=P\{|X-7000|<200\} \geqslant 1-\dfrac{2100}{200^{2}} \approx 0.95 .
         \end{array}$$
     计算结果表明, 虽然有 $10000$ 盏灯, 但是电站只要有供应 $7000$ 盏灯的电力就能够以相当大的概率保证电量够用.
+\end{solution}
+
+\begin{example}
+    设随机变量 $X$ 服从指数分布 $E(1)$, 用 Chebyshev 不等式得到估计 $P\qty{X\geqslant 3}\leqslant a$, 则 
+    \begin{tasks}(4)
+        \task $\dfrac{1}{2}$.
+        \task $\dfrac{1}{4}$.
+        \task $\dfrac{1}{8}$.
+        \task $\e ^{-3}$.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    因为 $X\sim E(1)$, 所以 $EX=1, DX=1$, 那么 
+    $$
+    P\qty{x\geqslant 3}=P\qty{X-1\geqslant 2}=P\qty{|X-1|\geqslant 2}-P\qty{X-1\leqslant -2}=P\qty{|X-EX|\geqslant 2}\leqslant \dfrac{DX}{2^2}=\dfrac{1}{4}
+    $$
+    故答案选 B.
 \end{solution}

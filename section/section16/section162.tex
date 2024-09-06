@@ -4,7 +4,7 @@
 
 \begin{definition}[连续型随机变量概率密度]
     设随机变量 $ X $ 的分布函数是 $ F(x) $, 若存在一个非负可积函数 $ f(x) $, 使对于任意实数 $ x $, 都有
-    $$F(x)=\int_{-\infty}^{x} f(t) \dd t ~~x \in \mathbb{R}$$
+    $$F(x)=\int_{-\infty}^{x} f(t) \dd t ~(x \in \mathbb{R})$$
     则称 $ X $ 为连续型随机变量, 称 $ f(x) $ 为 $ X $ 的概率密度函数, 简称概率密度, 记为 $ X \sim f(x) .$
 \end{definition}
 
@@ -12,10 +12,41 @@
     概率密度 $ f(x) $ 的性质如下:
     \begin{enumerate}[label=(\arabic{*})]
         \item 非负性: $ f(x) \geqslant 0 $;
-        \item 规范性: $ \displaystyle\int_{-\infty}^{\infty} f(x) \mathrm{d} x=1$ ;
+        \item 规范性: $ \displaystyle\int_{-\infty}^{+\infty} f(x) \mathrm{d} x=1$ ;
         \item 对任意实数 $ a \leqslant b$ 都有 $\displaystyle P\{a<X \leqslant b\}=\int_{a}^{b} f(x) \mathrm{d} x $;
         \item 若 $ f(x) $ 在点 $ x $ 处连续, 则有 $ F^{\prime}(x)=f(x) .$
     \end{enumerate}
+\end{theorem}
+
+设 $ X $ 是连续型随机变量, 已知其概率密度 $ f_{X}(x) $, 则由函数 $ y=g(x) $ 确定的随机变量 $ Y $ 可能是离散型随机变量, 也可能是连续型随机变量. \\
+以连续为例, 求随机变量 $ Y $ 的分布函数 $ F_{Y}(y) $.
+\begin{enumerate}[label=(\arabic{*})]
+    \item 定义法: $\displaystyle F_{Y}(y)=P\{Y \leqslant y\}  =P\{g(X) \leqslant y\}  =\int_{g(x) \leqslant y} f_{X}(x) \mathrm{d} x$, 做题步骤:
+          \begin{enumerate}
+              \item 画出 $ y=g(x) $ 在 $ f(x) $ 正概率区间的图像;
+              \item 找出 $ y=g(x) $ 在 $ y=y $ (动直线) 以下的图像, 确定该部分 $ x $ 的范围, 并用 $ y $ 表示;
+              \item 求出 $ F_{Y}(y) $.
+          \end{enumerate}
+          若求连续型随机变量 $ Y $ 的概率密度 $ f_{Y}(y) $, 则分布函数 $ F_{Y}(y) $ 对 $ y $ 求导即可.
+          $$
+              f_Y(y)=\begin{cases}
+                  \dfrac{\mathrm{d} F_{Y}(y)}{\mathrm{d} y}, & \text { 当 } F_{Y}(y) \text { 在 } y \text { 处可导时 }   \\
+                  0,                                         & \text { 当 } F_{Y}(y) \text { 在 } y \text { 处不可导时 }
+              \end{cases}
+          $$
+    \item 公式法: 若函数 $ y=g(x) $ 处处可导且严格单调 (恒有 $ g^{\prime}(x)>0 $ 或 $ g^{\prime}(x)<0)$, $ h(y) $ 为 $ g(x) $的反函数, 则 $ Y=g(X) $ 是连续型随机变量,
+          其概率密度为
+          $$
+              f_{Y}(y)=\begin{cases}
+                  f_{X}[h(y)]\left|h^{\prime}(y)\right|, & \alpha<y<\beta \\
+                  0,                                     & \text { 其他 }
+              \end{cases}
+          $$
+          其中 $ (\alpha, \beta) $ 为函数 $ y=g(x) $ 的值域.
+\end{enumerate}
+
+\begin{theorem}
+    在任何点取值的概率均为 0 的随机变量为连续型随机变量.
 \end{theorem}
 
 \subsection{均匀分布}
@@ -122,7 +153,7 @@
         \end{figure}
     \end{minipage}\hfill
     \begin{minipage}{0.7\linewidth}
-        由图 \ref{sjbldasd} 可知, 
+        由图 \ref{sjbldasd} 可知,
         \begin{flalign*}
             P\qty{Y\leqslant \dfrac{1}{2}} & =P\qty{-1\leqslant X\leqslant \dfrac{1}{2}}+P\qty{X>1}            \\
                                            & =P\qty{-1\leqslant X\leqslant \dfrac{1}{2}}+1-P\qty{X\leqslant 1} \\
@@ -136,19 +167,43 @@
 
 \begin{definition}[正态分布及其分布函数]
     \label{normalDistributionAndItsDistributionFunction}
+    \index{正态分布及其分布函数}
     若随机变量 $X$ 的密度为 $f(x)=\dfrac{1}{\sqrt{2\pi}\sigma}\e^{-\frac{(x-\mu)^2}{2\sigma^2}}$, 则称 $X$ 服从参数为 $\mu,~\sigma$ 的正态分布, 简记为 $X\sim N\qty(\mu,\sigma^2)$, $X$ 的分布函数为 $\displaystyle F(x)=\int_{-\infty}^{x}\dfrac{1}{\sqrt{2\pi}\sigma}\e^{-\frac{(t-\mu)^2}{2\sigma^2}}\dd t.$
 \end{definition}
 
 \begin{theorem}[对称性]
-    一般正态分布 $N\qty(\mu,\sigma^2)$ 的概率密度 $f(x)$ 满足 $f(x)=f(2\mu-x).$
+    \index{对称性}一般正态分布 $N\qty(\mu,\sigma^2)$ 的概率密度 $f(x)$ 满足 $f(x)=f(2\mu-x).$
 \end{theorem}
 \begin{theorem}[和一性]
-    一般正态分布 $N\qty(\mu,\sigma^2)$ 的分布函数 $F(x)$ 满足 $F(x)+F(2\mu-x)=1.$
+    \index{和一性}一般正态分布 $N\qty(\mu,\sigma^2)$ 的分布函数 $F(x)$ 满足 $F(x)+F(2\mu-x)=1.$
 \end{theorem}
 
 \begin{definition}[标准正态分布]
+    \index{标准正态分布}
     当定义 \ref{normalDistributionAndItsDistributionFunction} 中 $\mu=0,~\sigma=1$ 时, 称 $X$ 服从标准正态分布, 简记为 $X\sim N(0,1)$, 并且分别用 $\varphi(x)$ 与 $\varPhi(x)$ 表示其概率密度函数和分布函数.
 \end{definition}
+
+\begin{theorem}[标准正态分布的分布函数和]
+    \index{标准正态分布的分布函数和}
+    $1=\varPhi(x)+\varPhi(-x)$.
+\end{theorem}
+
+\begin{example}
+    设 $X \sim N\qty(\mu,\sigma^2)$, 则随着 $\sigma$ 的增大, $P\qty|X-\mu|<\sigma$
+    \begin{tasks}(4)
+        \task 单调递减.
+        \task 单调递增.
+        \task 保持不变.
+        \task 无法确定.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    因为 $\dfrac{X-\mu}{\sigma}\sim N(0,1)$, 所以
+    $$
+        P\qty{|X-\mu|<\sigma}=P\qty{-\sigma<X-\mu<\sigma}=P\qty{-1<\dfrac{X-\mu}{\sigma}<1}=\varPhi(1)-\varPhi(-1)=2\varPhi(1)-1
+    $$
+    故保持不变, 选 C.
+\end{solution}
 
 \begin{example}
     设 $ X, Y $ 相互独立, 且 $ X \sim N(1,2), Y \sim N(0,1) $, 求 $ Z=2 X-Y+3 $ 的密度函数.
@@ -172,7 +227,7 @@
     \end{tasks}
 \end{example}
 \begin{solution}
-    \textbf{法一: }由 $X\sim N\qty(2,\sigma^2)$ 知 $\dfrac{X-2}{\sigma}\sim N(0,1)$ 从而 $P\qty{2<X<4}=P\qty{\dfrac{2-2}{\sigma}<\dfrac{X-2}{\sigma}<\dfrac{4-2}{\sigma}}=\varPhi\qty(\dfrac{2}{\sigma})-\varPhi(0)=0.3$, 
+    \textbf{法一: }由 $X\sim N\qty(2,\sigma^2)$ 知 $\dfrac{X-2}{\sigma}\sim N(0,1)$ 从而 $P\qty{2<X<4}=P\qty{\dfrac{2-2}{\sigma}<\dfrac{X-2}{\sigma}<\dfrac{4-2}{\sigma}}=\varPhi\qty(\dfrac{2}{\sigma})-\varPhi(0)=0.3$,
     又 $\varPhi(0)=\dfrac{1}{2}$, 得 $\varPhi\qty(\dfrac{2}{\sigma})=0.8$ 于是得 $P\qty{X<0}=P\qty{\dfrac{X-2}{\sigma}<\dfrac{0-2}{\sigma}}=1-\varPhi\qty(\dfrac{2}{\sigma})=0.2$ 故选 A.\\
     \textbf{法二: }由 $X\sim N\qty(2,\sigma^2)$ 得到分布函数关于 $x=2$ 对称, 根据对称性, 并由 $P\qty{2<X<4}=0.3$ 得到 $P\qty{0<X<2}=0.3$, 那么 $P\qty{0<X<4}=0.6$, 那么 $P\qty{X<0}=\dfrac{1}{2}\qty(1-0.6)=0.2$, 故选 A.
 \end{solution}

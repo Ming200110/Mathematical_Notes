@@ -36,6 +36,22 @@
     \end{enumerate}
 \end{definition}
 
+\subsection{泊松分布}
+
+\begin{example}
+    已知随机变量 $X_1 \perp  X_2$ 且分别服从参数为 $\lambda_1,~\lambda_2$ 的泊松分布, $P\qty{X_1+X_2>0}=1-\e ^{-1}$, 求 $E(X_1+X_2)^2$.
+\end{example}
+\begin{solution}
+    $E(X_1+X_2)^2=EX_1^2+EX_2^2+2EX_1EX_2$, 且 $DX_i=EX_i^2-E^2X_i,~DX_i=EX_i=\lambda~(i=1,2)$, 故 
+    $$
+    E(X_1+X_2)^2=DX_1+E^2X_1+DX_2+E^2X_2+2EX_1EX_2=(\lambda_1+\lambda_2)+(\lambda_1+\lambda_2)^2
+    $$
+    而 $$
+    P\qty{X_1+X_2>0}=1-P\qty{X_1+X_2\leqslant 0}=1-P\qty{X_1=0}P\qty{X_2=0}=1-\e ^{-(\lambda_1+\lambda_2)}
+    $$
+    于是 $\lambda_1+\lambda_2=1$, 故 $E(X_1+X_2)^2=1+1=2.$
+\end{solution}
+
 % \subsection{离散型随机变量的性质}
 % 
 % \begin{example}

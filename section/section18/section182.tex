@@ -3,13 +3,14 @@
 \subsection{随机变量的独立性与相关性}
 
 \begin{definition}[随机变量的相关性定义]
-    若随机变量 $ X $ 和 $ Y $ 的相关系数 $ \rho_{X Y}=0 $ 则称 $ X $ 和 $ Y $ 不相关, 否则称 $ X $ 和 $ Y $ 相关.
+    \index{随机变量的相关性定义}
+    若随机变量 $ X $ 和 $ Y $ 的相关系数 $ \rho_{X Y}=0 $ 则称 $ X $ \textit{和} $ Y $ \textit{不相关}, 否则称 $ X $ \textit{和} $ Y $ \textit{相关}.
 \end{definition}
 
 \begin{theorem}[独立性与相关性的判定]
+    \index{独立性与相关性的判定}
     随机变量 $X$ 和 $Y$ 不相关, 即 $\rho_{XY}=0\Leftrightarrow \cov(X,Y)=0\Leftrightarrow E(XY)=E(X)E(Y)\Leftrightarrow D(X\pm Y)=D(X)\pm D(Y)\Leftarrow X\text{ 与 }Y\text{ 相互独立}$.
-    \newline
-    特别地, 当 $(X,Y)\sim N(\mu_1,\mu_2;\sigma_1^2,\sigma_2^2;\rho)$ 时, $X$ 和 $Y$ 不相关 $\Leftrightarrow X$ 和 $Y$ 相互独立;\\
+    特别地, 当 $(X,Y)\sim N(\mu_1,\mu_2;\sigma_1^2,\sigma_2^2;\rho)$ 时, $X$ 和 $Y$ 不相关 $\Leftrightarrow X$ 和 $Y$ 相互独立;
     当随机变量 $X$ 和 $Y$ 都服从 (0,1) 分布, 则 $X$ 和 $Y$ 不相关 $\Leftrightarrow X$ 和 $Y$ 相互独立.
 \end{theorem}
 
@@ -26,14 +27,14 @@
 \end{theorem}
 
 \begin{example}[2002 数三]
-    设随机变量 $X$ 和 $Y$ 的联合概率分布为表 \ref{-101007018015}, 求协方差 $\cov\qty(X^2,Y^2).$
+    设随机变量 $X$ 和 $Y$ 的联合概率分布为下表 , 求协方差 $\cov\qty(X^2,Y^2).$
 \end{example}
 \begin{solution}
     \begin{minipage}{0.3\linewidth}
         \begin{table}[H]
             \centering
             \caption*{联合概率分布表}
-            \label{-101007018015}
+            % \label{-101007018015}
             \begin{tabular}{c | c c c}
                 $X^{\displaystyle\setminus Y}$ & -1   & 0    & 1    \\
                 \midrule
@@ -56,7 +57,7 @@
 \end{solution}
 
 \begin{example}
-    设随机变量 $(X,Y)$ 的概率分布为表 \ref{012140140130} 求\newline
+    设随机变量 $(X,Y)$ 的概率分布为下表, 求\newline
     \begin{enumerate*}[label=(\arabic{*})]
         \item $P\qty{X=2Y}$;
         \item $\cov(X-Y,Y)$.
@@ -67,7 +68,7 @@
         \begin{table}[H]
             \centering
             \caption*{概率分布}
-            \label{012140140130}
+            % \label{012140140130}
             \begin{tabular}{c | c c c}
                 $X^{\displaystyle\setminus Y}$ & 0               & 1              & 2               \\
                 \midrule

@@ -31,10 +31,25 @@
     \end{tabular}
 \end{table}
 
-\begin{theorem}[减法无穷小代换]
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[-,samples=100,>=stealth,scale=2,font=\footnotesize]
+        \draw[->,cyan] (-3,0)--(3,0);
+        \draw[fill=black] (-2,0)  circle(0.005) node[below] {$\arctan x$};
+        \draw[fill=black] (-1,0)  circle(0.005) node[below] {$\sin x$};
+        \draw[fill=black] (0,0)  circle(0.005) node[below] {$x$};
+        \draw[fill=black] (1,0)  circle(0.005) node[below] {$\arcsin x$};
+        \draw[fill=black] (2,0)  circle(0.005) node[below] {$\tan x$};
+        \draw[decorate,decoration={brace,raise=3pt}] (-1,0) -- (0,0) node[midway,yshift=0.6cm] {$x-\sin x \sim \dfrac{1}{6}x^3$};
+        \draw[decorate,decoration={brace,mirror,raise=10pt}] (-1,0) -- (2,0) node[midway,yshift=-0.8cm] {$\tan x-\sin x \sim \dfrac{3}{6}x^3$};
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{theorem}[差式无穷小代换]
     若 $f\sim g$, 则 $f-g\sim f(\ln f-\ln g)$.
     \label{fsimg}
-    \index{减法无穷小代换}
+    \index{差式无穷小代换}
 \end{theorem}
 
 \begin{example}[第一届数学竞赛初赛]

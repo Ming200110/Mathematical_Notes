@@ -16,7 +16,7 @@
 \begin{theorem}
     第一类曲线积分有如下基本性质:
     \begin{enumerate}[label=(\arabic{*})]
-        \item $\displaystyle\int_L [f_1(x,y)\pm f_2(x,y)]\dd s=\int_L f_1(x,y)\dd s+\int_L f_2(x,y)\dd s+$;
+        \item $\displaystyle\int_L [f_1(x,y)\pm f_2(x,y)]\dd s=\int_L f_1(x,y)\dd s+\int_L f_2(x,y)\dd s$;
         \item $\displaystyle\int_L kf(x,y)\dd s=k\int_L f(x,y)\dd s$, 其中 $k$ 为常数;
         \item 若 $L=L_1+L_2$, 且 $L_1$ 与 $L_2$ 无公共点, 则 $$\int_Lf(x,y)\dd s=\int_{L_1}f(x,y)\dd s+\int_{L_2}f(x,y)\dd s. $$
     \end{enumerate}
@@ -193,6 +193,25 @@
     \end{enumerate}
 \end{theorem}
 
+\begin{example}
+    设 $f(t)$ 具有连续导函数, 且 $f(t)$ 在 $[0,4]$ 上的平均值为 $a~(a\neq0)$, 又 $L$ 为 $y=\sqrt{2x-x^2}$, 起点为 $O(0,0)$, 终点为 $A(2,0)$, 则 
+    $$
+    \int_L f\qty(x^2+y^2)(x \dd x+y \dd y)
+    $$
+    \begin{tasks}(4)
+        \task $0$.
+        \task $a$.
+        \task $2a$.
+        \task $4a$.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    易得曲线积分与路径无关, 故选取路径: $y=0,x:0\to 2$, 于是 $$
+    \int_L f\qty(x^2+y^2)(x \dd x+y \dd y)=\dfrac{1}{2}\int_{0}^{2} f\qty(x^2) \dd x^2\xlongequal{x^2=t}\dfrac{1}{2}\int_{0}^{4} f(t) \dd t=2a.
+    $$
+    因此选 C.
+\end{solution}
+
 \begin{example}[2004 数一]
     设 $L$ 为正向圆周 $x^2+y^2=2$ 在第一象限中的部分, 求曲线积分 $\displaystyle\int_Lx\dd y-2y\dd x.$
 \end{example}
@@ -346,6 +365,30 @@
     故 $\displaystyle\lim_{\varepsilon\to0^+}\iint\limits_D\dfrac{x\dfrac{\partial f}{\partial x}+y\dfrac{\partial f}{\partial y}}{x^2+y^2}\dd x\dd y=-2\pi f(0,0).$
 \end{proof}
 
+\subsubsection{变力做功}
+
+\begin{example}
+    设 $L$ 为从点 $A(2,0)$ 沿 $y=\sqrt{2x-x^2}$ 到点 $O(0,0)$ 的有向曲线段, 位于起点的质点在力 $\vb*{F}$ 的作用下沿 $L$ 到达终点, 设 $P(x,y)$ 为 $L$ 上, $|\vb*{F}|=\sqrt{x^2+y^2}$, 方向与 $\overrightarrow{OP} $ 垂直且与 $y$ 轴夹角为锐角, 则力所做的功为 
+    \begin{tasks}(4)
+        \task $\dfrac{\pi}{2}$.
+        \task $-\dfrac{\pi}{2}$.
+        \task $\pi$.
+        \task $-\pi$.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    $\overrightarrow{OP} =(x,y)$, 与 $\overrightarrow{OP} $ 垂直且与 $y$ 轴夹角为锐角的向量为 $(-y,x)$, $\vb*{F}$ 对应的单位向量为 $ \vb*{F}^0=\dfrac{1}{\sqrt{x^2+y^2}}(-y,x) $
+    变力 $\vb*{F}=|\vb*{F}|\cdot \vb*{F}^0=(-y,x)$, 则力所做的功为
+    $$
+    W=\int_L-y \dd x+x \dd y
+    $$
+    由 Green 公式, 
+    $$
+    W=\qty(\oint_{L+\overrightarrow{OA}}-\int_{\overrightarrow{OA}})-y \dd x + x \dd y=2\iint\limits_D \dd x \dd y -0=2\cdot\dfrac{\pi}{2}=\pi
+    $$
+    故选 C.
+\end{solution}
+
 \subsubsection{曲线积分最大值}
 
 \begin{example}
@@ -408,20 +451,20 @@
     \end{flalign*}
 \end{solution}
 
-\begin{example}
-    设函数 $u(x,y)$ 在区域 $D=\left\{(x,y)|x^2+y^2\leqslant \pi\right\}$ 上有二阶连续偏导数, 且
-    $$\frac{\partial^2u}{\partial x^2}+\frac{\partial ^2u}{\partial y^2}=\mathrm{e}^{\pi-x^2-y^2}\cdot\sin\left(x^2+y^2\right)$$
-    记 $D$ 的正向边界曲线为 $L$, $L$ 的外法向量为 $\vec{n}$, 求 $\displaystyle\oint_L\frac{\partial u}{\partial \vec{n}}\dd s.$
-\end{example}
-\begin{solution}
-    因为$$ \oint_L\frac{\partial u}{\partial \vec{n}}\dd s=\iint\limits_D\left(\frac{\partial ^2u}{\partial x^2}+\frac{\partial ^2u}{\partial y^2}\right)\dd x\dd y$$
-    所以
-    \begin{flalign*}
-        \oint_L\frac{\partial u}{\partial \vec{n}}\dd s =\iint\limits_D\mathrm{e}^{\pi-x^2-y^2}\cdot\sin\left(x^2+y^2\right)\dd x\dd y
-        =\int_0^{2\pi}\dd \theta\int_0^{\sqrt{\pi}}\rho\mathrm{e}^{\pi-\rho^2}\sin\rho^2\dd \rho
-        =\pi\int_0^\pi\mathrm{e}^{\pi-t}\sin t\dd t=\frac{\pi}{2}\left(\mathrm{e}^\pi+1\right)
-    \end{flalign*}
-\end{solution}
+% \begin{example}
+%     设函数 $u(x,y)$ 在区域 $D=\left\{(x,y)|x^2+y^2\leqslant \pi\right\}$ 上有二阶连续偏导数, 且
+%     $$\frac{\partial^2u}{\partial x^2}+\frac{\partial ^2u}{\partial y^2}=\mathrm{e}^{\pi-x^2-y^2}\cdot\sin\left(x^2+y^2\right)$$
+%     记 $D$ 的正向边界曲线为 $L$, $L$ 的外法向量为 $\vec{n}$, 求 $\displaystyle\oint_L\frac{\partial u}{\partial \vec{n}}\dd s.$
+% \end{example}
+% \begin{solution}
+%     因为$$ \oint_L\frac{\partial u}{\partial \vec{n}}\dd s=\iint\limits_D\left(\frac{\partial ^2u}{\partial x^2}+\frac{\partial ^2u}{\partial y^2}\right)\dd x\dd y$$
+%     所以
+%     \begin{flalign*}
+%         \oint_L\frac{\partial u}{\partial \vec{n}}\dd s =\iint\limits_D\mathrm{e}^{\pi-x^2-y^2}\cdot\sin\left(x^2+y^2\right)\dd x\dd y
+%         =\int_0^{2\pi}\dd \theta\int_0^{\sqrt{\pi}}\rho\mathrm{e}^{\pi-\rho^2}\sin\rho^2\dd \rho
+%         =\pi\int_0^\pi\mathrm{e}^{\pi-t}\sin t\dd t=\frac{\pi}{2}\left(\mathrm{e}^\pi+1\right)
+%     \end{flalign*}
+% \end{solution}
 
 \begin{example}
     设 $u(x,y)$ 于圆盘 $D=\qty{(x,y):x^2+y^2\leqslant \dfrac{\pi}{2}}$ 内有二阶连续的偏导数, 并且满足:
@@ -467,8 +510,28 @@
     \item $P \dd  x+Q \dd  y=d u(x, y)$;
     \item $\displaystyle\frac{\partial Q}{\partial x}=\frac{\partial P}{\partial y}, \forall(x, y) \in D $;
     \item $P \dd  x+Q \dd  y=0 $ 为全微分方程;
-    \item $P i+Q j$ 为某二元函数 $ u(x, y) $ 的梯度.
+    \item $P \vb*{i}+Q \vb*{j}$ 为某二元函数 $ u(x, y) $ 的梯度.
 \end{enumerate}
+
+\begin{example}
+    设函数 $f(t)$ 连续, 且 $ \displaystyle \int_{0}^{2x+3y+1} f(t) \dd t =4x^2+9y^2+12xy-2$, 并设起点 $O(0,0)$, 终点 $A(1,3)$, $l$ 为连接 $O$ 与 $A$ 的逐段光滑曲线, 则
+    $$
+    \int_L xy^2f(xy)\dd x+x^2y f(xy)\dd y
+    $$
+    \begin{tasks}(4)
+        \task 与曲线 $l$ 有关.
+        \task 3.
+        \task 4.
+        \task 9.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    因为 $ \displaystyle \int_{0}^{2x+3y+1} f(t) \dd t =4x^2+9y^2+12xy-2=(2x+3y)^2-2\xlongequal{2x+3y+1=u}\int_{0}^{u} f(t) \dd t=(u-1)^2-2$, 所以 $f(u)=2(u-1)$, 又因为 
+    $$
+    xy^2f(xy)\dd x+x^2y f(xy)\dd y=xyf(xy)(y \dd x + x \dd y)=xy(xy)\dd (xy)
+    $$
+    原积分与路径无关, 故 $\displaystyle \int_L xy^2f(xy)\dd x+x^2y f(xy)\dd y=2\int_{(0,0)}^{(1,3)} xy(xy-1) \dd (xy)=9$, 故选 D.
+\end{solution}
 
 \begin{example}
     计算 $\displaystyle\int_{\stackrel\frown{AB}}\dfrac{-y}{x^2+y^2}\dd x+\dfrac{x}{x^2+y^2}\dd y$, 其中 $\stackrel\frown{AB}$ 是自点 $A(-1,0)$ 沿 $y=x^2-1$ 到点 $B(2,3)$ 的弧段.

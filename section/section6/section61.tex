@@ -256,6 +256,22 @@
 
 \subsubsection{交换积分顺序}
 
+\begin{example}
+    设函数 $f(x,y)$ 连续, 则二次积分 $\displaystyle \int_{\frac{\pi}{2}}^{\pi}  \dd x\int_{\sin x}^{1} f(x,y) \dd y$ 等于 
+    \begin{tasks}(2)
+        \task $\displaystyle \int_{0}^{1}\dd y\int_{\pi+\arcsin y}^{\pi} f(x,y)\dd x.$
+        \task $\displaystyle \int_{0}^{1}\dd y\int_{\pi-\arcsin y}^{\pi} f(x,y)\dd x.$
+        \task $\displaystyle \int_{0}^{1}\dd y\int_{\frac{\pi}{2}}^{\pi+\arcsin y} f(x,y)\dd x.$
+        \task $\displaystyle \int_{0}^{1}\dd y\int_{\frac{\pi}{2}}^{\pi-\arcsin y} f(x,y)\dd x.$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    $y=\sin x$ 中 $x$ 的取值区间为 $\qty[\dfrac{\pi}{2},\pi]$, 而 $x=\arcsin y$ 中 $x$ 的取值区间为 $\qty[-\dfrac{\pi}{2},\dfrac{\pi}{2}]$,
+    需要注意的是反三角函数成立的区间是在单调区间上的, 比如 $y=\sin x$, 是在 $x\in\qty(-\dfrac{\pi}{2},\dfrac{\pi}{2})$ 时, 有反函数 $x=\arcsin y$, 若 $x\in\qty(\dfrac{\pi}{2},\pi)$,
+    则需要对 $x$ 进行变换, 即 $x-\pi\in\qty(-\dfrac{\pi}{2},0)$, 则 $y=\sin x=-\sin(x-\pi)$, 因此 $x-\pi=\arcsin(-y)=-\arcsin y$,
+    那么本题选 B.
+\end{solution}
+
 \begin{example}[2004 数一]
     设 $f(x)$ 为连续函数, $\displaystyle F(t)=\int_{0}^{t}\dd y\int_{y}^{t}f(x)\dd x$, 则 $F'(2)$ 等于
     \begin{tasks}(4)

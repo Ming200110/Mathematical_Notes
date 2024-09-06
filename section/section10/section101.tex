@@ -74,6 +74,9 @@
     如果 $ n $ 阶方阵 $ \vb*{A}=\left(a_{i j}\right) $ 满足 $ a_{i j}=-a_{j i}~ (i \neq j),~a_{i i}=0~ (i, j=1,2, \cdots ,  n) $,
     即 $ \vb*{A}^{\top}=-\vb*{A} $, 则称 $ \vb*{A} $ 为\textit{反对称矩阵}.
 \end{definition}
+\begin{theorem}
+    对任意的 $n$ 阶矩阵 $\vb*{A}$, 则 $\vb*{A}+\vb*{A}^\top,~\vb*{AA}^\top,~\vb*{A}^\top\vb*{A},~\vb*{AA}^*$ 均为对称矩阵.
+\end{theorem}
 \begin{theorem}[方阵的对称表达]
     任意 $n$ 阶方阵都可以表示成一个对称方阵与一个反对称方阵的和.
 \end{theorem}
@@ -218,6 +221,28 @@
     \caption{}
 \end{figure}
 
+\begin{definition}[可交换矩阵]
+    一般而言, 矩阵的乘法一般不满足交换律, 即 $\vb*{AB}\neq\vb*{BA}$, 若 $\vb*{AB}=\vb*{BA}$, 则称\textit{矩阵} $\vb*{A},~\vb*{B}$ \textit{可交换}.
+    可交换的前提是 $\vb*{A},~\vb*{B}$ 至少有一个是单位矩阵.
+\end{definition}
+
+\begin{example}
+    设 $\vb*{A}=\begin{pmatrix} 1 & 1 \\ 0 & 1 \\\end{pmatrix}$, 求和矩阵 $\vb*{A}$ 可交换的矩阵.
+\end{example}
+\begin{solution}
+    设 $\vb*{X}=\begin{pmatrix} x_1 & x_2 \\ x_3 & x_4 \\\end{pmatrix}$, 有定义得
+    $$
+    \begin{pmatrix} x_1 & x_2 \\ x_3 & x_4 \\\end{pmatrix}\begin{pmatrix} 1 & 1 \\ 0 & 1 \\\end{pmatrix}=\begin{pmatrix} 1 & 1 \\ 0 & 1 \\\end{pmatrix}\begin{pmatrix} x_1 & x_2 \\ x_3 & x_4 \\\end{pmatrix}\Rightarrow \begin{cases}
+        x_1+x_3=x_1\\ 
+        x_2+x_4=x_1+x_2\\ 
+        x_4=x_3+x_4
+    \end{cases}
+    $$
+    解得 $\begin{cases}
+        x_3=0\\ x_1=x_4
+    \end{cases}$ 故 $\vb*{X}=\begin{pmatrix} a & b \\ 0 & a \\\end{pmatrix},\forall a,b\in \mathbb{R}.$
+\end{solution}
+
 \begin{example}
     设 $\vb*{A}=\begin{pmatrix}
             a_{11} & a_{12} \\
@@ -324,6 +349,17 @@
 \end{solution}
 
 \subsubsection{利用二项式展开求解}
+
+\begin{theorem}[]
+    $\displaystyle \vb*{E}-\vb*{A}^n=(\vb*{E}-\vb*{A})\qty(\vb*{E}+\sum_{k=1}^{n-1} \vb*{A}^k)$.
+\end{theorem}
+
+\begin{example}
+    已知 $\vb*{A}^3=\vb*{O}$, 求 $\qty(\vb*{E}+\vb*{A}+\vb*{A}^2)^{-1}$.
+\end{example}
+\begin{solution}
+    因为 $\vb*{E}-\vb*{A}^3=(\vb*{E}-\vb*{A})\qty(\vb*{E}+\vb*{A}+\vb*{A}^2)$, 又 $\vb*{A}^3=\vb*{O}$, 故 $\qty(\vb*{E}+\vb*{A}+\vb*{A}^2)^{-1}=\vb*{E}-\vb*{A}$.
+\end{solution}
 
 \begin{example}
     设 $\vb*{A}=\begin{pmatrix}

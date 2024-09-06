@@ -218,6 +218,45 @@
     \end{enumerate}
 \end{theorem}
 
+\begin{example}
+    设二维随机变量 $(X,Y)$ 的概率密度为 $f(x,y)=\begin{cases}
+        \dfrac{1+xy}{4}, & |x|<1,|y|<1\\ 0, & \text{其他}
+    \end{cases}$ 则 
+    \begin{tasks}(2)
+        \task $X$ 与 $Y$  相互独立, $X^2$ 与 $Y^2$ 也相互独立.
+        \task $X$ 与 $Y$  相互独立, $X^2$ 与 $Y^2$ 不相互独立.
+        \task $X$ 与 $Y$  不相互独立, $X^2$ 与 $Y^2$ 相互独立.
+        \task $X$ 与 $Y$  不相互独立, $X^2$ 与 $Y^2$ 也不相互独立.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    第一步: 求 $f_X(x),f_Y(y)$, $ \displaystyle f_X(x)=\begin{cases}
+        \displaystyle \int_{-1}^{1} \dfrac{1+xy}{4} \dd y =\dfrac{1}{2}, & |x|<1 \\ 0, & \text{其他}
+    \end{cases}$, 同理 $ \displaystyle f_Y(y)=\begin{cases}
+        \displaystyle \int_{-1}^{1} \dfrac{1+xy}{4} \dd y =\dfrac{1}{2}, & |y|<1 \\ 0, & \text{其他}
+    \end{cases}$, 而 $f(x,y)\neq f_X\cdot f_Y$, 所以 $X$ 与 $Y$  不相互独立, \\ 
+    第二步: 求 $f_{X^2}(x),f_{Y^2}(y)$, $$
+    F_{X^2,Y^2}=P\qty{X^2\leqslant x,Y^2\leqslant y}=\int_{-\infty}^{x}\int_{-\infty}^y f(u,v)\dd u \dd v =\begin{cases}
+        0, & x<0\text{ 或 }y<0\\
+        \displaystyle \int_{-\sqrt{x}}^{\sqrt{x}} \dd u\int_{\sqrt{y}}^{\sqrt{y}} \dfrac{1+uv}{4}\dd v=\sqrt{xy}, & 0\leqslant x,y<1\\ 
+        \displaystyle \int_{-\sqrt{x}}^{\sqrt{x}} \dd u\int_{-1}^{1} \dfrac{1+uv}{4} \dd v=\sqrt{x}, & 0\leqslant x<1,y\geqslant1\\ 
+        \displaystyle \int_{-1}^{1} \dd u\int_{-\sqrt{y}}^{\sqrt{y}} \dfrac{1+uv}{4} \dd v=\sqrt{y}, & 0\leqslant y<1,x\geqslant 1\\ 
+        1, & x,y\geqslant 1
+    \end{cases}
+    $$
+    那么 
+    $$
+    f_{X^2,Y^2}=\pdv{F}{x}{y}=\begin{cases}
+        \dfrac{1}{4\sqrt{xy}}, & 0<x,y<1\\ 
+        0,& \text{其他}
+    \end{cases}
+    $$
+    那么 $ \displaystyle f_{X^2} =\int_{-\infty}^{+\infty} f_{X^2,Y^2} \dd y=\begin{cases}
+        \displaystyle \int_{0}^{1} \dfrac{1}{4\sqrt{xy}} \dd y=\dfrac{1}{2\sqrt{x}}, & 0<x<1\\ 
+        0, &\text{其他}
+    \end{cases}$ 同理可得 $f_{Y^2}$, 而 $f_{X^2,Y^2}=f_{X^2}\cdot f_{Y^2}$, 所以 $X^2$ 与 $Y^2$ 相互独立, 选 C.
+\end{solution}
+
 \subsection{二维随机变量条件概率密度与条件分布函数}
 
 \begin{definition}[二维随机变量条件概率密度]
@@ -228,6 +267,23 @@
     同样, 若 $ f_{X}(x)>0 $, 则称
     $$f_{Y \mid X}(y \mid x)=\frac{f(x, y)}{f_{X}(x)}$$
     为在 $ X=x $ 条件下 $ Y $ 的条件概率密度.
+\end{definition}
+
+\begin{definition}[二维随机变量条件分布函数 A]
+    如果任给 $ \varepsilon>0, P\{y-\varepsilon<Y \leqslant y+\varepsilon\}>0 ,$
+    $$\lim _{\varepsilon \rightarrow 0^{+}} P\{X \leqslant x \mid y-\varepsilon<Y \leqslant y+\varepsilon\}=\lim _{\varepsilon \rightarrow 0^{+}} \frac{P\{X \leqslant x, y-\varepsilon<Y \leqslant y+\varepsilon\}}{P\{y-\varepsilon<Y \leqslant y+\varepsilon\}}$$
+    存在, 则称此极限为在条件 $ Y=y $ 下随机变量 $ X $ 的条件分布函数, 记为 $ P\{X \leqslant x \mid Y=y\} $ 或 $ F_{X \mid Y}(x \mid y) $.
+    $$F_{X \mid Y}(x \mid y)=\lim _{\varepsilon \rightarrow 0^{+}} \frac{F(x, y+\varepsilon)-F(x, y-\varepsilon)}{F_{Y}(y+\varepsilon)-F_{Y}(y-\varepsilon)}
+    =\frac{\displaystyle\int_{-\infty}^{x} \int_{y-\varepsilon}^{y+\varepsilon} f(x, y) \dd  x \dd  y}{\displaystyle \int_{y-\varepsilon}^{y+\varepsilon} f_{Y}(y) \dd  x}$$
+\end{definition}
+
+\begin{definition}[二维随机变量条件分布函数 B]
+    设 $ f(x, y) $ 在点 $ (x, y) $ 处连续, $f_{Y}(y) $ 连续且 $ f_{Y}(y)>0 $, 则称
+    $$F_{X \mid Y}(x \mid y)=\int_{-\infty}^{x} \frac{f(x, y)}{f_{Y}(y)} \dd  x$$
+    为在 $ Y=y $ 的条件下 $ X $ 的条件分布函数.
+    若 $ f(x, y) $ 在点 $ (x, y) $ 处连续, $f_{X}(x) $ 连续且 $ f_{X}(x)>0 $, 则称
+    $$F_{Y \mid X}(y \mid x)=\int_{-\infty}^{y} \frac{f(x, y)}{f_{X}(x)} \dd  y$$
+    为在 $ X=x $ 的条件下 $ Y $ 的条件分布函数.
 \end{definition}
 
 \begin{example}
@@ -252,23 +308,6 @@
         \item $f(x,y)=f_{X\mid Y}(x\mid y)f_Y(y)=\dfrac{2}{\sqrt{6\pi}}\e^{-\frac{2}{3}\qty(x-\frac{y}{2})^2}\cdot \dfrac{1}{\sqrt{2\pi}}\e^{-\frac{y^2}{2}}=\dfrac{1}{\sqrt{3}\pi}\e^{-\frac{2}{3}\qty(x^2-xy+y^2)}.$
     \end{enumerate}
 \end{solution}
-
-\begin{definition}[二维随机变量条件分布函数 A]
-    如果任给 $ \varepsilon>0, P\{y-\varepsilon<Y \leqslant y+\varepsilon\}>0 ,$
-    $$\lim _{\varepsilon \rightarrow 0^{+}} P\{X \leqslant x \mid y-\varepsilon<Y \leqslant y+\varepsilon\}=\lim _{\varepsilon \rightarrow 0^{+}} \frac{P\{X \leqslant x, y-\varepsilon<Y \leqslant y+\varepsilon\}}{P\{y-\varepsilon<Y \leqslant y+\varepsilon\}}$$
-    存在, 则称此极限为在条件 $ Y=y $ 下随机变量 $ X $ 的条件分布函数, 记为 $ P\{X \leqslant x \mid Y=y\} $ 或 $ F_{X \mid Y}(x \mid y) $.
-    $$F_{X \mid Y}(x \mid y)=\lim _{\varepsilon \rightarrow 0^{+}} \frac{F(x, y+\varepsilon)-F(x, y-\varepsilon)}{F_{Y}(y+\varepsilon)-F_{Y}(y-\varepsilon)}
-    =\frac{\displaystyle\int_{-\infty}^{x} \int_{y-\varepsilon}^{y+\varepsilon} f(x, y) \dd  x \dd  y}{\displaystyle \int_{y-\varepsilon}^{y+\varepsilon} f_{Y}(y) \dd  x}$$
-\end{definition}
-
-\begin{definition}[二维随机变量条件分布函数 B]
-    设 $ f(x, y) $ 在点 $ (x, y) $ 处连续, $f_{Y}(y) $ 连续且 $ f_{Y}(y)>0 $, 则称
-    $$F_{X \mid Y}(x \mid y)=\int_{-\infty}^{x} \frac{f(x, y)}{f_{Y}(y)} \dd  x$$
-    为在 $ Y=y $ 的条件下 $ X $ 的条件分布函数.
-    若 $ f(x, y) $ 在点 $ (x, y) $ 处连续, $f_{X}(x) $ 连续且 $ f_{X}(x)>0 $, 则称
-    $$F_{Y \mid X}(y \mid x)=\int_{-\infty}^{y} \frac{f(x, y)}{f_{X}(x)} \dd  y$$
-    为在 $ X=x $ 的条件下 $ Y $ 的条件分布函数.
-\end{definition}
 
 \subsection{二维正态分布}
 
@@ -320,7 +359,7 @@
         对比本题所给密度得 $(X,Y)\sim N\qty(0,0;\dfrac{1}{4},\dfrac{1}{2};0)$, 因此 $A=\dfrac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}=\dfrac{1}{2\pi\cdot\sqrt{\dfrac{1}{4}}\cdot\sqrt{\dfrac{1}{2}}}=\dfrac{\sqrt{2}}{\pi}.$\\
         \textbf{法二: }因为 $\displaystyle\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)\dd x\dd y=1,~\int_{-\infty}^{+\infty}\e^{-t^2}\dd t=\sqrt{\pi}$, 所以 
         \begin{flalign*}
-            1&=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)\dd x\dd y=A\int_{-\infty}^{+\infty}\e^{-2x^2}\qty(\int_{-\infty}^{+\infty}\e^{-y^2}\dd y)\dd x=A\sqrt{\pi}\int_{-\infty}^{+\infty\e^{-2x^2}}\dd x\\
+            1&=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)\dd x\dd y=A\int_{-\infty}^{+\infty}\e^{-2x^2}\qty(\int_{-\infty}^{+\infty}\e^{-y^2}\dd y)\dd x=A\sqrt{\pi}\int_{-\infty}^{+\infty}\e^{-2x^2}\dd x\\
             &\xlongequal{t=\sqrt{2}x}A\sqrt{\pi}\cdot\dfrac{1}{\sqrt{2}}\int_{-\infty}^{+\infty}\e^{-t^2}\dd t=A\sqrt{\pi}\cdot\dfrac{1}{\sqrt{2}}\cdot\sqrt{\pi}\Rightarrow A=\dfrac{\sqrt{2}}{\pi}.
         \end{flalign*}
         \item 因为 $\rho=0$, 所以 $X$ 与 $Y$ 相互独立, 所以 $X\sim N\qty(0,\dfrac{1}{4}),~Y\sim N\qty(0,\dfrac{1}{2}),~f(x,y)=f_X(x)f_Y(y)$, 并且

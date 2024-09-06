@@ -71,6 +71,23 @@
     发现两条不同的趋向路径, 算出的极限值不同, 又因为极限值具有唯一性, 故原式的极限值不存在.
 \end{solution}
 
+\begin{example}
+    设 $f(x,y)$ 在点 $(0,0)$ 的某去心邻域内连续, 且满足 $$
+    \lim_{\substack{x\to0 \\ y\to0}}\dfrac{f(x,y)-f(0,0)}{x^2+1-x\sin y}=-3
+    $$
+    则函数 $f(x,y)$ 在点 $(0,0)$ 处 
+    \begin{tasks}(4)
+        \task 取极大值.
+        \task 取极小值.
+        \task 不取极值.
+        \task 无法确定.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    由极限的保号性知, $$\exists\delta>0,s.t.0<\sqrt{x^2+y^2}<\delta,\dfrac{f(x,y)-f(0,0)}{x^2+1-x\sin y}<0$$
+    又因为 $x^2+1-x\sin y>0$, 所以 $f(x,y)-f(0,0)<0$, 即函数 $f(x,y)$ 在点 $(0,0)$  处取得极大值, 故选 A.
+\end{solution}
+
 % \begin{example}
 %     极限 $\displaystyle\lim_{(x,y)\to(0,0)}xy\ln\qty(x^2+y^2).$
 % \end{example}

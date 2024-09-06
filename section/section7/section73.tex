@@ -12,11 +12,11 @@
 \subsection{下降阶乘幂}
 
 \begin{definition}[下降阶乘幂]
-    $x^{\underline{m} }=x(x-1)\cdots(x-m+1)~~(m\in\mathbb{N}_+).$
+    $x^{\underline{m} }=x(x-1)\cdots(x-m+1)~(m\in\mathbb{N}_+).$
 \end{definition}
 
 \begin{definition}[上升阶乘幂]
-    $x^{\overline{m}}=x(x+1)\cdots(x+m-1)~~(m\in\mathbb{N}_+).$
+    $x^{\overline{m}}=x(x+1)\cdots(x+m-1)~(m\in\mathbb{N}_+).$
 \end{definition}
 
 \begin{definition}
@@ -50,7 +50,7 @@
 \end{enumerate}
 
 \begin{theorem}
-    $\displaystyle \sum\nolimits_{a}^{b}g(x)\delta x=\sum_{k=a}^{b-1}g(k)=\sum_{a\leqslant k<b}g(k)~~(b\geqslant a).$
+    $\displaystyle \sum\nolimits_{a}^{b}g(x)\delta x=\sum_{k=a}^{b-1}g(k)=\sum_{a\leqslant k<b}g(k)~(b\geqslant a).$
 \end{theorem}
 
 \begin{theorem}
@@ -58,15 +58,15 @@
 \end{theorem}
 
 \begin{theorem}
-    $\displaystyle \sum_{0\leqslant k<n}k^{\underline{m}}=\eval{\dfrac{k^{\underline{m+1}}}{m+1}}_{0}^{n}=\dfrac{n^{\underline{m+1}}}{m+1}~~(m,n\in\mathbb{N}_+).$
+    $\displaystyle \sum_{0\leqslant k<n}k^{\underline{m}}=\eval{\dfrac{k^{\underline{m+1}}}{m+1}}_{0}^{n}=\dfrac{n^{\underline{m+1}}}{m+1}~(m,n\in\mathbb{N}_+).$
 \end{theorem}
 
 \begin{definition}
-    $x^{\underline{-m}}=\dfrac{1}{(x+1)(x+2)\cdots(x+m)}~~(m>0).$
+    $x^{\underline{-m}}=\dfrac{1}{(x+1)(x+2)\cdots(x+m)}~(m>0).$
 \end{definition}
 
 \begin{theorem}
-    $x^{\underline{m+n}}=x^{\underline{m}}(x-m)^{\underline{n}} ~~(m,n\in\mathbb{Z}).$
+    $x^{\underline{m+n}}=x^{\underline{m}}(x-m)^{\underline{n}} ~(m,n\in\mathbb{Z}).$
 \end{theorem}
 
 \begin{theorem}
@@ -114,7 +114,7 @@
             & =-(n+1)^{\underline{-1}}H_{n+1}+1^{\underline{-1}}H_1+\sum\nolimits_{1}^{n+1}x^{\underline{-2}}\delta x=\dfrac{1}{2}-\dfrac{H_{n+1}}{n+2} -\eval{x^{\underline{-1}}}_{1}^{n+1} \\
             & =1-\dfrac{1}{n+2}-\dfrac{H_{n+1}}{n+2}=1-\dfrac{1}{n+1}-\dfrac{H_n}{n+2}
     \end{flalign*}
-    又因为 $$\lim_{n\to\infty}\dfrac{H_n}{n+2}=\lim_{n\to\infty}\dfrac{\ln n+\gamma+\alpha(n)}{n+2}=\lim_{n\to\infty}\dfrac{\ln n}{n+2}=0~~(\alpha(n)\to0)$$
+    又因为 $$\lim_{n\to\infty}\dfrac{H_n}{n+2}=\lim_{n\to\infty}\dfrac{\ln n+\gamma+\alpha(n)}{n+2}=\lim_{n\to\infty}\dfrac{\ln n}{n+2}=0~(\alpha(n)\to0)$$
     所以 $\displaystyle\lim_{n\to\infty}S_n=1$, 因此级数收敛, 且其和为 1.
 \end{solution}
 
@@ -185,10 +185,10 @@
         \centering
         \caption{常见函数的幂级数展开式}
         \begin{tabular}{l l}
-            (\rownumber{}) $\displaystyle\mathrm{e}^x=\sum_{n=0}^{\infty}\frac{x^n}{n!},~|x|<+\infty$                                                                                                                                                                                                                                                              & (\rownumber{}) $\displaystyle a^x=\sum_{n=0}^{\infty}\ln ^na\frac{ x^n}{n!},~|x|<+\infty$                                                                                                                                                                                                                                                                          \\
-            \multicolumn{2}{l}{(\rownumber{}) $\displaystyle(1+x)^\alpha=1+\sum_{n=1}^{\infty}\dfrac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!} x^n=\sum_{n=0}^{\infty}\binom{\alpha}{n}x^n=\sum_{n=0}^{\infty}\dfrac{\alpha^{\underline{n}}}{n!}x^n,~|x|<1$}\\
+            (\rownumber{}) $\displaystyle\mathrm{e}^x=\sum_{n=0}^{\infty}\frac{x^n}{n!}=\sum_{n=0}^{\infty}\dfrac{(2x)^n}{(2n)!!} ,~|x|<+\infty$                                                                                                                                                                                                                   & (\rownumber{}) $\displaystyle a^x=\sum_{n=0}^{\infty}\ln ^na\frac{ x^n}{n!},~|x|<+\infty$                                                                                                                                                                                                                                                                          \\
+            \multicolumn{2}{l}{(\rownumber{}) $\displaystyle(1+x)^\alpha=1+\sum_{n=1}^{\infty}\dfrac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!} x^n=\sum_{n=0}^{\infty}\binom{\alpha}{n}x^n=\sum_{n=0}^{\infty}\dfrac{\alpha^{\underline{n}}}{n!}x^n,~|x|<1$}                                                                                                                                                                                                                                                                                                                                                                                                                                                                              \\
             \midrule
-            \multirow{2}{*}{(\rownumber{}) $\displaystyle\ln(1+x)=\sum_{n=0}^{\infty}(-1)^n\frac{x^{n+1}}{n+1},~x\in(-1,1]$}                                                                                                                                                                                                                                       & (\rownumber{}) $\displaystyle-\ln(1-x)=\sum_{n=0}^{\infty}\frac{x^{n+1}}{n+1},~|x|<1$                                                                                                                                                                                                                                                                                    \\
+            \multirow{2}{*}{(\rownumber{}) $\displaystyle\ln(1+x)=\sum_{n=0}^{\infty}(-1)^n\frac{x^{n+1}}{n+1},~x\in(-1,1]$}                                                                                                                                                                                                                                       & (\rownumber{}) $\displaystyle-\ln(1-x)=\sum_{n=0}^{\infty}\frac{x^{n+1}}{n+1},~|x|<1$                                                                                                                                                                                                                                                                              \\
                                                                                                                                                                                                                                                                                                                                                                    & (\rownumber{}) $\displaystyle\ln\frac{1+x}{1-x}=2\sum_{n=0}^{\infty}\frac{x^{2n+1}}{2n+1},~|x|<1$                                                                                                                                                                                                                                                                  \\
             \midrule
             (\rownumber{}) $\displaystyle\sin x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!},~|x|<+\infty$                                                                                                                                                                                                                                                    & (\rownumber{}) $\displaystyle\cos x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!},~|x|<+\infty$                                                                                                                                                                                                                                                                    \\
@@ -196,7 +196,7 @@
             则 $\displaystyle\arcsin x=\int _{0}^{x}\left[ 1+\sum ^{\infty }_{n=1}\dfrac{\left( 2n\right) !}{4^{n}\left( n!\right) ^{2}}t^{2n}\right] \dd t=x+\sum ^{\infty }_{n=1}\dfrac{\left( 2n\right) !}{4^{n}\left( n!\right) ^{2}}\int _{0}^{x}t^{2n}\dd t=\sum_{n=0}^{\infty}\frac{(2n)!}{4^n(n!)^2(2n+1)}x^{2n+1}$}$\displaystyle\arcsin x=\sum_{n=0}^{\infty}\frac{(2n)!}{4^n(n!)^2}\dfrac{x^{2n+1}}{(2n+1)},~|x|<1$                                                                                                                                                                                                                                                                                                          \\
             \midrule
             (\rownumber{}) $\displaystyle\frac{1}{1-x}=\sum_{n=0}^{\infty}x^n,~|x|<1$                                                                                                                                                                                                                                                                              & (\rownumber{}) $\displaystyle \dfrac{1}{1+x}=\sum_{n=0}^{\infty}(-1)^nx^n,~|x|<1$                                                                                                                                                                                                                                                                                  \\
-            (\rownumber{}) $\displaystyle\dfrac{m}{(1-x)^{m+1}}=\sum_{n=0}^{\infty}(n+m)^{\underline{m}}x^n,~|x|<1$                                                                                                                                                                                                                                                               & (\rownumber{}) $\displaystyle\dfrac{x^q}{1+x^p}=\sum_{n=0}^{\infty}(-1)^nx^{np+q},~|x|<1$                                                                                                                                                                                                                                                           \\
+            (\rownumber{}) $\displaystyle\dfrac{m}{(1-x)^{m+1}}=\sum_{n=0}^{\infty}(n+m)^{\underline{m}}x^n,~|x|<1$                                                                                                                                                                                                                                                & (\rownumber{}) $\displaystyle\dfrac{x^q}{1+x^p}=\sum_{n=0}^{\infty}(-1)^nx^{np+q},~|x|<1$                                                                                                                                                                                                                                                                          \\
             % \multicolumn{2}{l}{(\rownumber{}) $\displaystyle \frac{1}{\sqrt{1-x^2}}=1+\sum_{n=1}^\infty\dfrac{(2n-1)!!}{(2n)!!}x^{2n},~|x|<1$}
         \end{tabular}
     \end{minipage}
@@ -215,27 +215,27 @@
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item $\displaystyle\mathrm{e}^{-x^2}=\sum ^{\infty }_{n=0}\dfrac{\left( -x^{2}\right) ^{n}}{n!}=\sum ^{\infty }_{n=0}(-1) ^{n}\dfrac{x^{2n}}{n!}~~( \left| x\right|  < +\infty ) .$
-        \item $\displaystyle \cos ^{2}x=\dfrac{1+\cos 2x}{2}=\dfrac{1}{2}+\dfrac{1}{2}\sum ^{\infty }_{n=0}\dfrac{(-1) ^{n}}{\left( 2n\right) !}\left( 2x\right) ^{2n}=1+\sum ^{\infty }_{n=1}(-1) ^{n}\dfrac{2^{2n-1}}{\left( 2n\right) !}x^{2n}~~( \left| x\right|  < +\infty ) .$
+        \item $\displaystyle\mathrm{e}^{-x^2}=\sum ^{\infty }_{n=0}\dfrac{\left( -x^{2}\right) ^{n}}{n!}=\sum ^{\infty }_{n=0}(-1) ^{n}\dfrac{x^{2n}}{n!}~( \left| x\right|  < +\infty ) .$
+        \item $\displaystyle \cos ^{2}x=\dfrac{1+\cos 2x}{2}=\dfrac{1}{2}+\dfrac{1}{2}\sum ^{\infty }_{n=0}\dfrac{(-1) ^{n}}{\left( 2n\right) !}\left( 2x\right) ^{2n}=1+\sum ^{\infty }_{n=1}(-1) ^{n}\dfrac{2^{2n-1}}{\left( 2n\right) !}x^{2n}~( \left| x\right|  < +\infty ) .$
         \item 注意到 $\sin^3x=\dfrac{3}{4}\sin x-\dfrac{1}{4}\sin 3x$, 于是
               \begin{flalign*}
                   \sin ^{3}x & =\dfrac{3}{4}\sin x-\dfrac{1}{4}\sin 3x=\dfrac{3}{4}\sum ^{\infty }_{n=0}\dfrac{(-1) ^{n}}{\left( 2n+1\right) !}x^{2n+1}-\dfrac{1}{4}\sum ^{\infty }_{n=0}\dfrac{(-1) ^{n}}{\left( 2n+1\right) !}\left( 3x\right) ^{2n+1} \\
-                             & =\dfrac{3}{4}\sum ^{\infty }_{n=0}(-1) ^{n+1}\dfrac{3^{2n}-1}{\left( 2n+1\right) !}x^{2n+1}~~( \left| x\right|  < +\infty ) .
+                             & =\dfrac{3}{4}\sum ^{\infty }_{n=0}(-1) ^{n+1}\dfrac{3^{2n}-1}{\left( 2n+1\right) !}x^{2n+1}~( \left| x\right|  < +\infty ) .
               \end{flalign*}
-        \item $\displaystyle \dfrac{x^{10}}{1-x}=x^{10}\sum ^{\infty }_{n=0}x^{n}=\sum ^{\infty }_{n=10}x^{n}~~( \left| x\right|  < 1) .$
-        \item $\displaystyle\dfrac{1}{\left( 1-x\right) ^{2}}=\left( 1-x\right) ^{-2}=1+\sum ^{\infty }_{n=1}\dfrac{\left( -2\right) (-2-1) \cdots \left( -2+n-1\right) }{n!}\left( -x\right) ^{n}=\sum ^{\infty }_{n=1}\left( n+1\right) x^{n}~~(|x|<1).$
-        \item $\displaystyle\ln\sqrt{\dfrac{1+x}{1-x}}=\dfrac{1}{2}\ln \dfrac{1+x}{1-x}=\sum ^{\infty }_{n=0}\dfrac{x^{2n+1}}{2n+1}~~( \left| x\right|  < 1). $
+        \item $\displaystyle \dfrac{x^{10}}{1-x}=x^{10}\sum ^{\infty }_{n=0}x^{n}=\sum ^{\infty }_{n=10}x^{n}~( \left| x\right|  < 1) .$
+        \item $\displaystyle\dfrac{1}{\left( 1-x\right) ^{2}}=\left( 1-x\right) ^{-2}=1+\sum ^{\infty }_{n=1}\dfrac{\left( -2\right) (-2-1) \cdots \left( -2+n-1\right) }{n!}\left( -x\right) ^{n}=\sum ^{\infty }_{n=1}\left( n+1\right) x^{n}~(|x|<1).$
+        \item $\displaystyle\ln\sqrt{\dfrac{1+x}{1-x}}=\dfrac{1}{2}\ln \dfrac{1+x}{1-x}=\sum ^{\infty }_{n=0}\dfrac{x^{2n+1}}{2n+1}~( \left| x\right|  < 1). $
         \item 由 $(1+x)^\alpha$ 展开式得 $$\left( 1+x^{2}\right) ^{-2}=1+\sum ^{\infty }_{n=1}\dfrac{\left( -2\right) (-2-1) \ldots \left( -2+n-1\right) }{n!}\left( x^{2}\right) ^{n}=1+\sum ^{\infty }_{n=1}(-1) ^{n}\left( n+1\right) x^{2n}$$
-              故 $\displaystyle\dfrac{x^{2}}{\left( 1+x^{2}\right) ^{2}}=x^{2}+\sum ^{\infty }_{n=1}(-1) ^{n}\left( n+1\right) x^{2n+2}=\sum ^{\infty }_{n=1}(-1) ^{n-1}x^{2n}~~( \left| x\right|  < 1) .$
+              故 $\displaystyle\dfrac{x^{2}}{\left( 1+x^{2}\right) ^{2}}=x^{2}+\sum ^{\infty }_{n=1}(-1) ^{n}\left( n+1\right) x^{2n+2}=\sum ^{\infty }_{n=1}(-1) ^{n-1}x^{2n}~( \left| x\right|  < 1) .$
         \item 因为 $\displaystyle \dfrac{x}{2+x-x^{2}}=\dfrac{x}{3}\left( \dfrac{1}{1+x}+\dfrac{1}{2-x}\right) =\dfrac{x}{3}\left( \dfrac{1}{1+x}+\dfrac{1}{2}\cdot \dfrac{1}{1-\dfrac{x}{2}}\right) $, 所以
               \begin{flalign*}
-                  \dfrac{x}{2+x-x^{2}}=\dfrac{x}{3}\left[ \sum ^{\infty }_{n=0}(-1) ^{n}x^{n}+\dfrac{1}{2}\sum ^{\infty }_{n=0}\left( \dfrac{x}{2}\right) ^{n}\right] =\dfrac{1}{3}\sum ^{\infty }_{n=0}\left[ (-1) ^{n}+\dfrac{1}{2^{n+1}}\right] x^{n+1}~~(\left| x\right|  <1).
+                  \dfrac{x}{2+x-x^{2}}=\dfrac{x}{3}\left[ \sum ^{\infty }_{n=0}(-1) ^{n}x^{n}+\dfrac{1}{2}\sum ^{\infty }_{n=0}\left( \dfrac{x}{2}\right) ^{n}\right] =\dfrac{1}{3}\sum ^{\infty }_{n=0}\left[ (-1) ^{n}+\dfrac{1}{2^{n+1}}\right] x^{n+1}~(\left| x\right|  <1).
               \end{flalign*}
         \item 因为 $\arctan \dfrac{A-B}{1+AB}=\arctan A-\arctan B$, 所以
               \begin{flalign*}
-                  \arctan\dfrac{1-2x}{1+2x}=\arctan 1-\arctan 2x=\dfrac{\pi}{4}-\sum_{n=0}^{\infty}\dfrac{(-1)^n}{2n+1}(2x)^{2n+1}~~\left(x\neq-\dfrac{1}{2}\right).
+                  \arctan\dfrac{1-2x}{1+2x}=\arctan 1-\arctan 2x=\dfrac{\pi}{4}-\sum_{n=0}^{\infty}\dfrac{(-1)^n}{2n+1}(2x)^{2n+1}~\left(x\neq-\dfrac{1}{2}\right).
               \end{flalign*}
-        \item $\displaystyle\left( 1-x^{2}\right) ^{-\frac{3}{2}}=\sum ^{\infty }_{n=0}\dfrac{\left( -\dfrac{3}{2}\right) \left( -\dfrac{3}{2}-1\right) \ldots \left( -\dfrac{3}{2}-n+1\right) }{n!}\left( -x^{2}\right) ^{n}=\sum ^{\infty }_{n=0}\dfrac{\left( 2n+1\right) !!}{\left( 2n\right) !!}x^{2n}~~( \left| x\right|  < 1) .$
+        \item $\displaystyle\left( 1-x^{2}\right) ^{-\frac{3}{2}}=\sum ^{\infty }_{n=0}\dfrac{\left( -\dfrac{3}{2}\right) \left( -\dfrac{3}{2}-1\right) \ldots \left( -\dfrac{3}{2}-n+1\right) }{n!}\left( -x^{2}\right) ^{n}=\sum ^{\infty }_{n=0}\dfrac{\left( 2n+1\right) !!}{\left( 2n\right) !!}x^{2n}~( \left| x\right|  < 1) .$
     \end{enumerate}
 \end{solution}
 
@@ -386,6 +386,51 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     于是收敛半径为 $R=\dfrac{1}{\rho}=\dfrac{1}{\e}.$
 \end{solution}
 
+\begin{theorem}[幂级数的条件收敛]
+    \index{幂级数的条件收敛}
+    若幂级数 $ \displaystyle \sum_{n=1}^{\infty} a_nx^n $ 在 $x=b$ 处条件收敛, 则 $x=b$ 为该幂级数收敛区间的一个端点, 且收敛半径 $R=|b|$, 收敛区间为 $(-|b|,|b|)$.
+\end{theorem}
+
+\begin{example}
+    设幂级数 $\displaystyle \sum_{n=0}^{\infty} a_n(x-2)^n$ 在 $x=-2$ 处条件收敛, $a_n>0,~n=0, 1, 2, \cdots $, 则 $\displaystyle \sum_{n=0}^{\infty} a_n(x-2)^{2n+1}$ 的收敛域为
+    \begin{tasks}(4)
+        \task $(1,3)$.
+        \task $(0,4)$.
+        \task $[-2,2)$.
+        \task $[-4,4)$.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    因为幂级数 $\displaystyle \sum_{n=0}^{\infty} a_n(x-2)^n$ 在 $x=-2$ 处条件收敛, 则 $\displaystyle \sum_{n=0}^{\infty} a_n(-4)^n$ 条件收敛, 且收敛域为 $(-4,4)$, 那么
+    $$
+        \sum_{n=0}^{\infty} a_n x^{2n+1}=x\sum_{n=0}^{\infty} a_n \qty(x^2)^{n}
+    $$
+    其收敛域为 $\displaystyle \sum_{n=0}^{\infty} a_n\qty(x^2)^n$ 的收敛域, 对于 $\displaystyle \sum_{n=0}^{\infty} a_nt^n$, 其收敛域
+    $$-4<t<4\Rightarrow -4<x^2<4\Rightarrow -2<x<2$$
+    那么 $\displaystyle \sum_{n=0}^{\infty} a_n(x-2)^{2n+1}$ 的收敛域为 $(0,4)$, 故选 B.
+\end{solution}
+
+\begin{example}
+    设 $ \displaystyle \sum_{n=0}^{\infty} a_nx^n $ 在 $x=3$ 处条件收敛, 则 $ \displaystyle \sum_{n=0}^{\infty} \dfrac{a_n}{n+1}(x-1)^n $ 在 $x=-1$ 处
+    \begin{tasks}(4)
+        \task 条件收敛.
+        \task 绝对收敛.
+        \task 发散.
+        \task 无法确定敛散性.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    因为 $ \displaystyle \sum_{n=0}^{\infty} a_nx^n $ 在 $x=3$ 处条件收敛, 则收敛区间为 $(-3,3)$, 且
+    $$
+        \sum_{n=0}^{\infty} \dfrac{a_n}{n+1}(x-1)^{n}\xlongequal{x-1=t}\dfrac{1}{t}\sum_{n=0}^{\infty} \dfrac{a_n}{n+1}t^{n+1}
+    $$
+    又 $ \displaystyle \qty(\sum_{n=0}^{\infty} \dfrac{a_n}{n+1}t^{n+1})' =\sum_{n=0}^{\infty} a_nt^n$, 因为逐项求导后收敛区间不变, 那么
+    $$
+        -3<t<3\Rightarrow -3<x-1<3\Rightarrow -2<x<4
+    $$
+    又因为 $x=-1\in(-2,4)$, 所以在 $x=-1$ 处, 该幂级数绝对收敛, 故选 B.
+\end{solution}
+
 \begin{example}[2020 数三]
     设幂级数 $\displaystyle\sum_{n=1}^{\infty}na_n(x-2)^n$ 的收敛区间为 $(-2,6)$, 则 $\displaystyle\sum_{n=1}^{\infty}a_n(x+1)^{2n}$ 的收敛区间为
     \begin{tasks}(4)
@@ -447,7 +492,7 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     \begin{flalign*}
         \sum_{n=0}^{\infty}\dfrac{(-1)^nn^3}{(n+1)!}x^n & =\sum_{n=0}^{\infty}\dfrac{n^3}{(n+1)!}(-x)^n=-\dfrac{x}{2}+\sum_{n=2}^{\infty}\dfrac{(-x)^n}{(n-2)!}+\sum_{n=2}^{\infty}\dfrac{(-x)^n}{n!}-\sum_{n=2}^{\infty}\dfrac{(-x)^n}{(n+1)!} \\
                                                         & =-\dfrac{x}{2}+x^2\sum_{n=2}^{\infty}\dfrac{(-x)^{n-2}}{(n-2)!}+\sum_{n=2}^{\infty}\dfrac{(-x)^{n}}{n!}-\dfrac{1}{x}\sum_{n=2}^{\infty}\dfrac{(-x)^{n+1}}{(n+1)!}                     \\
-                                                        & =-\dfrac{x}{2}+x^2\e^{-x}+\qty(\e^{-x}-1+x)+\dfrac{1}{x}\qty(\e^{-x}-1+x-\dfrac{x^2}{2})=\e\qty(x^2+1+\dfrac{1}{x})-\dfrac{1}{x}~~x\neq 0
+                                                        & =-\dfrac{x}{2}+x^2\e^{-x}+\qty(\e^{-x}-1+x)+\dfrac{1}{x}\qty(\e^{-x}-1+x-\dfrac{x^2}{2})=\e\qty(x^2+1+\dfrac{1}{x})-\dfrac{1}{x}~x\neq 0
     \end{flalign*}
     显然, 当 $x=0$ 时, 和函数为 0, 因此 $\displaystyle \sum_{n=0}^{\infty}\dfrac{(-1)^nn^3}{(n+1)!}x^n=\begin{cases}
             \e^{-x}\qty(x^2-1+\dfrac{1}{x})-\dfrac{1}{x}, & x\neq 0 \\
@@ -607,7 +652,7 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
         \frac{1}{2}\sum_{n=1}^\infty\frac{x^{3n-1}}{8^n(2n-1)} & =\frac{t}{2x}\sum_{n=1}^\infty\frac{t^{2n-1}}{2n-1}=\frac{t}{2x}\left(\sum_{n=1}^\infty\int_0^t\frac{t^{2n-1}}{2n-1}\dd t\right)'                                                                                                              \\
                                                                & =\frac{t}{2x}\int_0^t\sum_{n=1}^\infty\frac{\left(t^{2n-1}\right)'}{2n-1}\dd t=\frac{t}{2x}\int_0^t\frac{\dd t}{1-t^2}=\frac{t}{4x}\ln\frac{1+t}{1-t}=\frac{\sqrt{x}}{8\sqrt{2}}\ln\frac{2\sqrt{2}+x^{\frac{3}{2}}}{2\sqrt{2}-x^{\frac{3}{2}}}
     \end{flalign*}
-    当 $x\in(-2,0)$ 时, 令 $\displaystyle \frac{x}{2}=-t^{\frac{3}{2}}~~(t>0)$, 则
+    当 $x\in(-2,0)$ 时, 令 $\displaystyle \frac{x}{2}=-t^{\frac{3}{2}}~(t>0)$, 则
     \begin{flalign*}
         \frac{1}{2}\sum_{n=1}^\infty\frac{x^{3n-1}}{8^n(2n-1)} & =\frac{t}{2x}\sum_{n=1}^\infty\frac{(-1)^n}{2n-1}t^{2n-1}=\frac{t}{2x}\int_0^t\sum_{n=1}^\infty\frac{(-1)^n}{2n-1}\left(t^{2n-1}\right)'\dd t \\
                                                                & =-\frac{t}{2x}\int_0^t\frac{\dd t}{1+t^2}=\frac{t}{2x}\arctan t=-\frac{\sqrt{-x}}{4\sqrt{2}}\arctan\frac{x\sqrt{-x}}{2\sqrt{2}}
@@ -744,13 +789,13 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
              & =\eval{\dfrac{1}{6}\ln\qty(x^2-x+1)-\dfrac{1}{3}\ln(x+1)+\dfrac{1}{\sqrt{3}}\arctan\dfrac{2x-1}{\sqrt{3}}}_{0}^{1}=\dfrac{\pi}{3\sqrt{3}}-\dfrac{1}{3}\ln 2
     \end{flalign*}
     因为 $\dfrac{1}{(3n-1)(2n-1)}=\dfrac{2}{2n-1}-\dfrac{3}{2n-1}$, 所以 $$\displaystyle\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{(3n-1)(2n-1)}=\sum_{n=1}^{\infty}(-1)^{n-1}\qty(\dfrac{2}{2n-1}-\dfrac{3}{3n-1})=2\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{2n-1}-3\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{3n-1}$$
-    令 $\displaystyle Q(x)=\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{2n-1}$, 那么 $$Q'(x)=\sum_{n=1}^{\infty}(-1)^{n-1}x^{2n-2}=\sum_{n=0}^{\infty}(-1)^nx^{2n}=\dfrac{1}{1+x^2}~~|x|<1$$
+    令 $\displaystyle Q(x)=\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{2n-1}$, 那么 $$Q'(x)=\sum_{n=1}^{\infty}(-1)^{n-1}x^{2n-2}=\sum_{n=0}^{\infty}(-1)^nx^{2n}=\dfrac{1}{1+x^2}~|x|<1$$
     因此 $\displaystyle 2\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{2n-1}=2Q(1)=2Q(0)+2\int_{0}^{1}\dfrac{\dd x}{1+x^2}=\eval{2\arctan x}_{0}^{1}=\dfrac{\pi}{2},~3\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{3n-1}=3S(1)=\dfrac{\pi}{\sqrt{3}}-\ln 2$,
     故 $$\sum_{n=1}^{\infty}\dfrac{(-1)^{n-1}}{(3n-1)(2n-1)}=\dfrac{\pi}{2}-\dfrac{\pi}{\sqrt{3}}+\ln 2.$$
 \end{solution}
 
 \begin{example}
-    设 $a_n=\displaystyle\int_{0}^{+\infty}x^n\e^{-x}\dd x~~(n=0,1,2,\cdots)$,
+    设 $a_n=\displaystyle\int_{0}^{+\infty}x^n\e^{-x}\dd x~(n=1,2,\cdots)$,
     \begin{enumerate}[label=(\arabic{*})]
         \item 求 $\displaystyle\lim_{n\to\infty}\dfrac{a_{n-1}}{a_n}$;
         \item 求级数 $\displaystyle\sum_{n=0}^{\infty}\dfrac{1+n^2}{a_n}$ 的和.
@@ -758,7 +803,7 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
 \end{example}
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 因为 $\displaystyle \Gamma(\alpha)=\int_{0}^{+\infty}x^{\alpha-1}\e^{-x}\dd x~~(\alpha>0)$, 且 $\Gamma(\alpha+1)=\Gamma(\alpha)$, 因此 $$\lim_{n\to\infty}\dfrac{a_{n-1}}{a_n}=\lim_{n\to\infty}\dfrac{\Gamma(n)}{\Gamma(n+1)}=\lim_{n\to\infty}\dfrac{\Gamma(n)}{n\Gamma(n)}=0.$$
+        \item 因为 $\displaystyle \Gamma(\alpha)=\int_{0}^{+\infty}x^{\alpha-1}\e^{-x}\dd x~(\alpha>0)$, 且 $\Gamma(\alpha+1)=\Gamma(\alpha)$, 因此 $$\lim_{n\to\infty}\dfrac{a_{n-1}}{a_n}=\lim_{n\to\infty}\dfrac{\Gamma(n)}{\Gamma(n+1)}=\lim_{n\to\infty}\dfrac{\Gamma(n)}{n\Gamma(n)}=0.$$
         \item 又因为 $a_n=\Gamma(n+1)=n!$, 因此级数转化为 $\displaystyle\sum_{n=0}^{\infty}\dfrac{1+n^2}{n!}$, 为此构造幂级数 $S(x)=\displaystyle\sum_{n=0}^{\infty}\dfrac{1+n^2}{n!}x^n$, 那么
               \begin{flalign*}
                   S(x) & =\sum_{n=0}^{\infty}\dfrac{x^n}{n!}+\sum_{n=0}^{\infty}\dfrac{n^2x^n}{n!}=\e^{x}+\sum_{n=1}^{\infty}\dfrac{n}{(n-1)!}x^n=\e^x+x\qty(\sum_{n=1}^{\infty}\dfrac{x^n}{(n-1)!})'=\e^x+x\qty(x\sum_{n=1}^{\infty}\dfrac{x^{n-1}}{(n-1)!})' \\

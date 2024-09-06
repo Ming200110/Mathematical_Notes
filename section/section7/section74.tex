@@ -4,7 +4,7 @@ Fourier 级数是函数项级数的一种特殊形式. 它是研究和表示周�
 
 \subsection{Fourier 系数}
 
-\begin{definition}[ Fourier 系数]
+\begin{definition}[Fourier 系数]
     形如 $\displaystyle\dfrac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n} \cos n x+b_{n} \sin n x\right) $ 的级数
     称为 \textit{Fourier 级数}或\textit{三角级数}.
     设 $ f(x) $ 是周期为 $ 2 \pi $ 的周期函数, 且能展开为 Fourier 级数, 即
@@ -30,19 +30,38 @@ Fourier 级数是函数项级数的一种特殊形式. 它是研究和表示周�
     \index{Dirichlet 收敛定理}
 \end{theorem}
 
+\begin{example}
+    设 $f(x)=\begin{cases}
+        -1, & -\pi <x\leqslant 0\\ 1+x^2,&0<x<\pi
+    \end{cases}$ 则以 $2\pi$ 为周期的 Fourier 级数在 $x=\pi$ 处收敛于 
+    \begin{tasks}(4)
+        \task $1+\pi^2$.
+        \task $-1$.
+        \task $\dfrac{\pi}{2}$.
+        \task $\dfrac{\pi^2}{2}$.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    根据收敛定理可知, $f(x)$ 的 Fourier 级数在 $x=\pi$ 处收敛于 $$
+    \dfrac{f\qty(\pi^-)+f\qty(\pi^+)}{2}=\dfrac{1}{2}\qty[\lim_{x \to \pi^-}\qty(1+x^2)+\lim_{x \to (-\pi)^+}f(x)]=\dfrac{1}{2}\qty[1+\pi^2-1]=\dfrac{\pi^2}{2}
+    $$
+    因此选 D.
+\end{solution}
+
 \subsection{周期为 \texorpdfstring{$2l$}. 的 Fourier 展开}
 
 \begin{definition}[正弦级数与余弦级数]
+    \index{正弦级数与余弦级数}
     设 $ f(x) $ 是周期为 $ 2 \pi $ 的周期函数, 且能展开成 Fourier 系数, 即
     $$f(x) \sim \frac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n} \cos n x+b_{n} \sin n x\right)$$
     \begin{enumerate}[label=(\arabic{*})]
         \item 当 $ f(x) $ 为奇函数时
               $$a_{0}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \dd  x=0,~ a_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos n x \dd  x=0$$
-              此时 $ f(x) $ 的 Fourier 级数表达式为 $\displaystyle \sum_{n=1}^{\infty} b_{n} \sin n x $ 仅含正弦项, 称为正弦级数;
+              此时 $ f(x) $ 的 Fourier 级数表达式为 $\displaystyle \sum_{n=1}^{\infty} b_{n} \sin n x $ 仅含正弦项, 称为\textit{正弦级数};
         \item 当 $ f(x) $ 为偶函数时
               $$b_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin n x \dd  x=0$$
               此时 $ f(x) $ 的 Fourier 级数表达式为: $\displaystyle \frac{a_{0}}{2}+\sum_{n=1}^{\infty} a_{n} \cos n x$, 此式仅含余弦项, 
-              称为余弦级数.
+              称为\textit{余弦级数}.
     \end{enumerate}
 \end{definition}
 
@@ -162,6 +181,28 @@ Fourier 级数是函数项级数的一种特殊形式. 它是研究和表示周�
             & =\eval{\dfrac{x}{n\pi}\sin n\pi x+\dfrac{1}{n^2\pi^2}\cos n\pi x}_{0}^{1}=\dfrac{(-1)^n-1}{n^2\pi^2}.
     \end{flalign*}
 \end{solution}
+
+\subsubsection{抽象函数求 Fourier 系数}
+
+\begin{example}
+    设函数 $f(x)$ 连续且满足 $f(x+\pi)+f(x)=0$, 则 $f$ 以 $2\pi$ 为周期的 Fourier 系数 ($n=1, 2, \cdots $)
+    \begin{tasks}(4)
+        \task $a_{2n}=0, b_{2n}=0$.
+        \task $a_{2n}=0, b_{2n-1}=0$.
+        \task $a_{2n-1}=0, b_{2n-1}=0$.
+        \task $a_{2n-1}=0, b_{2n}=0$.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    计算 $a_n$ 与 $b_n$,
+    \begin{flalign*}
+        a_n& =\dfrac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos nx \dd x=\dfrac{1}{\pi}\qty[\int_{-\pi}^{0}f(x)\cos nx \dd x+\int_{0}^{\pi}f(x) \cos nx \dd x]\\ 
+        & =\dfrac{1}{\pi}\qty[\int_{-\pi}^{0}f(x)\cos nx \dd x+\int_{0}^{\pi}f(u+x) \cos n(u+\pi) \dd u]=\dfrac{1}{\pi}\int_{-\pi}^{0}\qty[f(x)-(-1)^{n}f(x)]\cos nx \dd x
+    \end{flalign*}
+    同理可得 $\displaystyle b_n=\dfrac{1}{\pi}\int_{-\pi}^{0} \qty[f(x)-(-1)^{n}f(x)]\sin nx \dd x$, 代入选项 ABCD, 可判断 A 正确.
+\end{solution}
+
+\subsubsection{平均收敛与均方逼近}
 
 \begin{definition}[平均收敛]
     若函数列 $f_n(x)$ 满足 $\displaystyle\lim_{n\to\infty}\qty(\dfrac{1}{n}\int_{-\pi}^{\pi}|f_n(x)-S(x)|^2\dd x)^{\frac{1}{2}}=0$, 

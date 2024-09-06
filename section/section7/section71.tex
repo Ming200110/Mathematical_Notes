@@ -1,6 +1,6 @@
 \section{常数项级数}
 
-在处理常数项级数时, 一个重要的概念是其敛散性, 即是否收敛或发散. 这一点对于确定级数的性质至关重要, 因为它直接影响到求和过程中可能遇到的问题, 如收敛域内的函数项级数的和函数. 
+在处理常数项级数时, 一个重要的概念是其敛散性, 即是否收敛或发散. 这一点对于确定级数的性质至关重要, 因为它直接影响到求和过程中可能遇到的问题, 如收敛域内的函数项级数的和函数.
 
 % \subsection{求和问题}
 % 
@@ -159,7 +159,7 @@
 \begin{solution}
     数列 $\qty{x_{2n}}$ 和 $\qty{x_{2n-1}}$ 都收敛, 但收敛于不同的值, 故数列 $\qty{x_n}$ 不收敛, (1) 错误;
     令 $$
-    x_n=\dfrac{1}{2}\qty[(x_n+y_n)+(x_n-y_n)],\quad y_n=\dfrac{1}{2}\qty[(x_n+y_n)-(x_n-y_n)]
+        x_n=\dfrac{1}{2}\qty[(x_n+y_n)+(x_n-y_n)],\quad y_n=\dfrac{1}{2}\qty[(x_n+y_n)-(x_n-y_n)]
     $$
     因为数列 $\qty{x_n+y_n}$ 和 $\qty{x_n-y_n}$ 都收敛, 所以 $\qty{x_n}$ 和 $\qty{y_n}$ 收敛, (2) 正确;
     取 $x_n=(-1)^n, y_n=(-1)^{n+1}$, 则 $x_n+y_n=0$, (3) 正确;
@@ -264,8 +264,8 @@
 
 \begin{theorem}[比值审敛法]
     设 $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 为正项级数, 若 $\displaystyle  \lim _{n \to \infty} \frac{u_{n+1}}{u_{n}}=\rho $, 则当 $ \rho<1 $ 时, 级数收敛;
-    当 $ \rho>1 $ 时, 级数发散; 当 $ \rho=1 $ 时, 级数可能收敛, 也可能发散.\\
-    特别地, 当 $ \dfrac{u_{n+1}}{u_{n}}>1 $ 时, 级数 $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 一定发散; 当 $ \dfrac{u_{n+1}}{u_{n}}<1 $ 时, 级数可能收敛, 也可能发散.
+    当 $ \rho>1 $ 时, 级数发散; 当 $ \rho=1 $ 时, 级数可能收敛, 也可能发散.
+    % 特别地, 当 $ \dfrac{u_{n+1}}{u_{n}}>1 $ 时, 级数 $\displaystyle  \sum_{n=1}^{\infty} u_{n} $ 一定发散; 当 $ \dfrac{u_{n+1}}{u_{n}}<1 $ 时, 级数可能收敛, 也可能发散.
     \index{比值审敛法}
 \end{theorem}
 
@@ -281,15 +281,35 @@
 \end{theorem}
 
 \begin{example}
+    设级数 $ \displaystyle \sum_{n=2}^{\infty} \dfrac{1}{n\ln ^{p}n} $ 与 $ \displaystyle \int_{0}^{+\infty} \e ^{\qty(p^2-4)x} \dd x $ 都收敛, 则
+    \begin{tasks}(4)
+        \task $1<p<2$.
+        \task $0<p<2$.
+        \task $-2<p<2$.
+        \task $1\leqslant p<2$.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    $ \displaystyle \sum_{n=2}^{\infty} \dfrac{1}{n\ln ^{p}n} $ 与 $\displaystyle \int_{2}^{+\infty} \dfrac{1}{x\ln ^{p}x} \dd x$ 同敛散, 而 $$
+        \int_{2}^{+\infty} \dfrac{1}{x\ln ^{p}x} \dd x\xlongequal{\ln x=t}\int_{\ln 2}^{+\infty} \dfrac{1}{t^p} \dd t
+    $$
+    所以当 $p>1$ 时, $ \displaystyle \int_{\ln 2}^{+\infty} \dfrac{1}{t^p} \dd t $ 收敛, 又因为
+    $$
+        \int_{0}^{+\infty} \e ^{\qty(p^2-4)x} \dd x=\eval{\dfrac{1}{p^2-4}\e ^{\qty(p^2-4)x}}_{0}^{+\infty}
+    $$
+    只有当 $\dfrac{1}{p^2-4}<0$ 时, 极限存在, 综上 $1<p<2$, 选 A.
+\end{solution}
+
+\begin{example}
     判别级数 $\displaystyle  \sum_{n=1}^{\infty} \frac{n^{n}}{n!} $ 的敛散性.
 \end{example}
 \begin{solution}
-    \textbf{法一: }利用级数收敛的必要条件, 因为 $\displaystyle  \frac{n^{n}}{n!}=\frac{n \cdot n \cdots n}{1 \cdot 2 \cdots n}>1(n>1) $, 所以 $\displaystyle  \lim _{n \to \infty} \frac{n^{n}}{n!} \neq 0 $, 故由级数收敛的必要条件知, 级数 $\displaystyle  \sum_{n=1}^{\infty} \frac{n^{n}}{n!} $ 发散.\\ 
-    \textbf{法二: }利用比较判别法, 因为当 $ n>2 $ 时, 有 $\displaystyle  \frac{n^{n}}{n!}=\frac{n \cdot n \cdot n \cdots n}{1 \cdot 2 \cdot 3 \cdots n}>n $, 且级数 $\displaystyle  \sum_{n=1}^{\infty} n $ 发散, 所以由比较判别法知, 级数 $\displaystyle  \sum_{n=1}^{\infty} \frac{n^{n}}{n!} $ 发散.\\ 
-    \textbf{法三: }利用比值判别法, 记 $\displaystyle  u_{n}=\frac{n^{n}}{n!} $, 则 $\displaystyle  \lim _{n \to \infty} \frac{u_{n+1}}{u_{n}}=\lim _{n \to \infty} \frac{(n+1)^{n+1}}{(n+1)!} \cdot \frac{n!}{n^{n}}=\lim _{n \to \infty}\left(1+\frac{1}{n}\right)^{n}=\mathrm{e}>1 $, 由比值判别法知, 级数 $\displaystyle  \sum_{n=1}^{\infty} \frac{n^{n}}{n!} $ 发散.\\ 
+    \textbf{法一: }利用级数收敛的必要条件, 因为 $\displaystyle  \frac{n^{n}}{n!}=\frac{n \cdot n \cdots n}{1 \cdot 2 \cdots n}>1(n>1) $, 所以 $\displaystyle  \lim _{n \to \infty} \frac{n^{n}}{n!} \neq 0 $, 故由级数收敛的必要条件知, 级数 $\displaystyle  \sum_{n=1}^{\infty} \frac{n^{n}}{n!} $ 发散.\\
+    \textbf{法二: }利用比较判别法, 因为当 $ n>2 $ 时, 有 $\displaystyle  \frac{n^{n}}{n!}=\frac{n \cdot n \cdot n \cdots n}{1 \cdot 2 \cdot 3 \cdots n}>n $, 且级数 $\displaystyle  \sum_{n=1}^{\infty} n $ 发散, 所以由比较判别法知, 级数 $\displaystyle  \sum_{n=1}^{\infty} \frac{n^{n}}{n!} $ 发散.\\
+    \textbf{法三: }利用比值判别法, 记 $\displaystyle  u_{n}=\frac{n^{n}}{n!} $, 则 $\displaystyle  \lim _{n \to \infty} \frac{u_{n+1}}{u_{n}}=\lim _{n \to \infty} \frac{(n+1)^{n+1}}{(n+1)!} \cdot \frac{n!}{n^{n}}=\lim _{n \to \infty}\left(1+\frac{1}{n}\right)^{n}=\mathrm{e}>1 $, 由比值判别法知, 级数 $\displaystyle  \sum_{n=1}^{\infty} \frac{n^{n}}{n!} $ 发散.\\
     \textbf{法四: }利用根值判别法, 由 Stirling 公式: $\displaystyle  n!\sim \sqrt{2 n \pi} \cdot\left(\frac{n}{\mathrm{e}}\right)^{n}(n \to \infty) $, 有
     $$
-    \lim _{n \to \infty} \sqrt[n]{u_{n}}=\lim _{n \to \infty} \sqrt[n]{\frac{n^{n}}{n!}}=\lim _{n \to \infty} \frac{\mathrm{e}}{\sqrt[n]{\sqrt{2 n \pi}}}=\mathrm{e}>1 
+        \lim _{n \to \infty} \sqrt[n]{u_{n}}=\lim _{n \to \infty} \sqrt[n]{\frac{n^{n}}{n!}}=\lim _{n \to \infty} \frac{\mathrm{e}}{\sqrt[n]{\sqrt{2 n \pi}}}=\mathrm{e}>1
     $$
     故由根值判别法知, 级数 $\displaystyle  \sum_{n=1}^{\infty} \frac{n^{n}}{n!} $ 发散.
 \end{solution}
@@ -337,8 +357,8 @@
     又 $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n^{\frac{3}{2}}} $ 收敛, 故由比较判别法知级数 $\displaystyle \sum_{n=1}^{\infty}\left(-u_{n}\right) $ 收敛, 从而原级数 $\displaystyle \sum_{k=1}^{n} u_{n} $ 收敛.\\
     \textbf{法三: }利用比较判别法的极限形式, 记 $ u_{n} $ 为原级数的通项, 则
     \begin{flalign*}
-        u_{n} & =\sqrt{n+2}-2 \sqrt{n+1}+\sqrt{n}=\qty(\sqrt{n+2}-\sqrt{n+1})-(\sqrt{n+1}-\sqrt{n})                                                                             \\
-              & =\frac{1}{\sqrt{n+2}+\sqrt{n+1}}-\frac{1}{\sqrt{n+1}+\sqrt{n}}=\frac{\sqrt{n}-\sqrt{n+2}}{\qty(\sqrt{n+2}+\sqrt{n+1}) \cdot\qty(\sqrt{n+1}+\sqrt{n})}           \\
+        u_{n} & =\sqrt{n+2}-2 \sqrt{n+1}+\sqrt{n}=\qty(\sqrt{n+2}-\sqrt{n+1})-(\sqrt{n+1}-\sqrt{n})                                                                     \\
+              & =\frac{1}{\sqrt{n+2}+\sqrt{n+1}}-\frac{1}{\sqrt{n+1}+\sqrt{n}}=\frac{\sqrt{n}-\sqrt{n+2}}{\qty(\sqrt{n+2}+\sqrt{n+1}) \cdot\qty(\sqrt{n+1}+\sqrt{n})}   \\
               & =-\frac{2}{\qty(\sqrt{n+2}+\sqrt{n+1}) \cdot\qty(\sqrt{n+1}+\sqrt{n})\qty(\sqrt{n+2}+\sqrt{n})} \sim-\frac{1}{4\qty(\sqrt{n})^{3}} \quad(n \to \infty),
     \end{flalign*}
     所以 $ 0<-u_{n} \sim \frac{1}{4 n^{\frac{3}{2}}} $, 又 $\displaystyle \sum_{n=1}^{\infty} \frac{1}{n^{\frac{3}{2}}} $ 收敛, 故由比较判别法的极限形式知, 级数 $\displaystyle \sum_{n=1}^{\infty}\left(-u_{n}\right)$ 收敛, 从而原级数 $\displaystyle \sum_{k=1}^{n} u_{n} $ 收敛.
@@ -406,13 +426,13 @@
     $$
         \vb*{A}^{n-2}=\vb*{X}\begin{pmatrix} \lambda_1 &  \\  & \lambda_2 \\\end{pmatrix}^{n-2}\vb*{X}^{-1}=\dfrac{1}{\sqrt{5}}\begin{pmatrix} \lambda_1^{n-1}-\lambda_2^{n-1} & -\lambda_2\lambda_1^{n-1}+\lambda_1\lambda_2^{n-1} \\ \lambda_1^{n-2}-\lambda_2^{n-2} & -\lambda_2\lambda_1^{n-2}+\lambda_1\lambda_2^{n-2} \\\end{pmatrix}
     $$
-    于是由 $\begin{pmatrix} u_n\\ u_{n-1} \\\end{pmatrix}=\vb*{A}^{n-2}\begin{pmatrix} u_2 \\ u_1 \\\end{pmatrix}$ 得 
+    于是由 $\begin{pmatrix} u_n\\ u_{n-1} \\\end{pmatrix}=\vb*{A}^{n-2}\begin{pmatrix} u_2 \\ u_1 \\\end{pmatrix}$ 得
     $$
-    u_n=\dfrac{1}{\sqrt{5}}\qty[\qty(\lambda_1^{n-1}-\lambda_2^{n-1})u_2+\qty(-\lambda_2\lambda_1^{n-1}+\lambda_1\lambda_2^{n-1})u_1]
+        u_n=\dfrac{1}{\sqrt{5}}\qty[\qty(\lambda_1^{n-1}-\lambda_2^{n-1})u_2+\qty(-\lambda_2\lambda_1^{n-1}+\lambda_1\lambda_2^{n-1})u_1]
     $$
-    从而 
+    从而
     \begin{flalign*}
-    \dfrac{u_n}{u_{n+1}}=\dfrac{u_2\qty[\dfrac{1}{\lambda_1}-\qty(\dfrac{\lambda_2}{\lambda_1})^{n-1}]+u_1\qty[-\dfrac{\lambda_2}{\lambda_1}+\qty(\dfrac{\lambda_2}{\lambda_1})^{n-1}]}{u_2\qty[1-\qty(\dfrac{\lambda_2}{\lambda_1})^{n}]+u_1\qty[-\lambda_2+\lambda_1\qty(\dfrac{\lambda_2}{\lambda_1})^{n}]} 
+        \dfrac{u_n}{u_{n+1}}=\dfrac{u_2\qty[\dfrac{1}{\lambda_1}-\qty(\dfrac{\lambda_2}{\lambda_1})^{n-1}]+u_1\qty[-\dfrac{\lambda_2}{\lambda_1}+\qty(\dfrac{\lambda_2}{\lambda_1})^{n-1}]}{u_2\qty[1-\qty(\dfrac{\lambda_2}{\lambda_1})^{n}]+u_1\qty[-\lambda_2+\lambda_1\qty(\dfrac{\lambda_2}{\lambda_1})^{n}]}
     \end{flalign*}
     因为 $\left\vert \dfrac{\lambda_2}{\lambda_1} \right\vert <1$, 所以 $ \displaystyle \lim_{n \to \infty}\dfrac{u_n}{u_{n+1}}=\dfrac{2}{\sqrt{5}} $, 即 $\displaystyle \lim_{n \to \infty}\dfrac{\dfrac{1}{u_{n+1}}}{\dfrac{1}{u_n}}=\dfrac{2}{\sqrt{5}}<1$, 故由正项级数的比值判别法, 级数 $ \displaystyle \sum_{n=1}^{\infty} \dfrac{1}{u_n} $ 收敛.
 \end{proof}
@@ -431,17 +451,17 @@
     \textbf{法一: }将通项化简为
     $$\frac{(-1)^{n}}{\sqrt{n}+(-1)^{n}}=\frac{(-1)^{n} \sqrt{n}}{\sqrt{n} \cdot\left(\sqrt{n}+(-1)^{n}\right)}=\frac{(-1)^{n}}{\sqrt{n}}-\frac{1}{\sqrt{n}\left(\sqrt{n}+(-1)^{n}\right)}$$
     于是 $$\displaystyle  \sum_{n=2}^{\infty} \frac{(-1)^{n}}{\sqrt{n}+(-1)^{n}}=\sum_{n=2}^{\infty} \frac{(-1)^{n}}{\sqrt{n}}-\sum_{n=2}^{\infty} \frac{1}{\sqrt{n}\left(\sqrt{n}+(-1)^{n}\right)} $$
-    对于 $\displaystyle  \sum_{n=2}^{\infty} \frac{(-1)^{n}}{\sqrt{n}} $, 由 Leibniz 判别法知收敛, 对于 $\displaystyle  \sum_{n=2}^{\infty} \frac{1}{\sqrt{n}\left(\sqrt{n}+(-1)^{n}\right)} $, 该级数为正项级数, 且 $\displaystyle  \frac{1}{\sqrt{n}\left(\sqrt{n}+(-1)^{n}\right)} \sim \frac{1}{n}(n \to \infty) $, 而 $\displaystyle  \sum_{n=2}^{\infty} \frac{1}{n} $ 发散, 所以 $\displaystyle  \sum_{n=2}^{\infty} \frac{1}{\sqrt{n}\left(\sqrt{n}+(-1)^{n}\right)} $ 发散, 从而知原级数发散.\\ 
+    对于 $\displaystyle  \sum_{n=2}^{\infty} \frac{(-1)^{n}}{\sqrt{n}} $, 由 Leibniz 判别法知收敛, 对于 $\displaystyle  \sum_{n=2}^{\infty} \frac{1}{\sqrt{n}\left(\sqrt{n}+(-1)^{n}\right)} $, 该级数为正项级数, 且 $\displaystyle  \frac{1}{\sqrt{n}\left(\sqrt{n}+(-1)^{n}\right)} \sim \frac{1}{n}(n \to \infty) $, 而 $\displaystyle  \sum_{n=2}^{\infty} \frac{1}{n} $ 发散, 所以 $\displaystyle  \sum_{n=2}^{\infty} \frac{1}{\sqrt{n}\left(\sqrt{n}+(-1)^{n}\right)} $ 发散, 从而知原级数发散.\\
     \textbf{法二: }将通项的分母有理化, 原级数可化为
     $$
-    \sum_{n=2}^{\infty} \frac{(-1)^{n}}{\sqrt{n}+(-1)^{n}}=\sum_{n=2}^{\infty} \frac{(-1)^{n} \sqrt{n}}{n-1}-\sum_{n=2}^{\infty} \frac{1}{n} 
+        \sum_{n=2}^{\infty} \frac{(-1)^{n}}{\sqrt{n}+(-1)^{n}}=\sum_{n=2}^{\infty} \frac{(-1)^{n} \sqrt{n}}{n-1}-\sum_{n=2}^{\infty} \frac{1}{n}
     $$
-    而 $\displaystyle  \sum_{n=2}^{\infty} \frac{1}{n} $ 发散, 由 Leibniz 判别法知 $\displaystyle  \sum_{n=2}^{\infty} \frac{(-1)^{n} \sqrt{n}}{n-1} $ 收敛, 从而得原级数发散.\\ 
+    而 $\displaystyle  \sum_{n=2}^{\infty} \frac{1}{n} $ 发散, 由 Leibniz 判别法知 $\displaystyle  \sum_{n=2}^{\infty} \frac{(-1)^{n} \sqrt{n}}{n-1} $ 收敛, 从而得原级数发散.\\
     \textbf{法三: }对原级数重新分组, 依次每两项加括号, 得到一个新级数 $\displaystyle  \sum_{k=1}^{\infty} u_{k} $:
     $$\left(\frac{1}{\sqrt{2}+1}-\frac{1}{\sqrt{3}-1}\right)+\cdots+\left(\frac{1}{\sqrt{2 k}+1}-\frac{1}{\sqrt{2 k+1}-1}\right)+\cdots$$
     其通项 $\displaystyle  u_{k}=\frac{1}{\sqrt{2 k}+1}-\frac{1}{\sqrt{2 k+1}-1}=\frac{\sqrt{2 k+1}-\sqrt{2 k}-2}{(\sqrt{2 k}+1)(\sqrt{2 k+1}-1)}<0 $, 所以新级数 $\displaystyle  \sum_{k=1}^{\infty} u_{k} $ 是负项级数, 又由
     $$
-    u_{k}=\frac{\sqrt{2 k+1}-\sqrt{2 k}-2}{2 k}=\frac{\frac{1}{\sqrt{2 k+1}+\sqrt{2 k}}-2}{2 k} \sim-\frac{1}{k}(k \to \infty) 
+        u_{k}=\frac{\sqrt{2 k+1}-\sqrt{2 k}-2}{2 k}=\frac{\frac{1}{\sqrt{2 k+1}+\sqrt{2 k}}-2}{2 k} \sim-\frac{1}{k}(k \to \infty)
     $$
     知 $\displaystyle  \left(-u_{k}\right) \sim \frac{1}{k}   (k \to \infty) $, 所以级数 $\displaystyle  \sum_{k=1}^{\infty} u_{k} $ 发散, 故由级数收敛的性质得原级数发散.
 \end{solution}
@@ -485,15 +505,15 @@
 \begin{solution}
     令 $u_n=\dfrac{1}{n}\qty(1+\dfrac{1}{2}+\cdots+\dfrac{1}{n})=\dfrac{H_n}{n}$, 由 Stolz 定理可知,
     $$
-    \lim_{n \to +\infty}u_n=\lim_{n \to +\infty}\dfrac{H_{n+1}-H_n}{n+1-1}=\lim_{n \to +\infty}\dfrac{1}{n+1}=0
+        \lim_{n \to +\infty}u_n=\lim_{n \to +\infty}\dfrac{H_{n+1}-H_n}{n+1-1}=\lim_{n \to +\infty}\dfrac{1}{n+1}=0
     $$
     且
     $$
-    u_{n+1}-u_n=\dfrac{nH_{n+1}-(n+1)H_n}{(n+1)n}=\dfrac{\dfrac{n}{n+1}-\qty(1+\dfrac{1}{2}+\cdots+\dfrac{1}{n})}{(n+1)n}=\dfrac{\displaystyle \sum_{i=1}^{n}\qty(\dfrac{1}{n+1}-\dfrac{1}{i})}{(n+1)n}<0
+        u_{n+1}-u_n=\dfrac{nH_{n+1}-(n+1)H_n}{(n+1)n}=\dfrac{\dfrac{n}{n+1}-\qty(1+\dfrac{1}{2}+\cdots+\dfrac{1}{n})}{(n+1)n}=\dfrac{\displaystyle \sum_{i=1}^{n}\qty(\dfrac{1}{n+1}-\dfrac{1}{i})}{(n+1)n}<0
     $$
     所以, 数列 $u_n$ 单调递减, 且趋于零, 由 Leibniz 判别法知, 原级数收敛, 但非绝对收敛, 事实上
     $$
-    \lim_{n \to +\infty}\dfrac{u_n}{\dfrac{1}{n}}=+\infty
+        \lim_{n \to +\infty}\dfrac{u_n}{\dfrac{1}{n}}=+\infty
     $$
     且 $\displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n}$ 发散, 所以由比较判别法知 $ \displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n}\qty(1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}) $ 发散, 故原交错级数条件收敛, 但非绝对收敛.
 \end{solution}
@@ -501,8 +521,9 @@
 \subsection{一般数项级数的判别法}
 
 \begin{definition}[绝对收敛与条件收敛]
-    若级数 $\displaystyle \sum_{n=1}^{\infty}\left|u_{n}\right| $ 收敛, 则称级数 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 绝对收敛,
-    若级数 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 收敛, 而级数 $\displaystyle  \sum_{n=1}^{\infty}\left|u_{n}\right| $ 发散, 则称级数 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 条件收敛.
+    若级数 $\displaystyle \sum_{n=1}^{\infty}\left|u_{n}\right| $ 收敛, 则称\textit{级数} $\displaystyle \sum_{n=1}^{\infty} u_{n} $ \textit{绝对收敛},
+    若级数 $\displaystyle \sum_{n=1}^{\infty} u_{n} $ 收敛, 而级数 $\displaystyle  \sum_{n=1}^{\infty}\left|u_{n}\right| $ 发散, 则称\textit{级数} $\displaystyle \sum_{n=1}^{\infty} u_{n} $ \textit{条件收敛}.
+    \index{绝对收敛与条件收敛}
 \end{definition}
 
 判别任意项级数收敛的常用方法:
@@ -532,6 +553,82 @@
         \end{tabular}
     \end{table}
 \end{theorem}
+
+对于交错级数的敛散性, 一般采取以下步骤.
+\begin{enumerate}[label=(\arabic{*})]
+    \item 判断级数通项是否趋于 0, 如果通项不趋于 0, 那么就可得到级数是发散的; 如果通项趋于 0, 进行第二步;
+    \item 判断级数是否绝对收敛, 如果不绝对收敛的话, 进行第三步;
+    \item 判断级数是否条件收敛.
+\end{enumerate}
+
+\begin{example}
+    设常数 $\lambda>0$, 且级数 $\displaystyle \sum_{n=1}^{\infty} a_n^2$ 收敛, 则级数 $ \displaystyle \sum_{n=1}^{\infty} (-1)^{n}\dfrac{|a_n|}{\sqrt{n^2+\lambda}} $
+    \begin{tasks}(4)
+        \task 发散.
+        \task 条件收敛.
+        \task 绝对收敛.
+        \task 敛散性与 $\lambda$ 有关.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    第一步: 由于级数 $\displaystyle \sum_{n=1}^{\infty} a_n^2$ 收敛, 即
+    $$
+        \lim_{n \to \infty}a_n^2=0\Rightarrow \lim_{n \to \infty}a_n=0
+    $$
+    于是 $ \displaystyle \lim_{n \to \infty}(-1)^n\dfrac{|a_n|}{\sqrt{n^2+\lambda}} =0$; \\
+    第二步: 对于级数 $ \displaystyle \sum_{n=1}^{\infty} \qty|(-1)^{n}\dfrac{|a_n|}{\sqrt{n^2+\lambda}}| $, 由于
+    $$
+        \dfrac{|a_n|}{\sqrt{n^2+\lambda}}\substack{ab\leqslant \frac{1}{2}\qty(a^2+b^2)\\ \leqslant }\dfrac{1}{2}\qty(a_n^2+\dfrac{1}{n^2+\lambda})
+    $$
+    故级数 $\displaystyle \sum_{n=1}^{\infty} \dfrac{|a_n|}{\sqrt{n^2+\lambda}}$ 收敛, 故原级数绝对收敛.
+\end{solution}
+
+\begin{example}
+    级数 $\displaystyle \sum_{n=1}^{\infty} \sin\qty(\sqrt{n^2+1}\pi)$
+    \begin{tasks}
+        (4)
+        \task 发散.
+        \task 条件收敛.
+        \task 绝对收敛.
+        \task 敛散性不确定.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    第一步: 将通项改写为 $(-1)^n u_n$ 的形式, 由 
+    $$
+    \sin\qty(\sqrt{n^2+1}\pi)=\sin\qty(\sqrt{n^2+1}\pi-n\pi+n\pi)=(-1)^n\sin\dfrac{\pi}{\sqrt{n^2+1}+n}
+    $$
+    因为 $0<\dfrac{\pi}{\sqrt{n^2+1}+n}<\pi$, 所以 $0<\sin\dfrac{\pi}{\sqrt{n^2+1}+n}$, 原级数为交错级数;\\ 
+    第二步: 对交错级数先讨论绝对收敛性, 因为 
+    $$
+    |u_n|=\sin\dfrac{\pi}{\sqrt{n^2+1}+n}\sim \dfrac{\pi}{2n}~(n\to \infty)
+    $$
+    故 $ \displaystyle \sum_{n=1}^{\infty} \dfrac{\pi}{\sqrt{n^2+1}+n} $ 与 $ \displaystyle \sum_{n=1}^{\infty} \dfrac{\pi}{2n} $ 同敛散, 又 $ \displaystyle \sum_{n=1}^{\infty} \dfrac{\pi}{2n} $ 发散, 则原级数不具有绝对收敛性; \\ 
+    第三步: 判断级数是否条件收敛性, 当 $n\to \infty$ 时, $\sin\dfrac{\pi}{\sqrt{n^2+1}+n}$ 单调递减, 且 $ \displaystyle \lim_{n \to \infty}\sin\dfrac{\pi}{\sqrt{n^2+1}+n} =0$, 由 Leibniz 准则知, 原级数条件收敛, 故选 B.
+\end{solution}
+
+\begin{example}
+    设 $a>0$ 为常数, 级数 $ \displaystyle \sum_{n=1}^{\infty} \dfrac{(-1)^{n-1}}{n}\cdot \dfrac{a^n}{1+a^n} $ 条件收敛, 则 $a$ 的取值范围为 
+    \begin{tasks}(4)
+        \task $(0,+\infty)$.
+        \task $(0,1]$.
+        \task $[1,+\infty)$.
+        \task $[\dfrac{1}{2},+\infty)$.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    因为 级数 $ \displaystyle \sum_{n=1}^{\infty} \dfrac{(-1)^{n-1}}{n}\cdot \dfrac{a^n}{1+a^n} $ 条件收敛, 所以 $\displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n}\cdot\dfrac{a^n}{1+a^n}$ 发散, 
+    又 $$
+    \sum_{n=1}^{\infty} \dfrac{1}{n}\cdot\dfrac{a^n}{1+a^n}=\sum_{n=1}^{\infty} \dfrac{1}{n}\cdot\dfrac{1+a^n-1}{1+a^n}=\sum_{n=1}^{\infty} \qty[\dfrac{1}{n}-\dfrac{1}{n\qty(1+a^n)}]
+    $$
+    其中 $\displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n}$ 发散, 又因为发散 $\pm$ 收敛 $=$ 发散, 因此 $ \displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n\qty(1+a^n)} $ 收敛, 
+    记 $u_n=\dfrac{1}{n\qty(1+a^n)}$, 那么 $$
+    \lim_{n \to \infty}\dfrac{u_{n+1}}{u_n}=\lim_{n \to \infty}\dfrac{n\qty(1+a^n)}{(n+1)\qty(1+a^{n+1})}=\lim_{n \to \infty}\dfrac{1+a^n}{1+a^{n+1}}=\begin{cases}
+        1,&0<a\leqslant 1\\ \dfrac{1}{a},&a>1
+    \end{cases}
+    $$
+    故当 $a>1$ 时, $ \displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n\qty(1+a^n)} $ 收敛, 这就能够保证加绝对值后的原级数发散, 当 $a=1$ 时, 原级数为 $ \displaystyle \dfrac{1}{2}\sum_{n=1}^{\infty} \dfrac{(-1)^{n-1}}{n} $, 显然条件收敛, 符合题意, 综上, 选 C.
+\end{solution}
 
 \subsection{其他判别法}
 
@@ -564,6 +661,29 @@
     设 $\displaystyle \sum_{n=1}^{\infty} a_n$ 为正项级数, $\displaystyle \lim_{n \to \infty}\qty(\dfrac{a_n}{a_{n+1}})^{n}=\rho$,
     则当 $\rho<\dfrac{1}{\e}$ 时, 级数 $\displaystyle \sum_{n=1}^{\infty} a_n$ 收敛; 当 $\rho>\dfrac{1}{\e}$ 时, 级数 $\displaystyle \sum_{n=1}^{\infty} a_n$ 发散.
 \end{theorem}
+
+\begin{example}
+    判断下列级数的敛散性, 并指出其采用的判别法.
+    \setcounter{magicrownumbers}{0}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{l|l}
+            (\rownumber{}) $ \displaystyle \sum_{n=2}^{\infty} \dfrac{1}{\ln ^{\ln\ln n}n} $. & (\rownumber{}) $ \displaystyle \sum_{n=1}^{\infty} \dfrac{\sqrt[n]{n}}{2^n} $.\\
+            (\rownumber{}) $ \displaystyle \sum_{n=3}^{\infty} \dfrac{1}{n \ln^{\alpha}n\qty(\ln \ln n)^\beta} ~(\alpha>1,\beta>0)$. & (\rownumber{}) $ \displaystyle \sum_{n=2}^{\infty} \sin\qty[\qty(n+\dfrac{1}{\ln n})\pi] $.\\ 
+            (\rownumber{}) $ \displaystyle \sum_{n=1}^{\infty} \qty(\dfrac{1}{\sqrt{n}}-\dfrac{1}{\sqrt{n+1}})\sin(n+k) ~(k\in \mathbb{R})$.& (\rownumber{}) 
+        \end{tabular}
+    \end{table}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 因为 $\dfrac{1}{\ln ^{\ln \ln n}n}=\e ^{-(\ln \ln n)^2}>\e ^{-\ln n}=\dfrac{1}{n}$, 而 $ \displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n} $ 发散, 由比较审敛法知, 原级数发散.
+        \item 因为 $ \displaystyle \dfrac{\sqrt[n]{n}}{2^n} <\dfrac{2}{2^n}=\dfrac{1}{2^{n-1}}$, 由正项级数的比较审敛法知, 原级数收敛.
+        \item 因为 $ \displaystyle \int_{3}^{+\infty} \dfrac{1}{x\ln^\alpha x(\ln\ln x)^\beta} \dd x \xlongequal{\ln x=t}\int_{\ln 3}^{+\infty} \dfrac{\dd t}{t^\alpha\ln^\beta t}$, 而 
+        $ \displaystyle \dfrac{1}{t^\alpha\ln^\beta t} \leqslant \dfrac{1}{t^\alpha}$, 且当 $\alpha>1$ 时, $ \displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n^\alpha} $ 收敛, 由积分判别法知, 原级数收敛.
+        \item 因为 $ \displaystyle \sin\qty[\qty(n+\dfrac{1}{\ln n})] =\sin\qty[\qty(n+\dfrac{1}{\ln n})+n\pi-n\pi] =(-1)^n\sin\dfrac{\pi}{\ln n}$ 为交错级数, 而 $\sin\dfrac{\pi}{\ln n}$ 单调递减, 且 $ \displaystyle \lim_{n \to \infty} \sin\dfrac{\pi}{\ln n}=0$, 由 Leibniz 判别法可知原级数收敛.
+        \item 
+    \end{enumerate}
+\end{solution}
 
 % \subsubsection{Cauchy 准则及应用}
 % 
