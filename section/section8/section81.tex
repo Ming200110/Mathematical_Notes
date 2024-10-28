@@ -248,19 +248,6 @@ $$\dfrac{\dd y}{\dd x}=f\left(\dfrac{k u+c_{1}}{u+c_{2}}\right)=g(u), \quad \dfr
     故原方程的通解为 $u(x,y)\equiv C$, 即 $x\sin y+y\mathrm{e}^{-x}-x^2\equiv C.$
 \end{solution}
 
-\begin{example}
-    求微分方程 $y''\qty(3y'^2-x)=y'$ 的通解.
-\end{example}
-\begin{solution}
-    原方程化为 $y''\qty(3y'^2-x)-y'=0$, 且注意到 $\dd \qty(y'^3)=3y'^2,~\dd \qty(xy')=y'+xy''$, 于是原式化为
-    $$\dd \qty(y'^3-xy')=0\Rightarrow y'^3-xy'=C_1$$
-    令 $p=y'=\displaystyle\dv{y}{x}$, 那么 $\dd x=\dfrac{\dd y}{p}$, 则 $p^3-xp=C_1$, 即 $x=p^2-\dfrac{C_1}{p}$,
-    两边全微分得 $$\dd x=2p\dd p+\dfrac{C_1\dd p}{p^2}$$
-    代入 $\dd x=\dfrac{\dd y}{p}$, 得 $\dd y=\qty(2p^2+\dfrac{C_1}{p})\dd p$, 为变量分离方程, 于是两边积分得
-    $$\int\dd y=\int\qty(2p^2+\dfrac{C_1}{p})\dd p\Rightarrow y=\dfrac{2}{3}p^3+C_1\ln p+C_2$$
-    其中 $x=p^2-\dfrac{C_1}{p}.$
-\end{solution}
-
 % \begin{definition}
 %     将一阶方程 $\displaystyle\frac{\dd y}{\dd x}=f(x,y)$ 写成微分形式 $f(x,y)\dd x-\dd y=0$
 %     或把 $x,y$ 平等看待, 写成下面具有对称形式的一阶微分方程:

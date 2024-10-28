@@ -157,7 +157,7 @@ $$\begin{cases}
     \end{cases}$$
 
 \begin{theorem}[两点三次 Hermite 插值]
-    \label{twoPointTripleHermiteInterpolation}
+    \label{twoPointTripleHermiteInterpolation}\index{两点三次 Hermite 插值}
     采用基函数方法, 令 $$H_3(x)=\alpha_k(x)y_k+\alpha_{k+1}(x)y_{k+1}+\beta_k(x)m_k+\beta_{k+1}(x)m_{k+1}$$
     其中 $\alpha_k(x),\alpha_{k+1}(x),\beta_k(x),\beta_{k+1}(x)$ 是关于节点 $x_k$ 及 $x_{k+1}$ 的三次 Hermite 插值基函数, 它们应分别满足以下条件:
     $$\begin{array}{lll}
@@ -171,7 +171,6 @@ $$\begin{cases}
         H_3(x) & =\qty(1+2\dfrac{x-x_k}{x_{k+1}-x_k})\qty(\dfrac{x-x_{k+1}}{x_k-x_{k+1}})^2y_k+\qty(1+2\dfrac{x-x_{k+1}}{x_k-x_{k+1}})\qty(\dfrac{x-x_k}{x_{k+1}-x_k})^2y_{k+1} \\
                & ~ +(x-x_k)\qty(\dfrac{x-x_{k+1}}{x_k-x_{k+1}})^2m_k+(x-x_{k+1})\qty(\dfrac{x-x_k}{x_{k+1}-x_k})^2m_{k+1}.
     \end{flalign*}
-    \index{两点三次 Hermite 插值}
 \end{theorem}
 
 \begin{theorem}
@@ -204,5 +203,5 @@ $$\begin{cases}
         构造 $F(x)=g(x)-H_3(x)$ 有 $F(0)=F(1)=0$, 由 Rolle 定理 $\exists\xi_1\in(0,1)$ 使得 $F'(\xi_1)=0$, 
         又 $F'(0)=F'(\xi_1)=F'(1)=0$, 由 Rolle 定理得 $\exists \xi_2\in(0,\xi_1),\xi_3\in(\xi_1,1)$ 使得 $F''(\xi_i)=0,i=2,3$, 
         再根据 Rolle 定理得 $\exists\xi\in(\xi_2,\xi_3)\subset(0,1)$ 使得 $F'''(\xi)=0$ 即
-        $$f'''(\xi)-4!\xi-24=0\Rightarrow f'''(\xi)=24\xi+24.$$
+        $$f'''(\xi)-\xi\cdot4!-24=0\Rightarrow f'''(\xi)=24\xi+24.$$
 \end{solution}

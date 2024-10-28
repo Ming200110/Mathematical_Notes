@@ -17,16 +17,46 @@
 \end{enumerate}
 
 \begin{definition}[向量的范数]
-    设 $\vb*{\alpha}$ 为 $\mathbb{R}^n$ 中的任意向量, 将非负实数 $\sqrt{(\vb*{\alpha},\vb*{\alpha})}$ 定义为 $\vb*{\alpha}$ 的长度, 记为 $\norm*{\vb*{a}}$, 即若 $\vb*{\alpha}=(a_1,a_2,\cdots,a_n)^\top$, 则有 $$\norm*{\vb*{\alpha}}=\sqrt{\displaystyle\sum_{i=1}^{n}a_i^2}$$
-    向量的长度也称为\textit{向量的范数}或\textit{模}.
+    如果向量 $\vb*{x}\in \mathbb{R}^{n}$ 的某个实值函数 $N(\vb*{x})=\norm{x}$, 满足以下条件:
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\norm{\vb*{x}}\geqslant 0$, iff $\vb*{x}=\vb*{0}$ 取等 (正定条件);
+        \item $\norm{\alpha\vb*{x}}=|\alpha|\norm{\vb*{x}},~\forall a\in \mathbb{R}$ (齐次性);
+        \item $\norm{\vb*{x}+\vb*{y}}\leqslant \norm{\vb*{x}}+\norm{\vb*{y}}$ (三角不等式).
+    \end{enumerate}
+    则称 $N(\vb*{x})$ 是 $\mathbb{R}^{n}$ 上的一个\textit{向量范数} (或\textit{模}). 由 (3) 可推出不等式: $|~\norm{\vb*{x}}-\norm{\vb*{y}}~|\leqslant \norm{\vb*{x}-\vb*{y}}$.
 \end{definition}
 
-向量范数具有下列性质:
-\begin{enumerate}[label=(\arabic{*})]
-    \item $\|\vb*{\alpha}\| \geqslant 0  $, 当且仅当 $ \vb*{\alpha}=\vb*{0} $ 时, 等号成立;
-    \item 对于任意向量 $ \vb*{\alpha} $ 和任意实数 $ k $, 都有 $ \|k \vb*{\alpha}\|=|k|\|\vb*{\alpha}\| $;
-    \item 对于任意 $ n $ 维向量 $ \vb*{\alpha} $ 和 $ \vb*{\beta} $, 有 $ |(\vb*{\alpha}, \vb*{\beta})|=\left|\vb*{\alpha}^{\top} \vb*{\beta}\right| \leqslant\|\vb*{\alpha}\| \cdot\|\vb*{\beta}\|$.
-\end{enumerate}
+\begin{definition}[最大范数]
+    向量的 $\infty$-范数 (最大范数):
+    $\displaystyle 
+    \norm{\vb*{x}}_{\infty}=\max\limits_{1\leqslant i\leqslant n}|x_i|.
+    $
+\end{definition}
+
+\begin{definition}[1-范数]
+    向量的 1-范数: $ \displaystyle \norm{\vb*{x}}_1=\sum_{i=1}^{n} |x_i| $.
+\end{definition}
+
+\begin{definition}[2-范数]
+    向量的 2-范数: $ \displaystyle \norm{\vb*{x}}_2=(\vb*{x},\vb*{x})^{\frac{1}{2}} =\qty(\sum_{i=1}^{n} x_i^2)^{\frac{1}{2}}$.
+\end{definition}
+
+\begin{definition}[$p$-范数]
+    向量的 $p$-范数: $ \displaystyle \norm{\vb*{x}}_{p}=\qty(\sum_{i=1}^{n} |x_i|^p)^{\frac{1}{p}} $.
+\end{definition}
+
+\begin{theorem}[向量范数的等价性]
+    设 $\norm{\vb*{x}}_s,~\norm{\vb*{x}}_t$ 为 $\mathbb{R}^{n}$ 上向量的任意两种范数, 则存在常数 $c_1,~c_2>0$, 使得 $\forall \vb*{x}\in \mathbb{R}^{n}$ 有 $$
+    c_1\norm{\vb*{x}}_s\leqslant \norm{\vb*{x}}_t\leqslant c_2\norm{\vb*{x}}_s.
+    $$
+\end{theorem}
+
+% 向量范数具有下列性质:
+% \begin{enumerate}[label=(\arabic{*})]
+%     \item $\|\vb*{\alpha}\| \geqslant 0  $, 当且仅当 $ \vb*{\alpha}=\vb*{0} $ 时, 等号成立;
+%     \item 对于任意向量 $ \vb*{\alpha} $ 和任意实数 $ k $, 都有 $ \|k \vb*{\alpha}\|=|k|\|\vb*{\alpha}\| $;
+%     \item 对于任意 $ n $ 维向量 $ \vb*{\alpha} $ 和 $ \vb*{\beta} $, 有 $ |(\vb*{\alpha}, \vb*{\beta})|=\left|\vb*{\alpha}^{\top} \vb*{\beta}\right| \leqslant\|\vb*{\alpha}\| \cdot\|\vb*{\beta}\|$.
+% \end{enumerate}
 
 \begin{definition}[向量的正交]
     如果向量 $ \vb*{\alpha} $ 和 $ \vb*{\beta} $ 的内积等于零, 即 $ (\vb*{\alpha}, \vb*{\beta})=0 $, 则称  $\vb*{\alpha} $ 和 $ \vb*{\beta} $ \textit{相互正交}. 如果非零向量组 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \cdots, \vb*{\alpha}_{s} $ 中的向量两两正交, 即 $ \left(\vb*{\alpha}_{i}, \vb*{\alpha}_{j}\right)=0(i \neq j, i, j=1 ,  2, \cdots, s) $, 则称该向量组为\textit{正交向量组}.
@@ -42,6 +72,107 @@
           当且仅当 $ \vb*{\alpha} $ 与 $ \vb*{\beta} $ 相互正交时, 有 $ \|\vb*{\alpha}+\vb*{\beta}\|^{2}=\|\vb*{\alpha}\|^{2}+\|\vb*{\beta}\|^{2} $.
 \end{enumerate}
 
+\begin{definition}[初等反射矩阵]
+    设向量 $\vb*{w}\in \mathbb{R}^{n}$, 且 $\vb*{w}^\top\vb*{w}=1$, 称矩阵 $\vb*{H}=\vb*{E}-2\vb*{ww}^\top$ 为\textit{初等反射矩阵}, 也称为 \textit{Householder 变换}.
+\end{definition}
+
+\begin{theorem}
+    设有初等反射矩阵 $\vb*{H}=\vb*{E}-2\vb*{ww}^\top$, 其中 $\vb*{w}^\top\vb*{w}=1$, 则 
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\vb*{H}$ 是对称矩阵, 即 $\vb*{H}^\top=\vb*{H}$;
+        \item $\vb*{H}$ 是正交矩阵, 即 $\vb*{H}^{-1}=\vb*{H}$;
+        \item $\vb*{H}$ 是对合矩阵, 即 $\vb*{H}^2=\vb*{E}$;
+        \item 设 $\vb*{A}$ 是对称矩阵, 则 $\vb*{A}_1=\vb*{H}^{-1}\vb*{AH}=\vb*{H}^\top\vb*{AH}$ 亦是对称矩阵.
+    \end{enumerate}
+\end{theorem}
+\begin{multicols}{2}
+    如图 \ref{Householder}, 考虑以 $\vb*{w}$ 为法向量且过原点 $O$ 的超平面 $S:\vb*{w}^\top\vb*{x}=0$, 设任意向量 $\vb*{v}\in \mathbb{R}^{n}$, 则 $\vb*{v}=\vb*{x}+\vb*{y}$, 其中 $\vb*{x}\in S,~\vb*{y}\in S^{\bot }$ ($S^{\bot}$ 表示与 $S$ 垂直的超平面), 于是 $
+\vb*{Hx}=\vb*{x},~ \vb*{Hy}=-\vb*{y},~ \vb*{Hv}=\vb*{v}'.
+$
+    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+\begin{figure}[H]
+    \centering
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Shape: Parallelogram [id:dp04316432985707386] 
+\draw   (96.11,115) -- (195.8,115) -- (170.99,152.15) -- (71.3,152.15) -- cycle ;
+%Straight Lines [id:da2353302515023421] 
+\draw    (108.8,129.65) -- (108.42,85.1) ;
+\draw [shift={(108.4,83.1)}, rotate = 89.51] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (7.2,-1.8) -- (0,0) -- (7.2,1.8) -- cycle    ;
+%Straight Lines [id:da14913951087141797] 
+\draw    (108.8,129.65) -- (144.3,129.18) ;
+\draw [shift={(146.3,129.15)}, rotate = 179.24] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (7.2,-1.8) -- (0,0) -- (7.2,1.8) -- cycle    ;
+%Straight Lines [id:da7775953697317739] 
+\draw    (146.3,129.15) -- (146.3,95.65) ;
+\draw [shift={(146.3,93.65)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (7.2,-1.8) -- (0,0) -- (7.2,1.8) -- cycle    ;
+%Straight Lines [id:da2670825372641483] 
+\draw    (108.8,129.65) -- (144.86,95.04) ;
+\draw [shift={(146.3,93.65)}, rotate = 136.17] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (7.2,-1.8) -- (0,0) -- (7.2,1.8) -- cycle    ;
+%Straight Lines [id:da46605586651881037] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (108.8,129.65) -- (144.84,163.29) ;
+\draw [shift={(146.3,164.65)}, rotate = 223.03] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (7.2,-1.8) -- (0,0) -- (7.2,1.8) -- cycle    ;
+%Straight Lines [id:da055608728128430984] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (146.3,162.65) -- (146.3,129.15) ;
+\draw [shift={(146.3,164.65)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (7.2,-1.8) -- (0,0) -- (7.2,1.8) -- cycle    ;
+
+% Text Node
+\draw (98.9,79.57) node   [align=left] {\begin{minipage}[lt]{11.42pt}\setlength\topsep{0pt}
+$\displaystyle \boldsymbol{{\displaystyle w}}$
+\end{minipage}};
+% Text Node
+\draw (100.15,129.82) node   [align=left] {\begin{minipage}[lt]{12.44pt}\setlength\topsep{0pt}
+$\displaystyle O$
+\end{minipage}};
+% Text Node
+\draw (85.15,143.07) node   [align=left] {\begin{minipage}[lt]{9.72pt}\setlength\topsep{0pt}
+$\displaystyle S$
+\end{minipage}};
+% Text Node
+\draw (133.55,133.57) node   [align=left] {\begin{minipage}[lt]{11.42pt}\setlength\topsep{0pt}
+$\displaystyle \boldsymbol{x}$
+\end{minipage}};
+% Text Node
+\draw (153.7,108.82) node   [align=left] {\begin{minipage}[lt]{11.42pt}\setlength\topsep{0pt}
+$\displaystyle \boldsymbol{y}$
+\end{minipage}};
+% Text Node
+\draw (126.9,161.57) node   [align=left] {\begin{minipage}[lt]{11.42pt}\setlength\topsep{0pt}
+$\displaystyle \boldsymbol{v'}$
+\end{minipage}};
+% Text Node
+\draw (127.4,98.57) node   [align=left] {\begin{minipage}[lt]{11.42pt}\setlength\topsep{0pt}
+$\displaystyle {\displaystyle \boldsymbol{v}}$
+\end{minipage}};
+% Text Node
+% \draw (154.7,141.72) node   [align=left] {\begin{minipage}[lt]{11.42pt}\setlength\topsep{0pt}
+% $\displaystyle -\boldsymbol{y}$
+% \end{minipage}};
+
+
+\end{tikzpicture}
+
+\caption{}
+\label{Householder}
+\end{figure}
+
+\end{multicols}
+
+\begin{theorem}
+    设 $\vb*{x},~\vb*{y}$ 为两个不相等的 $n$ 维向量, 且 $\norm{\vb*{x}}_2=\norm{\vb*{y}}_2$, 则存在一个 初等反射矩阵 $\vb*{H}$, 使得 $\vb*{Hx}=\vb*{y}.$
+\end{theorem}
+\begin{proof}[{\songti \textbf{证}}]
+    令 $\vb*{w}=\dfrac{\vb*{x}-\vb*{y}}{\norm{\vb*{x}-\vb*{y}}}$, 那么 $$
+    \vb*{H}=\vb*{E}-2\vb*{ww}^\top=\vb*{E}-2\dfrac{(\vb*{x}-\vb*{y})}{\norm{\vb*{x}-\vb*{y}}^2}\qty(\vb*{x}^\top-\vb*{y}^\top)
+    $$
+    则 $$
+    \vb*{Hx}=\vb*{x}-2\dfrac{(\vb*{x}-\vb*{y})}{\norm{\vb*{x}-\vb*{y}}^2}\qty(\vb*{x}^\top-\vb*{y}^\top)\vb*{x}=\vb*{x}-2\dfrac{(\vb*{x}-\vb*{y})\qty(\vb*{x}^\top\vb*{x}-\vb*{y}^\top\vb*{x})}{\norm{\vb*{x}-\vb*{y}}^2}
+    $$
+    因为 $$
+    \norm{\vb*{x}-\vb*{y}}^2=(\vb*{x}-\vb*{y})^\top(\vb*{x}-\vb*{y})=2\qty(\vb*{x}^\top\vb*{x}-\vb*{y}^\top\vb*{x})
+    $$
+    所以 $\vb*{Hx}=\vb*{x}-(\vb*{x}-\vb*{y})=\vb*{y}$.
+\end{proof}
 \subsection{向量空间}
 
 \begin{definition}[向量空间]

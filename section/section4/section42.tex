@@ -29,6 +29,85 @@
     即 $\sin^2u+\sin^2v+\sin^2w=1$, 从而有 $\cos^2u+\cos^2v+\cos^2w=2.$
 \end{proof}
 
+\begin{example}
+    已知点 $P(1,0,-1)$ 与 $Q(3,1,2)$, 若在平面 $\varPi:x-2y+z=12$ 上存在一点 $M$, 使得 $|PM|+|QM|$ 最小, 则 $M$ 的坐标为 $\underline{\quad\quad\quad}.$
+\end{example}
+\begin{solution}
+    将 $P,~Q$ 的坐标代入 $x-2y+z$ 得 $0,~3$, 均小于 $12$, 说明 $P,~Q$ 在 $\varPi$ 的同侧,
+    \begin{multicols}{2}
+         因为 $\varPi$ 的法向量 $\vb*{n}=\qty(1,-2,1)$, 所以过点 $P$ 且 $\bot \varPi$ 的直线 $l$ 的方程为 $\dfrac{x-1}{1}=\dfrac{y}{-2}=\dfrac{z+1}{1}$, 联立 $l$ 与 $\varPi$:$$
+        \begin{cases}
+            \dfrac{x-1}{1}=\dfrac{y}{-2}=\dfrac{z+1}{1}=t \\ 
+            x-2y+z=12
+        \end{cases}
+        $$
+        解得 $t=2$, 故 $P_0$ 的坐标为 $\qty(3,-4,1)$, 那么 $P$ 关于 $P_0$ 对称的点 $P'$ 坐标为 $\qty(5,-8,3)$, 因此, 直线 $QP'$ 的方程为 $\begin{cases}
+            x=3+2t'\\ y=1-9t'\\ z=2+t'
+        \end{cases}$
+        代入 $\varPi$ 解得 $t'=\dfrac{3}{7}$, 于是点 $M$ 的坐标为 $\qty(\dfrac{27}{7},-\dfrac{20}{7},\dfrac{17}{7})$.
+    \begin{figure}[H]
+        \centering
+        
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,199); %set diagram left start at 0, and has height of 199
+
+%Shape: Parallelogram [id:dp15094409224905658] 
+\draw   (49.55,43.38) -- (193.04,43.38) -- (157.33,96.15) -- (13.84,96.15) -- cycle ;
+%Straight Lines [id:da6743410604742572] 
+\draw    (131.04,8.98) -- (131,66.4) ;
+\draw [shift={(131,66.4)}, rotate = 90.04] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 1.34, y radius= 1.34]   ;
+\draw [shift={(131.04,8.98)}, rotate = 90.04] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 1.34, y radius= 1.34]   ;
+%Straight Lines [id:da35640813358813483] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (131,66.4) -- (130.96,123.82) ;
+\draw [shift={(130.96,123.82)}, rotate = 90.04] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 1.34, y radius= 1.34]   ;
+\draw [shift={(131,66.4)}, rotate = 90.04] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 1.34, y radius= 1.34]   ;
+%Straight Lines [id:da5052036786462526] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (83.84,66.66) -- (130.96,123.82) ;
+%Straight Lines [id:da6835962397357249] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (83.84,66.66) -- (131,66.4) ;
+\draw [shift={(83.84,66.66)}, rotate = 359.68] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 1.34, y radius= 1.34]   ;
+%Straight Lines [id:da9804195552709265] 
+\draw    (36.72,9.51) -- (83.84,66.66) ;
+\draw [shift={(36.72,9.51)}, rotate = 50.5] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 1.34, y radius= 1.34]   ;
+%Straight Lines [id:da5537688902051754] 
+\draw    (83.84,66.66) -- (131.04,8.98) ;
+
+% Text Node
+\draw (29.75,85.87) node   [align=left] {\begin{minipage}[lt]{9.72pt}\setlength\topsep{0pt}
+$\displaystyle \Pi $
+\end{minipage}};
+% Text Node
+\draw (141.32,10.33) node   [align=left] {\begin{minipage}[lt]{12.13pt}\setlength\topsep{0pt}
+$\displaystyle P$
+\end{minipage}};
+% Text Node
+\draw (141.72,70.8) node   [align=left] {\begin{minipage}[lt]{12.13pt}\setlength\topsep{0pt}
+$\displaystyle P_{0}$
+\end{minipage}};
+% Text Node
+\draw (140.12,128) node   [align=left] {\begin{minipage}[lt]{12.13pt}\setlength\topsep{0pt}
+$\displaystyle P'$
+\end{minipage}};
+% Text Node
+\draw (76.12,77.6) node   [align=left] {\begin{minipage}[lt]{12.13pt}\setlength\topsep{0pt}
+$\displaystyle M$
+\end{minipage}};
+% Text Node
+\draw (25.32,20.8) node   [align=left] {\begin{minipage}[lt]{12.13pt}\setlength\topsep{0pt}
+$\displaystyle Q$
+\end{minipage}};
+
+
+\end{tikzpicture}
+\caption{}
+    \end{figure}
+\end{multicols}
+
+\end{solution}
+
 % 1、设一平面经过原点及点  (6,-3,2)  ,  且与平面  4 x-y+2 z=8  垂直, 求此平面的方程.
 % 2.求与原而的距凷为 6 , 且在二个坐标轴上的截距之比为  a: b: c=1: 3: 2  的平面方程.
 % 3.已知平面  \pi_{1}: x+2 y-z+1=0  和  \pi_{2}: 2 x-y+2 z-1=0 , 求:
@@ -61,7 +140,7 @@
 
 \subsubsection{平面与平面之间的位置关系}
 
-\begin{theorem}
+\begin{theorem}[平面位置关系]
     对 $\vb*{Ax}=\vb*{b}$ 方程组，若方程组有解，则 $\rank(\vb*{A},\vb*{b})=\rank\vb*{A}=3$, 并且 
     $$
     \begin{cases}
@@ -286,10 +365,10 @@
 
 \begin{theorem}[切平面方程]
     \index{切平面方程}曲面 $\varSigma:F(x,y,z)=0$, 在点 $P(x_0,y_0,z_0)$ 处的切平面的法向量为
+    \label{qpmfc}
     $$\vb*{n}=\eval{\qty(F'_x,F'_y,F'_z)}_{P}$$
     那么过点 $P$ 的切平面方程方程为
     $$F'_x(P)(x-x_0)+F'_y(P)(y-y_0)+F'_z(P)(z-z_0)=0.$$
-    \label{qpmfc}
 \end{theorem}
 
 \begin{theorem}[法线方程]
@@ -347,7 +426,6 @@
 \subsubsection{常见的空间曲面及其方程}
 
 下表是常见的空间曲面及其对应的方程.
-
 \setcounter{magicrownumbers}{0}
 \begin{table}[H]
     \centering

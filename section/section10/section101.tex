@@ -108,7 +108,7 @@
 \end{solution}
 
 \begin{definition}[幂零矩阵]
-    对方阵 $ \vb*{A} $, 如果存在正整数 $ m $, 使 $ \vb*{A}^{m}=\mathbf{0} $, 则称 $ \vb*{A} $ 为\textit{幂零矩阵}.
+    对方阵 $ \vb*{A} $, 如果存在正整数 $ m $, 使 $ \vb*{A}^{m}=\vb*{O} $, 则称 $ \vb*{A} $ 为\textit{幂零矩阵}.
 \end{definition}
 
 \begin{definition}[幂等矩阵]
@@ -136,6 +136,31 @@
 \begin{definition}[奇异矩阵与非奇异矩阵]
     若 $ |\vb*{A}|=0 $, 称 $ \vb*{A} $ 为\textit{奇异矩阵}, 否则称为\textit{非奇异矩阵}.
 \end{definition}
+
+\begin{definition}[对角占优矩阵]
+    设 $\vb*{A}=(a_{ij})_{n\times n}$, 
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 如果 $\vb*{A}$ 的元素满足 $$
+        |a_{ii}|>\sum_{\substack{j=1\\ j\neq i}}^{n} |a_{ij}|,~i=1, 2, \cdots ,n
+        $$
+        称 $\vb*{A}$ 为\textit{严格对角占优矩阵}.
+        \item 如果 $\vb*{A}$ 的元素满足 $$
+        |a_{ii}|\geqslant\sum_{\substack{j=1\\ j\neq i}}^{n} |a_{ij}|,~i=1, 2, \cdots ,n
+        $$
+        且上式至少有一个不等式严格成立, 则称 $\vb*{A}$ 为\textit{弱对角占优矩阵}.
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}[可约与不可约矩阵]
+    设 $\vb*{A}=(a_{ij})_{n\times n}~(n\geqslant 2)$, 如果存在置换矩阵 $\vb*{P}$ 使得 $$
+    \vb*{P}^\top\vb*{AP}=\mqty(\vb*{A}_{11}&\vb*{A}_{12}\\ \vb*{0}&\vb*{A}_{22})
+    $$
+    其中 $\vb*{A}_{11}$ 为 $r$ 阶方阵, $\vb*{A}_{22}$ 为 $n-r$ 阶方阵 $(1\leqslant r<n)$, 则称 $\vb*{A}$ 为\textit{可约矩阵}, 否则, 如果不存在这样的置换矩阵 $\vb*{P}$ 使上式成立, 则称 $\vb*{A}$ 为\textit{不可约矩阵}.
+\end{definition}
+
+\begin{theorem}[对角占优定理]
+    如果 $\vb*{A}=(a_{ij})_{n\times n}$ 为严格对角占优矩阵或 $\vb*{A}$ 为不可约弱对角占优矩阵, 则 $\vb*{A}$ 为非奇异矩阵.
+\end{theorem}
 
 \begin{definition}[矩阵的迹]
     设有 $n$ 阶方阵 $\vb*{A}$, 那么 $\vb*{A}$ 的\textit{迹}定义为 $\displaystyle\mathrm{tr}\vb*{A}=\sum_{k=1}^{n}a_{kk}$.
@@ -350,7 +375,7 @@
 
 \subsubsection{利用二项式展开求解}
 
-\begin{theorem}[]
+\begin{theorem}[矩阵的二项式展开]
     $\displaystyle \vb*{E}-\vb*{A}^n=(\vb*{E}-\vb*{A})\qty(\vb*{E}+\sum_{k=1}^{n-1} \vb*{A}^k)$.
 \end{theorem}
 
@@ -484,9 +509,9 @@
         \vdots        &        & \vdots        \\
         \vb*{B}_{t 1} & \cdots & \vb*{B}_{t r})$$
     其中 $ \vb*{A}_{i 1}, \vb*{A}_{i 2}, \cdots, \vb*{A}_{i i} $ 的列数分别与 $ \vb*{B}_{1 j}, \vb*{B}_{2 j}, \cdots, \vb*{B}_{i j} $ 的行数相等, 则
-    $$\vb*{A B}=\mqty(C_{11}  & \cdots & C_{1 r} \\
+    $$\vb*{A B}=\mqty(\vb*{C}_{11}  & \cdots & \vb*{C}_{1 r} \\
         \vdots  &        & \vdots  \\
-        C_{s 1} & \cdots & C_{s r})$$
+        \vb*{C}_{s 1} & \cdots & \vb*{C}_{s r})$$
     其中 $ \vb*{C}_{i j}=\displaystyle \sum_{k=1}^{t} \vb*{A}_{i k} \vb*{B}_{k j}(i=1, \cdots, s ; j=1, \cdots, r) $.
 \end{theorem}
 
@@ -508,7 +533,7 @@
 \subsection{Carlson 不等式及其应用}
 
 \begin{theorem}[Carlson 不等式]
-    对于 $n\times m$ 矩阵
+    在 $n\times m$ 的非负实数矩阵中, $m$ 列每列元素之和的几何平均值不小于矩阵中 $n$ 行每行元素的几何平均值之和. 即对于 $n\times m$ 矩阵
     $$\begin{pmatrix}
             a_{11} & a_{12} & \dots  & a_{1m} \\
             a_{21} & a_{22} & \dots  & a_{2m} \\

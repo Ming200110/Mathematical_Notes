@@ -1,47 +1,12 @@
 \section{齐次线性方程组}
 
-\subsection{Cramer 法则的应用}
-
-\begin{theorem}[Cramer 法则]
-    如果数域 $ K $ 上的含有 $ n $ 个末知量 $ n $ 个方程的线性方程组
-    $$\begin{cases}
-            a_{11} x_{1}+a_{12} x_{2}+\cdots+a_{1 n} x_{n}=b_{1}                  \\
-            a_{21} x_{1}+a_{22} x_{2}+\cdots+a_{2 n} x_{n}=b_{2}                  \\
-            \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \\
-            a_{n 1} x_{1}+a_{n 2} x_{2}+\cdots+a_{n n} x_{n}=b_{n}
-        \end{cases}$$
-    的系数行列式 $ D \neq 0$, 那么此方程组有唯一解 $ \left(\dfrac{D_{1}}{D}, \dfrac{D_{2}}{D}, \cdots, \dfrac{D_{n}}{D}\right)$,
-    其中 $ D_{j} $ 是把 $ D $ 中第 $ j $ 列的元素换成方程组的常数项 $ b_{1}, b_{2}, \cdots, b_{n} $ 而成的行列式 $ (j=1,2, \cdots, n)$, 即
-    $$\mqty|a_{11}  & \cdots & a_{1, j-1} & b_{1}  & a_{1, j+1} & \cdots & a_{1 n} \\
-        a_{21}  & \cdots & a_{2, j-1} & b_{2}  & a_{2, j+1} & \cdots & a_{2 n} \\
-        \vdots  &        & \vdots     & \vdots & \vdots     &        & \vdots  \\
-        a_{n 1} & \cdots & a_{n, j-1} & b_{n}  & a_{n, j+1} & \cdots & a_{n n}|$$
-    特别地, 当 $ b_{i}=0(i=1,2, \cdots, n) $ 时, 如果系数行列式 $ D \neq 0 $, 那么方程组只有零解;
-    反之, 如果方程组有非零解,那么必有 $ D=0 .$
-\end{theorem}
-
-\begin{example}[2005 华中科技大学]
-    解线性方程组 $\begin{cases}
-            x_1+ax_2+a^2x_3=a^3 \\
-            x_1+bx_2+b^2x_3=b^3 \\
-            x_1+cx_2+c^2x_3=c^3 \\
-        \end{cases}$
-    其中 $a,b,c$ 是互不相等的常数.
-\end{example}
-\begin{solution}
-    利用 Cramer 法则求解, 因为系数行列式 $$D=\mqty|1&a&a^2\\1&b&b^2\\1&c&c^2|=(c-b)(c-a)(b-a)\neq0$$
-    所以方程组有唯一解, 又因为
-    $$D_1=\mqty|a^3&a&a^2\\b^3&b&b^2\\b^3&b&b^2|=abcD,~D_2=\mqty|1&a^3&a^2\\1&b^3&b^2\\1&c^3&c^2|=-(ab+ac+bc)D,~D_3=\mqty|1&a&a^3\\1&b&b^3\\1&c&c^3|=(a+b+c)D$$
-    因此 $x_1=\dfrac{D_1}{D}=abc,~x_2=\dfrac{D_2}{D}=-ab-ac-bc,~x_3=\dfrac{D_3}{D}=a+b+c.$
-\end{solution}
-
 \subsection{齐次方程组的一般解}
 
-\begin{theorem}[齐次解的线性组合]
-    如果 $ \vb*{\xi}_{1}, \vb*{\xi}_{2} $ 是齐次线性方程组 $ \vb*{Ax}=\vb*{0} $ 的解, $ k $ 为任意数, 那么 $ \vb*{\xi}_{1}+\vb*{\xi}_{2}, k \vb*{\xi}_{1} $ 都是该齐次线性方程组的解. 因此 $ A x=0 $ 的解向量的线性组合仍是它的解向量.
+\begin{theorem}[齐次解的线性组合]\index{齐次解的线性组合}
+    如果 $ \vb*{\xi}_{1}, \vb*{\xi}_{2} $ 是齐次线性方程组 $ \vb*{Ax}=\vb*{0} $ 的解, $ k $ 为任意数, 那么 $ \vb*{\xi}_{1}+\vb*{\xi}_{2}, k \vb*{\xi}_{1} $ 都是该齐次线性方程组的解. 因此 $ \vb*{A x}=\vb*{0} $ 的解向量的线性组合仍是它的解向量.
 \end{theorem}
 
-\begin{theorem}[零解与非零解的充要条件]
+\begin{theorem}[零解与非零解的充要条件]\index{零解与非零解的充要条件}
     设齐次线性方程组 $ \vb*{Ax}=\vb*{0} $ 含有 $ n $ 个未知数和 $ m $ 个方程, 即系数矩阵 $ \vb*{A} $ 为 $ m \times n$ 矩阵, 则 $ \vb*{A x}=\vb*{0} $ 有非零解的充要条件是:
     \begin{enumerate}[label=(\arabic{*})]
         \item $\rank(\vb*{A})<n $;
@@ -65,8 +30,8 @@
     \end{enumerate}
 \end{definition}
 
-\begin{theorem}[基础解系的个数]
-    设 $ \vb*{A x}=\vb*{0} $ 含有 $ \vb*{n} $ 个未知数, 则基础解系所含解向量的个数为 $ n-\rank(\vb*{A}) $, 即自由未知量的个数.
+\begin{theorem}[基础解系的个数]\index{基础解系的个数}
+    设 $ \vb*{A x}=\vb*{0} $ 含有 $ n $ 个未知数, 则基础解系所含解向量的个数为 $ n-\rank(\vb*{A}) $, 即自由未知量的个数.
 \end{theorem}
 
 \begin{definition}[齐次方程组的通解]

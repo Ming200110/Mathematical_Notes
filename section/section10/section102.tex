@@ -3,14 +3,14 @@
 \subsection{伴随矩阵}
 
 \begin{definition}[伴随矩阵的定义]
-    设 $ \boldsymbol{A}=\left(a_{i j}\right) $ 是 $ n $ 阶方阵 $ (n \geqslant 2)$, $A $ 的伴随矩阵 $\vb*{A}^*$ (或 $\adj\vb*{A}$) 定义为
-    $$\boldsymbol{A}^{*}=\begin{pmatrix}
+    设 $ \vb*{A}=\left(a_{i j}\right) $ 是 $ n $ 阶方阵 $ (n \geqslant 2)$, $A $ 的伴随矩阵 $\vb*{A}^*$ (或 $\adj\vb*{A}$) 定义为
+    $$\vb*{A}^{*}=\begin{pmatrix}
             A_{11}  & A_{21}  & \cdots & A_{n 1} \\
             A_{12}  & A_{22}  & \cdots & A_{n 2} \\
             \vdots  & \vdots  &        & \vdots  \\
             A_{1 n} & A_{2 n} & \cdots & A_{n n}
         \end{pmatrix},$$
-    其中 $ A_{i j} $ 为 $ \boldsymbol{A} $ 的元素 $ a_{i j}~ (i, j=1,2, \cdots, n) $ 的代数余子式.
+    其中 $ A_{i j} $ 为 $ \vb*{A} $ 的元素 $ a_{i j}~ (i, j=1,2, \cdots, n) $ 的代数余子式.
 \end{definition}
 
 伴随矩阵具有如下性质.
@@ -19,13 +19,13 @@
     \centering
     \caption{伴随矩阵性质}
     \begin{tabular}{l l}
-        (\rownumber) $\displaystyle \boldsymbol{AA}^{*}=\boldsymbol{A}^{*} \boldsymbol{A}=|\boldsymbol{A}| \boldsymbol{E}$                                            & (\rownumber) $\displaystyle(\lambda \boldsymbol{A})^{*}=\lambda^{n-1} \boldsymbol{A}^{*}$                                                                                                                                                            \\
-        (\rownumber) $\displaystyle \left|\boldsymbol{A}^{*}\right|=|\boldsymbol{A}|^{n-1} $                                                                          & (\rownumber) $\displaystyle\left(\boldsymbol{A}^{*}\right)^{\top}=\left(\boldsymbol{A}^{\top}\right)^{*}$                                                                                                                                            \\
+        (\rownumber) $\displaystyle \vb*{AA}^{*}=\vb*{A}^{*} \vb*{A}=|\vb*{A}| \vb*{E}$                                            & (\rownumber) $\displaystyle(\lambda \vb*{A})^{*}=\lambda^{n-1} \vb*{A}^{*}$                                                                                                                                                            \\
+        (\rownumber) $\displaystyle \left|\vb*{A}^{*}\right|=|\vb*{A}|^{n-1} $                                                                          & (\rownumber) $\displaystyle\left(\vb*{A}^{*}\right)^{\top}=\left(\vb*{A}^{\top}\right)^{*}$                                                                                                                                            \\
         \midrule
-        (\rownumber) $\displaystyle(\boldsymbol{AB})^{*}=\boldsymbol{B}^{*} \boldsymbol{A}^{*}$                                                                       & (\rownumber) $\displaystyle\text{当 } \boldsymbol{A} \text{ 可逆时, } \boldsymbol{A}^{*}=|\boldsymbol{A}| \boldsymbol{A}^{-1}$                                                                                                                       \\
-        (\rownumber) $\displaystyle\text{当 } \boldsymbol{A} \text{ 可逆时, }\left(\boldsymbol{A}^{*}\right)^{-1}=\frac{1}{|\boldsymbol{A}|} \boldsymbol{A}$          & (\rownumber) $\displaystyle\text{当 } \boldsymbol{A} \text{ 可逆时, }\left(\boldsymbol{A}^{*}\right)^{-1}=\left(\boldsymbol{A}^{-1}\right)^{*} $                                                                                                     \\
+        (\rownumber) $\displaystyle(\vb*{AB})^{*}=\vb*{B}^{*} \vb*{A}^{*}$                                                                       & (\rownumber) $\displaystyle\text{当 } \vb*{A} \text{ 可逆时, } \vb*{A}^{*}=|\vb*{A}| \vb*{A}^{-1}$                                                                                                                       \\
+        (\rownumber) $\displaystyle\text{当 } \vb*{A} \text{ 可逆时, }\left(\vb*{A}^{*}\right)^{-1}=\frac{1}{|\vb*{A}|} \vb*{A}$          & (\rownumber) $\displaystyle\text{当 } \vb*{A} \text{ 可逆时, }\left(\vb*{A}^{*}\right)^{-1}=\left(\vb*{A}^{-1}\right)^{*} $                                                                                                     \\
         \midrule
-        (\rownumber) $\displaystyle\left(\boldsymbol{A}^{*}\right)^{*}=\begin{cases}|\boldsymbol{A}|^{n-2} \boldsymbol{A}, & n>2 \\ \boldsymbol{A}, & n=2\end{cases}$ & (\rownumber) $\displaystyle\operatorname{rank} \boldsymbol{A}^{*}=\left\{\begin{array}{ll}n, & \operatorname{rank} \boldsymbol{A}=n \\ 1, & \operatorname{rank} \boldsymbol{A}=n-1 \\ 0, & \operatorname{rank} \boldsymbol{A}<n-1\end{array}\right.$ \\
+        (\rownumber) $\displaystyle\left(\vb*{A}^{*}\right)^{*}=\begin{cases}|\vb*{A}|^{n-2} \vb*{A}, & n>2 \\ \vb*{A}, & n=2\end{cases}$ & (\rownumber) $\displaystyle\operatorname{rank} \vb*{A}^{*}=\begin{cases}n, & \operatorname{rank} \vb*{A}=n \\ 1, & \operatorname{rank} \vb*{A}=n-1 \\ 0, & \operatorname{rank} \vb*{A}<n-1\end{cases}$ \\
     \end{tabular}
 \end{table}
 
@@ -70,13 +70,13 @@
 
 可逆矩阵具有如下性质:
 \begin{enumerate}[label=(\arabic{*})]
-    \item 方阵 $ \boldsymbol{A} $ 可逆的充分必要条件是 $ |\boldsymbol{A}| \neq 0 $;
-    \item 若 $ \boldsymbol{A} $ 可逆, 则 $ \boldsymbol{A}^{\top} $ 亦可逆,
-          且 $ \left(\boldsymbol{A}^{\top}\right)^{-1}=\left(\boldsymbol{A}^{-1}\right)^{\top}$ ;
-    \item 若 $ \boldsymbol{A} $ 可逆, 则 $ \boldsymbol{A}^{-1} $ 亦可逆, 且 $ \left(\boldsymbol{A}^{-1}\right)^{-1}=\boldsymbol{A} $;
-    \item 若 $ \boldsymbol{A} $ 可逆, 数 $ \lambda \neq 0 $, 则 $ \lambda \boldsymbol{A} $ 亦可逆, 且 $ (\lambda \boldsymbol{A})^{-1}=\dfrac{1}{\lambda} \boldsymbol{A}^{-1}$ ;
-    \item 若 $\boldsymbol{A}$ 可逆, 则 $\left|\boldsymbol{A}^{-1}\right|=|\boldsymbol{A}|^{-1}$;
-    \item 若 $\boldsymbol{A},\boldsymbol{B}$ 为同阶方阵, 且均可逆, 则 $\boldsymbol{AB}$ 亦可逆, 且 $(\boldsymbol{AB})^{-1}=\boldsymbol{B}^{-1}\boldsymbol{A}^{-1}.$
+    \item 方阵 $ \vb*{A} $ 可逆的充分必要条件是 $ |\vb*{A}| \neq 0 $;
+    \item 若 $ \vb*{A} $ 可逆, 则 $ \vb*{A}^{\top} $ 亦可逆,
+          且 $ \left(\vb*{A}^{\top}\right)^{-1}=\left(\vb*{A}^{-1}\right)^{\top}$ ;
+    \item 若 $ \vb*{A} $ 可逆, 则 $ \vb*{A}^{-1} $ 亦可逆, 且 $ \left(\vb*{A}^{-1}\right)^{-1}=\vb*{A} $;
+    \item 若 $ \vb*{A} $ 可逆, 数 $ \lambda \neq 0 $, 则 $ \lambda \vb*{A} $ 亦可逆, 且 $ (\lambda \vb*{A})^{-1}=\dfrac{1}{\lambda} \vb*{A}^{-1}$ ;
+    \item 若 $\vb*{A}$ 可逆, 则 $\left|\vb*{A}^{-1}\right|=|\vb*{A}|^{-1}$;
+    \item 若 $\vb*{A},\vb*{B}$ 为同阶方阵, 且均可逆, 则 $\vb*{AB}$ 亦可逆, 且 $(\vb*{AB})^{-1}=\vb*{B}^{-1}\vb*{A}^{-1}.$
 \end{enumerate}
 
 \begin{theorem}[矩阵逆的和]

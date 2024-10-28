@@ -618,7 +618,28 @@
 
 \begin{theorem}[旋转体的侧面积公式]
     \index{旋转体的侧面积公式}由 $xOy$ 平面上的曲线 $y=f(x)~ (a\leqslant x\leqslant b)$ 绕 $x$ 轴旋转而成的旋转曲面的面积为:
-    $$A=2\pi\int_{a}^{b}f(x)\sqrt{1+\qty[f'(x)]^2 }\dd x.$$
+    $$A=2\pi\int_{a}^{b}|f(x)|\sqrt{1+\qty[f'(x)]^2 }\dd x$$
+    参数方程形式: 若平面光滑曲线方程为 $\begin{cases}
+        x=\varphi(t)\\ y=\psi(t)
+    \end{cases}(\alpha\leqslant t\leqslant \beta)$ 则有
+    $$
+    A=2\pi\int_{\alpha}^{\beta} |\psi(t)|\sqrt{\qty[\varphi'(t)]^2+\qty[\psi'(t)]^2} \dd t
+    $$
+    极坐标形式: 若平面光滑曲线方程为 $r=r(\theta)~(\alpha\leqslant \theta\leqslant \beta)$ 则有 
+    $$
+    A=2\pi\int_{\alpha}^{\beta} |r(\theta)\sin\theta|\sqrt{\qty[r(\theta)^2]+\qty[r'(\theta)^2]} \dd \theta.
+    $$
+\end{theorem}
+
+\begin{theorem}[旋转体的体积公式 A]
+    \index{旋转体的体积公式 A}由 $xOy$ 平面上的曲线 $y=f(x)$ 与直线 $x=a,~x=b$ 以及 $x$ 轴所围成的曲边梯形绕 $x$ 轴旋转而成的旋转体体积为:
+    $$V_x=\pi\int_{a}^{b}f^2(x)\dd x.$$
+    绕 $y$ 轴旋转而成的旋转体体积为:
+    $$V_y=2\pi\int_{a}^{b}x|f(x)|\dd x.$$
+    绕 $x=c$ 旋转而成的旋转体体积为:
+    $$
+        V_c=\pi\int_{f(a)}^{f(b)} (c-g(y))^2 \dd y.
+    $$
 \end{theorem}
 
 \begin{example}
@@ -631,17 +652,6 @@
         S & =2\pi\int_{0}^{1}\sqrt{2x}\cdot\sqrt{1+\qty(\dfrac{1}{\sqrt{2x}})^2}\dd x=2\pi\int_{0}^{1}\sqrt{2x+1}\dd x=\dfrac{2\pi}{3}(2x+1)^{\frac{3}{2}}\biggl |_{0}^{1}=\dfrac{2\pi}{3}\qty(3\sqrt{3}-1).
     \end{flalign*}
 \end{solution}
-
-\begin{theorem}[旋转体的体积公式 A]
-    \index{旋转体的体积公式 A}由 $xOy$ 平面上的曲线 $y=f(x)$ 与直线 $x=a,~x=b$ 以及 $x$ 轴所围成的曲边梯形绕 $x$ 轴旋转而成的旋转体体积为:
-    $$V_x=\pi\int_{a}^{b}f^2(x)\dd x.$$
-    绕 $y$ 轴旋转而成的旋转体体积为:
-    $$V_y=2\pi\int_{a}^{b}x|f(x)|\dd x.$$
-    绕 $x=c$ 旋转而成的旋转体体积为:
-    $$
-        V_c=\pi\int_{f(a)}^{f(b)} (c-g(y))^2 \dd y.
-    $$
-\end{theorem}
 
 \begin{example}
     设平面图形 $D$ 由 $x^2+y^2\leqslant 2x$ 与 $y\geqslant x$ 确定, 求图形 $D$ 绕直线 $x=2$ 旋转一周所得旋转体的体积.\label{xzttj}

@@ -80,7 +80,7 @@
     例如, 函数 $f(x)=\begin{cases}
             1, & x\text{ 为无理数} \\
             0, & x\text{ 为有理数}
-        \end{cases}$ 处处有定义, 处处不连续, 从而处处不可导, 但是, $$\forall x\in\mathbb{R},~\lim_{n\to\infty}n\qty[f\qty(x_0+\dfrac{1}{n})-f(x_0)]=\lim_{n\to\infty}\dfrac{f\qty(x_0+\dfrac{1}{n}-f(x_0))}{\dfrac{1}{n}}=\lim_{n\to\infty}\dfrac{0}{\dfrac{1}{n}}=0$$
+        \end{cases}$ 处处有定义, 处处不连续, 从而处处不可导, 但是, $$\forall x\in\mathbb{R},~\lim_{n\to\infty}n\qty[f\qty(x_0+\dfrac{1}{n})-f(x_0)]=\lim_{n\to\infty}\dfrac{f\qty(x_0+\dfrac{1}{n})-f(x_0)}{\dfrac{1}{n}}=\lim_{n\to\infty}\dfrac{0}{\dfrac{1}{n}}=0$$
     C 极限也不能作为 $f$ 在 $x_0$ 处导数的定义, 实际上, 极限 $$\exists\lim_{x\to0}\dfrac{f\qty(x_0+x^2)-f(x_0)}{x^2}\Leftrightarrow \exists f_+'(x_0)$$
     由此不能推出定义 \ref{theDefinitionOfTheDerivationFunction} 存在, 例如函数 $f(x)=\begin{cases}
             x,  & x\geqslant 0 \\
@@ -324,7 +324,7 @@
     $$
 \end{proof}
 
-\begin{theorem}[用参数方程确定的函数的导数]
+\begin{theorem}[用参数方程确定的函数的导数]\index{用参数方程确定的函数的导数}
     若方程组
     $\begin{cases}
             x=\varphi(t) \\
@@ -332,7 +332,6 @@
         \end{cases}(\alpha<t<\beta)$, 其中 $\varphi(t)$ 和 $\psi(t)$ 为可微函数, 且 $\varphi'(t)\neq0$,
     在某区域内确定 $y$ 为 $x$ 的单值连续函数: $y=\psi\left(\varphi^{-1}(x)\right)$, 则此函数的导数为
     $$y'_x=\dfrac{y'_t}{x'_t}.$$
-    \index{用参数方程确定的函数的导数}
 \end{theorem}
 
 \begin{example}[2017 数二]
@@ -437,7 +436,7 @@
 
 %有些式子不易直接求高阶导数, 当拆项以后, 变成易于求高阶导数的一些基本形式之和, 便立即可以直接求导.
 
-基本形式主要有:
+常见函数的高阶导数基本形式主要有:
 
 \setcounter{magicrownumbers}{0}
 \begin{table}[H]

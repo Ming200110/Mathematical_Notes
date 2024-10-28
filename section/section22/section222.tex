@@ -139,15 +139,15 @@
               $$\ln L\left( \theta \right) =\dfrac{n}{2}\ln \theta +\left( \sqrt{\theta }-1\right) \sum ^{n}_{i=1}\ln x_{i}$$
               将 $\ln L(\theta)$ 关于 $\theta$ 求导, 并令其值为 $0$ 即得到似然函数
               $$\dfrac{\partial \ln L\left( \theta \right) }{\partial \theta }=\dfrac{n}{2\theta }+\dfrac{1}{2\sqrt{\theta }}\sum ^{n}_{i=1}x_{i}=0$$
-              解得 $\displaystyle\widehat{\theta }=\left( \dfrac{1}{n}\sum ^{n}_{i=1}\ln x_{i}\right) ^{-2}$, 并且
-              $$ \dfrac{\partial ^{2}\ln L\left( \theta \right) }{\partial \theta ^{2}}\bigg | _{\theta=\widehat{\theta }}= \left( -\dfrac{n}{2\theta ^{2}}-\dfrac{1}{4\theta ^{3/2}}\sum ^{n}_{i=1}\ln x_{i}\right) \bigg | _{\theta=\widehat{\theta }}=-\dfrac{3}{4n^{3}}\left( \sum ^{n}_{i=1}\ln x_{i}\right) ^{4}<0$$
-              所以 $\widehat{\theta}$ 是 $\theta$ 的极大似然估计.
+              解得 $\displaystyle\hat{\theta }=\left( \dfrac{1}{n}\sum ^{n}_{i=1}\ln x_{i}\right) ^{-2}$, 并且
+              $$ \dfrac{\partial ^{2}\ln L\left( \theta \right) }{\partial \theta ^{2}}\bigg | _{\theta=\hat{\theta }}= \left( -\dfrac{n}{2\theta ^{2}}-\dfrac{1}{4\theta ^{3/2}}\sum ^{n}_{i=1}\ln x_{i}\right) \bigg | _{\theta=\hat{\theta }}=-\dfrac{3}{4n^{3}}\left( \sum ^{n}_{i=1}\ln x_{i}\right) ^{4}<0$$
+              所以 $\hat{\theta}$ 是 $\theta$ 的极大似然估计.
         \item 似然函数 $\displaystyle L(\theta)=\theta ^{n}c^{n\theta }\left( \prod ^{n}_{i=1}x_{i}\right) ^{-\left( \theta +1\right) }$, 取对数得
               $$\ln L\left( \theta \right) =n\ln \theta +n\theta \ln c-\left( \theta +1\right) \sum ^{n}_{i=1}\ln x_{i}$$
               将 $\ln L(\theta)$ 关于 $\theta$ 求导, 并令其值为 $0$ 即得到似然函数
               $$\dfrac{\partial \ln L\left( \theta \right) }{\partial \theta }=\dfrac{n}{\theta }+n\ln c-\sum ^{n}_{i=1}\ln x_{i}=0$$
-              解得 $\displaystyle \widehat{\theta }=\left[ \dfrac{1}{n}\sum ^{n}_{i=1}\left( \ln x_{i}-\ln c\right) \right] ^{-1}$,
-              并且 $\displaystyle \dfrac{\partial ^{2}\ln L\left( \theta \right) }{\partial \theta ^{2}}=\dfrac{-n}{\theta ^{2}} <0$, 所以 $\widehat{\theta}$ 是 $\theta$ 的极大似然估计.
+              解得 $\displaystyle \hat{\theta }=\left[ \dfrac{1}{n}\sum ^{n}_{i=1}\left( \ln x_{i}-\ln c\right) \right] ^{-1}$,
+              并且 $\displaystyle \dfrac{\partial ^{2}\ln L\left( \theta \right) }{\partial \theta ^{2}}=\dfrac{-n}{\theta ^{2}} <0$, 所以 $\hat{\theta}$ 是 $\theta$ 的极大似然估计.
     \end{enumerate}
 \end{solution}
 

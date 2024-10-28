@@ -149,6 +149,25 @@
     $D(X)=E\left(X^{2}\right)-[E(X)]^{2} .$
 \end{theorem}
 
+\begin{theorem}[重期望公式]
+    \index{重期望公式}
+    设 $(X,Y)$ 是二维随机变量, 且 $E(X)$ 存在, 则 
+    $E(X)=E[E(X|Y)].$
+\end{theorem}
+
+\begin{inference}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $E(g(X)Y|X)=g(X)E(Y|X)$;
+        \item $E(XY)=E(XE(Y|X))=E[E(XY|X)]$;
+        \item $\cov(X,Y)=\cov(X,E(Y|X))$.
+    \end{enumerate}
+\end{inference}
+
+\begin{theorem}[全方差公式]
+    \index{全方差公式}
+    $D(X)=E[D(X|Y)]+D[E(X|Y)].$
+\end{theorem}
+
 \begin{theorem}[二维均匀分布的随机变量的概率密度]
     \index{二维均匀分布的随机变量的概率密度}
     若 $(X,Y)$ 在平面有界区域 $D$ 上服从均匀分布, 则 $(X,Y)$ 的概率密度为:

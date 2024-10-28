@@ -507,6 +507,12 @@
 \end{example}
 \begin{solution}
     依赖关系如图 \ref{uxyv2xy} 所示, \newline
+    \begin{minipage}{0.78\linewidth}
+        \begin{flalign*}
+            \pdv{z}{x} & =\pdv{z}{u}\cdot\pdv{u}{x}+\pdv{z}{v}\cdot\pdv{v}{x}=\pdv{z}{u}\cdot\dfrac{x}{x^2+y^2}+\pdv{z}{v}\cdot\dfrac{-y}{x^2+y^2} \\
+            \pdv{z}{y} & =\pdv{z}{u}\cdot\pdv{u}{y}+\pdv{z}{v}\cdot\pdv{v}{y}=\pdv{z}{u}\cdot\dfrac{y}{x^2+y^2}+\pdv{z}{v}\cdot\dfrac{ x}{x^2+y^2}
+        \end{flalign*}
+    \end{minipage}\hfill
     \begin{minipage}{0.18\linewidth}
         \begin{figure}[H]
             \centering
@@ -514,17 +520,11 @@
             \caption{}
             \label{uxyv2xy}
         \end{figure}
-    \end{minipage}\hfill
-    \begin{minipage}{0.78\linewidth}
-        \begin{flalign*}
-            \pdv{z}{x} & =\pdv{z}{u}\cdot\pdv{u}{x}+\pdv{z}{v}\cdot\pdv{v}{x}=\pdv{z}{u}\cdot\dfrac{x}{x^2+y^2}+\pdv{z}{v}\cdot\dfrac{-y}{x^2+y^2} \\
-            \pdv{z}{y} & =\pdv{z}{u}\cdot\pdv{u}{y}+\pdv{z}{v}\cdot\pdv{v}{y}=\pdv{z}{u}\cdot\dfrac{y}{x^2+y^2}+\pdv{z}{v}\cdot\dfrac{ x}{x^2+y^2}
-        \end{flalign*}
     \end{minipage}\newline
     于是
     \begin{flalign*}
         (x+y)\pdv{z}{x}-(x-y)\pdv{z}{y} & =(x+y)\qty(\pdv{z}{u}\dfrac{x}{x^2+y^2}+\pdv{z}{v}\dfrac{-y}{x^2+y^2})-(x-y)\qty(\pdv{z}{u}\dfrac{y}{x^2+y^2}+\pdv{z}{v}\dfrac{ x}{x^2+y^2}) \\
-                                        & =\qty(\dfrac{x^2+xy}{x^2+y^2}-\dfrac{xy-y^2}{x^2+y^2})\pdv{z}{u}+\qty(\dfrac{-xy-y^2}{x^2+y^2}-\dfrac{x^2-xy}{x^2+y^2})\pdv{z}{v}=0
+        & =\qty(\dfrac{x^2+xy}{x^2+y^2}-\dfrac{xy-y^2}{x^2+y^2})\pdv{z}{u}+\qty(\dfrac{-xy-y^2}{x^2+y^2}-\dfrac{x^2-xy}{x^2+y^2})\pdv{z}{v}=0
         \Rightarrow \pdv{z}{u}-\pdv{z}{v}=0.
     \end{flalign*}
 \end{solution}
@@ -534,14 +534,6 @@
 \end{example}
 \begin{solution}
     依赖关系如图 \ref{uxyv2xyWxWy} 所示, 于是有\newline
-    \begin{minipage}{0.18\linewidth}
-        \begin{figure}[H]
-            \centering
-            \tikz[scale=0.5, level/.style={sibling distance=15mm/#1}] \node {$W$} [grow=right] child {node {$v$} child {node {$y$}} child {node {$x$}}} child {node {$u$} child {node {$y$}} child {node {$x$}}};
-            \caption{}
-            \label{uxyv2xyWxWy}
-        \end{figure}
-    \end{minipage}\hfill
     \begin{minipage}{0.78\linewidth}
         \begin{flalign*}
             \frac{\partial W}{\partial x}            =\frac{\partial W}{\partial u}\cdot\frac{\partial u}{\partial x}+\frac{\partial W}{\partial v}\cdot\frac{\partial v}{\partial x}=2x\frac{\partial W}{\partial u}+2y\frac{\partial W}{\partial v}
@@ -553,6 +545,14 @@
         故 $$\frac{\partial^2W}{\partial x^2}=2\frac{\partial W}{\partial u}+4x^2\frac{\partial^2W}{\partial u^2}+4xy\frac{\partial^2W}{\partial v\partial u}+4xy\frac{\partial^2W}{\partial u\partial v}+4y^2\frac{\partial^2W}{\partial v^2}$$
         同理可得 $$\frac{\partial^2W}{\partial y^2}=-2\frac{\partial W}{\partial u}+4y^2\frac{\partial^2W}{\partial u^2}-4xy\frac{\partial^2W}{\partial v\partial u}-4xy\frac{\partial^2W}{\partial u\partial v}+4x^2\frac{\partial^2W}{\partial v^2}$$
         两式相加得 $$\frac{\partial^2W}{\partial x^2}+\frac{\partial^2W}{\partial y^2}=\left(4x^2+4y^2\right)\left(\frac{\partial^2W}{\partial u^2}+\frac{\partial^2W}{\partial v^2}\right)\Rightarrow\frac{\partial^2W}{\partial u^2}+\frac{\partial^2W}{\partial v^2}=0.$$
+    \end{minipage}\hfill
+    \begin{minipage}{0.18\linewidth}
+        \begin{figure}[H]
+            \centering
+            \tikz[scale=0.5, level/.style={sibling distance=15mm/#1}] \node {$W$} [grow=right] child {node {$v$} child {node {$y$}} child {node {$x$}}} child {node {$u$} child {node {$y$}} child {node {$x$}}};
+            \caption{}
+            \label{uxyv2xyWxWy}
+        \end{figure}
     \end{minipage}
 \end{solution}
 
@@ -561,6 +561,11 @@
 \end{example}
 \begin{solution}
     因为 $z=z(x,y),~x=r\cos\theta,~y=r\sin\theta$, 所以依赖关系如图 \ref{zxzy0} 所示, 于是有\newline
+    \begin{minipage}{.78\linewidth}
+        $$\frac{\partial z}{\partial r}=\frac{\partial z}{\partial x}\cos\theta+\frac{\partial z}{\partial y}\sin\theta,~\frac{\partial z}{\partial \theta}=-\frac{\partial z}{\partial x}r\sin\theta+\frac{\partial z}{\partial y}r\cos\theta$$
+        解得 $$\frac{\partial z}{\partial x}=\frac{\partial z}{\partial r}\cos\theta-\frac{\partial z}{\partial \theta}\frac{1}{r}\sin\theta,~\frac{\partial z}{\partial y}=\frac{\partial z}{\partial r}\sin\theta+\frac{\partial z}{\partial \theta}\frac{1}{r}\cos\theta$$
+        即 $$\frac{\partial }{\partial x}=\cos\theta\frac{\partial }{\partial r}-\frac{1}{r}\sin\theta\frac{\partial }{\partial \theta},~\frac{\partial }{\partial y}=\sin\theta\frac{\partial }{\partial r}+\frac{1}{r}\cos\theta\frac{\partial }{\partial \theta}$$
+    \end{minipage}\hfill
     \begin{minipage}{.18\linewidth}
         \begin{figure}[H]
             \centering
@@ -568,11 +573,6 @@
             \caption{}
             \label{zxzy0}
         \end{figure}
-    \end{minipage}\hfill
-    \begin{minipage}{.78\linewidth}
-        $$\frac{\partial z}{\partial r}=\frac{\partial z}{\partial x}\cos\theta+\frac{\partial z}{\partial y}\sin\theta,~\frac{\partial z}{\partial \theta}=-\frac{\partial z}{\partial x}r\sin\theta+\frac{\partial z}{\partial y}r\cos\theta$$
-        解得 $$\frac{\partial z}{\partial x}=\frac{\partial z}{\partial r}\cos\theta-\frac{\partial z}{\partial \theta}\frac{1}{r}\sin\theta,~\frac{\partial z}{\partial y}=\frac{\partial z}{\partial r}\sin\theta+\frac{\partial z}{\partial \theta}\frac{1}{r}\cos\theta$$
-        即 $$\frac{\partial }{\partial x}=\cos\theta\frac{\partial }{\partial r}-\frac{1}{r}\sin\theta\frac{\partial }{\partial \theta},~\frac{\partial }{\partial y}=\sin\theta\frac{\partial }{\partial r}+\frac{1}{r}\cos\theta\frac{\partial }{\partial \theta}$$
     \end{minipage}
     \begin{flalign*}
         \frac{\partial^2z}{\partial x^2} & =\frac{\partial }{\partial x}\left(\frac{\partial z}{\partial x}\right)=\frac{\partial }{\partial x}=\cos\theta\frac{\partial }{\partial r}\left(\frac{\partial z}{\partial x}\right)-\frac{1}{r}\sin\theta\frac{\partial }{\partial \theta}\left(\frac{\partial z}{\partial x}\right)                                 \\
@@ -641,14 +641,6 @@
 \begin{solution}
     已知 $\displaystyle z=\dfrac{u}{1+uw},~w=w(u,v),~u=x,~v=\dfrac{1}{y}-\dfrac{1}{x}$,
     于是存在关系如图 \ref{xyxyzyz2} 所示, \newline
-    \begin{minipage}{.25\linewidth}
-        \begin{figure}[H]
-            \centering
-            \tikz[scale=0.5, level/.style={sibling distance=30mm/#1}] \node {$z$} [grow=right] child {node {$w$} child {node {$v$} child {node {$y$}} child {node {$x$}}} child {node {$u$} child {node {$x$}}}} child {node {$u$} child {node {$x$}}};
-            \caption{}
-            \label{xyxyzyz2}
-        \end{figure}
-    \end{minipage}\hfill
     \begin{minipage}{.71\linewidth}
         \begin{flalign*}
             \pdv{z}{x} & =\pdv{z}{u}\cdot\dv{u}{x}+\pdv{z}{w}\cdot\qty(\pdv{w}{u}\cdot\dv{u}{x}+\pdv{w}{v}\cdot\pdv{v}{x})                                                                                         \\
@@ -660,6 +652,14 @@
                         & x^2\pdv{z}{x}+y^2\pdv{z}{y}=\dfrac{x^2-u^2\qty(\displaystyle x^2\pdv{w}{u}+\pdv{w}{v})}{(1+uw)^2}+\dfrac{u^2}{(1+uw)^2}\cdot\pdv{w}{v}=\dfrac{u^2}{(1+uw)^2} \\
             \Rightarrow & \dfrac{x^2}{u^2}-\pdv{w}{u}\cdot x^2=1\Rightarrow \pdv{w}{u}=0.
         \end{flalign*}
+    \end{minipage}\hfill
+    \begin{minipage}{.25\linewidth}
+        \begin{figure}[H]
+            \centering
+            \tikz[scale=0.5, level/.style={sibling distance=30mm/#1}] \node {$z$} [grow=right] child {node {$w$} child {node {$v$} child {node {$y$}} child {node {$x$}}} child {node {$u$} child {node {$x$}}}} child {node {$u$} child {node {$x$}}};
+            \caption{}
+            \label{xyxyzyz2}
+        \end{figure}
     \end{minipage}
 \end{solution}
 

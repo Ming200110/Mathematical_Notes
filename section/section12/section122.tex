@@ -17,6 +17,41 @@
     $$\det(\vb*{A},\vb*{b})=-\mqty|1&a&1\\1&2&a\\a&b&0|+2\mqty|a&0&1\\1&a&1\\1&2&a|\Rightarrow\mqty|1&a&1\\1&2&a\\a&b&0|=8. $$
 \end{solution}
 
+\subsection{Cramer 法则的应用}
+
+\begin{theorem}[Cramer 法则]\index{Cramer 法则}
+    如果数域 $ K $ 上的含有 $ n $ 个末知量 $ n $ 个方程的线性方程组
+    $$\begin{cases}
+            a_{11} x_{1}+a_{12} x_{2}+\cdots+a_{1 n} x_{n}=b_{1}                  \\
+            a_{21} x_{1}+a_{22} x_{2}+\cdots+a_{2 n} x_{n}=b_{2}                  \\
+            \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \\
+            a_{n 1} x_{1}+a_{n 2} x_{2}+\cdots+a_{n n} x_{n}=b_{n}
+        \end{cases}$$
+    的系数行列式 $ D \neq 0$, 那么此方程组有唯一解 $ \left(\dfrac{D_{1}}{D}, \dfrac{D_{2}}{D}, \cdots, \dfrac{D_{n}}{D}\right)$,
+    其中 $ D_{j} $ 是把 $ D $ 中第 $ j $ 列的元素换成方程组的常数项 $ b_{1}, b_{2}, \cdots, b_{n} $ 而成的行列式 $ (j=1,2, \cdots, n)$, 即
+    $$\mqty|a_{11}  & \cdots & a_{1, j-1} & b_{1}  & a_{1, j+1} & \cdots & a_{1 n} \\
+        a_{21}  & \cdots & a_{2, j-1} & b_{2}  & a_{2, j+1} & \cdots & a_{2 n} \\
+        \vdots  &        & \vdots     & \vdots & \vdots     &        & \vdots  \\
+        a_{n 1} & \cdots & a_{n, j-1} & b_{n}  & a_{n, j+1} & \cdots & a_{n n}|$$
+    特别地, 当 $ b_{i}=0(i=1,2, \cdots, n) $ 时, 如果系数行列式 $ D \neq 0 $, 那么方程组只有零解;
+    反之, 如果方程组有非零解,那么必有 $ D=0 .$
+\end{theorem}
+
+\begin{example}[2005 华中科技大学]
+    解线性方程组 $\begin{cases}
+            x_1+ax_2+a^2x_3=a^3 \\
+            x_1+bx_2+b^2x_3=b^3 \\
+            x_1+cx_2+c^2x_3=c^3 \\
+        \end{cases}$
+    其中 $a,b,c$ 是互不相等的常数.
+\end{example}
+\begin{solution}
+    利用 Cramer 法则求解, 因为系数行列式 $$D=\mqty|1&a&a^2\\1&b&b^2\\1&c&c^2|=(c-b)(c-a)(b-a)\neq0$$
+    所以方程组有唯一解, 又因为
+    $$D_1=\mqty|a^3&a&a^2\\b^3&b&b^2\\b^3&b&b^2|=abcD,~D_2=\mqty|1&a^3&a^2\\1&b^3&b^2\\1&c^3&c^2|=-(ab+ac+bc)D,~D_3=\mqty|1&a&a^3\\1&b&b^3\\1&c&c^3|=(a+b+c)D$$
+    因此 $x_1=\dfrac{D_1}{D}=abc,~x_2=\dfrac{D_2}{D}=-ab-ac-bc,~x_3=\dfrac{D_3}{D}=a+b+c.$
+\end{solution}
+
 \subsection{线性相关与线性无关}
 
 \subsubsection{线性无关}
@@ -61,6 +96,15 @@
 \end{solution}
 
 \subsection{非齐次线性方程组解的讨论}
+
+\begin{theorem}[非齐次线性方程组有解的条件]
+    $n$ 元非齐次线性方程组 $\vb*{Ax}=\vb*{b}$ 解的情况:\index{非齐次线性方程组有解的条件}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 方程组 $\vb*{Ax}=\vb*{b}$ 有唯一解 $\Leftrightarrow \rank\vb*{A}=\rank\bar{\vb*{A}}=n$;
+        \item 方程组 $\vb*{Ax}=\vb*{b}$ 有无穷多解 $\Leftrightarrow \rank\vb*{A}=\rank\bar{\vb*{A}}<n$;
+        \item 方程组 $\vb*{Ax}=\vb*{b}$ 无解 $\Leftrightarrow \rank\vb*{A}\neq\rank\bar{\vb*{A}}$.
+    \end{enumerate}
+\end{theorem}
 
 \subsubsection{方程组无解的充要条件}
 
@@ -173,3 +217,10 @@
         因此 $\vb*{B}=\mqty(2-k_1&6+2k_2&-1-k_3\\-1+2k_1&-3+2k_2&1+2k_3\\-3+3k_1&-4+3k_2&1+3k_2\\k_1&k_2&k_3),\forall k_1, k_2, k_3\in\mathbb{R}.$
     \end{enumerate}
 \end{solution}
+
+\subsection{无解方程组的最小误差解——最小二乘解}
+
+\begin{theorem}[最小二乘解]
+    方程组 $\vb*{Ax}=\vb*{b}$ 的最小二乘解为 $\vb*{x}=\qty(\vb*{A}^\top\vb*{A})^{-1}\vb*{A}^\top\vb*{b}$.
+    \index{最小二乘解}
+\end{theorem}

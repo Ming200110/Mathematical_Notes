@@ -480,6 +480,19 @@ $$y''=\dv{p}{x}=\dv{p}{y}\cdot\dv{y}{x}=p\cdot\dv{p}{y}$$
 若其解为 $p=\varphi(y,C_1)$, 即 $\dfrac{\dd y}{\dd x}=\varphi(y,C_1)$, 则原方程的通解为
 $$\int \dfrac{\dd y}{\varphi(y,C_1)}=x+C_2.$$
 
+\begin{example}
+    求微分方程 $y''\qty(3y'^2-x)=y'$ 的通解.
+\end{example}
+\begin{solution}
+    原方程化为 $y''\qty(3y'^2-x)-y'=0$, 且注意到 $\dd \qty(y'^3)=3y'^2,~\dd \qty(xy')=y'+xy''$, 于是原式化为
+    $$\dd \qty(y'^3-xy')=0\Rightarrow y'^3-xy'=C_1$$
+    令 $p=y'=\displaystyle\dv{y}{x}$, 那么 $\dd x=\dfrac{\dd y}{p}$, 则 $p^3-xp=C_1$, 即 $x=p^2-\dfrac{C_1}{p}$,
+    两边全微分得 $$\dd x=2p\dd p+\dfrac{C_1\dd p}{p^2}$$
+    代入 $\dd x=\dfrac{\dd y}{p}$, 得 $\dd y=\qty(2p^2+\dfrac{C_1}{p})\dd p$, 为变量分离方程, 于是两边积分得
+    $$\int\dd y=\int\qty(2p^2+\dfrac{C_1}{p})\dd p\Rightarrow y=\dfrac{2}{3}p^3+C_1\ln p+C_2$$
+    其中 $x=p^2-\dfrac{C_1}{p}.$
+\end{solution}
+
 \subsection{Euler 微分方程}
 
 \subsubsection{齐次 Euler 微分方程}
@@ -595,6 +608,17 @@ $$\int \dfrac{\dd y}{\varphi(y,C_1)}=x+C_2.$$
     故可设其特解为 $y^*=2A\e ^{3t}+Bt\e ^t$,
     即设原方程的特解为 $y^*=2Ax^3+Bx\ln x$, 代入原方程解得, $A=\dfrac{1}{2},~B=1$, 所以原方程的通解为
     $y=x^3+C_1x^2+C_1x+x\ln x.$
+\end{solution}
+
+\subsection{$x=f(y)$ 型方程}
+
+\begin{example}
+    求微分方程 $y''+\qty(4x+\e ^{2y})\qty(y')^3=0$ 的通解.
+\end{example}
+\begin{solution}
+由反函数的二阶导数: $\displaystyle \dv[2]{y}{x}=-\dv[2]{x}{y}\qty(\dv{y}{x})^3$ 可得, $\displaystyle \dv[2]{x}{y}-4x=\e ^{2y}$, 那么 $X=C_1\e ^{2y}+C_2\e ^{-2y}$, 且 $$
+x^*=\dfrac{1}{\mathrm{D}^2-4}\e ^{2y}=\e ^{2y}\dfrac{1}{\mathrm{D}\qty(\mathrm{D}+4)}=\dfrac{1}{4}y\e ^{2y}
+$$ 因此该微分方程的通解为 $x=C_1\e ^{2y}+C_2\e ^{-2y}+\dfrac{1}{4}y\e ^{2y}$.
 \end{solution}
 
 \subsection{二阶变系数线性微分方程}

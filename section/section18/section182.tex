@@ -168,14 +168,13 @@
 \end{theorem}
 
 \begin{example}
-    设随机变量 $X$ 和 $Y$ 的联合概率分布为表 \ref{-101007018}, 求 $X$ 和 $Y$ 的相关系数 $\rho.$
+    设随机变量 $X$ 和 $Y$ 的联合概率分布为下表, 求 $X$ 和 $Y$ 的相关系数 $\rho.$
 \end{example}
 \begin{solution}
     \begin{minipage}{0.3\linewidth}
         \begin{table}[H]
             \centering
             \caption*{联合概率分布表}
-            \label{-101007018}
             \begin{tabular}{c | c c c}
                 $X^{\displaystyle\setminus Y}$ & -1   & 0    & 1    \\
                 \midrule
@@ -297,5 +296,70 @@
                       4 z-4 z^{3}, & 0<z<1,          \\
                       0,           & \text { 其他. }
                   \end{cases}$
+    \end{enumerate}
+\end{solution}
+
+\begin{example}
+    已知随机变量 $X$ 在区间 $(0,1)$ 上服从均匀分布, 在 $X=x~(0<x<1)$ 的条件下, 随机变量 $Y$ 在区间 $(0,x)$ 上服从均匀分布, 求: 
+    \begin{enumerate*}[label=(\Roman{*})]
+        \item $Y$ 的概率密度 $f_Y(y)$;
+        \item $X$ 与 $Y$ 的相关系数 $\rho_{XY}$.
+    \end{enumerate*}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\Roman{*})]
+        \item 由题意可得 $f_X=\begin{cases}
+            1,& 0<x<1 \\ 
+            0, & \text{其他}
+        \end{cases}$, 在 $0<x<1$ 时, 有 $f_{Y|X}=\begin{cases}
+            \dfrac{1}{x},& 0<y<x\\ 
+            0,& \text{其他}
+        \end{cases}$, 那么 
+        $$
+        f(x,y)=f_X\cdot f_{Y|X}=\begin{cases}
+            \dfrac{1}{x}, & 0<y<x<1 \\ 
+            0, &\text{其他}
+        \end{cases}
+        $$
+        因此 $$
+        f_Y=\int_{-\infty}^{+\infty} f(x,y) \dd x=\begin{cases}
+            \displaystyle \int_{y}^{1} \dfrac{1}{x} \dd x=-\ln y, & 0<y<1\\ 
+            0,& \text{其他}
+        \end{cases}
+        $$
+        \item \textbf{法一: }欲求相关系数 $\rho_{XY}$, 需计算 $\cov(X,Y)=E(XY)-EXEY$ 与 $\sqrt{DX}\cdot\sqrt{DY}$, 由 (I) 可知 
+        \begin{flalign*}
+            E(XY)&=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xy\cdot f(x,y)\dd x\dd y=\int_{0}^{1}\dd x\int_{0}^{x}y\dd y=\dfrac{1}{6}\\ 
+            EY&=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y\cdot f(x,y)\dd x\dd y=\int_{0}^{1}\dfrac{1}{x}\dd x\int_{0}^{x}y \dd y=\dfrac{1}{4}\\ 
+            EY^2&=\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}y^2\cdot f(x,y)\dd x\dd y=\int_{0}^{1}\dfrac{1}{x}\dd x\int_{0}^{x}y^2 \dd y=\dfrac{1}{9}
+        \end{flalign*}
+        因此 $DY=EY^2-E^2Y=\dfrac{7}{144}$, 故 $\cov(X,Y)=\dfrac{1}{6}-\dfrac{1}{2}\cdot\dfrac{1}{4}=\dfrac{1}{24},~\sqrt{DX}\cdot\sqrt{DY}=\sqrt{\dfrac{1}{12}}\sqrt{\dfrac{7}{144}}$, $\rho_{XY}=\dfrac{\sqrt{21}}{7}$.\\ 
+        \textbf{法二: }若知道重期望公式与全方差公式, 也可以这么做.
+        % \begin{theorem}[重期望公式]
+        %     \index{重期望公式}
+        %     设 $(X,Y)$ 是二维随机变量, 且 $E(X)$ 存在, 则 
+        %     $E(X)=E[E(X|Y)].$
+        % \end{theorem}
+        
+        % \begin{inference}
+        %     \begin{enumerate}[label=(\arabic{*})]
+        %         \item $E(g(X)Y|X)=g(X)E(Y|X)$;
+        %         \item $E(XY)=E(XE(Y|X))=E[E(XY|X)]$;
+        %         \item $\cov(X,Y)=\cov(X,E(Y|X))$.
+        %     \end{enumerate}
+        % \end{inference}
+        
+        % \begin{theorem}[全方差公式]
+        %     \index{全方差公式}
+        %     $D(X)=E[D(X|Y)]+D[E(X|Y)].$
+        % \end{theorem}
+        由 (I) 可知 $EX=\dfrac{1}{2},~DX=\dfrac{1}{12},~E(Y|X=x)=\dfrac{x}{2},~D(Y|X=x)=\dfrac{x^2}{12},~E(XY|X=x)=\dfrac{x^2}{2}$, 因此 
+        \begin{flalign*}
+            EY& =E[E(Y|X)]=E\qty(\dfrac{X}{2})=\dfrac{1}{2}\cdot\dfrac{1}{2}=\dfrac{1}{4}\\ 
+            DY& =E[D(Y|X)]+D[E(Y|X)]=E\qty(\dfrac{X^2}{12})+D\qty(\dfrac{X}{2})\\
+            &=\dfrac{1}{12}EX^2+\dfrac{1}{4}DX=\dfrac{7}{144}\\ 
+            EXY& =E[E(XY|X)]=E\qty(\dfrac{X^2}{2})=\dfrac{1}{2}EX^2=\dfrac{1}{6}
+        \end{flalign*}
+        因此 $\rho _{XY}=\dfrac{\cov(X,Y)}{\sqrt{DX}\sqrt{DY}}=\dfrac{\sqrt{21}}{7}.$
     \end{enumerate}
 \end{solution}

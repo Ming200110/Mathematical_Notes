@@ -3,7 +3,7 @@
 正定矩阵是正实数概念的延伸——它定义了何为“正”的矩阵, 一种方法是全部元素为正数, 但这显然不是一个好的定义,
 因为它完全不涉及矩阵的具体结构. 因此尝试借助正实数的概念推广至矩阵的正定性.
 
-一个正实数 $\alpha$ 满足: 对任意一个矢量\footnote{当强调方向时, 采用矢量的说法} $\vb*{v}$, 矢量 $\alpha\vb*{v}$ 会和 $\vb*{v}$ 在同一方向上\footnote{仅描述新矢量在原矢量的分量方向上的投影是正的情況, 不要求两个矢量之间的夹角为零角即完全重合.}, 即内积为正 $\vb*{v}^\top\alpha\vb*{v}>0.$
+一个正实数 $\alpha$ 满足: 对任意一个矢量\footnote{当强调方向时, 采用矢量的说法.} $\vb*{v}$, 矢量 $\alpha\vb*{v}$ 会和 $\vb*{v}$ 在同一方向上\footnote{仅描述新矢量在原矢量的分量方向上的投影是正的情況, 不要求两个矢量之间的夹角为零角即完全重合.}, 即内积为正 $\vb*{v}^\top\alpha\vb*{v}>0.$
 
 借助这个准则, 一个正的矩阵 $\vb*{A}$ 需要满足: 对任意一个矢量 $\vb*{v}$, $\vb*{A}v$ 和 $\vb*{v}$ 在同一方向上, 即内积为正: $\vb*{v}^\top\vb*{A}\vb*{v}>0.$
 
@@ -34,7 +34,7 @@
     \label{Hurwitztheorem}
 \end{theorem}
 
-判断一个对称矩阵 $\vb*{A}$ 是否正定, 第一步用正定的必要条件 (定理 \ref{zddbytj}), 第二步用 Hurwitz 定理 (定理 \ref{Hurwitztheorem}).
+% 判断一个对称矩阵 $\vb*{A}$ 是否正定, 第一步用正定的必要条件 (定理 \ref{zddbytj}), 第二步用 Hurwitz 定理 (定理 \ref{Hurwitztheorem}).
 
 \begin{theorem}
     若 $\vb*{A}$ 与 $\vb*{B}$ 都是正定矩阵, 则 
@@ -190,15 +190,69 @@
     所以 $\vb*{A}$ 正定, 从而二次型正定.
 \end{solution}
 
-\begin{theorem}[特征值与正定性]
-    若一矩阵 $\vb*{A}$ 是正定的, 则其所有特征值 $\lambda_i>0~ (i=1,2,\cdots,n).$
-\end{theorem}
+% \begin{theorem}[特征值与正定性]
+%     若一矩阵 $\vb*{A}$ 是正定的, 则其所有特征值 $\lambda_i>0~ (i=1,2,\cdots,n).$
+% \end{theorem}
 \begin{example}
     设 $\vb*{A}$ 是 3 阶正定矩阵, 证明 $|\vb*{A}+2\vb*{E}|>8.$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
     由 $\vb*{A}$ 是正定的, 则 $\lambda_{1,2,3}>0$, 那么 $|\vb*{A}+2\vb*{E}|=(\lambda_1+2)(\lambda_2+2)(\lambda_3+2)\geqslant 8.$
 \end{proof}
+
+\begin{example}
+    设 $\vb*{A}$ 为 $n$ 阶正定矩阵, 则下列说法错误的是 (\quad).
+    \begin{tasks}
+        \task 若 $\vb*{A},~\vb*{B}$ 为 $n$ 阶实对称矩阵, 则存在 $n$ 阶可逆矩阵 $\vb*{P}$, 使得 $\vb*{P}^\top\vb*{AP}=\vb*{E}$, 且 $\vb*{P}^\top\vb*{BP}=\operatorname{diag} (\mu_1, \mu_2, \cdots, \mu_n)$, 其中 $\vb*{E}$ 是 $n$ 阶单位矩阵, 而 $\mu_i~(i=1,2, \cdots, n)$ 是 $|\lambda\vb*{A}-\vb*{B}|=0$ 的 $n$ 个实根.
+        \task 若 $\vb*{B}$ 是正定矩阵, 则 $|\vb*{A}+\vb*{B}|\geqslant|\vb*{A}|+|\vb*{B}|.$
+        \task 若 $\vb*{A},~\vb*{B},~\vb*{A}-\vb*{B}$ 均为正定矩阵, 则 $\vb*{A}^{-1}-\vb*{B}^{-1}$ 也为正定矩阵.
+        \task 若 $\vb*{A}$ 为实对称正定矩阵, 则 $\vb*{A}$ 中元素之最大者必定位于 $\vb*{A}$ 的主对角线上.
+    \end{tasks}
+\end{example}
+\begin{solution}
+    对于 A 选项, 因为 $\vb*{A}$ 是 $n$ 阶正定矩阵, 所以存在 $n$ 阶可逆矩阵 $\vb*{C}$, 使得 $\vb*{C}^\top\vb*{AC}=\vb*{E}$, 由于 $\vb*{B}$ 是 n 阶实对称矩阵, 所以 $\vb*{C}^\top\vb*{BC}$ 也是 $n$ 阶实对称矩阵, 故存在 $n$ 阶正交矩阵 $\vb*{Q}$ 使得 $$
+    \vb*{Q}^\top\qty(\vb*{C}^\top\vb*{BC})\vb*{Q}=\operatorname{diag}(\mu_1, \mu_2, \cdots, \mu_n)
+    $$
+    其中 $\mu_i\in \mathbb{R}~(i=1,2, \cdots, n)$ 是 $\vb*{C}^\top\vb*{BC}$ 的 $n$ 个特征值. 令 $\vb*{P}=\vb*{CQ}$, 则 $\vb*{P}$ 是可逆实矩阵, 且 $$
+    \vb*{P}^\top\vb*{AP}=\vb*{E},\quad \vb*{P}^\top\vb*{BP}=\operatorname{diag} (\mu_1, \mu_2, \cdots, \mu_n)
+    $$
+    注意到 $$
+    \vb*{P}^\top(\lambda\vb*{A}-\vb*{B})\vb*{P}=\operatorname{diag} (\lambda-\mu_1, \lambda-\mu_2, \cdots, \lambda-\mu_n)
+    $$
+    两边取行列式, 得 $$
+    |\vb*{P}|^2~|\lambda\vb*{A}-\vb*{B}|=\prod_{i=1}^{n}(\lambda-\mu_i)
+    $$
+    因此 $\mu_i~(i=1,2, \cdots, n)$ 是 $|\lambda\vb*{A}-\vb*{B}|=0$ 的 $n$ 个实根, 选项 A 正确. \\ 
+    对于 B 选项, 由上分析得, 存在 $n$ 阶可逆实矩阵 $\vb*{P}$ 及正交矩阵 $\vb*{Q}$, 使 $$
+    \vb*{P}^\top\vb*{AP}=\vb*{E},\quad \vb*{P}^\top\vb*{BP}=\operatorname{diag} (\mu_1, \mu_2, \cdots, \mu_n)
+    $$
+    其中 $\mu_i\in \mathbb{R}~(i=1,2, \cdots, n)$ 是 $\vb*{P}^\top\vb*{BP}$ 的 $n$ 个特征值, 因而全部大于 $0$. 令 $\vb*{G}=\vb*{PQ}$, 则 $$
+    \vb*{G}^\top(\vb*{A}+\vb*{B})\vb*{G}=\operatorname{diag} (1+\mu_1, 1+\mu_2, \cdots, 1+\mu_n)
+    $$
+    对上式两边取行列式, 有 $$
+    |\vb*{A}+\vb*{B}|~|\vb*{P}|^2=\prod_{i=1}^{n}(1+\mu_i)\geqslant 1+\prod_{i=1}^{n}\mu_i=|\vb*{E}|+|\vb*{\Lambda}|=\qty|\vb*{P}^\top\vb*{AP}|+\qty|\vb*{P}^\top\vb*{BP}|
+    $$
+    即 $$
+    |\vb*{A}+\vb*{B}| \geqslant |\vb*{P}|^{-2}\qty(1+\prod_{i=1}^{n}\mu_i)=|\vb*{A}|+|\vb*{B}|
+    $$
+    因此选项 B 正确.
+    \begin{inference}
+    设 $\vb*{A},~\vb*{B}$ 都是 $n~(n\geqslant2)$ 阶实对称正定矩阵, 则有 $|\vb*{A}+\vb*{B}|>|\vb*{A}|+|\vb*{B}|.$
+    \end{inference}
+    对于 C 选项, 同上分析得到 $$
+    \vb*{P}^\top(\vb*{A}-\vb*{B})\vb*{P}=\operatorname{diag}(1-\mu_1, 1-\mu_2, \cdots ,1-\mu_n)
+    $$
+    因为 $\vb*{A}-\vb*{B}$ 正定, 所以 $1-\mu_i>0~(i=1,2, \cdots ,n)$, 又 
+    $$
+    \vb*{P}^{-1}\qty(\vb*{B}^{-1}-\vb*{A}^{-1})\qty(\vb*{P}^{-1})^{\top}=\operatorname{diag}\qty(\dfrac{1}{\mu_1}-1, \dfrac{1}{\mu_2}-1, \cdots ,\dfrac{1}{\mu_n}-1)
+    $$
+    且 $\dfrac{1}{\mu_i}-1>0~(i=1,2, \cdots ,n)$, 即 $\vb*{B}^{-1}-\vb*{A}^{-1}$ 的正惯性指数为 $n$, 所以是 $\vb*{B}^{-1}-\vb*{A}^{-1}$ 为正定矩阵, C 错误. \\ 
+    % 对于 D 选项, 易验证 $\vb*{A}^{-1}$ 与 $\vb*{A}^{*}$ 都是实对称矩阵, 且 $\vb*{A}^{-1}$ 与 $\vb*{A}^{*}$ 的特征值分别为 $\dfrac{1}{\lambda_i}$ 与 $\dfrac{|\vb*{A}|}{\lambda_i}$ 也全大于零, 故 $\vb*{A}$ 矩阵的逆矩阵 $\vb*{A}^{-1}$ 及伴随矩阵 $\vb*{A}^{*}$ 也为正定矩阵, D 正确.
+    对于 D 选项, 因为 $\vb*{A}=(a_{ij})$ 正定, 所以 $\vb*{A}$ 的各阶主子式大于零. 特别地, $\vb*{A}$ 的所有二阶主子式及主对角元 $a_{ii}$ 均大于零, 现任取 $\vb*{A}$ 的 $(i,j)$ 元 $a_{ij}~(i\neq j)$, 对于 $a_{ij}$ 所在的二阶主子式, 有 $$
+    \mqty|a_{ii}&a_{ij}\\a_{ij}& a_{jj}|=a_{ii}a_{jj}-a_{ij}^2\Rightarrow |a_{ij}|<\sqrt{a_{ii}a_{jj}}\leqslant a_{kk}
+    $$
+    其中 $a_{kk}=\max\qty{a_{11},a_{22}, \cdots ,a_{nn}}$, 于是 $a_{ij}\leqslant|a_{ij}|<a_{kk}$, 这就表明 $\vb*{A}$ 的最大元位于主对角线上, D 正确.
+\end{solution}
 
 \begin{example}[2000 清华大学]
     设 $n$ 阶实方阵 $(n\geqslant2)$ $$\vb*{A}=\begin{pmatrix}
@@ -340,15 +394,15 @@
 \begin{definition}[矩阵合同]
     对于两个 $ n $ 阶矩阵 $\vb*{A}$ 和 $\vb*{B}$, 若存在可逆矩阵 $\vb*{C}$, 使得
     $$
-        \boldsymbol{C}^{\mathrm{T}} \boldsymbol{A} \boldsymbol{C}=\boldsymbol{B}
+        \boldsymbol{C}^{\top} \boldsymbol{A} \boldsymbol{C}=\boldsymbol{B}
     $$
-    则称矩阵 $\vb*{A}$ 与 $\vb*{B}$ 合同, 记作 $ \vb*{A} \simeq \vb*{B} .$\\
+    则称\textit{矩阵} $\vb*{A}$ 与 $\vb*{B}$ \textit{合同}, 记作 $ \vb*{A} \simeq \vb*{B} .$\\
     并不一定要求矩阵是对称矩阵, 但是考研基本都是对称矩阵. 设矩阵 $\vb*{A}$ 与 $\vb*{B}$ 合同, 若 $ \vb*{A} $ 是对称矩阵, 则 $ \vb*{B} $ 也是对称矩阵; 若 $ \vb*{A} $ 不是对称矩阵, 则 $ \boldsymbol{B} $ 也不是对称矩阵.\\
     二次型的可逆变换都是合同变换, 即
     $$
-        \boldsymbol{x}^{\mathrm{T}} \boldsymbol{A} \boldsymbol{x} \xlongequal{\boldsymbol{x}=\boldsymbol{C} \boldsymbol{y}}(\boldsymbol{C} \boldsymbol{y})^{\mathrm{T}} \boldsymbol{A} \boldsymbol{C} \boldsymbol{y}=\boldsymbol{y}^{\mathrm{T}} \boldsymbol{B} \boldsymbol{y}
+        \boldsymbol{x}^{\top} \boldsymbol{A} \boldsymbol{x} \xlongequal{\boldsymbol{x}=\boldsymbol{C} \boldsymbol{y}}(\boldsymbol{C} \boldsymbol{y})^{\top} \boldsymbol{A} \boldsymbol{C} \boldsymbol{y}=\boldsymbol{y}^{\top} \boldsymbol{B} \boldsymbol{y}
     $$
-    其中 $ \boldsymbol{C}^{\mathrm{T}} \boldsymbol{A} \boldsymbol{C}=\boldsymbol{B} $.\index{矩阵合同}
+    其中 $ \boldsymbol{C}^{\top} \boldsymbol{A} \boldsymbol{C}=\boldsymbol{B} $.\index{矩阵合同}
 \end{definition}
 
 矩阵合同关系也是一种等价关系, 有以下性质:
@@ -357,6 +411,8 @@
     \item  对称性: 若 $ \vb*{A} \simeq \vb*{B} $, 则 $ \vb*{B} \simeq \vb*{A} $;
     \item 传递性: 若 $ \boldsymbol{A} \simeq \vb*{B}, \vb*{B} \simeq \vb*{C} $, 则 $ \vb*{A} \simeq \vb*{C} .$
 \end{enumerate}
+
+$\vb*{A},\vb*{B}\xrightarrow[\text{最宽泛}]{\rank\vb*{A}=\rank\vb*{B}}\vb*{A}\cong \vb*{B}~(\text{等价})\xrightarrow[\text{等价的基础上}]{\text{特征值相同}}\vb*{A}\sim \vb*{B}~(\text{相似})\xrightarrow[\text{相似的基础上}]{\text{正负惯性指数相同}}\vb*{A}\backsimeq \vb*{B}~(\text{合同})$.
 
 \begin{example}
     对于二次型 $f=\vb*{x}^\top\vb*{Ax}$ 经非奇异线性变换 $\vb*{x}=\vb*{Cy}$ 化为 $f=\vb*{y}^\top\vb*{By}$, 则 $\vb*{A}$ 与 $\vb*{B}$ 必定是

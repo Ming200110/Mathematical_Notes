@@ -37,9 +37,9 @@ $$P\left\{X_{1}=x_{1}, X_{2}=x_{2}, \cdots, X_{n}=x_{n}\right\}=\prod_{i=1}^{n} 
         \item 样本均值 $ \bar{X}=\dfrac{1}{n} \displaystyle\sum_{i=1}^{n} X_{i} $;
         \item 样本方差 $S^{2}=\dfrac{1}{n-1} \displaystyle\sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{2}=\dfrac{1}{n-1}\left(\displaystyle\sum_{i=1}^{n} X_{i}^{2}-n \bar{X}^{2}\right) $;
         \item 样本标准差 $ S=\sqrt{S^{2}} $;
-        \item 样本 $ k $ 阶原点矩 $A_{k}=\dfrac{1}{n} \displaystyle\sum_{i=1}^{n} X_{i}^{k}(k=1,2, \cdots) $;
-        \item 样本 $ k $ 阶中心矩 $B_{k}=\dfrac{1}{n} \displaystyle\sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{k}(k=2,3, \cdots) $;
-        其中 $ B_{1}=0, B_{2}=\dfrac{n-1}{n} S^{2} $;
+        \item 样本 $ k $ 阶原点矩 $\alpha_{k}=\dfrac{1}{n} \displaystyle\sum_{i=1}^{n} X_{i}^{k}~(k=1,2, \cdots) $;
+        \item 样本 $ k $ 阶中心矩 $\mu_{k}=\dfrac{1}{n} \displaystyle\sum_{i=1}^{n}\left(X_{i}-\bar{X}\right)^{k}~(k=1,2, \cdots) $;
+        其中 $ \mu_{1}=0, \mu_{2}=\dfrac{n-1}{n} S^{2} $;
         \item 最小顺序统计量 $X_{(1)}=\min \left\{X_{1}, X_{2}, \cdots, X_{n}\right\}$
         $$F_{(1)}(x)=P\left\{\min \left\{X_{1}, X_{2}, \cdots, X_{n}\right\} \leqslant x\right\}=1-[1-F(x)]^{n}$$
         对连续型随机变量, 概率密度函数为 $f_{(1)}(x)=n[1-F(x)]^{n-1} f(x) $;
@@ -48,6 +48,18 @@ $$P\left\{X_{1}=x_{1}, X_{2}=x_{2}, \cdots, X_{n}=x_{n}\right\}=\prod_{i=1}^{n} 
         对连续型随机变量, 概率密度函数为 $f_{(n)}(x)=n[F(x)]^{n-1} f(x) .$
     \end{enumerate}
 \end{definition}
+\begin{theorem}[样本中心矩与原点矩的转换]
+    对任意的 $k\in \mathbb{N}^*$, 有  $\displaystyle \alpha_k=\sum_{r=0}^{k} \C_k^r\mu_{k-r}\alpha_1^r,~\mu_k=\sum_{r=0}^{k} \C_k^r(-\alpha_1)^{k-r}\alpha_r.$
+\end{theorem}
+\begin{proof}[{\songti \textbf{证}}]
+    对任意的 $k\in \mathbb{N}^*$, 有
+    \begin{flalign*}
+        \alpha_k&=EX^k=E\qty[(X-\alpha_1)+\alpha_1]^k=E\qty[\sum_{r=0}^{k}\C_k^r(X-\alpha_1)^{k-r}\alpha_1^r]
+        =\sum_{r=0}^{k} \C_k^r\mu_{k-r}\alpha_1^r\\ 
+        \mu_k&=E(X-EX)^{k}=E(X-\alpha_1)^k=E\qty[\sum_{r=0}^{k}\C_k^r(-\alpha_1)^{k-r}X^r]
+        =\sum_{r=0}^{k} \C_k^r(-\alpha_1)^{k-r}\alpha_r
+    \end{flalign*}
+\end{proof}
 
 \subsection{样本数字特征的性质}
 

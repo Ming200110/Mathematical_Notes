@@ -10,7 +10,12 @@
     其中 $a_k$ 是 $\vb*{A}$ 的所有 $k$ 阶主子式之和, 即 
     $$a_k=\sum_{1\leqslant j_1<\cdots<j_k\leqslant n}\mqty|a_{j_1j_1}&\cdots&a_{j_1j_k}\\\vdots&&\vdots\\a_{j_kj_1}&\cdots&a_{j_kj_k}|$$
     特别地 $a_1=\tr\vb*{A},~a_n=\det\vb*{A}.$
-    对于常见的 3 阶矩阵有 $$f(\lambda)=\lambda^3-\tr\vb*{A}\cdot\lambda^2+\qty(\mqty|a_{11}&a_{12}\\a_{21}&a_{22}|+\mqty|a_{11}&a_{13}\\a_{31}&a_{32}|+\mqty|a_{22}&a_{23}\\a_{32}&a_{33}|)\lambda-\det\vb*{A}.$$
+    对于常见的 3 阶矩阵有 
+    \begin{flalign*}
+        f(\lambda)& =\lambda^3-\tr\vb*{A}\cdot\lambda^2+\qty(\mqty|a_{11}&a_{12}\\a_{21}&a_{22}|+\mqty|a_{11}&a_{13}\\a_{31}&a_{32}|+\mqty|a_{22}&a_{23}\\a_{32}&a_{33}|)\lambda-\det\vb*{A}\\ 
+        & =\lambda^3-\tr\vb*{A}\cdot\lambda^2+(A_{11}+A_{22}+A_{33})\lambda-\det\vb*{A}
+    \end{flalign*}
+    其中 $A_{ii}$ 为 $\vb*{A}$ 的元素 $a_{ii}~(i=1,2,3)$ 所对应的代数余子式.
 \end{theorem}
 
 图 \ref{fig:kjiezzshi} 是 $a_2$ 的形象化表达.
@@ -22,7 +27,7 @@
 \end{figure}
 
 \begin{theorem}[特征值的积与和]
-    \index{特征值的积与和}设 $n$ 阶方阵 $\vb*{A}$ 的特征值为 $\lambda_1,\lambda_2,\cdots,\lambda_n$, 则 $$\displaystyle\det\vb*{A}=\prod_{i=1}^{n}\lambda_i,~\tr\vb*{A}=\sum_{i=1}^{n}\lambda_i.$$
+    \index{特征值的积与和}设 $n$ 阶方阵 $\vb*{A}$ 的特征值为 $\lambda_1,\lambda_2,\cdots,\lambda_n$, 则 $$\det\vb*{A}=\prod_{i=1}^{n}\lambda_i,~\tr\vb*{A}=\sum_{i=1}^{n}\lambda_i.$$
 \end{theorem}
 
 \begin{example}
@@ -144,6 +149,16 @@
 \end{solution}
 
 \subsection{矩阵的特征向量}
+
+\begin{theorem}
+    设 $\vb*{A}$ 为 $n$ 阶矩阵, 则 
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $\vb*{\alpha}$ 为 $\vb*{A}^\top$ 特征向量时, 不一定为 $\vb*{A}$ 的特征向量;
+        \item $\vb*{\alpha}$ 为 $\vb*{A}^*$ 特征向量时, 不一定为 $\vb*{A}$ 的特征向量;
+        \item $\vb*{\alpha}$ 为 $\vb*{A}^2$ 特征向量时, 不一定为 $\vb*{A}$ 的特征向量;
+        \item $\vb*{\alpha}$ 为 $k\vb*{A}~(k\neq0)$ 特征向量时, 一定为 $\vb*{A}$ 的特征向量;
+    \end{enumerate}
+\end{theorem}
 
 \begin{example}
     设矩阵 $\vb*{A}\mqty(3&2&2\\2&3&2\\2&2&3),~\vb*{P}=\mqty(0&1&0\\1&0&1\\0&0&1),~\vb*{B}=\vb*{P}^{-1}\vb*{A}^*\vb*{P}$, 求 $\vb*{B}+2\vb*{E}$ 的特征值与特征向量.

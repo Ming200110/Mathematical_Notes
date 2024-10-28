@@ -311,6 +311,8 @@
 
 \subsection{二维正态分布}
 
+\subsubsection{二维情况}
+
 \begin{definition}[二维正态分布]
     若二维连续型随机变量 $ (X, Y) $ 的概率密度为
     $$f(x,y)=\frac{1}{2 \pi \sigma_{1} \sigma_{2} \sqrt{1-\rho^{2}}} \cdot \mathrm{e}^{-\frac{1}{2\left(1-\rho^{2}\right)}\left[\frac{\left(x-\mu_{1}\right)^{2}}{\sigma_{1}^{2}}-2 \rho \frac{\left(x-\mu_{1}\right)\left(y-\mu_{2}\right)}{\sigma_{1} \sigma_{2}}+\frac{\left(y-\mu_{2}\right)^{2}}{\sigma_{2}^{2}}\right]}$$
@@ -339,10 +341,15 @@
 \end{theorem}
 
 \begin{theorem}[二维正态分布的条件分布]
-    设二维随机变量 $(X,Y)$ 服从 $N\qty(\mu_1,\mu_2;\sigma^2_1,\sigma^2_2;\rho)$, 则 $X$ 在 $Y=y$ 条件下的条件分布为正态分布, 即
-    $$X\sim N\qty(\mu_1+\dfrac{\rho\sigma_1(y-\mu_2)}{\sigma_2},\sigma_1^2\qty(1-\rho^2))$$
-    同理, $Y$ 在 $X=x$ 条件下的条件分布为正态分布, 即
-    $$Y\sim N\qty(\mu_2+\dfrac{\rho\sigma_2(x-\mu_2)}{\sigma_1},\sigma_2^2\qty(1-\rho^2)).$$
+    二维正态分布联合密度为 $$
+    \varphi(x,y)=\dfrac{1}{2\pi\sigma_1\sigma_2\sqrt{1-\rho^2}}\exp\qty{-\dfrac{u^2-2\rho uv+v^2}{2\qty(1-\rho^2)}}
+    $$
+    其中 $u=\dfrac{x-\mu_1}{\sigma_1},v=\dfrac{y-\mu_2}{\sigma_2}$,
+    随机变量 $X$ 关于 $Y$ 的条件分布是正态分布 $N\qty(\mu_{1|2},\sigma^2_{1|2})$; 随机变量 $Y$ 关于 $X$ 的条件分布是正态分布 $N\qty(\mu_{2|1},\sigma^2_{2|1})$, 其中二维正态分布的条件数字特征如下:
+    \begin{flalign*}
+        \mu_{1|2}=\mu_2(y)=\mu_1+\dfrac{\rho\sigma_1}{\sigma_2}(y-\mu_2)=\mu_1+\rho\sigma_1v,&\quad\quad\sigma^2_{1|2}=\sigma_1^2\qty(1-\rho^2)\\ 
+        \mu_{2|1}=\mu_2(x)=\mu_2+\dfrac{\rho\sigma_2}{\sigma_1}(x-\mu_1)=\mu_2+\rho\sigma_2u,&\quad\quad\sigma^2_{2|1}=\sigma_2^2\qty(1-\rho^2).
+    \end{flalign*}
 \end{theorem}
 
 \begin{example}
@@ -367,6 +374,16 @@
         所以 $f_{Y\mid X}(y\mid x)=\dfrac{f(x,y)}{f_X(x)}=f_Y(y)=\dfrac{1}{\sqrt{\pi}}\e^{-y^2},~-\infty<y<+\infty.$
     \end{enumerate}
 \end{solution}
+
+\subsubsection{多维情况}
+
+\begin{definition}[多维正态分布]
+    给定一个向量 $\vb*{\mu}\in \mathbb{R}^n$ 和正定矩阵 $\vb*{\Sigma}\in \mathbb{R}^{n\times n}$, 对任意实数向量 $\vb*{x}=\qty(x_1, x_2, \cdots , x_n)^\top$, 若随机向量 $\vb*{X}=\qty(X_1, X_2, \cdots ,X_n)$ 的密度函数为 $$
+    f(\vb*{x})=(2\pi)^{-\frac{n}{2}}|\vb*{\Sigma}|^{-\frac{1}{2}}\exp\qty(-\dfrac{1}{2}(\vb*{x}-\vb*{\mu})^\top\vb*{\Sigma}^{-1}(\vb*{x}-\vb*{\mu}))
+    $$
+    则称随机向量 $\vb*{X}$ 服从参数为 $\vb*{\mu}$ 和 $\vb*{\Sigma}$ 的多维正态分布. 记为 $\vb*{X}\sim \mathcal{N} (\vb*{\mu},\vb*{\Sigma})$.\\ 
+    特别地, 当 $n=2$ 时, $\vb*{\Sigma}=\begin{pmatrix} \sigma_x^2 & \rho\sigma_x\sigma_y \\ \rho\sigma_x\sigma_y & \sigma_y^2 \\\end{pmatrix}$.
+\end{definition}
 
 \subsection{卷积公式}
 

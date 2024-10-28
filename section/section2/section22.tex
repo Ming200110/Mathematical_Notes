@@ -13,7 +13,7 @@
         \item 当 $f(x_0)>0$, 时 $y=|f(x)|$ 在 $x_0$ 处可导, 且 $\eval{y'}_{x=x_0}=f'(x_0)$.
         \item 当 $f(x_0)<0$, 时 $y=|f(x)|$ 在 $x_0$ 处可导, 且 $\eval{y'}_{x=x_0}=-f'(x_0)$.
         \item 当 $f(x_0)=0$ 但 $f'(x_0)\neq0$ 时, $y=|f(x)|$ 在 $x_0$ 处不可导.
-        \item 当 $f(x_0)=0$ 且 $f'(x_0)\neq0$ 时, $y=|f(x)|$ 在 $x_0$ 处可导, 且 $\eval{y'}_{x=x_0}=0$.
+        \item 当 $f(x_0)=0$ 且 $f'(x_0)=0$ 时, $y=|f(x)|$ 在 $x_0$ 处可导, 且 $\eval{y'}_{x=x_0}=0$.
     \end{enumerate}
 \end{theorem}
 \begin{proof}[{\songti \textbf{证}}]
@@ -96,7 +96,7 @@
 % \end{example}
 
 \begin{theorem}
-    设 $f(x)=(x-a)^{n}|x-a|~~n\in\mathbb{Z}^{+}$, 则 $f(x)$ 在 $x=a$ 点的各阶导数 $$f^{(k)}(a)=\begin{cases}
+    设 $f(x)=(x-a)^{n}|x-a|,~n\in\mathbb{Z}^{+}$, 则 $f(x)$ 在 $x=a$ 点的各阶导数 $$f^{(k)}(a)=\begin{cases}
         0,&k\leqslant n\\\text{不存在},&k>n.
     \end{cases}$$
 \end{theorem}
@@ -105,7 +105,7 @@
         -(x-a)^{n+1},&x\leqslant a\\(x-a)^{n+1},&x>a
     \end{cases}$ 得 $f^{(n)}(a)=\begin{cases}
         -(n+1)!(x-a),&x\leqslant a\\ (n+1)!(x-a),&x>a
-    \end{cases}$, 但 $f^{(n+1)}_-(a)=-(n+1)!\neq f^{(n+1)}_+(a)=(n+1)!$, 故 $f^{(n+1)}(a)$ 不存在.
+    \end{cases}$, 但 $$f^{(n+1)}_-(a)=-(n+1)!\neq f^{(n+1)}_+(a)=(n+1)!$$ 故 $f^{(n+1)}(a)$ 不存在.
 \end{proof}
 
 \begin{example}[1992 数一]

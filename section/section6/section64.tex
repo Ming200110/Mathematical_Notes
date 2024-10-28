@@ -105,9 +105,43 @@
     \begin{flalign*}
          & \vb{grad~}u:=\grad{u}:=\qty(\pdv{u}{x},\pdv{u}{y},\pdv{u}{z}):=\pdv{u}{x}\vb*{i}+\pdv{u}{y}\vb*{j}+\pdv{u}{z}\vb*{k}                     \\
          & \text{div}~\vb*{A}:=\div\vb*{A}:=\pdv{P}{x}+\pdv{Q}{y}+\pdv{R}{z}                                                                        \\
-         & \text{rot}~\vb*{A}:=\curl{\vb*{A}}:=\mqty|\vb*{i}                                                                    & \vb*{j} & \vb*{k} \\ \displaystyle\pdv{x}&\displaystyle\pdv{y}&\displaystyle\pdv{z}\\P&R&Q|.
+         & \vb{rot}~\vb*{A}:=\curl{\vb*{A}}:=\mqty|\vb*{i}                                                                    & \vb*{j} & \vb*{k} \\ \displaystyle\pdv{x}&\displaystyle\pdv{y}&\displaystyle\pdv{z}\\P&Q&R|.
     \end{flalign*}
 \end{definition}
+
+\begin{example}
+    设 $u=u(x,y,z)$ 为光滑的数量场, $\vb*{A}=P(x,y,z)\vb*{i}+Q(x,y,z)\vb*{j}+R(x,y,z)\vb*{k}$ 为光滑的向量场. 由 $u$ 和 $\vb*{A}$ 产生的梯度、散度和旋度分别记为 $\grad{u},~\div\vb*{A},~\curl{\vb*{A}}$, 则下列关系式成立的是
+    \begin{tasks}(2)
+      \task $\div(u\vb*{A})=u\div\vb*{A}$.
+      \task $\curl(\grad u)=0$.
+      \task $\div(\curl{\vb*{A}})=\vb*{0}$.
+      \task $\curl{(u\vb*{A})}=u\curl{A}+\grad{u}\times \vb*{A}$.
+    \end{tasks}
+  \end{example}
+  \begin{solution}
+    对于 A 选项, $u\vb*{A}=uP\vb*{i}+uQ\vb*{j}+uR\vb*{k}$, 那么 
+    \begin{flalign*}
+      \div{u\vb*{A}}&=\pdv{uP}{x}+\pdv{uQ}{y}+\pdv{uR}{z}=u_xP+uP_x+u_yQ+uQ_y+u_zR+uR_z\\
+      &=u(P_x+Q_y+R_z)+\vb*{A}\cdot (u_x,u_y,u_z)=u\div{\vb*{A}}+\vb*{A}\grad{u}
+    \end{flalign*}
+    A 错误; 对于 B 选项, $\displaystyle \grad{u}=\pdv{u}{x}\vb*{i}+\pdv{u}{y}\vb*{j}+\pdv{u}{z}\vb*{k}$, 那么 
+    $$
+    \curl(\grad u)=\mqty|\vb*{i}& \vb*{j} & \vb*{k} \\ \displaystyle\pdv{x}&\displaystyle\pdv{y}&\displaystyle\pdv{z}\\\displaystyle \pdv{u}{x}&\displaystyle \pdv{u}{y}&\displaystyle \pdv{u}{z}|=\vb*{0}
+    $$
+    B 错误; 对于 C 选项, $\displaystyle \curl{\vb*{A}}=\mqty|\vb*{i}& \vb*{j} & \vb*{k} \\ \displaystyle\pdv{x}&\displaystyle\pdv{y}&\displaystyle\pdv{z}\\P&Q&R|=\qty(\pdv{R}{y}-\pdv{Q}{z})\vb*{i}+\qty(\pdv{P}{z}-\pdv{R}{x})\vb*{j}+\qty(\pdv{Q}{x}-\pdv{P}{y})\vb*{k}$, 那么 
+    $$
+    \div{\curl{\vb*{A}}}=\pdv{x}\qty(\pdv{R}{y}-\pdv{Q}{z})+\pdv{y}\qty(\pdv{P}{z}-\pdv{R}{x})+\pdv{z}\qty(\pdv{Q}{x}-\pdv{P}{y})=0
+    $$
+    C 错误, 对于 D 选项, $u\vb*{A}=uP\vb*{i}+uQ\vb*{j}+uR\vb*{k}$, 那么 
+    \begin{flalign*}
+      \curl{u\vb*{A}}&=\mqty|\vb*{i}& \vb*{j} & \vb*{k} \\ \displaystyle\pdv{x}&\displaystyle\pdv{y}&\displaystyle\pdv{z}\\uP&uQ&uR|=\qty(\pdv{uR}{y}-\pdv{uQ}{z})\vb*{i}+\qty(\pdv{uP}{z}-\pdv{uR}{x})\vb*{j}+\qty(\pdv{uQ}{x}-\pdv{uP}{y})\vb*{k}\\ 
+      &=(u_yR+uR_y-u_zQ-uQ_z)\vb*{i}+(u_zP+uP_z-u_xR-uR_x)\vb*{j}+(u_xQ+uQ_x-u_yP-uP_y)\vb*{k} \\ 
+      &= u\qty[(R_y-Q_z)\vb*{i}+(P_z-R_x)\vb*{j}+(Q_x-P_y)\vb*{k}]+(u_x,u_y,u_z)\times(P,Q,R)\\ 
+      &=\curl{(u\vb*{A})}=u\curl{A}+\grad{u}\times \vb*{A}
+    \end{flalign*}
+    选项 D 正确.\\ 
+    值得注意的是: 在选项 D 的求解中, 行列式中第三行中的 $u$ 不能简单的认为可以提出到行列式之外.
+  \end{solution}
 
 \begin{example}
     设 $u=z\qty(x^2+3)$, 求向量场 $\vb*{A}=\grad u$ 通过球面 $x^2+y^2+z^2=1$ 上半部分的流量 $Q$, 指向球外.
@@ -202,6 +236,12 @@
 
 \subsection{梯度、散度、旋度的基本公式及其应用}
 
+\begin{definition}[Laplace 算符]
+    $\displaystyle\vb*{\Delta}:=\pdv[2]{}{x}+\pdv[2]{}{y}+\pdv[2]{}{z}$, 并且有
+    $$\laplacian:=\div\grad:=\vb*{\Delta}$$
+    $f$ 为函数, 则 $\laplacian f$ 为标量; 若 $\vb*{A}=(A_x,A_y,A_z)$ 是向量, 则 $\laplacian{\vb*{A}}=\qty(\laplacian{A_x},\laplacian{A_y},\laplacian{A_z})$ 为向量.
+\end{definition}
+
 以下 $u,v,f$ 都是 $(x,y,z)$ 的函数, 有连续偏导数, $\vb*{A},~\vb*{B}$ 是向量函数, $c$ 为常数, 
 $$\vb*{r}=(x-x_0,y-y_0,z-z_0),~r=\sqrt{(x-x_0)^2+(y-y_0)^2+(z-z_0)^2}.$$
 \setcounter{magicrownumbers}{0}
@@ -235,12 +275,6 @@ $$\vb*{r}=(x-x_0,y-y_0,z-z_0),~r=\sqrt{(x-x_0)^2+(y-y_0)^2+(z-z_0)^2}.$$
         \multicolumn{2}{l}{$\displaystyle(\vb*{B}\cdot\grad)\vb*{A}=\qty(B_x\pdv{x}+B_y\pdv{y}+B_z\pdv{z})\vb*{A},~(\vb*{A}\cdot\grad)\vb*{B}=\qty(A_x\pdv{x}+A_y\pdv{y}+A_z\pdv{z})\vb*{B}$}
     \end{tabular}
 \end{table}
-
-\begin{definition}[Laplace 算符]
-    $\displaystyle\vb*{\Delta}:=\pdv[2]{}{x}+\pdv[2]{}{y}+\pdv[2]{}{z}$, 并且有
-    $$\laplacian:=\div\grad:=\vb*{\Delta}$$
-    $f$ 为函数, 则 $\laplacian f$ 为标量; 若 $\vb*{A}=(A_x,A_y,A_z)$ 是向量, 则 $\laplacian{\vb*{A}}=\qty(\laplacian{A_x},\laplacian{A_y},\laplacian{A_z})$ 为向量.
-\end{definition}
 
 \begin{example}[2001 数一]
     设 $r=\sqrt{x^2+y^2+z^2}$, 求 $\eval*{\text{div}(\vb{grad}~r)}_{(1,-2,2)}.$

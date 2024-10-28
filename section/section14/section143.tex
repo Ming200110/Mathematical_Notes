@@ -365,7 +365,7 @@
 \begin{solution}
     因为 $\vb*{A}$ 的每行元素之和均为 $0$, 故由定理 \ref{hangjunhedl} 知, $\vb*{A}$ 的另一特征值为 $0$, 因此矩阵 $\vb*{A}$ 的全部特征值为 $0,2,3$, 又由定理 \ref{bsjzdtzzB} 知矩阵 $\vb*{A}$ 的伴随矩阵的特征值为
     $$\lambda_1^*=2\times3=6,~\lambda_2^*=0\times 3=0,~\lambda_3^*=0\times 2=0$$
-    且 $\lambda_1^*$ 对应的特征向量为 $(1,1,1)^\top$, 又由定理 \ref{pufjdli}, 知 $$\vb*{A}^*=0+0+6=6\mqty(\dfrac{1}{\sqrt{3}}\\[6pt]\dfrac{1}{\sqrt{3}}\\[6pt]\dfrac{1}{\sqrt{3}})\qty(\dfrac{1}{\sqrt{3}}~\dfrac{1}{\sqrt{3}}~\dfrac{1}{\sqrt{3}})=\mqty(2&2&2\\2&2&2\\2&2&2)$$
+    且 $\lambda_1^*$ 对应的特征向量为 $(1,1,1)^\top$, 又由定理 \ref{pufjdli}, 知 $$\vb*{A}^*=6\mqty(\dfrac{1}{\sqrt{3}}\\[6pt]\dfrac{1}{\sqrt{3}}\\[6pt]\dfrac{1}{\sqrt{3}})\qty(\dfrac{1}{\sqrt{3}}~\dfrac{1}{\sqrt{3}}~\dfrac{1}{\sqrt{3}})=\mqty(2&2&2\\2&2&2\\2&2&2)$$
     故 $\vb*{A}_{11}=2$, 选 B.
 \end{solution}
 
@@ -654,7 +654,7 @@
 \begin{solution}
     \begin{enumerate}[label=(\arabic{*})]
         \item 因为 $f(x_1, x_2, x_3)=1$ 为柱面, 所以 $f$ 有 $0$ 特征值, 则 $|\vb*{A}|=\mqty|1&0&-1\\0&1&0\\-1&0&a|=a-1=0\Rightarrow a=1$.
-        \item $f(x_1, x_2, x_3+=x_1^2+ x_2^2+ x_3^2-2x_1x_3$, $$
+        \item $f(x_1, x_2, x_3)=x_1^2+ x_2^2+ x_3^2-2x_1x_3$, $$
                   |\lambda\vb*{E}-\vb*{A}|=\mqty| \lambda-1 & 0 & 1 \\ 0 & \lambda-1 & 0 \\ 1 & 0 & \lambda-1 \\|=\lambda(\lambda-1)(\lambda-2)=0
               $$
               解得 $\lambda_1=0, \lambda_2=1, \lambda_3=2$, 当 $\lambda=\lambda_1$ 时, 对应的特征向量为 $\vb*{\xi}_1=(1,0,1)^\top$, 当 $\lambda=\lambda_2$ 时, 对应的特征向量为 $\vb*{\xi}_2=(0,1,0)^\top$, 当 $\lambda=\lambda_3$ 时, 对应的特征向量为 $\vb*{\xi}_3=(1,0,-1)^\top$,
@@ -717,6 +717,55 @@
                   f_{min} & =\min_{x'^2+y'^2+z'^2=1}\qty{x'^2+2y'^2+4z'^2}=\min_{x'^2+y'^2+z'^2=1}\qty{1+y'^2+3z'^2}=\eval{1+y'^2+3z'^2}_{(1,0,0)}=1.
               \end{flalign*}
     \end{enumerate}
+\end{solution}
+
+\begin{example}
+    设 $\vb*{x}=(x_1, x_2, \cdots ,x_n)^\top,~f(\vb*{x})=\displaystyle \sum_{i=1}^{n} x_i^2-\sum_{i=1}^{n-1} x_ix_{i+1},~(n\geqslant 2)$, 求 $f$ 在条件 $x_n=1$ 下的最小值.
+\end{example}
+\begin{solution}
+    只有正定或半正定二次型矩阵才有最小值, 所以在 $x_n=1$ 的条件下, 二次型的矩阵应该是正定或半正定的. 只需作合同变换, 在保持 $x_n$ 不变的情况下化二次型矩阵为 $\mqty(\vb*{A}_{n-1}& \vb*{0}\\ \vb*{0}& a)$ 其中 $a$ 为数, 则 $a$ 就是二次型的最小值.\\ 
+    二次型 $f(\vb*{x})$ 的矩阵为 $\vb*{A}=\begin{pmatrix} 1 & -\frac{1}{2} &  &  &  \\ -\frac{1}{2} & 1 & -\frac{1}{2} &  &  \\  & -\frac{1}{2} & \ddots & \ddots &  \\  &  & \ddots & 1 & -\frac{1}{2}  \\  &  &  & -\frac{1}{2}  & 1 \\\end{pmatrix}$. 易知 $\vb*{A}$ 的所有顺序主子式全大于 $0$ ($\vb*{A}$ 严格对角占优, 且 $a_{ii}>0$), 所以 $\vb*{A}$ 是正定矩阵. 
+    将 $\vb*{A}$ 分块为 $\vb*{A}=\mqty(\vb*{A}_{n-1}& \vb*{\alpha} \\ \vb*{\alpha}^\top & 1)$, 其中 $\vb*{\alpha}=\qty(0, \cdots ,0,-\frac{1}{2})^\top$, 取可逆矩阵 $\vb*{P}=\mqty(\vb*{E}_{n-1}& -\vb*{A}_{n-1}^{-1}\vb*{\alpha}\\ \vb*{0} & 1)$, 则
+    $$
+    \vb*{P}^\top\vb*{AP}=\mqty(\vb*{A}_{n-1}& \vb*{0}\\ \vb*{0}& 1-\vb*{\alpha}^\top\vb*{A}_{n-1}^{-1}\vb*{\alpha})
+    $$
+    记 $a=1-\vb*{\alpha}^\top\vb*{A}_{n-1}^{-1}\vb*{\alpha}$, 作可逆线性变化 $\vb*{x}=\vb*{Py}$, 其中 $\vb*{y}=(y_1, y_2, \cdots , y_n)^\top$, 则 
+    $$
+    f(\vb*{y})=\vb*{y}^\top\mqty(\vb*{A}_{n-1}& \vb*{0}\\ \vb*{0}& a)\vb*{y}=\vb*{y}_1^\top\vb*{A}_{n-1}\vb*{y}_1+ay_n^2
+    $$
+    其中 $\vb*{y}_1=(y_1, y_2, \cdots , y_{n-1})^\top$. 注意到当 $x_n=1$ 时, 有 $y_n=1$, 同时 $\vb*{A}_{n-1}$ 也为正定矩阵, 既有 $\vb*{y}_1^\top\vb*{A}_{n-1}\vb*{y}_1\geqslant 0$ (仅当 $\vb*{y}_1=\vb*{0}$ 时取等号), 所以当 $x_n=1$ 时, 取 $\vb*{y}_1=\vb*{0}$ 可得到 $f$ 的最小值为 $a=1-\vb*{\alpha}^\top\vb*{A}_{n-1}^{-1}\vb*{\alpha}$.
+\end{solution}
+
+\begin{example}
+  设 $\vb*{x},~\vb*{y}\in \mathbb{R}^{3}$ , 且满足 $\norm{\vb*{x}}=\norm{\vb*{y}}$,
+  \begin{enumerate*}[label=(\Roman{*})]
+    \item 证明: 存在一个这样的实矩阵 $\vb*{H}=\vb*{E}-2\vb*{ww}^\top$, 使得 $\vb*{Hx}=\vb*{y}$, 其中 $\vb*{w}\in \mathbb{R}^{3}$ 且为单位向量;
+    \item 若 $\vb*{w}=\dfrac{1}{\sqrt{2}}\mqty(1\\0\\1),~\vb*{B}=\begin{pmatrix} 2 & 1 & 0 \\ 1 & 2 & 1 \\ 0 & 1 & 2 \\\end{pmatrix}$, 求 $\displaystyle \max_{\vb*{x},\vb*{y}(\neq\vb*{0})\in \mathbb{R}^{3}}\dfrac{\vb*{x}^\top\vb*{Hx}}{\vb*{y}^\top\vb*{By}}.$
+  \end{enumerate*}
+\end{example}
+\begin{solution}
+  \begin{enumerate}[label=(\Roman{*})]
+    \item 令 $\vb*{w}=\dfrac{\vb*{x}-\vb*{y}}{\norm{\vb*{x}-\vb*{y}}}$, 那么 $$
+    \vb*{H}=\vb*{E}-2\vb*{ww}^\top=\vb*{E}-2\dfrac{(\vb*{x}-\vb*{y})}{\norm{\vb*{x}-\vb*{y}}^2}\qty(\vb*{x}^\top-\vb*{y}^\top)
+    $$
+    则 $$
+    \vb*{Hx}=\vb*{x}-2\dfrac{(\vb*{x}-\vb*{y})}{\norm{\vb*{x}-\vb*{y}}^2}\qty(\vb*{x}^\top-\vb*{y}^\top)\vb*{x}=\vb*{x}-2\dfrac{(\vb*{x}-\vb*{y})\qty(\vb*{x}^\top\vb*{x}-\vb*{y}^\top\vb*{x})}{\norm{\vb*{x}-\vb*{y}}^2}
+    $$
+    因为 $$
+    \norm{\vb*{x}-\vb*{y}}^2=(\vb*{x}-\vb*{y})^\top(\vb*{x}-\vb*{y})=2\qty(\vb*{x}^\top\vb*{x}-\vb*{y}^\top\vb*{x})
+    $$
+    所以 $\vb*{Hx}=\vb*{x}-(\vb*{x}-\vb*{y})=\vb*{y}$.
+    \item 因为 $\vb*{H}^\top\vb*{H}=\vb*{H}^2=\qty(\vb*{E}-2\vb*{ww}^\top)\qty(\vb*{E}-2\vb*{ww}^\top)=\vb*{E}-4\vb*{ww}^\top+4\vb*{w}\qty(\vb*{w}^\top\vb*{w})\vb*{w}^\top=\vb*{E}$, 所以 $\vb*{H}$ 是正交矩阵, 故 $\vb*{H}^{-1}=\vb*{H}^\top$, 因此
+     $\vb*{x}^\top\vb*{Hx}=\qty(\vb*{H}^{-1}\vb*{y})^\top\vb*{y}=\vb*{y}^\top\vb*{Hy}$, 记 $\vb*{y}^\top\vb*{By}=c\neq0$, 然后利用拉格朗日乘数法 $$
+     L(\vb*{y},\lambda)=\vb*{y}^\top\vb*{Hy}-\lambda \qty(\vb*{y}^\top\vb*{By}-c)
+     $$
+     然后求梯度取零 $$
+     \grad_y{L}=\vb*{Hy}-\lambda\vb*{By}=\vb*{0}\Rightarrow \vb*{B}^{-1}\vb*{Hy}=\lambda\vb*{y}
+     $$
+     故 $\displaystyle \dfrac{\vb*{y}^\top\vb*{Hy}}{\vb*{y}^\top\vb*{By}}$ 的极值在 $\vb*{B}^{-1}\vb*{H}$ 的特征向量上取得, 其驻值为特征值.
+    由 $\vb*{w}=\dfrac{1}{\sqrt{2}}\mqty(1\\0\\1)$ 可得 $\vb*{H}=\begin{pmatrix} 0 & 0 & -1 \\ 0 & 1 & 0 \\ -1 & 0 & 0 \\\end{pmatrix}$, 那么 $|\lambda\vb*{B}-\vb*{H}|=0\Rightarrow \qty(\lambda-\dfrac{1}{2})\qty(4\lambda^2-2)=0\Rightarrow\lambda_1=-\dfrac{\sqrt{2}}{2},~\lambda2=\dfrac{1}{2},~\lambda_3=\dfrac{\sqrt{2}}{2}$, 故 
+     $\displaystyle \max_{\vb*{x},\vb*{y}(\neq\vb*{0})\in \mathbb{R}^{3}}\dfrac{\vb*{x}^\top\vb*{Hx}}{\vb*{y}^\top\vb*{By}}=\lambda_3=\dfrac{\sqrt{2}}{2}.$
+  \end{enumerate}
 \end{solution}
 
 \subsection{直角坐标变换}

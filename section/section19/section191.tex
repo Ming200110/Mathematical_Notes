@@ -37,3 +37,16 @@
     $$
     故答案选 B.
 \end{solution}
+
+\begin{example}
+    从编号为 1 到 9 的九张卡片中有放回地任抽取 5 张, 试用 Chebyshev 不等式估计所取号码之和在 15 和 35 之间的概率.
+\end{example}
+\begin{solution}
+    $EX=\dfrac{1}{9}(1+2+ \cdots +9)=5,~EX^2=\dfrac{1}{9}\qty(1^2+2^2+ \cdots +9^2)=\dfrac{95}{3}$, 那么 
+    $$
+    E\qty(\displaystyle \sum_{k=1}^{5} X_k)=25,~DX=EX^2-E^2X=\dfrac{95}{3}-\dfrac{75}{3}=\dfrac{20}{3},~D\qty(\displaystyle \sum_{k=1}^{5} X_k)=\dfrac{100}{3}
+    $$
+    则 $$
+    P\qty{15\leqslant \displaystyle \sum_{k=1}^{5} X_k\leqslant 35}=P\qty{\qty|\displaystyle \sum_{k=1}^{5} X_k-25|\leqslant 10}=1-\dfrac{D\qty(\displaystyle \sum_{k=1}^{5} X_k)}{10^2}=\dfrac{2}{3}.
+    $$
+\end{solution}

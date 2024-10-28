@@ -31,7 +31,7 @@
     求解非线性方程 (组) 的一类常见的数值解法. 例如, 单个方程的求根问题 $f(x)=0$ 总可以等价地写成 $x=\phi (x)$, 
     其中 $\phi:\mathbb{R}\to\mathbb{R}$ 是一个辅助函数, 满足该式的点 $x$ 称为不动点.
     如果给定初始点 $x{(0)}$, 就可以考虑如下的不动点迭代法: $$x^{(k+1)}=\phi\left(x^{(k)}\right)~  (k=0,1,\cdots)$$
-    函数 $\phi$ 亦称为\textbf{迭代函数}.
+    函数 $\phi$ 亦称为\textit{迭代函数}.
 
     如果迭代函数 $\phi$ 是一个闭区间上的压缩映射 (或者迭代函数连续可微, 且导数的绝对值在该闭区间上严格小于 $1$), 
     则不动点迭代法产生的序列 $\{x^{(k)}\}$ 收敛到 $\phi$ 在区间上的不动点.
@@ -60,6 +60,7 @@
     \end{tikzpicture}
     \caption{}
 \end{figure}
+
 \begin{example}
     设数列 $\{x_n\}$ 满足: $x_0=1,~x_{n+1}=\sqrt{2x_n}~  (n=0,1,2,\cdots)$, 证明 $\{x_n\}$ 收敛, 并求极限值.
 \end{example}
@@ -426,4 +427,122 @@ $$r^{k}-c_{1}r^{k-1}-c_{2}r^{k-2}-\cdots -c_{k-1}r-c_{k}=0.$$
     即化为例 \ref{shulie xn xn-1 2}, 最后解得 $\lim\limits_{n\to\infty}x_n=\e ^{2/3}.$
 \end{solution}
 
-% \subsection{Stolz 公式的应用}
+\subsubsection{主定理}
+
+\begin{theorem}[主定理]
+    \index{主定理}
+    \label{mainTheorem}
+    设 $f$ 是满足递推关系 $$
+    f(n)=af(n/b)+cn^d
+    $$
+    的增函数, 其中 $n=b^k,~k\in \mathbb{N}^{*},~a\geqslant 1$, $b$ 是大于 1 的整数, $c$ 和 $d$ 是实数, 且满足 $c>0,~d\geqslant 0$, 那么 $$
+    f(n)\text{ 是 }\begin{cases}
+        O\qty(n^d),&a<b^d\\ 
+        O\qty(n^d\log n),&a=b^d\\ 
+        O\qty(n^{\log_b a}),&a>b^d.
+    \end{cases}
+    $$
+\end{theorem}
+
+\begin{example}
+    存在递增函数 $f(x)$ 且 $f(1)=1$, 使得对 $n\in \mathbb{N}$, 满足 $f(n)=2f\qty(\dfrac{n}{2})+n$, 则当 $n\to\infty$ 时, 下列说法正确的是 (\quad).
+    \begin{tasks}(4)
+        \task $\displaystyle \lim_{n\to\infty}\dfrac{f(n)}{\log_2 n}=1$
+        \task $\displaystyle \lim_{n\to\infty}\dfrac{f(n)}{n\log_2 n}=1$
+        \task $\displaystyle \lim_{n\to\infty}\dfrac{f(n)}{n}=1$
+        \task $\displaystyle \lim_{n\to\infty}\dfrac{f(n)}{n^2}=1$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    \textbf{法一: }设 $n=2^k,~k=0,1,2, \cdots $, 则 $f(n)=f\qty(2^k)$, 记 $f\qty(2^k)=h(k)$, 则\\ 
+    当 $k=0$ 时, $h(0)=1$; 当 $k>0$ 时, 
+    \begin{flalign*}
+        h(1)&=2h(0)+2^1\\ 
+        h(2)&=2h(1)+2^2=2^2h(0)+2\cdot 2^2\\ 
+        h(3)&=2h(2)+2^3=2^3h(0)+3\cdot 2^3\\ 
+        &\vdots\\ 
+        h(k)&=2^kh(0)+k\cdot 2^k=(k+1)2^k
+    \end{flalign*}
+    又因为 $k=\log_2n$, 故 $h(n)=n(\log_2n+1)\Rightarrow f(n)=n\log_2n+n$, 则 $\displaystyle \lim_{n\to\infty}\dfrac{f(n)}{n\log_2 n}=1$, 选 B.\\
+    \textbf{法二: }可根据计算机科学与技术中一条重要的定理.
+    由定理 \ref{mainTheorem} 得,
+    题中 $a=2,~b=2,~c=1,~d=1$, 满足 $a=b^d$, 故 $f(n)\sim o\qty(n^d\log n),~n\to\infty$, 又 $f(1)=1$ 则 $\displaystyle \lim_{n\to\infty}\dfrac{f(n)}{n\log_2 n}=1$, 选 B.\\ 
+    \textbf{法三: }事实上, 二路归并排序的时间复杂度满足题设的关系式, 构造递归树如下:
+    % \begin{figure}[H]
+    %     \centering
+    % \begin{tikzpicture}[level/.style={sibling distance=60mm/#1}]
+    %     \node [circle,draw] (z){$n$}
+    %       child {node [circle,draw] (a) {$\frac{n}{2}$}
+    %         child {node [circle,draw] (b) {$\frac{n}{2^2}$}
+    %           child {node {$\vdots$}
+    %             child {node [circle,draw] (d) {$\frac{n}{2^k}$}}
+    %             child {node [circle,draw] (e) {$\frac{n}{2^k}$}}
+    %           } 
+    %           child {node {$\vdots$}}
+    %         }
+    %         child {node [circle,draw] (g) {$\frac{n}{2^2}$}
+    %           child {node {$\vdots$}}
+    %           child {node {$\vdots$}}
+    %         }
+    %       }
+    %       child {node [circle,draw] (j) {$\frac{n}{2}$}
+    %         child {node [circle,draw] (k) {$\frac{n}{2^2}$}
+    %           child {node {$\vdots$}}
+    %           child {node {$\vdots$}}
+    %         }
+    %       child {node [circle,draw] (l) {$\frac{n}{2^2}$}
+    %         child {node {$\vdots$}}
+    %         child {node (c){$\vdots$}
+    %           child {node [circle,draw] (o) {$\frac{n}{2^k}$}}
+    %           child {node [circle,draw] (p) {$\frac{n}{2^k}$}
+    %             child [grow=right] {node (q) {$=$} edge from parent[draw=none]
+    %               child [grow=right] {node (q) {$O_{k = \log_2 n}(n)$} edge from parent[draw=none]
+    %                 child [grow=up] {node (r) {$\vdots$} edge from parent[draw=none]
+    %                   child [grow=up] {node (s) {$O_2(n)$} edge from parent[draw=none]
+    %                     child [grow=up] {node (t) {$O_1(n)$} edge from parent[draw=none]
+    %                       child [grow=up] {node (u) {$O_0(n)$} edge from parent[draw=none]}
+    %                     }
+    %                   }
+    %                 }
+    %                 child [grow=down] {node (v) {$O(n \cdot \log_2 n)$}edge from parent[draw=none]}
+    %               }
+    %             }
+    %           }
+    %         }
+    %       }
+    %     };
+    %     \path (a) -- (j) node [midway] {$+$};
+    %     \path (b) -- (g) node [midway] {$+$};
+    %     \path (k) -- (l) node [midway] {$+$};
+    %     \path (k) -- (g) node [midway] {$+$};
+    %     \path (d) -- (e) node [midway] {$+$};
+    %     \path (o) -- (p) node [midway] {$+$};
+    %     \path (o) -- (e) node (x) [midway] {$\cdots$}
+    %       child [grow=down] {
+    %         node (y) {$O\left(\displaystyle\sum_{i = 0}^k 2^i \cdot \frac{n}{2^i}\right)$}
+    %         edge from parent[draw=none]
+    %       };
+    %     \path (q) -- (r) node [midway] {$+$};
+    %     \path (s) -- (r) node [midway] {$+$};
+    %     \path (s) -- (t) node [midway] {$+$};
+    %     \path (s) -- (l) node [midway] {=};
+    %     \path (t) -- (u) node [midway] {$+$};
+    %     \path (z) -- (u) node [midway] {=};
+    %     \path (j) -- (t) node [midway] {=};
+    %     \path (y) -- (x) node [midway] {$\Downarrow$};
+    %     \path (v) -- (y)
+    %       node (w) [midway] {$O\left(\displaystyle\sum_{i = 0}^k n\right) = O(k \cdot n)$};
+    %     \path (q) -- (v) node [midway] {=};
+    %     \path (e) -- (x) node [midway] {$+$};
+    %     \path (o) -- (x) node [midway] {$+$};
+    %     \path (y) -- (w) node [midway] {$=$};
+    %     \path (v) -- (w) node [midway] {$\Leftrightarrow$};
+    %     \path (r) -- (c) node [midway] {$\cdots$};
+    %     \end{tikzpicture}
+    % \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.8]{figures/bTree.pdf}
+        \caption{}
+    \end{figure}
+\end{solution}
