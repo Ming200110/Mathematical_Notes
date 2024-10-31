@@ -76,19 +76,15 @@
     设向量 $\vb*{w}\in \mathbb{R}^{n}$, 且 $\vb*{w}^\top\vb*{w}=1$, 称矩阵 $\vb*{H}=\vb*{E}-2\vb*{ww}^\top$ 为\textit{初等反射矩阵}, 也称为 \textit{Householder 变换}.
 \end{definition}
 
-\begin{theorem}
-    设有初等反射矩阵 $\vb*{H}=\vb*{E}-2\vb*{ww}^\top$, 其中 $\vb*{w}^\top\vb*{w}=1$, 则 
+设有初等反射矩阵 $\vb*{H}=\vb*{E}-2\vb*{ww}^\top$, 其中 $\vb*{w}^\top\vb*{w}=1$, 则 
+\begin{multicols}{2}
     \begin{enumerate}[label=(\arabic{*})]
+        \item $|\vb*{H}|=-1$;
         \item $\vb*{H}$ 是对称矩阵, 即 $\vb*{H}^\top=\vb*{H}$;
         \item $\vb*{H}$ 是正交矩阵, 即 $\vb*{H}^{-1}=\vb*{H}$;
         \item $\vb*{H}$ 是对合矩阵, 即 $\vb*{H}^2=\vb*{E}$;
         \item 设 $\vb*{A}$ 是对称矩阵, 则 $\vb*{A}_1=\vb*{H}^{-1}\vb*{AH}=\vb*{H}^\top\vb*{AH}$ 亦是对称矩阵.
     \end{enumerate}
-\end{theorem}
-\begin{multicols}{2}
-    如图 \ref{Householder}, 考虑以 $\vb*{w}$ 为法向量且过原点 $O$ 的超平面 $S:\vb*{w}^\top\vb*{x}=0$, 设任意向量 $\vb*{v}\in \mathbb{R}^{n}$, 则 $\vb*{v}=\vb*{x}+\vb*{y}$, 其中 $\vb*{x}\in S,~\vb*{y}\in S^{\bot }$ ($S^{\bot}$ 表示与 $S$ 垂直的超平面), 于是 $
-\vb*{Hx}=\vb*{x},~ \vb*{Hy}=-\vb*{y},~ \vb*{Hv}=\vb*{v}'.
-$
     \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 \begin{figure}[H]
     \centering
@@ -152,11 +148,14 @@ $\displaystyle {\displaystyle \boldsymbol{v}}$
 
 \end{tikzpicture}
 
-\caption{}
+\caption{初等反射矩阵的几何意义}
 \label{Householder}
 \end{figure}
 
 \end{multicols}
+如图 \ref{Householder}, 考虑以 $\vb*{w}$ 为法向量且过原点 $O$ 的超平面 $S:\vb*{w}^\top\vb*{x}=0$, 设任意向量 $\vb*{v}\in \mathbb{R}^{n}$, 则 $\vb*{v}=\vb*{x}+\vb*{y}$, 其中 $\vb*{x}\in S,~\vb*{y}\in S^{\bot }$ ($S^{\bot}$ 表示与 $S$ 垂直的超平面), 于是 $
+\vb*{Hx}=\vb*{x},~ \vb*{Hy}=-\vb*{y},~ \vb*{Hv}=\vb*{v}'.
+$
 
 \begin{theorem}
     设 $\vb*{x},~\vb*{y}$ 为两个不相等的 $n$ 维向量, 且 $\norm{\vb*{x}}_2=\norm{\vb*{y}}_2$, 则存在一个 初等反射矩阵 $\vb*{H}$, 使得 $\vb*{Hx}=\vb*{y}.$

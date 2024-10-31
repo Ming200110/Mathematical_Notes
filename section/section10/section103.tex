@@ -1,4 +1,4 @@
-\section{初等变换与初等矩阵}
+\section{初等变换与几何变换}
 
 \subsection{初等变换}
 
@@ -326,3 +326,846 @@
           & =(-2)^n\prod_{i=1}^{n}a_i\mqty|1-\dfrac{n}{2}                                                                                                                                           & -\dfrac{1}{2}\displaystyle\sum_{j=1}^{n}\dfrac{1}{a_j} \\\displaystyle-\dfrac{1}{2}\sum_{i=1}^{n}a_i&1-\dfrac{n}{2}| =(-2)^n\prod_{i=1}^{n}a_i\qty[(n-2)^2-\sum_{i,j=1}^{n}\dfrac{a_i}{a_j}].
     \end{flalign*}
 \end{solution}
+
+\subsection{几何变换}
+
+\begin{theorem}[二维图形的几何变换]
+    $\vb*{T}_{2D}=\begin{pmatrix} a & d & g \\ b & e & h \\ c & f & i \\\end{pmatrix}$, 其中 $\begin{pmatrix} a & d \\ b & e \\\end{pmatrix}$ 是对图形进行缩放、旋转、对称、错切等变换; $(c\quad f)$ 是对图形进行平移变换; $\mqty(g\\ h)$ 对图形作投影变换, $g$ 的作用是在 $X$ 轴的 $\dfrac{1}{g}$ 处产生一个灭点, $h$ 的作用是在 $Y$ 轴的 $\dfrac{1}{h}$ 处产生一个灭点; $(i)$ 的作用是对整体图形作伸缩变换.
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 平移变换 $\mqty(x'&y'&1)=\mqty(x&y&1)\begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ T_x & T_y & 1 \\\end{pmatrix}=\mqty(x+T_x&y+T_y&1)$, 如图 \ref{jihebh}(a) 所示;
+        \item 比例变换 $\mqty(x'&y'&1)=\mqty(x&y&1)\begin{pmatrix} S_x & 0 & 0 \\ 0 & S_y & 0 \\ 0 & 0 & 1 \\\end{pmatrix}=\mqty(S_x\cdot x&S_y\cdot y&1)$ 
+        \begin{enumerate}
+            \item 当 $S_x=S_y=1$ 时, 图形不变, 如图 \ref{jihebh}(b) 所示;
+            \item 当 $S_x=S_y>1$ 时, 图形沿坐标轴等比例放大, 如图 \ref{jihebh}(c) 所示;
+            \item 当 $0<S_x=S_y<1$ 时, 图形沿坐标轴等比例缩小, 如图 \ref{jihebh}(d) 所示;
+            \item 当 $S_x\neq S_y$ 时, 图形沿坐标轴方向作非均匀的比例变换, 如图 \ref{jihebh}(e) 所示.
+        \end{enumerate}
+        \item 对称变换 $\mqty(x'&y'&1)=\mqty(x&y&1)\begin{pmatrix} a & d & 0 \\ b & e & 0 \\ 0 & 0 & 1 \\\end{pmatrix}=\mqty(ax+by&dx+ey&1)$ 
+        \begin{enumerate}
+            \item 当 $b=d=0,~a=-1,~e=1$ 时, 图形作关于 $Y$ 轴的反射图形, 如图 \ref{jihebh}(f) 所示;
+            \item 当 $b=d=0,~a=1,~e=-1$ 时, 图形作关于 $X$ 轴的反射图形, 如图 \ref{jihebh}(g) 所示;
+            \item 当 $b=d=0,~a=e=-1$ 时, 图形作关于 $O$ 点的中心对称图形, 如图 \ref{jihebh}(h) 所示;
+            \item 当 $b=d=1,~a=e=0$ 时, 图形作关于 $Y=X$ 对称的反射图形, 如图 \ref{jihebh}(i) 所示;
+            \item 当 $b=d=-1,~a=e=0$ 时, 图形作关于 $Y=-X$ 对称的反射图形, 如图 \ref{jihebh}(i) 所示.
+        \end{enumerate}
+        \item 旋转变换 $\mqty(x'&y'&1)=\mqty(x&y&1)\begin{pmatrix} \cos\theta & \sin\theta & 0 \\ -\sin\theta & \cos\theta & 0 \\ 0 & 0 & 1 \\\end{pmatrix}=\mqty(x\cos\theta-y\sin\theta&x\sin\theta+y\cos\theta&1)$, 作关于原点顺时针旋转 $\theta$ 角的旋转变换.
+        \item 错切变换 $\mqty(x'&y'&1)=\mqty(x&y&1)\begin{pmatrix} 1 & d & 0 \\ b & 1 & 0 \\ 0 & 0 & 1 \\\end{pmatrix}=\mqty(x+by&dx+y&1)$ 
+        \begin{enumerate}
+            \item 当 $d=0$ 时, 图形 $y$ 坐标不变, $x$ 坐标随系数 $b$ 变换, 当 $b>0$ 时, 图形沿 $+X$ 方向作错切变换; 当 $b<0$ 时, 图形沿 $-X$ 方向作错切变换, 如图 \ref{jihebh}(l) 所示;
+            \item 当 $b=0$ 时, 图形 $x$ 坐标不变, 类似 $d=0$ 的情况, 图略.
+        \end{enumerate}
+    \end{enumerate}
+\end{theorem}
+
+\begin{figure}[H]
+    \centering
+    \subfigure[scale=.9][平移 $T_x,~T_y$]{
+        
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Straight Lines [id:da0744643818390529] 
+\draw    (160,160) -- (160,133.33) -- (160,106.67) -- (160,80) -- (160,53.33) -- (160,26.67) -- (160,2) ;
+\draw [shift={(160,0)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da2501910192394292] 
+\draw    (160,160) -- (186.67,160) -- (213.33,160) -- (240,160) -- (266.67,160) -- (293.33,160) -- (318,160) ;
+\draw [shift={(320,160)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Shape: Right Triangle [id:dp3230440420217635] 
+\draw   (186.67,80) -- (253.33,120) -- (186.67,120) -- cycle ;
+%Straight Lines [id:da4274444095380905] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (186.67,120) -- (160,120) ;
+%Shape: Right Triangle [id:dp3554215710083837] 
+\draw   (226.67,53.33) -- (293.33,93.33) -- (226.67,93.33) -- cycle ;
+%Straight Lines [id:da18015886667211856] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (226.67,93.33) -- (160,93.33) ;
+%Straight Lines [id:da20825596809464475] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (186.67,160) -- (186.67,137.12) -- (186.67,120) ;
+%Straight Lines [id:da30415316219723487] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (226.67,160) -- (226.67,93.33) ;
+%Straight Lines [id:da18553363748469254] 
+\draw    (189.67,160) -- (223.67,160) ;
+\draw [shift={(226.67,160)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+\draw [shift={(186.67,160)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+%Straight Lines [id:da7758481926901326] 
+\draw    (160,96.33) -- (160,117) ;
+\draw [shift={(160,120)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+\draw [shift={(160,93.33)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+
+% Text Node
+\draw (312.88,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle X$
+\end{minipage}};
+% Text Node
+\draw (150.8,12.78) node   [align=left] {\begin{minipage}[lt]{12.51pt}\setlength\topsep{0pt}
+$\displaystyle Y$
+\end{minipage}};
+% Text Node
+\draw (152.88,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle O$
+\end{minipage}};
+% Text Node
+\draw (193.79,107.22) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle A$
+\end{minipage}};
+% Text Node
+\draw (233.79,80.55) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle A'$
+\end{minipage}};
+% Text Node
+\draw (258.71,120.4) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B$
+\end{minipage}};
+% Text Node
+\draw (300.71,94) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B'$
+\end{minipage}};
+% Text Node
+\draw (179.55,67.22) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C$
+\end{minipage}};
+% Text Node
+\draw (219.55,40.55) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C'$
+\end{minipage}};
+% Text Node
+\draw (206.21,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle T_{x}$
+\end{minipage}};
+% Text Node
+\draw (141.41,103.58) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle T_{y}$
+\end{minipage}};
+
+
+\end{tikzpicture}
+
+    }
+    \subfigure[scale=.9][比例系数 $S_x=S_y=1$]{
+        
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Straight Lines [id:da15250042942435282] 
+\draw    (160,160) -- (160,133.33) -- (160,106.67) -- (160,80) -- (160,53.33) -- (160,26.67) -- (160,2) ;
+\draw [shift={(160,0)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da8576603280236559] 
+\draw    (160,160) -- (186.67,160) -- (213.33,160) -- (240,160) -- (266.67,160) -- (293.33,160) -- (318,160) ;
+\draw [shift={(320,160)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Shape: Right Triangle [id:dp7502598031763401] 
+\draw   (186.67,80) -- (253.33,120) -- (186.67,120) -- cycle ;
+
+% Text Node
+\draw (312.88,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle X$
+\end{minipage}};
+% Text Node
+\draw (150.8,12.78) node   [align=left] {\begin{minipage}[lt]{12.51pt}\setlength\topsep{0pt}
+$\displaystyle Y$
+\end{minipage}};
+% Text Node
+\draw (152.88,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle O$
+\end{minipage}};
+% Text Node
+\draw (178.21,107.22) node   [align=left] {\begin{minipage}[lt]{11.5pt}\setlength\topsep{0pt}
+$\displaystyle A$
+\end{minipage}};
+% Text Node
+\draw (193.79,107.22) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle A'$
+\end{minipage}};
+% Text Node
+\draw (247.59,132.78) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B$
+\end{minipage}};
+% Text Node
+\draw (259.08,132.78) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B'$
+\end{minipage}};
+% Text Node
+\draw (179.55,67.22) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C$
+\end{minipage}};
+% Text Node
+\draw (193.79,67.22) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C'$
+\end{minipage}};
+
+
+\end{tikzpicture}
+    }
+    \subfigure[scale=.9][比例系数 $S_x=S_y>1$]{
+        
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Straight Lines [id:da1534328502257163] 
+\draw    (160,160) -- (160,133.33) -- (160,106.67) -- (160,80) -- (160,53.33) -- (160,26.67) -- (160,2) ;
+\draw [shift={(160,0)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da05091810398310703] 
+\draw    (160,160) -- (186.67,160) -- (213.33,160) -- (240,160) -- (266.67,160) -- (293.33,160) -- (318,160) ;
+\draw [shift={(320,160)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Shape: Right Triangle [id:dp7699621838177173] 
+\draw   (199.2,47.07) -- (279.2,100.4) -- (199.2,100.4) -- cycle ;
+%Shape: Right Triangle [id:dp6819256437414682] 
+\draw   (173.07,122.36) -- (199.73,140.13) -- (173.07,140.13) -- cycle ;
+%Straight Lines [id:da5214539639167379] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (199.2,47.07) -- (192.67,65.89) -- (186.13,84.71) -- (179.6,103.53) -- (173.07,122.36) -- (166.53,141.18) -- (160,160) ;
+%Straight Lines [id:da8425910163250174] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (279.2,100.4) -- (259.33,110.33) -- (239.47,120.27) -- (219.6,130.2) -- (199.73,140.13) -- (179.87,150.07) -- (160,160) ;
+%Straight Lines [id:da47875893336700104] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (160,160) -- (199.2,100.4) ;
+
+% Text Node
+\draw (312.88,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle X$
+\end{minipage}};
+% Text Node
+\draw (150.8,12.78) node   [align=left] {\begin{minipage}[lt]{12.51pt}\setlength\topsep{0pt}
+$\displaystyle Y$
+\end{minipage}};
+% Text Node
+\draw (152.88,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle O$
+\end{minipage}};
+% Text Node
+\draw (173.12,146.42) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle A$
+\end{minipage}};
+% Text Node
+\draw (206.32,87.62) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle A'$
+\end{minipage}};
+% Text Node
+\draw (206.71,142.4) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B$
+\end{minipage}};
+% Text Node
+\draw (287.11,100.8) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B'$
+\end{minipage}};
+% Text Node
+\draw (165.95,109.58) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C$
+\end{minipage}};
+% Text Node
+\draw (192.08,34.29) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C'$
+\end{minipage}};
+
+
+\end{tikzpicture}
+
+    }
+    \subfigure[scale=.9][比例系数 $0<S_x=S_y<1$]{
+        
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Straight Lines [id:da9243963150205441] 
+\draw    (160,160) -- (160,133.33) -- (160,106.67) -- (160,80) -- (160,53.33) -- (160,26.67) -- (160,2) ;
+\draw [shift={(160,0)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da8002028753633985] 
+\draw    (160,160) -- (186.67,160) -- (213.33,160) -- (240,160) -- (266.67,160) -- (293.33,160) -- (318,160) ;
+\draw [shift={(320,160)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Shape: Right Triangle [id:dp3074265042318134] 
+\draw   (199.2,47.07) -- (279.2,100.4) -- (199.2,100.4) -- cycle ;
+%Shape: Right Triangle [id:dp29770002438414234] 
+\draw   (173.07,122.36) -- (199.73,140.13) -- (173.07,140.13) -- cycle ;
+%Straight Lines [id:da024412753399659648] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (199.2,47.07) -- (192.67,65.89) -- (186.13,84.71) -- (179.6,103.53) -- (173.07,122.36) -- (166.53,141.18) -- (160,160) ;
+%Straight Lines [id:da7095636127854406] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (279.2,100.4) -- (259.33,110.33) -- (239.47,120.27) -- (219.6,130.2) -- (199.73,140.13) -- (179.87,150.07) -- (160,160) ;
+%Straight Lines [id:da5652492210181941] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (160,160) -- (199.2,100.4) ;
+
+% Text Node
+\draw (312.88,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle X$
+\end{minipage}};
+% Text Node
+\draw (150.8,12.78) node   [align=left] {\begin{minipage}[lt]{12.51pt}\setlength\topsep{0pt}
+$\displaystyle Y$
+\end{minipage}};
+% Text Node
+\draw (152.88,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle O$
+\end{minipage}};
+% Text Node
+\draw (173.12,146.42) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle A'$
+\end{minipage}};
+% Text Node
+\draw (206.32,87.62) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle A$
+\end{minipage}};
+% Text Node
+\draw (206.71,142.4) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B'$
+\end{minipage}};
+% Text Node
+\draw (287.11,100.8) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B$
+\end{minipage}};
+% Text Node
+\draw (165.95,109.58) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C'$
+\end{minipage}};
+% Text Node
+\draw (192.08,34.29) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C$
+\end{minipage}};
+
+
+\end{tikzpicture}
+
+    }
+    \subfigure[scale=.9][$S_x=1,~S_y>1$]{
+        
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Straight Lines [id:da8557514491265967] 
+\draw    (160,160) -- (160,133.33) -- (160,106.67) -- (160,80) -- (160,53.33) -- (160,26.67) -- (160,2) ;
+\draw [shift={(160,0)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da5539450143531788] 
+\draw    (160,160) -- (186.67,160) -- (213.33,160) -- (240,160) -- (266.67,160) -- (293.33,160) -- (318,160) ;
+\draw [shift={(320,160)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da5193682179432797] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (186.67,160) -- (186.67,82.33) ;
+%Shape: Right Triangle [id:dp8688230494789257] 
+\draw   (186.67,93.33) -- (253.33,133.33) -- (186.67,133.33) -- cycle ;
+%Shape: Right Triangle [id:dp373344497154698] 
+\draw   (186.67,15.67) -- (253.33,82.33) -- (186.67,82.33) -- cycle ;
+%Straight Lines [id:da7747623883965025] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (253.33,160) -- (253.33,82.33) ;
+
+% Text Node
+\draw (312.88,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle X$
+\end{minipage}};
+% Text Node
+\draw (150.8,12.78) node   [align=left] {\begin{minipage}[lt]{12.51pt}\setlength\topsep{0pt}
+$\displaystyle Y$
+\end{minipage}};
+% Text Node
+\draw (152.88,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle O$
+\end{minipage}};
+% Text Node
+\draw (191.4,69.55) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle A'$
+\end{minipage}};
+% Text Node
+\draw (191.4,120.55) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle A$
+\end{minipage}};
+% Text Node
+\draw (261.71,82.73) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B'$
+\end{minipage}};
+% Text Node
+\draw (262.11,133.47) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B$
+\end{minipage}};
+% Text Node
+\draw (174.95,16.24) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C'$
+\end{minipage}};
+% Text Node
+\draw (177.08,92.95) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C$
+\end{minipage}};
+
+
+\end{tikzpicture}
+
+    }
+    \subfigure[scale=.9][$Y$ 轴对称]{
+        
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Straight Lines [id:da9473706495657213] 
+\draw    (240,160) -- (240,133.33) -- (240,106.67) -- (240,80) -- (240,53.33) -- (240,26.67) -- (240,2) ;
+\draw [shift={(240,0)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da3401945044692589] 
+\draw    (160,160) -- (186.67,160) -- (213.33,160) -- (240,160) -- (266.67,160) -- (293.33,160) -- (318,160) ;
+\draw [shift={(320,160)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Shape: Right Triangle [id:dp2883900535142023] 
+\draw   (266.67,53.33) -- (293.33,133.33) -- (266.67,133.33) -- cycle ;
+%Shape: Right Triangle [id:dp0361672463144318] 
+\draw   (213.33,53.33) -- (186.67,133.33) -- (213.33,133.33) -- cycle ;
+
+% Text Node
+\draw (312.88,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle X$
+\end{minipage}};
+% Text Node
+\draw (227.6,13.98) node   [align=left] {\begin{minipage}[lt]{12.51pt}\setlength\topsep{0pt}
+$\displaystyle Y$
+\end{minipage}};
+% Text Node
+\draw (233.79,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle O$
+\end{minipage}};
+% Text Node
+\draw (259.81,139.62) node   [align=left] {\begin{minipage}[lt]{11.5pt}\setlength\topsep{0pt}
+$\displaystyle A$
+\end{minipage}};
+% Text Node
+\draw (214.99,138.82) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle A'$
+\end{minipage}};
+% Text Node
+\draw (298.39,138.38) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B$
+\end{minipage}};
+% Text Node
+\draw (173.48,137.18) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B'$
+\end{minipage}};
+% Text Node
+\draw (258.35,53.22) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C$
+\end{minipage}};
+% Text Node
+\draw (220.59,53.62) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C'$
+\end{minipage}};
+
+
+\end{tikzpicture}
+
+    }
+    \subfigure[scale=.9][$X$ 轴对称]{
+        
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Straight Lines [id:da24368355678437692] 
+\draw    (160,240) -- (160,213.33) -- (160,186.67) -- (160,160) -- (160,133.33) -- (160,106.67) -- (160,82) ;
+\draw [shift={(160,80)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da91989606623083] 
+\draw    (160,160) -- (186.67,160) -- (213.33,160) -- (240,160) -- (266.67,160) -- (293.33,160) -- (318,160) ;
+\draw [shift={(320,160)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Shape: Right Triangle [id:dp6047665119381709] 
+\draw   (186.67,93.33) -- (253.33,133.33) -- (186.67,133.33) -- cycle ;
+%Shape: Right Triangle [id:dp2085112249426042] 
+\draw   (186.67,226.67) -- (253.33,186.67) -- (186.67,186.67) -- cycle ;
+
+% Text Node
+\draw (312.88,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle X$
+\end{minipage}};
+% Text Node
+\draw (150.8,80.55) node   [align=left] {\begin{minipage}[lt]{12.51pt}\setlength\topsep{0pt}
+$\displaystyle Y$
+\end{minipage}};
+% Text Node
+\draw (148.88,160.28) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle O$
+\end{minipage}};
+% Text Node
+\draw (176.9,182.05) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle A'$
+\end{minipage}};
+% Text Node
+\draw (176.4,137.55) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle A$
+\end{minipage}};
+% Text Node
+\draw (263.21,187.23) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B'$
+\end{minipage}};
+% Text Node
+\draw (262.11,133.47) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B$
+\end{minipage}};
+% Text Node
+\draw (173.95,228.74) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C'$
+\end{minipage}};
+% Text Node
+\draw (177.08,92.95) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C$
+\end{minipage}};
+
+
+\end{tikzpicture}
+
+    }
+    \subfigure[scale=.9][中心对称]{
+        
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Straight Lines [id:da20466553477334037] 
+\draw    (240,240) -- (240,213.33) -- (240,186.67) -- (240,160) -- (240,133.33) -- (240,106.67) -- (240,82) ;
+\draw [shift={(240,80)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da07906371106904819] 
+\draw    (160,160) -- (186.67,160) -- (213.33,160) -- (240,160) -- (266.67,160) -- (293.33,160) -- (318,160) ;
+\draw [shift={(320,160)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Shape: Right Triangle [id:dp711098921084359] 
+\draw   (253.33,106.67) -- (293.33,133.33) -- (253.33,133.33) -- cycle ;
+%Shape: Right Triangle [id:dp32855978989430157] 
+\draw   (226.67,213.33) -- (187.13,186.67) -- (226.67,186.67) -- cycle ;
+%Straight Lines [id:da813083554485903] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (253.33,133.33) -- (226.67,186.67) ;
+%Straight Lines [id:da3857126514317757] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (293.33,133.33) -- (187.13,186.67) ;
+%Straight Lines [id:da811525310685079] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (253.33,106.67) -- (226.67,213.33) ;
+
+% Text Node
+\draw (312.88,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle X$
+\end{minipage}};
+% Text Node
+\draw (229.2,87.22) node   [align=left] {\begin{minipage}[lt]{12.51pt}\setlength\topsep{0pt}
+$\displaystyle Y$
+\end{minipage}};
+% Text Node
+\draw (230.85,147.22) node   [align=left] {\begin{minipage}[lt]{12.44pt}\setlength\topsep{0pt}
+$\displaystyle O$
+\end{minipage}};
+% Text Node
+\draw (255.71,139.72) node   [align=left] {\begin{minipage}[lt]{11.5pt}\setlength\topsep{0pt}
+$\displaystyle A$
+\end{minipage}};
+% Text Node
+\draw (216.29,177.72) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle A'$
+\end{minipage}};
+% Text Node
+\draw (302.09,133.78) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B$
+\end{minipage}};
+% Text Node
+\draw (175.58,186.78) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B'$
+\end{minipage}};
+% Text Node
+\draw (252.55,97.22) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C$
+\end{minipage}};
+% Text Node
+\draw (225.79,221.72) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C'$
+\end{minipage}};
+
+
+\end{tikzpicture}
+
+    }
+    \subfigure[scale=.9][$Y=X$ 对称]{
+        
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Straight Lines [id:da8292659722722793] 
+\draw    (240,240) -- (240,213.33) -- (240,186.67) -- (240,160) -- (240,133.33) -- (240,106.67) -- (240,82) ;
+\draw [shift={(240,80)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da7352149228464684] 
+\draw    (160,160) -- (186.67,160) -- (213.33,160) -- (240,160) -- (266.67,160) -- (293.33,160) -- (318,160) ;
+\draw [shift={(320,160)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da2661475178458712] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (266.67,186.67) -- (213.33,133.33) ;
+%Shape: Right Triangle [id:dp6596390866394817] 
+\draw   (213.33,106.67) -- (173.33,133.33) -- (213.33,133.33) -- cycle ;
+%Straight Lines [id:da7951069745564614] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}]  (173.33,226.67) -- (306.67,93.33) ;
+%Shape: Right Triangle [id:dp32508442712015806] 
+\draw   (266.67,226.67) -- (293.33,186.67) -- (266.67,186.67) -- cycle ;
+%Straight Lines [id:da9943714913243453] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (293.33,186.67) -- (213.33,106.67) ;
+%Straight Lines [id:da42142200377858186] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (266.67,226.67) -- (173.33,133.33) ;
+
+% Text Node
+\draw (312.88,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle X$
+\end{minipage}};
+% Text Node
+\draw (229.2,87.22) node   [align=left] {\begin{minipage}[lt]{12.51pt}\setlength\topsep{0pt}
+$\displaystyle Y$
+\end{minipage}};
+% Text Node
+\draw (230.85,173.89) node   [align=left] {\begin{minipage}[lt]{12.44pt}\setlength\topsep{0pt}
+$\displaystyle O$
+\end{minipage}};
+% Text Node
+\draw (206.91,140.12) node   [align=left] {\begin{minipage}[lt]{11.5pt}\setlength\topsep{0pt}
+$\displaystyle A$
+\end{minipage}};
+% Text Node
+\draw (251.89,191.32) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle A'$
+\end{minipage}};
+% Text Node
+\draw (211.29,98.18) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B$
+\end{minipage}};
+% Text Node
+\draw (301.18,187.18) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B'$
+\end{minipage}};
+% Text Node
+\draw (162.55,134.02) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C$
+\end{minipage}};
+% Text Node
+\draw (276.99,224.92) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C'$
+\end{minipage}};
+
+
+\end{tikzpicture}
+
+    }
+    \subfigure[scale=.9][$Y=-X$ 对称]{
+        
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Straight Lines [id:da2266867895070097] 
+\draw    (155.13,159.59) -- (181.8,159.59) -- (208.47,159.59) -- (235.13,159.59) -- (261.8,159.59) -- (288.47,159.59) -- (313.13,159.59) ;
+\draw [shift={(315.13,159.59)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da4885018729597703] 
+\draw    (235.13,81.59) -- (235.13,106.25) -- (235.13,132.92) -- (235.13,159.59) -- (235.13,186.25) -- (235.13,212.92) -- (235.13,239.59) ;
+\draw [shift={(235.13,79.59)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da37798418466605876] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (208.47,186.25) -- (261.8,132.92) ;
+%Shape: Right Triangle [id:dp9937709437984665] 
+\draw   (288.47,132.92) -- (261.8,92.92) -- (261.8,132.92) -- cycle ;
+%Straight Lines [id:da8376057486917463] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}]  (168.47,92.92) -- (301.8,226.25) ;
+%Shape: Right Triangle [id:dp15886819391939877] 
+\draw   (168.47,186.25) -- (208.47,212.92) -- (208.47,186.25) -- cycle ;
+%Straight Lines [id:da8724202073941834] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (208.47,212.92) -- (288.47,132.92) ;
+%Straight Lines [id:da8687627509248148] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (168.47,186.25) -- (261.8,92.92) ;
+
+% Text Node
+\draw (307.55,172.37) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle X$
+\end{minipage}};
+% Text Node
+\draw (225.15,83.97) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle Y$
+\end{minipage}};
+% Text Node
+\draw (223.95,167.57) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle O$
+\end{minipage}};
+% Text Node
+\draw (256.75,140.77) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle A$
+\end{minipage}};
+% Text Node
+\draw (201.55,175.57) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle A'$
+\end{minipage}};
+% Text Node
+\draw (292.75,133.17) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B$
+\end{minipage}};
+% Text Node
+\draw (250.45,92.54) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle C$
+\end{minipage}};
+% Text Node
+\draw (215.55,207.97) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B'$
+\end{minipage}};
+% Text Node
+\draw (166.35,198.37) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle C'$
+\end{minipage}};
+
+
+\end{tikzpicture}
+
+    }
+    \subfigure[scale=.9][相对原点旋转 $\theta$ 角]{
+        
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Straight Lines [id:da713951749740587] 
+\draw    (160,240) -- (160,213.33) -- (160,186.67) -- (160,160) -- (160,133.33) -- (160,106.67) -- (160,82) ;
+\draw [shift={(160,80)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da27505852441502276] 
+\draw    (160,160) -- (186.67,160) -- (213.33,160) -- (240,160) -- (266.67,160) -- (293.33,160) -- (318,160) ;
+\draw [shift={(320,160)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Shape: Right Triangle [id:dp9653910433627337] 
+\draw   (173.33,93.33) -- (226.67,133.33) -- (173.33,133.33) -- cycle ;
+%Shape: Right Triangle [id:dp19153562200662932] 
+\draw   (226.67,173.33) -- (186.67,226.67) -- (186.67,173.33) -- cycle ;
+%Straight Lines [id:da6181416799790123] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (160,160) -- (173.33,133.33) ;
+%Straight Lines [id:da34341147568550356] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (160,160) -- (186.67,173.33) ;
+%Shape: Arc [id:dp3703274603787783] 
+\draw  [draw opacity=0][dash pattern={on 0.84pt off 2.51pt}][line width=0.75]  (173.45,133.18) .. controls (183.26,138.11) and (190,148.27) .. (190,160) .. controls (190,164.85) and (188.85,169.43) .. (186.81,173.48) -- (160,160) -- cycle ; \draw  [dash pattern={on 0.84pt off 2.51pt}][line width=0.75]  (173.45,133.18) .. controls (183.26,138.11) and (190,148.27) .. (190,160) .. controls (190,164.85) and (188.85,169.43) .. (186.81,173.48) ;  
+
+% Text Node
+\draw (312.88,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle X$
+\end{minipage}};
+% Text Node
+\draw (150.8,80.55) node   [align=left] {\begin{minipage}[lt]{12.51pt}\setlength\topsep{0pt}
+$\displaystyle Y$
+\end{minipage}};
+% Text Node
+\draw (148.88,160.28) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle O$
+\end{minipage}};
+% Text Node
+\draw (172.1,181.25) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle A'$
+\end{minipage}};
+% Text Node
+\draw (168.72,145.96) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle A$
+\end{minipage}};
+% Text Node
+\draw (173.61,222.03) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B'$
+\end{minipage}};
+% Text Node
+\draw (232.51,133.47) node   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B$
+\end{minipage}};
+% Text Node
+\draw (230.35,180.34) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C'$
+\end{minipage}};
+% Text Node
+\draw (181.48,88.55) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C$
+\end{minipage}};
+
+
+\end{tikzpicture}
+
+    }
+    \subfigure[scale=.9][$X$ 方向错切]{
+        
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Straight Lines [id:da258215525060401] 
+\draw    (240,240) -- (240,213.33) -- (240,186.67) -- (240,160) -- (240,133.33) -- (240,106.67) -- (240,82) ;
+\draw [shift={(240,80)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da058671601265665174] 
+\draw    (160,160) -- (186.67,160) -- (213.33,160) -- (240,160) -- (266.67,160) -- (293.33,160) -- (318,160) ;
+\draw [shift={(320,160)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Shape: Rectangle [id:dp4811001215484525] 
+\draw  [fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=0.3 ] (213.33,133.33) -- (266.67,133.33) -- (266.67,186.67) -- (213.33,186.67) -- cycle ;
+%Shape: Rectangle [id:dp8297367285498773] 
+\draw  [fill={rgb, 255:red, 126; green, 211; blue, 33 }  ,fill opacity=0.3 ] (252.91,133.33) -- (306.24,133.33) -- (227.09,186.67) -- (173.76,186.67) -- cycle ;
+%Shape: Rectangle [id:dp18591382614366458] 
+\draw  [fill={rgb, 255:red, 80; green, 227; blue, 194 }  ,fill opacity=0.3 ] (173.31,133.33) -- (226.64,133.33) -- (306.69,186.67) -- (253.36,186.67) -- cycle ;
+
+% Text Node
+\draw (312.88,172.78) node   [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle X$
+\end{minipage}};
+% Text Node
+\draw (230.8,80.55) node   [align=left] {\begin{minipage}[lt]{12.51pt}\setlength\topsep{0pt}
+$\displaystyle Y$
+\end{minipage}};
+% Text Node
+\draw (314.1,133.25) node  [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,opacity=1 ] [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle A'$
+\end{minipage}};
+% Text Node
+\draw (263.92,124.36) node  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ] [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle A$
+\end{minipage}};
+% Text Node
+\draw (250.01,123.63) node  [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,opacity=1 ] [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B'$
+\end{minipage}};
+% Text Node
+\draw (211.71,123.47) node  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ] [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B$
+\end{minipage}};
+% Text Node
+\draw (161.95,191.14) node  [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,opacity=1 ] [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C'$
+\end{minipage}};
+% Text Node
+\draw (210.68,193.75) node  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ] [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle C$
+\end{minipage}};
+% Text Node
+\draw (265.88,193.35) node  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ] [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle D$
+\end{minipage}};
+% Text Node
+\draw (226.68,194.15) node  [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,opacity=1 ] [align=left] {\begin{minipage}[lt]{9.68pt}\setlength\topsep{0pt}
+$\displaystyle D'$
+\end{minipage}};
+% Text Node
+\draw (225.12,124.76) node  [color={rgb, 255:red, 80; green, 227; blue, 194 }  ,opacity=1 ] [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle A''$
+\end{minipage}};
+% Text Node
+\draw (166.72,123.56) node  [color={rgb, 255:red, 80; green, 227; blue, 194 }  ,opacity=1 ] [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle B''$
+\end{minipage}};
+% Text Node
+\draw (246.72,194.36) node  [color={rgb, 255:red, 80; green, 227; blue, 194 }  ,opacity=1 ] [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle C''$
+\end{minipage}};
+% Text Node
+\draw (304.32,194.36) node  [color={rgb, 255:red, 80; green, 227; blue, 194 }  ,opacity=1 ] [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+$\displaystyle D''$
+\end{minipage}};
+
+
+\end{tikzpicture}
+
+    }
+    \caption{}
+    \label{jihebh}
+\end{figure}

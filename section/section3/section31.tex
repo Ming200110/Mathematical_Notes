@@ -308,10 +308,11 @@
         (\rownumber{}) $\displaystyle\int \frac{1}{\sqrt{a^{2}+x^{2}}} \dd  x=\ln \left(x+\sqrt{a^{2}+x^{2}}\right)+C .$                                         \\
         (\rownumber{}) $\displaystyle\int \frac{1}{x \sqrt{a^{2}+x^{2}}} \dd  x=\frac{1}{a} \ln \left(\frac{x}{a+\sqrt{a^{2}+x^{2}}}\right)+C .$                 \\
         \midrule
-        $\sqrt{x^{2}-a^{2}} ~ \left(x^{2}>a^{2}\right)$                                                                                                          \\
+        $\sqrt{x^{2}-a^{2}} ~ \left(a>0\right)$                                                                                                          \\
         (\rownumber{}) $\displaystyle\int \frac{1}{\sqrt{x^{2}-a^{2}}} \dd  x=\ln \left(x+\sqrt{x^{2}-a^{2}}\right)+C.$                                          \\
+        (\rownumber{}) $\displaystyle \int\sqrt{x^2-a^2}\dd x=\dfrac{ax\sqrt{{x}^{2}-{a}^{2}}}{2a}-\dfrac{{a}^{2}\ln\left|a\sqrt{{x}^{2}-{a}^{2}}+ax\right|}{2}+C.$\\
         \midrule
-        $\sqrt{a^{2}-x^{2}} ~ \left(a^{2}>x^{2}\right)$                                                                                                          \\
+        $\sqrt{a^{2}-x^{2}} ~ \left(a>0\right)$                                                                                                          \\
         (\rownumber{}) $\displaystyle\int \sqrt{a^{2}-x^{2}} \dd  x=\frac{1}{2} x \sqrt{a^{2}-x^{2}}+\frac{a^{2}}{2} \arcsin \frac{x}{a}+C.$                     \\
         (\rownumber{}) $\displaystyle\int \frac{\sqrt{a^{2}-x^{2}}}{x} \dd  x=\sqrt{a^{2}-x^{2}}-a \ln \left(\frac{a+\sqrt{a^{2}-x^{2}}}{x}\right)+C.$           \\
         (\rownumber{}) $\displaystyle\int \frac{1}{\sqrt{a^{2}-x^{2}}} \dd  x=\arcsin \frac{x}{a}+C=-\arccos \frac{x}{a}+C.$                                     \\
@@ -608,7 +609,6 @@ $\displaystyle\int x^{m}\left(ax^{n}+b \right)^{p} \dd  x$, 式中 $ m, n $ 和 
 \begin{table}[H]
     \centering
     \caption{常用三角函数不定积分公式}
-    \resizebox{.99\textwidth}{!}{
         \begin{tabular}{l l}
             三角函数                                                                                                                                                                                                                          \\
             (\rownumber{}) $\displaystyle\int \sin x \dd  x=-\cos x+C$                                                     & (\rownumber{}) $\displaystyle\int \cos x \dd  x=\sin x+C$                                                        \\
@@ -619,7 +619,7 @@ $\displaystyle\int x^{m}\left(ax^{n}+b \right)^{p} \dd  x$, 式中 $ m, n $ 和 
             (\rownumber{}) $\displaystyle\int \tan ^{2} x \dd  x=\tan x-x+C$                                               & (\rownumber{}) $\displaystyle\int \cot ^{2} x \dd  x=-\cot x-x+C$                                                \\
             (\rownumber{}) $\displaystyle\int \sec ^{2} x \dd  x=\tan x+C$                                                 & (\rownumber{}) $\displaystyle\int \csc ^{2} x \dd  x=-\cot x+C$                                                  \\
             \midrule
-            (\rownumber{}) $\displaystyle\int \sin ^{n} x \dd  x=-\frac{\sin ^{n-1} x \cos x}{n} +\frac{n-1}{n} I_{n-2}$   & (\rownumber{}) $\displaystyle\int \cos ^{n} x \dd  x=\frac{\sin x \cos ^{n-1} x}{n} +\frac{n-1}{n}I_{n-2}$       \\
+            (\rownumber{}) $\displaystyle\int \sin ^{n} x \dd  x=-\frac{\sin ^{n-1} x \cos x}{n} +\frac{n-1}{n} I_{n-2}$   & (\rownumber{}) $\displaystyle\int \cos ^{n} x \dd  x=\frac{\cos ^{n-1} x \sin x}{n} +\frac{n-1}{n}I_{n-2}$       \\
             (\rownumber{}) $\displaystyle\int \tan ^{n} x \dd  x=\frac{\tan ^{n-1} x}{n-1} -I_{n-2}$                       & (\rownumber{}) $\displaystyle\int \cot ^{n} x \dd  x=-\frac{\cot ^{n-1} x}{n-1}-I_{n-2}$                         \\
             (\rownumber{}) $\displaystyle\int \sec ^{n} x \dd  x=\frac{ \sec ^{n-2} x \tan x}{n-1}+\frac{n-2}{n-1}I_{n-2}$ & (\rownumber{}) $\displaystyle\int \csc ^{n} x \dd  x=-\frac{\csc ^{n-2} x \cot x}{n-1} +\frac{n-2}{n-1}I_{n-2}$  \\
             \midrule
@@ -632,7 +632,7 @@ $\displaystyle\int x^{m}\left(ax^{n}+b \right)^{p} \dd  x$, 式中 $ m, n $ 和 
             (\rownumber{}) $\displaystyle\int \arctan x \dd  x=x \arctan x-\ln \sqrt{1+x^{2}}+C$                           & (\rownumber{}) $\displaystyle\int \operatorname{arccot} x \dd  x=x \operatorname{arccot} x+\ln \sqrt{1+x^{2}}+C$ \\
             \multicolumn{2}{l}{(\rownumber{}) $\displaystyle\int \operatorname{arcsec} x \dd  x=x \operatorname{arcsec} x-\operatorname{sgn}(x) \ln \left|x+\sqrt{x^{2}-1}\right|+C$}                                                         \\
             \multicolumn{2}{l}{(\rownumber{}) $\displaystyle\int \operatorname{arccsc} x \dd  x=x \operatorname{arccsc} x+\operatorname{sgn}(x) \ln \left|x+\sqrt{x^{2}-1}\right|+C$}                                                         \\
-        \end{tabular}}
+        \end{tabular}
 \end{table}
 
 % \paragraph{各三角函数之间的关系图} 下图可以很好的概括各三角函数之间的转化关系.
@@ -685,11 +685,17 @@ $\displaystyle\int x^{m}\left(ax^{n}+b \right)^{p} \dd  x$, 式中 $ m, n $ 和 
     \caption{}
 \end{figure}
 
+\begin{theorem}
+    \(\displaystyle\int \sin^px\cos^qx\dd x=\begin{cases}
+        \displaystyle\sum_{k=0}^{\frac{q-1}{2}}(-1)^k\C_n^k\dfrac{\sin^{p+2k+1}x}{p+2k+1}+C,               & p , q \text{ 为正奇数} \\[6pt]
+        \displaystyle\sum_{k=0}^{-\frac{p+q}{2}-1}\C_{-\frac{p+q}{2}-1}^k\dfrac{\tan^{p+2k+1}x}{p+2k+1}+C, & p+q \text{ 为负偶数.}
+    \end{cases}\)
+\end{theorem}
+
 \setcounter{magicrownumbers}{0}
 \begin{table}[H]
     \centering
     \caption{常用三角函数转换公式}
-    \resizebox{.99\textwidth}{!}{
         \begin{tabular}{l l}
             和差化积                                                                                                                                                                                                                 \\
             (\rownumber{}) $\displaystyle\sin\alpha+\sin\beta=2\sin\dfrac{\alpha+\beta}{2}\cos\dfrac{\alpha-\beta}{2}$ & (\rownumber{}) $\displaystyle\sin\alpha-\sin\beta=2\sin\dfrac{\alpha-\beta}{2}\cos\dfrac{\alpha+\beta}{2}$  \\
@@ -701,7 +707,7 @@ $\displaystyle\int x^{m}\left(ax^{n}+b \right)^{p} \dd  x$, 式中 $ m, n $ 和 
             平方形式的和差化积公式                                                                                                                                                                                                   \\
             (\rownumber{}) $\displaystyle \sin^2\alpha-\sin^2\beta=\sin(\alpha+\beta)\sin(\alpha-\beta)$               & (\rownumber{}) $\displaystyle \cos^2\alpha-\cos^2\beta=-\sin(\alpha+\beta)\sin(\alpha-\beta)$               \\
             (\rownumber{}) $\displaystyle \cos^2\alpha-\sin^2\beta=\cos(\alpha+\beta)\cos(\alpha-\beta)$               & (\rownumber{}) $\displaystyle \sin^2\alpha-\cos^2\beta=-\cos(\alpha+\beta)\cos(\alpha-\beta)$
-        \end{tabular}}
+        \end{tabular}
 \end{table}
 
 % \setcounter{magicrownumbers}{0}
@@ -714,13 +720,6 @@ $\displaystyle\int x^{m}\left(ax^{n}+b \right)^{p} \dd  x$, 式中 $ m, n $ 和 
 %             $\arcsin x$ & $\sin(\arcsin)=x$
 %         \end{tabular}}
 % \end{table}
-
-\begin{theorem}
-    \(\displaystyle\int \sin^px\cos^qx\dd x=\begin{cases}
-        \displaystyle\sum_{k=0}^{\frac{q-1}{2}}(-1)^k\C_n^k\dfrac{\sin^{p+2k+1}x}{p+2k+1}+C,               & p , q \text{ 为正奇数} \\[6pt]
-        \displaystyle\sum_{k=0}^{-\frac{p+q}{2}-1}\C_{-\frac{p+q}{2}-1}^k\dfrac{\tan^{p+2k+1}x}{p+2k+1}+C, & p+q \text{ 为负偶数.}
-    \end{cases}\)
-\end{theorem}
 
 \begin{theorem}
     $\displaystyle \dfrac{\sin 2nx}{\sin x}=2\sum_{k=1}^{n} \cos(2k-1)x,~\dfrac{\sin (2n+1)x}{\sin x}=1+\sum_{k=1}^{n} \cos 2kx.$

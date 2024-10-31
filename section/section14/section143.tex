@@ -89,16 +89,16 @@
     于是 $\vb*{x}^\top\vb*{Ax}$ 的标准形为 $\dfrac{3}{2}y_1^2-\dfrac{1}{2}y_2^2.$
 \end{solution}
 
-\begin{example}
-    设二次型 $f(x_1,x_2,x_3)=(x_1-2x_2)^2+(x_2-x_3)^2+(x_1+ax_3)^2$,
-    \begin{enumerate}[label=(\arabic{*})]
-        \item 求 $f(x_1, x_2, x_3)=0$ 的解;
-        \item 设二次型 $f(x_1, x_2, x_3)$ 的规范形为 $z_1^2, z_2^2$, 求正交变换 $\vb*{x}=\vb*{Qy}$, 使得二次型 $f(x_1, x_2, x_3)$ 化为标准形.
-    \end{enumerate}
-\end{example}
-\begin{solution}
+% \begin{example}
+%     设二次型 $f(x_1,x_2,x_3)=(x_1-2x_2)^2+(x_2-x_3)^2+(x_1+ax_3)^2$,
+%     \begin{enumerate}[label=(\arabic{*})]
+%         \item 求 $f(x_1, x_2, x_3)=0$ 的解;
+%         \item 设二次型 $f(x_1, x_2, x_3)$ 的规范形为 $z_1^2+z_2^2$, 求正交变换 $\vb*{x}=\vb*{Qy}$, 使得二次型 $f(x_1, x_2, x_3)$ 化为标准形.
+%     \end{enumerate}
+% \end{example}
+% \begin{solution}
 
-\end{solution}
+% \end{solution}
 
 \begin{example}
     设 3 阶实对称矩阵 $\vb*{A}$ 的秩为 2, $\lambda_1= \lambda_2=6$ 是 $\vb*{A}$ 的二重特征值, 若 $\vb*{\alpha}_1=(1,a,0)^\top,\vb*{\alpha}_2=(2,1,1)^\top,\vb*{\alpha}_3=(0,1,-1)^\top$ 都是矩阵 $\vb*{A}$ 属于特征值 6 的特征向量,
@@ -320,7 +320,7 @@
     \label{zjjzzmti}
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
-    当 $n=2$ 时, $\vb*{P}^{2}=\vb*{P}\cdot\vb*{P}=\mqty(\cos\theta&-\sin\theta\\\sin\theta&\cos\theta)\mqty(\cos\theta&-\sin\theta\\\sin\theta&\cos\theta)=\mqty(\cos2\theta&-\sin2\theta\\\sin2\theta&\cos2\theta)$, 当 $n=3$ 时, $\vb*{P}^{3}=\vb*{P}^{2}\cdot\vb*{P}=\mqty(\cos2\theta&-\sin2\theta\\\sin2\theta&\cos2\theta)\mqty(\cos\theta&-\sin\theta\\\sin\theta&\cos\theta)=\mqty(\cos3\theta&-\sin3\theta\\\sin3\theta&\cos3\theta)$, 猜想 $\vb*{P}^{k}=\mqty(\cos k\theta&-\sin k\theta\\\sin k\theta&\cos k\theta)$, 下面利用数学归纳法证明:\\
+    当 $n=2$ 时, $\vb*{P}^{2}=\vb*{P}\cdot\vb*{P}=\mqty(\cos\theta&-\sin\theta\\\sin\theta&\cos\theta)\mqty(\cos\theta&-\sin\theta\\\sin\theta&\cos\theta)=\mqty(\cos2\theta&-\sin2\theta\\\sin2\theta&\cos2\theta)$, 当 $n=3$ 时, $$\vb*{P}^{3}=\vb*{P}^{2}\cdot\vb*{P}=\mqty(\cos2\theta&-\sin2\theta\\\sin2\theta&\cos2\theta)\mqty(\cos\theta&-\sin\theta\\\sin\theta&\cos\theta)=\mqty(\cos3\theta&-\sin3\theta\\\sin3\theta&\cos3\theta)$$ 猜想 $\vb*{P}^{k}=\mqty(\cos k\theta&-\sin k\theta\\\sin k\theta&\cos k\theta)$, 下面利用数学归纳法证明:\\
     当 $k=1,2$ 时, 显然成立, 假设当 $k=n$ 时, 公式成立, 那么当 $k=n+1$ 时, 有
     \begin{flalign*}
         \vb*{P}^{n+1} & =\vb*{P}^{n}\cdot\vb*{P}=\mqty(\cos n\theta & -\sin n\theta    \\\sin n\theta&\cos n\theta)\mqty(\cos\theta&-\sin\theta\\\sin\theta&\cos\theta)=\mqty(\cos n\theta\cos\theta-\sin n\theta\sin\theta&-\cos n\theta\sin\theta-\sin n\theta\cos\theta\\ \sin n\theta\cos\theta+\cos n\theta\sin\theta&-\sin n\theta\sin\theta+\cos n\theta\cos\theta)\\
@@ -623,11 +623,11 @@
             \dfrac{2\sqrt{5} }{5} & \dfrac{2\sqrt{5}}{15} & \dfrac{1}{3}  \\[6pt]
             -\dfrac{\sqrt5}{5}    & \dfrac{4\sqrt{5}}{15} & \dfrac{2}{3}  \\[6pt]
             0                     & \dfrac{\sqrt5}{2}     & -\dfrac{2}{3}
-        \end{pmatrix}$, 则有正交变换 $\vb*{y}=\vb*{Tx}$, 即 $\left\{\begin{matrix}
+        \end{pmatrix}$, 则有正交变换 $\vb*{y}=\vb*{Tx}$, 即 $$\left\{\begin{matrix}
             x= & \dfrac{2\sqrt{5} }{5} u & + & \dfrac{2\sqrt{5}}{15}v & + & \dfrac{1}{3}w  \\[6pt]
             y= & -\dfrac{\sqrt5}{5}u     & + & \dfrac{4\sqrt{5}}{15}v & + & \dfrac{2}{3}w  \\[6pt]
             z= &                         &   & \dfrac{\sqrt5}{2}  v   & - & \dfrac{2}{3} w
-        \end{matrix}\right.$, 将原二次型化为 $u^2+v^2+10w^2=1$, 即为椭球面.
+        \end{matrix}\right.$$ 将原二次型化为 $u^2+v^2+10w^2=1$, 即为椭球面.
 \end{solution}
 
 \begin{example}

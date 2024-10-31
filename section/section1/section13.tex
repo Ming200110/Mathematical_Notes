@@ -1009,7 +1009,7 @@ $$f(x)=O(g(x)) \text{ 代表 } \dfrac{f(x)}{g(x)}=O(1),~f(x)=o(g(x))\text{ 代�
 \begin{inference}[Laurent  级数]\label{inference:Laurent jishu}
     作为例题 \ref{sqrtnn1} 的推广表达式:
     \begin{flalign*}
-         & \lim_{n\to\infty}\sqrt[n]{n}=1+\dfrac{\ln(n)}{n}+O\qty(\dfrac{1}{n^2});                                                                                  \\
+         & \lim_{n\to\infty}\sqrt[n]{n}=1+\dfrac{\ln n}{n}+O\qty(\dfrac{1}{n^2});                                                                                  \\
          & \lim_{n\to\infty}\qty(1+\dfrac{1}{n})^n =\e-\dfrac{\e}{2n}+\dfrac{11\e}{24n^2}-\dfrac{7\e}{16n^3}+\dfrac{2447\e}{5760n^4}+O\qty(\dfrac{1}{n^5});         \\
          & \lim_{x\to0}x^x                         =1+x\ln x+\dfrac{1}{2}x^2\ln^2x+\dfrac{1}{6}x^3\ln^3x+\dfrac{1}{24}x^4\ln^4x+\dfrac{1}{120}x^5\ln^5x+O\qty(x^6); \\
          & \lim_{x\to1}x^x                         =1+(x-1)+(x-1)^2+\dfrac{1}{2}(x-1)^3+\dfrac{1}{3}(x-1)^4+\dfrac{1}{12}(x-1)^5+O\qty((x-1)^6).
@@ -2175,7 +2175,7 @@ Stolz 定理是求解和证明数列极限的一种重要方法, 它有 $\dfrac{
     又因为 $\displaystyle\lim _{n\to \infty }\dfrac{n\ln n-n+1}{n\ln n}=\lim _{n\to \infty }\dfrac{\left( n+1\right) \ln \left( n+1\right) -n}{n\ln n}=1$,
     因此有夹逼准则, 原式$=\e .$\\
     \textbf{法二: }(Stolz 定理+L'Hospital 法则) 同上得到和式: $\displaystyle\lim _{n\to \infty }\dfrac{\displaystyle\sum\limits ^{n}_{k=1}\ln k}{n\ln n}\xlongequal[]{\text{Stolz}}\lim _{n\to \infty }\dfrac{\ln n}{n\ln n-\left( n-1\right) \ln \left( n-1\right) }$
-    下面考虑该极限值 $\displaystyle I=\lim _{n\to \infty }\dfrac{n\ln n-\left( n-1\right) \ln \left( n-1\right) }{\ln n}$, 由 Heine 定理将其连续化为函数极限:
+    下面考虑该极限值 $$\displaystyle I=\lim _{n\to \infty }\dfrac{n\ln n-\left( n-1\right) \ln \left( n-1\right) }{\ln n}$$ 由 Heine 定理将其连续化为函数极限:
     $$I'=\lim _{x\to +\infty }\dfrac{x\ln x-\left( x-1\right) \ln \left( x-1\right) }{x\ln x}$$
     \begin{flalign*}
         I'\xlongequal[]{L'}\lim_{x\to+\infty}\dfrac{\ln x+1-\ln \left( x-1\right) -1}{\dfrac{1}{x}}=\lim_{x\to+\infty}x\ln\frac{x}{x-1}=\lim_{x\to+\infty}x\left(\frac{x}{x-1}-1\right)=1\Rightarrow\text{原式=}\e .

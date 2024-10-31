@@ -292,13 +292,13 @@
     所以 $ \dfrac{x_{n+2}-x_{n+1}}{x_{n+1}-x_{n}}=\dfrac{\dfrac{(C-1)\left(C-x_{n}^{2}\right)}{\left(C+2 x_{n}+1\right)\left(C+x_{n}\right)}}{\dfrac{C-x_{n}^{2}}{C+x_{n}}}=\dfrac{C-1}{C+2 x_{n}+1}>0$, 
     于是 $ x_{n+2}-x_{n+1} $ 与 $ x_{n+1}-x_{n} $ 同号, 从而知 $ \left\{x_{n}\right\} $ 为单调递增数列, 
     又由 $ 0<x_{n+1}=\dfrac{C\left(1+x_{n}\right)}{C+x_{n}}<\dfrac{C\left(1+x_{n}\right)}{1+x_{n}}=C$, 可知数列 $ \left\{x_{n}\right\} $ 有界, 
-    从而由单调有界原理知数列 $ \left\{x_{n}\right\} $ 收玫, 不妨记 $ \displaystyle\lim _{n \to \infty} x_{n}=l$, 
+    从而由单调有界原理知数列 $ \left\{x_{n}\right\} $ 收敛, 不妨记 $ \displaystyle\lim _{n \to \infty} x_{n}=l$, 
     则由递推关系式两边取极限得 $ l=\dfrac{C(1+l)}{C+l}$, 解得 $ l=\pm \sqrt{C}$, 而由 $ x_{n}>0$, 知 $ l \geqslant 0$, 故取 $ l=\sqrt{C}$, 
     即得 $ \displaystyle\lim _{n \to \infty} x_{n}=\sqrt{C} .$\\
     \textbf{法三: }
-    假设数列 $ \left\{x_{n}\right\} $ 收玫, 不妨设 $ \lim\limits_{n \to \infty} x_{n}=A$, 则由递推关系式两边取极限, 
+    假设数列 $ \left\{x_{n}\right\} $ 收敛, 不妨设 $ \lim\limits_{n \to \infty} x_{n}=A$, 则由递推关系式两边取极限, 
     得 $A=\dfrac{C(1+A)}{C+A}$, 解得 $ A=\pm \sqrt{C}$, 又因为 $ x_{n}>0$, 所以 $ A \geqslant 0$, 故 $ A=\sqrt{C}$, 
-    以下证明数列 $ \left\{x_{n}\right\} $ 收玫且以 $ \sqrt{C} $ 为极限, 因为
+    以下证明数列 $ \left\{x_{n}\right\} $ 收敛且以 $ \sqrt{C} $ 为极限, 因为
     \begin{flalign*}
         \left|x_{n}-\sqrt{C}\right| & =\left|\dfrac{C\left(1+x_{n-1}\right)}{C+x_{n-1}}-\sqrt{C}\right|=\left|\dfrac{(C-\sqrt{C}) \cdot\left(x_{n-1}-\sqrt{C}\right)}{C+x_{n-1}}\right|<\dfrac{C-\sqrt{C}}{C} \cdot\left|x_{n-1}-\sqrt{C}\right| \\
                                     & <\left(\dfrac{C-\sqrt{C}}{C}\right)^{n-1} \cdot\left|x_{1}-\sqrt{C}\right|

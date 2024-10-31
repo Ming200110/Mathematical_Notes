@@ -26,7 +26,7 @@ $$P\left\{X_{1}=x_{1}, X_{2}=x_{2}, \cdots, X_{n}=x_{n}\right\}=\prod_{i=1}^{n} 
 若总体 $ X $ 是连续型随机变量, 其概率密度为 $ f(x) $, 则 $ X_{1}, X_{2}, \cdots, X_{n} $ 的联合概率密度为 $$ f^{*}\left(x_{1}, x_{2}, \cdots, x_{n}\right)=\prod_{i=1}^{n} f\left(x_{i}\right).$$
 
 \begin{definition}[统计量与其观测值]
-    设 $ X_{1}, X_{2}, \cdots, X_{n} $ 是来自总体 $ X $ 的一个样本, $ x_{1}, x_{2}, \cdots, x_{n} $ 是样本观测值, $ g\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 是 $ X_{1}, X_{2}, \cdots, X_{n} $ 的函数. 如果 $ g\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 中不含未知参数, 则称 $ g\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 为一个\textit{统计量}, 而 $ g\left(x_{1}, x_{2}, \cdots, x_{n}\right) $ 称为\textit{统计量的观测值}.
+    设 $ X_{1}, X_{2}, \cdots, X_{n} $ 是来自总体 $ X $ 的一个样本, $ x_{1}, x_{2}, \cdots, x_{n} $ 是样本观测值, $$ g\left(X_{1}, X_{2}, \cdots, X_{n}\right) $$ 是 $ X_{1}, X_{2}, \cdots, X_{n} $ 的函数. 如果 $ g\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 中不含未知参数, 则称 $ g\left(X_{1}, X_{2}, \cdots, X_{n}\right) $ 为一个\textit{统计量}, 而 $ g\left(x_{1}, x_{2}, \cdots, x_{n}\right) $ 称为\textit{统计量的观测值}.
 \end{definition}
 
 \subsection{常用统计量}
@@ -49,7 +49,8 @@ $$P\left\{X_{1}=x_{1}, X_{2}=x_{2}, \cdots, X_{n}=x_{n}\right\}=\prod_{i=1}^{n} 
     \end{enumerate}
 \end{definition}
 \begin{theorem}[样本中心矩与原点矩的转换]
-    对任意的 $k\in \mathbb{N}^*$, 有  $\displaystyle \alpha_k=\sum_{r=0}^{k} \C_k^r\mu_{k-r}\alpha_1^r,~\mu_k=\sum_{r=0}^{k} \C_k^r(-\alpha_1)^{k-r}\alpha_r.$
+    对任意的 $k\in \mathbb{N}^*$, 样本 $ k $ 阶原点矩 $\alpha_{k}$ 与样本 $ k $ 阶中心矩 $\mu_{k}$
+    有以下关系式  $$\displaystyle \alpha_k=\sum_{r=0}^{k} \C_k^r\mu_{k-r}\alpha_1^r,~\mu_k=\sum_{r=0}^{k} \C_k^r(-\alpha_1)^{k-r}\alpha_r.$$
 \end{theorem}
 \begin{proof}[{\songti \textbf{证}}]
     对任意的 $k\in \mathbb{N}^*$, 有

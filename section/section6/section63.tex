@@ -315,105 +315,6 @@ $\varSigma_1$ 和 $\varSigma_2$ 的表达式 $z=z(x,y)$ 都是单值函数.
     于是原式 $\displaystyle \iint\limits_\varSigma x^2\dd y\dd z+y^2\dd z\dd x+z^2\dd x\dd y=\dfrac{8}{3}\pi R^3(a+b+c).$
 \end{solution}
 
-\subsubsection{三重积分分部积分}
-
-\begin{theorem}[三重积分分部积分公式]
-    \index{三重积分分部积分公式}该定理是定理 \ref{iintlimitsduvxxy} 推广到三维的形式, 设 $\Omega$ 是由一张或几张分片光滑的双侧封闭曲面围成的空间有界闭区域, 若 $u,v$ 在闭区域 $\Omega$ 上有连续的一阶偏导数, 则
-    $$\begin{cases}
-            \displaystyle\iiint\limits_\Omega u\frac{\partial v}{\partial x}\dd x\dd y\dd z=\oiint\limits_{\partial \Omega}uv\dd y\dd z-\iiint\limits_\Omega v\frac{\partial u}{\partial x}\dd x\dd y\dd z, \\[6pt]
-            \displaystyle\iiint\limits_\Omega u\frac{\partial v}{\partial y}\dd x\dd y\dd z=\oiint\limits_{\partial \Omega}uv\dd z\dd x-\iiint\limits_\Omega v\frac{\partial u}{\partial y}\dd x\dd y\dd z, \\[6pt]
-            \displaystyle\iiint\limits_\Omega u\frac{\partial v}{\partial z}\dd x\dd y\dd z=\oiint\limits_{\partial \Omega}uv\dd x\dd y-\iiint\limits_\Omega v\frac{\partial u}{\partial z}\dd x\dd y\dd z.
-        \end{cases}$$
-\end{theorem}
-
-\begin{example}[第八届数学竞赛决赛]
-    设函数 $f(x,y,z)$ 在区域 $\Omega=\left\{(x,y,z)|x^2+y^2+z^2\leqslant  1\right\}$ 上具有连续的二阶偏导数,
-    且满足 $$\frac{\partial ^2f}{\partial x^2}+\frac{\partial ^2f}{\partial y^2}+\frac{\partial ^2f}{\partial z^2}=\sqrt{x^2+y^2+z^2}$$
-    计算 $\displaystyle I=\iiint\limits_\Omega\left(x\frac{\partial f}{\partial x}+y\frac{\partial f}{\partial y}+z\frac{\partial f}{\partial z}\right)\dd x\dd y\dd z.$
-\end{example}
-\begin{solution}
-    因为
-    $$\iiint\limits_\Omega u\frac{\partial v}{\partial x}\dd x\dd y\dd z=\oiint\limits_{\partial \Omega}uv\dd y\dd z-\iiint\limits_\Omega v\frac{\partial u}{\partial x}\dd x\dd y\dd z$$
-    $$\iiint\limits_\Omega u\frac{\partial v}{\partial y}\dd x\dd y\dd z=\oiint\limits_{\partial \Omega}uv\dd z\dd x-\iiint\limits_\Omega v\frac{\partial u}{\partial y}\dd x\dd y\dd z$$
-    $$\iiint\limits_\Omega u\frac{\partial v}{\partial z}\dd x\dd y\dd z=\oiint\limits_{\partial \Omega}uv\dd x\dd y-\iiint\limits_\Omega v\frac{\partial u}{\partial z}\dd x\dd y\dd z$$
-    所以
-    \begin{flalign*}
-        I & =\oiint\limits_{x^2+y^2+z^2=1}\left(\frac{x^2+y^2+z^2}{2}\cdot\frac{\partial f}{\partial x}\dd y\dd z+\frac{x^2+y^2+z^2}{2}\cdot\frac{\partial f}{\partial y}\dd z\dd x+\frac{x^2+y^2+z^2}{2}\cdot\frac{\partial f}{\partial z}\dd x\dd y\right)                                      \\
-          & ~  -\iiint\limits_{x^2+y^2+z^2\leqslant  1}\left[\frac{x^2+y^2+z^2}{2}\left(\frac{\partial ^2f}{\partial x^2}+\frac{\partial ^2}{\partial y^2}+\frac{\partial ^2f}{\partial z^2}\right)\right]\dd x\dd y\dd z                                                                         \\
-          & =\frac{1}{2}\oiint\limits_{x^2+y^2+z^2=1}\left(\frac{\partial f}{\partial x}\dd y\dd z+\frac{\partial f}{\partial y}\dd z\dd x+\frac{\partial f}{\partial z}\dd x\dd y\right)-\frac{1}{2}\iiint\limits_{x^2+y^2+z^2\leqslant  1}\left(x^2+y^2+z^2\right)^{\frac{3}{2}}\dd x\dd y\dd z \\
-          & =\frac{1}{2}\iiint\limits_{x^2+y^2+z^2\leqslant  1}\sqrt{x^2+y^2+z^2}\left[1-\left(x^2+y^2+z^2\right)\right]\dd x\dd y\dd z=\frac{1}{2}\int_0^{2\pi}\dd \theta\int_0^\pi\dd \varphi\int_0^1\rho\left(1-\rho^2\right)\rho^2\sin\varphi\dd \rho=\frac{\pi}{6}.
-    \end{flalign*}
-\end{solution}
-
-\begin{example}
-    设函数 $f(x,y,z)$ 在 $\Omega=\qty{(x,y,z)|x^2+y^2+z^2\leqslant 1}$ 上具有连续的二阶偏导数, 且满足
-    $$\pdv[2]{f}{x}+\pdv[2]{f}{y}+\pdv[2]{f}{z}=\qty(x^2+y^2+z^2)^{\frac{3}{2}}$$
-    求极限 $\displaystyle\lim_{r\to0^+}\dfrac{\displaystyle\iiint\limits_{x^2+y^2+z^2\leqslant r^2}\qty(\dfrac{x}{\sqrt{x^2+y^2+z^2}}\pdv{f}{x}+\dfrac{y}{\sqrt{x^2+y^2+z^2}}\pdv{f}{y}+\dfrac{z}{\sqrt{x^2+y^2+z^2}}\pdv{f}{z})\dd V}{\sin r\qty(\tan r-\sin r)^2}.$
-\end{example}
-\begin{solution}
-    记 $\Omega_r:x^2+y^2+z^2\leqslant r^2$, 由三重积分分部积分公式:
-    $$\iiint\limits_{\Omega_r}\dfrac{x}{\sqrt{x^2+y^2+z^2}}\pdv{f}{x}\dd V=\oiint\limits_{\partial \Omega_r}\sqrt{x^2+y^2+z^2}\pdv{f}{x}\dd y\dd z-\iiint\limits_{\Omega_r}\sqrt{x^2+y^2+z^2}\pdv[2]{f}{x}\dd V$$
-    同理可得,
-    \begin{flalign*}
-         & \iiint\limits_{\Omega_r}\qty(\dfrac{x}{\sqrt{x^2+y^2+z^2}}\pdv{f}{x}+\dfrac{y}{\sqrt{x^2+y^2+z^2}}\pdv{f}{y}+\dfrac{z}{\sqrt{x^2+y^2+z^2}}\pdv{f}{z})\dd V                                                              \\
-         & =\oiint\limits_{\partial \Omega_r}\sqrt{x^2+y^2+z^2}\qty(\pdv{f}{x}\dd y\dd z+\pdv{f}{y}\dd z\dd x+\pdv{f}{z}\dd x\dd y)-\iiint\limits_{\Omega_r}\sqrt{x^2+y^2+z^2}\qty(\pdv[2]{f}{x}+\pdv[2]{f}{y}+\pdv[2]{f}{z})\dd V \\
-         & =\iiint\limits_{\Omega_r}\qty(r-\sqrt{x^2+y^2+z^2})\qty(\pdv[2]{f}{x}+\pdv[2]{f}{y}+\pdv[2]{f}{z})\dd V=\iiint\limits_{\Omega_r}\qty(r-\sqrt{x^2+y^2+z^2})\qty(x^2+y^2+z^2)^{\frac{3}{2}}\dd V                          \\
-         & =\int_{0}^{2\pi}\dd \theta\int_{0}^{\pi}\sin\varphi\dd \varphi\int_{0}^{r}(r-\rho)\rho^5\dd \rho=\dfrac{2\pi r^7}{21}
-    \end{flalign*}
-    且 $\sin r(\tan r-\sin r)^2\sim r\qty(r+\dfrac{r^3}{3}-r+\dfrac{r^3}{6})=\dfrac{r^7}{4},~r\to 0^+$, 故原极限 $=\dfrac{8\pi }{21}.$
-\end{solution}
-
-\subsubsection{第二型曲面积分的分部积分公式}
-
-\begin{theorem}[第二型曲面积分的分部积分公式]
-    \index{第二型曲面积分的分部积分公式}设光滑曲面 $\varSigma$ 的边界曲线 $\Gamma$ 按段光滑, 函数 $P_i(x,y,z),\\Q_i(x,y,z),~R_i(x,y,z)~~(i=1,2)$ 在 $\varSigma$ (连同 $\Gamma$) 上有连续的一阶偏导数, 则
-    \begin{flalign*}
-         & \iint\limits_{\varSigma}
-        \qty(R_1\pdv{R_2}{y}-Q_1\pdv{Q_2}{z})\dd y\dd z+
-        \qty(P_1\pdv{P_2}{z}-R_1\pdv{R_2}{x})\dd z\dd x+
-        \qty(Q_1\pdv{Q_2}{x}-P_1\pdv{P_2}{y})\dd x\dd y            \\
-         & = \oint_\Gamma P_1P_2\dd x+Q_1Q_2\dd y+R_1R_1\dd z-
-        \iint\limits_\varSigma
-        \qty(R_2\pdv{R_1}{y}-Q_2\pdv{Q_1}{z})\dd y\dd z            \\
-         & \quad +\qty(P_2\pdv{P_1}{z}-R_2\pdv{R_1}{x})\dd z\dd x+
-        \qty(Q_2\pdv{Q_1}{x}-P_2\pdv{P_1}{y})\dd x\dd y
-    \end{flalign*}
-    其中 $\varSigma$ 的方向与 $\Gamma$ 的方向满足右手定则.
-\end{theorem}
-\begin{proof}[{\songti \textbf{证}}]
-    由 Stokes 公式
-    \begin{flalign*}
-        \oint_{\Gamma}P_1P_2\dd x=\iint\limits_{\varSigma}\pdv{z}(P_1P_2)\dd z\dd x-\pdv{y}(P_1P_2)\dd x\dd y=\iint\limits_\varSigma P_1\qty(\pdv{P_2}{z}\dd z\dd x-\pdv{P_2}{y}\dd x\dd y)+\iint\limits_{\varSigma}P_2\qty(\pdv{P_1}{z}\dd z\dd x-\pdv{P_1}{y}\dd x\dd y)
-    \end{flalign*}
-    移项得
-    \begin{flalign*}
-        \iint\limits_{\varSigma}P_1\qty(\pdv{P_2}{z}\dd z\dd x-\pdv{P_2}{y}\dd x\dd y)=\oint_\Gamma P_1P_2\dd x-\iint\limits_\varSigma P_2\qty(\pdv{P_1}{z}\dd z\dd x-\pdv{P_1}{y}\dd x\dd y)
-    \end{flalign*}
-    同理可得
-    \begin{flalign*}
-        \iint\limits_{\varSigma}Q_1\qty(\pdv{Q_2}{x}\dd x\dd y-\pdv{Q_2}{z}\dd y\dd z) & =\oint_\Gamma Q_1Q_2\dd y-\iint\limits_\varSigma Q_2\qty(\pdv{Q_1}{x}\dd x\dd y-\pdv{Q_1}{z}\dd y\dd z) \\
-        \iint\limits_{\varSigma}R_1\qty(\pdv{R_2}{y}\dd y\dd z-\pdv{R_2}{x}\dd z\dd x) & =\oint_\Gamma R_1R_2\dd z-\iint\limits_\varSigma R_2\qty(\pdv{R_1}{y}\dd y\dd z-\pdv{R_1}{x}\dd z\dd x)
-    \end{flalign*}
-    三式相加即得证.
-\end{proof}
-
-% \subsubsection{第二型曲面积分和二重积分的互换}
-% 
-% \begin{example}
-%     设 $\varSigma$ 为 $z=x^2+y^2~ (0\leqslant z\leqslant 1)$ 的上侧, 求
-%     \begin{flalign*}
-%         I=&\iint\limits_\varSigma\qty[x^3+x\sin(x-y)^2+y\cos^2z]\dd y\dd z+\qty[y^3+y\sin(x-y)^2-x\cos z^2]\dd x\dd z\\
-%         &+\qty[z+2z\sin (x-y)^2-\cos\qty(x^2+y^2)]\dd x\dd y.
-%     \end{flalign*}
-% \end{example}
-% \begin{solution}
-%     由两类坐标之间的关系, 由于 $$\dfrac{\dd y\dd z}{\cos\alpha}=\dfrac{\dd z\dd x}{\cos\beta}=\dfrac{\dd x\dd y}{\cos\gamma}$$
-%     得 $\dd y\dd z=\dfrac{\cos\alpha}{\cos\gamma},~\dd z\dd x=\dfrac{\cos\beta}{\cos\gamma}\dd x\dd y$, 其中
-%     $$(\cos \alpha,\cos\beta,\cos\gamma)=\dfrac{(-2x,-2y,1)}{\sqrt{1+4x^2+4y^2}}$$
-%     又 $z=x^2+y^2$, 故得
-%     
-% \end{solution}
-
 \subsection{Gauss 公式、Stokes 公式}
 
 Gauss 公式与 Stokes 公式, 它们都是重要的数学定理, 用于描述向量场在不同维度下的积分关系.
@@ -1028,6 +929,124 @@ Gauss 公式与 Stokes 公式, 它们都是重要的数学定理, 用于描述�
         \end{cases}$, 于是 $\displaystyle\pdv{(x,y)}{(\rho,\theta)}=\dfrac{5}{4}\rho$, 所以
     $\displaystyle I=3\int_{0}^{2\pi}\dd \theta\int_{0}^{1}\dfrac{5}{4}\rho^2\cos^2\theta\dfrac{5}{4}\rho\dd \rho=\dfrac{75\pi}{64}.$
 \end{proof}
+
+\subsubsection{三重积分分部积分}
+
+\begin{theorem}[三重积分分部积分公式]
+    \index{三重积分分部积分公式}该定理是定理 \ref{iintlimitsduvxxy} 推广到三维的形式, 设 $\Omega$ 是由一张或几张分片光滑的双侧封闭曲面围成的空间有界闭区域, 若 $u,v$ 在闭区域 $\Omega$ 上有连续的一阶偏导数, 则
+    $$\begin{cases}
+            \displaystyle\iiint\limits_\Omega u\frac{\partial v}{\partial x}\dd x\dd y\dd z=\oiint\limits_{\partial \Omega}uv\dd y\dd z-\iiint\limits_\Omega v\frac{\partial u}{\partial x}\dd x\dd y\dd z, \\[6pt]
+            \displaystyle\iiint\limits_\Omega u\frac{\partial v}{\partial y}\dd x\dd y\dd z=\oiint\limits_{\partial \Omega}uv\dd z\dd x-\iiint\limits_\Omega v\frac{\partial u}{\partial y}\dd x\dd y\dd z, \\[6pt]
+            \displaystyle\iiint\limits_\Omega u\frac{\partial v}{\partial z}\dd x\dd y\dd z=\oiint\limits_{\partial \Omega}uv\dd x\dd y-\iiint\limits_\Omega v\frac{\partial u}{\partial z}\dd x\dd y\dd z.
+        \end{cases}$$
+\end{theorem}
+
+\begin{example}[第八届数学竞赛决赛]
+    设函数 $f(x,y,z)$ 在区域 $\Omega=\left\{(x,y,z)|x^2+y^2+z^2\leqslant  1\right\}$ 上具有连续的二阶偏导数,
+    且满足 $$\frac{\partial ^2f}{\partial x^2}+\frac{\partial ^2f}{\partial y^2}+\frac{\partial ^2f}{\partial z^2}=\sqrt{x^2+y^2+z^2}$$
+    计算 $\displaystyle I=\iiint\limits_\Omega\left(x\frac{\partial f}{\partial x}+y\frac{\partial f}{\partial y}+z\frac{\partial f}{\partial z}\right)\dd x\dd y\dd z.$
+\end{example}
+\begin{solution}
+    因为
+    $$\iiint\limits_\Omega u\frac{\partial v}{\partial x}\dd x\dd y\dd z=\oiint\limits_{\partial \Omega}uv\dd y\dd z-\iiint\limits_\Omega v\frac{\partial u}{\partial x}\dd x\dd y\dd z$$
+    $$\iiint\limits_\Omega u\frac{\partial v}{\partial y}\dd x\dd y\dd z=\oiint\limits_{\partial \Omega}uv\dd z\dd x-\iiint\limits_\Omega v\frac{\partial u}{\partial y}\dd x\dd y\dd z$$
+    $$\iiint\limits_\Omega u\frac{\partial v}{\partial z}\dd x\dd y\dd z=\oiint\limits_{\partial \Omega}uv\dd x\dd y-\iiint\limits_\Omega v\frac{\partial u}{\partial z}\dd x\dd y\dd z$$
+    所以
+    \begin{flalign*}
+        I & =\oiint\limits_{x^2+y^2+z^2=1}\left(\frac{x^2+y^2+z^2}{2}\cdot\frac{\partial f}{\partial x}\dd y\dd z+\frac{x^2+y^2+z^2}{2}\cdot\frac{\partial f}{\partial y}\dd z\dd x+\frac{x^2+y^2+z^2}{2}\cdot\frac{\partial f}{\partial z}\dd x\dd y\right)                                      \\
+          & ~  -\iiint\limits_{x^2+y^2+z^2\leqslant  1}\left[\frac{x^2+y^2+z^2}{2}\left(\frac{\partial ^2f}{\partial x^2}+\frac{\partial ^2}{\partial y^2}+\frac{\partial ^2f}{\partial z^2}\right)\right]\dd x\dd y\dd z                                                                         \\
+          & =\frac{1}{2}\oiint\limits_{x^2+y^2+z^2=1}\left(\frac{\partial f}{\partial x}\dd y\dd z+\frac{\partial f}{\partial y}\dd z\dd x+\frac{\partial f}{\partial z}\dd x\dd y\right)-\frac{1}{2}\iiint\limits_{x^2+y^2+z^2\leqslant  1}\left(x^2+y^2+z^2\right)^{\frac{3}{2}}\dd x\dd y\dd z \\
+          & =\frac{1}{2}\iiint\limits_{x^2+y^2+z^2\leqslant  1}\sqrt{x^2+y^2+z^2}\left[1-\left(x^2+y^2+z^2\right)\right]\dd x\dd y\dd z=\frac{1}{2}\int_0^{2\pi}\dd \theta\int_0^\pi\dd \varphi\int_0^1\rho\left(1-\rho^2\right)\rho^2\sin\varphi\dd \rho=\frac{\pi}{6}.
+    \end{flalign*}
+\end{solution}
+
+\begin{example}
+    设 $u=u(x,y,z)$ 二阶连续可偏导, 且 $u$ 满足 $\text{div}(\vb{grad}~u)=\qty(x^2+y^2+z^2)^{\frac{3}{2}}$, 设 $\varSigma_r:x^2+y^2+z^2=r^2$, $\vb*{n}$ 为曲面 $\varSigma_r$ 上任一点外法向量的单位向量,
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 当 $r=1$ 时, 求 $\displaystyle \oiint\limits_{\varSigma_1}\pdv{u}{\vb*{n}}\dd S$;
+        \item 设 $f=f(x,y,z),~g=g(x,y,z)$ 在封闭空间区域 $\Omega$ 内具有连续的一阶偏导数, 证明: $$\displaystyle \iiint\limits_\Omega f\pdv{g}{x}\dd V=\oiint\limits_{\partial\Omega}fg \dd y \dd z- \iiint\limits_\Omega g\pdv{f}{x}\dd V$$
+        \item 求 $\displaystyle \lim_{r \to 0^+}\displaystyle \dfrac{1}{r^7}\iiint\limits_{\Omega_r}\qty(\vb{grad}~r\cdot \vb{grad}~u)\dd V$.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 因为 $\displaystyle \mathrm{div}(\vb{grad}~u)=\pdv[2]{u}{x}+\pdv[2]{u}{y}+\pdv[2]{u}{z}=\qty(x^2+y^2+z^2)^{\frac{3}{2}}$, 所以 
+        \begin{flalign*}
+            \oiint\limits_{\varSigma_1}\pdv{u}{\vb*{n}}\dd S&=\oiint\limits_{\varSigma_1}\pdv{u}{x}\cos\alpha+\pdv{u}{y}\cos\beta+\pdv{u}{z}\cos\gamma \dd S=\iiint\limits_{\Omega_1}\qty(\pdv[2]{u}{x}+\pdv[2]{u}{y}+\pdv[2]{u}{z})\dd V\\ 
+            &=\iiint\limits_{\Omega_1}\qty(x^2+y^2+z^2)^{\frac{3}{2}}\dd V=\int_{0}^{\pi}\dd \varphi\int_{0}^{2\pi}\dd \theta\int_{0}^{1}\rho^5\sin\varphi\dd \rho=\dfrac{2\pi}{3}.
+        \end{flalign*}
+        \item 由 Gauss 公式: $\displaystyle \oiint\limits_{\Sigma} P \dd  y \dd  z+Q \dd  z \dd  x+R \dd  x \dd  y =\iiint\limits_{\Omega}\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\right) \mathrm{d} V$, 令 $P=Q=fg$, 则 
+        \begin{flalign*}
+            \oiint\limits_{\Sigma} fg( \dd  y \dd  z+ \dd  z \dd  x+ \dd  x \dd  y)=\iiint\limits_{\Omega}\qty(f_xg+fg_x+f_yg+fg_y+f_zg+fg_z)\dd V
+        \end{flalign*}
+        整理得: $\begin{cases}
+            \displaystyle\iiint\limits_\Omega f\frac{\partial g}{\partial x}\dd V=\oiint\limits_{\partial \Omega}fg\dd y\dd z-\iiint\limits_\Omega g\frac{\partial f}{\partial x}\dd V, \\[6pt]
+            \displaystyle\iiint\limits_\Omega f\frac{\partial g}{\partial y}\dd V=\oiint\limits_{\partial \Omega}fg\dd z\dd x-\iiint\limits_\Omega g\frac{\partial f}{\partial y}\dd V, \\[6pt]
+            \displaystyle\iiint\limits_\Omega f\frac{\partial g}{\partial z}\dd V=\oiint\limits_{\partial \Omega}fg\dd x\dd y-\iiint\limits_\Omega g\frac{\partial f}{\partial z}\dd V.
+        \end{cases}$ 其中 $\partial\Omega$ 表示空间 $\Omega$ 的边界.
+        \item 当 $r\to0^+$ 时, $r=\sqrt{x^2+y^2+z^2}$, 那么
+        \begin{flalign*}
+            \iiint\limits_{\Omega_r}\qty(\vb{grad}~r\cdot \vb{grad}~u)\dd V&=\iiint\limits_{\Omega_r}\qty(\dfrac{x}{\sqrt{x^2+y^2+z^2}}\cdot\pdv{u}{x}+\dfrac{y}{\sqrt{x^2+y^2+z^2}}\cdot\pdv{u}{y}+\dfrac{z}{\sqrt{x^2+y^2+z^2}}\cdot\pdv{u}{z})\dd V\\ 
+            &=\oiint\limits_{\partial \Omega_r}\sqrt{x^2+y^2+z^2}\qty(\pdv{u}{x}\dd y\dd z+\pdv{u}{y}\dd z\dd x+\pdv{u}{z}\dd x\dd y)\\ 
+            &~~~~~-\iiint\limits_{\Omega_r}\sqrt{x^2+y^2+z^2}\qty(\pdv[2]{u}{x}+\pdv[2]{u}{y}+\pdv[2]{u}{z})\dd V\\ 
+            &=r\iiint\limits_{\Omega_r}\qty(\pdv[2]{u}{x}+\pdv[2]{u}{y}+\pdv[2]{u}{z})\dd V-\iiint\limits_{\Omega_r}\qty(x^2+y^2+z^2)^2\dd V\\ 
+            &=r\iiint\limits_{\Omega_r}\qty(x^2+y^2+z^2)^{\frac{3}{2}}\dd V-\int_{0}^{\pi}\dd \varphi\int_{0}^{2\pi}\dd\theta\int_{0}^{r}\rho^6\sin\varphi\dd \rho\\ 
+            &=r\cdot2\cdot2\pi\cdot\dfrac{1}{6}r^6-2\cdot2\pi\cdot\dfrac{1}{7}r^7=\dfrac{2\pi}{21}r^7
+        \end{flalign*}
+        因此  $\displaystyle \lim_{r \to 0^+}\displaystyle \dfrac{1}{r^7}\iiint\limits_{\Omega_r}\qty(\vb{grad}~r\cdot \vb{grad}~u)\dd V=\dfrac{2\pi}{21}$.
+    \end{enumerate}
+\end{solution}
+
+\subsubsection{第二型曲面积分的分部积分公式}
+
+\begin{theorem}[第二型曲面积分的分部积分公式]
+    \index{第二型曲面积分的分部积分公式}设光滑曲面 $\varSigma$ 的边界曲线 $\Gamma$ 按段光滑, 函数 $P_i(x,y,z),\\Q_i(x,y,z),~R_i(x,y,z)~~(i=1,2)$ 在 $\varSigma$ (连同 $\Gamma$) 上有连续的一阶偏导数, 则
+    \begin{flalign*}
+         & \iint\limits_{\varSigma}
+        \qty(R_1\pdv{R_2}{y}-Q_1\pdv{Q_2}{z})\dd y\dd z+
+        \qty(P_1\pdv{P_2}{z}-R_1\pdv{R_2}{x})\dd z\dd x+
+        \qty(Q_1\pdv{Q_2}{x}-P_1\pdv{P_2}{y})\dd x\dd y            \\
+         & = \oint_\Gamma P_1P_2\dd x+Q_1Q_2\dd y+R_1R_1\dd z-
+        \iint\limits_\varSigma
+        \qty(R_2\pdv{R_1}{y}-Q_2\pdv{Q_1}{z})\dd y\dd z            \\
+         & \quad +\qty(P_2\pdv{P_1}{z}-R_2\pdv{R_1}{x})\dd z\dd x+
+        \qty(Q_2\pdv{Q_1}{x}-P_2\pdv{P_1}{y})\dd x\dd y
+    \end{flalign*}
+    其中 $\varSigma$ 的方向与 $\Gamma$ 的方向满足右手定则.
+\end{theorem}
+\begin{proof}[{\songti \textbf{证}}]
+    由 Stokes 公式
+    \begin{flalign*}
+        \oint_{\Gamma}P_1P_2\dd x=\iint\limits_{\varSigma}\pdv{z}(P_1P_2)\dd z\dd x-\pdv{y}(P_1P_2)\dd x\dd y=\iint\limits_\varSigma P_1\qty(\pdv{P_2}{z}\dd z\dd x-\pdv{P_2}{y}\dd x\dd y)+\iint\limits_{\varSigma}P_2\qty(\pdv{P_1}{z}\dd z\dd x-\pdv{P_1}{y}\dd x\dd y)
+    \end{flalign*}
+    移项得
+    \begin{flalign*}
+        \iint\limits_{\varSigma}P_1\qty(\pdv{P_2}{z}\dd z\dd x-\pdv{P_2}{y}\dd x\dd y)=\oint_\Gamma P_1P_2\dd x-\iint\limits_\varSigma P_2\qty(\pdv{P_1}{z}\dd z\dd x-\pdv{P_1}{y}\dd x\dd y)
+    \end{flalign*}
+    同理可得
+    \begin{flalign*}
+        \iint\limits_{\varSigma}Q_1\qty(\pdv{Q_2}{x}\dd x\dd y-\pdv{Q_2}{z}\dd y\dd z) & =\oint_\Gamma Q_1Q_2\dd y-\iint\limits_\varSigma Q_2\qty(\pdv{Q_1}{x}\dd x\dd y-\pdv{Q_1}{z}\dd y\dd z) \\
+        \iint\limits_{\varSigma}R_1\qty(\pdv{R_2}{y}\dd y\dd z-\pdv{R_2}{x}\dd z\dd x) & =\oint_\Gamma R_1R_2\dd z-\iint\limits_\varSigma R_2\qty(\pdv{R_1}{y}\dd y\dd z-\pdv{R_1}{x}\dd z\dd x)
+    \end{flalign*}
+    三式相加即得证.
+\end{proof}
+
+% \subsubsection{第二型曲面积分和二重积分的互换}
+% 
+% \begin{example}
+%     设 $\varSigma$ 为 $z=x^2+y^2~ (0\leqslant z\leqslant 1)$ 的上侧, 求
+%     \begin{flalign*}
+%         I=&\iint\limits_\varSigma\qty[x^3+x\sin(x-y)^2+y\cos^2z]\dd y\dd z+\qty[y^3+y\sin(x-y)^2-x\cos z^2]\dd x\dd z\\
+%         &+\qty[z+2z\sin (x-y)^2-\cos\qty(x^2+y^2)]\dd x\dd y.
+%     \end{flalign*}
+% \end{example}
+% \begin{solution}
+%     由两类坐标之间的关系, 由于 $$\dfrac{\dd y\dd z}{\cos\alpha}=\dfrac{\dd z\dd x}{\cos\beta}=\dfrac{\dd x\dd y}{\cos\gamma}$$
+%     得 $\dd y\dd z=\dfrac{\cos\alpha}{\cos\gamma},~\dd z\dd x=\dfrac{\cos\beta}{\cos\gamma}\dd x\dd y$, 其中
+%     $$(\cos \alpha,\cos\beta,\cos\gamma)=\dfrac{(-2x,-2y,1)}{\sqrt{1+4x^2+4y^2}}$$
+%     又 $z=x^2+y^2$, 故得
+%     
+% \end{solution}
 
 % \subsection{Ostrogradsky 公式}
 
