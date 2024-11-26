@@ -13,14 +13,49 @@
         \item $A $ 的列向量组线性相关;
         \item $\vb*{A B}=0 $ 且 $ \vb*{B} \neq 0$ ;
         \item 当 $ m=n $ 时, $ |\vb*{A}|=0 $;
+        \item $0$ 是 $\vb*{A}$ 的特征值.
     \end{enumerate}
     亦即 $ \vb*{A x}=\vb*{0} $ 只有零解的充要条件是:
     \begin{enumerate}[label=(\arabic{*})]
         \item $\rank(\vb*{A})=n$;
         \item $\vb*{A} $ 的列向量组线性无关;
-        \item 当 $ m=n $ 时, $ |\vb*{A}| \neq 0 $.
+        \item 当 $ m=n $ 时, $ |\vb*{A}| \neq 0 $;
+        \item $0$ 不是 $\vb*{A}$ 的特征值.
     \end{enumerate}
 \end{theorem}
+
+\begin{example}
+    设 $\vb*{\alpha},\vb*{\beta}$ 为 $n$ 维单位列向量, $\vb*{P}$ 为 $n$ 阶可逆矩阵, 则下列方程组中, 只有零解的是 (\quad).
+    \begin{tasks}(2)
+        \task $\qty(\vb*{E}-\vb*{\alpha\alpha}^\top)\vb*{x}=\vb*{0}$
+        \task $\qty(\vb*{E}+\vb*{\beta\beta}^\top)\vb*{x}=\vb*{0}$
+        \task $\qty(\vb*{\alpha}^\top\vb*{P}\vb*{\alpha P}^{-1}-\vb*{\alpha\alpha}^\top)\vb*{x}=\vb*{0}$
+        \task $\qty(\vb*{\alpha}^\top\vb*{P}^{-1}\vb*{\beta P}-\vb*{\beta\alpha}^\top)\vb*{x}=\vb*{0}$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    % \begin{theorem}[零解与非零解的充要条件]
+    %     设齐次线性方程组 $ \vb*{Ax}=\vb*{0} $ 含有 $ n $ 个未知数和 $ m $ 个方程, 即系数矩阵 $ \vb*{A} $ 为 $ m \times n$ 矩阵, 则 $ \vb*{A x}=\vb*{0} $ 有非零解的充要条件是:
+    %     \begin{enumerate}[label=(\arabic{*})]
+    %         \item $\rank(\vb*{A})<n $;
+    %         \item $A $ 的列向量组线性相关;
+    %         \item $\vb*{A B}=0 $ 且 $ \vb*{B} \neq 0$ ;
+    %         \item 当 $ m=n $ 时, $ |\vb*{A}|=0 $;
+    %         \item $0$ 是 $\vb*{A}$ 的特征值.
+    %     \end{enumerate}
+    %     亦即 $ \vb*{A x}=\vb*{0} $ 只有零解的充要条件是:
+    %     \begin{enumerate}[label=(\arabic{*})]
+    %         \item $\rank(\vb*{A})=n$;
+    %         \item $\vb*{A} $ 的列向量组线性无关;
+    %         \item 当 $ m=n $ 时, $ |\vb*{A}| \neq 0 $;
+    %         \item $0$ 不是 $\vb*{A}$ 的特征值.
+    %     \end{enumerate}
+    % \end{theorem}
+    对于选项 A, $\vb*{\alpha\alpha}^\top$ 为秩一矩阵, 则其特征值为 $0$ ($n-1$ 重) 和 $\vb*{\alpha}^\top\vb*{\alpha}=1$, 那么 $\vb*{E}-\vb*{\alpha\alpha}^\top$ 的特征值为 $1$ ($n-1$ 重) 和 $0$, 由零解的充要条件知, 方程组 $\qty(\vb*{E}-\vb*{\alpha\alpha}^\top)\vb*{x}=\vb*{0}$ 有非零解;\\
+    同理对于选项 B, $\vb*{E}+\vb*{\beta\beta}^\top$ 的特征值为 $1$ ($n-1$ 重) 和 $2$, 由零解的充要条件知, 方程组 $\qty(\vb*{E}+\vb*{\beta\beta}^\top)\vb*{x}=\vb*{0}$ 只有零解;\\ 
+    对于选项 C, 令 $\vb*{x}=\vb*{P\alpha}$, 则 $\qty(\vb*{\alpha}^\top\vb*{P}\vb*{\alpha P}^{-1}-\vb*{\alpha\alpha}^\top)\vb*{P\alpha}=\vb*{\alpha}^\top\vb*{P\alpha}\cdot\vb*{\alpha}-\vb*{\alpha}\cdot \vb*{\alpha}^\top\vb*{P\alpha}=\vb*{0}$ (这是因为 $\vb*{\alpha}^\top\vb*{A}\vb*{\beta}$ 为一个数, 可类比二次型 $\vb*{x}^\top\vb*{Ax}$ 理解);\\ 
+    对于选项 D, 令 $\vb*{x}=\vb*{P}^{-1}\vb*{\beta}$ 同 C 分析可得 $\vb*{\alpha}^\top\vb*{P}^{-1}\vb*{\beta}\cdot\vb*{\beta}-\vb*{\beta}\cdot \vb*{\alpha}^\top\vb*{P}^{-1}\vb*{\beta}=0$, 综上所述, 选 B.
+\end{solution}
 
 \begin{definition}[齐次线性方程组的基础解系]
     设 $ \vb*{\xi}_1, \vb*{\xi}_2, \cdots ,\vb*{\xi}_s$, 是齐次线性方程组 $ \vb*{A x}=\vb*{0} $ 的解向量, 如果

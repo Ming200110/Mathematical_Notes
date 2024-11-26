@@ -95,23 +95,37 @@
 
 \subsubsection{极值点偏移}
 
-\begin{example}
-    已知函数 $f(x)=x\e^{-x},x\in\mathbb{R}$, 如果有 $f(x_1)=f(x_2)$ 且 $x_1\neq x_2$, 求证 $x_1+x_2>2.$
-\end{example}
-\begin{proof}[{\songti \textbf{证法一}}]
-    由 $f(x_1)=f(x_2)$ 得 $\dfrac{x_2}{x_1}=\dfrac{\e^{x_2}}{\e^{x_1}}\Rightarrow \ln\dfrac{x_2}{x_1}=x_2-x_1$, 不妨设 $0<x_1<1<x_2$, 作换元 $t=\dfrac{x_2}{x_1}$, 那么 $t>1$, 且
-    $$x_1=\dfrac{\ln t}{t-1},x_2=\dfrac{t\ln t}{t-1}$$
-    于是要证 $\forall t>1,\dfrac{t\ln t+\ln t}{t-1}>2$, 构造函数 $F(t)=\ln t-\dfrac{2(t-1)}{t+1}$, 那么 $F'(t)=\dfrac{1}{t}-\dfrac{4}{(t+1)^2}=\dfrac{(t-1)^2}{t(t+1)^2}>0$, 所以 $F(t)$ 在 $(1,+\infty)$ 上单调递增, 所以 $F(t)>F(1)=0$, 即得待证式成立.
-\end{proof}
-\begin{proof}[{\songti \textbf{证法二}}]
-    由题可得 $\ln x_2-\ln x_1=x_2-x_1$, 即 $\dfrac{x_2-x_1}{\ln x_2-\ln x_1}=1$, 要证 $x_1+x_2>2$, 即证 $x_1+x_2>2\dfrac{x_2-x_1}{\ln x_2-\ln x_1}$, 
-    不妨设 $0<x_1<1<x_2$, 作换元 $t=\dfrac{x_2}{x_1}$, 那么原不等式可化为 $\ln t>\dfrac{2(t-1)}{t+1}$, 由证法一可得该不等式成立, 所以原命题成立.
-\end{proof}
-
 \begin{theorem}[对数平均不等式 (ALG)]
     对任意 $0<a<b$, 满足 $\sqrt{ab}<\dfrac{b-a}{\ln b-\ln a}<\dfrac{a+b}{2}.$
     \index{对数平均不等式 (ALG)}
 \end{theorem}
+\begin{example}
+    设 $f(x)$ 在 $[1,+\infty)$ 上有连续的二阶导数, $f(1)=0,f'(1)=2$, 且二元函数 $z=\qty(x^2+y^2)f\qty(x^2+y^2)$ 满足 $z_{xx}''+z_{yy}''=0$,
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求 $f(x)$ 在 $[1,+\infty)$ 上的最大值;
+        \item 若 $f(x_1)=f(x_2)$, 证明: $x_1+x_2>2\e $.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 由题意得 
+        \begin{flalign*}
+            \pdv{z}{x}&=2xf+2x\qty(x^2+y^2)f'\\ 
+            \pdv[2]{z}{x}&=2f+8x^2f'+2\qty(x^2+y^2)f'+4x^2\qty(x^2+y^2)f''
+        \end{flalign*}
+        由对称性知 $\displaystyle \pdv[2]{z}{y}=2f+8y^2f'+2\qty(x^2+y^2)f'+4y^2\qty(x^2+y^2)f''$, 由 $z_{xx}''+z_{yy}''=0$, 得 $$
+        4f+12\qty(x^2+y^2)f'+4\qty(x^2+y^2)^2f''=0
+        $$
+        令 $u=x^2+y^2,~u>0$, 得 $u^2 f''(u)+3uf'(u)+f(u)=0$, 该方程为 Euler 方程, 令 $\displaystyle \mathrm{D}=\dv{u},~t=\ln u$, 则该方程化为 $$
+        \qty(\mathrm{D}^2+2\mathrm{D}+1)f(t)=0\Rightarrow f(t)=C_1t\e ^{-t}+C_2\e ^{-t}\Rightarrow f(x)=\dfrac{C_1\ln x}{x}+\dfrac{C_2}{x}
+        $$
+        又 $f(1)=0,~f'(1)=2$, 解得 $C_1=2,~C_2=0$, 因此 $f(x)=\dfrac{2\ln x}{x}$. 由 $f'(x)=2\dfrac{1-\ln x}{x^2}=0$, 得 $x=\e$, 且当 $x\in(0,\e)$ 时, $f(x)$ 单调递增, 
+        当 $x\in(\e,+\infty)$ 时, $f(x)$ 单调递减, 因此 $f_{max}=f(\e)=\dfrac{2}{\e}$.
+        \item 由 (1) 可不妨假设 $1<x_1<\e <x_2$, 要证 $x_1+x_2>2\e$, 即 $x_2>2\e-x_1$, 由 $f(x)$ 的单调性, 即证 $f(x_2)<f(2\e-x_1)$, 又 $f(x_1)=f(x_2)$, 
+        只需证 $f(x_1)<f(2\e-x_1)$, 为此构造 $F(x)=f(x)-f(2\e-x),~x\in(1,\e)$, 又因为 $f(x)$ 在 $(1,\e)$ 上单调递增, 则 $F(x)$ 在 $(1,\e)$ 上单调递增, 因此有 $$F(x)<F(\e)=f(\e)-f(\e)=0$$
+        得证 $f(x_1)<f(2\e-x_1)$, 故待证命题成立.
+    \end{enumerate}
+\end{solution}
 
 \subsection{不等式与函数凹凸性及拐点}
 
@@ -221,7 +235,7 @@
 \end{definition}
 
 \begin{example}
-    已知 $f(x)$ 为二阶导的正值函数, 且 $f(0)=f'(0)=1,~$, 则
+    已知 $f(x)$ 为二阶导的正值函数, 且 $f(0)=f'(0)=1,~$, 则 (\quad).
     \begin{tasks}(2)
         \task $f(2)\leqslant \e^{2}\leqslant \sqrt{f(1)f(3)}$
         \task $\e^{2}\leqslant f(2)\leqslant \sqrt{f(1)f(3)}$
@@ -348,7 +362,7 @@
 \end{solution}
 
 \begin{example}[2010 数二]
-    曲线 $y=x^2$ 与曲线 $y=a\ln x~(a\neq 0)$ 相切, 则 $a$ 等于
+    曲线 $y=x^2$ 与曲线 $y=a\ln x~(a\neq 0)$ 相切, 则 $a$ 等于 (\quad).
     \begin{tasks}(4)
         \task $4\e$
         \task $3\e$

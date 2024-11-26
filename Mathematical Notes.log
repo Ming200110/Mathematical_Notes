@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.22)  31 OCT 2024 19:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.22)  26 NOV 2024 11:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1389,7 +1389,7 @@ l.13 \end{example}
                    [2
 
 ] [3] [4] [5] [6] [7] [8] [9]) (./section/section1/section12.tex [10] [11] [12] [13]) (./section/section1/section13.tex [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36]
-Overfull \hbox (11.6152pt too wide) in paragraph at lines 1300--1303
+Overfull \hbox (11.6152pt too wide) in paragraph at lines 1298--1301
 [][][]\C70/zhsong/bx/n/10/63 ®[][] \C70/zhsong/bx/n/10/8b ∫[][] \OT1/cmr/bx/n/10 1.3.6. [][]$\OML/cmm/m/it/10 f[]; f[]; []  ; f[]$ \C70/rm/m/n/10/5c U \C70/rm/m/n/10/5f ^^@ \C70/rm/m/n/10/7b , \C70/zhsong/bx/n/10/4e ^^@ * ^^M : \OT1/cmr/m/n/10 0 \C70/rm/m/n/10/76 Ñ \C70/rm/m/n/10/98 y \C70/rm/m/n/10/6b ! \C70/rm/m/n/10/65 p \C70/rm/m/n/10/52 ^^F + \C70/zhsong/bx/n/10/4e : $\OML/cmm/m/it/10 m[]; m[]; []  ; m[]$\OT1/cmr/m/n/10 , \C70/rm/m/n/10/6b 2 \C70/zhsong/bx/n/10/4f ^^? $\OML/cmm/m/it/10 f[]f[] [] f[]$ \C70/rm/m/n/10/5c U \C70/rm/m/n/10/5f ^^@ \C70/rm/m/n/10/52 0 $\OML/cmm/m/it/10 p$ \C70/rm/m/n/10/96 6\OT1/cmr/m/n/10 , \C70/rm/m/n/10/52 ^^Y $\OML/cmm/m/it/10 f[]; f[]; []  ; f[]$
  []
 
@@ -1397,21 +1397,24 @@ Overfull \hbox (11.6152pt too wide) in paragraph at lines 1300--1303
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2070 ...dfrac{b_{n+1}-b_{n}}{a_{n+1}-a_{n}}=l.$$
-                                                  
+l.2066 \subsubsection{Êï∞ÂàóÁöÑÊÉÖÂÜµ}
+                                      
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2070 ...dfrac{b_{n+1}-b_{n}}{a_{n+1}-a_{n}}=l.$$
-                                                  ] [52] [53] [54] [55] [56] [57]) (./section/section1/section14.tex [58] [59]) (./section/section1/section15.tex [60] [61] [62] [63] [64] [65] [66] [67]
+l.2066 \subsubsection{Êï∞ÂàóÁöÑÊÉÖÂÜµ}
+                                      ] [52] [53] [54] [55] [56] [57]) (./section/section1/section14.tex [58] [59]) (./section/section1/section15.tex [60]
+Underfull \vbox (badness 3417) has occurred while \output is active []
+
+ [61] [62] [63] [64] [65] [66] [67] [68]
 
 pdfTeX warning: pdflatex.exe (file ./figures/bTree.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/bTree.pdf, id=2133, 491.04002pt x 253.23608pt>
+<figures/bTree.pdf, id=2146, 491.04002pt x 253.23608pt>
 File: figures/bTree.pdf Graphic file (type pdf)
 <use figures/bTree.pdf>
 Package pdftex.def Info: figures/bTree.pdf  used on input line 545.
 (pdftex.def)             Requested size: 392.83255pt x 202.58913pt.
-[68])) (./chapter/chapter2.tex [69 <./figures/bTree.pdf>]
+)) (./chapter/chapter2.tex [69 <./figures/bTree.pdf>]
 Á¨¨‰∫åÁ´†
 (./section/section2/section2Intr.tex) (./section/section2/section21.tex [70
 
@@ -1468,10 +1471,7 @@ Overfull \hbox (5.72054pt too wide) in paragraph at lines 20--24
 \l__nicematrix_initial_j_int=\count444
 \l__nicematrix_final_i_int=\count445
 \l__nicematrix_final_j_int=\count446
- [79] [80] [81]) (./section/section2/section22.tex [82] [83]) (./section/section2/section23.tex [84] [85] [86] [87] [88] [89] [90] [91]
-Underfull \vbox (badness 1648) has occurred while \output is active []
-
- [92] [93] [94]) (./section/section2/section24.tex [95]
+ [79] [80] [81]) (./section/section2/section22.tex [82] [83]) (./section/section2/section23.tex [84] [85] [86] [87] [88] [89] [90] [91] [92] [93]) (./section/section2/section24.tex [94] [95]
 Overfull \hbox (1.09131pt too wide) in paragraph at lines 62--66
 \C70/zhsong/m/it/8/80 ^^L $[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 f[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 ^^X\OT1/cmr/m/n/8 )\OML/cmm/m/it/8 ; f[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 ^^X[]\OT1/cmr/m/n/8 )) \U/msa/m/n/8 6 [] 6 []\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 f[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 ^^X[]\OT1/cmr/m/n/8 )\OML/cmm/m/it/8 ; f[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 ^^X[]\OT1/cmr/m/n/8 ))$\OT1/cmr/m/it/8 , \C70/zhsong/m/it/8/75 1 \OT1/cmr/m/it/8 Dar-boux \C70/zhsong/m/it/8/5b ö \C70/zhsong/m/it/8/74 ^^F \C70/zhsong/m/it/8/77 Â\OT1/cmr/m/it/8 , \C70/zhsong/m/it/8/5b X \C70/zhsong/m/it/8/57 ( $\OML/cmm/m/it/8 ^^X \OMS/cmsy/m/n/8 2 \OT1/cmr/m/n/8 (\OML/cmm/m/it/8 ^^X[]; ^^X[]\OT1/cmr/m/n/8 ) \OMS/cmsy/m/n/8 ^^Z \OT1/cmr/m/n/8 (\OML/cmm/m/it/8 a; b\OT1/cmr/m/n/8 )$\OT1/cmr/m/it/8 , \C70/zhsong/m/it/8/4f ^^? \C70/zhsong/bx/it/8/5f ó $\OML/cmm/m/it/8 f[]\OT1/cmr/m/n/8 (\OML/cmm/m/it/8 ^^X\OT1/cmr/m/n/8 ) = []$\OT1/cmr/m/it/8 ,
  []
@@ -1482,88 +1482,8 @@ Package CJKpunct Info: use punctuation spaces for family 'zhsong' with punctstyl
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.124 ...dots,n-1\text{, ‰∏î }f^{(n)}(x_0)\neq 0$$
-                                                  ]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.133     \begin{equation}
-                          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.133     \begin{equation}
-                          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.133     \begin{equation}
-                          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.133     \begin{equation}
-                          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.137     \begin{equation}
-                          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.137     \begin{equation}
-                          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.137     \begin{equation}
-                          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.137     \begin{equation}
-                          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.141     \begin{equation}
-                          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.141     \begin{equation}
-                          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.141     \begin{equation}
-                          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.141     \begin{equation}
-                          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.145     \begin{equation}
-                          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.145     \begin{equation}
-                          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.145     \begin{equation}
-                          
-pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.145     \begin{equation}
-                          
+l.147     \end{equation}
+                        ]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1583,7 +1503,27 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1
 <to be read again> 
                    \relax 
 l.163     \begin{equation}
-                           [98]
+                           [98
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.205     \end{flalign*}
+                        
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.205     \end{flalign*}
+                        
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.205     \end{flalign*}
+                        
+pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.205     \end{flalign*}
+                        ]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.2.4.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1633,7 +1573,7 @@ Underfull \vbox (badness 3158) has occurred while \output is active []
 ] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139]) (./section/section3/section32.tex [140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151] [152]
 
 pdfTeX warning: pdflatex.exe (file ./figures/sin3 3pi.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/sin3 3pi.pdf, id=3123, 224.82896pt x 215.3616pt>
+<figures/sin3 3pi.pdf, id=3132, 224.82896pt x 215.3616pt>
 File: figures/sin3 3pi.pdf Graphic file (type pdf)
 <use figures/sin3 3pi.pdf>
 Package pdftex.def Info: figures/sin3 3pi.pdf  used on input line 831.
@@ -1661,7 +1601,7 @@ Overfull \hbox (1.9935pt too wide) in paragraph at lines 20--21
 [177] [178] [179] [180] [181] [182] [183] [184] [185] [186]) (./section/section3/section34.tex [187] [188] [189]) (./section/section3/section35.tex
 
 pdfTeX warning: pdflatex.exe (file ./figures/liushu1.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/liushu1.pdf, id=3486, 106.10541pt x 121.21686pt>
+<figures/liushu1.pdf, id=3495, 106.10541pt x 121.21686pt>
 File: figures/liushu1.pdf Graphic file (type pdf)
 <use figures/liushu1.pdf>
 Package pdftex.def Info: figures/liushu1.pdf  used on input line 31.
@@ -1669,7 +1609,7 @@ Package pdftex.def Info: figures/liushu1.pdf  used on input line 31.
 [190] [191 <./figures/liushu1.pdf>] [192] [193] [194] [195] [196]
 
 pdfTeX warning: pdflatex.exe (file ./figures/liushu4.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/liushu4.pdf, id=3892, 168.5226pt x 110.08427pt>
+<figures/liushu4.pdf, id=3901, 168.5226pt x 110.08427pt>
 File: figures/liushu4.pdf Graphic file (type pdf)
 <use figures/liushu4.pdf>
 Package pdftex.def Info: figures/liushu4.pdf  used on input line 292.
@@ -1679,32 +1619,32 @@ Package pdftex.def Info: figures/liushu4.pdf  used on input line 292.
 (./section/section4/section4Intr.tex) (./section/section4/section41.tex [198
 
 ] [199] [200]) (./section/section4/section42.tex [201] [202] [203] [204]
-<figures/tuoqiu.pdf, id=4268, 361.35pt x 320.19624pt>
+<figures/tuoqiu.pdf, id=4277, 361.35pt x 320.19624pt>
 File: figures/tuoqiu.pdf Graphic file (type pdf)
 <use figures/tuoqiu.pdf>
 Package pdftex.def Info: figures/tuoqiu.pdf  used on input line 451.
 (pdftex.def)             Requested size: 156.64793pt x 138.80542pt.
-<figures/tuoyuanzm.pdf, id=4269, 361.35pt x 330.23375pt>
+<figures/tuoyuanzm.pdf, id=4278, 361.35pt x 330.23375pt>
 File: figures/tuoyuanzm.pdf Graphic file (type pdf)
 <use figures/tuoyuanzm.pdf>
 Package pdftex.def Info: figures/tuoyuanzm.pdf  used on input line 451.
 (pdftex.def)             Requested size: 156.64793pt x 143.1567pt.
-<figures/tuoyuanpwm.pdf, id=4270, 361.35pt x 312.16624pt>
+<figures/tuoyuanpwm.pdf, id=4279, 361.35pt x 312.16624pt>
 File: figures/tuoyuanpwm.pdf Graphic file (type pdf)
 <use figures/tuoyuanpwm.pdf>
 Package pdftex.def Info: figures/tuoyuanpwm.pdf  used on input line 451.
 (pdftex.def)             Requested size: 156.64793pt x 135.32442pt.
-<figures/shuangqpwm.pdf, id=4271, 361.35pt x 350.30875pt>
+<figures/shuangqpwm.pdf, id=4280, 361.35pt x 350.30875pt>
 File: figures/shuangqpwm.pdf Graphic file (type pdf)
 <use figures/shuangqpwm.pdf>
 Package pdftex.def Info: figures/shuangqpwm.pdf  used on input line 451.
 (pdftex.def)             Requested size: 156.64793pt x 151.85924pt.
-<figures/danyesqm.pdf, id=4272, 361.35pt x 382.42876pt>
+<figures/danyesqm.pdf, id=4281, 361.35pt x 382.42876pt>
 File: figures/danyesqm.pdf Graphic file (type pdf)
 <use figures/danyesqm.pdf>
 Package pdftex.def Info: figures/danyesqm.pdf  used on input line 451.
 (pdftex.def)             Requested size: 156.64793pt x 165.7833pt.
-<figures/shuangyesqm.pdf, id=4273, 361.35pt x 335.2525pt>
+<figures/shuangyesqm.pdf, id=4282, 361.35pt x 335.2525pt>
 File: figures/shuangyesqm.pdf Graphic file (type pdf)
 <use figures/shuangyesqm.pdf>
 Package pdftex.def Info: figures/shuangyesqm.pdf  used on input line 451.
@@ -1733,7 +1673,7 @@ pdfTeX warning: pdflatex.exe (file ./figures/shuangyesqm.pdf): PDF inclusion: mu
 >]
 
 pdfTeX warning: pdflatex.exe (file ./figures/Cycloid.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/Cycloid.pdf, id=4330, 379.78857pt x 124.63162pt>
+<figures/Cycloid.pdf, id=4339, 379.78857pt x 124.63162pt>
 File: figures/Cycloid.pdf Graphic file (type pdf)
 <use figures/Cycloid.pdf>
 Package pdftex.def Info: figures/Cycloid.pdf  used on input line 465.
@@ -1741,7 +1681,7 @@ Package pdftex.def Info: figures/Cycloid.pdf  used on input line 465.
 
 
 pdfTeX warning: pdflatex.exe (file ./figures/MiTongueLine.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/MiTongueLine.pdf, id=4331, 353.67935pt x 94.71085pt>
+<figures/MiTongueLine.pdf, id=4340, 353.67935pt x 94.71085pt>
 File: figures/MiTongueLine.pdf Graphic file (type pdf)
 <use figures/MiTongueLine.pdf>
 Package pdftex.def Info: figures/MiTongueLine.pdf  used on input line 490.
@@ -1749,7 +1689,7 @@ Package pdftex.def Info: figures/MiTongueLine.pdf  used on input line 490.
 
 
 pdfTeX warning: pdflatex.exe (file ./figures/DoubleTwistedWire.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/DoubleTwistedWire.pdf, id=4332, 412.51215pt x 194.0038pt>
+<figures/DoubleTwistedWire.pdf, id=4341, 412.51215pt x 194.0038pt>
 File: figures/DoubleTwistedWire.pdf Graphic file (type pdf)
 <use figures/DoubleTwistedWire.pdf>
 Package pdftex.def Info: figures/DoubleTwistedWire.pdf  used on input line 501.
@@ -1757,7 +1697,7 @@ Package pdftex.def Info: figures/DoubleTwistedWire.pdf  used on input line 501.
 [208 <./figures/Cycloid.pdf> <./figures/MiTongueLine.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./figures/ArchimedesSpiral.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/ArchimedesSpiral.pdf, id=4379, 227.95364pt x 183.24059pt>
+<figures/ArchimedesSpiral.pdf, id=4388, 227.95364pt x 183.24059pt>
 File: figures/ArchimedesSpiral.pdf Graphic file (type pdf)
 <use figures/ArchimedesSpiral.pdf>
 Package pdftex.def Info: figures/ArchimedesSpiral.pdf  used on input line 522.
@@ -1765,7 +1705,7 @@ Package pdftex.def Info: figures/ArchimedesSpiral.pdf  used on input line 522.
 
 
 pdfTeX warning: pdflatex.exe (file ./figures/StarLine.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/StarLine.pdf, id=4380, 244.34186pt x 238.44382pt>
+<figures/StarLine.pdf, id=4389, 244.34186pt x 238.44382pt>
 File: figures/StarLine.pdf Graphic file (type pdf)
 <use figures/StarLine.pdf>
 Package pdftex.def Info: figures/StarLine.pdf  used on input line 533.
@@ -1776,7 +1716,7 @@ Underfull \vbox (badness 7291) has occurred while \output is active []
  [209 <./figures/DoubleTwistedWire.pdf> <./figures/ArchimedesSpiral.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./figures/CardioidLine.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/CardioidLine.pdf, id=4425, 370.65576pt x 240.55972pt>
+<figures/CardioidLine.pdf, id=4434, 370.65576pt x 240.55972pt>
 File: figures/CardioidLine.pdf Graphic file (type pdf)
 <use figures/CardioidLine.pdf>
 Package pdftex.def Info: figures/CardioidLine.pdf  used on input line 544.
@@ -1784,7 +1724,7 @@ Package pdftex.def Info: figures/CardioidLine.pdf  used on input line 544.
 
 
 pdfTeX warning: pdflatex.exe (file ./figures/LeafLinear.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/LeafLinear.pdf, id=4426, 322.37538pt x 293.2255pt>
+<figures/LeafLinear.pdf, id=4435, 322.37538pt x 293.2255pt>
 File: figures/LeafLinear.pdf Graphic file (type pdf)
 <use figures/LeafLinear.pdf>
 Package pdftex.def Info: figures/LeafLinear.pdf  used on input line 565.
@@ -1792,7 +1732,7 @@ Package pdftex.def Info: figures/LeafLinear.pdf  used on input line 565.
 [210 <./figures/StarLine.pdf> <./figures/CardioidLine.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./figures/RoseLine.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/RoseLine.pdf, id=4468, 263.36896pt x 301.6118pt>
+<figures/RoseLine.pdf, id=4478, 263.36896pt x 301.6118pt>
 File: figures/RoseLine.pdf Graphic file (type pdf)
 <use figures/RoseLine.pdf>
 Package pdftex.def Info: figures/RoseLine.pdf  used on input line 576.
@@ -1858,13 +1798,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 544--584
 
  []
 
-[280] [281] [282] [283]) (./section/section6/section63.tex [284] [285] [286] [287] [288]
-Overfull \hbox (17.10768pt too wide) in paragraph at lines 202--205
-\C70/rm/m/n/10/67 	 \C70/rm/m/n/10/54 ^^Q \C70/rm/m/n/10/5c ^^O \C70/rm/m/n/10/66 Ú \C70/rm/m/n/10/97 b $\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 S[]$ \C70/rm/m/n/10/57 ( $\OML/cmm/m/it/10 xOy$ \C70/rm/m/n/10/5e s \C70/rm/m/n/10/97 b \C70/zhsong/bx/n/10/4e 
- \C70/rm/m/n/10/62 ï \C70/zhsong/bx/n/10/5f q \C70/zhsong/bx/n/10/4e : $\OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 S[] \OT1/cmr/m/n/10 = ^^A\OML/cmm/m/it/10 S[] [] ^^M[]$\OT1/cmr/m/n/10 , \C70/rm/m/n/10/59 Ç \C70/rm/m/n/10/67 ú \C70/zhsong/bx/n/10/5f S \C70/rm/m/n/10/54 ^^D \C70/rm/m/n/10/5c ^^O \C70/rm/m/n/10/66 Ú \C70/rm/m/n/10/97 b \C70/rm/m/n/10/76 Ù \C70/zhsong/bx/n/10/5f Ñ \C70/rm/m/n/10/76 Ñ \C70/rm/m/n/10/67 ^^@ \C70/rm/m/n/10/59 ' \C70/rm/m/n/10/50 < $\OML/cmm/m/it/10 ^^U \OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10 0$, \C70/rm/m/n/10/54 å \C70/zhsong/bx/n/10/5f ^^O $[] \OML/cmm/m/it/10 R\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^X[]; ^^Q[]; ^^P[]\OT1/cmr/m/n/10 )^^A\OML/cmm/m/it/10 S[]$
- []
-
-[289] [290] [291] [292] [293] [294] [295] [296] [297] [298] [299] [300] [301] [302]) (./section/section6/section64.tex
+[280] [281] [282] [283]) (./section/section6/section63.tex [284] [285] [286] [287] [288] [289] [290] [291] [292] [293] [294] [295] [296] [297] [298] [299] [300] [301] [302]) (./section/section6/section64.tex
 Underfull \vbox (badness 7030) has occurred while \output is active []
 
  [303] [304] [305] [306] [307]
@@ -1890,13 +1824,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 613.
 
-[365] [366]) (./section/section8/section83.tex [367] [368] [369] [370] [371] [372] [373]
-Overfull \hbox (84.67776pt too wide) in paragraph at lines 368--371
- \C70/rm/bx/it/8/6c ’[][] \C70/rm/bx/it/8/4e ^^@[][]\OT1/cmr/bx/it/8 : \C70/rm/bx/it/8/66 Ú \C70/rm/m/it/8/97 b $\OML/cmm/m/it/8 z \OT1/cmr/m/n/8 = []$ \C70/rm/bx/it/8/76 Ñ \C70/rm/bx/it/8/6c ’ \C70/rm/m/it/8/54 ^^Q \C70/rm/m/it/8/91 œ \C70/rm/bx/it/8/76 Ñ \C70/rm/bx/it/8/65 π \C70/rm/m/it/8/54 ^^Q \C70/rm/bx/it/8/4f Y \C70/rm/bx/it/8/5f & \C70/rm/bx/it/8/4e : $\OT1/cmr/m/n/8 ([] \OML/cmm/m/it/8 ; [] ^^L; [] ^^M\OT1/cmr/m/n/8 ) = []$\OT1/cmr/m/it/8 , \C70/rm/bx/it/8/65 E \C70/rm/m/it/8/75 1 \C70/rm/bx/it/8/4e $ \C70/rm/m/it/8/7c { \C70/rm/bx/it/8/66 Ú \C70/rm/m/it/8/97 b \C70/rm/bx/it/8/79 Ô \C70/rm/bx/it/8/52 ^^F \C70/rm/bx/it/8/4e K \C70/rm/bx/it/8/95 Ù \C70/rm/bx/it/8/76 Ñ \C70/rm/bx/it/8/51 s \C70/rm/m/it/8/7c ˚\OT1/cmr/m/it/8 , \C70/rm/bx/it/8/5f ó $\OML/cmm/m/it/8 A \OT1/cmr/m/n/8 = [] [] []d\OML/cmm/m/it/8 S$\OT1/cmr/m/it/8 ,
- []
-
-[374] [375] [376] [377]))) (./part/Linear Algebra.tex [378]
-<Linear Algebra.pdf, id=6298, 546.6263pt x 467.78563pt>
+[365] [366]) (./section/section8/section83.tex [367] [368] [369] [370] [371] [372] [373] [374] [375] [376] [377]))) (./part/Linear Algebra.tex [378]
+<Linear Algebra.pdf, id=6307, 546.6263pt x 467.78563pt>
 File: Linear Algebra.pdf Graphic file (type pdf)
 <use Linear Algebra.pdf>
 Package pdftex.def Info: Linear Algebra.pdf  used on input line 3.
@@ -1905,7 +1834,7 @@ File: Linear Algebra.pdf Graphic file (type pdf)
 <use Linear Algebra.pdf>
 Package pdftex.def Info: Linear Algebra.pdf  used on input line 3.
 (pdftex.def)             Requested size: 546.62495pt x 467.78448pt.
-<Linear Algebra.pdf, id=6301, page=1, 546.6263pt x 467.78563pt>
+<Linear Algebra.pdf, id=6310, page=1, 546.6263pt x 467.78563pt>
 File: Linear Algebra.pdf Graphic file (type pdf)
 <use Linear Algebra.pdf, page 1>
 Package pdftex.def Info: Linear Algebra.pdf , page1 used on input line 3.
@@ -1936,26 +1865,26 @@ pdfTeX warning: pdflatex.exe (file ./Linear Algebra.pdf): PDF inclusion: invalid
 Á¨¨‰πùÁ´†
 (./section/section9/section9Intr.tex) (./section/section9/section91.tex [381
 
-] [382] [383]) (./section/section9/section92.tex [384] [385]) (./section/section9/section93.tex [386] [387] [388] [389] [390] [391] [392] [393] [394])) (./chapter/chapter10.tex [395]
+] [382] [383]) (./section/section9/section92.tex [384] [385]) (./section/section9/section93.tex [386] [387] [388] [389] [390] [391] [392] [393] [394] [395])) (./chapter/chapter10.tex [396]
 Á¨¨ÂçÅÁ´†
 (./section/section10/section10Intr.tex) (./section/section10/section101.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [396
+ [397
 
-] [397] [398]
+] [398] [399]
 Underfull \vbox (badness 2894) has occurred while \output is active []
 
- [399] [400]
-<figures/matrix-multiplication.pdf, id=6542, 351.76318pt x 375.48683pt>
+ [400] [401]
+<figures/matrix-multiplication.pdf, id=6557, 351.76318pt x 375.48683pt>
 File: figures/matrix-multiplication.pdf Graphic file (type pdf)
 <use figures/matrix-multiplication.pdf>
 Package pdftex.def Info: figures/matrix-multiplication.pdf  used on input line 245.
 (pdftex.def)             Requested size: 263.82175pt x 281.61443pt.
- [401 <./figures/matrix-multiplication.pdf>] [402] [403]
+ [402 <./figures/matrix-multiplication.pdf>] [403] [404]
 Underfull \vbox (badness 1215) has occurred while \output is active []
 
- [404] [405] [406]) (./section/section10/section102.tex [407] [408] [409
+ [405] [406] [407]) (./section/section10/section102.tex [408] [409] [410
 pdfTeX warning (ext4): destination with the same identifier (name{equation.10.2.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1970,17 +1899,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.10.2.
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.152 ...vb*{A}^{-1}+\vb*{A}^{-1}\vb*{BWCA}^{-1}$$
-                                                  ] [410] [411] [412]
-Overfull \hbox (28.68166pt too wide) in paragraph at lines 454--467
-[][][]\C70/zhsong/bx/n/10/4f ã[][] \OT1/cmr/bx/n/10 10.2.11 \OT1/cmr/m/n/10 (2016 \C70/rm/m/n/10/6d Y \C70/rm/m/n/10/6c _ \C70/rm/m/n/10/59 ' \C70/zhsong/bx/n/10/5b f\OT1/cmr/m/n/10 )\OT1/cmr/bx/n/10 . [][]\C70/zhsong/bx/n/10/8b æ \C70/rm/m/n/10/77 È \C70/rm/m/n/10/96 5 $[] \OT1/cmr/m/n/10 = []$ \C70/rm/m/n/10/76 Ñ \C70/rm/m/n/10/90 ^^F \C70/rm/m/n/10/77 È \C70/rm/m/n/10/96 5 $[][] \OT1/cmr/m/n/10 = []$, \C70/rm/m/n/10/77 È \C70/rm/m/n/10/96 5 $[] \OT1/cmr/m/n/10 = []$,
- []
-
-[413]) (./section/section10/section103.tex [414]
+                                                  ] [411] [412] [413] [414] [415]) (./section/section10/section103.tex
 \matrixtoks=\toks66
 \rowcount=\count449
 \colcount=\count450
 \matrixtoks=\toks67
- [415] [416] [417] [418] [419]
+ [416] [417] [418] [419] [420]
 Overfull \hbox (0.62558pt too wide) in paragraph at lines 445--445
 []$\OML/cmm/m/it/10 A[]$ 
  []
@@ -2198,27 +2122,27 @@ Overfull \hbox (4.99806pt too wide) in paragraph at lines 1168--1168
 ) (./section/section10/section104.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [420]
+ [421]
 Overfull \vbox (1.77753pt too high) has occurred while \output is active []
 
- [421] [422] [423] [424])) (./chapter/chapter11.tex [425]
+ [422] [423] [424] [425])) (./chapter/chapter11.tex [426]
 Á¨¨ÂçÅ‰∏ÄÁ´†
 (./section/section11/section11Intr.tex) (./section/section11/section111.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [426
+ [427
 
-]) (./section/section11/section112.tex [427] [428]
+]) (./section/section11/section112.tex [428] [429]
 Overfull \hbox (0.76643pt too wide) in paragraph at lines 65--66
 []\C70/rm/m/n/10/57 ( \C70/rm/m/n/10/54 ^^Q \C70/rm/m/n/10/91 œ \C70/rm/m/n/10/7e ƒ $[][]\OML/cmm/m/it/10 ; [][]; []  ; [][]$ \C70/zhsong/bx/n/10/4e -\OT1/cmr/m/n/10 , \C70/rm/m/n/10/59 Ç \C70/rm/m/n/10/67 ú 	 \C70/zhsong/bx/n/10/4e ^^@ * \C70/rm/m/n/10/90 Ë \C70/rm/m/n/10/52 ^^F \C70/rm/m/n/10/7e ƒ ø \C70/rm/m/n/10/60 ' \C70/rm/m/n/10/76 ¯ \C70/rm/m/n/10/51 s\OT1/cmr/m/n/10 , \C70/rm/m/n/10/52 ^^Y \C70/rm/m/n/10/65 t \C70/zhsong/bx/n/10/4e * \C70/rm/m/n/10/54 ^^Q \C70/rm/m/n/10/91 œ \C70/rm/m/n/10/7e ƒ ø \C70/rm/m/n/10/60 ' \C70/rm/m/n/10/76 ¯ \C70/rm/m/n/10/51 s\OT1/cmr/m/n/10 ; \C70/rm/m/n/10/59 Ç \C70/rm/m/n/10/67 ú \C70/rm/m/n/10/65 t \C70/zhsong/bx/n/10/4e * \C70/rm/m/n/10/54 ^^Q \C70/rm/m/n/10/91 œ \C70/rm/m/n/10/7e ƒ $[][]\OML/cmm/m/it/10 ; [][]; []  ; [][]$
  []
 
-[429] [430] [431] [432]
+[430] [431] [432] [433]
 Overfull \hbox (48.88586pt too wide) in paragraph at lines 309--310
 [][][]\C70/zhsong/bx/n/10/5b ö[][] \C70/zhsong/bx/n/10/4e I[][] \OT1/cmr/bx/n/10 11.2.5 \OT1/cmr/m/n/10 (\C70/rm/m/n/10/54 ^^Q \C70/rm/m/n/10/91 œ \C70/rm/m/n/10/7e ƒ \C70/rm/m/n/10/76 Ñ \C70/rm/m/n/10/79 È\OT1/cmr/m/n/10 )\OT1/cmr/bx/n/10 . [][]\C70/rm/m/n/10/54 ^^Q \C70/rm/m/n/10/91 œ \C70/rm/m/n/10/7e ƒ $[][]\OML/cmm/m/it/10 ; [][]; []  ; [][]$ \C70/rm/m/n/10/76 Ñ \C70/rm/m/n/10/67 Å \C70/rm/m/n/10/59 ' \C70/rm/m/n/10/65 ‡ \C70/rm/m/n/10/51 s \C70/rm/m/n/10/7e ƒ \C70/zhsong/bx/n/10/4e - \C70/rm/m/n/10/62 @ \C70/rm/m/n/10/54 + ^^Q \C70/rm/m/n/10/91 œ \C70/rm/m/n/10/76 Ñ \C70/zhsong/bx/n/10/4e * \C70/rm/m/n/10/65 p \C70/rm/m/n/10/79  \C70/zhsong/bx/n/10/4e : \C70/zhsong/bx/n/10/8b Â \C70/rm/m/it/10/54 ^^Q \C70/rm/m/it/10/91 œ \C70/rm/m/it/10/7e ƒ \C70/rm/m/it/10/76 Ñ \C70/rm/m/it/10/79 È\OT1/cmr/m/n/10 , \C70/zhsong/bx/n/10/8b ∞ \C70/zhsong/bx/n/10/4e : $[] []$\OT1/cmr/m/n/10 . 
  []
 
-[433]) (./section/section11/section113.tex [434] [435] [436]
+[434]) (./section/section11/section113.tex [435] [436] [437]
 Overfull \hbox (6.86763pt too wide) in paragraph at lines 318--338
 \C70/rm/m/it/8/62 @ \C70/rm/bx/it/8/4e Â $[][]$ \C70/rm/m/it/8/57 ( ˙ $[][][][][][][][][][][]$ \C70/rm/bx/it/8/4e  \C70/rm/bx/it/8/76 Ñ \C70/rm/bx/it/8/77 È \C70/rm/bx/it/8/96 5 \C70/rm/bx/it/8/4e : $[]$\OT1/cmr/m/it/8 , \C70/rm/m/it/8/54 ^^L \C70/rm/m/it/8/74 ^^F \C70/rm/bx/it/8/53 Ô \C70/rm/bx/it/8/5f ó $[][]$\OT1/cmr/m/it/8 , $[][]$ \C70/rm/m/it/8/57 ( ˙ \C70/rm/bx/it/8/4e  \C70/rm/bx/it/8/76 Ñ \C70/rm/bx/it/8/77 È \C70/rm/bx/it/8/96 5 \C70/rm/bx/it/8/4e : $[]$ Â \C70/rm/bx/it/8/53   $[] \OML/cmm/m/it/8 :$
  []
@@ -2228,96 +2152,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 318--338
 
  []
 
-[437]
+[438]
 \matrixtoks=\toks68
 \matrixtoks=\toks69
 \matrixtoks=\toks70
 \matrixtoks=\toks71
- [438] [439])) (./chapter/chapter12.tex [440]
+ [439] [440])) (./chapter/chapter12.tex [441]
 Á¨¨ÂçÅ‰∫åÁ´†
 (./section/section12/section12Intr.tex) (./section/section12/section121.tex
 Underfull \vbox (badness 2197) has occurred while \output is active []
 
- [441
+ [442
 
-] [442] [443] [444]) (./section/section12/section122.tex [445] [446] [447] [448]
+] [443] [444] [445]) (./section/section12/section122.tex [446] [447] [448] [449]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [449]
+ [450]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [450]) (./section/section12/section123.tex [451] [452] [453])) (./chapter/chapter13.tex [454]
+ [451]) (./section/section12/section123.tex [452] [453] [454])) (./chapter/chapter13.tex [455]
 Á¨¨ÂçÅ‰∏âÁ´†
-(./section/section13/section13Intr.tex) (./section/section13/section131.tex [455
+(./section/section13/section13Intr.tex) (./section/section13/section131.tex [456
 
 ]
 
 pdfTeX warning: pdflatex.exe (file ./figures/kjiezzshi.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/kjiezzshi.pdf, id=7318, 169.94592pt x 128.72992pt>
+<figures/kjiezzshi.pdf, id=7339, 169.94592pt x 128.72992pt>
 File: figures/kjiezzshi.pdf Graphic file (type pdf)
 <use figures/kjiezzshi.pdf>
 Package pdftex.def Info: figures/kjiezzshi.pdf  used on input line 24.
 (pdftex.def)             Requested size: 169.9455pt x 128.7296pt.
-[456 <./figures/kjiezzshi.pdf>] [457] [458] [459]) (./section/section13/section132.tex [460] [461] [462] [463]
+[457 <./figures/kjiezzshi.pdf>] [458] [459] [460] [461]) (./section/section13/section132.tex [462] [463] [464]
 \matrixtoks=\toks72
 \matrixtoks=\toks73
 \matrixtoks=\toks74
- [464])) (./chapter/chapter14.tex [465]
+ [465])) (./chapter/chapter14.tex [466]
 Á¨¨ÂçÅÂõõÁ´†
-(./section/section14/section14Intr.tex) (./section/section14/section141.tex [466
+(./section/section14/section14Intr.tex) (./section/section14/section141.tex [467
 
-] [467] [468] [469]
-Overfull \hbox (33.14226pt too wide) in paragraph at lines 222--228
- \C70/rm/bx/it/8/5b û ˘ \C70/rm/bx/it/8/79  \C70/rm/bx/it/8/77 È \C70/rm/bx/it/8/96 5 $[][] \OT1/cmr/m/n/8 = [][] = [][] = []$\OT1/cmr/m/it/8 , \C70/rm/bx/it/8/8b æ $[][]$ \C70/rm/bx/it/8/76 Ñ \C70/rm/m/it/8/72 y \C70/rm/bx/it/8/5f Å \C70/rm/m/it/8/50 < \C70/rm/bx/it/8/4e : $\OML/cmm/m/it/8 ^^U[];  ^^U[];  ^^U[]$ \C70/rm/bx/it/8/52 ^^Y $[]$
- []
-
-[470] [471] [472]) (./section/section14/section142.tex [473] [474] [475] [476] [477] [478] [479]
+] [468] [469] [470] [471] [472] [473]) (./section/section14/section142.tex [474] [475] [476] [477] [478] [479] [480]
 \matrixtoks=\toks75
-
-Overfull \hbox (23.75493pt too wide) in paragraph at lines 476--491
- $\OT1/cmr/m/n/8 ([]\OML/cmm/m/it/8 ; []\OT1/cmr/m/n/8 ) = [] [] [] [] []$ \C70/rm/m/it/8/75 1 \C70/rm/m/it/8/6b d \C70/rm/bx/it/8/53 Ô \C70/rm/bx/it/8/5f ó $[] \OT1/cmr/m/n/8 = []\OML/cmm/m/it/8 ;  [] \OT1/cmr/m/n/8 =
- []
-
-[480]) (./section/section14/section143.tex
+ [481]) (./section/section14/section143.tex
 \matrixtoks=\toks76
- [481]
-\matrixtoks=\toks77
  [482]
+\matrixtoks=\toks77
+ [483]
 \matrixtoks=\toks78
 \matrixtoks=\toks79
- [483]
-\matrixtoks=\toks80
  [484]
+\matrixtoks=\toks80
+ [485]
 \matrixtoks=\toks81
 \matrixtoks=\toks82
 \matrixtoks=\toks83
- [485]
+ [486]
 Overfull \hbox (10.24152pt too wide) in paragraph at lines 270--271
 []\C70/rm/bx/it/8/56 ‡ \C70/rm/bx/it/8/4e : $[]$ \C70/rm/bx/it/8/76 Ñ \C70/rm/m/it/8/72 y \C70/rm/bx/it/8/5f Å \C70/rm/m/it/8/50 < \C70/rm/bx/it/8/52 ^^F + \C70/rm/bx/it/8/4e : $\OT1/cmr/m/n/8 1\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 6\OML/cmm/m/it/8 ; \OMS/cmsy/m/n/8 ^^@\OT1/cmr/m/n/8 6$\OT1/cmr/m/it/8 , \C70/rm/bx/it/8/56 ‡ \C70/rm/m/it/8/6b d $[][]$ \C70/rm/bx/it/8/76 Ñ \C70/rm/m/it/8/72 y \C70/rm/bx/it/8/5f Å \C70/rm/m/it/8/50 < \C70/rm/bx/it/8/4e : $\OMS/cmsy/m/n/8 ^^@\OT1/cmr/m/n/8 36\OML/cmm/m/it/8 ; \OMS/cmsy/m/n/8 ^^@\OT1/cmr/m/n/8 6\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 6$\OT1/cmr/m/it/8 , \C70/rm/m/it/8/90 £ \C70/rm/bx/it/8/4e H $[][] \OT1/cmr/m/n/8 + 37[]$ \C70/rm/bx/it/8/76 Ñ \C70/rm/m/it/8/72 y \C70/rm/bx/it/8/5f Å \C70/rm/m/it/8/50 < \C70/rm/bx/it/8/4e : $\OT1/cmr/m/n/8 1\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 31\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 43$\OT1/cmr/m/it/8 , \C70/rm/bx/it/8/76 Ü \C70/rm/m/it/8/59 ' \C70/rm/bx/it/8/4e é \OT1/cmr/m/it/8 0, \C70/rm/bx/it/8/56 ‡ \C70/rm/m/it/8/6b d \C70/rm/bx/it/8/4e å \C70/rm/m/it/8/6b ! \C70/rm/m/it/8/57 ã $[][][][]$
  []
 
-[486] [487] [488] [489]
+[487] [488] [489] [490]
 \matrixtoks=\toks84
 \matrixtoks=\toks85
 \matrixtoks=\toks86
- [490]
+ [491]
 \matrixtoks=\toks87
 \matrixtoks=\toks88
 \matrixtoks=\toks89
- [491] [492] [493] [494] [495]
+ [492] [493] [494] [495] [496] [497]
 \matrixtoks=\toks90
 \rowcount=\count451
 \colcount=\count452
- [496] [497]))) (./part/Probability Theory And Mathematical Statistics.tex [498] (./chapter/chapter15.tex [499
+ [498]))) (./part/Probability Theory And Mathematical Statistics.tex [499] (./chapter/chapter15.tex [500
 
 ]
 Á¨¨ÂçÅ‰∫îÁ´†
-(./section/section15/section15Intr.tex) (./section/section15/section151.tex [500
+(./section/section15/section15Intr.tex) (./section/section15/section151.tex [501
 
 ]
 
 pdfTeX warning: pdflatex.exe (file ./figures/ven1.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/ven1.pdf, id=7870, 103.8018pt x 85.3589pt>
+<figures/ven1.pdf, id=7902, 103.8018pt x 85.3589pt>
 File: figures/ven1.pdf Graphic file (type pdf)
 <use figures/ven1.pdf>
 Package pdftex.def Info: figures/ven1.pdf  used on input line 72.
@@ -2325,7 +2239,7 @@ Package pdftex.def Info: figures/ven1.pdf  used on input line 72.
 
 
 pdfTeX warning: pdflatex.exe (file ./figures/ven2.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/ven2.pdf, id=7871, 118.33209pt x 89.87477pt>
+<figures/ven2.pdf, id=7903, 118.33209pt x 89.87477pt>
 File: figures/ven2.pdf Graphic file (type pdf)
 <use figures/ven2.pdf>
 Package pdftex.def Info: figures/ven2.pdf  used on input line 80.
@@ -2333,84 +2247,98 @@ Package pdftex.def Info: figures/ven2.pdf  used on input line 80.
 
 
 pdfTeX warning: pdflatex.exe (file ./figures/ven3.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<figures/ven3.pdf, id=7872, 102.4327pt x 73.97638pt>
+<figures/ven3.pdf, id=7904, 102.4327pt x 73.97638pt>
 File: figures/ven3.pdf Graphic file (type pdf)
 <use figures/ven3.pdf>
 Package pdftex.def Info: figures/ven3.pdf  used on input line 88.
 (pdftex.def)             Requested size: 81.94624pt x 59.18117pt.
-[501 <./figures/ven1.pdf> <./figures/ven2.pdf> <./figures/ven3.pdf>] [502]) (./section/section15/section152.tex)) (./chapter/chapter16.tex [503]
+[502 <./figures/ven1.pdf> <./figures/ven2.pdf> <./figures/ven3.pdf>] [503]) (./section/section15/section152.tex)) (./chapter/chapter16.tex [504]
 Á¨¨ÂçÅÂÖ≠Á´†
-(./section/section16/section16Intr.tex) (./section/section16/section161.tex [504
+(./section/section16/section16Intr.tex) (./section/section16/section161.tex [505
 
-]) (./section/section16/section162.tex [505] [506] [507] [508])) (./chapter/chapter17.tex [509]
+]
+<figures/aircraft.png, id=7988, 200.75pt x 200.75pt>
+File: figures/aircraft.png Graphic file (type png)
+<use figures/aircraft.png>
+Package pdftex.def Info: figures/aircraft.png  used on input line 105.
+(pdftex.def)             Requested size: 14.31737pt x 14.57773pt.
+
+Overfull \hbox (30.77023pt too wide) in paragraph at lines 72--113
+[][][]\C70/zhsong/bx/n/10/4f ã[][] \OT1/cmr/bx/n/10 16.1.2. [][][] [] 
+ []
+
+[506 <./figures/aircraft.png>]) (./section/section16/section162.tex [507] [508] [509])) (./chapter/chapter17.tex [510]
 Á¨¨ÂçÅ‰∏ÉÁ´†
-(./section/section17/section171.tex) (./section/section17/section172.tex [510
+(./section/section17/section171.tex) (./section/section17/section172.tex [511
 
-] [511] [512] [513] [514]) (./section/section17/section173.tex
+] [512] [513] [514] [515]) (./section/section17/section173.tex
 Overfull \hbox (11.33812pt too wide) in paragraph at lines 6--8
 [][][]\C70/zhsong/bx/n/10/5b ö[][] \C70/zhsong/bx/n/10/74 ^^F[][] \OT1/cmr/bx/n/10 17.3.1 \OT1/cmr/m/n/10 (\C70/zhsong/bx/n/10/4e å \C70/rm/m/n/10/7e Ù \C70/rm/m/n/10/6d ˜ \C70/rm/m/n/10/54 ^^H \C70/rm/m/n/10/57 ã \C70/rm/m/n/10/96 è \C70/rm/m/n/10/67 : \C70/rm/m/n/10/53 ÿ \C70/rm/m/n/10/91 œ \C70/rm/m/n/10/51 ˝ \C70/rm/m/n/10/65 p \C70/rm/m/n/10/76 Ñ \C70/rm/m/n/10/52 ^^F \C70/rm/m/n/10/5e ^^C\OT1/cmr/m/n/10 )\OT1/cmr/bx/n/10 . [][]\C70/zhsong/bx/n/10/8b æ \C70/zhsong/bx/n/10/4e å \C70/rm/m/n/10/7e Ù \C70/rm/m/n/10/96 è \C70/rm/m/n/10/67 : \C70/rm/m/n/10/53 ÿ \C70/rm/m/n/10/91 œ $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; Y\OT1/cmr/m/n/10 )$, \C70/rm/m/n/10/51 v \C70/zhsong/bx/n/10/4e - \C70/rm/m/n/10/79 ª \C70/rm/m/n/10/65 c \C70/rm/m/n/10/57 ã \C70/rm/m/n/10/96 è \C70/rm/m/n/10/67 : \C70/rm/m/n/10/53 ÿ \C70/rm/m/n/10/91 œ $\OML/cmm/m/it/10 X$ \C70/rm/m/n/10/76 Ñ \C70/rm/m/n/10/52 ^^F \C70/rm/m/n/10/5e ^^C \C70/zhsong/bx/n/10/5f ã \C70/zhsong/bx/n/10/4e : $\OML/cmm/m/it/10 P [] \OT1/cmr/m/n/10 =
  []
 
-[515] [516])) (./chapter/chapter18.tex [517]
+[516] [517])) (./chapter/chapter18.tex [518]
 Á¨¨ÂçÅÂÖ´Á´†
-(./section/section18/section181.tex [518
+(./section/section18/section181.tex [519
 
-] [519] [520] [521]) (./section/section18/section182.tex [522] [523] [524] [525])) (./chapter/chapter19.tex [526]
+] [520] [521] [522]) (./section/section18/section182.tex [523] [524] [525] [526])) (./chapter/chapter19.tex [527]
 Á¨¨ÂçÅ‰πùÁ´†
-(./section/section19/section19Intr.tex) (./section/section19/section191.tex [527
+(./section/section19/section19Intr.tex) (./section/section19/section191.tex [528
 
-]) (./section/section19/section192.tex [528]) (./section/section19/section193.tex [529] [530])) (./chapter/chapter20.tex [531]
+]) (./section/section19/section192.tex [529]) (./section/section19/section193.tex [530] [531])) (./chapter/chapter20.tex [532]
 Á¨¨‰∫åÂçÅÁ´†
-(./section/section20/section20Intr.tex) (./section/section20/section201.tex [532
+(./section/section20/section20Intr.tex) (./section/section20/section201.tex [533
 
 ]
 Overfull \hbox (36.8958pt too wide) in paragraph at lines 29--30
 \C70/rm/m/n/10/66 / $\OML/cmm/m/it/10 X[]; X[]; []  ; X[]$ \C70/rm/m/n/10/76 Ñ \C70/rm/m/n/10/51 ˝ \C70/rm/m/n/10/65 p\OT1/cmr/m/n/10 . \C70/rm/m/n/10/59 Ç \C70/rm/m/n/10/67 ú $\OML/cmm/m/it/10 g []$ \C70/zhsong/bx/n/10/4e - ^^M \C70/rm/m/n/10/54 + \C70/rm/m/n/10/67 * \C70/rm/m/n/10/77 Â \C70/rm/m/n/10/53 ¬ \C70/rm/m/n/10/65 p\OT1/cmr/m/n/10 , \C70/rm/m/n/10/52 ^^Y \C70/rm/m/n/10/79  $\OML/cmm/m/it/10 g []$ \C70/zhsong/bx/n/10/4e : ^^@ * \C70/rm/m/it/10/7e ﬂ \C70/rm/m/it/10/8b ° \C70/rm/m/it/10/91 œ\OT1/cmr/m/n/10 , \C70/rm/m/n/10/80 ^^L $\OML/cmm/m/it/10 g []$
  []
 
-[533]) (./section/section20/section202.tex [534] [535] [536] [537] [538]) (./section/section20/section203.tex
+[534]) (./section/section20/section202.tex [535] [536] [537] [538] [539]) (./section/section20/section203.tex
 Underfull \vbox (badness 5592) has occurred while \output is active []
 
- [539] [540])) (./chapter/chapter21.tex [541]
+ [540] [541])) (./chapter/chapter21.tex [542]
 Á¨¨‰∫åÂçÅ‰∏ÄÁ´†
-(./section/section21/section21Intr.tex) (./section/section21/section211.tex [542
+(./section/section21/section21Intr.tex) (./section/section21/section211.tex [543
 
-] [543]
+] [544]
 Overfull \hbox (84.6324pt too wide) in paragraph at lines 100--102
 []\C70/rm/m/n/10/90 	 \C70/rm/m/n/10/62 È \C70/rm/m/n/10/52 ^^F \C70/zhsong/bx/n/10/4f M \C70/rm/m/n/10/65 p $\OML/cmm/m/it/10 a$ \C70/rm/m/n/10/54 å $\OML/cmm/m/it/10 b$ \C70/rm/m/n/10/76 Ñ \C70/rm/m/n/10/68 ^^G \C70/rm/m/n/10/51 ∆ \C70/rm/m/n/10/66 / \C70/zhsong/bx/n/10/4f ^^? \C70/rm/m/n/10/53 : \C70/rm/m/n/10/95 Ù $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 )$ \C70/rm/m/n/10/67 ^^@ \C70/rm/m/n/10/5c ^^O\OT1/cmr/m/n/10 , \C70/zhsong/bx/n/10/5b û \C70/rm/m/n/10/96 E \C70/rm/m/n/10/5e î \C70/rm/m/n/10/75 ( \C70/zhsong/bx/n/10/4e - \C70/zhsong/bx/n/10/5f à \C70/rm/m/n/10/96 æ \C70/zhsong/bx/n/10/5b û \C70/rm/m/n/10/73 ∞ \C70/rm/m/n/10/8f Ÿ \C70/zhsong/bx/n/10/4e ^^@ \C70/rm/m/n/10/70 π\OT1/cmr/m/n/10 , \C70/rm/m/n/10/56 ‡ \C70/rm/m/n/10/6b d \C70/rm/m/n/10/90 ^^Z \C70/rm/m/n/10/5e 8 \C70/rm/m/n/10/90 	 \C70/rm/m/n/10/53 ÷ $\OML/cmm/m/it/10 a$ \C70/rm/m/n/10/54 å $\OML/cmm/m/it/10 b$ \C70/zhsong/bx/n/10/4f ^^? \C70/zhsong/bx/n/10/5f ó $\OML/cmm/m/it/10 P [] \OT1/cmr/m/n/10 =
  []
 
-) (./section/section21/section212.tex [544] [545]) (./section/section21/section213.tex) (./section/section21/section214.tex [546] [547] [548] [549] [550] [551]
+) (./section/section21/section212.tex [545] [546]) (./section/section21/section213.tex) (./section/section21/section214.tex [547] [548] [549] [550] [551] [552]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [552])) (./chapter/chapter22.tex [553]
+ [553])) (./chapter/chapter22.tex [554]
 Á¨¨‰∫åÂçÅ‰∫åÁ´†
-(./section/section22/section22Intr.tex) (./section/section22/section221.tex [554
+(./section/section22/section22Intr.tex) (./section/section22/section221.tex [555
 
-] [555]) (./section/section22/section222.tex [556] [557] [558] [559]) (./section/section22/section223.tex [560]))) (./appendix/appendix1.tex [561]
+] [556]) (./section/section22/section222.tex [557] [558] [559] [560]) (./section/section22/section223.tex [561] [562]))) (./appendix/appendix1.tex [563]
 ÈôÑÂΩï A
-[562
+[564
 
-]) (./appendix/appendix2.tex (./Mathematical Notes.ind [563] [564
+]) (./appendix/appendix2.tex (./Mathematical Notes.ind [565] [566
 
-] [565] [566])) [567
+] [567] [568])) [569
 
 
 ] (./Mathematical Notes.aux) ) 
 Here is how much of TeX's memory you used:
- 116754 strings out of 478268
- 2469029 string characters out of 5850345
- 2801126 words of memory out of 5000000
- 127768 multiletter control sequences out of 15000+600000
- 730486 words of font info for 997 fonts, out of 8000000 for 9000
+ 116871 strings out of 478268
+ 2470628 string characters out of 5850345
+ 2801540 words of memory out of 5000000
+ 127818 multiletter control sequences out of 15000+600000
+ 731026 words of font info for 999 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,26n,119p,1292b,4299s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc>{d:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on "Mathematical Notes.pdf" (579 pages, 9035837 bytes).
+
+pdfTeX warning (dest): name{inference.18.1.1} has been referenced but does not exist, replaced by a fixed one
+
+<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc>{d:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr12.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/esint-type1/esint10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on "Mathematical Notes.pdf" (581 pages, 9066615 bytes).
 PDF statistics:
- 12041 PDF objects out of 12825 (max. 8388607)
- 10487 compressed objects within 105 object streams
- 4672 named destinations out of 5155 (max. 500000)
- 3141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 12130 PDF objects out of 12825 (max. 8388607)
+ 10573 compressed objects within 106 object streams
+ 4731 named destinations out of 5155 (max. 500000)
+ 3162 words of extra memory for PDF output out of 10000 (max. 10000000)
 

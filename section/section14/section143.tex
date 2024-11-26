@@ -354,7 +354,7 @@
 \end{theorem}
 
 \begin{example}
-    设 $\vb*{A}=(a_{ij})_{3\times3}$ 为实对称矩阵, $\vb*{A}$ 的每行元素之和均为 $0$, 设 $2,3$ 是 $\vb*{A}$ 的非零特征值, 则 $a_{11}$ 对应的代数余子式 $\vb*{A}_{11}$ 为
+    设 $\vb*{A}=(a_{ij})_{3\times3}$ 为实对称矩阵, $\vb*{A}$ 的每行元素之和均为 $0$, 设 $2,3$ 是 $\vb*{A}$ 的非零特征值, 则 $a_{11}$ 对应的代数余子式 $\vb*{A}_{11}$ 为 (\quad).
     \begin{tasks}(4)
         \task $1$
         \task $2$
@@ -511,7 +511,7 @@
         \end{cases}$ 解得 $\lambda_2=\lambda_3=1$, 设 $\lambda_2$ 对应的特征向量为 $(t_1,t_2,t_3)^\top$, 因为 $\vb*{A}$ 是三阶实对称矩阵, 所以不同特征值的特征向量是正交的, 所以 $t_1+t_2+t_3=0$, 由此解得 $\vb*{A}$ 的属于 1 的两个相互正交的特征向量为 $\vb*{\alpha}_2=(-1,1,0)^\top,~\vb*{\alpha}_3=(-1,-1,2)^\top$, 取正交矩阵
     $$\vb*{P}=\qty(\dfrac{\vb*{\alpha}_1}{\norm*{\vb*{\alpha}_1}},\dfrac{\vb*{\alpha}_2}{\norm*{\vb*{\alpha}_2}},\dfrac{\vb*{\alpha}_3}{\norm*{\vb*{\alpha}_3}})=\mqty(\dfrac{1}{\sqrt{3}}&-\dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&\dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{6}}\\[6pt]\dfrac{1}{\sqrt{3}}&0&\dfrac{2}{\sqrt{6}})$$
     则 $\vb*{P}^\top\vb*{AP}=\diag(-2,1,1)$, 因此 $\vb*{P}^\top\vb*{A}^*\vb*{P}=|\vb*{A}|\qty(\vb*{P}^\top\vb*{AP})^{-1}\diag(1,-2,-2)$, 于是, 可取正交变换 $\vb*{x}=\vb*{Py}$, 其中 $\vb*{y}=(y_2,y_3,y_4)^\top$, 使得 $g=\vb*{y}^\top\qty(\vb*{P}^\top\vb*{A}^*\vb*{P})\vb*{y}=y_2^2-2y_3^2-2y_4^2$,
-    最后再令 $x_1=y_1$, 以及 $\vb*{Q}=\mqty(1\\&\vb*{P})$, 则正交变换 $\mqty(x_1\\\vb*{x})=\vb*{Q}\mqty(y_1\\\vb*{y})$ 可使 $f$ 化为标准形 $f=-2y_1^2-y_2^2+2y_3^2+2y_4^2$, 并且由
+    最后再令 $x_1=y_1$, 以及 $\vb*{Q}=\mqty(1\\&\vb*{P})$, 则正交变换 $\mqty(x_1\\\vb*{x})=\vb*{Q}\mqty(y_1\\\vb*{y})$ 可使 $f$ 化为标准形 $$f=-2y_1^2-y_2^2+2y_3^2+2y_4^2$$ 并且由
     $$\vb*{A}-\vb*{E}=\sum_{i=1}^{3}\lambda_i\vb*{e}_i\vb*{e}_i^\top=-3\cdot\dfrac{1}{\sqrt{3}}\mqty(1\\1\\1)\cdot\dfrac{1}{\sqrt{3}}(1,1,1)=-\mqty(1&1&1\\1&1&1\\1&1&1)\Rightarrow \vb*{A}=\vb*{E}-\mqty(1&1&1\\1&1&1\\1&1&1)=\mqty(0&-1&-1\\-1&0&-1\\-1&-1&0)$$
     其中 $\vb*{e}_i=\dfrac{\vb*{\alpha}_i}{\norm*{\vb*{\alpha}_i}}$.
 \end{solution}
@@ -545,7 +545,7 @@
 \subsubsection{二次型与曲面方程}
 
 \begin{example}
-    三元二次型 $(x_1+x_2+2x_3)(x_2+ax_3)=1$ 表示的空间图形是
+    三元二次型 $(x_1+x_2+2x_3)(x_2+ax_3)=1$ 表示的空间图形是 (\quad).
     \begin{tasks}(4)
         \task 双叶双曲面
         \task 椭圆柱面
@@ -571,16 +571,6 @@
     $$
     即 $z_1^2-z_2^2=1$, 所以选 C.
 \end{solution}
-
-% \begin{example}[2016 数一]
-%     设二次型 $f(x_1,x_2,x_3)=x_1^2+x_2^2+x_3^3+4x_1x_2+4x_1x_3+4x_2x_3$, 则 $f=2$, 在空间直角坐标系下表示的二次曲面为
-%     \begin{tasks}(4)
-%         \task 单叶双曲面
-%         \task 双叶双曲面
-%         \task 椭球面
-%         \task 柱面
-%     \end{tasks}
-% \end{example}
 
 \begin{example}
     转换一般二次型方程 $$2x^2+5y^2+5z^2+4xy-4xz-8yz=1$$
@@ -667,6 +657,28 @@
 \subsubsection{最值问题}
 
 \begin{example}
+    设 $f(x_1, x_2, x_3)=\vb*{x}^\top\vb*{Ax},~\vb*{A}^\top=\vb*{A},~\vb*{x}=(x_1, x_2, x_3)^\top$, $\vb*{A}$ 的特征值为 $\lambda_1, \lambda_2, \lambda_3$, 且 $\lambda_1> \lambda_2> \lambda_3$, 
+    对应的特征向量分别为 $\vb*{\xi}_1, \vb*{\xi}_2, \vb*{\xi}_3$, 若 $\vb*{x}^\top\vb*{x}=1,~\vb*{x}^\top\vb*{\xi}_1=0$, 则 $f(\vb*{x})$ 的最大值 $f_{max}$ 以及取得最大值的 $\vb*{x}_{max}$ 分别为 (\quad).
+    \begin{tasks}(4)
+        \task $\lambda_1,~\dfrac{\vb*{\xi}_1}{\norm{\vb*{\xi}_1}}$
+        \task $\lambda_2,~\dfrac{\vb*{\xi}_1}{\norm{\vb*{\xi}_1}}$
+        \task $\lambda_1,~\dfrac{\vb*{\xi}_1}{\norm{\vb*{\xi}_1}}$
+        \task $\lambda_2,~\dfrac{\vb*{\xi}_2}{\norm{\vb*{\xi}_2}}$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    令 $\vb*{Q}=\qty(\dfrac{\vb*{\xi}_1}{\norm{\vb*{\xi}_1}}, \dfrac{\vb*{\xi}_2}{\norm{\vb*{\xi}_2}}, \dfrac{\vb*{\xi}_3}{\norm{\vb*{\xi}_3}})$, 即 $\vb*{Q}$ 为正交矩阵, 则 $$
+    f(\vb*{x})=\vb*{x}^\top\vb*{Ax}\xlongequal{\vb*{x}=\vb*{Qy}}\qty(\vb*{Qy})^\top\vb*{A}\vb*{Qy}=\vb*{y}^\top\vb*{Q}^\top\vb*{A}\vb*{Q}\vb*{y}=\vb*{y}^\top\vb*{y}=\lambda_1y_1^2+ \lambda_2y_2^2+ \lambda_3y_3^2
+    $$
+    因为 $\vb*{x}^\top\vb*{\xi}_1=0$, 即 $\qty(\vb*{Qy})^\top\vb*{\xi}_1=0\Rightarrow \vb*{y}^\top\vb*{Q}^\top\vb*{\xi}_1=0$, 又因为 $$
+    \vb*{Q}^\top\vb*{\xi}_1=\mqty(\dfrac{\vb*{\xi}_1^\top}{\norm{\vb*{\xi}_1}}\\[6pt]\dfrac{\vb*{\xi}_2^\top}{\norm{\vb*{\xi}_2}}\\[6pt]\dfrac{\vb*{\xi}_3^\top}{\norm{\vb*{\xi}_3}})\vb*{\xi}_1=\mqty(1\\0\\0)
+    $$
+    所以 $(y_1, y_2, y_3)\mqty(1\\0\\0)=0$, 即 $y_1=0$, 进而 $$f(\vb*{y})=\lambda_1y_1^2+ \lambda_2y_2^2+ \lambda_3y_3^2=\lambda_2y_2^2+\lambda_3y_3^2=\lambda_2\qty(y_2^2+y_3^2)-(\lambda_2-\lambda_3)y_3^2$$
+    因为 $\vb*{x}^\top\vb*{x}=1$, 所以 $\vb*{y}^\top\vb*{y}=1$, 即 $y_1^2 +y_2^2+ y_3^2=1\Rightarrow y_2^2+y_3^2=1$, 因此 $f(\vb*{y})=\lambda_2-(\lambda_2-\lambda_3)y_3^2$, 当 $\vb*{y}=\mqty(0\\1\\0)$, 故 $f_{max}=\lambda_2$, 
+    即 $\vb*{x}_{max}=\vb*{Qy}=\qty(\dfrac{\vb*{\xi}_1}{\norm{\vb*{\xi}_1}}, \dfrac{\vb*{\xi}_2}{\norm{\vb*{\xi}_2}}, \dfrac{\vb*{\xi}_3}{\norm{\vb*{\xi}_3}})\mqty(0\\1\\0)=\dfrac{\vb*{\xi}_2}{\norm{\vb*{\xi}_2}}$, 因此选 D.
+\end{solution}
+
+\begin{example}
     已知二次型 $f(x_1,x_2,x_3)=x_1^2-3x_2^2-3x_3^2+2x_1x_2-4x_1x_3$,
     \begin{enumerate}[label=(\arabic{*})]
         \item 写出二次型 $f$ 的矩阵表达式;
@@ -738,13 +750,13 @@
 
 \begin{example}
   设 $\vb*{x},~\vb*{y}\in \mathbb{R}^{3}$ , 且满足 $\norm{\vb*{x}}=\norm{\vb*{y}}$,
-  \begin{enumerate*}[label=(\Roman{*})]
+  \begin{enumerate}[label=(\arabic{*})]
     \item 证明: 存在一个这样的实矩阵 $\vb*{H}=\vb*{E}-2\vb*{ww}^\top$, 使得 $\vb*{Hx}=\vb*{y}$, 其中 $\vb*{w}\in \mathbb{R}^{3}$ 且为单位向量;
     \item 若 $\vb*{w}=\dfrac{1}{\sqrt{2}}\mqty(1\\0\\1),~\vb*{B}=\begin{pmatrix} 2 & 1 & 0 \\ 1 & 2 & 1 \\ 0 & 1 & 2 \\\end{pmatrix}$, 求 $\displaystyle \max_{\vb*{x},\vb*{y}(\neq\vb*{0})\in \mathbb{R}^{3}}\dfrac{\vb*{x}^\top\vb*{Hx}}{\vb*{y}^\top\vb*{By}}.$
-  \end{enumerate*}
+  \end{enumerate}
 \end{example}
 \begin{solution}
-  \begin{enumerate}[label=(\Roman{*})]
+  \begin{enumerate}[label=(\arabic{*})]
     \item 令 $\vb*{w}=\dfrac{\vb*{x}-\vb*{y}}{\norm{\vb*{x}-\vb*{y}}}$, 那么 $$
     \vb*{H}=\vb*{E}-2\vb*{ww}^\top=\vb*{E}-2\dfrac{(\vb*{x}-\vb*{y})}{\norm{\vb*{x}-\vb*{y}}^2}\qty(\vb*{x}^\top-\vb*{y}^\top)
     $$

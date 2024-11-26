@@ -69,6 +69,61 @@ $ \displaystyle\frac{n}{n-1} $, 就修正成为 $ \sigma^{2} $ 的无偏估计�
     
 % \end{solution}
 
+\begin{example}
+    设总体 $X$ 的概率密度函数为 $f(x,\theta)=\begin{cases}
+        \dfrac{3}{\theta^3}x^2,&0\leqslant x\leqslant \theta\\ 0,&\text{其他}
+    \end{cases}$其中 $\theta>0$ 为未知参数, $X_1, X_2, \cdots ,X_n~(n>1)$ 是来自总体 $X$ 的样本.
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求 $\theta$ 的最大似然估计量 $\hat{\theta}_L$;
+        \item 证明: $\hat{\theta}_1=\dfrac{3n+1}{3n}\hat{\theta}_L$ 和 $\hat{\theta}_2=\dfrac{4}{3}\bar{X}$ 均为 $\theta$ 的无偏估计量;
+        \item $\hat{\theta}_1$ 和 $\hat{\theta}_2$ 哪一个更有效? 为什么?
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 由题意得 $\displaystyle L(\theta)=\prod_{i=1}^{n} f(x_i,\theta)=\dfrac{3^n}{\theta^{3n}}\prod_{i=1}^{n}x_i^2~(0\leqslant x_i\leqslant\theta)$, 则 $$
+        \ln L(\theta)=n\ln 3-3n\ln\theta+2\sum_{i=1}^{n} \ln x_i~(0\leqslant x_i\leqslant\theta)
+        $$
+        由 $\displaystyle \pdv{\ln L(\theta)}{\theta}=\dfrac{-3n}{\theta}<0$, 得 $L(\theta)$ 是关于 $\theta$ 单调递减函数, 也就是当 $\theta\geqslant \max\limits_{1\leqslant i\leqslant n}\qty{X_i}$ 时, 
+        $\theta$ 的最大值为 $\max\limits_{1\leqslant i\leqslant n}\qty{X_i}$, 因此 $\theta$ 的最大似然估计量为 $\hat{\theta}_L=\max\limits_{1\leqslant i\leqslant n}\qty{X_i}$;
+        \item 由 $f(x)$ 的概率密度函数得 
+        $$
+        F_X=\begin{cases}
+            \dfrac{x^3}{\theta^3},&0\leqslant x\leqslant \theta\\ 
+            0,&x<0\\ 1,&x>\theta
+        \end{cases}
+        $$
+        并且
+        \begin{flalign*}
+            EX^2&=\int_{0}^{\theta} \dfrac{3}{\theta^3}x^4 \dd x=\dfrac{3\theta^2}{5}\\ 
+            EX&=\int_{0}^{\theta}\dfrac{3}{\theta^3}x^3\dd x=\dfrac{3\theta}{4}
+        \end{flalign*}
+        所以 $E\hat{\theta}_2=\dfrac{4}{3}\cdot\dfrac{1}{n}\cdot nEX=\dfrac{4}{3}\cdot\dfrac{3\theta}{4}=\theta$, 
+        令 $Y=\max\limits_{1\leqslant i\leqslant n}\qty{X_i}$, 则 
+        $$F_Y=P\qty{Y\leqslant y}=\qty{\max\limits_{1\leqslant i\leqslant n}\qty{X_i}\leqslant y}=\prod_{i=1}^{n} P\qty{X_i\leqslant y}=P^n\qty{X\leqslant y}=F_X^n(y)=\begin{cases}
+            \qty(\dfrac{y^3}{\theta^3})^n,&0\leqslant y\leqslant \theta\\ 0,&y<0\\ 1,&y>\theta
+        \end{cases}$$
+        那么 $f_Y=F_Y'=\begin{cases}
+            \dfrac{3n}{\theta^{3n}}y^{3n-1},& 0\leqslant y\leqslant \theta\\ 0,&\text{其他}
+        \end{cases}$
+        因此 
+        $$
+        E\hat{\theta}_1=\dfrac{3n+1}{3n}E\hat{\theta}_L=\dfrac{3n+1}{3n}EY=(3n+1)\int_{0}^{\theta} \dfrac{y^{3n}}{\theta^{3n}} \dd y=\theta
+        $$
+        故 $\hat{\theta}_1=\dfrac{3n+1}{3n}\hat{\theta}_L$ 和 $\hat{\theta}_2=\dfrac{4}{3}\bar{X}$ 均为 $\theta$ 的无偏估计量;
+        \item 由上述可得
+        $$D\hat{\theta}_2=\dfrac{16}{9}D\bar{X}=\dfrac{16}{9}\dfrac{1}{n^2}\cdot nDX=\dfrac{16}{9n}\qty(EX^2-E^2X)=\dfrac{16}{9n}\qty(\dfrac{3\theta^2}{5}-\dfrac{9\theta^2}{16})=\dfrac{\theta^2}{15n}$$
+        并且 $$
+        EY^2=\int_{0}^{\theta} \dfrac{3n}{\theta^{3n}}y^{3n+1} \dd y=\dfrac{3n}{3n+2}\theta^2
+        $$
+        故
+        $$
+        D\hat{\theta}_1=\qty(\dfrac{3n+1}{3n})^2DY=\qty(\dfrac{3n+1}{3n})^2\qty(EY^2-E^2Y)=\qty(\dfrac{3n+1}{3n})^2\cdot\dfrac{3n}{3n+2}\theta^2-\qty(\dfrac{3n+1}{3n})^2\cdot\qty(\dfrac{3n}{3n+1})^2\theta^2=\dfrac{\theta^2}{3n(n+2)}
+        $$
+        显然, 当 $n>1$ 时, $\dfrac{1}{3n(3n+2)}<\dfrac{1}{15n}$, 因此 $\hat{\theta}_1$ 比 $\hat{\theta}_2$ 更有效.
+    \end{enumerate}
+\end{solution}
+
 \subsection{一致性}
 
 无偏性和有效性都是在假设样本容量 $n$ 固定的条件下讨论的.

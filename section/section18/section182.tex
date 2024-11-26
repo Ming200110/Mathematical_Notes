@@ -217,7 +217,7 @@
 \end{solution}
 
 \begin{example}[2000 数一]
-    设二维随机变量 $(X,Y)$ 服从二维正态分布, 则随机变量 $\xi=X+Y$ 与 $\eta=X-Y$ 不相关的充分必要条件为
+    设二维随机变量 $(X,Y)$ 服从二维正态分布, 则随机变量 $\xi=X+Y$ 与 $\eta=X-Y$ 不相关的充分必要条件为 (\quad).
     \begin{tasks}(2)
         \task $E(X)=E(Y)$
         \task $E\qty(X^2)-E^2(X)=E\qty(Y^2)-E^2(Y)$
@@ -238,7 +238,7 @@
 \end{theorem}
 
 \begin{example}
-    设随机变量 $X\sim N(0,1),~Y\sim N(1,4)$, 且相关系数 $\rho_{XY}=1$, 则
+    设随机变量 $X\sim N(0,1),~Y\sim N(1,4)$, 且相关系数 $\rho_{XY}=1$, 则 (\quad).
     \begin{tasks}(2)
         \task $P\qty{Y=-2X -1}=1$
         \task $P\qty{Y=2X -1}=1$
@@ -297,6 +297,30 @@
                       0,           & \text { 其他. }
                   \end{cases}$
     \end{enumerate}
+\end{solution}
+
+\begin{theorem}[在条件分布下的相关系数]
+    \index{在条件分布下的相关系数}
+    \label{correlationCoefficientUnderAConditionalDistribution}
+    若在条件 $X=x$ 下, $Y$ 有相关分布, 结合推论 \ref{cqwgstl} 及定理 \ref{qfcgs} 可得 $$
+    \rho_{XY}=\dfrac{\cov(X,E(Y|X))}{\sqrt{DX[ED(Y|X)+DE(Y|X)]}}.
+    $$
+\end{theorem}
+
+\begin{example}
+    设在条件 $X=x$ 下, $Y$ 服从正态分布 $N\qty(x,x^2)$, $X$ 的边缘分布为 $U(0,1)$, 则 $X,Y$ 的相关系数为 (\quad).
+    \begin{tasks}(4)
+        \task $\dfrac{\sqrt{5}}{12}$
+        \task $\dfrac{\sqrt{5}}{5}$
+        \task $-\dfrac{\sqrt{5}}{12}$
+        \task $-\dfrac{\sqrt{5}}{5}$
+    \end{tasks}
+\end{example}
+\begin{solution}
+    由定理 \ref{correlationCoefficientUnderAConditionalDistribution}, 可知 $\cov(X,Y)=\cov(X,E(Y|X))=\cov(X,X)=DX=\dfrac{1}{12}$, 且 $$
+    \sqrt{DXDY}=\sqrt{DX[ED(Y|X)+DE(Y|X)]}=\sqrt{DX\qty(EX^2+DX)}=\sqrt{DX\qty(2DX+E^2X)}=\dfrac{\sqrt{5}}{12}
+    $$
+    所以 $\rho_{XY}=\dfrac{1}{12}\cdot\dfrac{12}{\sqrt{5}}=\dfrac{\sqrt{5}}{5}$, 因此选 B.
 \end{solution}
 
 \begin{example}

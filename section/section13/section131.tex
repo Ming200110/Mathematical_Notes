@@ -66,7 +66,7 @@
 \begin{example}
     设 $ \vb*{A} $ 为 3 阶矩阵, 特征值为 $ \lambda_{1}=\lambda_{2}=1,\lambda_{3}=2 $, 
     对应的线性无关的特征向量为 $ \vb*{\alpha}_{1}, \vb*{\alpha}_{2}, \vb*{\alpha}_{3}$, 
-    令 $ \vb*{P}=\left(\vb*{\alpha}_{1}-\vb*{\alpha}_{3}, \vb*{\alpha}_{2}+\vb*{\alpha}_{3}, \vb*{\alpha}_{3}\right)$, 则 $\vb*{P}^{-1} \vb*{A}^{*} \vb*{P}$ 等于
+    令 $ \vb*{P}=\left(\vb*{\alpha}_{1}-\vb*{\alpha}_{3}, \vb*{\alpha}_{2}+\vb*{\alpha}_{3}, \vb*{\alpha}_{3}\right)$, 则 $\vb*{P}^{-1} \vb*{A}^{*} \vb*{P}$ 等于 (\quad).
     \begin{tasks}(4)
         \task $\mqty(1&0&0\\0&3&0\\0&0&1)$
         \task $\mqty(-1&0&0\\0&3&0\\0&0&2)$
@@ -88,6 +88,32 @@
 \end{example}
 \begin{solution}
     由 $|\lambda\vb*{E}-\vb*{A}|=\mqty|\lambda-1&1&-a\\-1&\lambda-3&-5\\0&0&\lambda-2|=(\lambda-1)(\lambda-3)(\lambda-2)+(\lambda-2)=(\lambda-2)^3=0$, 于是特征值为 $\lambda_1=\lambda_2=\lambda_3=2$, 因为 $n-\rank(2\vb*{E}-\vb*{A})=2$, 于是 $\rank(2\vb*{E}-\vb*{A})=1$, 进而解得 $a=-5.$
+\end{solution}
+
+\begin{example}
+    设 $\vb*{A}$ 为 $3$ 阶矩阵, 且 $|\vb*{A}|>0,~\vb*{A}^*=\begin{pmatrix} -2 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \\\end{pmatrix}$, 则 $\rank(\vb*{E}+\vb*{A})+\rank(\vb*{E}-\vb*{A})$ 等于 (\quad).
+    \begin{tasks}(4)
+        \task 2
+        \task 3
+        \task 4
+        \task 5
+    \end{tasks}
+\end{example}
+\begin{solution}
+    令 $ \boldsymbol{B}=\begin{vmatrix}-2 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1\end{vmatrix}$, 由 $ |\lambda \boldsymbol{E}-\boldsymbol{B}|=\begin{vmatrix}\lambda+2 & 1 & 0 \\ -1 & \lambda & 0 \\ 0 & 0 & \lambda-1\end{vmatrix}=0 $, 得 $ \boldsymbol{B} $ 的特征值为 $ \lambda_{1}=\lambda_{2}=-1, \lambda_{3}=1 $, 从而 $ \boldsymbol{A}^{*} $ 的特征值为 $ \gamma_{1}=\gamma_{2}=-1, \gamma_{3}=1 $, 故 $ \left|\boldsymbol{A}^{*}\right|=|\boldsymbol{A}|^{2}=1 $, 又 $ |\boldsymbol{A}|>0 $, 解得 $ |\boldsymbol{A}|=1 $, 于是 $ \boldsymbol{A} $ 的特征值为 $ \mu_{1}=\mu_{2}=-1, \mu_{3}=1 .$\\
+    设存在可逆矩阵 $ \boldsymbol{P} $, 使得 $ \boldsymbol{P}^{-1} \boldsymbol{A}^{*} \boldsymbol{P}=\begin{pmatrix}-2 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1\end{pmatrix}$, 则
+$$
+\boldsymbol{P}^{-1} \boldsymbol{A}^{-1} \boldsymbol{P}=\begin{pmatrix}-2 & -1 & 0 \\
+    1 & 0 & 0 \\
+    0 & 0 & 1\end{pmatrix}
+,\quad \boldsymbol{P}^{-1} \boldsymbol{A} \boldsymbol{P}=\begin{pmatrix}-2 & -1 & 0 \\
+    1 & 0 & 0 \\
+    0 & 0 & 1\end{pmatrix}^{-1}=\begin{pmatrix}0 & 1 & 0 \\
+    -1 & -2 & 0 \\
+    0 & 0 & 1\end{pmatrix}
+$$
+由 $ \boldsymbol{P}^{-1}(\boldsymbol{E}+\boldsymbol{A}) \boldsymbol{P}=\begin{pmatrix}1 & 1 & 0 \\ -1 & -1 & 0 \\ 0 & 0 & 2\end{pmatrix} $, 得 $ \rank(\boldsymbol{E}+\boldsymbol{A})=2 $.
+由 $ \boldsymbol{P}^{-1}(\boldsymbol{E}-\boldsymbol{A}) \boldsymbol{P}=\begin{pmatrix}1 & -1 & 0 \\ 1 & 3 & 0 \\ 0 & 0 & 0\end{pmatrix} $, 得 $ \rank(\boldsymbol{E}-\boldsymbol{A})=2 $, 选 C.
 \end{solution}
 
 \begin{theorem}[特征值不等式]

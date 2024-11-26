@@ -200,7 +200,7 @@
 \begin{definition}[对坐标的曲面积分 (第二型曲面积分)]
     设 $\varSigma$ 为光滑的有向曲面, $P(x,y,z),~Q(x,y,z)$, $R(x,y,z)$ 都是定义在 $\varSigma$ 上的有界函数, 将曲面 $\varSigma$ 任意分成 $n$ 个小曲面 $\Delta S_i~~(i=1,2,\cdots,n)$, 在每个小曲面上任取一点 $N_i(\xi_i,\eta_i,\zeta_i)$,
     曲面 $\varSigma$ 的正侧在点 $N_i$ 处的法向量为 $$\vb*{n}_i=\cos\alpha_i\vb*{i}+\cos\beta_i\vb*{j}+\cos\gamma_i\vb*{k}$$
-    有向小曲面 $\Delta S_i$ 在 $xOy$ 平面上投影为 $\Delta S_{i,xy}=\Delta S_i\cos\gamma_i$, 如果当各小曲面直径的最大值 $\lambda\to0$, 和式 $\displaystyle\sum_{i=1}^{n}R(\xi_i,\eta_i,\zeta_i)\Delta S_{i,xy}$ 的极限存在,
+    有向小曲面 $\Delta S_i$ 在 $xOy$ 平面上投影为 $\Delta S_{i,xy}=\Delta S_i\cos\gamma_i$, 如果当各小曲面直径的最大值 $\lambda\to0$, 和式 $$\displaystyle\sum_{i=1}^{n}R(\xi_i,\eta_i,\zeta_i)\Delta S_{i,xy}$$ 的极限存在,
     则称此极限为\textit{函数} $R(x,y,z)$ \textit{沿有向曲面} $\varSigma$ \textit{的正侧上对坐标} $x,y$ \textit{的曲面积分}, 记作 $\displaystyle\iint\limits_\varSigma R(x,y,z)\dd x\dd y$, 即
     $$\iint\limits_\varSigma R(x,y,z)\dd x\dd y=\lim_{\lambda\to0}\sum_{i=1}^{n}R(\xi_i,\eta_i,\zeta_i)\Delta S_{i,xy}$$
     类似地, 函数 $P(x,y,z)$ 沿有向曲面 $\varSigma$ 的正侧上对坐标 $y,z$ 的曲面积分
@@ -237,6 +237,13 @@ $\varSigma_1$ 和 $\varSigma_2$ 的表达式 $z=z(x,y)$ 都是单值函数.
 \begin{solution}
     $xOy$ 平面将 $\varSigma$ 分为上、下两部分, 分别记作 $\varSigma_1$ 和 $\varSigma_2$, 如图 \ref{xyzdxdy} 所示, 记在 $xOy$ 平面上的投影区域为 $D_{xy}$,
     \newline
+    \begin{minipage}{0.78\linewidth}
+        \begin{flalign*}
+            I & =\qty(\iint\limits_{\varSigma_1}+\iint\limits_{\varSigma_2})xyz\dd x\dd y=\iint\limits_{D_{xy}}xy\sqrt{1-x^2-y^2}\dd x\dd y+(-1)\iint\limits_{D_{xy}}xy\qty(-\sqrt{1-x^2-y^2})\dd x\dd y \\
+              & =2\iint\limits_{D_{xy}}xy\sqrt{1-x^2-y^2}\dd x\dd y=2\int_{0}^{\frac{\pi}{2}}\dd \theta\int_{0}^{1}r^2\sin\theta\cos\theta\sqrt{1-r^2}r\dd r                                             \\
+              & =2\int_{0}^{\frac{\pi}{2}}\sin\theta\cos\theta\dd \theta\int_{0}^{1}r^3\sqrt{1-r^2}\dd r=1\cdot\dfrac{2}{15}=\dfrac{2}{15}.
+        \end{flalign*}
+    \end{minipage}\hfill
     \begin{minipage}{0.18\linewidth}
         \begin{figure}[H]
             \centering
@@ -264,13 +271,6 @@ $\varSigma_1$ 和 $\varSigma_2$ 的表达式 $z=z(x,y)$ 都是单值函数.
             \caption{}
             \label{xyzdxdy}
         \end{figure}
-    \end{minipage}\hfill
-    \begin{minipage}{0.78\linewidth}
-        \begin{flalign*}
-            I & =\qty(\iint\limits_{\varSigma_1}+\iint\limits_{\varSigma_2})xyz\dd x\dd y=\iint\limits_{D_{xy}}xy\sqrt{1-x^2-y^2}\dd x\dd y+(-1)\iint\limits_{D_{xy}}xy\qty(-\sqrt{1-x^2-y^2})\dd x\dd y \\
-              & =2\iint\limits_{D_{xy}}xy\sqrt{1-x^2-y^2}\dd x\dd y=2\int_{0}^{\frac{\pi}{2}}\dd \theta\int_{0}^{1}r^2\sin\theta\cos\theta\sqrt{1-r^2}r\dd r                                             \\
-              & =2\int_{0}^{\frac{\pi}{2}}\sin\theta\cos\theta\dd \theta\int_{0}^{1}r^3\sqrt{1-r^2}\dd r=1\cdot\dfrac{2}{15}=\dfrac{2}{15}.
-        \end{flalign*}
     \end{minipage}
 \end{solution}
 
@@ -975,7 +975,7 @@ Gauss 公式与 Stokes 公式, 它们都是重要的数学定理, 用于描述�
             \oiint\limits_{\varSigma_1}\pdv{u}{\vb*{n}}\dd S&=\oiint\limits_{\varSigma_1}\pdv{u}{x}\cos\alpha+\pdv{u}{y}\cos\beta+\pdv{u}{z}\cos\gamma \dd S=\iiint\limits_{\Omega_1}\qty(\pdv[2]{u}{x}+\pdv[2]{u}{y}+\pdv[2]{u}{z})\dd V\\ 
             &=\iiint\limits_{\Omega_1}\qty(x^2+y^2+z^2)^{\frac{3}{2}}\dd V=\int_{0}^{\pi}\dd \varphi\int_{0}^{2\pi}\dd \theta\int_{0}^{1}\rho^5\sin\varphi\dd \rho=\dfrac{2\pi}{3}.
         \end{flalign*}
-        \item 由 Gauss 公式: $\displaystyle \oiint\limits_{\Sigma} P \dd  y \dd  z+Q \dd  z \dd  x+R \dd  x \dd  y =\iiint\limits_{\Omega}\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\right) \mathrm{d} V$, 令 $P=Q=fg$, 则 
+        \item 由 Gauss 公式: $\displaystyle \oiint\limits_{\Sigma} P \dd  y \dd  z+Q \dd  z \dd  x+R \dd  x \dd  y =\iiint\limits_{\Omega}\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\right) \mathrm{d} V$, 令 $P=Q=R=fg$, 则 
         \begin{flalign*}
             \oiint\limits_{\Sigma} fg( \dd  y \dd  z+ \dd  z \dd  x+ \dd  x \dd  y)=\iiint\limits_{\Omega}\qty(f_xg+fg_x+f_yg+fg_y+f_zg+fg_z)\dd V
         \end{flalign*}

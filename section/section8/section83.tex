@@ -53,10 +53,10 @@
     又 $\displaystyle \pdv[2]{z}{x}+\pdv[2]{z}{y}=0$, 所以
     \begin{equation*}
         u^2f''(u)+3uf'(u)+f(u)=0
-        \tag{1}
+        \tag{*}
     \end{equation*}
-    (1) 式为二阶的 Euler 微分方程, 令 $u=\e ^t$, 则
-    (1) 式化为 $\displaystyle \dv[2]{f}{t}+2\dv{f}{t}+f=0$, 其特征方程为 $\lambda^2+2\lambda+1=0\Rightarrow \lambda_{1,2}=-1$, 于是 (1) 式的通解为
+    (*) 式为二阶的 Euler 微分方程, 令 $u=\e ^t$, 则
+    (*) 式化为 $\displaystyle \dv[2]{f}{t}+2\dv{f}{t}+f=0$, 其特征方程为 $\lambda^2+2\lambda+1=0\Rightarrow \lambda_{1,2}=-1$, 于是 (*) 式的通解为
     $$f=\e ^{-t}(C_1+C_2t)\Rightarrow \dfrac{1}{u}(C_1+C_2\ln u)$$
     又 $f(1)=0,~f'(1)=1$, 解得 $C_1=0,C_2=1$, 故 $f(x)=\dfrac{\ln x}{x}$, 令 $f'(x)=\dfrac{1-\ln x}{x^2}=0$, 解得 $x=\e $, 且在 $[1,\e ]$ 上 $f'(x)<0\Rightarrow f(x)\searrow$；
     在 $[\e ,+\infty)$ 上 $f'(x)>0\Rightarrow f(x)\nearrow$, 故 $f_{max}=\dfrac{\ln x}{x}\biggl |_{x=\e }=\dfrac{1}{\e }$.
@@ -366,7 +366,7 @@
 \end{example}
 \begin{solution}
     \textbf{法一: }曲面 $z=\dfrac{x^2+y^2}{2}$ 的法向量的方向余弦为 $(\cos\alpha,\cos\beta,\cos\gamma)=\dfrac{(2x,2y,-a)}{\sqrt{a^2+4x^2+4y^2}}$, 
-    故由两类曲面积分之间的关系, 得 $\displaystyle A=\dfrac{1}{a^5}\iint\limits_S\dfrac{\qty(x^2z,y^2z,z^2x)\cdot\qty(2x,2y,-a)}{\sqrt{a^2+4x^2+4y^2}}\dd S$, 
+    故由两类曲面积分之间的关系, 得 $$\displaystyle A=\dfrac{1}{a^5}\iint\limits_S\dfrac{\qty(x^2z,y^2z,z^2x)\cdot\qty(2x,2y,-a)}{\sqrt{a^2+4x^2+4y^2}}\dd S$$ 
     并且 $\dd S=\sqrt{1+\qty(z'_x)^2+\qty(z'_y)^2}\dd x\dd y=\dfrac{1}{a}\sqrt{a^2+4x^2+4y^2}\dd x\dd y$, 则
     \begin{flalign*}
         A & =\dfrac{1}{a^6}\iint\limits_D\qty(x^2\qty(\dfrac{x^2+y^2}{a}),y^2\qty(\dfrac{x^2+y^2}{a}),\qty(\dfrac{x^2+y^2}{a})^2x)\cdot(2x,2y,-a)\dd x\dd y                                                                 \\
@@ -392,9 +392,9 @@
 
 \begin{example}
     设函数 $f(t)$ 在 $[0,+\infty)$ 上连续, 
-    $$\Omega(t)=\qty{(x,y,z)~|~x^2+y^2+z^2\leqslant t^2,z\geqslant 0,t\geqslant 0}$$
+    $\Omega(t)=\qty{(x,y,z)~|~x^2+y^2+z^2\leqslant t^2,z\geqslant 0,t\geqslant 0}$, 
     $S(t)$ 是 $\Omega(t)$ 的表面, $D(t)$ 是 $\Omega(t)$ 在 $xOy$ 平面上的投影区域, $L(t)$ 是 $D(t)$ 的边界曲线, 
-    已知 $\forall t\in(0,+\infty)$ 恒有, 
+    已知 $\forall t\in(0,+\infty)$ 恒有 
     $$\oint_{L(t)}f\qty(x^2+y^2)\sqrt{x^2+y^2}\dd s+\oiint\limits_{S(t)}\qty(x^2+y^2+z^2)\dd S=\iint\limits_{D(t)}f\qty(x^2+y^2)\dd \sigma+\iiint\limits_{\Omega(t)}\sqrt{x^2+y^2+z^2}\dd V$$
     求 $f(t)$ 的表达式.
 \end{example}

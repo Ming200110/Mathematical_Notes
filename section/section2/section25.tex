@@ -79,6 +79,7 @@ Lagrange 插值和 Hermite 插值是多项式插值中的两种重要方法, 它
     \end{minipage}\hfill
     \begin{minipage}{0.30\linewidth}
         \begin{figure}[H]
+            \centering
             \begin{tikzpicture}[->,samples=100,>=stealth,scale=0.2,font=\footnotesize]
                 \draw[->,cyan](-0.5,0)--(0,0)node[below left]{$O$}--(12,0)node[below]{$x$};
                 \draw[->,cyan](0,-1)--(0,20)node[left]{$y$};
@@ -169,8 +170,10 @@ $$\begin{cases}
     解得基函数, 那么有
     \begin{flalign*}
         H_3(x) & =\qty(1+2\dfrac{x-x_k}{x_{k+1}-x_k})\qty(\dfrac{x-x_{k+1}}{x_k-x_{k+1}})^2y_k+\qty(1+2\dfrac{x-x_{k+1}}{x_k-x_{k+1}})\qty(\dfrac{x-x_k}{x_{k+1}-x_k})^2y_{k+1} \\
-               & ~ +(x-x_k)\qty(\dfrac{x-x_{k+1}}{x_k-x_{k+1}})^2m_k+(x-x_{k+1})\qty(\dfrac{x-x_k}{x_{k+1}-x_k})^2m_{k+1}.
+               & ~~~~ +(x-x_k)\qty(\dfrac{x-x_{k+1}}{x_k-x_{k+1}})^2m_k+(x-x_{k+1})\qty(\dfrac{x-x_k}{x_{k+1}-x_k})^2m_{k+1}\\ 
+               &=\qty(1+\dfrac{2\Delta x_k}{\Delta x})\qty(\dfrac{\Delta x_{k+1}}{\Delta x})^2y_k+\qty(1+\dfrac{2\Delta x_{k+1}}{\Delta x})\qty(\dfrac{\Delta x_{k}}{\Delta x})^2y_{k+1}+\Delta x_k\qty(\dfrac{\Delta x_{k+1}}{\Delta x})^2m_k+\Delta x_{k+1}\qty(\dfrac{\Delta x_{k}}{\Delta x})^2m_{k+1}
     \end{flalign*}
+    其中 $\Delta x_k=x-x_k,~\Delta x_{k+1}=x-x_{k+1},~\Delta x=x_{k+1}-x_k$.
 \end{theorem}
 
 \begin{theorem}

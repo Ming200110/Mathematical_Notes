@@ -1,5 +1,222 @@
 \section{行列式的计算}
 
+\subsection{四阶行列式计算}
+
+对于一个四阶行列式而言, 有计算技巧: $\det\vb*{A}= \text{主}+\text{副}+\text{凸}+\text{倒凸}-(\text{上交错}+\text{下交错})$. 具体可参考以下例题.
+
+\begin{example}[2020 数一]
+    计算行列式 $\begin{vmatrix} a & 0 & -1 & 1 \\ 0 & a & 1 & -1 \\ -1 & 1 & a & 0 \\ 1 & -1 & 0 & a \\\end{vmatrix}$.
+\end{example}
+\begin{solution}
+    由四阶行列式的计算公式得:
+    \begin{align*}
+        &\text{主}=\displaystyle \begin{vmatrix}
+\begin{Bmatrix}
+\textcolor[rgb]{0.82,0.01,0.11}{a} & \textcolor[rgb]{0.82,0.01,0.11}{0}\\
+\textcolor[rgb]{0.82,0.01,0.11}{0} & \textcolor[rgb]{0.82,0.01,0.11}{a}
+\end{Bmatrix} & \begin{matrix}
+-1 & 1\\
+1 & -1
+\end{matrix}\\
+\begin{matrix}
+-1 & 1\\
+1 & -1
+\end{matrix} & \begin{Bmatrix}
+\textcolor[rgb]{0.82,0.01,0.11}{a} & \textcolor[rgb]{0.82,0.01,0.11}{0}\\
+\textcolor[rgb]{0.82,0.01,0.11}{0} & \textcolor[rgb]{0.82,0.01,0.11}{a}
+\end{Bmatrix}
+\end{vmatrix} =\begin{vmatrix}
+\textcolor[rgb]{0.82,0.01,0.11}{a} & \textcolor[rgb]{0.82,0.01,0.11}{0}\\
+\textcolor[rgb]{0.82,0.01,0.11}{0} & \textcolor[rgb]{0.82,0.01,0.11}{a}
+\end{vmatrix} \cdot \begin{vmatrix}
+\textcolor[rgb]{0.82,0.01,0.11}{a} & \textcolor[rgb]{0.82,0.01,0.11}{0}\\
+\textcolor[rgb]{0.82,0.01,0.11}{0} & \textcolor[rgb]{0.82,0.01,0.11}{a}
+\end{vmatrix} =a^{4} & & \text{副}=\displaystyle \begin{vmatrix}
+\begin{matrix}
+a & 0\\
+0 & a
+\end{matrix} & \begin{Bmatrix}
+\textcolor[rgb]{0.29,0.56,0.89}{-1} & \textcolor[rgb]{0.29,0.56,0.89}{1}\\
+\textcolor[rgb]{0.29,0.56,0.89}{1} & \textcolor[rgb]{0.29,0.56,0.89}{-1}
+\end{Bmatrix}\\
+\begin{Bmatrix}
+\textcolor[rgb]{0.29,0.56,0.89}{-1} & \textcolor[rgb]{0.29,0.56,0.89}{1}\\
+\textcolor[rgb]{0.29,0.56,0.89}{1} & \textcolor[rgb]{0.29,0.56,0.89}{-1}
+\end{Bmatrix} & \begin{matrix}
+a & 0\\
+0 & a
+\end{matrix}
+\end{vmatrix} =\begin{vmatrix}
+\textcolor[rgb]{0.29,0.56,0.89}{-1} & \textcolor[rgb]{0.29,0.56,0.89}{1}\\
+\textcolor[rgb]{0.29,0.56,0.89}{1} & \textcolor[rgb]{0.29,0.56,0.89}{-1}
+\end{vmatrix} \cdot \begin{vmatrix}
+\textcolor[rgb]{0.29,0.56,0.89}{-1} & \textcolor[rgb]{0.29,0.56,0.89}{1}\\
+\textcolor[rgb]{0.29,0.56,0.89}{1} & \textcolor[rgb]{0.29,0.56,0.89}{-1}
+\end{vmatrix} =0\\
+        &\text{凸}=\displaystyle \begin{vmatrix}
+\begin{matrix}
+a\\
+0
+\end{matrix} & \begin{Bmatrix}
+\textcolor[rgb]{0.96,0.65,0.14}{0} & \textcolor[rgb]{0.96,0.65,0.14}{-1}\\
+\textcolor[rgb]{0.96,0.65,0.14}{a} & \textcolor[rgb]{0.96,0.65,0.14}{1}
+\end{Bmatrix} & \begin{matrix}
+1\\
+-1
+\end{matrix}\\
+\begin{Bmatrix}
+\textcolor[rgb]{0.96,0.65,0.14}{-1}\\
+\textcolor[rgb]{0.96,0.65,0.14}{1}
+\end{Bmatrix} & \begin{matrix}
+1 & a\\
+-1 & 0
+\end{matrix} & \begin{Bmatrix}
+\textcolor[rgb]{0.96,0.65,0.14}{0}\\
+\textcolor[rgb]{0.96,0.65,0.14}{a}
+\end{Bmatrix}
+\end{vmatrix} =\begin{vmatrix}
+\textcolor[rgb]{0.96,0.65,0.14}{0} & \textcolor[rgb]{0.96,0.65,0.14}{-1}\\
+\textcolor[rgb]{0.96,0.65,0.14}{a} & \textcolor[rgb]{0.96,0.65,0.14}{1}
+\end{vmatrix} \cdot \begin{vmatrix}
+\textcolor[rgb]{0.96,0.65,0.14}{-1} & \textcolor[rgb]{0.96,0.65,0.14}{0}\\
+\textcolor[rgb]{0.96,0.65,0.14}{1} & \textcolor[rgb]{0.96,0.65,0.14}{a}
+\end{vmatrix} =-a^{2} & & \text{倒凸}=\displaystyle \begin{vmatrix}
+\begin{Bmatrix}
+\textcolor[rgb]{0.49,0.83,0.13}{a}\\
+\textcolor[rgb]{0.49,0.83,0.13}{0}
+\end{Bmatrix} & \begin{matrix}
+0 & -1\\
+a & 1
+\end{matrix} & \begin{Bmatrix}
+\textcolor[rgb]{0.49,0.83,0.13}{1}\\
+\textcolor[rgb]{0.49,0.83,0.13}{-1}
+\end{Bmatrix}\\
+\begin{matrix}
+-1\\
+1
+\end{matrix} & \begin{Bmatrix}
+\textcolor[rgb]{0.49,0.83,0.13}{1} & \textcolor[rgb]{0.49,0.83,0.13}{a}\\
+\textcolor[rgb]{0.49,0.83,0.13}{-1} & \textcolor[rgb]{0.49,0.83,0.13}{0}
+\end{Bmatrix} & \begin{matrix}
+0\\
+a
+\end{matrix}
+\end{vmatrix} =\begin{vmatrix}
+\textcolor[rgb]{0.49,0.83,0.13}{a} & \textcolor[rgb]{0.49,0.83,0.13}{1}\\
+\textcolor[rgb]{0.49,0.83,0.13}{0} & \textcolor[rgb]{0.49,0.83,0.13}{-1}
+\end{vmatrix} \cdot \begin{vmatrix}
+\textcolor[rgb]{0.49,0.83,0.13}{1} & \textcolor[rgb]{0.49,0.83,0.13}{a}\\
+\textcolor[rgb]{0.49,0.83,0.13}{-1} & \textcolor[rgb]{0.49,0.83,0.13}{0}
+\end{vmatrix} =-a^{2}\\
+        &\text{上交错}=\displaystyle \begin{vmatrix}
+\begin{Bmatrix}
+\textcolor[rgb]{0.74,0.06,0.88}{a}\\
+\textcolor[rgb]{0.74,0.06,0.88}{0}
+\end{Bmatrix} & \begin{matrix}
+0\\
+a
+\end{matrix} & \begin{Bmatrix}
+\textcolor[rgb]{0.74,0.06,0.88}{-1}\\
+\textcolor[rgb]{0.74,0.06,0.88}{1}
+\end{Bmatrix} & \begin{matrix}
+1\\
+-1
+\end{matrix}\\
+\begin{matrix}
+-1\\
+1
+\end{matrix} & \begin{Bmatrix}
+\textcolor[rgb]{0.74,0.06,0.88}{1}\\
+\textcolor[rgb]{0.74,0.06,0.88}{-1}
+\end{Bmatrix} & \begin{matrix}
+a\\
+0
+\end{matrix} & \begin{Bmatrix}
+\textcolor[rgb]{0.74,0.06,0.88}{0}\\
+\textcolor[rgb]{0.74,0.06,0.88}{a}
+\end{Bmatrix}
+\end{vmatrix} =\begin{vmatrix}
+\textcolor[rgb]{0.74,0.06,0.88}{a} & \textcolor[rgb]{0.74,0.06,0.88}{-1}\\
+\textcolor[rgb]{0.74,0.06,0.88}{0} & \textcolor[rgb]{0.74,0.06,0.88}{1}
+\end{vmatrix} \cdot \begin{vmatrix}
+\textcolor[rgb]{0.74,0.06,0.88}{1} & \textcolor[rgb]{0.74,0.06,0.88}{0}\\
+\textcolor[rgb]{0.74,0.06,0.88}{-1} & \textcolor[rgb]{0.74,0.06,0.88}{a}
+\end{vmatrix} =a^{2} & & \text{下交错}=\displaystyle \begin{vmatrix}
+\begin{matrix}
+a\\
+0
+\end{matrix} & \begin{Bmatrix}
+\textcolor[rgb]{0.55,0.34,0.16}{0}\\
+\textcolor[rgb]{0.55,0.34,0.16}{a}
+\end{Bmatrix} & \begin{matrix}
+-1\\
+1
+\end{matrix} & \begin{Bmatrix}
+\textcolor[rgb]{0.55,0.34,0.16}{1}\\
+\textcolor[rgb]{0.55,0.34,0.16}{-1}
+\end{Bmatrix}\\
+\begin{Bmatrix}
+\textcolor[rgb]{0.55,0.34,0.16}{-1}\\
+\textcolor[rgb]{0.55,0.34,0.16}{1}
+\end{Bmatrix} & \begin{matrix}
+1\\
+-1
+\end{matrix} & \begin{Bmatrix}
+\textcolor[rgb]{0.55,0.34,0.16}{a}\\
+\textcolor[rgb]{0.55,0.34,0.16}{0}
+\end{Bmatrix} & \begin{matrix}
+0\\
+a
+\end{matrix}
+\end{vmatrix} =\begin{vmatrix}
+\textcolor[rgb]{0.55,0.34,0.16}{0} & \textcolor[rgb]{0.55,0.34,0.16}{1}\\
+\textcolor[rgb]{0.55,0.34,0.16}{a} & \textcolor[rgb]{0.55,0.34,0.16}{-1}
+\end{vmatrix} \cdot \begin{vmatrix}
+\textcolor[rgb]{0.55,0.34,0.16}{-1} & \textcolor[rgb]{0.55,0.34,0.16}{a}\\
+\textcolor[rgb]{0.55,0.34,0.16}{1} & \textcolor[rgb]{0.55,0.34,0.16}{0}
+\end{vmatrix} =a^{2}
+        \end{align*}
+    那么, 原行列式等于 $\text{主}+\text{副}+\text{凸}+\text{倒凸}-(\text{上交错}+\text{下交错})=a^4-4a^2.$
+\end{solution}
+
+\begin{example}[2021 数二]
+    计算 $\displaystyle \begin{vmatrix}
+x & x & 1 & 2x\\
+1 & x & 2 & -1\\
+2 & 1 & x & 1\\
+2 & -1 & 1 & x
+\end{vmatrix}$ 中 $x^3$ 的系数.
+\end{example}
+\begin{solution}
+    由四阶行列式的计算公式得:
+    \begin{align*}
+        \text{主}=\displaystyle \begin{vmatrix}
+\textcolor[rgb]{0.82,0.01,0.11}{x} & \textcolor[rgb]{0.82,0.01,0.11}{x} & 1 & 2x\\
+\textcolor[rgb]{0.82,0.01,0.11}{1} & \textcolor[rgb]{0.82,0.01,0.11}{x} & 2 & -1\\
+2 & 1 & \textcolor[rgb]{0.82,0.01,0.11}{x} & \textcolor[rgb]{0.82,0.01,0.11}{1}\\
+2 & -1 & \textcolor[rgb]{0.82,0.01,0.11}{1} & \textcolor[rgb]{0.82,0.01,0.11}{x}
+\end{vmatrix} =\begin{vmatrix}
+\textcolor[rgb]{0.82,0.01,0.11}{x} & \textcolor[rgb]{0.82,0.01,0.11}{x}\\
+\textcolor[rgb]{0.82,0.01,0.11}{1} & \textcolor[rgb]{0.82,0.01,0.11}{x}
+\end{vmatrix} \cdot \begin{vmatrix}
+\textcolor[rgb]{0.82,0.01,0.11}{x} & \textcolor[rgb]{0.82,0.01,0.11}{1}\\
+\textcolor[rgb]{0.82,0.01,0.11}{1} & \textcolor[rgb]{0.82,0.01,0.11}{x}
+\end{vmatrix} =\left( x^{2} -x\right)\left( x^{2} -1\right) & &\text{下交错}=\displaystyle \begin{vmatrix}
+x & \textcolor[rgb]{0.55,0.34,0.16}{x} & 1 & \textcolor[rgb]{0.55,0.34,0.16}{2x}\\
+1 & \textcolor[rgb]{0.55,0.34,0.16}{x} & 2 & \textcolor[rgb]{0.55,0.34,0.16}{-1}\\
+\textcolor[rgb]{0.55,0.34,0.16}{2} & 1 & \textcolor[rgb]{0.55,0.34,0.16}{x} & 1\\
+\textcolor[rgb]{0.55,0.34,0.16}{2} & -1 & \textcolor[rgb]{0.55,0.34,0.16}{1} & x
+\end{vmatrix} =\begin{vmatrix}
+\textcolor[rgb]{0.55,0.34,0.16}{x} & \textcolor[rgb]{0.55,0.34,0.16}{2x}\\
+\textcolor[rgb]{0.55,0.34,0.16}{x} & \textcolor[rgb]{0.55,0.34,0.16}{-1}
+\end{vmatrix} \cdot \begin{vmatrix}
+\textcolor[rgb]{0.55,0.34,0.16}{2} & \textcolor[rgb]{0.55,0.34,0.16}{x}\\
+\textcolor[rgb]{0.55,0.34,0.16}{2} & \textcolor[rgb]{0.55,0.34,0.16}{1}
+\end{vmatrix} =2x( 1+2x)( x-1)
+    \end{align*}
+故 $x^3$ 的系数为 $-1-4=-5$.
+\end{solution}
+
 \subsection{具象行列式的计算}
 
 \subsubsection{化为三角形矩阵}

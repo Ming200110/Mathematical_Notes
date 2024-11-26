@@ -54,6 +54,29 @@
     \end{enumerate}
 \end{definition}
 
+\begin{theorem}
+    若 $X\sim N\qty(0,\sigma^2)$, 则 
+    \begin{enumerate}[label=(\arabic{*})]
+        \item $E(|X|)=\dfrac{2}{\sqrt{2\pi}}\sigma$;
+        \item $E\qty(X^{2n+1})=0$;
+        \item $E\qty(|X|^{2n+1})=(2n)!!\cdot\dfrac{2}{\sqrt{2\pi}}$;
+        \item $E\qty(X^{2n})=(2n-1)!!\cdot\sigma^{2n}$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+    已知 $X$ 的分布函数为 $F(x)$, 则 
+    \begin{flalign*}
+        EX&=\int_{0}^{+\infty}[1-F(x)]\dd x-\int_{-\infty}^{0}F(x)\dd x\\ 
+        EX^2&=2\qty[\int_{0}^{+\infty}x[1-F(x)]\dd x-\int_{-\infty}^{0}xF(x)\dd x].
+    \end{flalign*}
+    特别地, $X$ 为非负随机变量时, 则 
+    \begin{flalign*}
+        EX&=\int_{0}^{+\infty}[1-F(x)]\dd x\\ 
+        EX^2&=2\int_{0}^{+\infty}x[1-F(x)]\dd x.
+    \end{flalign*}
+\end{theorem}
+
 \begin{example}
     设随机变量 $X$ 的分布函数为 $F(x)=0.3\varPhi(x)+0.7\varPhi\qty(\dfrac{x-1}{2})$, 其中 $\varPhi(x)$ 为标准正态分布的分布函数, 求 $E(X)$.
 \end{example}
@@ -101,7 +124,7 @@
 \end{theorem}
 
 \begin{example}
-    设 $X$ 与 $Y$ 独立, 且 $E(X)$ 和 $E(Y)$ 存在, 记 $U=\max\qty{X,Y},~V=\min\qty{X,Y}$, 则 $E(UV)$
+    设 $X$ 与 $Y$ 独立, 且 $E(X)$ 和 $E(Y)$ 存在, 记 $U=\max\qty{X,Y},~V=\min\qty{X,Y}$, 则 $E(UV)$ 等于 (\quad).
     \begin{tasks}(4)
         \task $E(U)\cdot E(V)$
         \task $E(X)\cdot E(Y)$
@@ -155,16 +178,23 @@
     $E(X)=E[E(X|Y)].$
 \end{theorem}
 
-\begin{inference}
+\begin{inference}[条件期望的性质]
+    \label{cqwgstl}
     \begin{enumerate}[label=(\arabic{*})]
-        \item $E(g(X)Y|X)=g(X)E(Y|X)$;
+        \item 当 $X$ 与 $Y$ 独立时, $E(X|Y)=EX$;
+        \item $E(f(Y)X|Y)=f(Y)E(X|Y)$;
+        \item $E(C|Y)=C$;
+        \item $E[f(Y)|Y]=Ef(Y)$;
+        \item $E(aX+bY|Z)=aE(X|Z)+bE(Y|Z)$;
         \item $E(XY)=E(XE(Y|X))=E[E(XY|X)]$;
+        \item $E\qty[X-g^2(Y)]\geqslant E[X-E(X|Y)]^2$;
         \item $\cov(X,Y)=\cov(X,E(Y|X))$.
     \end{enumerate}
 \end{inference}
 
 \begin{theorem}[全方差公式]
     \index{全方差公式}
+    \label{qfcgs}
     $D(X)=E[D(X|Y)]+D[E(X|Y)].$
 \end{theorem}
 

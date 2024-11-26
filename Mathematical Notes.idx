@@ -62,19 +62,19 @@
 \indexentry{无穷小量的加法|hyperpage}{31}
 \indexentry{无穷小量的乘法|hyperpage}{31}
 \indexentry{Lagrange 中值定理|hyperpage}{41}
-\indexentry{等价积分|hyperpage}{44}
+\indexentry{等价积分|hyperpage}{45}
 \indexentry{定积分与极限式|hyperpage}{46}
 \indexentry{不等分积分与极限式|hyperpage}{49}
 \indexentry{数列的 Stolz 定理|hyperpage}{52}
 \indexentry{函数 Stolz 定理|hyperpage}{55}
-\indexentry{单调有界准理|hyperpage}{60}
+\indexentry{单调有界准理|hyperpage}{61}
 \indexentry{压缩映射|hyperpage}{61}
 \indexentry{不动点迭代|hyperpage}{61}
 \indexentry{加法性质|hyperpage}{66}
 \indexentry{移位性质|hyperpage}{66}
 \indexentry{变换性质|hyperpage}{66}
-\indexentry{常系数线性齐次递推定理|hyperpage}{67}
-\indexentry{主定理|hyperpage}{68}
+\indexentry{常系数线性齐次递推定理|hyperpage}{68}
+\indexentry{主定理|hyperpage}{69}
 \indexentry{导数|hyperpage}{71}
 \indexentry{左右导数|hyperpage}{74}
 \indexentry{函数的可导性与连续性|hyperpage}{74}
@@ -94,11 +94,11 @@
 \indexentry{$n$ 阶差商|hyperpage}{101}
 \indexentry{差商与导数的关系|hyperpage}{101}
 \indexentry{Lagrange 插值多项式|hyperpage}{103}
-\indexentry{两点三次 Hermite 插值|hyperpage}{106}
+\indexentry{两点三次 Hermite 插值|hyperpage}{105}
 \indexentry{对数平均不等式 (ALG)|hyperpage}{108}
 \indexentry{均值不等式|hyperpage}{109}
 \indexentry{Cauchy 不等式|hyperpage}{109}
-\indexentry{分离性定理|hyperpage}{110}
+\indexentry{分离性定理|hyperpage}{111}
 \indexentry{Jensen 不等式|hyperpage}{111}
 \indexentry{拐点|hyperpage}{111}
 \indexentry{拐点存在的必要条件|hyperpage}{111}
@@ -148,7 +148,7 @@
 \indexentry{二元函数连续|hyperpage}{215}
 \indexentry{闭区间多元函数的有界性|hyperpage}{215}
 \indexentry{二元函数的 Taylor 展开唯一性|hyperpage}{219}
-\indexentry{隐函数存在定理|hyperpage}{222}
+\indexentry{隐函数存在定理|hyperpage}{221}
 \indexentry{全微分的形式不变性|hyperpage}{223}
 \indexentry{二阶全微分|hyperpage}{231}
 \indexentry{高阶全微分|hyperpage}{231}
@@ -220,56 +220,57 @@
 \indexentry{算子特性|hyperpage}{359}
 \indexentry{算子分配律|hyperpage}{359}
 \indexentry{算子结合律|hyperpage}{359}
-\indexentry{极大线性无关组|hyperpage}{430}
-\indexentry{向量组等价|hyperpage}{430}
-\indexentry{齐次解的线性组合|hyperpage}{442}
-\indexentry{零解与非零解的充要条件|hyperpage}{442}
-\indexentry{基础解系的个数|hyperpage}{442}
-\indexentry{Cramer 法则|hyperpage}{445}
-\indexentry{非齐次线性方程组有解的条件|hyperpage}{447}
-\indexentry{最小二乘解|hyperpage}{451}
-\indexentry{特征值的积与和|hyperpage}{456}
-\indexentry{逆矩阵的特征值|hyperpage}{456}
-\indexentry{秩一矩阵的特征值|hyperpage}{456}
-\indexentry{伴随矩阵的特征值|hyperpage}{456}
+\indexentry{极大线性无关组|hyperpage}{431}
+\indexentry{向量组等价|hyperpage}{431}
+\indexentry{齐次解的线性组合|hyperpage}{443}
+\indexentry{零解与非零解的充要条件|hyperpage}{443}
+\indexentry{基础解系的个数|hyperpage}{444}
+\indexentry{Cramer 法则|hyperpage}{447}
+\indexentry{非齐次线性方程组有解的条件|hyperpage}{448}
+\indexentry{最小二乘解|hyperpage}{452}
+\indexentry{特征值的积与和|hyperpage}{457}
+\indexentry{逆矩阵的特征值|hyperpage}{457}
+\indexentry{秩一矩阵的特征值|hyperpage}{457}
 \indexentry{伴随矩阵的特征值|hyperpage}{457}
-\indexentry{特征值不等式|hyperpage}{457}
-\indexentry{行均和定理|hyperpage}{457}
-\indexentry{矩阵相似|hyperpage}{461}
-\indexentry{正定的必要条件|hyperpage}{473}
-\indexentry{矩阵合同|hyperpage}{479}
-\indexentry{指数分布|hyperpage}{507}
-\indexentry{正态分布及其分布函数|hyperpage}{508}
-\indexentry{对称性|hyperpage}{508}
-\indexentry{和一性|hyperpage}{508}
-\indexentry{标准正态分布|hyperpage}{508}
-\indexentry{标准正态分布的分布函数和|hyperpage}{508}
-\indexentry{一维随机变量函数的数学期望|hyperpage}{519}
-\indexentry{最值表达式|hyperpage}{520}
-\indexentry{方差与标准差|hyperpage}{520}
-\indexentry{方差与期望的联系|hyperpage}{520}
-\indexentry{重期望公式|hyperpage}{520}
-\indexentry{全方差公式|hyperpage}{520}
-\indexentry{二维均匀分布的随机变量的概率密度|hyperpage}{521}
-\indexentry{随机变量的相关性定义|hyperpage}{522}
-\indexentry{独立性与相关性的判定|hyperpage}{522}
-\indexentry{Bernoulli 大数定律|hyperpage}{528}
-\indexentry{Chebyshev 大数定律|hyperpage}{528}
-\indexentry{Khinchin 大数定律|hyperpage}{529}
-\indexentry{Levy Lindeberg 中心极限定理|hyperpage}{530}
-\indexentry{卡方分布|hyperpage}{534}
-\indexentry{区间估计|hyperpage}{543}
-\indexentry{$\sigma^{2} $ 已知时 $ \mu $ 的置信区间|hyperpage}{544}
-\indexentry{$\sigma^{2} $ 未知时 $ \mu $ 的置信区间|hyperpage}{544}
-\indexentry{$\mu$ 未知时 $\sigma^2$ 的置信区间|hyperpage}{545}
-\indexentry{单侧置信下限|hyperpage}{546}
-\indexentry{单侧置信上限|hyperpage}{546}
-\indexentry{接收域和拒绝域|hyperpage}{548}
-\indexentry{第一类错误|hyperpage}{548}
-\indexentry{第二类错误|hyperpage}{548}
-\indexentry{显著性水平|hyperpage}{548}
-\indexentry{双边备择假设与双边假设检验|hyperpage}{548}
-\indexentry{单边检验|hyperpage}{548}
-\indexentry{无偏性|hyperpage}{560}
-\indexentry{有效性|hyperpage}{561}
-\indexentry{一致性|hyperpage}{561}
+\indexentry{伴随矩阵的特征值|hyperpage}{458}
+\indexentry{特征值不等式|hyperpage}{458}
+\indexentry{行均和定理|hyperpage}{459}
+\indexentry{矩阵相似|hyperpage}{462}
+\indexentry{正定的必要条件|hyperpage}{474}
+\indexentry{矩阵合同|hyperpage}{480}
+\indexentry{指数分布|hyperpage}{508}
+\indexentry{正态分布及其分布函数|hyperpage}{509}
+\indexentry{对称性|hyperpage}{509}
+\indexentry{和一性|hyperpage}{509}
+\indexentry{标准正态分布|hyperpage}{509}
+\indexentry{标准正态分布的分布函数和|hyperpage}{510}
+\indexentry{一维随机变量函数的数学期望|hyperpage}{520}
+\indexentry{最值表达式|hyperpage}{521}
+\indexentry{方差与标准差|hyperpage}{521}
+\indexentry{方差与期望的联系|hyperpage}{522}
+\indexentry{重期望公式|hyperpage}{522}
+\indexentry{全方差公式|hyperpage}{522}
+\indexentry{二维均匀分布的随机变量的概率密度|hyperpage}{522}
+\indexentry{随机变量的相关性定义|hyperpage}{524}
+\indexentry{独立性与相关性的判定|hyperpage}{524}
+\indexentry{在条件分布下的相关系数|hyperpage}{527}
+\indexentry{Bernoulli 大数定律|hyperpage}{529}
+\indexentry{Chebyshev 大数定律|hyperpage}{529}
+\indexentry{Khinchin 大数定律|hyperpage}{530}
+\indexentry{Levy Lindeberg 中心极限定理|hyperpage}{531}
+\indexentry{卡方分布|hyperpage}{535}
+\indexentry{区间估计|hyperpage}{544}
+\indexentry{$\sigma^{2} $ 已知时 $ \mu $ 的置信区间|hyperpage}{545}
+\indexentry{$\sigma^{2} $ 未知时 $ \mu $ 的置信区间|hyperpage}{545}
+\indexentry{$\mu$ 未知时 $\sigma^2$ 的置信区间|hyperpage}{546}
+\indexentry{单侧置信下限|hyperpage}{547}
+\indexentry{单侧置信上限|hyperpage}{547}
+\indexentry{接收域和拒绝域|hyperpage}{549}
+\indexentry{第一类错误|hyperpage}{549}
+\indexentry{第二类错误|hyperpage}{549}
+\indexentry{显著性水平|hyperpage}{549}
+\indexentry{双边备择假设与双边假设检验|hyperpage}{549}
+\indexentry{单边检验|hyperpage}{549}
+\indexentry{无偏性|hyperpage}{561}
+\indexentry{有效性|hyperpage}{562}
+\indexentry{一致性|hyperpage}{563}

@@ -390,7 +390,7 @@
 
 \begin{example}
     已知函数 $f(x)\in C[0,1]\cap D(0,1)$, 且 $f(0)=0,~f(1)=\dfrac{1}{2}$, 
-    证明存在 $\xi,\eta\in(0,1),~\xi\neq\eta$, 使得 $f'(\xi)+f'(\eta)=\xi+\eta.$
+    证明存在 $\xi,\eta\in(0,1),~\xi\neq\eta$, 使得 $$f'(\xi)+f'(\eta)=\xi+\eta.$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
     要证 $f'(\xi)+f'(\eta)=\xi+\eta$, 即证 $f'(\xi)-\xi=\eta-f'(\eta)$, 为此构造辅助函数
@@ -460,6 +460,37 @@
 
 \subsubsection{层次分析法}
 
+\begin{example}
+    设 $f(x)\in C[a,b]\cap D^2(a,b),~f(a)=f(b)=0,~f_+'(a)>0$, 证明: $\exists\xi\in(a,b)$, 使得 $f''(\xi)<0.$
+\end{example}
+\begin{solution}
+    如图 \ref{Lagrangexi1xi2eta} 所示, 因为 $f_+'(a)=\displaystyle\lim_{x\to a^+}\dfrac{f(x)-f(a)}{x-a}$, 且 $f(a)=0$, 因此 $\displaystyle\lim_{x\to a^+}\dfrac{f(x)}{x-a}>0$, 所以 $\exists\eta\in(a,b)$, 使得 $f(\eta)>0$, 
+    在 $[a,\eta]$ 和 $[\eta,b]$ 上分别使用 Lagrange 中值定理, 有
+    $$\dfrac{f(\eta)-f(a)}{\eta-a}=f'(\xi_1)>0,~\dfrac{f(b)-f(\eta)}{b-\eta}=f'(\xi_2)<0,~\xi_1\in(a,\eta),\xi_2\in(\eta,b)$$
+    在 $[\xi_1,\xi_2]$ 满足 Lagrange 中值定理条件, 故 $\exists\xi\in(\xi_1,\xi_2)\subset(a,b)$, 使得
+    $$\dfrac{f'(\xi_2)-f'(\xi_1)}{\xi_2-\xi_1}=f''(\xi)<0.$$
+\end{solution}
+
+\begin{example}
+    设函数 $f(x)\in C[0,1]\cap D^3(0,1)$, 且 $f(0)=f(1)=0$, 又 $F(x)=x^3f(x)$, 证明存在 $\xi\in(0,1)$, 使得 $F'''(\xi)=0.$
+\end{example}
+\begin{proof}[{\songti \textbf{证法一}}]
+    如图 \ref{xi1xi2xix3f} 所示, 欲使在 $f'''$ 层次有一中值, 则需要在 $f''$ 层次中寻找一个左右端点皆为 0 值的区间, 同理 $f'$ 层次中也需要寻找两个零点, 
+    由已知 $F(0)=F(1)=0$ 且 $F(x)$ 在 $[0,1]$ 上可导, 故由 Rolle 定理知, 
+    $\exists\xi_1\in(0,1)\text{, 使得 }F'(\xi_1)=0$, 
+    又 $$F'(x)=3x^2f(x)+x^3f'(x),~F''(x)=6xf(x)+6x^2f'(x)+x^3f''(x)$$
+    所以 $F'(0)=0,~F''(0)=0$, 于是由 Rolle 定理知, 
+    $\exists\xi_2\in(0,\xi_1)\text{, 使得 }F''(\xi_2)=0$, 
+    再由 $F''(x)$ 在 $[0,\xi_2]$ 上用 Rolle 定理知, $\exists\xi\in(0,\xi_2)\subset(0,\xi_1)\subset(0,1)\text{, 使得 }F'''(\xi)=0.$
+\end{proof}
+\begin{proof}[{\songti \textbf{证法二}}]
+    $F(x)=x^3f(x)$ 在 $[0,1]$ 上三阶可导, 且 $F(0)=F(1)=0,~F'(0)=F''(0)=0$, 令 $g(x)=x^3$, 则 $g'(x)=3x^2>0$, $g''(x)=6x>0,~\forall x\in(0,1)$, 
+    由 Cauchy 中值定理知, $$\dfrac{F(1)-F(0)}{g(1)-g(0)}=\dfrac{F'(\xi_1)}{g'(\xi_1)}$$
+    然后分别对 $F'(x)$ 与 $g'(x)$ 在 $[0,\xi_1]$ 和 $F''(x)$ 与 $g''(x)$ 在 $[0,\xi_2]$ 上用 Cauchy 中值定理知, 
+    $$0=\dfrac{F'(\xi_1)-F'(\xi_1)}{g'(\xi_1)-g'(0)}=\dfrac{F''(\xi_2)}{g''(\xi_2)}=\dfrac{F''(\xi_2)-F''(0)}{g''(\xi_2)-g''(0)}=\dfrac{F'''(\xi)}{g'''(\xi)}=\dfrac{F'''(\xi)}{6}$$
+    其中 $\xi_2\in(0,\xi_1),~\xi\in(0,\xi_2)\subset(0,1)$, 故得 $F'''(\xi)=0.$
+\end{proof}
+
 \begin{minipage}[b]{0.3\linewidth}
     \begin{figure}[H]
         \centering
@@ -518,37 +549,6 @@
 \end{minipage}
 
 \begin{example}
-    设 $f(x)\in C[a,b]\cap D^2(a,b),~f(a)=f(b)=0,~f_+'(a)>0$, 证明: $\exists\xi\in(a,b)$, 使得 $f''(\xi)<0.$
-\end{example}
-\begin{solution}
-    如图 \ref{Lagrangexi1xi2eta} 所示, 因为 $f_+'(a)=\displaystyle\lim_{x\to a^+}\dfrac{f(x)-f(a)}{x-a}$, 且 $f(a)=0$, 因此 $\displaystyle\lim_{x\to a^+}\dfrac{f(x)}{x-a}>0$, 所以 $\exists\eta\in(a,b)$, 使得 $f(\eta)>0$, 
-    在 $[a,\eta]$ 和 $[\eta,b]$ 上分别使用 Lagrange 中值定理, 有
-    $$\dfrac{f(\eta)-f(a)}{\eta-a}=f'(\xi_1)>0,~\dfrac{f(b)-f(\eta)}{b-\eta}=f'(\xi_2)<0,~\xi_1\in(a,\eta),\xi_2\in(\eta,b)$$
-    在 $[\xi_1,\xi_2]$ 满足 Lagrange 中值定理条件, 故 $\exists\xi\in(\xi_1,\xi_2)\subset(a,b)$, 使得
-    $$\dfrac{f'(\xi_2)-f'(\xi_1)}{\xi_2-\xi_1}=f''(\xi)<0.$$
-\end{solution}
-
-\begin{example}
-    设函数 $f(x)\in C[0,1]\cap D^3(0,1)$, 且 $f(0)=f(1)=0$, 又 $F(x)=x^3f(x)$, 证明存在 $\xi\in(0,1)$, 使得 $F'''(\xi)=0.$
-\end{example}
-\begin{proof}[{\songti \textbf{证法一}}]
-    如图 \ref{xi1xi2xix3f} 所示, 欲使在 $f'''$ 层次有一中值, 则需要在 $f''$ 层次中寻找一个左右端点皆为 0 值的区间, 同理 $f'$ 层次中也需要寻找两个零点, 
-    由已知 $F(0)=F(1)=0$ 且 $F(x)$ 在 $[0,1]$ 上可导, 故由 Rolle 定理知, 
-    $\exists\xi_1\in(0,1)\text{, 使得 }F'(\xi_1)=0$, 
-    又 $$F'(x)=3x^2f(x)+x^3f'(x),~F''(x)=6xf(x)+6x^2f'(x)+x^3f''(x)$$
-    所以 $F'(0)=0,~F''(0)=0$, 于是由 Rolle 定理知, 
-    $\exists\xi_2\in(0,\xi_1)\text{, 使得 }F''(\xi_2)=0$, 
-    再由 $F''(x)$ 在 $[0,\xi_2]$ 上用 Rolle 定理知, $\exists\xi\in(0,\xi_2)\subset(0,\xi_1)\subset(0,1)\text{, 使得 }F'''(\xi)=0.$
-\end{proof}
-\begin{proof}[{\songti \textbf{证法二}}]
-    $F(x)=x^3f(x)$ 在 $[0,1]$ 上三阶可导, 且 $F(0)=F(1)=0,~F'(0)=F''(0)=0$, 令 $g(x)=x^3$, 则 $g'(x)=3x^2>0$, $g''(x)=6x>0,~\forall x\in(0,1)$, 
-    由 Cauchy 中值定理知, $$\dfrac{F(1)-F(0)}{g(1)-g(0)}=\dfrac{F'(\xi_1)}{g'(\xi_1)}$$
-    然后分别对 $F'(x)$ 与 $g'(x)$ 在 $[0,\xi_1]$ 和 $F''(x)$ 与 $g''(x)$ 在 $[0,\xi_2]$ 上用 Cauchy 中值定理知, 
-    $$0=\dfrac{F'(\xi_1)-F'(\xi_1)}{g'(\xi_1)-g'(0)}=\dfrac{F''(\xi_2)}{g''(\xi_2)}=\dfrac{F''(\xi_2)-F''(0)}{g''(\xi_2)-g''(0)}=\dfrac{F'''(\xi)}{g'''(\xi)}=\dfrac{F'''(\xi)}{6}$$
-    其中 $\xi_2\in(0,\xi_1),~\xi\in(0,\xi_2)\subset(0,1)$, 故得 $F'''(\xi)=0.$
-\end{proof}
-
-\begin{example}
     设函数 $\displaystyle f(x)\in C[a,b]\cap D^5(a,b)$, 证明: $\exists\xi\in(a,b)$, 使得
     $$f(b)=f(a)+\dfrac{1}{6}(b-a)\qty[f'(a)+f'(b)+4f'\qty(\dfrac{a+b}{2})]-\dfrac{(b-a)^5}{2880}f^{(5)}(\xi).$$
 \end{example}
@@ -571,7 +571,7 @@
 \subsubsection{特殊函数作差法}
 
 \begin{example}
-    设 $f(x)\in C\qty[0,\sqrt{3}]\cap D^2\qty(0,\sqrt{3})$, 且 $f(0)=0,~f(1)=\dfrac{\pi}{4},~f\qty(\sqrt{3})=\dfrac{\pi}{3}$, 证明: $\exists\xi\in(0,\sqrt{3})$, 使得 $f''(\xi)=-\dfrac{2\xi}{1+\xi^2}f'(\xi).$
+    设 $f(x)\in C\qty[0,\sqrt{3}]\cap D^2\qty(0,\sqrt{3})$, 且 $f(0)=0,~f(1)=\dfrac{\pi}{4},~f\qty(\sqrt{3})=\dfrac{\pi}{3}$, 证明: $\exists\xi\in(0,\sqrt{3})$, 使得 $$f''(\xi)=-\dfrac{2\xi}{1+\xi^2}f'(\xi).$$
 \end{example}
 \begin{proof}[{\songti \textbf{证: }}]
     如图 \ref{pi3pi4xi1xi2} 所示, 欲证在 $f''$ 层次有一中值, 则需寻找在 $f'$ 层次的两个过渡中值, 那么就需要在 $f$ 层次, 即通过作差的方法将第一象限的两个坐标点, 向下移动到 $x$ 轴, 使得在 $x$ 轴上存在 3 个零点, 
@@ -626,7 +626,7 @@
 一般待证式中, 出现的导函数阶数是连续的, 即 0 与 1 或 1 与 2, 亦或常数与导函数直接相等的类型, 当缺失一阶导函数的时候, 需要人为补充一阶导, 之后再构造辅助函数.
 
 \begin{example}
-    设函数 $f(x)\in C[a,b]\cap D^2(a,b)$, 且 $f(a)=f'(a)=f''(a)=f(b)=0$, 证明: $\exists \xi\in(a,b)$, 使得 $(\xi-a)^2f''(\xi)-2f(\xi)=0.$
+    设函数 $f(x)\in C[a,b]\cap D^2(a,b)$, 且 $f(a)=f'(a)=f''(a)=f(b)=0$, 证明: $\exists \xi\in(a,b)$, 使得 $$(\xi-a)^2f''(\xi)-2f(\xi)=0.$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
     先令\footnote{因为缺少一阶导项, 故考虑人为补充, 又由待证式的结构不难想到 $\qty(gf'-fg')'$ 其中 $g=(x-a)^2$.} $F(x)=(x-a)^2f'(x)-2f(x)(x-a)$, 则 $F(a)=0$, 欲再寻找一点 $\eta$, 使得 $F(\eta)=0$, 为此构造辅助函数
