@@ -99,7 +99,7 @@
 \end{example}
 \begin{proof}[{\songti \textbf{证法一}}]
     用数学归纳法可证: $0<x_n<3~  (n=1,2,\cdots)$, \\
-    因为 $x_{n+1}x-{n}=\sqrt{6+x_n}-\sqrt{6+x_{n-1}}=\dfrac{x_n-x_{n-1}}{\sqrt{6+x_n}+\sqrt{6+x_{n-1}}}$, 所以 $x_{n+1}-x_n$ 与 $x_n-x_{n-1}$ 同号, 
+    因为 $$x_{n+1}x-{n}=\sqrt{6+x_n}-\sqrt{6+x_{n-1}}=\dfrac{x_n-x_{n-1}}{\sqrt{6+x_n}+\sqrt{6+x_{n-1}}}$$ 所以 $x_{n+1}-x_n$ 与 $x_n-x_{n-1}$ 同号, 
     又 $x_2=\sqrt{6+\sqrt{6}}>\sqrt{6}=x_1$, 所以 $x_{n+1}>x_{n}$, 即 $\{x_n\}\nearrow 3$, 由单调有界准则知, $\{x_n\}$ 收敛.
 \end{proof}
 \begin{proof}[{\songti \textbf{证法二}}]
@@ -151,8 +151,8 @@
 \end{example}
 \begin{solution}
     \textbf{法一: }(用单调有界准则) 若 $x_1=\sqrt{c}$, 则 $x_n=\sqrt{c}~  (\forall n\in\mathbb{N}),~\lim\limits_{n\to\infty}x_n=\sqrt{c}$, 
-    若 $x_1>\sqrt{c}$, 因 $f(x):=\dfrac{c(1+x_n)}{c+x}=c-\dfrac{c(c-1)}{c+x}$ 严格 $\nearrow$, 故 $\forall n\in\mathbb{N}:x_n>\sqrt{c}\Rightarrow x_{n+1}=\dfrac{c(1+x_n)}{c+x_n}=f(x_n)>f\left(\sqrt{c}\right)=\sqrt{c}$, 
-    由 $x_1>\sqrt{c}$ 可递推出 $x_n\sqrt{c}$, 又因为 $x_{n+1}-x_{n}=\dfrac{c-x_n^2}{c+x_n}<0$, 知 $x_n$ 严格 $\nearrow$, 故 $\{x_n\}$ 收敛, 
+    若 $x_1>\sqrt{c}$, 因 $$f(x):=\dfrac{c(1+x_n)}{c+x}=c-\dfrac{c(c-1)}{c+x}$$ 严格 $\nearrow$, 故 $$\forall n\in\mathbb{N}:x_n>\sqrt{c}\Rightarrow x_{n+1}=\dfrac{c(1+x_n)}{c+x_n}=f(x_n)>f\left(\sqrt{c}\right)=\sqrt{c}$$, 
+    由 $x_1>\sqrt{c}$ 可递推出 $x_n\sqrt{c}$, 又因为 $$x_{n+1}-x_{n}=\dfrac{c-x_n^2}{c+x_n}<0$$, 知 $x_n$ 严格 $\nearrow$, 故 $\{x_n\}$ 收敛, 
     同理可证, 当 $0<x_1<\sqrt{c}$ 时, $x_n\nearrow\sqrt{c}$, 综上, $\{x_n\}$ 单调有界, 极限存在, 令递推式 $\dfrac{c(1+x_n)}{c+x_n}$ 两边取极限, 得极限为 $\sqrt{c}.$\\
     \textbf{法二: }(用压缩映射) 因为 $x_n>0$, 且 $x>0$ 时, $f'(x)=\left[\dfrac{c(1+x)}{c+x}\right]'=\dfrac{c(c-1)}{(c+x)^2}>0$, 又 $c>1$ 知
     $$0<f'(x)=\dfrac{c(c-1)}{(c+x)^2}\leqslant\dfrac{c(c-1)}{c^2}=1-\dfrac{1}{c}<1~  (\forall x>0)$$
@@ -166,8 +166,8 @@
     设 $a,x_0>0,~x_{n+1}=\dfrac{1}{2}\left(x_n+\dfrac{a}{x_n}\right)~  (n=0,1,\cdots)$, 证明数列 $\{x_n\}$ 收敛, 并求其值.
 \end{example}
 \begin{proof}[{\songti \textbf{证法一}}]
-    由算术平均数大于几何平均数得 $x_{n+1}=\dfrac{1}{2}\left( x_{n}+\dfrac{a}{x_{n}}\right) \geqslant \sqrt{a}~  (n= 0,1,2,\cdots) $, 于是
-    $\dfrac{x_{n+1}}{x_{n}}=\dfrac{1}{2}\left( 1+\dfrac{a}{x_{n}^{2}}\right) \leqslant 1$, 即 $x_{n+1}\leqslant x_{n}$, 从而数列 $\{x_n\}\searrow\sqrt{a}$, 故数列收敛, 
+    由算术平均数大于几何平均数得 $$x_{n+1}=\dfrac{1}{2}\left( x_{n}+\dfrac{a}{x_{n}}\right) \geqslant \sqrt{a}~  (n= 0,1,2,\cdots) $$ 于是
+    $$\dfrac{x_{n+1}}{x_{n}}=\dfrac{1}{2}\left( 1+\dfrac{a}{x_{n}^{2}}\right) \leqslant 1$$ 即 $x_{n+1}\leqslant x_{n}$, 从而数列 $\{x_n\}\searrow\sqrt{a}$, 故数列收敛, 
     设 $\lim\limits_{n\to\infty}x_n=A$, 则由递推关系式两边取极限解得 $A=\pm\sqrt{a}$, 因为 $x_n\geqslant \sqrt{a}$, 所以极限为 $\sqrt{a}.$
 \end{proof}
 \begin{proof}[{\songti \textbf{证法二}}]
@@ -289,9 +289,9 @@
     \textbf{法二: }
     因为 $ x_{n}>0(n=1,2, \cdots),~C>1 $, 且
     $$x_{n+2}-x_{n+1}=\dfrac{C\left(1+x_{n+1}\right)}{C+x_{n+1}}-x_{n+1}=\dfrac{C-x_{n+1}^{2}}{C+x_{n+1}}=\dfrac{C-\left(\dfrac{C\left(1+x_{n}\right)}{C+x_{n}}\right)^{2}}{C+\dfrac{C\left(1+x_{n}\right)}{C+x_{n}}}=\dfrac{(C-1)\left(C-x_{n}^{2}\right)}{\left(C+2 x_{n}+1\right)\left(C+x_{n}\right)}$$
-    所以 $ \dfrac{x_{n+2}-x_{n+1}}{x_{n+1}-x_{n}}=\dfrac{\dfrac{(C-1)\left(C-x_{n}^{2}\right)}{\left(C+2 x_{n}+1\right)\left(C+x_{n}\right)}}{\dfrac{C-x_{n}^{2}}{C+x_{n}}}=\dfrac{C-1}{C+2 x_{n}+1}>0$, 
+    所以 $$ \dfrac{x_{n+2}-x_{n+1}}{x_{n+1}-x_{n}}=\dfrac{\dfrac{(C-1)\left(C-x_{n}^{2}\right)}{\left(C+2 x_{n}+1\right)\left(C+x_{n}\right)}}{\dfrac{C-x_{n}^{2}}{C+x_{n}}}=\dfrac{C-1}{C+2 x_{n}+1}>0$$
     于是 $ x_{n+2}-x_{n+1} $ 与 $ x_{n+1}-x_{n} $ 同号, 从而知 $ \left\{x_{n}\right\} $ 为单调递增数列, 
-    又由 $ 0<x_{n+1}=\dfrac{C\left(1+x_{n}\right)}{C+x_{n}}<\dfrac{C\left(1+x_{n}\right)}{1+x_{n}}=C$, 可知数列 $ \left\{x_{n}\right\} $ 有界, 
+    又由 $$ 0<x_{n+1}=\dfrac{C\left(1+x_{n}\right)}{C+x_{n}}<\dfrac{C\left(1+x_{n}\right)}{1+x_{n}}=C$$ 可知数列 $ \left\{x_{n}\right\} $ 有界, 
     从而由单调有界原理知数列 $ \left\{x_{n}\right\} $ 收敛, 不妨记 $ \displaystyle\lim _{n \to \infty} x_{n}=l$, 
     则由递推关系式两边取极限得 $ l=\dfrac{C(1+l)}{C+l}$, 解得 $ l=\pm \sqrt{C}$, 而由 $ x_{n}>0$, 知 $ l \geqslant 0$, 故取 $ l=\sqrt{C}$, 
     即得 $ \displaystyle\lim _{n \to \infty} x_{n}=\sqrt{C} .$\\

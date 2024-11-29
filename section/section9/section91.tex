@@ -150,6 +150,183 @@
     把行列式的某一行 (列) 的各元素乘以同一数然后加到另一行 (列) 对应的元素上, 行列式不变.
 \end{theorem}
 
+\begin{example}
+    设矩阵 $\vb*{A}=\begin{pmatrix} a_{11} & a_{12} & 1 \\ a_{21} & a_{22} & 1 \\ a_{31} & a_{32} & 1 \\\end{pmatrix},~y=f(x)$ 是连续函数, 点 $A_{i}(a_{i1},a_{i2})~(i=1,2,3)$ 为曲线 $y=f(x)$ 上三个不同点, 记三角形 $\bigtriangleup A_1A_2A_3$ 的面积为 $S_{\bigtriangleup A_1A_2A_3}$, 则下列说法正确的是 (\quad).
+    \begin{tasks}(2)
+        \task $\rank\vb*{A}=1\text{ 或 }2,~\det\vb*{A}=S_{\bigtriangleup A_1A_2A_3}$
+        \task $\rank\vb*{A}=1\text{ 或 }2,~\det\vb*{A}=2S_{\bigtriangleup A_1A_2A_3}$
+        \task $\rank\vb*{A}=2\text{ 或 }3,~\det\vb*{A}=S_{\bigtriangleup A_1A_2A_3}$
+        \task $\rank\vb*{A}=2\text{ 或 }3,~\det\vb*{A}=2S_{\bigtriangleup A_1A_2A_3}$
+    \end{tasks}
+\end{example}
+
+\begin{solution}
+    如图 \ref{sjiehanglsyouxtji} 所示, 含 “1” 列的三阶行列式等于平行六面体 $P-OA_1A_2A_3$ 的有向体积, 当 $\overrightarrow{OA_1} ,\overrightarrow{OA_2} ,\overrightarrow{OA_3} $ 共面不共线时, 该平行六面体的体积为 $0$, 且 $\rank\vb*{A}=2$, 当 $\overrightarrow{OA_1} ,\overrightarrow{OA_2} ,\overrightarrow{OA_3} $ 不共面时, $\rank\vb*{A}=3$.
+    \begin{figure}[H]
+        \centering
+        \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+        \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+        %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+        %Straight Lines [id:da20382206865087626] 
+        \draw    (491.34,197.81) -- (632.12,197.81) ;
+        \draw [shift={(634.12,197.81)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+        %Straight Lines [id:da18857754521279135] 
+        \draw    (491.34,197.81) -- (417.87,262.97) ;
+        \draw [shift={(416.38,264.3)}, rotate = 318.43] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+        %Straight Lines [id:da7776725180589441] 
+        \draw    (491.34,197.81) -- (491.34,70.2) ;
+        \draw [shift={(491.34,68.2)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+        %Straight Lines [id:da6633859303056509] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (491.34,197.81) -- (600.79,132.09) ;
+        \draw [shift={(602.5,131.06)}, rotate = 149.01] [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+        %Straight Lines [id:da00562488690732188] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (491.34,197.81) -- (514.56,168.83) ;
+        \draw [shift={(515.81,167.27)}, rotate = 128.71] [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+        %Straight Lines [id:da46359590583857657] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (491.34,197.81) -- (420.4,132.42) ;
+        \draw [shift={(418.93,131.06)}, rotate = 42.67] [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+        %Shape: Polygon [id:ds25999654756750057] 
+        \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=0.45 ] (418.93,131.06) -- (602.5,131.06) -- (515.81,167.27) -- cycle ;
+        %Straight Lines [id:da6498067396133682] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (602.5,131.06) -- (626.98,100.52) ;
+        %Straight Lines [id:da6398150627428405] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (515.81,167.27) -- (443.4,100.52) ;
+        %Straight Lines [id:da4103254568966608] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (418.93,131.06) -- (443.4,100.52) ;
+        %Straight Lines [id:da8745871832428125] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (515.81,167.27) -- (626.98,100.52) ;
+        %Straight Lines [id:da9014665955789909] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (626.98,100.52) -- (554.57,33.76) ;
+        %Straight Lines [id:da31721325149361723] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (443.4,100.52) -- (554.57,33.76) ;
+        %Straight Lines [id:da5853440026382923] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ] [dash pattern={on 0.84pt off 2.51pt}]  (530.09,64.3) -- (554.57,33.76) ;
+        %Straight Lines [id:da018444457149563] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ] [dash pattern={on 0.84pt off 2.51pt}]  (418.93,131.06) -- (530.09,64.3) ;
+        %Straight Lines [id:da37422004513113794] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ] [dash pattern={on 0.84pt off 2.51pt}]  (602.5,131.06) -- (530.09,64.3) ;
+        %Straight Lines [id:da6574486979884699] 
+        \draw    (133.84,191.17) -- (274.62,191.17) ;
+        \draw [shift={(276.62,191.17)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+        %Straight Lines [id:da1818030714615222] 
+        \draw    (133.84,191.17) -- (60.38,256.33) ;
+        \draw [shift={(58.88,257.65)}, rotate = 318.43] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+        %Straight Lines [id:da8683567459389139] 
+        \draw    (133.84,191.17) -- (133.84,63.56) ;
+        \draw [shift={(133.84,61.56)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+        %Straight Lines [id:da06489442305353244] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (133.84,191.17) -- (243.29,125.45) ;
+        \draw [shift={(245.01,124.42)}, rotate = 149.01] [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+        %Straight Lines [id:da8445420371786283] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (133.84,191.17) -- (154.42,153.23) ;
+        \draw [shift={(155.37,151.47)}, rotate = 118.47] [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+        %Straight Lines [id:da172209488567292] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (133.84,191.17) -- (67.7,178.9) ;
+        \draw [shift={(65.73,178.53)}, rotate = 10.51] [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+        %Straight Lines [id:da5713393377025349] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (155.37,151.47) -- (266.53,84.72) ;
+        %Straight Lines [id:da3376780505283008] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (87.26,138.84) -- (198.43,72.08) ;
+        %Straight Lines [id:da7556237923546365] 
+        \draw    (65.73,178.53) -- (245.01,124.42) ;
+        %Straight Lines [id:da07651078675235445] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (245.01,124.42) -- (266.53,84.72) ;
+        %Straight Lines [id:da5032917543193056] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (65.73,178.53) -- (87.26,138.84) ;
+        %Straight Lines [id:da30030976087464056] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (155.37,151.47) -- (87.26,138.84) ;
+        %Straight Lines [id:da8146925186002858] 
+        \draw [color={rgb, 255:red, 155; green, 155; blue, 155 }  ,draw opacity=1 ]   (266.53,84.72) -- (198.43,72.08) ;
+
+        % Text Node
+        \draw (619.81,129.84) node   [align=left] {\begin{minipage}[lt]{22.54pt}\setlength\topsep{0pt}
+        $\displaystyle A_{1}$
+        \end{minipage}};
+        % Text Node
+        \draw (408.35,126.86) node   [align=left] {\begin{minipage}[lt]{22.54pt}\setlength\topsep{0pt}
+        $\displaystyle A_{2}$
+        \end{minipage}};
+        % Text Node
+        \draw (523.38,155.82) node   [align=left] {\begin{minipage}[lt]{22.54pt}\setlength\topsep{0pt}
+        $\displaystyle A_{3}$
+        \end{minipage}};
+        % Text Node
+        \draw (501.83,213.03) node   [align=left] {\begin{minipage}[lt]{22.54pt}\setlength\topsep{0pt}
+        $\displaystyle O$
+        \end{minipage}};
+        % Text Node
+        \draw (413.83,268.98) node   [align=left] {\begin{minipage}[lt]{22.54pt}\setlength\topsep{0pt}
+        $\displaystyle x_{1}$
+        \end{minipage}};
+        % Text Node
+        \draw (651.49,199.05) node   [align=left] {\begin{minipage}[lt]{22.54pt}\setlength\topsep{0pt}
+        $\displaystyle x_{2}$
+        \end{minipage}};
+        % Text Node
+        \draw (488.25,63.88) node   [align=left] {\begin{minipage}[lt]{22.54pt}\setlength\topsep{0pt}
+        $\displaystyle x_{3}$
+        \end{minipage}};
+        % Text Node
+        \draw (644.71,143.94) node   [align=left] {\begin{minipage}[lt]{67.81pt}\setlength\topsep{0pt}
+        $\displaystyle {\textstyle \boldsymbol{a} \ ( a_{11} ,a_{12} ,1)}$
+        \end{minipage}};
+        % Text Node
+        \draw (375.32,147.09) node   [align=left] {\begin{minipage}[lt]{69.02pt}\setlength\topsep{0pt}
+        $\displaystyle {\textstyle \boldsymbol{b} \ ( a_{21} ,a_{22} ,1)}$
+        \end{minipage}};
+        % Text Node
+        \draw (563.73,175.82) node   [align=left] {\begin{minipage}[lt]{67.09pt}\setlength\topsep{0pt}
+        $\displaystyle {\textstyle \boldsymbol{c} \ ( a_{31} ,a_{32} ,1)}$
+        \end{minipage}};
+        % Text Node
+        \draw (553.07,23.83) node   [align=left] {\begin{minipage}[lt]{11.56pt}\setlength\topsep{0pt}
+        $\displaystyle P$
+        \end{minipage}};
+        % Text Node
+        \draw (261.38,132.64) node   [align=left] {\begin{minipage}[lt]{22.54pt}\setlength\topsep{0pt}
+        $\displaystyle A_{1}$
+        \end{minipage}};
+        % Text Node
+        \draw (56.19,176.88) node   [align=left] {\begin{minipage}[lt]{22.54pt}\setlength\topsep{0pt}
+        $\displaystyle A_{2}$
+        \end{minipage}};
+        % Text Node
+        \draw (171.88,164.51) node   [align=left] {\begin{minipage}[lt]{22.54pt}\setlength\topsep{0pt}
+        $\displaystyle A_{3}$
+        \end{minipage}};
+        % Text Node
+        \draw (144.33,206.39) node   [align=left] {\begin{minipage}[lt]{22.54pt}\setlength\topsep{0pt}
+        $\displaystyle O$
+        \end{minipage}};
+        % Text Node
+        \draw (56.33,262.33) node   [align=left] {\begin{minipage}[lt]{22.54pt}\setlength\topsep{0pt}
+        $\displaystyle x_{1}$
+        \end{minipage}};
+        % Text Node
+        \draw (294,192.41) node   [align=left] {\begin{minipage}[lt]{22.54pt}\setlength\topsep{0pt}
+        $\displaystyle x_{2}$
+        \end{minipage}};
+        % Text Node
+        \draw (130.76,57.24) node   [align=left] {\begin{minipage}[lt]{22.54pt}\setlength\topsep{0pt}
+        $\displaystyle x_{3}$
+        \end{minipage}};
+        % Text Node
+        \draw (200.91,60.51) node   [align=left] {\begin{minipage}[lt]{11.56pt}\setlength\topsep{0pt}
+        $\displaystyle P$
+        \end{minipage}};
+
+
+        \end{tikzpicture}
+        \caption{}
+        \label{sjiehanglsyouxtji}
+    \end{figure}
+    又因为 $$\begin{vmatrix} a_{11} & a_{12} & 1 \\ a_{21} & a_{22} & 1 \\ a_{31} & a_{32} & 1 \\\end{vmatrix}=\begin{vmatrix} a_{11} & a_{12} & 1 \\ a_{21}-a_{11} & a_{22}-a_{12} & 0 \\ a_{31}-a_{11} & a_{32}-a_{12} & 0 \\\end{vmatrix}=\begin{vmatrix} a_{21}-a_{11} & a_{22}-a_{12} \\ a_{31}-a_{11} & a_{32}-a_{12} \\\end{vmatrix}$$
+    二阶行列式 $\begin{vmatrix} a_{21}-a_{11} & a_{22}-a_{12} \\ a_{31}-a_{11} & a_{32}-a_{12} \\\end{vmatrix}$ 的向量张成的面实际上是在二维平面 $x_3=1$ 上, 
+    即由行向量 $\overrightarrow{A_1A_2} =( a_{21}-a_{11} , a_{22}-a_{12} )$ 和 $\overrightarrow{A_1A_3} =(a_{31}-a_{11} , a_{32}-a_{12} )$ 所张成的平行四边形的有向面积, 而该平行四边形的有向面积等于 $2S_{\bigtriangleup A_1A_2A_3}$, 因此选 D.
+\end{solution}
+
 \subsection{几种特殊的行列式}
 
 常见的行列式展开.

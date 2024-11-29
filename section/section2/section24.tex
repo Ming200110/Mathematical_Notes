@@ -67,7 +67,7 @@
 \begin{proof}[{\songti \textbf{证法三}}]
     要证 $f(b)-2f\left(\dfrac{a+b}{2}\right)+f(a)=\dfrac{(b-a)^{2}}{4}f''(\xi)$, 即证
     $$\dfrac{f(b)-2f\left(\dfrac{a+b}{2}\right)+f(a)}{(b-a)^{2}}=\dfrac{1}{4}f''(\xi)$$
-    为此, 构造辅助函数 $F(x)=f(x)-2f\left(\dfrac{a+x}{2}\right)+f(a),~G(x)=(x-a)^{2}$, 则 $F(x),G(x)$ 满足 Cauchy 中值定理的条件, 故由 Cauchy 中值定理得
+    为此, 构造辅助函数 $$F(x)=f(x)-2f\left(\dfrac{a+x}{2}\right)+f(a),\quad G(x)=(x-a)^{2}$$ 则 $F(x),G(x)$ 满足 Cauchy 中值定理的条件, 故由 Cauchy 中值定理得
     $$\dfrac{F(b)}{G(b)}=\dfrac{F(b)-F(a)}{G(b)-G(a)}=\dfrac{F'(\xi_{1})}{G'(\xi_{1})}=\dfrac{f'(\xi_{1})-f'\left(\dfrac{a+\xi_{1}}{2}\right)}{{2(\xi_{1}-a)}}=\dfrac{f''(\xi)\cdot\dfrac{\xi_{1}-a}{2}}{{2(\xi_{1}-a)}}=\dfrac{1}{4}f''(\xi)$$
     其中 $\xi_{1}\in(a,b),\xi\in\left(\dfrac{a+\xi_{1}}{2},\xi_{1}\right)\subset(a,b).$
 \end{proof}
@@ -154,7 +154,7 @@
 
 \begin{example}
     设 $f(x)$ 在 $(-\infty,+\infty)$ 内具有 $n$ 阶导数且满足 $\lim\limits_{x\to\infty}f(x)=c$ ($c$ 为常数), 
-    $\lim\limits_{x\to\infty}f^{(n)}(x)=0$, 证明: $\lim\limits_{x\to\infty}f^{(k)}(x)=0~ (k=1,2,\cdots,n-1).$
+    $\lim\limits_{x\to\infty}f^{(n)}(x)=0$, 证明: $$\lim\limits_{x\to\infty}f^{(k)}(x)=0~ (k=1,2,\cdots,n-1).$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]
     由 Taylor 公式可得:
@@ -235,7 +235,7 @@
         f(0)=f(x)+f'(x)(-x)+\dfrac{1}{2!}f''(\xi_1)x^2\\[6pt]
         f(2)=f(x)+f'(x)(2-x)+\dfrac{1}{2!}f''(\xi_2)(2-x)^2
     \end{cases}$$
-    作差得 $f(0)-f(2)=-2f'(x)+\dfrac{1}{2}f''(\xi_1)x^2-\dfrac{1}{2}f''(\xi_2)(x-2)^2$, 即 
+    作差得 $$f(0)-f(2)=-2f'(x)+\dfrac{1}{2}f''(\xi_1)x^2-\dfrac{1}{2}f''(\xi_2)(x-2)^2$$ 即 
     \begin{flalign*}
         \qty|2f'(x)|=\qty|f(2)-f(0)+\dfrac{1}{2}f''(\xi_1)x^2-\dfrac{1}{2}f''(\xi_2)(x-2)^2|\leqslant |f(2)|+|f(0)|+\qty|\dfrac{1}{2}f''(\xi_1)x^2|+\qty|\dfrac{1}{2}f''(\xi_2)(x-2)^2|
     \end{flalign*}
@@ -248,8 +248,8 @@
 \end{example}
 \begin{solution}
     $\forall x\in(a,+\infty)$ 和 $\forall h>0$, 由在 $x$ 处有一阶 Taylor 公式 $$f(x+h)=f(x)+f'(x)\cdot h+\dfrac{f''(\xi)}{2}\cdot h^2,x<\xi<x+h$$
-    于是 $f'(x)=\dfrac{1}{h}\qty[f(x+h)-f(x)]-\dfrac{f''(\xi)}{2}h$, 从而有 $$|f'(x)|\leqslant \dfrac{1}{h}|f(x+h)-f(x)|+\dfrac{|f''(\xi)|}{2}h=\dfrac{2M_0}{h}+\dfrac{M_2h}{2}$$
-    取 $h=2\sqrt{\dfrac{M_0}{M_2}}$, 则 $|f'(x)|\leqslant 2\sqrt{M_0M_2}\Rightarrow |f'(x)|^2\leqslant 4M_0M_2$, 有 $x$ 的任意性, 得 $M_1^2\leqslant 4M_0M_2.$
+    于是 $$f'(x)=\dfrac{1}{h}\qty[f(x+h)-f(x)]-\dfrac{f''(\xi)}{2}h$$ 从而有 $$|f'(x)|\leqslant \dfrac{1}{h}|f(x+h)-f(x)|+\dfrac{|f''(\xi)|}{2}h=\dfrac{2M_0}{h}+\dfrac{M_2h}{2}$$
+    取 $h=2\sqrt{\dfrac{M_0}{M_2}}$, 则 $$|f'(x)|\leqslant 2\sqrt{M_0M_2}\Rightarrow |f'(x)|^2\leqslant 4M_0M_2$$ 有 $x$ 的任意性, 得 $M_1^2\leqslant 4M_0M_2.$
 \end{solution}
 
 \begin{example}

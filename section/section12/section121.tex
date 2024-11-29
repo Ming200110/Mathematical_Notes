@@ -11,7 +11,7 @@
     \begin{enumerate}[label=(\arabic{*})]
         \item $\rank(\vb*{A})<n $;
         \item $A $ 的列向量组线性相关;
-        \item $\vb*{A B}=0 $ 且 $ \vb*{B} \neq 0$ ;
+        \item $\vb*{A B}=\vb*{0} $ 且 $ \vb*{B} \neq \vb*{0}$ ;
         \item 当 $ m=n $ 时, $ |\vb*{A}|=0 $;
         \item $0$ 是 $\vb*{A}$ 的特征值.
     \end{enumerate}
@@ -55,6 +55,28 @@
     同理对于选项 B, $\vb*{E}+\vb*{\beta\beta}^\top$ 的特征值为 $1$ ($n-1$ 重) 和 $2$, 由零解的充要条件知, 方程组 $\qty(\vb*{E}+\vb*{\beta\beta}^\top)\vb*{x}=\vb*{0}$ 只有零解;\\ 
     对于选项 C, 令 $\vb*{x}=\vb*{P\alpha}$, 则 $\qty(\vb*{\alpha}^\top\vb*{P}\vb*{\alpha P}^{-1}-\vb*{\alpha\alpha}^\top)\vb*{P\alpha}=\vb*{\alpha}^\top\vb*{P\alpha}\cdot\vb*{\alpha}-\vb*{\alpha}\cdot \vb*{\alpha}^\top\vb*{P\alpha}=\vb*{0}$ (这是因为 $\vb*{\alpha}^\top\vb*{A}\vb*{\beta}$ 为一个数, 可类比二次型 $\vb*{x}^\top\vb*{Ax}$ 理解);\\ 
     对于选项 D, 令 $\vb*{x}=\vb*{P}^{-1}\vb*{\beta}$ 同 C 分析可得 $\vb*{\alpha}^\top\vb*{P}^{-1}\vb*{\beta}\cdot\vb*{\beta}-\vb*{\beta}\cdot \vb*{\alpha}^\top\vb*{P}^{-1}\vb*{\beta}=0$, 综上所述, 选 B.
+\end{solution}
+
+\begin{example}
+    设 $\vb*{A}=\mqty(1&1&1&1\\ a&b&c&d\\ a^2&b^2&c^2&d^2),a,b,c,d$ 为互不相等的实数, 则下列命题正确的个数是 (\quad).
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 方程组 $\vb*{Ax}=\vb*{0}$ 有非零解;
+        \item 方程组 $\vb*{A}^\top\vb*{Ax}=\vb*{0}$ 有非零解;
+        \item 方程组 $\vb*{A}^\top \vb*{x}=\vb*{0}$ 只有零解;
+        \item 方程组 $\vb*{AA}^\top\vb*{x}=\vb*{0}$ 只有零解.
+    \end{enumerate}
+    \begin{tasks}(4)
+        \task 1
+        \task 2
+        \task 3
+        \task 4
+    \end{tasks}
+\end{example}
+\begin{solution}
+    因为 $\begin{vmatrix} 1 & 1 & 1 \\ a & b & c \\ a^2 & b^2 & c^2 \\\end{vmatrix}=(b-a)(c-a)(c-b)\neq0$, 所以 $\rank\vb*{A}=3$, 则 $$
+    \rank\vb*{A}=\rank\vb*{A}^\top=\rank\qty(\vb*{A}^\top\vb*{A})=\rank\qty(\vb*{AA}^\top)=3
+    $$
+    注意各系数矩阵 $\vb*{A}_{3\times 4},~\vb*{A}_{4\times 3}^\top, ~\qty(\vb*{A}^\top\vb*{A})_{4\times 4},~\qty(\vb*{AA}^\top)_{3\times 3}$ 的列数, 从而 $\vb*{Ax}=\vb*{0}$ 有非零解, $\vb*{A}^\top\vb*{Ax}=\vb*{0}$ 有非零解, $\vb*{A}^\top \vb*{x}=\vb*{0}$ 只有零解, $\vb*{AA}^\top\vb*{x}=\vb*{0}$ 只有零解, 因此 4 个命题均成立, 选 D.
 \end{solution}
 
 \begin{definition}[齐次线性方程组的基础解系]

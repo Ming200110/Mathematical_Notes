@@ -163,9 +163,9 @@
 \begin{theorem}[第二类曲线积分化为定积分]
     \index{第二类曲线积分化为定积分}
     \begin{enumerate}[label=(\arabic{*})]
-        \item 设函数 $P(x,y),~Q(x,y)$ 在有向曲线 $L$ 上连续, $L$ 的参数方程为 $\begin{cases}
+        \item 设函数 $P(x,y),~Q(x,y)$ 在有向曲线 $L$ 上连续, $L$ 的参数方程为 $$\begin{cases}
                       x=x(t) \\ y=y(t)
-                  \end{cases}(\alpha\leqslant t\leqslant \beta)$, 且 $x'(t),~y'(t)$ 连续, 而 $t=\alpha$ 时对应于起点 $A$, $t=\beta$ 时对应于终点 $B$, 则
+                  \end{cases}(\alpha\leqslant t\leqslant \beta)$$ 且 $x'(t),~y'(t)$ 连续, 而 $t=\alpha$ 时对应于起点 $A$, $t=\beta$ 时对应于终点 $B$, 则
               \begin{flalign*}
                   \int_{\widehat{AB} }P(x,y)\dd x & =\int_{\alpha}^{\beta}P[x(t),y(t)]x'(t)\dd t \\
                   \int_{\widehat{AB} }Q(x,y)\dd y & =\int_{\alpha}^{\beta}Q[x(t),y(t)]y'(t)\dd t
@@ -182,9 +182,9 @@
                   \int_{\widehat{AB} }P(x,y)\dd x & =\int_{c}^{d}P[x(y),y]x'(y)\dd y \\
                   \int_{\widehat{AB} }Q(x,y)\dd y & =\int_{c}^{d}Q[x(y),y]\dd y
               \end{flalign*}
-        \item 对于空间曲线积分, 如果函数 $P(x,y,z),~Q(x,y,z),~R(x,y,z)$ 在有向曲线 $\Gamma$ 上连续, $\Gamma$ 的参数方程为 $\begin{cases}
+        \item 对于空间曲线积分, 如果函数 $P(x,y,z),~Q(x,y,z),~R(x,y,z)$ 在有向曲线 $\Gamma$ 上连续, $\Gamma$ 的参数方程为 $$\begin{cases}
                       x=x(t) \\ y=y(t) \\ z=z(t)
-                  \end{cases}(\alpha \leqslant t\leqslant \beta)$, 且 $x'(t),~y'(t),~z'(t)$ 连续, 而 $t=\alpha$ 时对应于起点 $A$, $t=\beta$ 时对应于终点 $B$, 则
+                  \end{cases}(\alpha \leqslant t\leqslant \beta)$$ 且 $x'(t),~y'(t),~z'(t)$ 连续, 而 $t=\alpha$ 时对应于起点 $A$, $t=\beta$ 时对应于终点 $B$, 则
               \begin{flalign*}
                   \int_{\widehat{AB} }P(x,y,z)\dd x & =\int_{\alpha}^{\beta}P[x(t),y(t),z(t)]x'(t)\dd t  \\
                   \int_{\widehat{AB} }Q(x,y,z)\dd y & =\int_{\alpha}^{\beta}Q[x(t),y(t),z(t)]y'(t)\dd t  \\
@@ -274,7 +274,7 @@
     $$\displaystyle\oint_L\mathrm{e}^{x^2y^2}\qty[\qty(y-\dfrac{1}{x})\dd x+\qty(x+\dfrac{1}{y})\dd y].$$
 \end{example}
 \begin{solution}
-    令 $u=\dfrac{y}{x},~v=xy$, 那么 $x=\sqrt{\dfrac{v}{u}},~y=\sqrt{uv}$, $\dd u=\dd \qty(\dfrac{y}{x})=\dfrac{x\dd y-y\dd x}{x^2}$, $\dd v=\dd (xy)=y\dd x+x\dd y$,
+    令 $u=\dfrac{y}{x},~v=xy$, 那么 $$x=\sqrt{\dfrac{v}{u}},~y=\sqrt{uv},~\dd u=\dd \qty(\dfrac{y}{x})=\dfrac{x\dd y-y\dd x}{x^2},~\dd v=\dd (xy)=y\dd x+x\dd y$$
     $L'$ 是区域 $D':\dfrac{1}{2}\leqslant u\leqslant 2,~1\leqslant v\leqslant 2$ 的正向边界曲线, 于是
     \begin{flalign*}
         I & =\oint_L\mathrm{e}^{x^2y^2}\qty[\qty(y-\dfrac{1}{x})\dd x+\qty(x+\dfrac{1}{y})\dd y]=\oint_L\mathrm{e}^{x^2y^2}\qty(y\dd x+x\dd y+\dfrac{x}{y}\cdot\dfrac{x\dd y-y\dd x}{x^2})                                             \\
@@ -611,8 +611,8 @@
     \begin{enumerate}[label=(\arabic{*})]
         \item 有 Green 公式得 $$\iint\limits_Du\pdv{v}{x}\dd x\dd y=\oint_{\partial D}uv\dd y-\iint\limits_Dv\pdv{u}{x}\dd x\dd y$$
               令 $u=x,~v=f$, 则有 $\displaystyle\iint\limits_Dx\pdv{f}{x}\dd x\dd y=\int_Lx\cdot f\dd y-\iint\limits_Df(x,y)\dd x\dd y$, 整理得证;
-        \item 由 (1) 可得, $\displaystyle \iint\limits_D f^2\dd x\dd y=\dfrac{1}{2}\int_L f^2(x\dd y-y\dd x)-\dfrac{1}{2}\iint\limits_D\qty(x\pdv{f^2}{x}+y\pdv{f^2}{y})\dd x\dd y$
-              又 $\forall (x,y)\in L$, 有 $f(x,y)=0$, 于是 $\displaystyle \int_Lf^2(x\dd y-y\dd x)=0$, 故 $\displaystyle \iint\limits_D f^2\dd x\dd y=-\dfrac{1}{2}\iint\limits_D\qty(x\pdv{f^2}{x}+y\pdv{f^2}{y})\dd x\dd y$,
+        \item 由 (1) 可得, $$\displaystyle \iint\limits_D f^2\dd x\dd y=\dfrac{1}{2}\int_L f^2(x\dd y-y\dd x)-\dfrac{1}{2}\iint\limits_D\qty(x\pdv{f^2}{x}+y\pdv{f^2}{y})\dd x\dd y$$
+              又 $\forall (x,y)\in L$, 有 $f(x,y)=0$, 于是 $\displaystyle \int_Lf^2(x\dd y-y\dd x)=0$, 故 $$\displaystyle \iint\limits_D f^2\dd x\dd y=-\dfrac{1}{2}\iint\limits_D\qty(x\pdv{f^2}{x}+y\pdv{f^2}{y})\dd x\dd y$$
               于是由 Cauchy-Schwarz 不等式得,
               \begin{flalign*}
                   \iint\limits_D f^2\dd x\dd y & \leqslant \iint\limits_D\qty|xf\pdv{f}{x}+yf\pdv{f}{y}|\dd x\dd y\leqslant \iint\limits_D|f|\sqrt{x^2+y^2}\cdot\sqrt{\qty(\pdv{f}{x})^2+\qty(\pdv{f}{y})^2}\dd x\dd y                                                 \\

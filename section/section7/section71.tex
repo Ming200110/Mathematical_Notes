@@ -386,8 +386,9 @@
 \end{example}
 \begin{solution}
     \textbf{法一: }因为 $\displaystyle  \lim _{x \to 0} \dfrac{\ln (1+x)}{x}=1 $, 所以 $\displaystyle  \lim _{n \to \infty} \dfrac{\ln \left(1+\dfrac{1}{n}\right)}{\dfrac{1}{n}}=1 $, 而级数 $\displaystyle  \sum_{n=1}^{\infty} \dfrac{1}{n} $ 发散, 故由比较判别法的极限形式知, 级数 $\displaystyle  \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.\\
-    \textbf{法二: }利用微分中值定理, 因为 $ \ln x $ 在 $ [1,+\infty) $ 上满足 Lagrange 定理的条件, 所以由 Lagrange 中值定理知, 存在 $ \xi_{n} \in(n, n+1)(n \geqslant 1) $, 有 $ \ln \left(1+\dfrac{1}{n}\right)=\ln (n+1)-\ln n=\dfrac{1}{\xi_{n}} $, 从而有 $ \dfrac{1}{n+1}<   \ln \left(1+\dfrac{1}{n}\right)<\dfrac{1}{n} $, 又级数 $\displaystyle  \sum_{n=1}^{\infty} \dfrac{1}{n+1} $ 发散, 故由比较判别法知, 原级数 $\displaystyle  \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.\\
-    \textbf{法三: }由 Taylor 公式, 有 $ \ln \left(1+\dfrac{1}{n}\right)=\dfrac{1}{n}-\dfrac{1}{2 n^{2}}+o\left(\dfrac{1}{n^{2}}\right) $,
+    \textbf{法二: }利用微分中值定理, 因为 $ \ln x $ 在 $ [1,+\infty) $ 上满足 Lagrange 定理的条件, 所以由 Lagrange 中值定理知, 存在 $ \xi_{n} \in(n, n+1)(n \geqslant 1) $, 有 $$ \ln \left(1+\dfrac{1}{n}\right)=\ln (n+1)-\ln n=\dfrac{1}{\xi_{n}} $$ 
+    从而有 $ \dfrac{1}{n+1}<   \ln \left(1+\dfrac{1}{n}\right)<\dfrac{1}{n} $, 又级数 $\displaystyle  \sum_{n=1}^{\infty} \dfrac{1}{n+1} $ 发散, 故由比较判别法知, 原级数 $\displaystyle  \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.\\
+    \textbf{法三: }由 Taylor 公式, 有 $$ \ln \left(1+\dfrac{1}{n}\right)=\dfrac{1}{n}-\dfrac{1}{2 n^{2}}+o\left(\dfrac{1}{n^{2}}\right) $$
     又 $ \dfrac{1}{2 n^{2}}-o\left(\dfrac{1}{n^{2}}\right) \sim \dfrac{1}{2 n^{2}}(n \to \infty) $, 所以 $ \displaystyle \sum_{n=1}^{\infty}\left(\dfrac{1}{2 n^{2}}-o\left(\dfrac{1}{n^{2}}\right)\right) $ 收敛. 而级数 $ \displaystyle \sum_{n=1}^{\infty} \dfrac{1}{n} $ 发散, 故由级数的性质, 得原级数 $ \displaystyle \sum_{n=1}^{\infty} \ln \left(1+\dfrac{1}{n}\right) $ 发散.\\
     \textbf{法四: }利用级数敛散的定义, 记原级数的部分和为 $\displaystyle  S_{n}=\sum_{k=1}^{n} \ln \left(1+\dfrac{1}{k}\right) $, 则
     $$S_{n}=\sum_{k=1}^{n}\left[\ln \left(1+\dfrac{1}{k}\right)-\ln k\right]=\ln (1+n) \to+\infty \quad(n \to \infty)$$

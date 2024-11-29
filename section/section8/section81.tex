@@ -225,6 +225,21 @@ $$\dfrac{\dd y}{\dd x}=f\left(\dfrac{k u+c_{1}}{u+c_{2}}\right)=g(u), \quad \dfr
     \end{flalign*}
 \end{solution}
 
+\begin{example}
+    设 $L:y=y(x)>0$ 是从点 $A(0,1)$ 到 $B(x,y)$ 的有向光滑曲线, 求满足下列关系式 $y(x)$ 的表达式 $$
+    \int_{L(AB)}\qty(6x^2-x+2x\sqrt{y}) \dd x+\dfrac{1}{2\sqrt{y}} \dd y=2x^3.
+    $$
+\end{example}
+\begin{solution}
+    由题意得 $\displaystyle \int_{0}^{x} \qty(6x^2-x+2x\sqrt{y(x)}+\dfrac{y'(x)}{2\sqrt{y(x)}}) \dd x=2x^3$, 等式两边同时对 $x$ 求导得 $$
+    6x^2-x+2x\sqrt{y(x)}+\dfrac{y'(x)}{2\sqrt{y(x)}}=6x^2\Rightarrow y'(x)+4xy(x)=2x\sqrt{y(x)}
+    $$
+    该方程为 $n=\dfrac{1}{2}$ 的 Bernoulli 方程, 令 $z=y^{1-n}=y^{\frac{1}{2}}$, 化为 $$
+    z'(x)+2xz(x)=x\Rightarrow z(x)=\dfrac{1}{2}+C\e ^{-x^2}
+    $$
+    又 $y(0)=1\Rightarrow z(0)=1\Rightarrow C=\dfrac{1}{2}$, 故 $y(x)=\dfrac{1}{4}\qty(\e ^{-x^2}+1)^2.$
+\end{solution}
+
 \subsection{恰当方程与积分因子}
 
 \subsubsection{恰当方程}

@@ -134,7 +134,7 @@
 \end{solution}
 
 \begin{example}[2019 数二]
-    已知平面区域 $D=\qty{(x,y)\Big| |x|+|y|\leqslant\dfrac{\pi}{2}}$, 记 $\displaystyle I_1=\iint\limits_D\sqrt{x^2+y^2}\dd x\dd y,~I_2=\iint\limits_D\sin\sqrt{x^2+y^2}\dd x\dd y,~I_3=\iint\limits_D\qty(1-\cos\sqrt{x^2+y^2})\dd x\dd y$, 则 (\quad).
+    已知平面区域 $D=\qty{(x,y)\Big| |x|+|y|\leqslant\dfrac{\pi}{2}}$, 记 $$\displaystyle I_1=\iint\limits_D\sqrt{x^2+y^2}\dd x\dd y,~I_2=\iint\limits_D\sin\sqrt{x^2+y^2}\dd x\dd y,~I_3=\iint\limits_D\qty(1-\cos\sqrt{x^2+y^2})\dd x\dd y$$ 则 (\quad).
     \begin{tasks}(4)
         \task $I_3<I_2<I_1$
         \task $I_2<I_1<I_3$
@@ -960,7 +960,7 @@
     % 并令 $u=x^2y^2-t$, 那么 $\displaystyle\int_{0}^{x^2y^2}f\qty(x^2y^2-t)\dd t=\int_{0}^{x^2y^2}f(u)\dd u$, 故上式转为
     % $$f(xy)=x^2y^2+xy\int_{0}^{x^2y^2}f(u)\dd u+A$$
     对等式两边二重积分得 $$A=\iint\limits_D x^2y^2\dd x\dd y+\iint\limits_D\qty[xy\int_{0}^{x^2y^2}f(u)\dd u]\dd x\dd y+A\iint\limits_D \dd x\dd y$$
-    其中 $\displaystyle\iint\limits_D x^2y^2\dd x\dd y=\int_{-1}^{1}x^2\dd x\int_{-1}^{x}y^2\dd y=\dfrac{2}{9},~\iint\limits_D \dd x\dd y=2$,
+    其中 $$\displaystyle\iint\limits_D x^2y^2\dd x\dd y=\int_{-1}^{1}x^2\dd x\int_{-1}^{x}y^2\dd y=\dfrac{2}{9},~\iint\limits_D \dd x\dd y=2$$
     作 $y=-x$, 将 $D$ 划分为关于 $x$ 轴对称的 $D_1$ 和关于 $y$ 轴对称的 $D_2$, 并令函数 $\displaystyle g(x,y)=\int_{0}^{x^2y^2}f(u)\dd u$, 关于 $x$ 和 $y$ 都是奇函数, 利用二重积分的对称性知
     $$\iint\limits_D g(x,y)\dd x\dd y=\iint\limits_{D_1}g(x,y)\dd x\dd y+\iint\limits_{D_2}g(x,y)\dd x\dd y=0$$
     故 $A=-\dfrac{2}{9}$, 又由已知条件 $f(0)=1$, 那么
@@ -1380,11 +1380,12 @@
 \begin{solution}
     将 $x^2+y^2+2z^2\leqslant x+y+2z$ 化为 $$\qty(x-\dfrac{1}{2})^2+\qty(y-\dfrac{1}{2})^2+\qty[\sqrt{2}\qty(z-\dfrac{1}{2})]^2\leqslant 1$$
     于是 $\Omega$ 为一椭球, 令 $u=x-\dfrac{1}{2},~v=y-\dfrac{1}{2},~w=\sqrt{2}\qty(z-\dfrac{1}{2})$, 则区域 $\Omega\to\Omega':u^2+v^2+w^2\leqslant 1$,
-    且 Jacobian 行列式 $\displaystyle J=\pdv{(x,y,z)}{(u,v,w)}=\dfrac{1}{\displaystyle \pdv{(u,v,w)}{(x,y,z)}}=\dfrac{1}{\begin{vmatrix}
+    且 Jacobian 行列式 $$\displaystyle J=\pdv{(x,y,z)}{(u,v,w)}=\dfrac{1}{\displaystyle \pdv{(u,v,w)}{(x,y,z)}}=\dfrac{1}{\begin{vmatrix}
                 1 & 0 & 0        \\
                 0 & 1 & 0        \\
                 0 & 0 & \sqrt{2}
-            \end{vmatrix}}=\dfrac{1}{\sqrt{2}}$, 于是
+            \end{vmatrix}}=\dfrac{1}{\sqrt{2}}$$
+    于是
     \begin{flalign*}
         M & =\iiint\limits_\Omega\qty(x^2+y^2+z^2)\dd x\dd y\dd z=\dfrac{1}{\sqrt{2}}\iiint\limits_{\Omega'}\qty[\qty(u+\dfrac{1}{2})^2+\qty(v+\dfrac{1}{2})^2+\qty(\dfrac{w}{\sqrt{2}}+\dfrac{1}{2})^2]\dd u\dd v\dd w                                          \\
           & =\dfrac{1}{\sqrt{2}}\iiint\limits_{\Omega' }\qty(u^2+v^2+\dfrac{w^2}{2})\dd u\dd v\dd w=\dfrac{1}{\sqrt{2}}\iiint\limits_{\Omega'}\qty(u+v+\dfrac{w}{\sqrt{2}})\dd u\dd v\dd w+\dfrac{1}{\sqrt{2}}\iiint\limits_{\Omega'}\dfrac{3}{4}\dd u\dd v\dd w \\
@@ -1466,7 +1467,7 @@
     由 Cauchy 不等式, 当 $(x,y,z)\in\Omega$, 即 $x^2+y^2+z^2\leqslant 1$ 时, 有
     $$(x+2y-2z)^2\leqslant \left[1^2+2^2+(-2)^2\right]\cdot\left(x^2+y^2+z^2\right)\leqslant 9$$
     于是, $-3\leqslant x+2y-2z\leqslant 3$, 从而 $2\leqslant x+2y-2z+5\leqslant 8$, 故
-    $$\frac{4\sqrt[3]{2}\pi}{3}=\sqrt[3]{2}\iiint\limits_\Omega\dd v\leqslant \iiint\limits_\Omega\sqrt[3]{x^2+2y-2z}\dd v\le2\iiint\limits_\Omega\dd v=\frac{8\pi}{3}.$$
+    $$\frac{4\sqrt[3]{2}\pi}{3}=\sqrt[3]{2}\iiint\limits_\Omega\dd v\leqslant \iiint\limits_\Omega\sqrt[3]{x^2+2y-2z}\dd v\leqslant 2\iiint\limits_\Omega\dd v=\frac{8\pi}{3}.$$
 \end{proof}
 
 \begin{example}
@@ -1576,7 +1577,7 @@
 
 \begin{example}\scriptsize\linespread{0.8}
     设 $f(x,y,z)$ 在 $\Omega=\qty{(x,y,z)|0\leqslant x,y,z\leqslant 1}$ 上有六阶连续偏导数, $f$ 在边界上恒为零, 且 $\qty|\dfrac{\partial^6f(x,y,z)}{\partial x^2\partial y^2\partial z^2}|\leqslant M$,
-    证明: $\displaystyle\qty|\iiint\limits_{\Omega}f(x,y,z)\dd x\dd y\dd z|\leqslant \dfrac{1}{8}\cdot\dfrac{M}{6^3}.$
+    证明: $$\displaystyle\qty|\iiint\limits_{\Omega}f(x,y,z)\dd x\dd y\dd z|\leqslant \dfrac{1}{8}\cdot\dfrac{M}{6^3}.$$
 \end{example}
 \begin{proof}[{\songti \textbf{证}}]\scriptsize\linespread{0.8}
     令 $g(x,y,z)=xyz(x-1)(y-1)(z-1)$, 因为 $f,g$ 在 $\Omega$ 上均有六阶连续偏导数, 且 $f$ 在边界上恒为零, 故 $$\iiint\limits_\Omega g(x,y,z)\dfrac{\partial^6f(x,y,z)}{\partial x^2\partial y^2\partial z^2}\dd V=\iiint\limits_\Omega f(x,y,z)\dfrac{\partial^6g(x,y,z)}{\partial x^2\partial y^2\partial z^2}\dd V=8\iiint\limits\Omega f(x,y,z)\dd V$$

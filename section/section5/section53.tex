@@ -69,7 +69,8 @@
               则当 $ n $ 充分大时, 显然有 $ \left(x_{n}, y_{n}\right) \in U_{\delta}^{\circ} $, 且
               $$f\left(x_{n}, y_{n}\right)=f\left(\dfrac{1}{n}, 0\right)=\dfrac{1}{n^{2}}\left(3+\dfrac{1}{n}\right)>0$$
         \item 在 $ x=k y(0<k<2) $ 上, 有 $ f(k y, y)=\left(k^{3}-8\right) y^{2}\left(y-\dfrac{3(2-k)}{4+2 k+k^{2}}\right) $, 
-              故取 $ y=\dfrac{4(2-k)}{4+2 k+k^{2}}(>0) $ 时 $ f(k y, y)=\left(k^{3}-8\right) y^{2} \dfrac{2-k}{4+2 k+k^{2}}<0 $, 即取
+              故取 $ y=\dfrac{4(2-k)}{4+2 k+k^{2}}(>0) $ 时 $$ f(k y, y)=\left(k^{3}-8\right) y^{2} \dfrac{2-k}{4+2 k+k^{2}}<0 $$
+              即取
               $$\left(x_{k}, y_{k}\right)=\left(\dfrac{4 k(2-k)}{4+2 k+k^{2}}, \dfrac{4(2-k)}{4+2 k+k^{2}}\right)$$
               时有
               \begin{flalign*}
@@ -171,12 +172,12 @@
 \end{example}
 \begin{solution}
     方程 $f''_{xy}(x,y)=2(y+1)\e^x$ 两边对 $y$ 求积分, 得 $f'_x=\e^x(y+1)^2+\varphi(x)$, 并令 $y=0$, 与 $f'_x(x,0)=(x+1)\e^x$ 对比得 $\varphi(x)=x\e ^x$, 那么 
-    $f'_x(x,y)=\e^x(y+1)^2+x\e^x$, 两边再对 $x$ 求积分, 得 $$f(x,y)=(y+1)^2\e ^x+(x-1)\e ^x+\psi(y)$$
+    $$f'_x(x,y)=\e^x(y+1)^2+x\e^x$$ 两边再对 $x$ 求积分, 得 $$f(x,y)=(y+1)^2\e ^x+(x-1)\e ^x+\psi(y)$$
     又 $f(0,y)=y^2+2y$, 得 $\psi(y)=0$, 则 $f(x,y)=(y+1)^2\e ^x+(x-1)\e ^x$, 
-    因此 $\begin{cases}
+    因此 $$\begin{cases}
         f'_x=(y+1)^2\e ^x+x\e ^x=0\\ 
         f'_y=2(y+1)\e ^x=0
-    \end{cases}$ 得 $x=0,~y=-1$, 且 $f''_{xx}=(y+1)^2\e ^x+(x+1)\e ^x,~f''_{xy}=2(y+1)\e ^x,~f''_{yy}=2$, 则 $\vb*{H}(0,-1)=\eval{\mqty(z''_{xx}&z''_{xy}\\z''_{yx}&z''_{yy})}_{(0,-1)}$ 正定, 
+    \end{cases}$$ 得 $x=0,~y=-1$, 且 $$f''_{xx}=(y+1)^2\e ^x+(x+1)\e ^x,~f''_{xy}=2(y+1)\e ^x,~f''_{yy}=2$$ 则 $\vb*{H}(0,-1)=\eval{\mqty(z''_{xx}&z''_{xy}\\z''_{yx}&z''_{yy})}_{(0,-1)}$ 正定, 
     于是 $f(x,y)$ 在 $(0,-1)$ 处取得极小值, $f(0,-1)=-1.$
 \end{solution}
 

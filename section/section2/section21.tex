@@ -388,9 +388,9 @@
         \end{cases}$ 所确定, 试求 $\displaystyle\eval{\dv[2]{y}{x}}_{t=0}.$
 \end{example}
 \begin{solution}
-    对方程组每个方程两边分别取微分, 得 $\begin{cases}
+    对方程组每个方程两边分别取微分, 得 $$\begin{cases}
             \dd x=6t\dd t+2\dd t \\ \e^y\sin t\dd y+\e^y\cos t\dd t-\dd y=0
-        \end{cases}$ 则 $\displaystyle\dv{x}{t}=6t+2,~\dv{y}{t}=\dfrac{\e^y\cos t}{1-\e^y\sin t}$, 那么
+        \end{cases}$$ 则 $$\displaystyle\dv{x}{t}=6t+2,~\dv{y}{t}=\dfrac{\e^y\cos t}{1-\e^y\sin t}$$ 那么
     \begin{flalign*}
         \dv{y}{x}    & =\dv{y}{t}\cdot\qty(\dv{x}{t})^{-1}=\dfrac{\e^y\cos t}{\qty(1-\e^y\sin t)(6t+2)}=\dfrac{\e^y\cos t}{\qty(2-y)(6t+2)}                                                     \\
         \dv[2]{y}{x} & =\dv{t}\qty[\dfrac{\e^y\cos t}{(2-y)(6t+2)}]\qty(\dv{t}{x})=\dfrac{\qty(\e^yy'_t\cos t-\e^y\sin t)(2-y)(6t+2)-\qty[\qty(-y'_t)(6t+2)+6(2-y)]\e^y\cos t}{(2-y)^2(6t+2)^3}

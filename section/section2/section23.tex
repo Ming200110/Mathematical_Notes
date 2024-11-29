@@ -634,7 +634,7 @@
             \dfrac{f(x)}{(x-a)^2}, & x\in(a,b] \\
             0,                     & x=a
         \end{cases}$$
-    则有 $\displaystyle\lim_{x\to a^+}G(x)=\lim_{x\to a^+}\dfrac{f(x)}{(x-a)^2} =\lim_{x\to a^+}\dfrac{f(a)+f'(a)(x-a)+\dfrac{1}{2!}f''(a)(x-a)^2+o\qty((x-a)^2)}{(x-a)^2}=0=G(0)$, 
+    则有 $$\displaystyle\lim_{x\to a^+}G(x)=\lim_{x\to a^+}\dfrac{f(x)}{(x-a)^2} =\lim_{x\to a^+}\dfrac{f(a)+f'(a)(x-a)+\dfrac{1}{2!}f''(a)(x-a)^2+o\qty((x-a)^2)}{(x-a)^2}=0=G(0)$$ 
     因此 $G(x)$ 在 $[a,b]$ 上连续, 在 $(a,b)$ 内可导, 且 $G(a)=G(b)$ 则由 Rolle 定理知
     $\exists\eta\in(a,b)$, 使得 $$G'(\eta)=\dfrac{f'(\eta)(\eta-a)^2-2(\eta-a)f(\eta)}{(\eta-a)^4}=0\Rightarrow f'(\eta)(\eta-a)^2-2(\eta-a)f(\eta)=0\Rightarrow F(\eta)=0$$
     又因为 $F(x)$ 在 $[a,b]$ 上连续, $(a,b)$ 内可导, 故由 Rolle 定理知 $\exists\xi\in(a,b)$, 使得 $$F'(\xi)=2(\xi-a)f'(\xi)+(\xi-a)^2f''(\xi)-2f'(\xi)(\xi-a)-2f(\xi)=0$$

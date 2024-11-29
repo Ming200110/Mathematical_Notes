@@ -23,7 +23,7 @@
     计算定积分 $\displaystyle\int_{0}^{\frac{\pi}{2}}\dfrac{\sin x}{(\sin x+\cos x)^3}\dd x.$
 \end{example}
 \begin{solution}
-    注意到 $\sin x=\dfrac{\sin x+\cos x}{2}-\dfrac{\cos x-\sin x}{2}$, 于是 $\displaystyle\int\dfrac{\sin x}{(\sin x+\cos x)^3}\dd x=\dfrac{1}{2}\int\dfrac{\dd x}{(\sin x+\cos x)^2}-\dfrac{1}{2}\int\dfrac{\cos x-\sin x}{(\sin x+\cos x)^3}\dd x$,
+    注意到 $$\sin x=\dfrac{\sin x+\cos x}{2}-\dfrac{\cos x-\sin x}{2}$$ 于是 $$\displaystyle\int\dfrac{\sin x}{(\sin x+\cos x)^3}\dd x=\dfrac{1}{2}\int\dfrac{\dd x}{(\sin x+\cos x)^2}-\dfrac{1}{2}\int\dfrac{\cos x-\sin x}{(\sin x+\cos x)^3}\dd x$$
     其中
     \begin{flalign*}
         \int\dfrac{\dd x}{(\sin x+\cos x)^2}               & =\int\dfrac{\sec ^2x\dd x}{\tan^2x+2\tan x+1}\xlongequal{\tan x=t}\int\dfrac{\dd t}{(t+1)^2}=-(t+1)^{-1}+C=-(\tan x+1)^{-1}+C \\
@@ -231,8 +231,7 @@
 \begin{solution}
     由 $\displaystyle\int_{a}^{b}f(x)\dd x=\int_{a}^{\frac{a+b}{2}}[f(x)+f(a+b-x)]\dd x$, 得
     $$\int _{0}^{nx}x\left| \sin x\right| \dd x=\int _{0}^{\frac{n\pi }{2}}\left[ x\left| \sin x\right| +\left( n\pi -x\right) \left| \sin \left( n\pi -x\right) \right| \right] \dd x=n\pi \int _{0}^{\frac{n\pi }{2}}\left| \sin x\right| \dd x$$
-    又因为 $|\sin x|=\sqrt{\sin^2x}=\sqrt{\dfrac{1-\cos2x}{2}}$ 的周期为 $T=\dfrac{2\pi}{2}=\pi$, 且 $\displaystyle\int_{0}^{\frac{\pi}{2}}|\sin x|\dd x=\int_{0}^{\frac{\pi}{2}}\sin x\dd x=1$,
-    $\displaystyle\int_{\frac{\pi}{2}}^{\pi}|\sin x|\dd x=1$, 所以 $\displaystyle\int_{0}^{\frac{n\pi}{2}}|\sin x|=n$,
+    又因为 $|\sin x|=\sqrt{\sin^2x}=\sqrt{\dfrac{1-\cos2x}{2}}$ 的周期为 $T=\dfrac{2\pi}{2}=\pi$, 且 $$\displaystyle\int_{0}^{\frac{\pi}{2}}|\sin x|\dd x=\int_{0}^{\frac{\pi}{2}}\sin x\dd x=1,\displaystyle\int_{\frac{\pi}{2}}^{\pi}|\sin x|\dd x=1$$ 所以 $\displaystyle\int_{0}^{\frac{n\pi}{2}}|\sin x|=n$,
     故 $\displaystyle\int_0^{n\pi}x|\sin x|\dd x=n^2\pi.$
 \end{solution}
 
@@ -1766,9 +1765,9 @@
     因为 $f(x),g(x)$ 在 $[a,b]$ 上连续, 所以 $f(x),g(x),f(x)g(x)$ 在 $[a,b]$ 上可积, 将 $[a,b]~n$ 等分, 取 $$ \displaystyle\Delta x=\frac{b-a}{n}, \xi_{i}=x_{i}=a+\frac{i}{n}(b-a)$$
     则由离散情形 的 Cauchy-Schwarz 不等式, 有
     $$\left(\sum_{i=1}^{n} f\left(x_{i}\right) g\left(x_{i}\right)\right)^{2} \leqslant\left(\sum_{i=1}^{n} f^{2}\left(x_{i}\right)\right)\left(\sum_{i=1}^{n} g^{2}\left(x_{i}\right)\right)$$
-    于是得 $ \displaystyle\left(\frac{b-a}{n} \sum_{i=1}^{n} f\left(x_{i}\right) g\left(x_{i}\right)\right)^{2} \leqslant\left(\frac{b-a}{n} \sum_{i=1}^{n} f^{2}\left(x_{i}\right)\right)\left(\frac{b-a}{n} \sum_{i=1}^{n} g^{2}\left(x_{i}\right)\right)$,
+    于是得 $$ \displaystyle\left(\frac{b-a}{n} \sum_{i=1}^{n} f\left(x_{i}\right) g\left(x_{i}\right)\right)^{2} \leqslant\left(\frac{b-a}{n} \sum_{i=1}^{n} f^{2}\left(x_{i}\right)\right)\left(\frac{b-a}{n} \sum_{i=1}^{n} g^{2}\left(x_{i}\right)\right)$$
     故令 $ n \to \infty $ 两边取极限, 由定积分定义得
-    $\displaystyle\left(\int_{a}^{b} f(x) g(x) \dd  x\right)^{2} \leqslant \int_{a}^{b} f^{2}(x) \dd  x \int_{a}^{b} g^{2}(x) \dd  x .$
+    $$\displaystyle\left(\int_{a}^{b} f(x) g(x) \dd  x\right)^{2} \leqslant \int_{a}^{b} f^{2}(x) \dd  x \int_{a}^{b} g^{2}(x) \dd  x .$$
 \end{proof}
 \begin{proof}[{\songti \textbf{证法四}}]
     构作辅助积分上限函数, 将要证不等式中的 $ b $ 改为 $ x $, 并移项, 令

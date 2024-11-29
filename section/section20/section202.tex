@@ -167,20 +167,20 @@
 \end{solution}
 
 \begin{example}
-    设随机变量 $X\sim  N(0,4)$, $X_1, X_2, \cdots ,X_n~(n>2)$ 是来自总体 $X$ 的简单随机样本, 则 (\quad).
+    设随机变量 $X\sim  N(0,4)$, $X_1, X_2, \cdots ,X_n~(n>2)$ 是来自总体 $X$ 的简单随机样本, 则下列关系式成立的是 (\quad).
     \begin{tasks}(2)
+        \task $\dfrac{(n-1)X_1^2}{\displaystyle \sum_{i=1}^{n} X_i^2}\sim F(1,n-1)$
         \task $\displaystyle \dfrac{1}{2n}\qty(\sum_{i=1}^{n}X_i)^2\sim \chi^2(1)$
         \task $\displaystyle \dfrac{1}{16}\qty(\sum_{i=1}^{n}X_i)^2\sim \chi^2(n)$
         \task $\sqrt{\dfrac{(n-1)X_n^2}{\displaystyle \sum_{i=1}^{n} X_i^2}}\sim t(n-1)$
-        \task $\dfrac{(n-1)X_1^2}{\displaystyle \sum_{i=1}^{n} X_i^2}\sim F(1,n-1)$
     \end{tasks}
 \end{example}
 \begin{solution}
-    对 A 选项, 因为 $\dfrac{\bar{X}}{\dfrac{2}{\sqrt{n}}}\sim N(0,1)$, 其中 $\bar{X}=\dfrac{1}{n}\displaystyle \sum_{i=1}^{n} X_i$, 所以 $$\dfrac{1}{2\sqrt{n}}\displaystyle \sum_{i=1}^{n} X_i\sim N(0,1)$$ 即 $\dfrac{1}{4n}\displaystyle \sum_{i=1}^{n} X_i\sim \chi^2(1)$ A 错误;
-    对 B 选项, 因为 $\dfrac{X}{2}\sim N(0,1)$, 所以 $$\displaystyle \sum_{i=1}^{n} \qty(\dfrac{X_i}{2})^2\sim \chi^2(n)$$ B 错误;
-    对 C 选项, $$\displaystyle \dfrac{\dfrac{X_n}{2}}{\sqrt{\dfrac{\dfrac{1}{4}\displaystyle \sum_{i=1}^{n-1} X_i^2}{n-1}}}=\dfrac{X_n\sqrt{n-1}}{\sqrt{\displaystyle \sum_{i=1}^{n-1} X_i^2}}\sim t(n-1)$$ C 错误;
-    对 D 选项, $\qty(\dfrac{1}{2}X_1)^2\sim \chi^2(1), \displaystyle \sum_{i=2}^{n} \qty(\dfrac{1}{2}X_i)^2\sim \chi^2(n-1)$, 那么 $$\dfrac{\qty(\dfrac{1}{2}X_1)^2/1}{\displaystyle \sum_{i=2}^{n}\qty(\dfrac{1}{2}X_i)^2 / (n-1)}=\dfrac{(n-1)X_1}{\displaystyle \sum_{i=2}^{n} X_i^2}\sim F(1,n-1)$$
-    因此选 D.
+    对 A 选项, $\qty(\dfrac{1}{2}X_1)^2\sim \chi^2(1), \displaystyle \sum_{i=2}^{n} \qty(\dfrac{1}{2}X_i)^2\sim \chi^2(n-1)$, 那么 $$\dfrac{\qty(\dfrac{1}{2}X_1)^2/1}{\displaystyle \sum_{i=2}^{n}\qty(\dfrac{1}{2}X_i)^2 / (n-1)}=\dfrac{(n-1)X_1}{\displaystyle \sum_{i=2}^{n} X_i^2}\sim F(1,n-1)$$
+    对 B 选项, 因为 $\dfrac{\bar{X}}{\dfrac{2}{\sqrt{n}}}\sim N(0,1)$, 其中 $\bar{X}=\dfrac{1}{n}\displaystyle \sum_{i=1}^{n} X_i$, 所以 $$\dfrac{1}{2\sqrt{n}}\displaystyle \sum_{i=1}^{n} X_i\sim N(0,1)$$ 即 $\dfrac{1}{4n}\displaystyle \qty(\sum_{i=1}^{n} X_i)^2\sim \chi^2(1)$ B 错误;
+    对 C 选项, 因为 $\dfrac{X}{2}\sim N(0,1)$, 所以 $$\displaystyle \sum_{i=1}^{n} \qty(\dfrac{X_i}{2})^2\sim \chi^2(n)$$ C 错误;
+    对 D 选项, $$\displaystyle \dfrac{\dfrac{X_n}{2}}{\sqrt{\dfrac{\dfrac{1}{4}\displaystyle \sum_{i=1}^{n-1} X_i^2}{n-1}}}=\dfrac{X_n\sqrt{n-1}}{\sqrt{\displaystyle \sum_{i=1}^{n-1} X_i^2}}\sim t(n-1)$$ D 错误;
+    因此选 A.
 \end{solution}
 
 \begin{example}

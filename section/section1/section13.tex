@@ -154,7 +154,7 @@
                               & =\exp\lim_{n\to\infty}\frac{n\pi}{\sqrt{1+4n^2}+2n}=\e ^{\frac{\pi}{4}}
               \end{flalign*}
         \item 因为 $\displaystyle(1+x)^n=\sum_{k=0}^n \mathrm{C}_n^k\cdot x^k$, 两边关于 $x$ 求导, 得 $\displaystyle n(1+x)^{n-1}=\sum_{k=1}^n \mathrm{C}_n^k\cdot kx^{k-1}$, 两边再同时乘以 $x$, 并再关于 $x$ 求导, 得
-              $\displaystyle n(1+x)^{n-1}+n(n-1)x(1+x)^{n-2}=\sum_{k=1}^n \mathrm{C}_n^k\cdot k^2x^{k-1}$, 令 $x=1$, 得
+              $$\displaystyle n(1+x)^{n-1}+n(n-1)x(1+x)^{n-2}=\sum_{k=1}^n \mathrm{C}_n^k\cdot k^2x^{k-1}$$ 令 $x=1$, 得
               $$\displaystyle n\cdot 2^{n-1}+n(n+1)\cdot 2^{n-2}=n(n+1)\cdot 2^{n-2}=\sum_{k=1}^n \mathrm{C}_n^k k^2$$ 于是有原式
               $\displaystyle=\lim_{n\to\infty}\frac{2^{-n}}{n(n+1)}\cdot n(n+1)\cdot 2^{n-2}=\frac{1}{4}.$
     \end{enumerate}
@@ -447,7 +447,7 @@
               $$\lim_{n\to\infty}\sum_{k=1}^{n}\frac{n+k}{n^2}=\lim_{n\to\infty}\frac{1}{n^2}\sum_{k=1}^{n}(n+k)=\lim_{n\to\infty}\frac{3n^2+n}{2n^2}=\frac{3}{2}$$
               故由夹逼准则, 得 $\displaystyle\lim_{n\to\infty}\sum_{k=1}^{n}\frac{n+k}{n^2+k}=\frac{3}{2}.$
         \item 记 $\displaystyle a_{i0}=\max_{1\leqslant j\leqslant m}\{a_j\}$, 则 $\displaystyle a_{i0}<\sum_{k=1}^{m}a_k^n<m a_{i0}^n$, 于是 $\displaystyle a_{i0}<\sqrt[n]{\sum_{k=1}^{m}a_k^n}<\sqrt[n]{m}a_{i0}$,
-              由 $\displaystyle\lim_{n\to\infty}\sqrt[n]{m}=1$ 及夹逼准则得 $\displaystyle\lim_{n\to\infty}\sqrt[n]{\sum_{k=1}^{m}a_k^n}=a_{i0}=\max\{a_1,a_2,\cdots,a_m\}.$
+              由 $\displaystyle\lim_{n\to\infty}\sqrt[n]{m}=1$ 及夹逼准则得 $$\displaystyle\lim_{n\to\infty}\sqrt[n]{\sum_{k=1}^{m}a_k^n}=a_{i0}=\max\{a_1,a_2,\cdots,a_m\}.$$
     \end{enumerate}
 \end{solution}
 \begin{inference}
@@ -1034,7 +1034,7 @@ $$f(x)=O(g(x)) \text{ 代表 } \dfrac{f(x)}{g(x)}=O(1),~f(x)=o(g(x))\text{ 代�
     求极限 $\displaystyle \lim_{x\to0}\dfrac{(1+2x)^{\frac{1}{x}}+\e^{2}\qty(x-\sqrt{1-2x})}{x^2}.$
 \end{example}
 \begin{solution}
-    因为 $(1+2x)^{\frac{1}{x}}=(1+2x)^{\frac{1}{2x}\cdot 2}=\qty(\e-\dfrac{\e}{2}\cdot2x+\dfrac{11\e}{24}\cdot(2x)^2+o\qty(x^2))^2=\e^2\qty(1-2x+\dfrac{14}{3}x^2)+o\qty(x^2)$, 且 $x-\sqrt{1-2x}=-1+2x+\dfrac{1}{2}x^2+o\qty(x^2)$, 于是
+    因为 $$(1+2x)^{\frac{1}{x}}=(1+2x)^{\frac{1}{2x}\cdot 2}=\qty(\e-\dfrac{\e}{2}\cdot2x+\dfrac{11\e}{24}\cdot(2x)^2+o\qty(x^2))^2=\e^2\qty(1-2x+\dfrac{14}{3}x^2)+o\qty(x^2)$$ 且 $$x-\sqrt{1-2x}=-1+2x+\dfrac{1}{2}x^2+o\qty(x^2)$$ 于是
     $$I=\lim_{x\to0}\dfrac{\e^2\qty(1-2x+\dfrac{14}{3}x^2-1+2x+\dfrac{1}{2}x^2+o\qty(x^2))}{x^2}=\dfrac{31}{6}\e^2.$$
 \end{solution}
 
@@ -1505,7 +1505,7 @@ $$f(x)=f(x_0)+f'(x_0)(x-x_0)+\cdots+\frac{1}{n!}f^{(n)}(x_0)(x-x_0)^n+R_n(x)$$
     计算 $\displaystyle\lim_{x\to0}\dfrac{\cos x-\cos\qty[2\ln(1+x)]}{x^2}.$
 \end{example}
 \begin{errorSolution}
-    由 Lagrange 中值定理, $\cos x-\cos\qty[2\ln(1+x)]=\qty[2\ln(1+x)-x]\sin\xi$, 其中 $\xi$ 介于 $x$ 与 $2\ln(1+x)$ 之间, 因此
+    由 Lagrange 中值定理, $$\cos x-\cos\qty[2\ln(1+x)]=\qty[2\ln(1+x)-x]\sin\xi$$ 其中 $\xi$ 介于 $x$ 与 $2\ln(1+x)$ 之间, 因此
     $$\lim_{x\to0}\dfrac{\cos x-\cos\qty[2\ln(1+x)]}{x^2}=\lim_{x\to0}\dfrac{\qty[2\ln(1+x)-x]\sin\xi}{x^2}=\lim_{x\to0}\dfrac{\qty[2x+o(x)-x]}{x}=1$$
     \textbf{错因: }当 $x\to0^+,~x<\xi<2\ln(1+x)\Rightarrow 1\gets\dfrac{x}{x}<\dfrac{\xi}{x}<\dfrac{2\ln(1+x)}{x}\to 2$, 左右极限值不相等, 故不能由夹逼准则得 $\sin\xi\sim\xi$, 同理可得 $x\to0^-$ 情况相同.\\
 \end{errorSolution}

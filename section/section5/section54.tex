@@ -89,12 +89,12 @@
 \end{example}
 \begin{solution}
     函数 $f$ 在点 $(x,y)$ 处的最大方向导数为 $$\sqrt{{f'_x}^2+{f'_y}^2}=\sqrt{(1+y)^2+(1+x)^2}$$
-    构造 Lagrange 函数 $F(x,y,\lambda)=(1+y)^2+(1+x)^2+\lambda\qty(x^2+y^2+xy-3)$, 所以 
-    $\begin{cases}
+    构造 Lagrange 函数 $$F(x,y,\lambda)=(1+y)^2+(1+x)^2+\lambda\qty(x^2+y^2+xy-3)$$ 所以 
+    $$\begin{cases}
         F'_x=\lambda (2 x + y) + 2 x + 2=0\\ 
         F'_y=\lambda (x + 2 y) + 2 y + 2=0\\ 
         F'_\lambda=x^2+y^2+xy-3=0
-    \end{cases}$ 解得 $\begin{cases}
+    \end{cases}$$ 解得 $\begin{cases}
         x=-1\\ y=2
     \end{cases}\text{或 }\begin{cases}
         x=2\\ y=-1

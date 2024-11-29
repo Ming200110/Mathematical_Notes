@@ -377,7 +377,7 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
 \end{theorem}
 
 \begin{example}
-    设幂级数 $\displaystyle \sum_{n=0}^{\infty} a_n(x-2)^n$ 在 $x=-2$ 处条件收敛, $a_n>0,~n=0, 1, 2, \cdots $, 则 $\displaystyle \sum_{n=0}^{\infty} a_n(x-2)^{2n+1}$ 的收敛域为 (\quad).
+    设 $\displaystyle \sum_{n=0}^{\infty} a_n(x-2)^n$ 在 $x=-2$ 处条件收敛, $a_n>0,~n=0, 1, 2, \cdots $, 则 $\displaystyle \sum_{n=0}^{\infty} a_n(x-2)^{2n+1}$ 的收敛域为 (\quad).
     \begin{tasks}(4)
         \task $(1,3)$
         \task $(0,4)$
@@ -572,8 +572,8 @@ $$R=\lim_{n\to\infty}\qty|\dfrac{a_n}{a_{n+1}}|$$
     已知 $u_n(x)$ 满足 $u_n'(x)=u_n(x)+x^{n-1}\mathrm{e}^x$ ($n$ 为正整数), 且 $\displaystyle u_n(1)=\frac{\mathrm{e}}{n}$, 求函数项级数 $\displaystyle\sum_{n=1}^\infty u_n(x)$ 之和.
 \end{example}
 \begin{solution}
-    由 $u_n'(x)-u_n(x)=x^{n-1}\mathrm{e}^x$ 得, $\displaystyle u_n(x)=\mathrm{e}^{\int\dd x}\left[\int x^{n-1}\mathrm{e}^x\cdot\mathrm{e}^{-\int\dd x}\dd x+C\right]=\frac{x^n}{n}\mathrm{e}^x+C\mathrm{e}^x$,
-    又因为 $\displaystyle u_n(1)=\frac{\mathrm{e}}{n}$, 所以 $C=0$, 所以 $\displaystyle\sum_{n=1}^\infty u_n(x)=\sum_{n=1}^\infty\frac{x^n}{n}\mathrm{e}^x=\mathrm{e}^x\sum_{n=1}^\infty\frac{x^n}{n}=-\mathrm{e}^x\ln(1-x),~x\in(-1,1)$.
+    由 $u_n'(x)-u_n(x)=x^{n-1}\mathrm{e}^x$ 得 $$\displaystyle u_n(x)=\mathrm{e}^{\int\dd x}\left[\int x^{n-1}\mathrm{e}^x\cdot\mathrm{e}^{-\int\dd x}\dd x+C\right]=\frac{x^n}{n}\mathrm{e}^x+C\mathrm{e}^x$$
+    又因为 $\displaystyle u_n(1)=\frac{\mathrm{e}}{n}$, 所以 $C=0$, 所以 $$\displaystyle\sum_{n=1}^\infty u_n(x)=\sum_{n=1}^\infty\frac{x^n}{n}\mathrm{e}^x=\mathrm{e}^x\sum_{n=1}^\infty\frac{x^n}{n}=-\mathrm{e}^x\ln(1-x),~x\in(-1,1).$$
 \end{solution}
 
 \begin{example}

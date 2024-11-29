@@ -84,13 +84,57 @@ $ \displaystyle\frac{n}{n-1} $, 就修正成为 $ \sigma^{2} $ 的无偏估计�
         \item 由题意得 $\displaystyle L(\theta)=\prod_{i=1}^{n} f(x_i,\theta)=\dfrac{3^n}{\theta^{3n}}\prod_{i=1}^{n}x_i^2~(0\leqslant x_i\leqslant\theta)$, 则 $$
         \ln L(\theta)=n\ln 3-3n\ln\theta+2\sum_{i=1}^{n} \ln x_i~(0\leqslant x_i\leqslant\theta)
         $$
-        由 $\displaystyle \pdv{\ln L(\theta)}{\theta}=\dfrac{-3n}{\theta}<0$, 得 $L(\theta)$ 是关于 $\theta$ 单调递减函数, 也就是当 $\theta\geqslant \max\limits_{1\leqslant i\leqslant n}\qty{X_i}$ 时, 
-        $\theta$ 的最大值为 $\max\limits_{1\leqslant i\leqslant n}\qty{X_i}$, 因此 $\theta$ 的最大似然估计量为 $\hat{\theta}_L=\max\limits_{1\leqslant i\leqslant n}\qty{X_i}$;
+        由 $\displaystyle \pdv{\ln L(\theta)}{\theta}=\dfrac{-3n}{\theta}<0$, 得 $L(\theta)$ 是关于 $\theta$ 单调递减函数, 如图 \ref{zuidasrgjmax} 所示, 
+        \begin{figure}[H]
+            \centering
+            
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,310); %set diagram left start at 0, and has height of 310
+
+%Straight Lines [id:da02598919413844425] 
+\draw    (100,114) -- (250,114) (110,110) -- (110,118)(120,110) -- (120,118)(130,110) -- (130,118)(140,110) -- (140,118)(150,110) -- (150,118)(160,110) -- (160,118)(170,110) -- (170,118)(180,110) -- (180,118)(190,110) -- (190,118)(200,110) -- (200,118)(210,110) -- (210,118)(220,110) -- (220,118)(230,110) -- (230,118)(240,110) -- (240,118) ;
+%Straight Lines [id:da8116177486390612] 
+\draw    (250,114) -- (319.8,114) ;
+\draw [shift={(322.8,114)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Shape: Rectangle [id:dp8868275986730669] 
+\draw  [fill={rgb, 255:red, 184; green, 233; blue, 134 }  ,fill opacity=0.38 ] (103,95) -- (256.8,95) -- (256.8,146.7) -- (103,146.7) -- cycle ;
+
+% Text Node
+\draw (100.6,127.35) node   [align=left] {\begin{minipage}[lt]{11.42pt}\setlength\topsep{0pt}
+$\displaystyle 0$
+\end{minipage}};
+% Text Node
+\draw (162.2,130.35) node   [align=left] {\begin{minipage}[lt]{17.41pt}\setlength\topsep{0pt}
+$\displaystyle X_{1}$
+\end{minipage}};
+% Text Node
+\draw (129.8,130.35) node   [align=left] {\begin{minipage}[lt]{17.41pt}\setlength\topsep{0pt}
+$\displaystyle X_{2}$
+\end{minipage}};
+% Text Node
+\draw (237.2,130.35) node   [align=left] {\begin{minipage}[lt]{17.41pt}\setlength\topsep{0pt}
+$\displaystyle X_{n}$
+\end{minipage}};
+% Text Node
+\draw (275.8,107.65) node   [align=left] {\begin{minipage}[lt]{17.41pt}\setlength\topsep{0pt}
+$\displaystyle \theta $
+\end{minipage}};
+
+
+\end{tikzpicture}
+        \caption{}
+        \label{zuidasrgjmax}
+        \end{figure}
+        也就是当 $\theta\geqslant \max\limits_{1\leqslant i\leqslant n}\qty{X_i}$ 时, 
+        $\theta$ 的最小值为 $\max\limits_{1\leqslant i\leqslant n}\qty{X_i}$, 因此 $\theta$ 的最大似然估计量为 $\hat{\theta}_L=\max\limits_{1\leqslant i\leqslant n}\qty{X_i}$;
         \item 由 $f(x)$ 的概率密度函数得 
         $$
         F_X=\begin{cases}
-            \dfrac{x^3}{\theta^3},&0\leqslant x\leqslant \theta\\ 
-            0,&x<0\\ 1,&x>\theta
+            \dfrac{x^3}{\theta^3},&0\leqslant x< \theta\\ 
+            0,&x<0\\ 1,&x\geqslant\theta
         \end{cases}
         $$
         并且
@@ -101,10 +145,10 @@ $ \displaystyle\frac{n}{n-1} $, 就修正成为 $ \sigma^{2} $ 的无偏估计�
         所以 $E\hat{\theta}_2=\dfrac{4}{3}\cdot\dfrac{1}{n}\cdot nEX=\dfrac{4}{3}\cdot\dfrac{3\theta}{4}=\theta$, 
         令 $Y=\max\limits_{1\leqslant i\leqslant n}\qty{X_i}$, 则 
         $$F_Y=P\qty{Y\leqslant y}=\qty{\max\limits_{1\leqslant i\leqslant n}\qty{X_i}\leqslant y}=\prod_{i=1}^{n} P\qty{X_i\leqslant y}=P^n\qty{X\leqslant y}=F_X^n(y)=\begin{cases}
-            \qty(\dfrac{y^3}{\theta^3})^n,&0\leqslant y\leqslant \theta\\ 0,&y<0\\ 1,&y>\theta
+            \qty(\dfrac{y^3}{\theta^3})^n,&0\leqslant y< \theta\\ 0,&y<0\\ 1,&y\geqslant\theta
         \end{cases}$$
         那么 $f_Y=F_Y'=\begin{cases}
-            \dfrac{3n}{\theta^{3n}}y^{3n-1},& 0\leqslant y\leqslant \theta\\ 0,&\text{其他}
+            \dfrac{3n}{\theta^{3n}}y^{3n-1},& 0< y< \theta\\ 0,&\text{其他}
         \end{cases}$
         因此 
         $$
@@ -138,3 +182,84 @@ $ \displaystyle\frac{n}{n-1} $, 就修正成为 $ \sigma^{2} $ 的无偏估计�
     则称 $ \hat{\theta} $ \textit{为} $ \theta $ \textit{的相合估计量}.
 \end{definition}
 
+\begin{example}
+    设总体 $X$ 的概率密度为 $f(x)=\begin{cases}
+        2\e ^{-2(x-\theta)}, & x>\theta\\ 0,& x\leqslant \theta
+    \end{cases}$ 其中 $\theta>0$ 是未知参数, 从总体 $X$ 中抽取简单随机样本 $X_1, X_2, \cdots ,X_n$, $\hat{\theta}$ 为 $\theta$ 的最大似然估计量. 
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 求统计量 $\hat{\theta}$ 的分布函数 $F_{\hat{\theta}}(x)$;
+        \item 讨论 $\hat{\theta}$ 是否为 $\theta$ 的无偏估计量, 是否为 $\theta$ 的一致估计量;
+        \item 求 $\theta$ 的置信水平为 $1-\alpha$ 的最短的置信区间.
+    \end{enumerate}
+\end{example}
+\begin{solution}
+    \begin{enumerate}[label=(\arabic{*})]
+        \item 似然函数 $\displaystyle L(\theta)=\prod_{i=1}^{n} f(x_i)=2^n\e ^{-2\sum\limits_{i=1}^{n} (x_i-\theta)}$, 则 $\displaystyle \ln L(\theta)=n\ln 2+2n\theta-2\sum_{i=1}^{n} x_i$, 
+        由 $\displaystyle \pdv{\ln L(\theta)}{\theta}=2n>0$, 故 $L(\theta)$ 为关于 $\theta$ 的严格单调递增函数, 当 $\theta=\min\limits_{1\leqslant i\leqslant n}\qty{x_i}$ 时, $L(\theta)$ 最大, 
+        故 $\theta$ 的最大似然估计量为 $\hat{\theta}=\min\limits_{1\leqslant i\leqslant n}\qty{X_i}$, 总体 $X$ 的分布函数为 $$
+        F_X=\begin{cases}
+            1-\e ^{-2(x-\theta)},&x>\theta\\ 0, & x\leqslant \theta
+        \end{cases}
+        $$
+        所以, $\hat{\theta}$ 的分布函数为 $$
+        F_{\hat{\theta}}(x)=1-[1-F_X(x)]^n=\begin{cases}
+            1-\e ^{-2n(x-\theta)}, &x>\theta\\ 0, & x\leqslant \theta.
+        \end{cases}
+        $$
+        \item $\hat{\theta}$ 的密度函数为 $$
+        f_{\hat{\theta}}=\begin{cases}
+            2n\e ^{-2n(x-\theta)}, & x>\theta\\ 0,& x\leqslant \theta
+        \end{cases}
+        $$
+        那么 
+        \begin{flalign*}
+            E\hat{\theta}&=\int_{\theta}^{+\infty}2nx \e ^{-2n(x-\theta)}\dd x\xlongequal{x-\theta=t}\int_{0}^{+\infty}2n(\theta+t)\e ^{-2nt}\dd t=\theta+\dfrac{1}{2n}\\ 
+            E\hat{\theta}^2& =\int_{\theta}^{+\infty}2nx^2 \e ^{-2n(x-\theta)}\dd x\xlongequal{x-\theta=t}\int_{0}^{+\infty}2n(\theta+t)^2\e ^{-2nt}\dd t=\theta^2+\dfrac{\theta}{n}+\dfrac{1}{2n^2}
+        \end{flalign*}
+        故 $D \hat{\theta}=E\hat{\theta}^2-E^2\hat{\theta}=\dfrac{1}{4n^2}$, 因为 $E\hat{\theta}\neq\theta$, 所以 $\hat{\theta}$ 不是 $\theta$ 的无偏估计量, 由于 $$
+        \lim_{n \to \infty}E\hat{\theta}=\theta,\quad \lim_{n \to \infty}D\hat{\theta}=0
+        $$
+        所以 $\hat{\theta}$ 是 $\theta$ 的一致估计量;
+        \item 令 $Y=\min\limits_{1\leqslant i\leqslant n}\qty{X_i}-\theta$, 则 $Y$ 的密度函数为 $$
+        f_Y=\begin{cases}
+            2n\e ^{-2ny}, & y>0\\ 0,& y\leqslant 0
+        \end{cases}
+        $$
+        即 $Y\sim E(2n)$, 选择 $a,b~(0\leqslant a<b)$, 使 $b-a$ 最小且满足 $$
+        P(a\leqslant Y\leqslant b)=\int_{a}^{b} 2n\e ^{-2ny} \dd y=1-\alpha
+        $$
+        即 $$
+        P\qty(\min\limits_{1\leqslant i\leqslant n}\qty{X_i}-b\leqslant \theta\leqslant \min\limits_{1\leqslant i\leqslant n}\qty{X_i}-a)=\int_{a}^{b} 2n\e ^{-2ny} \dd y=\e ^{-2na}-\e ^{-2nb}=1-\alpha
+        $$
+        所以 $\theta$ 的置信水平为 $1-\alpha$ 的置信区间为 $$
+        \qty[\min\limits_{1\leqslant i\leqslant n}\qty{X_i}-b,\min\limits_{1\leqslant i\leqslant n}\qty{X_i}-a]
+        $$
+        此时, $\theta$ 的置信水平为 $1-\alpha$ 的置信区间的平均长度 (期望长度) 为 $$
+        l=\min\limits_{1\leqslant i\leqslant n}\qty{X_i}-a-\qty(\min\limits_{1\leqslant i\leqslant n}\qty{X_i}-b)=E(b-a)=b-a
+        $$
+        欲使 $l$ 最短, 即使得 $b-a$ 最小, 于是, 问题转化为如下的极值问题: $$
+        \begin{cases}
+            \min f(a,b)=b-a\\ 
+            s.t. \e ^{-2na}-\e ^{-2nb}=1-\alpha\\ 
+            0\leqslant a<b
+        \end{cases}
+        $$
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=.6]{figures/diagram-20241129.pdf}
+            \caption{}
+        \end{figure}
+        由于 $2n\e ^{-2ny}~(y\geqslant 0)$ 单调递减, $\displaystyle \int_{a}^{b} 2n\e^{-2ny} \dd y=1-\alpha$ 为常数, 要使得 $b-a$ 最小, 必有 $a=0$, 从而使 
+        $$
+        \e ^{-2nb}=\alpha\Rightarrow b=-\dfrac{\ln \alpha}{2n}
+        $$
+        故 $\theta$ 的置信水平为 $1-\alpha$ 的最短的置信区间为 $\qty[X_{(1)}+\dfrac{\ln \alpha}{2n},X_{(1)}]$
+        其中 $X_{(1)}=\min\limits_{1\leqslant i\leqslant n}\qty{X_i}.$
+        % 因为 $\e ^{-2na}-\e ^{-2nb}=1-\alpha$, 所以 $b=-\dfrac{1}{2n}\ln\qty(\e ^{-2na}+\alpha-1)$, 记 $$
+        % g(a)=b-a=-\dfrac{1}{2n}\ln\qty(\e ^{-2na}+\alpha-1)-a
+        % $$
+        % 因为 $$
+        % g'(a)=\dfrac{\e ^{-2na}}{\e ^{-2na}+\alpha-1}-1=\dfrac{1-\alpha}{\e ^{-2na}+\alpha-1}
+        % $$
+    \end{enumerate}
+\end{solution}

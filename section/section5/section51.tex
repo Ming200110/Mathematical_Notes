@@ -65,7 +65,7 @@
     \textbf{法一: }令 $\begin{cases}
             x=\rho\cos\theta \\y=\rho\sin\theta
         \end{cases}$
-    于是原极限等于 $\displaystyle\lim_{\rho\to0^+}\dfrac{2\rho^3\cos^2\theta\sin\theta }{\rho^4\cos^4\theta+\rho^2\sin^2\theta}=2\cos^2\theta\sin\theta\lim_{\rho\to0^+}\dfrac{\rho^3}{\rho^4\cos^4\theta+\rho^2\sin^2\theta}=\infty$, 即不存在, 选 A.\\
+    于是原极限等于 $$\displaystyle\lim_{\rho\to0^+}\dfrac{2\rho^3\cos^2\theta\sin\theta }{\rho^4\cos^4\theta+\rho^2\sin^2\theta}=2\cos^2\theta\sin\theta\lim_{\rho\to0^+}\dfrac{\rho^3}{\rho^4\cos^4\theta+\rho^2\sin^2\theta}=\infty$$ 即不存在, 选 A.\\
     \textbf{法二: }取 $x\to0,~y=x$, 则有 $(x,y)\to(0,0)$, 于是 $$\displaystyle\lim_{x\to0,y=x}\dfrac{2x^2\cdot x}{x^4+x^2}=\lim_{x\to0,y=x}\dfrac{2x^3}{(1+x^2)x^2}=0$$
     再取 $x\to0,~y=x^2$, 同理 $(x,y)\to(0,0)$, 于是 $$\displaystyle\lim_{x\to0,y=x^2}\dfrac{2x^2\cdot x^2}{x^4+x^4}=1$$
     发现两条不同的趋向路径, 算出的极限值不同, 又因为极限值具有唯一性, 故原式的极限值不存在.
@@ -169,12 +169,12 @@
     设 $f(x,y)=\begin{cases}
             \dfrac{x^2y}{x^2+y^2}, & x^2+y^2\neq 0 \\
             0,                     & x^2+y^2=0
-        \end{cases}$ 则 (\quad).
+        \end{cases}$ 则下列说法正确的是  (\quad).
     \begin{tasks}(2)
         \task $f''_{xy}(0,0), f''_{yx}(0,0)$ 均存在
         \task $f''_{xy}(0,0), f''_{yx}(0,0)$ 均不存在
-        \task $f''_{xy}(0,0), $ 存在 $ f''_{yx}(0,0)$ 不存在
-        \task $f''_{xy}(0,0), $ 不存在 $ f''_{yx}(0,0)$ 存在
+        \task $f''_{xy}(0,0)$ 存在, $ f''_{yx}(0,0)$ 不存在
+        \task $f''_{xy}(0,0)$ 不存在, $ f''_{yx}(0,0)$ 存在
     \end{tasks}
 \end{example}
 \begin{solution}
@@ -316,7 +316,7 @@ $$
     $$
         f(0,0)=\lim_{\substack{x\to0 \\ y\to0}}\qty[\dfrac{f(x,y)-2x-3y}{\qty(x^2+y^2)^{\alpha}}\cdot\qty(x^2+y^2)^{\alpha}+2x+3y]=0
     $$
-    故 $ \displaystyle \lim_{\substack{x\to0\\ y\to0}}\dfrac{f(x,y)-2x-3y}{\qty(x^2+y^2)^{\alpha}}=\lim_{\substack{x\to0\\ y\to0}}\dfrac{f(x,y)-2x-3y}{\sqrt{x^2+y^2}}\cdot\dfrac{1}{\qty(x^2+y^2)^{\alpha-\frac{1}{2}}}=1 $, 只需 $\alpha-\dfrac{1}{2}>0$, 即 $\alpha>\dfrac{1}{2}$,
+    故 $$ \displaystyle \lim_{\substack{x\to0\\ y\to0}}\dfrac{f(x,y)-2x-3y}{\qty(x^2+y^2)^{\alpha}}=\lim_{\substack{x\to0\\ y\to0}}\dfrac{f(x,y)-2x-3y}{\sqrt{x^2+y^2}}\cdot\dfrac{1}{\qty(x^2+y^2)^{\alpha-\frac{1}{2}}}=1 $$ 只需 $\alpha-\dfrac{1}{2}>0$, 即 $\alpha>\dfrac{1}{2}$,
     那么有  $$ \displaystyle \lim_{\substack{x\to0\\ y\to0}}\dfrac{f(x,y)-2x-3y-f(0,0)}{\sqrt{x^2+y^2}}=0$$ 因此选 C.
 \end{solution}
 

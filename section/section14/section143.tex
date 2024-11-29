@@ -135,7 +135,10 @@
         |\lambda\vb*{E}-\vb*{A}|=\mqty|\lambda-1 & 0 & 1 \\ 0 & \lambda-2 & 0 \\ 1 & 0 & \lambda-1 |=\lambda(\lambda-2)^2=0\Rightarrow \lambda_1=0,\lambda_2=\lambda_3=2
     $$
     当 $\lambda=\lambda_1=0$ 时, 对应的特征向量为 $\vb*{\xi}_1=\mqty(1\\0\\1)$, 当 $\lambda=\lambda_{2,3}=2$ 时, 对应的特征向量分别为
-    $\vb*{\xi}_2=\mqty(1\\0\\-1),\vb*{\xi}_3=\mqty(0\\1\\0)$, 令 $\vb*{Q}_1=\qty(\dfrac{\vb*{\xi}_1}{\norm*{\vb*{\xi}_1}},\dfrac{\vb*{\xi}_2}{\norm*{\vb*{\xi}_2}},\dfrac{\vb*{\xi}_3}{\norm*{\vb*{\xi}_3}})=\mqty(\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{2}}&0\\ 0&0&1\\ \dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{2}}&0)$, 二次型 $f(\vb*{x})$ 在 $\vb*{x}=\vb*{Q}_1\vb*{z}$ 下化为 $f(\vb*{z})=z_2^2+z_3^2$, 同样的, 当 $\lambda=\lambda_1=0$ 时, 对应的特征向量为 $\vb*{\eta}_1=\mqty(1\\-1\\0)$, 当 $\lambda=\lambda_{2,3}=2$ 时, 对应的特征向量分别为 $\vb*{\eta}_2=\mqty(1\\1\\0),\vb*{\xi}_3=\mqty(0\\0\\1)$, 令 $\vb*{Q}_2=\qty(\dfrac{\vb*{\eta}_1}{\norm*{\vb*{\eta}_1}},\dfrac{\vb*{\eta}_2}{\norm*{\vb*{\eta}_2}},\dfrac{\vb*{\eta}_3}{\norm*{\vb*{\eta}_3}})=\mqty(\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{2}}&0\\[6pt]-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{2}}&0\\0&0&1)$, 二次型 $g(\vb*{y})$ 在 $\vb*{y}=\vb*{Q}_2\vb*{z}$ 下化为 $g(\vb*{y})=z_2^2+z_3^2$, 则
+    $\vb*{\xi}_2=\mqty(1\\0\\-1),\vb*{\xi}_3=\mqty(0\\1\\0)$, 令 $$\vb*{Q}_1=\qty(\dfrac{\vb*{\xi}_1}{\norm*{\vb*{\xi}_1}},\dfrac{\vb*{\xi}_2}{\norm*{\vb*{\xi}_2}},\dfrac{\vb*{\xi}_3}{\norm*{\vb*{\xi}_3}})=\mqty(\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{2}}&0\\ 0&0&1\\ \dfrac{1}{\sqrt{2}}&-\dfrac{1}{\sqrt{2}}&0)$$
+    二次型 $f(\vb*{x})$ 在 $\vb*{x}=\vb*{Q}_1\vb*{z}$ 下化为 $f(\vb*{z})=z_2^2+z_3^2$, 同样的, 当 $\lambda=\lambda_1=0$ 时, 对应的特征向量为 $\vb*{\eta}_1=\mqty(1\\-1\\0)$, 当 $\lambda=\lambda_{2,3}=2$ 时, 对应的特征向量分别为 $\vb*{\eta}_2=\mqty(1\\1\\0),\vb*{\xi}_3=\mqty(0\\0\\1)$, 
+    令 $$\vb*{Q}_2=\qty(\dfrac{\vb*{\eta}_1}{\norm*{\vb*{\eta}_1}},\dfrac{\vb*{\eta}_2}{\norm*{\vb*{\eta}_2}},\dfrac{\vb*{\eta}_3}{\norm*{\vb*{\eta}_3}})=\mqty(\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{2}}&0\\[6pt]-\dfrac{1}{\sqrt{2}}&\dfrac{1}{\sqrt{2}}&0\\0&0&1)$$
+    二次型 $g(\vb*{y})$ 在 $\vb*{y}=\vb*{Q}_2\vb*{z}$ 下化为 $g(\vb*{y})=z_2^2+z_3^2$, 则
     $$\vb*{Q}=\vb*{Q}_1\vb*{Q}_2^{-1}=\vb*{Q}_1\vb*{Q}_2^\top=\begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & -1 & 0 \\\end{pmatrix}.$$
 \end{solution}
 
@@ -447,7 +450,7 @@
               $$\vb*{A}=\sum_{i=1}^{3}\lambda_i\vb*{e}_i\vb*{e}_i^\top=\lambda_1\vb*{e}_1\vb*{e}_1^\top=3\cdot\dfrac{1}{\sqrt{3}}\mqty(1\\1\\1)\cdot\dfrac{1}{\sqrt{3}}(1,1,1)=\mqty(1&1&1\\1&1&1\\1&1&1)$$
               又因为 $\rank\vb*{A}=1$, 故 $\vb*{A}^n=(\tr\vb*{A})^{n-1}\cdot\vb*{A}$, 因此 $\vb*{A}^n\vb*{\beta}=3^{n-1}\vb*{A\beta}=3^{n-1}\mqty(3\\3\\3)=3^{n}\mqty(1\\1\\1).$
         \item 因为 $\vb*{A}$ 的特征值分别为 $3,0,0$, 则 $\vb*{A}-\dfrac{3}{2}\vb*{E}$ 的特征值分别为 $\dfrac{3}{2},-\dfrac{3}{2},-\dfrac{3}{2}$, 又因为 $\vb*{A}$ 是实对称矩阵, 即 $\exists\vb*{P}$, 使得 $\vb*{P}^{-1}\vb*{AP}=\vb*{\Lambda}$, 则有
-              $\vb*{P}^{-1}\qty(\vb*{A}-\dfrac{3}{2}\vb*{E})\vb*{P}=\vb*{\Lambda}_2=\mqty(\dfrac{3}{2}\\&-\dfrac{3}{2}\\&&-\dfrac{3}{2})$, 因此
+              $$\vb*{P}^{-1}\qty(\vb*{A}-\dfrac{3}{2}\vb*{E})\vb*{P}=\vb*{\Lambda}_2=\mqty(\dfrac{3}{2}\\&-\dfrac{3}{2}\\&&-\dfrac{3}{2})$$ 因此
               \begin{flalign*}
                   \qty(\vb*{A}-\dfrac{3}{2}\vb*{E})^{2024} & =\underbrace{\vb*{P\Lambda _2}\overbrace{\vb*{P}^{-1}\cdot \vb*{P}}^{\vb*{E}} \vb*{\Lambda _2P}^{-1}\cdots\vb*{P\Lambda _2P}^{-1}}_{2024} =\vb*{P}\vb*{\Lambda}_2^{2024}\vb*{P}^{-1}=\vb*{P}\mqty(\dfrac{3}{2} \\&-\dfrac{3}{2}\\&&-\dfrac{3}{2})^{2024}\vb*{P}^{-1}\\
                                                            & =\vb*{P}\qty(\dfrac{3}{2})^{2024}\vb*{EP}^{-1}=\qty(\dfrac{3}{2})^{2024}\vb*{PP}^{-1}=\qty(\dfrac{3}{2})^{2024}\vb*{E}.
@@ -767,7 +770,7 @@
     \norm{\vb*{x}-\vb*{y}}^2=(\vb*{x}-\vb*{y})^\top(\vb*{x}-\vb*{y})=2\qty(\vb*{x}^\top\vb*{x}-\vb*{y}^\top\vb*{x})
     $$
     所以 $\vb*{Hx}=\vb*{x}-(\vb*{x}-\vb*{y})=\vb*{y}$.
-    \item 因为 $\vb*{H}^\top\vb*{H}=\vb*{H}^2=\qty(\vb*{E}-2\vb*{ww}^\top)\qty(\vb*{E}-2\vb*{ww}^\top)=\vb*{E}-4\vb*{ww}^\top+4\vb*{w}\qty(\vb*{w}^\top\vb*{w})\vb*{w}^\top=\vb*{E}$, 所以 $\vb*{H}$ 是正交矩阵, 故 $\vb*{H}^{-1}=\vb*{H}^\top$, 因此
+    \item 因为 $$\vb*{H}^\top\vb*{H}=\vb*{H}^2=\qty(\vb*{E}-2\vb*{ww}^\top)\qty(\vb*{E}-2\vb*{ww}^\top)=\vb*{E}-4\vb*{ww}^\top+4\vb*{w}\qty(\vb*{w}^\top\vb*{w})\vb*{w}^\top=\vb*{E}$$ 所以 $\vb*{H}$ 是正交矩阵, 故 $\vb*{H}^{-1}=\vb*{H}^\top$, 因此
      $\vb*{x}^\top\vb*{Hx}=\qty(\vb*{H}^{-1}\vb*{y})^\top\vb*{y}=\vb*{y}^\top\vb*{Hy}$, 记 $\vb*{y}^\top\vb*{By}=c\neq0$, 然后利用拉格朗日乘数法 $$
      L(\vb*{y},\lambda)=\vb*{y}^\top\vb*{Hy}-\lambda \qty(\vb*{y}^\top\vb*{By}-c)
      $$
@@ -775,7 +778,7 @@
      \grad_y{L}=\vb*{Hy}-\lambda\vb*{By}=\vb*{0}\Rightarrow \vb*{B}^{-1}\vb*{Hy}=\lambda\vb*{y}
      $$
      故 $\displaystyle \dfrac{\vb*{y}^\top\vb*{Hy}}{\vb*{y}^\top\vb*{By}}$ 的极值在 $\vb*{B}^{-1}\vb*{H}$ 的特征向量上取得, 其驻值为特征值.
-    由 $\vb*{w}=\dfrac{1}{\sqrt{2}}\mqty(1\\0\\1)$ 可得 $\vb*{H}=\begin{pmatrix} 0 & 0 & -1 \\ 0 & 1 & 0 \\ -1 & 0 & 0 \\\end{pmatrix}$, 那么 $|\lambda\vb*{B}-\vb*{H}|=0\Rightarrow \qty(\lambda-\dfrac{1}{2})\qty(4\lambda^2-2)=0\Rightarrow\lambda_1=-\dfrac{\sqrt{2}}{2},~\lambda2=\dfrac{1}{2},~\lambda_3=\dfrac{\sqrt{2}}{2}$, 故 
+    由 $\vb*{w}=\dfrac{1}{\sqrt{2}}\mqty(1\\0\\1)$ 可得 $\vb*{H}=\begin{pmatrix} 0 & 0 & -1 \\ 0 & 1 & 0 \\ -1 & 0 & 0 \\\end{pmatrix}$, 那么 $$|\lambda\vb*{B}-\vb*{H}|=0\Rightarrow \qty(\lambda-\dfrac{1}{2})\qty(4\lambda^2-2)=0\Rightarrow\lambda_1=-\dfrac{\sqrt{2}}{2},~\lambda_2=\dfrac{1}{2},~\lambda_3=\dfrac{\sqrt{2}}{2}$$ 故 
      $\displaystyle \max_{\vb*{x},\vb*{y}(\neq\vb*{0})\in \mathbb{R}^{3}}\dfrac{\vb*{x}^\top\vb*{Hx}}{\vb*{y}^\top\vb*{By}}=\lambda_3=\dfrac{\sqrt{2}}{2}.$
   \end{enumerate}
 \end{solution}

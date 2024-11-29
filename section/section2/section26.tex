@@ -99,6 +99,7 @@
     对任意 $0<a<b$, 满足 $\sqrt{ab}<\dfrac{b-a}{\ln b-\ln a}<\dfrac{a+b}{2}.$
     \index{对数平均不等式 (ALG)}
 \end{theorem}
+
 \begin{example}
     设 $f(x)$ 在 $[1,+\infty)$ 上有连续的二阶导数, $f(1)=0,f'(1)=2$, 且二元函数 $z=\qty(x^2+y^2)f\qty(x^2+y^2)$ 满足 $z_{xx}''+z_{yy}''=0$,
     \begin{enumerate}[label=(\arabic{*})]
@@ -124,6 +125,11 @@
         \item 由 (1) 可不妨假设 $1<x_1<\e <x_2$, 要证 $x_1+x_2>2\e$, 即 $x_2>2\e-x_1$, 由 $f(x)$ 的单调性, 即证 $f(x_2)<f(2\e-x_1)$, 又 $f(x_1)=f(x_2)$, 
         只需证 $f(x_1)<f(2\e-x_1)$, 为此构造 $F(x)=f(x)-f(2\e-x),~x\in(1,\e)$, 又因为 $f(x)$ 在 $(1,\e)$ 上单调递增, 则 $F(x)$ 在 $(1,\e)$ 上单调递增, 因此有 $$F(x)<F(\e)=f(\e)-f(\e)=0$$
         得证 $f(x_1)<f(2\e-x_1)$, 故待证命题成立.
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=.6]{figures/diagram-20241127.pdf}
+            \caption{}
+        \end{figure}
     \end{enumerate}
 \end{solution}
 
@@ -164,8 +170,8 @@
 
 \begin{proof}[{\songti \textbf{证法一}}]
     要证 $ f(x) \geqslant x$, 只需证 $ f(x)-x \geqslant 0$, 为此, 令 $ g(x)=f(x)-x$, 则由 $\displaystyle \lim _{x \to 0} \frac{f(x)}{x}=1$, 
-    得 $\displaystyle f(0)=\lim _{x \to 0} f(x)=0,~f^{\prime}(0)=\lim _{x \to 0} \frac{f(x)-f(0)}{x}=1$, 
-    所以 $ g^{\prime}(x)=f^{\prime}(x)-1=f^{\prime}(x)-f^{\prime}(0)$, 
+    得 $$\displaystyle f(0)=\lim _{x \to 0} f(x)=0,~f^{\prime}(0)=\lim _{x \to 0} \frac{f(x)-f(0)}{x}=1$$ 
+    所以 $$ g^{\prime}(x)=f^{\prime}(x)-1=f^{\prime}(x)-f^{\prime}(0)$$ 
     又由 $ f^{\prime \prime}(x)=\left(f^{\prime}(x)\right)^{\prime}>0 $ 知, $f^{\prime}(x)$  在 $ (-\infty,+\infty)$ 上单调递增, 
     于是当 $ x<0 $ 时, $g^{\prime}(x)<0$; 当 $ x>0 $ 时, $g^{\prime}(x)>0$, 从而知 $ x=0 $ 为 $ g(x) $ 的极小值点也是最小值点,, 
     故 $ g(x) \geqslant g(0)=0$, 即 $ f(x) \geqslant x .$
@@ -289,7 +295,7 @@
     证明当 $0<x<\dfrac{\pi}{2}$ 时, $\sin x>\dfrac{2}{\pi}x.$
 \end{example}
 \begin{proof}[{\songti \textbf{证法一}}]
-    设 $ f(x)=\sin x-\dfrac{2}{\pi} x$, 则 $ f^{\prime}(x)=\cos x-\dfrac{2}{\pi}, f^{\prime \prime}(x)=-\sin x<0\left(0<x<\dfrac{\pi}{2}\right)$, 于是
+    设 $ f(x)=\sin x-\dfrac{2}{\pi} x$, 则 $$ f^{\prime}(x)=\cos x-\dfrac{2}{\pi}, f^{\prime \prime}(x)=-\sin x<0\left(0<x<\dfrac{\pi}{2}\right)$$ 于是
     $f(x) $ 在 $ \left[0, \dfrac{\pi}{2}\right] $ 上为凸函数, 又 $ f(0)=f\left(\dfrac{\pi}{2}\right)=0$, 故当 $ 0<x<\dfrac{\pi}{2} $ 时, $f(x)>0$, 即 $ \sin x>\dfrac{2}{\pi} x. $
 \end{proof}
 \begin{proof}[{\songti \textbf{证法二}}]
